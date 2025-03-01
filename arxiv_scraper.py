@@ -117,7 +117,13 @@ if __name__ == "__main__":
     query = 'all:planning+AND+NOT+all:LLM'
     results = arxiv_search(query, max_results=max_num)
     save_results_as_html(results,"planning")
-    query = 'all:"reinforcement%20learning"+AND+NOT+all:LLM'
+    query = 'all:model-based+AND+NOT+all:LLM'
     results = arxiv_search(query, max_results=max_num)
-    save_results_as_html(results,"RL")
+    save_results_as_html(results,"model-based")
+    query = 'all:multi-agent+AND+NOT+all:LLM'
+    results = arxiv_search(query, max_results=max_num)
+    save_results_as_html(results,"multi-agent")
+    query = 'all:HRL+AND+NOT+all:LLM'
+    results = arxiv_search(query, max_results=max_num)
+    save_results_as_html(results,"HRL")
     
