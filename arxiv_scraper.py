@@ -5,7 +5,8 @@ from urllib.parse import quote  # 用于 URL 编码
 
 def arxiv_search(query, max_results=20):
     base_url = 'http://export.arxiv.org/api/query?'
-    #encoded_query = quote(query)
+    encoded_query = quote(query)
+    #print(encoded_query)
     search_url = (f'search_query={query}&start=0&max_results={max_results}'
                   f'&sortBy={'submittedDate'}&sortOrder={'descending'}')
     response = feedparser.parse(base_url + search_url)
@@ -117,13 +118,13 @@ if __name__ == "__main__":
     query = 'all:planning+AND+NOT+all:LLM'
     results = arxiv_search(query, max_results=max_num)
     save_results_as_html(results,"planning")
-    query = 'all:model-based+AND+NOT+all:LLM'
+    query = 'all:MBRL'
     results = arxiv_search(query, max_results=max_num)
     save_results_as_html(results,"model-based")
-    query = 'all:multi-agent+AND+NOT+all:LLM'
+    query = 'all:MARL'
     results = arxiv_search(query, max_results=max_num)
     save_results_as_html(results,"multi-agent")
-    query = 'all:HRL+AND+NOT+all:LLM'
+    query = 'all:"hierarchical%20reinforcement%20learning"'
     results = arxiv_search(query, max_results=max_num)
     save_results_as_html(results,"HRL")
     
