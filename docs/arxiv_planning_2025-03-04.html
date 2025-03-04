@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>planning - 2025-03-04</title>
+<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap' rel='stylesheet'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css'>
+<style>
+body {
+font-family: 'Roboto', sans-serif;
+background-color: #f5f7fa;
+padding: 20px;
+}
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.card-title {
+    font-weight: 700;
+}
+.card:hover {
+    transform: scale(1.02);
+    transition: 0.3s ease-in-out;
+}
+</style>
+</head>
+<body>
+<div class='container'>
+<h1 class='text-center my-4'><i class='fas fa-book'></i>planning - 2025-03-04</h1>
+<div class='row'>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2502.21267v1' target='_blank'>ReaLJam: Real-Time Human-AI Music Jamming with Reinforcement
+  Learning-Tuned Transformers</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Alexander Scarlatos, Yusong Wu, Ian Simon, Adam Roberts, Tim Cooijmans, Natasha Jaques, Cassie Tarakajian, Cheng-Zhi Anna Huang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-02-28 17:42:58</h6>
+<p class='card-text'>Recent advances in generative artificial intelligence (AI) have created
+models capable of high-quality musical content generation. However, little
+consideration is given to how to use these models for real-time or cooperative
+jamming musical applications because of crucial required features: low latency,
+the ability to communicate planned actions, and the ability to adapt to user
+input in real-time. To support these needs, we introduce ReaLJam, an interface
+and protocol for live musical jamming sessions between a human and a
+Transformer-based AI agent trained with reinforcement learning. We enable
+real-time interactions using the concept of anticipation, where the agent
+continually predicts how the performance will unfold and visually conveys its
+plan to the user. We conduct a user study where experienced musicians jam in
+real-time with the agent through ReaLJam. Our results demonstrate that ReaLJam
+enables enjoyable and musically interesting sessions, and we uncover important
+takeaways for future work.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2502.21257v1' target='_blank'>RoboBrain: A Unified Brain Model for Robotic Manipulation from Abstract
+  to Concrete</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yuheng Ji, Huajie Tan, Jiayu Shi, Xiaoshuai Hao, Yuan Zhang, Hengyuan Zhang, Pengwei Wang, Mengdi Zhao, Yao Mu, Pengju An, Xinda Xue, Qinghang Su, Huaihai Lyu, Xiaolong Zheng, Jiaming Liu, Zhongyuan Wang, Shanghang Zhang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-02-28 17:30:39</h6>
+<p class='card-text'>Recent advancements in Multimodal Large Language Models (MLLMs) have shown
+remarkable capabilities across various multimodal contexts. However, their
+application in robotic scenarios, particularly for long-horizon manipulation
+tasks, reveals significant limitations. These limitations arise from the
+current MLLMs lacking three essential robotic brain capabilities: Planning
+Capability, which involves decomposing complex manipulation instructions into
+manageable sub-tasks; Affordance Perception, the ability to recognize and
+interpret the affordances of interactive objects; and Trajectory Prediction,
+the foresight to anticipate the complete manipulation trajectory necessary for
+successful execution. To enhance the robotic brain's core capabilities from
+abstract to concrete, we introduce ShareRobot, a high-quality heterogeneous
+dataset that labels multi-dimensional information such as task planning, object
+affordance, and end-effector trajectory. ShareRobot's diversity and accuracy
+have been meticulously refined by three human annotators. Building on this
+dataset, we developed RoboBrain, an MLLM-based model that combines robotic and
+general multi-modal data, utilizes a multi-stage training strategy, and
+incorporates long videos and high-resolution images to improve its robotic
+manipulation capabilities. Extensive experiments demonstrate that RoboBrain
+achieves state-of-the-art performance across various robotic tasks,
+highlighting its potential to advance robotic brain capabilities.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2502.21186v2' target='_blank'>Scalable Decision-Making in Stochastic Environments through Learned
+  Temporal Abstraction</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Baiting Luo, Ava Pettet, Aron Laszka, Abhishek Dubey, Ayan Mukhopadhyay</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-02-28 16:02:23</h6>
+<p class='card-text'>Sequential decision-making in high-dimensional continuous action spaces,
+particularly in stochastic environments, faces significant computational
+challenges. We explore this challenge in the traditional offline RL setting,
+where an agent must learn how to make decisions based on data collected through
+a stochastic behavior policy. We present Latent Macro Action Planner (L-MAP),
+which addresses this challenge by learning a set of temporally extended
+macro-actions through a state-conditional Vector Quantized Variational
+Autoencoder (VQ-VAE), effectively reducing action dimensionality. L-MAP employs
+a (separate) learned prior model that acts as a latent transition model and
+allows efficient sampling of plausible actions. During planning, our approach
+accounts for stochasticity in both the environment and the behavior policy by
+using Monte Carlo tree search (MCTS). In offline RL settings, including
+stochastic continuous control tasks, L-MAP efficiently searches over discrete
+latent actions to yield high expected returns. Empirical results demonstrate
+that L-MAP maintains low decision latency despite increased action
+dimensionality. Notably, across tasks ranging from continuous control with
+inherently stochastic dynamics to high-dimensional robotic hand manipulation,
+L-MAP significantly outperforms existing model-based methods and performs
+on-par with strong model-free actor-critic baselines, highlighting the
+effectiveness of the proposed approach in planning in complex and stochastic
+environments with high-dimensional action spaces.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2502.21175v1' target='_blank'>A Minor-Testing Approach for Coordinated Motion Planning with Sliding
+  Robots</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Eduard Eiben, Robert Ganian, Iyad Kanj, Ramanujan M. Sridharan</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-02-28 15:56:42</h6>
+<p class='card-text'>We study a variant of the Coordinated Motion Planning problem on undirected
+graphs, referred to herein as the \textsc{Coordinated Sliding-Motion Planning}
+(CSMP) problem. In this variant, we are given an undirected graph $G$, $k$
+robots $R_1,\dots,R_k$ positioned on distinct vertices of $G$, $p\leq k$
+distinct destination vertices for robots $R_1,\dots,R_p$, and $\ell \in
+\mathbb{N}$. The problem is to decide if there is a serial schedule of at most
+$\ell$ moves (i.e., of makespan $\ell$) such that at the end of the schedule
+each robot with a destination reaches it, where a robot's move is a free path
+(unoccupied by any robots) from its current position to an unoccupied vertex.
+The problem is known to be NP-hard even on full grids. It has been studied in
+several contexts, including coin movement and reconfiguration problems, with
+respect to feasibility, complexity, and approximation. Geometric variants of
+the problem, in which congruent geometric-shape robots (e.g., unit
+disk/squares) slide or translate in the Euclidean plane, have also been studied
+extensively. We investigate the parameterized complexity of CSMP with respect
+to two parameters: the number $k$ of robots and the makespan $\ell$. As our
+first result, we present a fixed-parameter algorithm for CSMP parameterized by
+$k$. For our second result, we present a fixed-parameter algorithm
+parameterized by $\ell$ for the special case of CSMP in which only a single
+robot has a destination and the graph is planar, which we prove to be
+NP-complete. A crucial new ingredient for both of our results is that the
+solution admits a succinct representation as a small labeled topological minor
+of the input graph.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2502.21158v1' target='_blank'>CONSeg: Voxelwise Glioma Conformal Segmentation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Danial Elyassirad, Benyamin Gheiji, Mahsa Vatanparast, Amir Mahmoud Ahmadzadeh, Shahriar Faghani</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-02-28 15:35:52</h6>
+<p class='card-text'>Background and Purpose: Glioma segmentation is crucial for clinical decisions
+and treatment planning. Uncertainty quantification methods, including conformal
+prediction (CP), can enhance segmentation models reliability. This study aims
+to use CP in glioma segmentation. Methods: We used the UCSF and UPenn glioma
+datasets, with the UCSF dataset split into training (70%), validation (10%),
+calibration (10%), and test (10%) sets, and the UPenn dataset divided into
+external calibration (30%) and external test (70%) sets. A UNet model was
+trained, and its optimal threshold was set to 0.5 using prediction
+normalization. To apply CP, the conformal threshold was selected based on the
+internal/external calibration nonconformity score, and CP was subsequently
+applied to the internal/external test sets, with coverage reported for all. We
+defined the uncertainty ratio (UR) and assessed its correlation with the Dice
+score coefficient (DSC). Additionally, we categorized cases into certain and
+uncertain groups based on UR and compared their DSC. We also evaluate the
+correlation between UR and DSC of the BraTS fusion model segmentation (BFMS),
+and compare DSC in the certain and uncertain subgroups. Results: The base model
+achieved a DSC of 0.8628 and 0.8257 on the internal and external test sets,
+respectively. The CP coverage was 0.9982 for the internal test set and 0.9977
+for the external test set. Statistical analysis showed a significant negative
+correlation between UR and DSC for test sets (p<0.001). UR was also linked to
+significantly lower DSCs in the BFMS (p<0.001). Additionally, certain cases had
+significantly higher DSCs than uncertain cases in test sets and the BFMS
+(p<0.001). Conclusion: CP effectively quantifies uncertainty in glioma
+segmentation. Using CONSeg improves the reliability of segmentation models and
+enhances human-computer interaction.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2502.21142v1' target='_blank'>Multimodal Dreaming: A Global Workspace Approach to World Model-Based
+  Reinforcement Learning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Léopold Maytié, Roland Bertin Johannet, Rufin VanRullen</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-02-28 15:24:17</h6>
+<p class='card-text'>Humans leverage rich internal models of the world to reason about the future,
+imagine counterfactuals, and adapt flexibly to new situations. In Reinforcement
+Learning (RL), world models aim to capture how the environment evolves in
+response to the agent's actions, facilitating planning and generalization.
+However, typical world models directly operate on the environment variables
+(e.g. pixels, physical attributes), which can make their training slow and
+cumbersome; instead, it may be advantageous to rely on high-level latent
+dimensions that capture relevant multimodal variables. Global Workspace (GW)
+Theory offers a cognitive framework for multimodal integration and information
+broadcasting in the brain, and recent studies have begun to introduce efficient
+deep learning implementations of GW. Here, we evaluate the capabilities of an
+RL system combining GW with a world model. We compare our GW-Dreamer with
+various versions of the standard PPO and the original Dreamer algorithms. We
+show that performing the dreaming process (i.e., mental simulation) inside the
+GW latent space allows for training with fewer environment steps. As an
+additional emergent property, the resulting model (but not its comparison
+baselines) displays strong robustness to the absence of one of its observation
+modalities (images or simulation attributes). We conclude that the combination
+of GW with World Models holds great potential for improving decision-making in
+RL agents.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2502.21109v1' target='_blank'>"No negatives needed": weakly-supervised regression for interpretable
+  tumor detection in whole-slide histopathology images</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Marina D'Amato, Jeroen van der Laak, Francesco Ciompi</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-02-28 14:47:20</h6>
+<p class='card-text'>Accurate tumor detection in digital pathology whole-slide images (WSIs) is
+crucial for cancer diagnosis and treatment planning. Multiple Instance Learning
+(MIL) has emerged as a widely used approach for weakly-supervised tumor
+detection with large-scale data without the need for manual annotations.
+However, traditional MIL methods often depend on classification tasks that
+require tumor-free cases as negative examples, which are challenging to obtain
+in real-world clinical workflows, especially for surgical resection specimens.
+We address this limitation by reformulating tumor detection as a regression
+task, estimating tumor percentages from WSIs, a clinically available target
+across multiple cancer types. In this paper, we provide an analysis of the
+proposed weakly-supervised regression framework by applying it to multiple
+organs, specimen types and clinical scenarios. We characterize the robustness
+of our framework to tumor percentage as a noisy regression target, and
+introduce a novel concept of amplification technique to improve tumor detection
+sensitivity when learning from small tumor regions. Finally, we provide
+interpretable insights into the model's predictions by analyzing visual
+attention and logit maps. Our code is available at
+https://github.com/DIAGNijmegen/tumor-percentage-mil-regression.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2502.21101v1' target='_blank'>Jointly Assigning Processes to Machines and Generating Plans for
+  Autonomous Mobile Robots in a Smart Factory</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Christopher Leet, Aidan Sciortino, Sven Koenig</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-02-28 14:38:58</h6>
+<p class='card-text'>A modern smart factory runs a manufacturing procedure using a collection of
+programmable machines. Typically, materials are ferried between these machines
+using a team of mobile robots. To embed a manufacturing procedure in a smart
+factory, a factory operator must a) assign its processes to the smart factory's
+machines and b) determine how agents should carry materials between machines. A
+good embedding maximizes the smart factory's throughput; the rate at which it
+outputs products. Existing smart factory management systems solve the
+aforementioned problems sequentially, limiting the throughput that they can
+achieve. In this paper we introduce ACES, the Anytime Cyclic Embedding Solver,
+the first solver which jointly optimizes the assignment of processes to
+machines and the assignment of paths to agents. We evaluate ACES and show that
+it can scale to real industrial scenarios.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2502.21034v1' target='_blank'>Synthesizing Tabular Data Using Selectivity Enhanced Generative
+  Adversarial Networks</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Youran Zhou, Jianzhong Qi</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-02-28 13:26:41</h6>
+<p class='card-text'>As E-commerce platforms face surging transactions during major shopping
+events like Black Friday, stress testing with synthesized data is crucial for
+resource planning. Most recent studies use Generative Adversarial Networks
+(GANs) to generate tabular data while ensuring privacy and machine learning
+utility. However, these methods overlook the computational demands of
+processing GAN-generated data, making them unsuitable for E-commerce stress
+testing.
+  This thesis introduces a novel GAN-based approach incorporating query
+selectivity constraints, a key factor in database transaction processing. We
+integrate a pre-trained deep neural network to maintain selectivity consistency
+between real and synthetic data. Our method, tested on five real-world
+datasets, outperforms three state-of-the-art GANs and a VAE model, improving
+selectivity estimation accuracy by up to 20pct and machine learning utility by
+up to 6 pct.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2502.20950v1' target='_blank'>Ariel stellar characterisation III. Fast rotators and new FGK stars in
+  the Ariel Mission Candidate Sample</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:M. Tsantaki, L. Magrini, C. Danielski, D. Bossini, D. Turrini, N. Moedas, C. P. Folsom, H. Ramler, K. Biazzo, T. L. Campante, E. Delgado-Mena, R. da Silva, S. G. Sousa, S. Benatti, G. Casali, K. G Hełminiak, M. Rainer, N. Sanna</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-02-28 11:05:15</h6>
+<p class='card-text'>The next mission dedicated to the study of planetary atmospheres is the Ariel
+space mission, planned for launch in 2029, which will observe a variety of
+planetary systems belonging to different classes around stars with spectral
+types from M to A. To optimise the scientific outcome of the mission, such
+stars need to be homogeneously characterised beforehand. In this work, we focus
+on a methodology based on spectral synthesis for the characterisation of
+FGK-type stars from the Ariel Tier 1 Mission Candidate Sample (MCS) which
+exhibit fast rotation. In addition, we analyse slow-rotating FGK-type stars,
+with either new observations or archival spectra available, consistently as in
+our previous work using the equivalent width (EW) analysis. To ensure
+consistency between our methods, we re-analysed a sample of FGK-type stars with
+the spectral synthesis method and compared it to our previous work. The results
+of our analysis show excellent agreement with the previous set of derived
+parameters. We also computed their orbital parameters establishing whether they
+belong to the Galactic thin or thick discs. With the current set of stellar
+parameters, we almost double the analysed hosts in the Ariel MCS to 353 stars
+in total. Using our homogeneous set of stellar parameters, we studied the
+correlations between stellar and planetary properties for the Ariel MCS
+analysed so far. We confirmed a close relationship between stellar mass (up to
+1.8 solar masses) and giant planet radius, with more inflated planets at lower
+metallicity. We confirm that giant planets are more frequent around more
+metal-rich stars that belong to the thin disc, while lower-mass planets are
+also found in more metal-poor environments, and are more frequent than giant
+planets in the thick disc as also seen in other works in the literature.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2502.20947v1' target='_blank'>Enhancing software-hardware co-design for HEP by low-overhead profiling
+  of single- and multi-threaded programs on diverse architectures with Adaptyst</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Maksymilian Graczyk, Stefan Roiser</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-02-28 11:00:47</h6>
+<p class='card-text'>Given the recent technological trends and novel computing paradigms spanning
+both software and hardware, physicists and software developers can no longer
+just rely on computers becoming faster to meet the ever-increasing computing
+demands of their research. Adapting systems to the new environment may be
+difficult though, especially in case of large and complex applications.
+Therefore, we introduce Adaptyst (formerly AdaptivePerf): an open-source and
+architecture-agnostic tool aiming for making these computational and
+procurement challenges easier to address. At the moment, Adaptyst profiles on-
+and off-CPU activity of codes, traces all threads and processes spawned by
+them, and analyses low-level software-hardware interactions to the extent
+supported by hardware. The tool addresses the main shortcomings of Linux "perf"
+and has been successfully tested on x86-64, arm64, and RISC-V instruction set
+architectures. Adaptyst is planned to be evolved towards a software-hardware
+co-design framework which scales from embedded to high-performance computing in
+both legacy and new applications and takes into account a bigger picture than
+merely choosing between CPUs and GPUs. Our paper describes the current
+development of the project and its roadmap.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2502.20831v1' target='_blank'>A Dynamic Bus Lane Strategy for Integrated Management of Human-Driven
+  and Autonomous Vehicles</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Haoran Li, Zhenzhou Yuan, Rui Yue, Guangchuan Yang, Fan Zhang, Zong Tian, Chuang Zhu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-02-28 08:23:02</h6>
+<p class='card-text'>This study introduces a dynamic bus lane (DBL) strategy, referred to as the
+dynamic bus priority lane (DBPL) strategy, designed for mixed traffic
+environments featuring both manual and automated vehicles. Unlike previous DBL
+strategies, this approach accounts for partially connected and autonomous
+vehicles (CAVs) capable of autonomous trajectory planning. By leveraging this
+capability, the strategy grants certain CAVs Right of Way (ROW) in bus lanes
+while utilizing their leading effects in general lanes to guide vehicle
+platoons through intersections, thereby indirectly influencing the trajectories
+of other vehicles. The ROW allocation is optimized using a mixed-integer linear
+programming (MILP) model, aimed at minimizing total vehicle travel time. Since
+different CAVs entering the bus lane affect other vehicles travel times, the
+model incorporates lane change effects when estimating the states of CAVs,
+human-driven vehicles (HDVs), and connected autonomous buses (CABs) as they
+approach the stop bar. A dynamic control framework with a rolling horizon
+procedure is established to ensure precise execution of the ROW optimization
+under varying traffic conditions. Simulation experiments across two scenarios
+assess the performance of the proposed DBPL strategy at different CAV market
+penetration rates (MPRs).</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2502.20771v1' target='_blank'>CSubBT: A Self-Adjusting Execution Framework for Mobile Manipulation
+  System</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Huihui Guo, Huizhang Luo, Huilong Pi, Mingxing Duan, Kenli Li, Chubo Liu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-02-28 06:46:10</h6>
+<p class='card-text'>With the advancements in modern intelligent technologies, mobile robots
+equipped with manipulators are increasingly operating in unstructured
+environments. These robots can plan sequences of actions for long-horizon tasks
+based on perceived information. However, in practice, the planned actions often
+fail due to discrepancies between the perceptual information used for planning
+and the actual conditions. In this paper, we introduce the {\itshape
+Conditional Subtree} (CSubBT), a general self-adjusting execution framework for
+mobile manipulation tasks based on Behavior Trees (BTs). CSubBT decomposes
+symbolic action into sub-actions and uses BTs to control their execution,
+addressing any potential anomalies during the process. CSubBT treats common
+anomalies as constraint non-satisfaction problems and continuously guides the
+robot in performing tasks by sampling new action parameters in the constraint
+space when anomalies are detected. We demonstrate the robustness of our
+framework through extensive manipulation experiments on different platforms,
+both in simulation and real-world settings.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2502.20742v1' target='_blank'>Structured Preference Optimization for Vision-Language Long-Horizon Task
+  Planning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Xiwen Liang, Min Lin, Weiqi Ruan, Rongtao Xu, Yuecheng Liu, Jiaqi Chen, Bingqian Lin, Yuzheng Zhuang, Xiaodan Liang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-02-28 05:47:34</h6>
+<p class='card-text'>Existing methods for vision-language task planning excel in short-horizon
+tasks but often fall short in complex, long-horizon planning within dynamic
+environments. These challenges primarily arise from the difficulty of
+effectively training models to produce high-quality reasoning processes for
+long-horizon tasks. To address this, we propose Structured Preference
+Optimization (SPO), which aims to enhance reasoning and action selection in
+long-horizon task planning through structured preference evaluation and
+optimized training strategies. Specifically, SPO introduces: 1)
+Preference-Based Scoring and Optimization, which systematically evaluates
+reasoning chains based on task relevance, visual grounding, and historical
+consistency; and 2) Curriculum-Guided Training, where the model progressively
+adapts from simple to complex tasks, improving its generalization ability in
+long-horizon scenarios and enhancing reasoning robustness. To advance research
+in vision-language long-horizon task planning, we introduce ExtendaBench, a
+comprehensive benchmark covering 1,509 tasks across VirtualHome and Habitat
+2.0, categorized into ultra-short, short, medium, and long tasks. Experimental
+results demonstrate that SPO significantly improves reasoning quality and final
+decision accuracy, outperforming prior methods on long-horizon tasks and
+underscoring the effectiveness of preference-driven optimization in
+vision-language task planning. Specifically, SPO achieves a +5.98% GCR and
++4.68% SR improvement in VirtualHome and a +3.30% GCR and +2.11% SR improvement
+in Habitat over the best-performing baselines.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2502.20731v1' target='_blank'>Indoor Localization for Autonomous Robot Navigation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Sean Kouma, Rachel Masters</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-02-28 05:25:04</h6>
+<p class='card-text'>Indoor positioning systems (IPSs) have gained attention as outdoor navigation
+becomes prevalent in everyday life. Research is being actively conducted on how
+indoor smartphone navigation can be accomplished and improved using received
+signal strength indication (RSSI) and machine learning (ML). IPSs have more use
+cases that need further exploration, and we aim to explore using IPSs for the
+indoor navigation of an autonomous robot. We collected a dataset and trained
+models to test on a robot. We also developed an A* path-planning algorithm so
+that our robot could navigate itself using predicted directions. After testing
+different network structures, our robot was able to successfully navigate
+corners around 50 percent of the time. The findings of this paper indicate that
+using IPSs for autonomous robots is a promising area of future research.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2502.20636v1' target='_blank'>Delayed-Decision Motion Planning in the Presence of Multiple Predictions</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:David Isele, Alexandre Miranda Anon, Faizan M. Tariq, Goro Yeh, Avinash Singh, Sangjae Bae</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-02-28 01:36:33</h6>
+<p class='card-text'>Reliable automated driving technology is challenged by various sources of
+uncertainties, in particular, behavioral uncertainties of traffic agents. It is
+common for traffic agents to have intentions that are unknown to others,
+leaving an automated driving car to reason over multiple possible behaviors.
+This paper formalizes a behavior planning scheme in the presence of multiple
+possible futures with corresponding probabilities. We present a maximum entropy
+formulation and show how, under certain assumptions, this allows delayed
+decision-making to improve safety. The general formulation is then turned into
+a model predictive control formulation, which is solved as a quadratic program
+or a set of quadratic programs. We discuss implementation details for improving
+computation and verify operation in simulation and on a mobile robot.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2502.20568v1' target='_blank'>A Tutorial on Multi-time Scale Optimization Models and Algorithms</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Asha Ramanujam, Can Li</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-02-27 22:15:55</h6>
+<p class='card-text'>Systems across different industries consist of interrelated processes and
+decisions in different time scales including long-time decisions and short-term
+decisions. To optimize such systems, the most effective approach is to
+formulate and solve multi-time scale optimization models that integrate various
+decision layers. In this tutorial, we provide an overview of multi-time scale
+optimization models and review the algorithms used to solve them. We also
+discuss the metric Value of the Multi-scale Model (VMM) introduced to quantify
+the benefits of using multi-time scale optimization models as opposed to
+sequentially solving optimization models from high-level to low-level. Finally,
+we present an illustrative example of a multi-time scale capacity expansion
+planning model and showcase how it can be solved using some of the algorithms
+(https://github.com/li-group/MultiScaleOpt-Tutorial.git). This tutorial serves
+as both an introductory guide for beginners with no prior experience and a
+high-level overview of current algorithms for solving multi-time scale
+optimization models, catering to experts in process systems engineering.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2502.20476v1' target='_blank'>Unifying Model Predictive Path Integral Control, Reinforcement Learning,
+  and Diffusion Models for Optimal Control and Planning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yankai Li, Mo Chen</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-02-27 19:26:36</h6>
+<p class='card-text'>Model Predictive Path Integral (MPPI) control, Reinforcement Learning (RL),
+and Diffusion Models have each demonstrated strong performance in trajectory
+optimization, decision-making, and motion planning. However, these approaches
+have traditionally been treated as distinct methodologies with separate
+optimization frameworks. In this work, we establish a unified perspective that
+connects MPPI, RL, and Diffusion Models through gradient-based optimization on
+the Gibbs measure. We first show that MPPI can be interpreted as performing
+gradient ascent on a smoothed energy function. We then demonstrate that Policy
+Gradient methods reduce to MPPI when treating policy parameters as control
+variables under a fixed initial state. Additionally, we establish that the
+reverse sampling process in diffusion models follows the same update rule as
+MPPI.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2502.20467v1' target='_blank'>Robust statistical inference for accelerated life-tests with one-shot
+  devices under log-logistic distributions</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:María González-Calderón, María Jaenada, Leandro Pardo</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-02-27 19:11:52</h6>
+<p class='card-text'>A one-shot device is a unit that operates only once, after which it is either
+destroyed or needs to be rebuilt. For this type of device, the operational
+status can only be assessed at a specific inspection time, determining whether
+failure occurred before or after it. Consequently, lifetimes are subject to
+left- or right-censoring. One-shot devices are usually highly reliables. To
+analyze the reliability of such products, an accelerated life test (ALT) plan
+is typically employed by subjecting the devices to increased levels of stress
+factors, thus allowing life characteristics observed under high-stress
+conditions to be extrapolated to normal operating conditions. By accelerating
+the degradation process, ALT significantly reduces both the time required for
+testing and the associated experimental costs.
+  Recently, robust inferential methods have gained considerable interest in
+statistical analysis. Among them, weighted minimum density power divergence
+estimators (WMDPDEs) are widely recognized for their robust statistical
+properties with small loss of efficiency. In this work, robust WMDPDE and
+associated statistical tests are developed under a log-logistic lifetime
+distribution with multiple stresses. Explicit expressions for the estimating
+equations and asymptotic distribution of the estimators are obtained. Further,
+a Monte Carlo simulation study is presented to evaluate the performance of the
+WMDPDE in practical applications.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2502.20447v1' target='_blank'>Detecting galaxy-21-cm cross-correlation during reionization</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Samuel Gagnon-Hartman, James Davies, Andrei Mesinger</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-02-27 19:00:02</h6>
+<p class='card-text'>The cosmic 21-cm signal promises to revolutionize studies of the Epoch of
+Reionization (EoR). Radio interferometers are aiming for a preliminary, low
+signal-to-noise (S/N) detection of the 21-cm power spectrum. Cross-correlating
+21-cm with galaxies will be especially useful in these efforts, providing both
+a sanity check for initial 21-cm detection claims and potentially increasing
+the S/N due to uncorrelated residual systematics. Here we self-consistently
+simulate large-scale (1 Gpc) galaxy and 21-cm fields, computing their
+cross-power spectra for various choices of instruments as well as survey
+properties. We use 1080h observations with SKA-low AA* and HERA-350 as our
+benchmark 21-cm observations. We create mock Lyman alpha narrow-band, slitless
+and slit spectroscopic surveys, using benchmarks from instruments such as
+Subaru HyperSupremeCam, Roman grism, VLT MOONS, ELT MOSAIC, and JWST NIRCam. We
+forecast the resulting S/N of the galaxy-21-cm cross power spectrum, varying
+the galaxy survey area, depth and level of 21-cm foreground contamination for
+each pair of instruments. We find that the highest S/N is achievable through
+slitless, wide-area spectroscopic surveys, with the proposed Roman HLS survey
+resulting in a 55$\sigma$ detection of the cross power with 21-cm as observed
+with SKA-low AA* for our fiducial model. Narrow-band dropout surveys are
+unlikely to result in a detectable cross-power, due to their poor redshift
+localization. Slit spectroscopy can provide a high S/N detection of the cross
+power for SKA-low AA* observations. Specifically, the planned MOONRISE survey
+with MOONS on the VLT can result in a 3$\sigma$ detection, while a survey of
+comparable observing time using MOSAIC on the ELT can result in a 4$\sigma$
+detection. Our results can be used to guide survey strategies, facilitating the
+detection of the galaxy-21-cm cross power spectrum.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2502.20386v1' target='_blank'>ATLAS Navigator: Active Task-driven LAnguage-embedded Gaussian Splatting</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Dexter Ong, Yuezhan Tao, Varun Murali, Igor Spasojevic, Vijay Kumar, Pratik Chaudhari</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-02-27 18:58:04</h6>
+<p class='card-text'>We address the challenge of task-oriented navigation in unstructured and
+unknown environments, where robots must incrementally build and reason on rich,
+metric-semantic maps in real time. Since tasks may require clarification or
+re-specification, it is necessary for the information in the map to be rich
+enough to enable generalization across a wide range of tasks. To effectively
+execute tasks specified in natural language, we propose a hierarchical
+representation built on language-embedded Gaussian splatting that enables both
+sparse semantic planning that lends itself to online operation and dense
+geometric representation for collision-free navigation. We validate the
+effectiveness of our method through real-world robot experiments conducted in
+both cluttered indoor and kilometer-scale outdoor environments, with a
+competitive ratio of about 60% against privileged baselines. Experiment videos
+and more details can be found on our project page: https://atlasnav.github.io</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2502.20382v1' target='_blank'>Physics-Driven Data Generation for Contact-Rich Manipulation via
+  Trajectory Optimization</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Lujie Yang, H. J. Terry Suh, Tong Zhao, Bernhard Paus Graesdal, Tarik Kelestemur, Jiuguang Wang, Tao Pang, Russ Tedrake</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-02-27 18:56:01</h6>
+<p class='card-text'>We present a low-cost data generation pipeline that integrates physics-based
+simulation, human demonstrations, and model-based planning to efficiently
+generate large-scale, high-quality datasets for contact-rich robotic
+manipulation tasks. Starting with a small number of embodiment-flexible human
+demonstrations collected in a virtual reality simulation environment, the
+pipeline refines these demonstrations using optimization-based kinematic
+retargeting and trajectory optimization to adapt them across various robot
+embodiments and physical parameters. This process yields a diverse, physically
+consistent dataset that enables cross-embodiment data transfer, and offers the
+potential to reuse legacy datasets collected under different hardware
+configurations or physical parameters. We validate the pipeline's effectiveness
+by training diffusion policies from the generated datasets for challenging
+contact-rich manipulation tasks across multiple robot embodiments, including a
+floating Allegro hand and bimanual robot arms. The trained policies are
+deployed zero-shot on hardware for bimanual iiwa arms, achieving high success
+rates with minimal human input. Project website:
+https://lujieyang.github.io/physicsgen/.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2502.20371v1' target='_blank'>Constrained Generative Modeling with Manually Bridged Diffusion Models</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Saeid Naderiparizi, Xiaoxuan Liang, Berend Zwartsenberg, Frank Wood</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-02-27 18:41:46</h6>
+<p class='card-text'>In this paper we describe a novel framework for diffusion-based generative
+modeling on constrained spaces. In particular, we introduce manual bridges, a
+framework that expands the kinds of constraints that can be practically used to
+form so-called diffusion bridges. We develop a mechanism for combining multiple
+such constraints so that the resulting multiply-constrained model remains a
+manual bridge that respects all constraints. We also develop a mechanism for
+training a diffusion model that respects such multiple constraints while also
+adapting it to match a data distribution. We develop and extend theory
+demonstrating the mathematical validity of our mechanisms. Additionally, we
+demonstrate our mechanism in constrained generative modeling tasks,
+highlighting a particular high-value application in modeling trajectory
+initializations for path planning and control in autonomous vehicles.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2502.20369v1' target='_blank'>Multi-Agent Path Planning in Complex Environments using Gaussian Belief
+  Propagation with Global Path Finding</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jens Høigaard Jensen, Kristoffer Plagborg Bak Sørensen, Jonas le Fevre Sejersen, Andriy Sarabakha</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-02-27 18:37:49</h6>
+<p class='card-text'>Multi-agent path planning is a critical challenge in robotics, requiring
+agents to navigate complex environments while avoiding collisions and
+optimizing travel efficiency. This work addresses the limitations of existing
+approaches by combining Gaussian belief propagation with path integration and
+introducing a novel tracking factor to ensure strict adherence to global paths.
+The proposed method is tested with two different global path-planning
+approaches: rapidly exploring random trees and a structured planner, which
+leverages predefined lane structures to improve coordination. A simulation
+environment was developed to validate the proposed method across diverse
+scenarios, each posing unique challenges in navigation and communication.
+Simulation results demonstrate that the tracking factor reduces path deviation
+by 28% in single-agent and 16% in multi-agent scenarios, highlighting its
+effectiveness in improving multi-agent coordination, especially when combined
+with structured global planning.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2502.20367v1' target='_blank'>The Role of Tactile Sensing for Learning Reach and Grasp</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Boya Zhang, Iris Andrussow, Andreas Zell, Georg Martius</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-02-27 18:36:37</h6>
+<p class='card-text'>Stable and robust robotic grasping is essential for current and future robot
+applications. In recent works, the use of large datasets and supervised
+learning has enhanced speed and precision in antipodal grasping. However, these
+methods struggle with perception and calibration errors due to large planning
+horizons. To obtain more robust and reactive grasping motions, leveraging
+reinforcement learning combined with tactile sensing is a promising direction.
+Yet, there is no systematic evaluation of how the complexity of force-based
+tactile sensing affects the learning behavior for grasping tasks. This paper
+compares various tactile and environmental setups using two model-free
+reinforcement learning approaches for antipodal grasping. Our findings suggest
+that under imperfect visual perception, various tactile features improve
+learning outcomes, while complex tactile inputs complicate training.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2502.20317v2' target='_blank'>Mixture of Structural-and-Textual Retrieval over Text-rich Graph
+  Knowledge Bases</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yongjia Lei, Haoyu Han, Ryan A. Rossi, Franck Dernoncourt, Nedim Lipka, Mahantesh M Halappanavar, Jiliang Tang, Yu Wang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-02-27 17:42:52</h6>
+<p class='card-text'>Text-rich Graph Knowledge Bases (TG-KBs) have become increasingly crucial for
+answering queries by providing textual and structural knowledge. However,
+current retrieval methods often retrieve these two types of knowledge in
+isolation without considering their mutual reinforcement and some hybrid
+methods even bypass structural retrieval entirely after neighboring
+aggregation. To fill in this gap, we propose a Mixture of
+Structural-and-Textual Retrieval (MoR) to retrieve these two types of knowledge
+via a Planning-Reasoning-Organizing framework. In the Planning stage, MoR
+generates textual planning graphs delineating the logic for answering queries.
+Following planning graphs, in the Reasoning stage, MoR interweaves structural
+traversal and textual matching to obtain candidates from TG-KBs. In the
+Organizing stage, MoR further reranks fetched candidates based on their
+structural trajectory. Extensive experiments demonstrate the superiority of MoR
+in harmonizing structural and textual retrieval with insights, including uneven
+retrieving performance across different query logics and the benefits of
+integrating structural trajectories for candidate reranking. Our code is
+available at https://github.com/Yoega/MoR.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2502.20217v1' target='_blank'>MARVEL: Multi-Agent Reinforcement Learning for constrained field-of-View
+  multi-robot Exploration in Large-scale environments</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jimmy Chiun, Shizhe Zhang, Yizhuo Wang, Yuhong Cao, Guillaume Sartoretti</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-02-27 15:58:42</h6>
+<p class='card-text'>In multi-robot exploration, a team of mobile robot is tasked with efficiently
+mapping an unknown environments. While most exploration planners assume
+omnidirectional sensors like LiDAR, this is impractical for small robots such
+as drones, where lightweight, directional sensors like cameras may be the only
+option due to payload constraints. These sensors have a constrained
+field-of-view (FoV), which adds complexity to the exploration problem,
+requiring not only optimal robot positioning but also sensor orientation during
+movement. In this work, we propose MARVEL, a neural framework that leverages
+graph attention networks, together with novel frontiers and orientation
+features fusion technique, to develop a collaborative, decentralized policy
+using multi-agent reinforcement learning (MARL) for robots with constrained
+FoV. To handle the large action space of viewpoints planning, we further
+introduce a novel information-driven action pruning strategy. MARVEL improves
+multi-robot coordination and decision-making in challenging large-scale indoor
+environments, while adapting to various team sizes and sensor configurations
+(i.e., FoV and sensor range) without additional training. Our extensive
+evaluation shows that MARVEL's learned policies exhibit effective coordinated
+behaviors, outperforming state-of-the-art exploration planners across multiple
+metrics. We experimentally demonstrate MARVEL's generalizability in large-scale
+environments, of up to 90m by 90m, and validate its practical applicability
+through successful deployment on a team of real drone hardware.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2502.20178v1' target='_blank'>SSD: A State-based Stealthy Backdoor Attack For Navigation System in UAV
+  Route Planning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Zhaoxuan Wang, Yang Li, Jie Zhang, Xingshuo Han, Kangbo Liu, Lyu Yang, yuan Zhou, Tianwei Zhang, Quan Pan</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-02-27 15:17:58</h6>
+<p class='card-text'>Unmanned aerial vehicles (UAVs) are increasingly employed to perform
+high-risk tasks that require minimal human intervention. However, UAVs face
+escalating cybersecurity threats, particularly from GNSS spoofing attacks.
+While previous studies have extensively investigated the impacts of GNSS
+spoofing on UAVs, few have focused on its effects on specific tasks. Moreover,
+the influence of UAV motion states on the assessment of network security risks
+is often overlooked. To address these gaps, we first provide a detailed
+evaluation of how motion states affect the effectiveness of network attacks. We
+demonstrate that nonlinear motion states not only enhance the effectiveness of
+position spoofing in GNSS spoofing attacks but also reduce the probability of
+speed-related attack detection. Building upon this, we propose a
+state-triggered backdoor attack method (SSD) to deceive GNSS systems and assess
+its risk to trajectory planning tasks. Extensive validation of SSD's
+effectiveness and stealthiness is conducted. Experimental results show that,
+with appropriately tuned hyperparameters, SSD significantly increases
+positioning errors and the risk of task failure, while maintaining 100% stealth
+across three state-of-the-art detectors.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2502.20168v1' target='_blank'>Accelerating Model-Based Reinforcement Learning with State-Space World
+  Models</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Maria Krinner, Elie Aljalbout, Angel Romero, Davide Scaramuzza</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-02-27 15:05:25</h6>
+<p class='card-text'>Reinforcement learning (RL) is a powerful approach for robot learning.
+However, model-free RL (MFRL) requires a large number of environment
+interactions to learn successful control policies. This is due to the noisy RL
+training updates and the complexity of robotic systems, which typically involve
+highly non-linear dynamics and noisy sensor signals. In contrast, model-based
+RL (MBRL) not only trains a policy but simultaneously learns a world model that
+captures the environment's dynamics and rewards. The world model can either be
+used for planning, for data collection, or to provide first-order policy
+gradients for training. Leveraging a world model significantly improves sample
+efficiency compared to model-free RL. However, training a world model alongside
+the policy increases the computational complexity, leading to longer training
+times that are often intractable for complex real-world scenarios. In this
+work, we propose a new method for accelerating model-based RL using state-space
+world models. Our approach leverages state-space models (SSMs) to parallelize
+the training of the dynamics model, which is typically the main computational
+bottleneck. Additionally, we propose an architecture that provides privileged
+information to the world model during training, which is particularly relevant
+for partially observable environments. We evaluate our method in several
+real-world agile quadrotor flight tasks, involving complex dynamics, for both
+fully and partially observable environments. We demonstrate a significant
+speedup, reducing the world model training time by up to 10 times, and the
+overall MBRL training time by up to 4 times. This benefit comes without
+compromising performance, as our method achieves similar sample efficiency and
+task rewards to state-of-the-art MBRL methods.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2502.20132v2' target='_blank'>Regional climate projections using a deep-learning-based model-ranking
+  and downscaling framework: Application to European climate zones</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Parthiban Loganathan, Elias Zea, Ricardo Vinuesa, Evelyn Otero</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-02-27 14:27:09</h6>
+<p class='card-text'>Accurate regional climate forecast calls for high-resolution downscaling of
+Global Climate Models (GCMs). This work presents a deep-learning-based
+multi-model evaluation and downscaling framework ranking 32 Coupled Model
+Intercomparison Project Phase 6 (CMIP6) models using a Deep Learning-TOPSIS
+(DL-TOPSIS) mechanism and so refines outputs using advanced deep-learning
+models. Using nine performance criteria, five K\"oppen-Geiger climate zones --
+Tropical, Arid, Temperate, Continental, and Polar -- are investigated over four
+seasons. While TaiESM1 and CMCC-CM2-SR5 show notable biases, ranking results
+show that NorESM2-LM, GISS-E2-1-G, and HadGEM3-GC31-LL outperform other models.
+Four models contribute to downscaling the top-ranked GCMs to 0.1$^{\circ}$
+resolution: Vision Transformer (ViT), Geospatial Spatiotemporal Transformer
+with Attention and Imbalance-Aware Network (GeoSTANet), CNN-LSTM, and CNN-Long
+Short-Term Memory (ConvLSTM). Effectively capturing temperature extremes (TXx,
+TNn), GeoSTANet achieves the highest accuracy (Root Mean Square Error (RMSE) =
+1.57$^{\circ}$C, Kling-Gupta Efficiency (KGE) = 0.89, Nash-Sutcliffe Efficiency
+(NSE) = 0.85, Correlation ($r$) = 0.92), so reducing RMSE by 20% over ConvLSTM.
+CNN-LSTM and ConvLSTM do well in Continental and Temperate zones; ViT finds
+fine-scale temperature fluctuations difficult. These results confirm that
+multi-criteria ranking improves GCM selection for regional climate studies and
+transformer-based downscaling exceeds conventional deep-learning methods. This
+framework offers a scalable method to enhance high-resolution climate
+projections, benefiting impact assessments and adaptation plans.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js'></script>
+</body>
+</html>
