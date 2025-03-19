@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>planning - 2025-03-19</title>
+<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap' rel='stylesheet'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css'>
+<style>
+body {
+font-family: 'Roboto', sans-serif;
+background-color: #f5f7fa;
+padding: 20px;
+}
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.card-title {
+    font-weight: 700;
+}
+.card:hover {
+    transform: scale(1.02);
+    transition: 0.3s ease-in-out;
+}
+</style>
+</head>
+<body>
+<div class='container'>
+<h1 class='text-center my-4'><i class='fas fa-book'></i>planning - 2025-03-19</h1>
+<div class='row'>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2503.14498v1' target='_blank'>Tracking Meets Large Multimodal Models for Driving Scenario
+  Understanding</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Ayesha Ishaq, Jean Lahoud, Fahad Shahbaz Khan, Salman Khan, Hisham Cholakkal, Rao Muhammad Anwer</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-03-18 17:59:12</h6>
+<p class='card-text'>Large Multimodal Models (LMMs) have recently gained prominence in autonomous
+driving research, showcasing promising capabilities across various emerging
+benchmarks. LMMs specifically designed for this domain have demonstrated
+effective perception, planning, and prediction skills. However, many of these
+methods underutilize 3D spatial and temporal elements, relying mainly on image
+data. As a result, their effectiveness in dynamic driving environments is
+limited. We propose to integrate tracking information as an additional input to
+recover 3D spatial and temporal details that are not effectively captured in
+the images. We introduce a novel approach for embedding this tracking
+information into LMMs to enhance their spatiotemporal understanding of driving
+scenarios. By incorporating 3D tracking data through a track encoder, we enrich
+visual queries with crucial spatial and temporal cues while avoiding the
+computational overhead associated with processing lengthy video sequences or
+extensive 3D inputs. Moreover, we employ a self-supervised approach to pretrain
+the tracking encoder to provide LMMs with additional contextual information,
+significantly improving their performance in perception, planning, and
+prediction tasks for autonomous driving. Experimental results demonstrate the
+effectiveness of our approach, with a gain of 9.5% in accuracy, an increase of
+7.04 points in the ChatGPT score, and 9.4% increase in the overall score over
+baseline models on DriveLM-nuScenes benchmark, along with a 3.7% final score
+improvement on DriveLM-CARLA. Our code is available at
+https://github.com/mbzuai-oryx/TrackingMeetsLMM</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2503.14427v1' target='_blank'>VisEscape: A Benchmark for Evaluating Exploration-driven Decision-making
+  in Virtual Escape Rooms</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Seungwon Lim, Sungwoong Kim, Jihwan Yu, Sungjae Lee, Jiwan Chung, Youngjae Yu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-03-18 16:59:09</h6>
+<p class='card-text'>Escape rooms present a unique cognitive challenge that demands
+exploration-driven planning: players should actively search their environment,
+continuously update their knowledge based on new discoveries, and connect
+disparate clues to determine which elements are relevant to their objectives.
+Motivated by this, we introduce VisEscape, a benchmark of 20 virtual escape
+rooms specifically designed to evaluate AI models under these challenging
+conditions, where success depends not only on solving isolated puzzles but also
+on iteratively constructing and refining spatial-temporal knowledge of a
+dynamically changing environment. On VisEscape, we observed that even
+state-of-the-art multimodal models generally fail to escape the rooms, showing
+considerable variation in their levels of progress and trajectories. To address
+this issue, we propose VisEscaper, which effectively integrates Memory,
+Feedback, and ReAct modules, demonstrating significant improvements by
+performing 3.7 times more effectively and 5.0 times more efficiently on
+average.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2503.14350v1' target='_blank'>VEGGIE: Instructional Editing and Reasoning Video Concepts with Grounded
+  Generation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Shoubin Yu, Difan Liu, Ziqiao Ma, Yicong Hong, Yang Zhou, Hao Tan, Joyce Chai, Mohit Bansal</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-03-18 15:31:12</h6>
+<p class='card-text'>Recent video diffusion models have enhanced video editing, but it remains
+challenging to handle instructional editing and diverse tasks (e.g., adding,
+removing, changing) within a unified framework. In this paper, we introduce
+VEGGIE, a Video Editor with Grounded Generation from Instructions, a simple
+end-to-end framework that unifies video concept editing, grounding, and
+reasoning based on diverse user instructions. Specifically, given a video and
+text query, VEGGIE first utilizes an MLLM to interpret user intentions in
+instructions and ground them to the video contexts, generating frame-specific
+grounded task queries for pixel-space responses. A diffusion model then renders
+these plans and generates edited videos that align with user intent. To support
+diverse tasks and complex instructions, we employ a curriculum learning
+strategy: first aligning the MLLM and video diffusion model with large-scale
+instructional image editing data, followed by end-to-end fine-tuning on
+high-quality multitask video data. Additionally, we introduce a novel data
+synthesis pipeline to generate paired instructional video editing data for
+model training. It transforms static image data into diverse, high-quality
+video editing samples by leveraging Image-to-Video models to inject dynamics.
+VEGGIE shows strong performance in instructional video editing with different
+editing skills, outperforming the best instructional baseline as a versatile
+model, while other models struggle with multi-tasking. VEGGIE also excels in
+video object grounding and reasoning segmentation, where other baselines fail.
+We further reveal how the multiple tasks help each other and highlight
+promising applications like zero-shot multimodal instructional and in-context
+video editing.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2503.14331v1' target='_blank'>ADAPT: An Autonomous Forklift for Construction Site Operation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Johannes Huemer, Markus Murschitz, Matthias Schörghuber, Lukas Reisinger, Thomas Kadiofsky, Christoph Weidinger, Mario Niedermeyer, Benedikt Widy, Marcel Zeilinger, Csaba Beleznai, Tobias Glück, Andreas Kugi, Patrik Zips</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-03-18 15:03:28</h6>
+<p class='card-text'>Efficient material logistics play a critical role in controlling costs and
+schedules in the construction industry. However, manual material handling
+remains prone to inefficiencies, delays, and safety risks. Autonomous forklifts
+offer a promising solution to streamline on-site logistics, reducing reliance
+on human operators and mitigating labor shortages. This paper presents the
+development and evaluation of the Autonomous Dynamic All-terrain Pallet
+Transporter (ADAPT), a fully autonomous off-road forklift designed for
+construction environments. Unlike structured warehouse settings, construction
+sites pose significant challenges, including dynamic obstacles, unstructured
+terrain, and varying weather conditions. To address these challenges, our
+system integrates AI-driven perception techniques with traditional approaches
+for decision making, planning, and control, enabling reliable operation in
+complex environments. We validate the system through extensive real-world
+testing, comparing its long-term performance against an experienced human
+operator across various weather conditions. We also provide a comprehensive
+analysis of challenges and key lessons learned, contributing to the advancement
+of autonomous heavy machinery. Our findings demonstrate that autonomous outdoor
+forklifts can operate near human-level performance, offering a viable path
+toward safer and more efficient construction logistics.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2503.14328v1' target='_blank'>Risk-Sensitive Model Predictive Control for Interaction-Aware Planning
+  -- A Sequential Convexification Algorithm</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Renzi Wang, Mathijs Schuurmans, Panagiotis Patrinos</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-03-18 15:01:37</h6>
+<p class='card-text'>This paper considers risk-sensitive model predictive control for stochastic
+systems with a decision-dependent distribution. This class of systems is
+commonly found in human-robot interaction scenarios. We derive computationally
+tractable convex upper bounds to both the objective function, and to frequently
+used penalty terms for collision avoidance, allowing us to efficiently solve
+the generally nonconvex optimal control problem as a sequence of convex
+problems. Simulations of a robot navigating a corridor demonstrate the
+effectiveness and the computational advantage of the proposed approach.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2503.14309v1' target='_blank'>An Assessment of the UK Government Clean Energy Strategy for the Year
+  2030</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Anthony D. Stephens, David R. Walwyn</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-03-18 14:48:06</h6>
+<p class='card-text'>In 2024, the UK Government made two striking announcements on its plans to
+decarbonise the energy system; it pledged GBP22 billion to establish carbon
+capture and storage hubs on Teesside and Merseyside and released the Clean
+Power 2030 Action Plan. This paper questions the validity of both plans,
+arguing that they do not take adequate account of the consequences of the
+highly variable nature of wind and solar generations. Using dynamic models of
+future UK electricity systems which are designed to take account of these
+variabilities, it is shown that the Clean Power 2030 Action Plan overestimates
+the ability of wind and solar generations to decarbonise the electricity system
+as they increase in size relative to the demand of the electricity system. More
+importantly, the dynamic models show that most of the achievable
+decarbonization is the result of increasing wind generation from the current
+level of around 10 GW to around 20 GW. Increasing wind generation to only 20
+GW, rather than to 30 GW as proposed in the Action Plan, should halve the
+proposed cost, a saving of perhaps GBP 120 billion, with little disbenefit in
+terms of reduced decarbonization. Furthermore, the dynamic modelling shows that
+UK gas storage capacity of 7.5 winter days looks hopeless inadequate in
+comparison with the storage capacities deemed necessary by its continental
+neighbors. Concern is expressed that a consequence of the Climate Change Act of
+2008 requiring the UK to meet arbitrary decarbonization targets is leading
+government advisors to propose several unproven and therefore highly risky
+technological solutions.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2503.14304v1' target='_blank'>RoMedFormer: A Rotary-Embedding Transformer Foundation Model for 3D
+  Genito-Pelvic Structure Segmentation in MRI and CT</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yuheng Li, Mingzhe Hu, Richard L. J. Qiu, Maria Thor, Andre Williams, Deborah Marshall, Xiaofeng Yang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-03-18 14:45:05</h6>
+<p class='card-text'>Deep learning-based segmentation of genito-pelvic structures in MRI and CT is
+crucial for applications such as radiation therapy, surgical planning, and
+disease diagnosis. However, existing segmentation models often struggle with
+generalizability across imaging modalities, and anatomical variations. In this
+work, we propose RoMedFormer, a rotary-embedding transformer-based foundation
+model designed for 3D female genito-pelvic structure segmentation in both MRI
+and CT. RoMedFormer leverages self-supervised learning and rotary positional
+embeddings to enhance spatial feature representation and capture long-range
+dependencies in 3D medical data. We pre-train our model using a diverse dataset
+of 3D MRI and CT scans and fine-tune it for downstream segmentation tasks.
+Experimental results demonstrate that RoMedFormer achieves superior performance
+segmenting genito-pelvic organs. Our findings highlight the potential of
+transformer-based architectures in medical image segmentation and pave the way
+for more transferable segmentation frameworks.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2503.14203v1' target='_blank'>Stochastic Trajectory Prediction under Unstructured Constraints</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Hao Ma, Zhiqiang Pu, Shijie Wang, Boyin Liu, Huimu Wang, Yanyan Liang, Jianqiang Yi</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-03-18 12:27:59</h6>
+<p class='card-text'>Trajectory prediction facilitates effective planning and decision-making,
+while constrained trajectory prediction integrates regulation into prediction.
+Recent advances in constrained trajectory prediction focus on structured
+constraints by constructing optimization objectives. However, handling
+unstructured constraints is challenging due to the lack of differentiable
+formal definitions. To address this, we propose a novel method for constrained
+trajectory prediction using a conditional generative paradigm, named
+Controllable Trajectory Diffusion (CTD). The key idea is that any trajectory
+corresponds to a degree of conformity to a constraint. By quantifying this
+degree and treating it as a condition, a model can implicitly learn to predict
+trajectories under unstructured constraints. CTD employs a pre-trained scoring
+model to predict the degree of conformity (i.e., a score), and uses this score
+as a condition for a conditional diffusion model to generate trajectories.
+Experimental results demonstrate that CTD achieves high accuracy on the ETH/UCY
+and SDD benchmarks. Qualitative analysis confirms that CTD ensures adherence to
+unstructured constraints and can predict trajectories that satisfy
+combinatorial constraints.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2503.14184v1' target='_blank'>Variable Time-Step MPC for Agile Multi-Rotor UAV Interception of Dynamic
+  Targets</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Atharva Ghotavadekar, František Nekovář, Martin Saska, Jan Faigl</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-03-18 11:59:24</h6>
+<p class='card-text'>Agile trajectory planning can improve the efficiency of multi-rotor Uncrewed
+Aerial Vehicles (UAVs) in scenarios with combined task-oriented and kinematic
+trajectory planning, such as monitoring spatio-temporal phenomena or
+intercepting dynamic targets. Agile planning using existing non-linear model
+predictive control methods is limited by the number of planning steps as it
+becomes increasingly computationally demanding. That reduces the prediction
+horizon length, leading to a decrease in solution quality. Besides, the fixed
+time-step length limits the utilization of the available UAV dynamics in the
+target neighborhood. In this paper, we propose to address these limitations by
+introducing variable time steps and coupling them with the prediction horizon
+length. A simplified point-mass motion primitive is used to leverage the
+differential flatness of quadrotor dynamics and the generation of feasible
+trajectories in the flat output space. Based on the presented evaluation
+results and experimentally validated deployment, the proposed method increases
+the solution quality by enabling planning for long flight segments but allowing
+tightly sampled maneuvering.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2503.14182v1' target='_blank'>Bridging Past and Future: End-to-End Autonomous Driving with Historical
+  Prediction and Planning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Bozhou Zhang, Nan Song, Xin Jin, Li Zhang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-03-18 11:57:31</h6>
+<p class='card-text'>End-to-end autonomous driving unifies tasks in a differentiable framework,
+enabling planning-oriented optimization and attracting growing attention.
+Current methods aggregate historical information either through dense
+historical bird's-eye-view (BEV) features or by querying a sparse memory bank,
+following paradigms inherited from detection. However, we argue that these
+paradigms either omit historical information in motion planning or fail to
+align with its multi-step nature, which requires predicting or planning
+multiple future time steps. In line with the philosophy of future is a
+continuation of past, we propose BridgeAD, which reformulates motion and
+planning queries as multi-step queries to differentiate the queries for each
+future time step. This design enables the effective use of historical
+prediction and planning by applying them to the appropriate parts of the
+end-to-end system based on the time steps, which improves both perception and
+motion planning. Specifically, historical queries for the current frame are
+combined with perception, while queries for future frames are integrated with
+motion planning. In this way, we bridge the gap between past and future by
+aggregating historical insights at every time step, enhancing the overall
+coherence and accuracy of the end-to-end autonomous driving pipeline. Extensive
+experiments on the nuScenes dataset in both open-loop and closed-loop settings
+demonstrate that BridgeAD achieves state-of-the-art performance.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2503.14168v1' target='_blank'>What elements should we focus when designing immersive virtual nature? A
+  preliminary user study</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Lin Ma, Qiyuan An, Jing Chen, Xinggang Hou, Yuan Feng, Dengkai Chen</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-03-18 11:39:31</h6>
+<p class='card-text'>Extensive research has confirmed the positive relationship between exposure
+to natural environments and human cognitive, behavioral, physical, and mental
+health. However, only some have easy access to nature. With electronic
+information and simulation technology advancements, digital nature experiences
+are widely used across various devices and scenarios. It is essential to
+explore how to effectively select and utilize natural elements to guide the
+design of digital nature scenes. This paper examines critical elements in
+immersive virtual nature (IVN) and their impact on user perception. Through
+online surveys and design experiments, we identified specific natural elements
+that promote relaxation and proposed design strategies for virtual
+environments. We developed several immersive virtual nature scenes for further
+validation. Finally, we outline our future experimental plans and research
+directions in digital nature. Our research aims to provide HCI designers
+insights into creating restorative, immersive virtual scenes.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2503.14160v1' target='_blank'>GPU-Accelerated Motion Planning of an Underactuated Forestry Crane in
+  Cluttered Environments</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Minh Nhat Vu, Gerald Ebmer, Alexander Watcher, Marc-Philip Ecker, Giang Nguyen, Tobias Glueck</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-03-18 11:31:20</h6>
+<p class='card-text'>Autonomous large-scale machine operations require fast, efficient, and
+collision-free motion planning while addressing unique challenges such as
+hydraulic actuation limits and underactuated joint dynamics. This paper
+presents a novel two-step motion planning framework designed for an
+underactuated forestry crane. The first step employs GPU-accelerated stochastic
+optimization to rapidly compute a globally shortest collision-free path. The
+second step refines this path into a dynamically feasible trajectory using a
+trajectory optimizer that ensures compliance with system dynamics and actuation
+constraints. The proposed approach is benchmarked against conventional
+techniques, including RRT-based methods and purely optimization-based
+approaches. Simulation results demonstrate substantial improvements in
+computation speed and motion feasibility, making this method highly suitable
+for complex crane systems.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2503.13843v1' target='_blank'>WebNav: An Intelligent Agent for Voice-Controlled Web Navigation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Trisanth Srinivasan, Santosh Patapati</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-03-18 02:33:27</h6>
+<p class='card-text'>The increasing reliance on web interfaces presents many challenges for
+visually impaired users, showcasing the need for more advanced assistive
+technologies. This paper introduces WebNav, a voice-controlled web navigation
+agent that leverages a ReAct-inspired architecture and generative AI to provide
+this framework. WebNav comprises of a hierarchical structure: a Digital
+Navigation Module (DIGNAV) for high-level strategic planning, an Assistant
+Module for translating abstract commands into executable actions, and an
+Inference Module for low-level interaction. A key component is a dynamic
+labeling engine, implemented as a browser extension, that generates real-time
+labels for interactive elements, creating mapping between voice commands and
+Document Object Model (DOM) components. Preliminary evaluations show that
+WebNav outperforms traditional screen readers in response time and task
+completion accuracy for the visually impaired. Future work will focus on
+extensive user evaluations, benchmark development, and refining the agent's
+adaptive capabilities for real-world deployment.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2503.13842v1' target='_blank'>Counterfactual experience augmented off-policy reinforcement learning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Sunbowen Lee, Yicheng Gong, Chao Deng</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-03-18 02:32:50</h6>
+<p class='card-text'>Reinforcement learning control algorithms face significant challenges due to
+out-of-distribution and inefficient exploration problems. While model-based
+reinforcement learning enhances the agent's reasoning and planning capabilities
+by constructing virtual environments, training such virtual environments can be
+very complex. In order to build an efficient inference model and enhance the
+representativeness of learning data, we propose the Counterfactual Experience
+Augmentation (CEA) algorithm. CEA leverages variational autoencoders to model
+the dynamic patterns of state transitions and introduces randomness to model
+non-stationarity. This approach focuses on expanding the learning data in the
+experience pool through counterfactual inference and performs exceptionally
+well in environments that follow the bisimulation assumption. Environments with
+bisimulation properties are usually represented by discrete observation and
+action spaces, we propose a sampling method based on maximum kernel density
+estimation entropy to extend CEA to various environments. By providing reward
+signals for counterfactual state transitions based on real information, CEA
+constructs a complete counterfactual experience to alleviate the
+out-of-distribution problem of the learning data, and outperforms general SOTA
+algorithms in environments with difference properties. Finally, we discuss the
+similarities, differences and properties of generated counterfactual
+experiences and real experiences. The code is available at
+https://github.com/Aegis1863/CEA.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2503.13806v1' target='_blank'>Organ-aware Multi-scale Medical Image Segmentation Using Text Prompt
+  Engineering</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Wenjie Zhang, Ziyang Zhang, Mengnan He, Jiancheng Ye</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-03-18 01:35:34</h6>
+<p class='card-text'>Accurate segmentation is essential for effective treatment planning and
+disease monitoring. Existing medical image segmentation methods predominantly
+rely on uni-modal visual inputs, such as images or videos, requiring
+labor-intensive manual annotations. Additionally, medical imaging techniques
+capture multiple intertwined organs within a single scan, further complicating
+segmentation accuracy. To address these challenges, MedSAM, a large-scale
+medical segmentation model based on the Segment Anything Model (SAM), was
+developed to enhance segmentation accuracy by integrating image features with
+user-provided prompts. While MedSAM has demonstrated strong performance across
+various medical segmentation tasks, it primarily relies on geometric prompts
+(e.g., points and bounding boxes) and lacks support for text-based prompts,
+which could help specify subtle or ambiguous anatomical structures. To overcome
+these limitations, we propose the Organ-aware Multi-scale Text-guided Medical
+Image Segmentation Model (OMT-SAM) for multi-organ segmentation. Our approach
+introduces CLIP encoders as a novel image-text prompt encoder, operating with
+the geometric prompt encoder to provide informative contextual guidance. We
+pair descriptive textual prompts with corresponding images, processing them
+through pre-trained CLIP encoders and a cross-attention mechanism to generate
+fused image-text embeddings. Additionally, we extract multi-scale visual
+features from MedSAM, capturing fine-grained anatomical details at different
+levels of granularity. We evaluate OMT-SAM on the FLARE 2021 dataset,
+benchmarking its performance against existing segmentation methods. Empirical
+results demonstrate that OMT-SAM achieves a mean Dice Similarity Coefficient of
+0.937, outperforming MedSAM (0.893) and other segmentation models, highlighting
+its superior capability in handling complex medical image segmentation tasks.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2503.13787v1' target='_blank'>A Systematic Digital Engineering Approach to Verification & Validation
+  of Autonomous Ground Vehicles in Off-Road Environments</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Tanmay Vilas Samak, Chinmay Vilas Samak, Julia Brault, Cori Harber, Kirsten McCane, Jonathon Smereka, Mark Brudnak, David Gorsich, Venkat Krovi</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-03-18 00:40:35</h6>
+<p class='card-text'>The engineering community currently encounters significant challenges in the
+systematic development and validation of autonomy algorithms for off-road
+ground vehicles. These challenges are posed by unusually high test parameters
+and algorithmic variants. In order to address these pain points, this work
+presents an optimized digital engineering framework that tightly couples
+digital twin simulations with model-based systems engineering (MBSE) and
+model-based design (MBD) workflows. The efficacy of the proposed framework is
+demonstrated through an end-to-end case study of an autonomous light tactical
+vehicle (LTV) performing visual servoing to drive along a dirt road and
+reacting to any obstacles or environmental changes. The presented methodology
+allows for traceable requirements engineering, efficient variant management,
+granular parameter sweep setup, systematic test-case definition, and automated
+execution of the simulations. The candidate off-road autonomy algorithm is
+evaluated for satisfying requirements against a battery of 128 test cases,
+which is procedurally generated based on the test parameters (times of the day
+and weather conditions) and algorithmic variants (perception, planning, and
+control sub-systems). Finally, the test results and key performance indicators
+are logged, and the test report is generated automatically. This then allows
+for manual as well as automated data analysis with traceability and
+tractability across the digital thread.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2503.13755v1' target='_blank'>How many simulations do we need for simulation-based inference in
+  cosmology?</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Anirban Bairagi, Benjamin Wandelt, Francisco Villaescusa-Navarro</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-03-17 22:21:39</h6>
+<p class='card-text'>How many simulations do we need to train machine learning methods to extract
+information available from summary statistics of the cosmological density
+field? Neural methods have shown the potential to extract non-linear
+information available from cosmological data. Success depends critically on
+having sufficient simulations for training the networks and appropriate network
+architectures. In the first detailed convergence study of neural network
+training for cosmological inference, we show that currently available
+simulation suites, such as the Quijote Latin Hypercube(LH) with 2000
+simulations, do not provide sufficient training data for a generic neural
+network to reach the optimal regime, even for the dark matter power spectrum,
+and in an idealized case. We discover an empirical neural scaling law that
+predicts how much information a neural network can extract from a highly
+informative summary statistic, the dark matter power spectrum, as a function of
+the number of simulations used to train the network, for a wide range of
+architectures and hyperparameters. We combine this result with the Cramer-Rao
+information bound to forecast the number of training simulations needed for
+near-optimal information extraction. To verify our method we created the
+largest publicly released simulation data set in cosmology, the Big Sobol
+Sequence(BSQ), consisting of 32,768 $\Lambda$CDM n-body simulations uniformly
+covering the $\Lambda$CDM parameter space. Our method enables efficient
+planning of simulation campaigns for machine learning applications in
+cosmology, while the BSQ dataset provides an unprecedented resource for
+studying the convergence behavior of neural networks in cosmological parameter
+inference. Our results suggest that new large simulation suites or new training
+approaches will be necessary to achieve information-optimal parameter inference
+from non-linear simulations.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2503.13710v1' target='_blank'>Improving Geometric Consistency for 360-Degree Neural Radiance Fields in
+  Indoor Scenarios</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Iryna Repinetska, Anna Hilsmann, Peter Eisert</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-03-17 20:30:48</h6>
+<p class='card-text'>Photo-realistic rendering and novel view synthesis play a crucial role in
+human-computer interaction tasks, from gaming to path planning. Neural Radiance
+Fields (NeRFs) model scenes as continuous volumetric functions and achieve
+remarkable rendering quality. However, NeRFs often struggle in large,
+low-textured areas, producing cloudy artifacts known as ''floaters'' that
+reduce scene realism, especially in indoor environments with featureless
+architectural surfaces like walls, ceilings, and floors. To overcome this
+limitation, prior work has integrated geometric constraints into the NeRF
+pipeline, typically leveraging depth information derived from Structure from
+Motion or Multi-View Stereo. Yet, conventional RGB-feature correspondence
+methods face challenges in accurately estimating depth in textureless regions,
+leading to unreliable constraints. This challenge is further complicated in
+360-degree ''inside-out'' views, where sparse visual overlap between adjacent
+images further hinders depth estimation. In order to address these issues, we
+propose an efficient and robust method for computing dense depth priors,
+specifically tailored for large low-textured architectural surfaces in indoor
+environments. We introduce a novel depth loss function to enhance rendering
+quality in these challenging, low-feature regions, while complementary
+depth-patch regularization further refines depth consistency across other
+areas. Experiments with Instant-NGP on two synthetic 360-degree indoor scenes
+demonstrate improved visual fidelity with our method compared to standard
+photometric loss and Mean Squared Error depth supervision.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2503.13446v1' target='_blank'>MoManipVLA: Transferring Vision-language-action Models for General
+  Mobile Manipulation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Zhenyu Wu, Yuheng Zhou, Xiuwei Xu, Ziwei Wang, Haibin Yan</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-03-17 17:59:52</h6>
+<p class='card-text'>Mobile manipulation is the fundamental challenge for robotics to assist
+humans with diverse tasks and environments in everyday life. However,
+conventional mobile manipulation approaches often struggle to generalize across
+different tasks and environments because of the lack of large-scale training.
+In contrast, recent advances in vision-language-action (VLA) models have shown
+impressive generalization capabilities, but these foundation models are
+developed for fixed-base manipulation tasks. Therefore, we propose an efficient
+policy adaptation framework named MoManipVLA to transfer pre-trained VLA models
+of fix-base manipulation to mobile manipulation, so that high generalization
+ability across tasks and environments can be achieved in mobile manipulation
+policy. Specifically, we utilize pre-trained VLA models to generate waypoints
+of the end-effector with high generalization ability. We design motion planning
+objectives for the mobile base and the robot arm, which aim at maximizing the
+physical feasibility of the trajectory. Finally, we present an efficient
+bi-level objective optimization framework for trajectory generation, where the
+upper-level optimization predicts waypoints for base movement to enhance the
+manipulator policy space, and the lower-level optimization selects the optimal
+end-effector trajectory to complete the manipulation task. In this way,
+MoManipVLA can adjust the position of the robot base in a zero-shot manner,
+thus making the waypoints predicted from the fixed-base VLA models feasible.
+Extensive experimental results on OVMM and the real world demonstrate that
+MoManipVLA achieves a 4.2% higher success rate than the state-of-the-art mobile
+manipulation, and only requires 50 training cost for real world deployment due
+to the strong generalization ability in the pre-trained VLA models.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2503.13347v1' target='_blank'>TriDF: Triplane-Accelerated Density Fields for Few-Shot Remote Sensing
+  Novel View Synthesis</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jiaming Kang, Keyan Chen, Zhengxia Zou, Zhenwei Shi</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-03-17 16:25:39</h6>
+<p class='card-text'>Remote sensing novel view synthesis (NVS) offers significant potential for 3D
+interpretation of remote sensing scenes, with important applications in urban
+planning and environmental monitoring. However, remote sensing scenes
+frequently lack sufficient multi-view images due to acquisition constraints.
+While existing NVS methods tend to overfit when processing limited input views,
+advanced few-shot NVS methods are computationally intensive and perform
+sub-optimally in remote sensing scenes. This paper presents TriDF, an efficient
+hybrid 3D representation for fast remote sensing NVS from as few as 3 input
+views. Our approach decouples color and volume density information, modeling
+them independently to reduce the computational burden on implicit radiance
+fields and accelerate reconstruction. We explore the potential of the triplane
+representation in few-shot NVS tasks by mapping high-frequency color
+information onto this compact structure, and the direct optimization of feature
+planes significantly speeds up convergence. Volume density is modeled as
+continuous density fields, incorporating reference features from neighboring
+views through image-based rendering to compensate for limited input data.
+Additionally, we introduce depth-guided optimization based on point clouds,
+which effectively mitigates the overfitting problem in few-shot NVS.
+Comprehensive experiments across multiple remote sensing scenes demonstrate
+that our hybrid representation achieves a 30x speed increase compared to
+NeRF-based methods, while simultaneously improving rendering quality metrics
+over advanced few-shot methods (7.4% increase in PSNR, 12.2% in SSIM, and 18.7%
+in LPIPS). The code is publicly available at https://github.com/kanehub/TriDF</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2503.13237v1' target='_blank'>Biodiversity conservation and strategies of public awareness, case
+  study: The natural landscape of central Tunisia</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Islem Saadaoui, Christopher Robin Bryant, Hichem Rejeb, Alexandru-Ionuţ Petrişor</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-03-17 14:49:23</h6>
+<p class='card-text'>This research examines global issues concerning the development of mountain
+areas considered as territories difficult to manage. The case study area is
+part of the sub-region of High Alpine Steppes belonging to the Tunisian Ridge
+and reaching Tebessa Mountains in Algeria. The central question of this article
+is based on the analysis of the links between the representations produced by
+mountain landscapes and the construction of a border line that must meet the
+requirements of sustainable development. Eco-landscape determinants and the
+role of public authorities and population must be better defined so that the
+products of this space provide a better quality of life endowed with the
+alternatives of local and sustainable development. Our hypothesis is that the
+mountain areas of West Central Tunisia still have a real ecological potential
+little disturbed by a chimerical development, and can constitute assets for the
+territorial development of the area. The approach adopted by this work is a
+scoping audit based on the floristic richness and the monitoring of its
+spatiotemporal dynamics. The results of this research allowed us to draw rich
+conclusions; the phyto-ecology approach has shown a relative floristic richness
+that remains highly dependent on the climatic cycles and intervention of human
+action; this area must be considered as a priority of the public planning
+policies aimed at improving the quality of lives in these fragile zones in the
+context of sustainable development.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2503.13175v1' target='_blank'>Prioritized Planning for Continuous-time Lifelong Multi-agent
+  Pathfinding</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Alvin Combrink, Sabino Francesco Roselli, Martin Fabian</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-03-17 13:52:03</h6>
+<p class='card-text'>Multi-agent Path Finding (MAPF) is the problem of planning collision-free
+movements of agents such that they get from where they are to where they need
+to be. Commonly, agents are located on a graph and can traverse edges. This
+problem has many variations and has been studied for decades. Two such
+variations are the continuous-time and the lifelong MAPF problems. In the
+continuous-time MAPF problem, edges can have non-unit lengths and agents can
+traverse them at any real-valued time. Additionally, agent volumes are often
+included. In the lifelong MAPF problem, agents must attend to a continuous
+stream of incoming tasks. Much work has been devoted to designing solution
+methods within these two areas. However, to our knowledge, the combined problem
+of continuous-time lifelong MAPF has yet to be addressed.
+  This work addresses continuous-time lifelong MAPF with agent volumes by
+presenting the fast and sub-optimal Continuous-time Prioritized Lifelong
+Planner (CPLP). CPLP continuously re-prioritizes tasks, assigns agents to them,
+and computes agent plans using a combination of two path planners; one based on
+CCBS and the other on SIPP. Experimental results with up to $400$ agents on
+graphs with $4000$ vertices demonstrate average computation times below $20$ ms
+per call. In online settings where available time to compute plans is limited,
+CPLP ensures collision-free movement even when failing to meet these time
+limits. Therefore, the robustness of CPLP highlights its potential for
+real-world applications.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2503.13171v1' target='_blank'>HybridGen: VLM-Guided Hybrid Planning for Scalable Data Generation of
+  Imitation Learning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Wensheng Wang, Ning Tan</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-03-17 13:49:43</h6>
+<p class='card-text'>The acquisition of large-scale and diverse demonstration data are essential
+for improving robotic imitation learning generalization. However, generating
+such data for complex manipulations is challenging in real-world settings. We
+introduce HybridGen, an automated framework that integrates Vision-Language
+Model (VLM) and hybrid planning. HybridGen uses a two-stage pipeline: first,
+VLM to parse expert demonstrations, decomposing tasks into expert-dependent
+(object-centric pose transformations for precise control) and plannable
+segments (synthesizing diverse trajectories via path planning); second, pose
+transformations substantially expand the first-stage data. Crucially, HybridGen
+generates a large volume of training data without requiring specific data
+formats, making it broadly applicable to a wide range of imitation learning
+algorithms, a characteristic which we also demonstrate empirically across
+multiple algorithms. Evaluations across seven tasks and their variants
+demonstrate that agents trained with HybridGen achieve substantial performance
+and generalization gains, averaging a 5% improvement over state-of-the-art
+methods. Notably, in the most challenging task variants, HybridGen achieves
+significant improvement, reaching a 59.7% average success rate, significantly
+outperforming Mimicgen's 49.5%. These results demonstrating its effectiveness
+and practicality.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2503.13123v1' target='_blank'>MIXPINN: Mixed-Material Simulations by Physics-Informed Neural Network</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Xintian Yuan, Yunke Ao, Boqi Chen, Philipp Fuernstahl</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-03-17 12:48:29</h6>
+<p class='card-text'>Simulating the complex interactions between soft tissues and rigid anatomy is
+critical for applications in surgical training, planning, and robotic-assisted
+interventions. Traditional Finite Element Method (FEM)-based simulations, while
+accurate, are computationally expensive and impractical for real-time
+scenarios. Learning-based approaches have shown promise in accelerating
+predictions but have fallen short in modeling soft-rigid interactions
+effectively. We introduce MIXPINN, a physics-informed Graph Neural Network
+(GNN) framework for mixed-material simulations, explicitly capturing soft-rigid
+interactions using graph-based augmentations. Our approach integrates Virtual
+Nodes (VNs) and Virtual Edges (VEs) to enhance rigid body constraint
+satisfaction while preserving computational efficiency. By leveraging a
+graph-based representation of biomechanical structures, MIXPINN learns
+high-fidelity deformations from FEM-generated data and achieves real-time
+inference with sub-millimeter accuracy. We validate our method in a realistic
+clinical scenario, demonstrating superior performance compared to baseline GNN
+models and traditional FEM methods. Our results show that MIXPINN reduces
+computational cost by an order of magnitude while maintaining high physical
+accuracy, making it a viable solution for real-time surgical simulation and
+robotic-assisted procedures.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2503.13085v1' target='_blank'>Optimal mixed fleet and charging infrastructure planning to electrify
+  demand responsive feeder services with target CO2 emission constraints</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Haruko Nakao, Tai-Yu Ma, Richard D. Connors, Francesco Viti</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-03-17 11:45:54</h6>
+<p class='card-text'>Electrifying demand-responsive transport systems need to plan the charging
+infrastructure carefully, considering the trade-offs of charging efficiency and
+charging infrastructure costs. Earlier studies assume a fully electrified fleet
+and overlook the planning issue in the transition period. This study addresses
+the joint fleet size and charging infrastructure planning for a
+demand-responsive feeder service under stochastic demand, given a user-defined
+targeted CO2 emission reduction policy. We propose a bi-level optimization
+model where the upper-level determines charging station configuration given
+stochastic demand patterns, whereas the lower-level solves a mixed fleet
+dial-a-ride routing problem under the CO2 emission and capacitated charging
+station constraints. An efficient deterministic annealing metaheuristic is
+proposed to solve the CO2-constrained mixed fleet routing problem. The
+performance of the algorithm is validated by a series of numerical test
+instances with up to 500 requests. We apply the model for a real-world case
+study in Bettembourg, Luxembourg, with different demand and customised CO2
+reduction targets. The results show that the proposed method provides a
+flexible tool for joint charging infrastructure and fleet size planning under
+different levels of demand and CO2 emission reduction targets.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2503.13080v1' target='_blank'>Vision-based automatic fruit counting with UAV</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Hubert Szolc, Mateusz Wasala, Remigiusz Mietla, Kacper Iwicki, Tomasz Kryjak</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-03-17 11:36:58</h6>
+<p class='card-text'>The use of unmanned aerial vehicles (UAVs) for smart agriculture is becoming
+increasingly popular. This is evidenced by recent scientific works, as well as
+the various competitions organised on this topic. Therefore, in this work we
+present a system for automatic fruit counting using UAVs. To detect them, our
+solution uses a vision algorithm that processes streams from an RGB camera and
+a depth sensor using classical image operations. Our system also allows the
+planning and execution of flight trajectories, taking into account the
+minimisation of flight time and distance covered. We tested the proposed
+solution in simulation and obtained an average score of 87.27/100 points from a
+total of 500 missions. We also submitted it to the UAV Competition organised as
+part of the ICUAS 2024 conference, where we achieved an average score of
+84.83/100 points, placing 6th in a field of 23 teams and advancing to the
+finals.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2503.13072v1' target='_blank'>WOW: Workflow-Aware Data Movement and Task Scheduling for Dynamic
+  Scientific Workflows</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Fabian Lehmann, Jonathan Bader, Friedrich Tschirpke, Ninon De Mecquenem, Ansgar Lößer, Soeren Becker, Katarzyna Ewa Lewińska, Lauritz Thamsen, Ulf Leser</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-03-17 11:24:16</h6>
+<p class='card-text'>Scientific workflows process extensive data sets over clusters of independent
+nodes, which requires a complex stack of infrastructure components, especially
+a resource manager (RM) for task-to-node assignment, a distributed file system
+(DFS) for data exchange between tasks, and a workflow engine to control task
+dependencies. To enable a decoupled development and installation of these
+components, current architectures place intermediate data files during workflow
+execution independently of the future workload. In data-intensive applications,
+this separation results in suboptimal schedules, as tasks are often assigned to
+nodes lacking input data, causing network traffic and bottlenecks.
+  This paper presents WOW, a new scheduling approach for dynamic scientific
+workflow systems that steers both data movement and task scheduling to reduce
+network congestion and overall runtime. For this, WOW creates speculative
+copies of intermediate files to prepare the execution of subsequently scheduled
+tasks. WOW supports modern workflow systems that gain flexibility through the
+dynamic construction of execution plans. We prototypically implemented WOW for
+the popular workflow engine Nextflow using Kubernetes as a resource manager. In
+experiments with 16 synthetic and real workflows, WOW reduced makespan in all
+cases, with improvement of up to 94.5% for workflow patterns and up to 53.2%
+for real workflows, at a moderate increase of temporary storage space. It also
+has favorable effects on CPU allocation and scales well with increasing cluster
+size.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2503.13057v1' target='_blank'>MaskSDM with Shapley values to improve flexibility, robustness, and
+  explainability in species distribution modeling</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Robin Zbinden, Nina van Tiel, Gencer Sumbul, Chiara Vanalli, Benjamin Kellenberger, Devis Tuia</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-03-17 11:02:28</h6>
+<p class='card-text'>Species Distribution Models (SDMs) play a vital role in biodiversity
+research, conservation planning, and ecological niche modeling by predicting
+species distributions based on environmental conditions. The selection of
+predictors is crucial, strongly impacting both model accuracy and how well the
+predictions reflect ecological patterns. To ensure meaningful insights, input
+variables must be carefully chosen to match the study objectives and the
+ecological requirements of the target species. However, existing SDMs,
+including both traditional and deep learning-based approaches, often lack key
+capabilities for variable selection: (i) flexibility to choose relevant
+predictors at inference without retraining; (ii) robustness to handle missing
+predictor values without compromising accuracy; and (iii) explainability to
+interpret and accurately quantify each predictor's contribution. To overcome
+these limitations, we introduce MaskSDM, a novel deep learning-based SDM that
+enables flexible predictor selection by employing a masked training strategy.
+This approach allows the model to make predictions with arbitrary subsets of
+input variables while remaining robust to missing data. It also provides a
+clearer understanding of how adding or removing a given predictor affects model
+performance and predictions. Additionally, MaskSDM leverages Shapley values for
+precise predictor contribution assessments, improving upon traditional
+approximations. We evaluate MaskSDM on the global sPlotOpen dataset, modeling
+the distributions of 12,738 plant species. Our results show that MaskSDM
+outperforms imputation-based methods and approximates models trained on
+specific subsets of variables. These findings underscore MaskSDM's potential to
+increase the applicability and adoption of SDMs, laying the groundwork for
+developing foundation models in SDMs that can be readily applied to diverse
+ecological applications.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2503.13055v1' target='_blank'>Mitigating Cross-Modal Distraction and Ensuring Geometric Feasibility
+  via Affordance-Guided, Self-Consistent MLLMs for Food Preparation Task
+  Planning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yu-Hong Shen, Chuan-Yu Wu, Yi-Ru Yang, Yen-Ling Tai, Yi-Ting Chen</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-03-17 11:01:02</h6>
+<p class='card-text'>We study Multimodal Large Language Models (MLLMs) with in-context learning
+for food preparation task planning. In this context, we identify two key
+challenges: cross-modal distraction and geometric feasibility. Cross-modal
+distraction occurs when the inclusion of visual input degrades the reasoning
+performance of a MLLM. Geometric feasibility refers to the ability of MLLMs to
+ensure that the selected skills are physically executable in the environment.
+To address these issues, we adapt Chain of Thought (CoT) with Self-Consistency
+to mitigate reasoning loss from cross-modal distractions and use affordance
+predictor as skill preconditions to guide MLLM on geometric feasibility. We
+construct a dataset to evaluate the ability of MLLMs on quantity estimation,
+reachability analysis, relative positioning and collision avoidance. We
+conducted a detailed evaluation to identify issues among different baselines
+and analyze the reasons for improvement, providing insights into each approach.
+Our method reaches a success rate of 76.7% on the entire dataset, showing a
+substantial improvement over the CoT baseline at 36.7%.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2503.13047v1' target='_blank'>InsightDrive: Insight Scene Representation for End-to-End Autonomous
+  Driving</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Ruiqi Song, Xianda Guo, Hangbin Wu, Qinggong Wei, Long Chen</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-03-17 10:52:32</h6>
+<p class='card-text'>Directly generating planning results from raw sensors has become increasingly
+prevalent due to its adaptability and robustness in complex scenarios. Scene
+representation, as a key module in the pipeline, has traditionally relied on
+conventional perception, which focus on the global scene. However, in driving
+scenarios, human drivers typically focus only on regions that directly impact
+driving, which often coincide with those required for end-to-end autonomous
+driving. In this paper, a novel end-to-end autonomous driving method called
+InsightDrive is proposed, which organizes perception by language-guided scene
+representation. We introduce an instance-centric scene tokenizer that
+transforms the surrounding environment into map- and object-aware instance
+tokens. Scene attention language descriptions, which highlight key regions and
+obstacles affecting the ego vehicle's movement, are generated by a
+vision-language model that leverages the cognitive reasoning capabilities of
+foundation models. We then align scene descriptions with visual features using
+the vision-language model, guiding visual attention through these descriptions
+to give effectively scene representation. Furthermore, we employ self-attention
+and cross-attention mechanisms to model the ego-agents and ego-map
+relationships to comprehensively build the topological relationships of the
+scene. Finally, based on scene understanding, we jointly perform motion
+prediction and planning. Extensive experiments on the widely used nuScenes
+benchmark demonstrate that the proposed InsightDrive achieves state-of-the-art
+performance in end-to-end autonomous driving. The code is available at
+https://github.com/songruiqi/InsightDrive</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js'></script>
+</body>
+</html>
