@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>planning - 2025-03-21</title>
+<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap' rel='stylesheet'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css'>
+<style>
+body {
+font-family: 'Roboto', sans-serif;
+background-color: #f5f7fa;
+padding: 20px;
+}
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.card-title {
+    font-weight: 700;
+}
+.card:hover {
+    transform: scale(1.02);
+    transition: 0.3s ease-in-out;
+}
+</style>
+</head>
+<body>
+<div class='container'>
+<h1 class='text-center my-4'><i class='fas fa-book'></i>planning - 2025-03-21</h1>
+<div class='row'>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2503.16309v1' target='_blank'>Rapid patient-specific neural networks for intraoperative X-ray to
+  volume registration</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Vivek Gopalakrishnan, Neel Dey, David-Dimitris Chlorogiannis, Andrew Abumoussa, Anna M. Larson, Darren B. Orbach, Sarah Frisken, Polina Golland</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-03-20 16:33:45</h6>
+<p class='card-text'>The integration of artificial intelligence in image-guided interventions
+holds transformative potential, promising to extract 3D geometric and
+quantitative information from conventional 2D imaging modalities during complex
+procedures. Achieving this requires the rapid and precise alignment of 2D
+intraoperative images (e.g., X-ray) with 3D preoperative volumes (e.g., CT,
+MRI). However, current 2D/3D registration methods fail across the broad
+spectrum of procedures dependent on X-ray guidance: traditional optimization
+techniques require custom parameter tuning for each subject, whereas neural
+networks trained on small datasets do not generalize to new patients or require
+labor-intensive manual annotations, increasing clinical burden and precluding
+application to new anatomical targets. To address these challenges, we present
+xvr, a fully automated framework for training patient-specific neural networks
+for 2D/3D registration. xvr uses physics-based simulation to generate abundant
+high-quality training data from a patient's own preoperative volumetric
+imaging, thereby overcoming the inherently limited ability of supervised models
+to generalize to new patients and procedures. Furthermore, xvr requires only 5
+minutes of training per patient, making it suitable for emergency interventions
+as well as planned procedures. We perform the largest evaluation of a 2D/3D
+registration algorithm on real X-ray data to date and find that xvr robustly
+generalizes across a diverse dataset comprising multiple anatomical structures,
+imaging modalities, and hospitals. Across surgical tasks, xvr achieves
+submillimeter-accurate registration at intraoperative speeds, improving upon
+existing methods by an order of magnitude. xvr is released as open-source
+software freely available at https://github.com/eigenvivek/xvr.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2503.16275v1' target='_blank'>Loop Closure from Two Views: Revisiting PGO for Scalable Trajectory
+  Estimation through Monocular Priors</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Tian Yi Lim, Boyang Sun, Marc Pollefeys, Hermann Blum</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-03-20 16:05:35</h6>
+<p class='card-text'>(Visual) Simultaneous Localization and Mapping (SLAM) remains a fundamental
+challenge in enabling autonomous systems to navigate and understand large-scale
+environments. Traditional SLAM approaches struggle to balance efficiency and
+accuracy, particularly in large-scale settings where extensive computational
+resources are required for scene reconstruction and Bundle Adjustment (BA).
+However, this scene reconstruction, in the form of sparse pointclouds of visual
+landmarks, is often only used within the SLAM system because navigation and
+planning methods require different map representations. In this work, we
+therefore investigate a more scalable Visual SLAM (VSLAM) approach without
+reconstruction, mainly based on approaches for two-view loop closures. By
+restricting the map to a sparse keyframed pose graph without dense geometry
+representations, our '2GO' system achieves efficient optimization with
+competitive absolute trajectory accuracy. In particular, we find that recent
+advancements in image matching and monocular depth priors enable very accurate
+trajectory optimization from two-view edges. We conduct extensive experiments
+on diverse datasets, including large-scale scenarios, and provide a detailed
+analysis of the trade-offs between runtime, accuracy, and map size. Our results
+demonstrate that this streamlined approach supports real-time performance,
+scales well in map size and trajectory duration, and effectively broadens the
+capabilities of VSLAM for long-duration deployments to large environments.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2503.16164v1' target='_blank'>Asymptotically Optimal Path Planning With an Approximation of the
+  Omniscient Set</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jonáš Kříž, Vojtěch Vonásek</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-03-20 14:04:55</h6>
+<p class='card-text'>The asymptotically optimal version of Rapidly-exploring Random Tree (RRT*) is
+often used to find optimal paths in a high-dimensional configuration space. The
+well-known issue of RRT* is its slow convergence towards the optimal solution.
+A possible solution is to draw random samples only from a subset of the
+configuration space that is known to contain configurations that can improve
+the cost of the path (omniscient set). A fast convergence rate may be achieved
+by approximating the omniscient with a low-volume set. In this letter, we
+propose new methods to approximate the omniscient set and methods for their
+effective sampling. First, we propose to approximate the omniscient set using
+several (small) hyperellipsoids defined by sections of the current best
+solution. The second approach approximates the omniscient set by a convex hull
+computed from the current solution. Both approaches ensure asymptotical
+optimality and work in a general n-dimensional configuration space. The
+experiments have shown superior performance of our approaches in multiple
+scenarios in 3D and 6D configuration spaces.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2503.16058v1' target='_blank'>Landmarks Are Alike Yet Distinct: Harnessing Similarity and
+  Individuality for One-Shot Medical Landmark Detection</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Xu He, Zhen Huang, Qingsong Yao, Xiaoqian Zhou, S. Kevin Zhou</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-03-20 11:46:29</h6>
+<p class='card-text'>Landmark detection plays a crucial role in medical imaging applications such
+as disease diagnosis, bone age estimation, and therapy planning. However,
+training models for detecting multiple landmarks simultaneously often
+encounters the "seesaw phenomenon", where improvements in detecting certain
+landmarks lead to declines in detecting others. Yet, training a separate model
+for each landmark increases memory usage and computational overhead. To address
+these challenges, we propose a novel approach based on the belief that
+"landmarks are distinct" by training models with pseudo-labels and template
+data updated continuously during the training process, where each model is
+dedicated to detecting a single landmark to achieve high accuracy. Furthermore,
+grounded on the belief that "landmarks are also alike", we introduce an
+adapter-based fusion model, combining shared weights with landmark-specific
+weights, to efficiently share model parameters while allowing flexible
+adaptation to individual landmarks. This approach not only significantly
+reduces memory and computational resource requirements but also effectively
+mitigates the seesaw phenomenon in multi-landmark training. Experimental
+results on publicly available medical image datasets demonstrate that the
+single-landmark models significantly outperform traditional multi-point joint
+training models in detecting individual landmarks. Although our adapter-based
+fusion model shows slightly lower performance compared to the combined results
+of all single-landmark models, it still surpasses the current state-of-the-art
+methods while achieving a notable improvement in resource efficiency.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2503.15910v1' target='_blank'>No Thing, Nothing: Highlighting Safety-Critical Classes for Robust LiDAR
+  Semantic Segmentation in Adverse Weather</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Junsung Park, Hwijeong Lee, Inha Kang, Hyunjung Shim</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-03-20 07:40:24</h6>
+<p class='card-text'>Existing domain generalization methods for LiDAR semantic segmentation under
+adverse weather struggle to accurately predict "things" categories compared to
+"stuff" categories. In typical driving scenes, "things" categories can be
+dynamic and associated with higher collision risks, making them crucial for
+safe navigation and planning. Recognizing the importance of "things"
+categories, we identify their performance drop as a serious bottleneck in
+existing approaches. We observed that adverse weather induces degradation of
+semantic-level features and both corruption of local features, leading to a
+misprediction of "things" as "stuff". To mitigate these corruptions, we suggest
+our method, NTN - segmeNt Things for No-accident. To address semantic-level
+feature corruption, we bind each point feature to its superclass, preventing
+the misprediction of things classes into visually dissimilar categories.
+Additionally, to enhance robustness against local corruption caused by adverse
+weather, we define each LiDAR beam as a local region and propose a
+regularization term that aligns the clean data with its corrupted counterpart
+in feature space. NTN achieves state-of-the-art performance with a +2.6 mIoU
+gain on the SemanticKITTI-to-SemanticSTF benchmark and +7.9 mIoU on the
+SemanticPOSS-to-SemanticSTF benchmark. Notably, NTN achieves a +4.8 and +7.9
+mIoU improvement on "things" classes, respectively, highlighting its
+effectiveness.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2503.15865v1' target='_blank'>Active management of battery degradation in wireless sensor network
+  using deep reinforcement learning for group battery replacement</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jong-Hyun Jeonga, Hongki Jo, Qiang Zhou, Tahsin Afroz Hoque Nishat, Lang Wu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-03-20 05:36:33</h6>
+<p class='card-text'>Wireless sensor networks (WSNs) have become a promising solution for
+structural health monitoring (SHM), especially in hard-to-reach or remote
+locations. Battery-powered WSNs offer various advantages over wired systems,
+however limited battery life has always been one of the biggest obstacles in
+practical use of the WSNs, regardless of energy harvesting methods. While
+various methods have been studied for battery health management, existing
+methods exclusively aim to extend lifetime of individual batteries, lacking a
+system level view. A consequence of applying such methods is that batteries in
+a WSN tend to fail at different times, posing significant difficulty on
+planning and scheduling of battery replacement trip. This study investigate a
+deep reinforcement learning (DRL) method for active battery degradation
+management by optimizing duty cycle of WSNs at the system level. This active
+management strategy effectively reduces earlier failure of battery individuals
+which enable group replacement without sacrificing WSN performances. A
+simulated environment based on a real-world WSN setup was developed to train a
+DRL agent and learn optimal duty cycle strategies. The performance of the
+strategy was validated in a long-term setup with various network sizes,
+demonstrating its efficiency and scalability.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2503.15836v1' target='_blank'>APEX-MR: Multi-Robot Asynchronous Planning and Execution for Cooperative
+  Assembly</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Philip Huang, Ruixuan Liu, Changliu Liu, Jiaoyang Li</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-03-20 04:25:38</h6>
+<p class='card-text'>Compared to a single-robot workstation, a multi-robot system offers several
+advantages: 1) it expands the system's workspace, 2) improves task efficiency,
+and more importantly, 3) enables robots to achieve significantly more complex
+and dexterous tasks, such as cooperative assembly. However, coordinating the
+tasks and motions of multiple robots is challenging due to issues, e.g. system
+uncertainty, task efficiency, algorithm scalability, and safety concerns. To
+address these challenges, this paper studies multi-robot coordination and
+proposes APEX-MR, an asynchronous planning and execution framework designed to
+safely and efficiently coordinate multiple robots to achieve cooperative
+assembly, e.g. LEGO assembly. In particular, APEX-MR provides a systematic
+approach to post-process multi-robot tasks and motion plans to enable robust
+asynchronous execution under uncertainty. Experimental results demonstrate that
+APEX-MR can significantly speed up the execution time of many long-horizon LEGO
+assembly tasks by 48% compared to sequential planning and 36% compared to
+synchronous planning on average. To further demonstrate the performance, we
+deploy APEX-MR to a dual-arm system to perform physical LEGO assembly. To our
+knowledge, this is the first robotic system capable of performing customized
+LEGO assembly using commercial LEGO bricks. The experiment results demonstrate
+that the dual-arm system, with APEX-MR, can safely coordinate robot motions,
+efficiently collaborate, and construct complex LEGO structures. Our project
+website is available at https://intelligent-control-lab.github.io/APEX-MR/</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2503.15779v1' target='_blank'>MobiFuse: Learning Universal Human Mobility Patterns through
+  Cross-domain Data Fusion</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Haoxuan Ma, Xishun Liao, Yifan Liu, Qinhua Jiang, Chris Stanford, Shangqing Cao, Jiaqi Ma</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-03-20 01:41:28</h6>
+<p class='card-text'>Human mobility modeling is critical for urban planning and transportation
+management, yet existing datasets often lack the resolution and semantic
+richness required for comprehensive analysis. To address this, we proposed a
+cross-domain data fusion framework that integrates multi-modal data of distinct
+nature and spatio-temporal resolution, including geographical, mobility,
+socio-demographic, and traffic information, to construct a privacy-preserving
+and semantically enriched human travel trajectory dataset. This framework is
+demonstrated through two case studies in Los Angeles (LA) and Egypt, where a
+domain adaptation algorithm ensures its transferability across diverse urban
+contexts. Quantitative evaluation shows that the generated synthetic dataset
+accurately reproduces mobility patterns observed in empirical data. Moreover,
+large-scale traffic simulations for LA County based on the generated synthetic
+demand align well with observed traffic. On California's I-405 corridor, the
+simulation yields a Mean Absolute Percentage Error of 5.85% for traffic volume
+and 4.36% for speed compared to Caltrans PeMS observations.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2503.15715v1' target='_blank'>Experience-based Optimal Motion Planning Algorithm for Solving Difficult
+  Planning Problems Using a Limited Dataset</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Ryota Takamido, Jun Ota</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-03-19 21:52:18</h6>
+<p class='card-text'>This study aims to address the key challenge of obtaining a high-quality
+solution path within a short calculation time by generalizing a limited
+dataset. In the informed experience-driven random trees connect star (IERTC*)
+process, the algorithm flexibly explores the search trees by morphing the micro
+paths generated from a single experience while reducing the path cost by
+introducing a re-wiring process and an informed sampling process. The core idea
+of this algorithm is to apply different strategies depending on the complexity
+of the local environment; for example, it adopts a more complex curved
+trajectory if obstacles are densely arranged near the search tree, and it
+adopts a simpler straight line if the local environment is sparse. The results
+of experiments using a general motion benchmark test revealed that IERTC*
+significantly improved the planning success rate in difficult problems in the
+cluttered environment (an average improvement of 49.3% compared to the
+state-of-the-art algorithm) while also significantly reducing the solution cost
+(a reduction of 56.3%) when using one hundred experiences. Furthermore, the
+results demonstrated outstanding planning performance even when only one
+experience was available (a 43.8% improvement in success rate and a 57.8%
+reduction in solution cost).</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2503.15708v1' target='_blank'>Sustainable Deep Learning-Based Breast Lesion Segmentation: Impact of
+  Breast Region Segmentation on Performance</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Sam Narimani, Solveig Roth Hoff, Kathinka Dahli Kurz, Kjell-Inge Gjesdal, Jurgen Geisler, Endre Grovik</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-03-19 21:42:33</h6>
+<p class='card-text'>Purpose: Segmentation of the breast lesion in dynamic contrast-enhanced
+magnetic resonance imaging (DCE-MRI) is an essential step to accurately
+diagnose and plan treatment and monitor progress. This study aims to highlight
+the impact of breast region segmentation (BRS) on deep learning-based breast
+lesion segmentation (BLS) in breast DCE-MRI.
+  Methods Using the Stavanger Dataset containing primarily 59 DCE-MRI scans and
+UNet++ as deep learning models, four different process were conducted to
+compare effect of BRS on BLS. These four approaches included the whole volume
+without BRS and with BRS, BRS with the selected lesion slices and lastly
+optimal volume with BRS. Preprocessing methods like augmentation and
+oversampling were used to enhance the small dataset, data shape uniformity and
+improve model performance. Optimal volume size were investigated by a precise
+process to ensure that all lesions existed in slices. To evaluate the model, a
+hybrid loss function including dice, focal and cross entropy along with 5-fold
+cross validation method were used and lastly a test dataset which was randomly
+split used to evaluate the model performance on unseen data for each of four
+mentioned approaches.
+  Results Results demonstrate that using BRS considerably improved model
+performance and validation. Significant improvement in last approach -- optimal
+volume with BRS -- compared to the approach without BRS counting around 50
+percent demonstrating how effective BRS has been in BLS. Moreover, huge
+improvement in energy consumption, decreasing up to 450 percent, introduces a
+green solution toward a more environmentally sustainable approach for future
+work on large dataset.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2503.15678v1' target='_blank'>Cyber Threats in Financial Transactions -- Addressing the Dual Challenge
+  of AI and Quantum Computing</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Ahmed M. Elmisery, Mirela Sertovic, Andrew Zayin, Paul Watson</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-03-19 20:16:27</h6>
+<p class='card-text'>The financial sector faces escalating cyber threats amplified by artificial
+intelligence (AI) and the advent of quantum computing. AI is being weaponized
+for sophisticated attacks like deepfakes and AI-driven malware, while quantum
+computing threatens to render current encryption methods obsolete. This report
+analyzes these threats, relevant frameworks, and possible countermeasures like
+quantum cryptography. AI enhances social engineering and phishing attacks via
+personalized content, lowers entry barriers for cybercriminals, and introduces
+risks like data poisoning and adversarial AI. Quantum computing, particularly
+Shor's algorithm, poses a fundamental threat to current encryption standards
+(RSA and ECC), with estimates suggesting cryptographically relevant quantum
+computers could emerge within the next 5-30 years. The "harvest now, decrypt
+later" scenario highlights the urgency of transitioning to quantum-resistant
+cryptography. This is key. Existing legal frameworks are evolving to address AI
+in cybercrime, but quantum threats require new initiatives. International
+cooperation and harmonized regulations are crucial. Quantum Key Distribution
+(QKD) offers theoretical security but faces practical limitations. Post-quantum
+cryptography (PQC) is a promising alternative, with ongoing standardization
+efforts. Recommendations for international regulators include fostering
+collaboration and information sharing, establishing global standards,
+supporting research and development in quantum security, harmonizing legal
+frameworks, promoting cryptographic agility, and raising awareness and
+education. The financial industry must adopt a proactive and adaptive approach
+to cybersecurity, investing in research, developing migration plans for
+quantum-resistant cryptography, and embracing a multi-faceted, collaborative
+strategy to build a resilient, quantum-safe, and AI-resilient financial
+ecosystem</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2503.15407v1' target='_blank'>Exploiting Prior Knowledge in Preferential Learning of Individualized
+  Autonomous Vehicle Driving Styles</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Lukas Theiner, Sebastian Hirt, Alexander Steinke, Rolf Findeisen</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-03-19 16:47:56</h6>
+<p class='card-text'>Trajectory planning for automated vehicles commonly employs optimization over
+a moving horizon - Model Predictive Control - where the cost function
+critically influences the resulting driving style. However, finding a suitable
+cost function that results in a driving style preferred by passengers remains
+an ongoing challenge. We employ preferential Bayesian optimization to learn the
+cost function by iteratively querying a passenger's preference. Due to
+increasing dimensionality of the parameter space, preference learning
+approaches might struggle to find a suitable optimum with a limited number of
+experiments and expose the passenger to discomfort when exploring the parameter
+space. We address these challenges by incorporating prior knowledge into the
+preferential Bayesian optimization framework. Our method constructs a virtual
+decision maker from real-world human driving data to guide parameter sampling.
+In a simulation experiment, we achieve faster convergence of the
+prior-knowledge-informed learning procedure compared to existing preferential
+Bayesian optimization approaches and reduce the number of inadequate driving
+styles sampled.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2503.15394v1' target='_blank'>Advancing MG Energy Management: A Rolling Horizon Optimization Framework
+  for Three-Phase Unbalanced Networks Integrating Convex Formulations</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Pablo Cortés, Alejandra Tabares, Fredy Franco</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-03-19 16:34:49</h6>
+<p class='card-text'>Real-world three-phase microgrids face two interconnected challenges: 1.
+time-varying uncertainty from renewable generation and demand, and 2.
+persistent phase imbalances caused by uneven distributed energy resources DERs,
+load asymmetries, and grid faults. Conventional energy management systems fail
+to address these challenges holistically and static optimization methods lack
+adaptability to real-time fluctuations, while balanced three-phase models
+ignore critical asymmetries that degrade voltage stability and efficiency. This
+work introduces a dynamic rolling horizon optimization framework specifically
+designed for unbalanced three-phase microgrids. Unlike traditional two-stage
+stochastic approaches that fix decisions for the entire horizon, the rolling
+horizon algorithm iteratively updates decisions in response to real-time data.
+By solving a sequence of shorter optimization windows, each incorporating the
+latest system state and forecasts, the method achieves three key advantages:
+Adaptive Uncertainty Handling by continuously re plans operations to mitigate
+forecast errors. Phase Imbalance Correction by dynamically adjusts power flows
+across phases to minimize voltage deviations and losses caused by asymmetries,
+and computational Tractability, i.e., shorter optimization windows, combined
+with the mathematical mhodel, enable better decision making holding accuracy.
+For comparison purposes, we derive three optimization models: a nonlinear
+nonconvex model for high-fidelity offline planning, a convex quadratic
+approximation for day-ahead scheduling, and a linearized model to important for
+theoretical reasons such as decomposition algorithms.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2503.15290v1' target='_blank'>Reinforcement Learning for Robust Athletic Intelligence: Lessons from
+  the 2nd 'AI Olympics with RealAIGym' Competition</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Felix Wiebe, Niccolò Turcato, Alberto Dalla Libera, Jean Seong Bjorn Choe, Bumkyu Choi, Tim Lukas Faust, Habib Maraqten, Erfan Aghadavoodi, Marco Cali, Alberto Sinigaglia, Giulio Giacomuzzo, Diego Romeres, Jong-kook Kim, Gian Antonio Susto, Shubham Vyas, Dennis Mronga, Boris Belousov, Jan Peters, Frank Kirchner, Shivesh Kumar</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-03-19 15:10:02</h6>
+<p class='card-text'>In the field of robotics many different approaches ranging from classical
+planning over optimal control to reinforcement learning (RL) are developed and
+borrowed from other fields to achieve reliable control in diverse tasks. In
+order to get a clear understanding of their individual strengths and weaknesses
+and their applicability in real world robotic scenarios is it important to
+benchmark and compare their performances not only in a simulation but also on
+real hardware. The '2nd AI Olympics with RealAIGym' competition was held at the
+IROS 2024 conference to contribute to this cause and evaluate different
+controllers according to their ability to solve a dynamic control problem on an
+underactuated double pendulum system with chaotic dynamics. This paper
+describes the four different RL methods submitted by the participating teams,
+presents their performance in the swing-up task on a real double pendulum,
+measured against various criteria, and discusses their transferability from
+simulation to real hardware and their robustness to external disturbances.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2503.15273v1' target='_blank'>Perception-aware Planning for Quadrotor Flight in Unknown and
+  Feature-limited Environments</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Chenxin Yu, Zihong Lu, Jie Mei, Boyu Zhou</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-03-19 14:47:44</h6>
+<p class='card-text'>Various studies on perception-aware planning have been proposed to enhance
+the state estimation accuracy of quadrotors in visually degraded environments.
+However, many existing methods heavily rely on prior environmental knowledge
+and face significant limitations in previously unknown environments with sparse
+localization features, which greatly limits their practical application. In
+this paper, we present a perception-aware planning method for quadrotor flight
+in unknown and feature-limited environments that properly allocates perception
+resources among environmental information during navigation. We introduce a
+viewpoint transition graph that allows for the adaptive selection of local
+target viewpoints, which guide the quadrotor to efficiently navigate to the
+goal while maintaining sufficient localizability and without being trapped in
+feature-limited regions. During the local planning, a novel yaw trajectory
+generation method that simultaneously considers exploration capability and
+localizability is presented. It constructs a localizable corridor via feature
+co-visibility evaluation to ensure localization robustness in a computationally
+efficient way. Through validations conducted in both simulation and real-world
+experiments, we demonstrate the feasibility and real-time performance of the
+proposed method. The source code will be released to benefit the community.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2503.15208v1' target='_blank'>DiST-4D: Disentangled Spatiotemporal Diffusion with Metric Depth for 4D
+  Driving Scene Generation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jiazhe Guo, Yikang Ding, Xiwu Chen, Shuo Chen, Bohan Li, Yingshuang Zou, Xiaoyang Lyu, Feiyang Tan, Xiaojuan Qi, Zhiheng Li, Hao Zhao</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-03-19 13:49:48</h6>
+<p class='card-text'>Current generative models struggle to synthesize dynamic 4D driving scenes
+that simultaneously support temporal extrapolation and spatial novel view
+synthesis (NVS) without per-scene optimization. A key challenge lies in finding
+an efficient and generalizable geometric representation that seamlessly
+connects temporal and spatial synthesis. To address this, we propose DiST-4D,
+the first disentangled spatiotemporal diffusion framework for 4D driving scene
+generation, which leverages metric depth as the core geometric representation.
+DiST-4D decomposes the problem into two diffusion processes: DiST-T, which
+predicts future metric depth and multi-view RGB sequences directly from past
+observations, and DiST-S, which enables spatial NVS by training only on
+existing viewpoints while enforcing cycle consistency. This cycle consistency
+mechanism introduces a forward-backward rendering constraint, reducing the
+generalization gap between observed and unseen viewpoints. Metric depth is
+essential for both accurate reliable forecasting and accurate spatial NVS, as
+it provides a view-consistent geometric representation that generalizes well to
+unseen perspectives. Experiments demonstrate that DiST-4D achieves
+state-of-the-art performance in both temporal prediction and NVS tasks, while
+also delivering competitive performance in planning-related evaluations.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2503.15575v1' target='_blank'>NuPECC Long Range Plan 2024 for European Nuclear Physics</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:NuPECC</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-03-19 13:09:39</h6>
+<p class='card-text'>The Nuclear Physics European Collaboration Committee ( NuPECC,
+http://nupecc.org/ ) hosted by the European Science Foundation represents today
+a large nuclear physics community from 23 countries, 3 ESFRI (European Strategy
+Forum for Research Infrastructures) nuclear physics infrastructures and ECT*
+(European Centre for Theoretical Studies in Nuclear Physics and Related Areas),
+as well as from 4 associated members and 10 observers.
+  As stated in the NuPECC Terms of Reference one of the major objectives of the
+Committee is: "on a regular basis, the Committee shall organise a consultation
+of the community leading to the definition and publication of a Long Range Plan
+(LRP) of European nuclear physics". To this end, NuPECC has in the past
+produced five LRPs: in November 1991, December 1997, April 2004, December 2010,
+and November 2017.
+  The LRP, being the unique document covering the whole nuclear physics
+landscape in Europe, identifies opportunities and priorities for nuclear
+science in Europe and provides national funding agencies, ESFRI, and the
+European Commission with a framework for coordinated advances in nuclear
+science. It serves also as a reference document for the strategic plans for
+nuclear physics in the European countries.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2503.15100v1' target='_blank'>Exploring the Perspectives of Social VR-Aware Non-Parent Adults and
+  Parents on Children's Use of Social Virtual Reality</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Cristina Fiani, Pejman Saeghe, Mark McGill, Mohamed Khamis</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-03-19 10:57:20</h6>
+<p class='card-text'>Social Virtual Reality (VR), where people meet in virtual spaces via 3D
+avatars, is used by children and adults alike. Children experience new forms of
+harassment in social VR where it is often inaccessible to parental oversight.
+To date, there is limited understanding of how parents and non-parent adults
+within the child social VR ecosystem perceive the appropriateness of social VR
+for different age groups and the measures in place to safeguard children. We
+present results of a mixed-methods questionnaire (N=149 adults, including 79
+parents) focusing on encounters with children in social VR and perspectives
+towards children's use of social VR. We draw novel insights on the frequency of
+social VR use by children under 13 and current use of, and future aspirations
+for, child protection interventions. Compared to non-parent adults, parents
+familiar with social VR propose lower minimum ages and are more likely to allow
+social VR without supervision. Adult users experience immaturity from children
+in social VR, while children face abuse, encounter age-inappropriate behaviours
+and self-disclose to adults. We present directions to enhance the safety of
+social VR through pre-planned controls, real-time oversight, post-event insight
+and the need for evidence-based guidelines to support parents and platforms
+around age-appropriate interventions.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2503.14980v1' target='_blank'>Embedding spatial context in urban traffic forecasting with contrastive
+  pre-training</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Matthew Low, Arian Prabowo, Hao Xue, Flora Salim</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-03-19 08:21:22</h6>
+<p class='card-text'>Urban traffic forecasting is a commonly encountered problem, with
+wide-ranging applications in fields such as urban planning, civil engineering
+and transport. In this paper, we study the enhancement of traffic forecasting
+with pre-training, focusing on spatio-temporal graph methods. While various
+machine learning methods to solve traffic forecasting problems have been
+explored and extensively studied, there is a gap of a more contextual approach:
+studying how relevant non-traffic data can improve prediction performance on
+traffic forecasting problems. We call this data spatial context. We introduce a
+novel method of combining road and traffic information through the notion of a
+traffic quotient graph, a quotient graph formed from road geometry and traffic
+sensors. We also define a way to encode this relationship in the form of a
+geometric encoder, pre-trained using contrastive learning methods and enhanced
+with OpenStreetMap data. We introduce and discuss ways to integrate this
+geometric encoder with existing graph neural network (GNN)-based traffic
+forecasting models, using a contrastive pre-training paradigm. We demonstrate
+the potential for this hybrid model to improve generalisation and performance
+with zero additional traffic data. Code for this paper is available at
+https://github.com/mattchrlw/forecasting-on-new-roads.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2503.14933v1' target='_blank'>A Language Vision Model Approach for Automated Tumor Contouring in
+  Radiation Oncology</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yi Luo, Hamed Hooshangnejad, Xue Feng, Gaofeng Huang, Xiaojian Chen, Rui Zhang, Quan Chen, Wil Ngwa, Kai Ding</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-03-19 06:41:37</h6>
+<p class='card-text'>Background: Lung cancer ranks as the leading cause of cancer-related
+mortality worldwide. The complexity of tumor delineation, crucial for radiation
+therapy, requires expertise often unavailable in resource-limited settings.
+Artificial Intelligence(AI), particularly with advancements in deep learning
+(DL) and natural language processing (NLP), offers potential solutions yet is
+challenged by high false positive rates. Purpose: The Oncology Contouring
+Copilot (OCC) system is developed to leverage oncologist expertise for precise
+tumor contouring using textual descriptions, aiming to increase the efficiency
+of oncological workflows by combining the strengths of AI with human oversight.
+Methods: Our OCC system initially identifies nodule candidates from CT scans.
+Employing Language Vision Models (LVMs) like GPT-4V, OCC then effectively
+reduces false positives with clinical descriptive texts, merging textual and
+visual data to automate tumor delineation, designed to elevate the quality of
+oncology care by incorporating knowledge from experienced domain experts.
+Results: Deployments of the OCC system resulted in a significant reduction in
+the false discovery rate by 35.0%, a 72.4% decrease in false positives per
+scan, and an F1-score of 0.652 across our dataset for unbiased evaluation.
+Conclusions: OCC represents a significant advance in oncology care,
+particularly through the use of the latest LVMs to improve contouring results
+by (1) streamlining oncology treatment workflows by optimizing tumor
+delineation, reducing manual processes; (2) offering a scalable and intuitive
+framework to reduce false positives in radiotherapy planning using LVMs; (3)
+introducing novel medical language vision prompt techniques to minimize LVMs
+hallucinations with ablation study, and (4) conducting a comparative analysis
+of LVMs, highlighting their potential in addressing medical language vision
+challenges.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2503.14899v1' target='_blank'>Speed Optimization Algorithm based on Deterministic Markov Decision
+  Process for Automated Highway Merge</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Takeru Goto, Kosuke Toda, Takayasu Kumano</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-03-19 04:57:03</h6>
+<p class='card-text'>This study presents a robust optimization algorithm for automated highway
+merge. The merging scenario is one of the challenging scenes in automated
+driving, because it requires adjusting ego vehicle's speed to match other
+vehicles before reaching the end point. Then, we model the speed planning
+problem as a deterministic Markov decision process. The proposed scheme is able
+to compute each state value of the process and reliably derive the optimal
+sequence of actions. In our approach, we adopt jerk as the action of the
+process to prevent a sudden change of acceleration. However, since this expands
+the state space, we also consider ways to achieve a real-time operation. We
+compared our scheme with a simple algorithm with the Intelligent Driver Model.
+We not only evaluated the scheme in a simulation environment but also conduct a
+real world testing.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2503.14848v1' target='_blank'>Geometric Iterative Approach for Efficient Inverse Kinematics and
+  Planning of Continuum Robots with a Floating Base Under Environment
+  Constraints</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Congjun Ma, Quan Xiao, Liangcheng Liu, Xingxing You, Songyi Dian</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-03-19 03:12:34</h6>
+<p class='card-text'>Continuum robots with floating bases demonstrate exceptional operational
+capabilities in confined spaces, such as those encountered in medical surgeries
+and equipment maintenance. However, developing low-cost solutions for their
+motion and planning problems remains a significant challenge in this field.
+This paper investigates the application of geometric iterative strategy methods
+to continuum robots, and proposes the algorithm based on an improved two-layer
+geometric iterative strategy for motion planning. First, we thoroughly study
+the kinematics and effective workspace of a multi-segment tendon-driven
+continuum robot with a floating base. Then, generalized iterative algorithms
+for solving arbitrary-segment continuum robots are proposed based on a series
+of problems such as initial arm shape dependence exhibited by similar methods
+when applied to continuum robots. Further, the task scenario is extended to a
+follow-the-leader task considering environmental factors, and further extended
+algorithm are proposed. Simulation comparison results with similar methods
+demonstrate the effectiveness of the proposed method in eliminating the initial
+arm shape dependence and improving the solution efficiency and accuracy. The
+experimental results further demonstrate that the method based on improved
+two-layer geometric iteration can be used for motion planning task of a
+continuum robot with a floating base, under an average deviation of about 4 mm
+in the end position, an average orientation deviation of no more than 1 degree,
+and the reduction of average number of iterations and time cost is 127.4
+iterations and 72.6 ms compared with similar methods, respectively.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2503.14809v1' target='_blank'>Learning with Expert Abstractions for Efficient Multi-Task Continuous
+  Control</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jeff Jewett, Sandhya Saisubramanian</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-03-19 00:44:23</h6>
+<p class='card-text'>Decision-making in complex, continuous multi-task environments is often
+hindered by the difficulty of obtaining accurate models for planning and the
+inefficiency of learning purely from trial and error. While precise environment
+dynamics may be hard to specify, human experts can often provide high-fidelity
+abstractions that capture the essential high-level structure of a task and user
+preferences in the target environment. Existing hierarchical approaches often
+target discrete settings and do not generalize across tasks. We propose a
+hierarchical reinforcement learning approach that addresses these limitations
+by dynamically planning over the expert-specified abstraction to generate
+subgoals to learn a goal-conditioned policy. To overcome the challenges of
+learning under sparse rewards, we shape the reward based on the optimal state
+value in the abstract model. This structured decision-making process enhances
+sample efficiency and facilitates zero-shot generalization. Our empirical
+evaluation on a suite of procedurally generated continuous control environments
+demonstrates that our approach outperforms existing hierarchical reinforcement
+learning methods in terms of sample efficiency, task completion rate,
+scalability to complex tasks, and generalization to novel scenarios.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2503.15562v1' target='_blank'>Shap-MeD</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Nicolás Laverde, Melissa Robles, Johan Rodríguez</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-03-19 00:40:14</h6>
+<p class='card-text'>We present Shap-MeD, a text-to-3D object generative model specialized in the
+biomedical domain. The objective of this study is to develop an assistant that
+facilitates the 3D modeling of medical objects, thereby reducing development
+time. 3D modeling in medicine has various applications, including surgical
+procedure simulation and planning, the design of personalized prosthetic
+implants, medical education, the creation of anatomical models, and the
+development of research prototypes. To achieve this, we leverage Shap-e, an
+open-source text-to-3D generative model developed by OpenAI, and fine-tune it
+using a dataset of biomedical objects. Our model achieved a mean squared error
+(MSE) of 0.089 in latent generation on the evaluation set, compared to Shap-e's
+MSE of 0.147. Additionally, we conducted a qualitative evaluation, comparing
+our model with others in the generation of biomedical objects. Our results
+indicate that Shap-MeD demonstrates higher structural accuracy in biomedical
+object generation.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2503.14748v1' target='_blank'>Generative design of functional organic molecules for terahertz
+  radiation detection</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Zsuzsanna Koczor-Benda, Shayantan Chaudhuri, Joe Gilkes, Francesco Bartucca, Liming Li, Reinhard J. Maurer</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-03-18 21:23:01</h6>
+<p class='card-text'>Plasmonic nanocavities are molecule-nanoparticle junctions that offer a
+promising approach to upconvert terahertz radiation into visible or
+near-infrared light, enabling nanoscale detection at room temperature. However,
+the identification of molecules with strong terahertz-to-visible upconversion
+efficiency is limited by the availability of suitable compounds in commercial
+databases. Here, we employ the generative autoregressive deep neural network,
+G-SchNet, to perform property-driven design of novel monothiolated molecules
+tailored for terahertz radiation detection. To design functional organic
+molecules, we iteratively bias G-SchNet to drive molecular generation towards
+highly active and synthesizable molecules based on machine learning-based
+property predictors, including molecular fingerprints and state-of-the-art
+neural networks. We study the reliability of these property predictors for
+generated molecules and analyze the chemical space and properties of generated
+molecules to identify trends in activity. Finally, we filter generated
+molecules and plan retrosynthetic routes from commercially available reactants
+to identify promising novel compounds and their most active vibrational modes
+in terahertz-to-visible upconversion.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2503.14730v1' target='_blank'>Risk-Aware Planning of Power Distribution Systems Using Scalable Cloud
+  Technologies</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Shiva Poudel, Poorva Sharma, Abhineet Parchure, Daniel Olsen, Sayantan Bhowmik, Tonya Martin, Dylan Locsin, Andrew P. Reiman</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-03-18 21:00:17</h6>
+<p class='card-text'>The uncertainty in distribution grid planning is driven by the unpredictable
+spatial and temporal patterns in adopting electric vehicles (EVs) and solar
+photovoltaic (PV) systems. This complexity, stemming from interactions among
+EVs, PV systems, customer behavior, and weather conditions, calls for a
+scalable framework to capture a full range of possible scenarios and analyze
+grid responses to factor in compound uncertainty. Although this process is
+challenging for many utilities today, the need to model numerous grid
+parameters as random variables and evaluate the impact on the system from many
+different perspectives will become increasingly essential to facilitate more
+strategic and well-informed planning investments. We present a scalable,
+stochastic-aware distribution system planning application that addresses these
+uncertainties by capturing spatial and temporal variability through a Markov
+model and conducting Monte Carlo simulations leveraging modular cloud-based
+architecture. The results demonstrate that 15,000 power flow scenarios
+generated from the Markov model are completed on the modified IEEE 123-bus test
+feeder, with each simulation representing an 8,760-hour time series run, all in
+under an hour. The grid impact extracted from this huge volume of simulated
+data provides insights into the spatial and temporal effects of adopted
+technology, highlighting that planning solely for average conditions is
+inadequate, while worst-case scenario planning may lead to prohibitive
+expenses.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2503.15553v1' target='_blank'>The Future of Stellar Populations with the Maunakea Spectroscopic
+  Explorer (MSE)</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Peter Frinchaboy, Andy Sheinis, Sam Barden, Viraja Khatu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-03-18 19:44:57</h6>
+<p class='card-text'>The Maunakea Spectroscopic Explorer (MSE) ia a massively multiplexed
+spectroscopic survey facility that is proposed to replace the
+Canada-France-Hawai'i-Telescope in the 2040s. Since 2019, due to the
+uncertainty for new facilities on Maunakea, the project has been focused on new
+technology enabling greater capabilities beyond the concept design reviewed
+facility plan. Enhanced fiber density, and thereby survey speed, is made
+possible by using a new quad mirror (QM) 11.5-meter telescope design with
+18,000+ fibers and a 1.5 square degree field-of-view. The MSE spectrographs
+will be moderate-resolution (360 nm through H-band at R=7,000) and
+high-resolution (R=40,000). MSE's baseline NIR capabilities will enable studies
+of highly-reddened regions in the Local Group, unlike other proposed next
+generation facilities. The MSE large-scale survey instrument suite will enable
+the equivalent to a full SDSS Legacy Survey every several weeks. This work
+presents the current status of the project after the Fall 2024 MSE science
+Workshop.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2503.14665v1' target='_blank'>These Magic Moments: Differentiable Uncertainty Quantification of
+  Radiance Field Models</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Parker Ewen, Hao Chen, Seth Isaacson, Joey Wilson, Katherine A. Skinner, Ram Vasudevan</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-03-18 19:12:02</h6>
+<p class='card-text'>This paper introduces a novel approach to uncertainty quantification for
+radiance fields by leveraging higher-order moments of the rendering equation.
+Uncertainty quantification is crucial for downstream tasks including view
+planning and scene understanding, where safety and robustness are paramount.
+However, the high dimensionality and complexity of radiance fields pose
+significant challenges for uncertainty quantification, limiting the use of
+these uncertainty quantification methods in high-speed decision-making. We
+demonstrate that the probabilistic nature of the rendering process enables
+efficient and differentiable computation of higher-order moments for radiance
+field outputs, including color, depth, and semantic predictions. Our method
+outperforms existing radiance field uncertainty estimation techniques while
+offering a more direct, computationally efficient, and differentiable
+formulation without the need for post-processing.Beyond uncertainty
+quantification, we also illustrate the utility of our approach in downstream
+applications such as next-best-view (NBV) selection and active ray sampling for
+neural radiance field training. Extensive experiments on synthetic and
+real-world scenes confirm the efficacy of our approach, which achieves
+state-of-the-art performance while maintaining simplicity.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2503.14656v1' target='_blank'>Safety-Critical and Distributed Nonlinear Predictive Controllers for
+  Teams of Quadrupedal Robots</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Basit Muhammad Imran, Jeeseop Kim, Taizoon Chunawala, Alexander Leonessa, Kaveh Akbari Hamed</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-03-18 19:05:57</h6>
+<p class='card-text'>This paper presents a novel hierarchical, safety-critical control framework
+that integrates distributed nonlinear model predictive controllers (DNMPCs)
+with control barrier functions (CBFs) to enable cooperative locomotion of
+multi-agent quadrupedal robots in complex environments. While NMPC-based
+methods are widely adopted for enforcing safety constraints and navigating
+multi-robot systems (MRSs) through intricate environments, ensuring the safety
+of MRSs requires a formal definition grounded in the concept of invariant sets.
+CBFs, typically implemented via quadratic programs (QPs) at the planning layer,
+provide formal safety guarantees. However, their zero-control horizon limits
+their effectiveness for extended trajectory planning in inherently unstable,
+underactuated, and nonlinear legged robot models. Furthermore, the integration
+of CBFs into real-time NMPC for sophisticated MRSs, such as quadrupedal robot
+teams, remains underexplored. This paper develops computationally efficient,
+distributed NMPC algorithms that incorporate CBF-based collision safety
+guarantees within a consensus protocol, enabling longer planning horizons for
+safe cooperative locomotion under disturbances and rough terrain conditions.
+The optimal trajectories generated by the DNMPCs are tracked using full-order,
+nonlinear whole-body controllers at the low level. The proposed approach is
+validated through extensive numerical simulations with up to four Unitree A1
+robots and hardware experiments involving two A1 robots subjected to external
+pushes, rough terrain, and uncertain obstacle information. Comparative analysis
+demonstrates that the proposed CBF-based DNMPCs achieve a 27.89% higher success
+rate than conventional NMPCs without CBF constraints.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2503.14622v1' target='_blank'>Measurement of SiPM Dark Currents and Annealing Recovery for Fluences
+  Expected in ePIC Calorimeters at the Electron-Ion Collider</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jiajun Huang, Sean Preins, Ryan Tsiao, Miguel Rodriguez, Barak Schmookler, Miguel Arratia</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-03-18 18:19:45</h6>
+<p class='card-text'>Silicon photomultipliers (SiPMs) will be used to read out all calorimeters in
+the ePIC experiment at the Electron-Ion Collider (EIC). A thorough
+characterization of the radiation damage expected for SiPMs under anticipated
+EIC fluences is essential for accurate simulations, detector design, and
+effective operational strategies. In this study, we evaluate radiation damage
+for the specific SiPM models chosen for ePIC across the complete fluence range
+anticipated at the EIC, $10^8$ to $10^{12}$ 1-MeV $n_{\mathrm{eq}}$/cm$^2$ per
+year, depending on the calorimeter location. The SiPMs were irradiated using a
+64 MeV proton beam provided by the University of California, Davis 76"
+Cyclotron. We measured the SiPM dark-current as a function of fluence and bias
+voltage and investigated the effectiveness of high-temperature annealing to
+recover radiation damage. These results provide a comprehensive reference for
+the design, simulation, and operational planning of all ePIC calorimeter
+systems.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js'></script>
+</body>
+</html>
