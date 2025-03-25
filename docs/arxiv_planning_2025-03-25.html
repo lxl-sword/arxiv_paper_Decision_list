@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>planning - 2025-03-25</title>
+<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap' rel='stylesheet'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css'>
+<style>
+body {
+font-family: 'Roboto', sans-serif;
+background-color: #f5f7fa;
+padding: 20px;
+}
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.card-title {
+    font-weight: 700;
+}
+.card:hover {
+    transform: scale(1.02);
+    transition: 0.3s ease-in-out;
+}
+</style>
+</head>
+<body>
+<div class='container'>
+<h1 class='text-center my-4'><i class='fas fa-book'></i>planning - 2025-03-25</h1>
+<div class='row'>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2503.18950v1' target='_blank'>Target-Aware Video Diffusion Models</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Taeksoo Kim, Hanbyul Joo</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-03-24 17:59:59</h6>
+<p class='card-text'>We present a target-aware video diffusion model that generates videos from an
+input image in which an actor interacts with a specified target while
+performing a desired action. The target is defined by a segmentation mask and
+the desired action is described via a text prompt. Unlike existing controllable
+image-to-video diffusion models that often rely on dense structural or motion
+cues to guide the actor's movements toward the target, our target-aware model
+requires only a simple mask to indicate the target, leveraging the
+generalization capabilities of pretrained models to produce plausible actions.
+This makes our method particularly effective for human-object interaction (HOI)
+scenarios, where providing precise action guidance is challenging, and further
+enables the use of video diffusion models for high-level action planning in
+applications such as robotics. We build our target-aware model by extending a
+baseline model to incorporate the target mask as an additional input. To
+enforce target awareness, we introduce a special token that encodes the
+target's spatial information within the text prompt. We then fine-tune the
+model with our curated dataset using a novel cross-attention loss that aligns
+the cross-attention maps associated with this token with the input target mask.
+To further improve performance, we selectively apply this loss to the most
+semantically relevant transformer blocks and attention regions. Experimental
+results show that our target-aware model outperforms existing solutions in
+generating videos where actors interact accurately with the specified targets.
+We further demonstrate its efficacy in two downstream applications: video
+content creation and zero-shot 3D HOI motion synthesis.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2503.18945v1' target='_blank'>Aether: Geometric-Aware Unified World Modeling</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Aether Team, Haoyi Zhu, Yifan Wang, Jianjun Zhou, Wenzheng Chang, Yang Zhou, Zizun Li, Junyi Chen, Chunhua Shen, Jiangmiao Pang, Tong He</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-03-24 17:59:51</h6>
+<p class='card-text'>The integration of geometric reconstruction and generative modeling remains a
+critical challenge in developing AI systems capable of human-like spatial
+reasoning. This paper proposes Aether, a unified framework that enables
+geometry-aware reasoning in world models by jointly optimizing three core
+capabilities: (1) 4D dynamic reconstruction, (2) action-conditioned video
+prediction, and (3) goal-conditioned visual planning. Through task-interleaved
+feature learning, Aether achieves synergistic knowledge sharing across
+reconstruction, prediction, and planning objectives. Building upon video
+generation models, our framework demonstrates unprecedented synthetic-to-real
+generalization despite never observing real-world data during training.
+Furthermore, our approach achieves zero-shot generalization in both action
+following and reconstruction tasks, thanks to its intrinsic geometric modeling.
+Remarkably, even without real-world data, its reconstruction performance far
+exceeds that of domain-specific models. Additionally, Aether leverages a
+geometry-informed action space to seamlessly translate predictions into
+actions, enabling effective autonomous trajectory planning. We hope our work
+inspires the community to explore new frontiers in physically-reasonable world
+modeling and its applications.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2503.18938v1' target='_blank'>AdaWorld: Learning Adaptable World Models with Latent Actions</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Shenyuan Gao, Siyuan Zhou, Yilun Du, Jun Zhang, Chuang Gan</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-03-24 17:58:15</h6>
+<p class='card-text'>World models aim to learn action-controlled prediction models and have proven
+essential for the development of intelligent agents. However, most existing
+world models rely heavily on substantial action-labeled data and costly
+training, making it challenging to adapt to novel environments with
+heterogeneous actions through limited interactions. This limitation can hinder
+their applicability across broader domains. To overcome this challenge, we
+propose AdaWorld, an innovative world model learning approach that enables
+efficient adaptation. The key idea is to incorporate action information during
+the pretraining of world models. This is achieved by extracting latent actions
+from videos in a self-supervised manner, capturing the most critical
+transitions between frames. We then develop an autoregressive world model that
+conditions on these latent actions. This learning paradigm enables highly
+adaptable world models, facilitating efficient transfer and learning of new
+actions even with limited interactions and finetuning. Our comprehensive
+experiments across multiple environments demonstrate that AdaWorld achieves
+superior performance in both simulation quality and visual planning.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2503.18899v1' target='_blank'>Statistical Proof of Execution (SPEX)</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Michele Dallachiesa, Antonio Pitasi, David Pinger, Josh Goodbody, Luis Vaello</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-03-24 17:13:25</h6>
+<p class='card-text'>Many real-world applications are increasingly incorporating automated
+decision-making, driven by the widespread adoption of ML/AI inference for
+planning and guidance. This study examines the growing need for verifiable
+computing in autonomous decision-making. We formalize the problem of verifiable
+computing and introduce a sampling-based protocol that is significantly faster,
+more cost-effective, and simpler than existing methods. Furthermore, we tackle
+the challenges posed by non-determinism, proposing a set of strategies to
+effectively manage common scenarios.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2503.18871v1' target='_blank'>Bootstrapped Model Predictive Control</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yuhang Wang, Hanwei Guo, Sizhe Wang, Long Qian, Xuguang Lan</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-03-24 16:46:36</h6>
+<p class='card-text'>Model Predictive Control (MPC) has been demonstrated to be effective in
+continuous control tasks. When a world model and a value function are
+available, planning a sequence of actions ahead of time leads to a better
+policy. Existing methods typically obtain the value function and the
+corresponding policy in a model-free manner. However, we find that such an
+approach struggles with complex tasks, resulting in poor policy learning and
+inaccurate value estimation. To address this problem, we leverage the strengths
+of MPC itself. In this work, we introduce Bootstrapped Model Predictive Control
+(BMPC), a novel algorithm that performs policy learning in a bootstrapped
+manner. BMPC learns a network policy by imitating an MPC expert, and in turn,
+uses this policy to guide the MPC process. Combined with model-based
+TD-learning, our policy learning yields better value estimation and further
+boosts the efficiency of MPC. We also introduce a lazy reanalyze mechanism,
+which enables computationally efficient imitation learning. Our method achieves
+superior performance over prior works on diverse continuous control tasks. In
+particular, on challenging high-dimensional locomotion tasks, BMPC
+significantly improves data efficiency while also enhancing asymptotic
+performance and training stability, with comparable training time and smaller
+network sizes. Code is available at https://github.com/wertyuilife2/bmpc.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2503.18730v1' target='_blank'>Predicting the Road Ahead: A Knowledge Graph based Foundation Model for
+  Scene Understanding in Autonomous Driving</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Hongkuan Zhou, Stefan Schmid, Yicong Li, Lavdim Halilaj, Xiangtong Yao, Wei cao</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-03-24 14:38:25</h6>
+<p class='card-text'>The autonomous driving field has seen remarkable advancements in various
+topics, such as object recognition, trajectory prediction, and motion planning.
+However, current approaches face limitations in effectively comprehending the
+complex evolutions of driving scenes over time. This paper proposes FM4SU, a
+novel methodology for training a symbolic foundation model (FM) for scene
+understanding in autonomous driving. It leverages knowledge graphs (KGs) to
+capture sensory observation along with domain knowledge such as road topology,
+traffic rules, or complex interactions between traffic participants. A bird's
+eye view (BEV) symbolic representation is extracted from the KG for each
+driving scene, including the spatio-temporal information among the objects
+across the scenes. The BEV representation is serialized into a sequence of
+tokens and given to pre-trained language models (PLMs) for learning an inherent
+understanding of the co-occurrence among driving scene elements and generating
+predictions on the next scenes. We conducted a number of experiments using the
+nuScenes dataset and KG in various scenarios. The results demonstrate that
+fine-tuned models achieve significantly higher accuracy in all tasks. The
+fine-tuned T5 model achieved a next scene prediction accuracy of 86.7%. This
+paper concludes that FM4SU offers a promising foundation for developing more
+comprehensive models for scene understanding in autonomous driving.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2503.18706v1' target='_blank'>Energy-Efficient Dynamic Training and Inference for GNN-Based Network
+  Modeling</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Chetna Singhal, Yassine Hadjadj-Aoul</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-03-24 14:17:57</h6>
+<p class='card-text'>Efficient network modeling is essential for resource optimization and network
+planning in next-generation large-scale complex networks. Traditional
+approaches, such as queuing theory-based modeling and packet-based simulators,
+can be inefficient due to the assumption made and the computational expense,
+respectively. To address these challenges, we propose an innovative
+energy-efficient dynamic orchestration of Graph Neural Networks (GNN) based
+model training and inference framework for context-aware network modeling and
+predictions. We have developed a low-complexity solution framework, QAG, that
+is a Quantum approximation optimization (QAO) algorithm for Adaptive
+orchestration of GNN-based network modeling. We leverage the tripartite graph
+model to represent a multi-application system with many compute nodes.
+Thereafter, we apply the constrained graph-cutting using QAO to find the
+feasible energy-efficient configurations of the GNN-based model and deploying
+them on the available compute nodes to meet the network modeling application
+requirements. The proposed QAG scheme closely matches the optimum and offers
+atleast a 50% energy saving while meeting the application requirements with 60%
+lower churn-rate.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2503.18572v1' target='_blank'>Identifying and Characterising Higher Order Interactions in Mobility
+  Networks Using Hypergraphs</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Prathyush Sambaturu, Bernardo Gutierrez, Moritz U. G. Kraemer</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-03-24 11:29:06</h6>
+<p class='card-text'>Understanding human mobility is essential for applications ranging from urban
+planning to public health. Traditional mobility models such as flow networks
+and colocation matrices capture only pairwise interactions between discrete
+locations, overlooking higher-order relationships among locations (i.e.,
+mobility flow among two or more locations). To address this, we propose
+co-visitation hypergraphs, a model that leverages temporal observation windows
+to extract group interactions between locations from individual mobility
+trajectory data. Using frequent pattern mining, our approach constructs
+hypergraphs that capture dynamic mobility behaviors across different spatial
+and temporal scales. We validate our method on a publicly available mobility
+dataset and demonstrate its effectiveness in analyzing city-scale mobility
+patterns, detecting shifts during external disruptions such as extreme weather
+events, and examining how a location's connectivity (degree) relates to the
+number of points of interest (POIs) within it. Our results demonstrate that our
+hypergraph-based mobility analysis framework is a valuable tool with potential
+applications in diverse fields such as public health, disaster resilience, and
+urban planning.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2503.18546v1' target='_blank'>Multi-agent coordination for data gathering with periodic requests and
+  deliveries</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yaroslav Marchukov, Luis Montano</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-03-24 10:59:31</h6>
+<p class='card-text'>In this demo work we develop a method to plan and coordinate a multi-agent
+team to gather information on demand. The data is periodically requested by a
+static Operation Center (OC) from changeable goals locations. The mission of
+the team is to reach these locations, taking measurements and delivering the
+data to the OC. Due to the limited communication range as well as signal
+attenuation because of the obstacles, the agents must travel to the OC, to
+upload the data. The agents can play two roles: ones as workers gathering data,
+the others as collectors traveling invariant paths for collecting the data of
+the workers to re-transmit it to the OC. The refreshing time of the delivered
+information depends on the number of available agents as well as of the
+scenario. The proposed algorithm finds out the best balance between the number
+of collectors-workers and the partition of the scenario into working areas in
+the planning phase, which provides the minimum refreshing time and will be the
+one executed by the agents.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2503.18545v1' target='_blank'>Communication-aware planning for robot teams deployment</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yaroslav Marchukov, Luis Montano</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-03-24 10:59:23</h6>
+<p class='card-text'>In the present work we address the problem of deploying a team of robots in a
+scenario where some locations of interest must be reached. Thus, a planning for
+a deployment is required, before sending the robots. The obstacles, the limited
+communication range, and the need of communicating to a base station, constrain
+the connectivity of the team and the deployment planning. We propose a method
+consisting of three algorithms: a distributed path planner to obtain
+communication-aware trajectories; a deployment planner providing dual-use of
+the robots, visiting primary goals and performing connectivity tasks; and a
+clustering algorithm to allocate the tasks to robots, and obtain the best goal
+visit order for the mission.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2503.18476v1' target='_blank'>Global-Local Tree Search for Language Guided 3D Scene Generation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Wei Deng, Mengshi Qi, Huadong Ma</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-03-24 09:21:13</h6>
+<p class='card-text'>Large Vision-Language Models (VLMs), such as GPT-4, have achieved remarkable
+success across various fields. However, there are few studies on 3D indoor
+scene generation with VLMs. This paper considers this task as a planning
+problem subject to spatial and layout common sense constraints. To solve the
+problem with a VLM, we propose a new global-local tree search algorithm.
+Globally, the method places each object sequentially and explores multiple
+placements during each placement process, where the problem space is
+represented as a tree. To reduce the depth of the tree, we decompose the scene
+structure hierarchically, i.e. room level, region level, floor object level,
+and supported object level. The algorithm independently generates the floor
+objects in different regions and supported objects placed on different floor
+objects. Locally, we also decompose the sub-task, the placement of each object,
+into multiple steps. The algorithm searches the tree of problem space. To
+leverage the VLM model to produce positions of objects, we discretize the
+top-down view space as a dense grid and fill each cell with diverse emojis to
+make to cells distinct. We prompt the VLM with the emoji grid and the VLM
+produces a reasonable location for the object by describing the position with
+the name of emojis. The quantitative and qualitative experimental results
+illustrate our approach generates more plausible 3D scenes than
+state-of-the-art approaches. Our source code is available at
+https://github.com/dw-dengwei/TreeSearchGen .</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2503.18473v1' target='_blank'>The On-Board Computer of the AcubeSAT Mission</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Konstantinos Tsoupos, Stylianos Tzelepis, Georgios Sklavenitis, Dimitrios~Stoupis, Grigorios Pavlakis, Panagiotis Bountzioukas, Christina Athanasiadou, Lily Ha, David Palma, Loris Franchi, Alkis Hatzopoulos</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-03-24 09:20:01</h6>
+<p class='card-text'>AcubeSAT is an open-source CubeSat mission aiming to explore the effects of
+microgravity and radiation on eukaryotic cells using a compact microfluidic
+lab-on-a-chip platform. It is developed by SpaceDot, a volunteer,
+interdisciplinary student team at the Aristotle University of Thessaloniki and
+supported by the "Fly Your Satellite! 3" program of the European Space Agency
+(ESA) Education Office.
+  The nanosatellite features an in-house designed on-board computer subsystem
+responsible for telecommand execution, telemetry fetching, onboard time
+synchronization, in-orbit patching, and fault recovery. The subsystem is
+designed on one PC/104 standard compatible Printed Circuit Board (PCB) that
+hosts the On-board Computer (OBC) on the one side and the Attitude and Orbit
+Control Subsystem (AOCS) on the other, and it is compatible with the LibreCube
+standard. The hosted subsystems are functionally isolated and feature an ARM
+Cortex-M7, radiation-tolerant microcontroller each.
+  Before sending anything to space thorough testing is required and
+specifically the on-board computer board underwent vibration and thermal
+cycling tests to ensure nominal operation in all conditions.
+  This paper aims to elucidate the decision-making process, design iterations,
+and development stages of the custom board and accompanying in-house software.
+Insights garnered from the initial partially successful environmental test
+campaign at the ESA CubeSat Support Facility will be shared, along with the
+ensuing preparations, results, and lessons learned from subsequent testing
+endeavors in April 2024. Furthermore, the current developmental status will be
+discussed alongside future electromagnetic compatibility testing, integration
+plan on a FlatSat, and prospects for the open-source design as a
+cost-effective, and modular solution that can be tailored with little effort
+for upcoming missions.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2503.18366v1' target='_blank'>Reinforcement Learning for Adaptive Planner Parameter Tuning: A
+  Perspective on Hierarchical Architecture</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Lu Wangtao, Wei Yufei, Xu Jiadong, Jia Wenhao, Li Liang, Xiong Rong, Wang Yue</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-03-24 06:02:41</h6>
+<p class='card-text'>Automatic parameter tuning methods for planning algorithms, which integrate
+pipeline approaches with learning-based techniques, are regarded as promising
+due to their stability and capability to handle highly constrained
+environments. While existing parameter tuning methods have demonstrated
+considerable success, further performance improvements require a more
+structured approach. In this paper, we propose a hierarchical architecture for
+reinforcement learning-based parameter tuning. The architecture introduces a
+hierarchical structure with low-frequency parameter tuning, mid-frequency
+planning, and high-frequency control, enabling concurrent enhancement of both
+upper-layer parameter tuning and lower-layer control through iterative
+training. Experimental evaluations in both simulated and real-world
+environments show that our method surpasses existing parameter tuning
+approaches. Furthermore, our approach achieves first place in the Benchmark for
+Autonomous Robot Navigation (BARN) Challenge.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2503.18353v1' target='_blank'>Contact Plan Design for Cross-Linked GNSSs: An ILP Approach for Extended
+  Applications</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Huan Yan, Juan A. Fraire, Ziqi Yang, Kanglian Zhao, Wenfeng Li, Xiyun Hou, Haohan Li, Yuxuan Miao, Jinjun Zheng, Chengbin Kang, Huichao Zhou, Xinuo Chang, Lu Wang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-03-24 05:26:35</h6>
+<p class='card-text'>Global Navigation Satellite Systems (GNSS) employ inter-satellite links
+(ISLs) to reduce dependency on ground stations, enabling precise ranging and
+communication across satellites. Beyond their traditional role, ISLs can
+support extended applications, including providing navigation and communication
+services to external entities. However, designing effective contact plan design
+(CPD) schemes for these multifaceted ISLs, operating under a polling
+time-division duplex (PTDD) framework, remains a critical challenge. Existing
+CPD approaches focus solely on meeting GNSS satellites' internal ranging and
+communication demands, neglecting their extended applications. This paper
+introduces the first CPD scheme capable of supporting extended GNSS ISLs. By
+modeling GNSS requirements and designing a tailored service process, our
+approach ensures the allocation of essential resources for internal operations
+while accommodating external user demands. Based on the BeiDou constellation,
+simulation results demonstrate the proposed scheme's efficacy in maintaining
+core GNSS functionality while providing extended ISLs on a best-effort basis.
+Additionally, the results highlight the significant impact of GNSS ISLs in
+enhancing orbit determination and clock synchronization for the Earth-Moon
+libration point constellation, underscoring the importance of extended GNSS ISL
+applications.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2503.18349v1' target='_blank'>Human-Object Interaction with Vision-Language Model Guided Relative
+  Movement Dynamics</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Zekai Deng, Ye Shi, Kaiyang Ji, Lan Xu, Shaoli Huang, Jingya Wang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-03-24 05:18:04</h6>
+<p class='card-text'>Human-Object Interaction (HOI) is vital for advancing simulation, animation,
+and robotics, enabling the generation of long-term, physically plausible
+motions in 3D environments. However, existing methods often fall short of
+achieving physics realism and supporting diverse types of interactions. To
+address these challenges, this paper introduces a unified Human-Object
+Interaction framework that provides unified control over interactions with
+static scenes and dynamic objects using language commands. The interactions
+between human and object parts can always be described as the continuous stable
+Relative Movement Dynamics (RMD) between human and object parts. By leveraging
+the world knowledge and scene perception capabilities of Vision-Language Models
+(VLMs), we translate language commands into RMD diagrams, which are used to
+guide goal-conditioned reinforcement learning for sequential interaction with
+objects. Our framework supports long-horizon interactions among dynamic,
+articulated, and static objects. To support the training and evaluation of our
+framework, we present a new dataset named Interplay, which includes multi-round
+task plans generated by VLMs, covering both static and dynamic HOI tasks.
+Extensive experiments demonstrate that our proposed framework can effectively
+handle a wide range of HOI tasks, showcasing its ability to maintain long-term,
+multi-round transitions. For more details, please refer to our project webpage:
+https://rmd-hoi.github.io/.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2503.18340v1' target='_blank'>Optimized Contact Plan Design for Reflector and Phased Array Terminals
+  in Cislunar Space Networks</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Huan Yan, Juan A. Fraire, Ziqi Yang, Kanglian Zhao, Wenfeng Li, Yuan Fang, Jinjun Zheng, Chengbin Kang, Huichao Zhou, Xinuo Chang, Lu Wang, Linshan Xue</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-03-24 04:45:15</h6>
+<p class='card-text'>Cislunar space is emerging as a critical domain for human exploration,
+requiring robust infrastructure to support spatial users - spacecraft with
+navigation and communication demands. Deploying satellites at Earth-Moon
+libration points offers an effective solution. This paper introduces a novel
+Contact Plan Design (CPD) scheme that considers two classes of cislunar
+transponders: Reflector Links (RL) for high-volume data transfer and Phased
+Array Links (PL) for fast switching and navigation services.Our approach
+addresses the needs of both satellites and spatial users within the Earth-Moon
+Libration Point Communication and Navigation Constellation (EMLP-CNC).
+Simulations validate the proposed scheme, demonstrating its effectiveness in
+serving spatial users while meeting satellite ranging and communication
+requirements. These findings provide essential insights for developing future
+Cislunar Space Infrastructures.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2503.18336v1' target='_blank'>Rise of the Community Champions: From Reviewer Crunch to Community Power</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Changlun Li, Yao Shi, Yuyu Luo, Nan Tang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-03-24 04:40:21</h6>
+<p class='card-text'>Academic publishing is facing a crisis driven by exponential growth in
+submissions and an overwhelmed peer review system, leading to inconsistent
+decisions and a severe reviewer shortage. This paper introduces Panvas, a
+platform that reimagines academic publishing as a continuous, community-driven
+process. Panvas addresses these systemic failures with a novel combination of
+economic incentives (paid reviews) and rich interaction mechanisms
+(multi-dimensional ratings, threaded discussions, and expert-led reviews). By
+moving beyond the traditional accept/reject paradigm and integrating paper
+hosting with code/data repositories and social networking, Panvas fosters a
+meritocratic environment for scholarly communication and presents a radical
+rethinking of how we evaluate and disseminate scientific knowledge. We present
+the system design, development roadmap, and a user study plan to evaluate its
+effectiveness.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2503.18276v1' target='_blank'>Learning Orientation Field for OSM-Guided Autonomous Navigation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yuming Huang, Wei Gao, Zhiyuan Zhang, Maani Ghaffari, Dezhen Song, Cheng-Zhong Xu, Hui Kong</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-03-24 01:46:17</h6>
+<p class='card-text'>OpenStreetMap (OSM) has gained popularity recently in autonomous navigation
+due to its public accessibility, lower maintenance costs, and broader
+geographical coverage. However, existing methods often struggle with noisy OSM
+data and incomplete sensor observations, leading to inaccuracies in trajectory
+planning. These challenges are particularly evident in complex driving
+scenarios, such as at intersections or facing occlusions. To address these
+challenges, we propose a robust and explainable two-stage framework to learn an
+Orientation Field (OrField) for robot navigation by integrating LiDAR scans and
+OSM routes. In the first stage, we introduce the novel representation, OrField,
+which can provide orientations for each grid on the map, reasoning jointly from
+noisy LiDAR scans and OSM routes. To generate a robust OrField, we train a deep
+neural network by encoding a versatile initial OrField and output an optimized
+OrField. Based on OrField, we propose two trajectory planners for OSM-guided
+robot navigation, called Field-RRT* and Field-Bezier, respectively, in the
+second stage by improving the Rapidly Exploring Random Tree (RRT) algorithm and
+Bezier curve to estimate the trajectories. Thanks to the robustness of OrField
+which captures both global and local information, Field-RRT* and Field-Bezier
+can generate accurate and reliable trajectories even in challenging conditions.
+We validate our approach through experiments on the SemanticKITTI dataset and
+our own campus dataset. The results demonstrate the effectiveness of our
+method, achieving superior performance in complex and noisy conditions. Our
+code for network training and real-world deployment is available at
+https://github.com/IMRL/OriField.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2503.18246v1' target='_blank'>ZECO: ZeroFusion Guided 3D MRI Conditional Generation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Feiran Wang, Bin Duan, Jiachen Tao, Nikhil Sharma, Dawen Cai, Yan Yan</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-03-24 00:04:52</h6>
+<p class='card-text'>Medical image segmentation is crucial for enhancing diagnostic accuracy and
+treatment planning in Magnetic Resonance Imaging (MRI). However, acquiring
+precise lesion masks for segmentation model training demands specialized
+expertise and significant time investment, leading to a small dataset scale in
+clinical practice. In this paper, we present ZECO, a ZeroFusion guided 3D MRI
+conditional generation framework that extracts, compresses, and generates
+high-fidelity MRI images with corresponding 3D segmentation masks to mitigate
+data scarcity. To effectively capture inter-slice relationships within volumes,
+we introduce a Spatial Transformation Module that encodes MRI images into a
+compact latent space for the diffusion process. Moving beyond unconditional
+generation, our novel ZeroFusion method progressively maps 3D masks to MRI
+images in latent space, enabling robust training on limited datasets while
+avoiding overfitting. ZECO outperforms state-of-the-art models in both
+quantitative and qualitative evaluations on Brain MRI datasets across various
+modalities, showcasing its exceptional capability in synthesizing high-quality
+MRI images conditioned on segmentation masks.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2503.18161v1' target='_blank'>Active Inference for Energy Control and Planning in Smart Buildings and
+  Communities</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Seyyed Danial Nazemi, Mohsen A. Jafari, Andrea Matta</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-03-23 18:03:01</h6>
+<p class='card-text'>Active Inference (AIF) is emerging as a powerful framework for
+decision-making under uncertainty, yet its potential in engineering
+applications remains largely unexplored. In this work, we propose a novel
+dual-layer AIF architecture that addresses both building-level and
+community-level energy management. By leveraging the free energy principle,
+each layer adapts to evolving conditions and handles partial observability
+without extensive sensor information and respecting data privacy. We validate
+the continuous AIF model against both a perfect optimization baseline and a
+reinforcement learning-based approach. We also test the community AIF framework
+under extreme pricing scenarios. The results highlight the model's robustness
+in handling abrupt changes. This study is the first to show how a distributed
+AIF works in engineering. It also highlights new opportunities for
+privacy-preserving and uncertainty-aware control strategies in engineering
+applications.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2503.17985v1' target='_blank'>Optimizing Navigation And Chemical Application in Precision Agriculture
+  With Deep Reinforcement Learning And Conditional Action Tree</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Mahsa Khosravi, Zhanhong Jiang, Joshua R Waite, Sarah Jonesc, Hernan Torres, Arti Singh, Baskar Ganapathysubramanian, Asheesh Kumar Singh, Soumik Sarkar</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-03-23 08:38:13</h6>
+<p class='card-text'>This paper presents a novel reinforcement learning (RL)-based planning scheme
+for optimized robotic management of biotic stresses in precision agriculture.
+The framework employs a hierarchical decision-making structure with conditional
+action masking, where high-level actions direct the robot's exploration, while
+low-level actions optimize its navigation and efficient chemical spraying in
+affected areas. The key objectives of optimization include improving the
+coverage of infected areas with limited battery power and reducing chemical
+usage, thus preventing unnecessary spraying of healthy areas of the field. Our
+numerical experimental results demonstrate that the proposed method,
+Hierarchical Action Masking Proximal Policy Optimization (HAM-PPO),
+significantly outperforms baseline practices, such as LawnMower navigation +
+indiscriminate spraying (Carpet Spray), in terms of yield recovery and resource
+efficiency. HAM-PPO consistently achieves higher yield recovery percentages and
+lower chemical costs across a range of infection scenarios. The framework also
+exhibits robustness to observation noise and generalizability under diverse
+environmental conditions, adapting to varying infection ranges and spatial
+distribution patterns.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2503.17973v1' target='_blank'>PhysTwin: Physics-Informed Reconstruction and Simulation of Deformable
+  Objects from Videos</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Hanxiao Jiang, Hao-Yu Hsu, Kaifeng Zhang, Hsin-Ni Yu, Shenlong Wang, Yunzhu Li</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-03-23 07:49:19</h6>
+<p class='card-text'>Creating a physical digital twin of a real-world object has immense potential
+in robotics, content creation, and XR. In this paper, we present PhysTwin, a
+novel framework that uses sparse videos of dynamic objects under interaction to
+produce a photo- and physically realistic, real-time interactive virtual
+replica. Our approach centers on two key components: (1) a physics-informed
+representation that combines spring-mass models for realistic physical
+simulation, generative shape models for geometry, and Gaussian splats for
+rendering; and (2) a novel multi-stage, optimization-based inverse modeling
+framework that reconstructs complete geometry, infers dense physical
+properties, and replicates realistic appearance from videos. Our method
+integrates an inverse physics framework with visual perception cues, enabling
+high-fidelity reconstruction even from partial, occluded, and limited
+viewpoints. PhysTwin supports modeling various deformable objects, including
+ropes, stuffed animals, cloth, and delivery packages. Experiments show that
+PhysTwin outperforms competing methods in reconstruction, rendering, future
+prediction, and simulation under novel interactions. We further demonstrate its
+applications in interactive real-time simulation and model-based robotic motion
+planning.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2503.17863v1' target='_blank'>A Causal Analysis of the Plots of Intelligent Adversaries</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Preetha Ramiah, David I. Hastie, Oliver Bunnin, Silvia Liverani, James Q. Smith</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-03-22 21:01:43</h6>
+<p class='card-text'>In this paper we demonstrate a new advance in causal Bayesian graphical
+modelling combined with Adversarial Risk Analysis. This research aims to
+support strategic analyses of various defensive interventions to counter the
+threat arising from plots of an adversary. These plots are characterised by a
+sequence of preparatory phases that an adversary must necessarily pass through
+to achieve their hostile objective. To do this we first define a new general
+class of plot models. Then we demonstrate that this is a causal graphical
+family of models - albeit with a hybrid semantic. We show this continues to be
+so even in this adversarial setting. It follows that this causal graph can be
+used to guide a Bayesian decision analysis to counter the adversary's plot. We
+illustrate the causal analysis of a plot with details of a decision analysis
+designed to frustrate the progress of a planned terrorist attack.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2503.17839v1' target='_blank'>Adaptive Robust Optimization Models for DER Planning in Distribution
+  Networks under Long- and Short-Term Uncertainties</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Fernando García-Muñoz, Cristian Duran-Mateluna</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-03-22 18:51:14</h6>
+<p class='card-text'>This study introduces adaptive robust optimization (ARO) and adaptive robust
+stochastic optimization (ARSO) approaches to address long- and short-term
+uncertainties in the optimal sizing and placement of distributed energy
+resources in distribution networks. ARO models uncertainty using a Budget of
+Uncertainty (BoU), while ARSO distinguishes long-term (LT) demand (via BoU) and
+short-term (ST) photovoltaics generation (via scenarios). Adapted Benders
+cutting plane algorithms are presented to tackle the tri-level optimization
+challenges. The experiments consider a modified version of the IEEE 33 bus
+system to test these two approaches and also compare them with traditional
+robust and stochastic optimization models. The results indicate that
+distinguishing between LT and ST uncertainties using a hybrid formulation such
+ARSO yields a solution closer to the optimal solution under perfect information
+than ARO.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2503.17812v1' target='_blank'>Cross-correlation analysis for cosmic ray flux forecasting</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:David Pelosi, Fernando Barão, Bruna Bertucci, Emanuele Fiandrini, Miguel Orcinha, Alejandro Reina Conde, Nicola Tomassetti</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-03-22 16:24:59</h6>
+<p class='card-text'>The study presents an effective approach for deriving and utilizing
+polarity-based cross-correlation functions to forecast Galactic Cosmic Ray
+(GCR) fluxes based on solar activity proxies. By leveraging a universal
+correlation framework calibrated with AMS-02 and PAMELA proton flux data under
+a numerical model, the methodology incorporates Empirical Mode Decomposition
+(EMD) and a global spline fit. These techniques ensure robust handling of
+short-term fluctuations and smooth transitions during polarity reversals. The
+results have significant potential for space weather applications, enabling
+reliable GCR flux predictions critical for radiation risk assessments and
+operational planning in space exploration and satellite missions.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2503.17727v1' target='_blank'>The Large Hadron electron Collider as a bridge project for CERN</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:F. Ahmadova, K. André, N. Armesto, G. Azuelos, O. Behnke, M. Boonekamp, M. Bonvini, D. Britzger, O. Brüning, T. A. Bud, A. M. Cooper-Sarkar, J. D'Hondt, M. D'Onofrio, O. Fischer, L. Forthomme, F. Giuli, C. Gwenlan, E. Hammou, B. Holzer, H. Khanpour, U. Klein, P. Kostka, T. Lappi, H. Mäntysaari, P. R. Newman, F. I. Olness, J. A. Osborne, Y. Papaphilippou, H. Paukkunen, K. Piotrzkowski, A. Polini, J. Rojo, M. Schott, S. Schumann, C. Schwanenberger, A. M. Staśto, A. Stocchi, S. Tentori, M. Tevio, C. Wang, Y. Yamazaki</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-03-22 10:56:12</h6>
+<p class='card-text'>The LHeC is the project for delivering electron-nucleon collisions at CERN
+using the HL-LHC beams. An Energy Recovery Linac in racetrack configuration
+will provide 50 GeV electrons to achieve centre-of-mass energies around 1
+TeV/nucleon and instantaneous luminosities around $10^{34}$ cm$^{-2}$s$^{-1}$.
+The LHeC program elaborated in the CDR of 2021 included a phase with concurrent
+operation of electron-hadron and hadron-hadron collisions, followed by a
+standalone phase of electron-hadron collisions only. In view of the current
+HL-LHC schedule, in this paper we have examined the possibilities of a program
+after the regular HL-LHC program with only electron-proton operation. In this
+operation mode, the LHeC would serve as an impactful bridge project between
+major colliders at CERN. The standalone physics program comprises electroweak,
+Higgs, top-quark, BSM and strong-interaction physics. In addition, it empowers
+the physics analyses at the HL-LHC by retrofitting measurements and searches
+with significantly more precise knowledge of the proton structure and
+$\alpha_s$. The accelerator technology deployed in the Energy Recovery Linac
+for the LHeC is a major stepping-stone for the performance, cost reduction and
+training for future colliders. The capital investments in the LHeC electron
+accelerator can be reused in a cost-efficient way as the injector for the
+FCC-ee. Finally, data from the LHeC are essential to enable the physics
+potential of any new high-energy hadron collider. The operational plan of 6
+years easily fits in the period between two major colliders at CERN. Similar to
+the LHeC empowering the HL-LHC physics program, the FCC-eh would be an
+impactful addition to the FCC physics program.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2503.17693v1' target='_blank'>Conditional Diffusion Model with OOD Mitigation as High-Dimensional
+  Offline Resource Allocation Planner in Clustered Ad Hoc Networks</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Kechen Meng, Sinuo Zhang, Rongpeng Li, Chan Wang, Ming Lei, Zhifeng Zhao</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-03-22 08:27:09</h6>
+<p class='card-text'>Due to network delays and scalability limitations, clustered ad hoc networks
+widely adopt Reinforcement Learning (RL) for on-demand resource allocation.
+Albeit its demonstrated agility, traditional Model-Free RL (MFRL) solutions
+struggle to tackle the huge action space, which generally explodes
+exponentially along with the number of resource allocation units, enduring low
+sampling efficiency and high interaction cost. In contrast to MFRL, Model-Based
+RL (MBRL) offers an alternative solution to boost sample efficiency and
+stabilize the training by explicitly leveraging a learned environment model.
+However, establishing an accurate dynamic model for complex and noisy
+environments necessitates a careful balance between model accuracy and
+computational complexity $\&$ stability. To address these issues, we propose a
+Conditional Diffusion Model Planner (CDMP) for high-dimensional offline
+resource allocation in clustered ad hoc networks. By leveraging the astonishing
+generative capability of Diffusion Models (DMs), our approach enables the
+accurate modeling of high-quality environmental dynamics while leveraging an
+inverse dynamics model to plan a superior policy. Beyond simply adopting DMs in
+offline RL, we further incorporate the CDMP algorithm with a theoretically
+guaranteed, uncertainty-aware penalty metric, which theoretically and
+empirically manifests itself in mitigating the Out-of-Distribution
+(OOD)-induced distribution shift issue underlying scarce training data.
+Extensive experiments also show that our model outperforms MFRL in average
+reward and Quality of Service (QoS) while demonstrating comparable performance
+to other MBRL algorithms.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2503.17629v1' target='_blank'>Planning and Learning in Average Risk-aware MDPs</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Weikai Wang, Erick Delage</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-03-22 03:18:09</h6>
+<p class='card-text'>For continuing tasks, average cost Markov decision processes have
+well-documented value and can be solved using efficient algorithms. However, it
+explicitly assumes that the agent is risk-neutral. In this work, we extend
+risk-neutral algorithms to accommodate the more general class of dynamic risk
+measures. Specifically, we propose a relative value iteration (RVI) algorithm
+for planning and design two model-free Q-learning algorithms, namely a generic
+algorithm based on the multi-level Monte Carlo method, and an off-policy
+algorithm dedicated to utility-base shortfall risk measures. Both the RVI and
+MLMC-based Q-learning algorithms are proven to converge to optimality.
+Numerical experiments validate our analysis, confirms empirically the
+convergence of the off-policy algorithm, and demonstrate that our approach
+enables the identification of policies that are finely tuned to the intricate
+risk-awareness of the agent that they serve.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2503.17490v1' target='_blank'>Probing the general axion-nucleon interaction in water Cherenkov
+  experiments</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Mael Cavan-Piton, Diego Guadagnoli, Axel Iohner, Pablo Fernandez-Menendez, Ludovico Vittorio</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-03-21 19:00:00</h6>
+<p class='card-text'>We consider an axion flux on Earth consistent with emission from the
+Supernova explosion SN 1987A. Using Chiral Perturbation Theory augmented with
+an axion, we calculate the energy spectrum of $a + N \to N + \gamma$ as well as
+$a + N \to N + \pi^0$, where $N$ denotes a nucleon in a water tank, such as the
+one planned for the Hyper-Kamiokande neutrino detection facility. Our
+calculations assume the most general axion-quark interactions, with couplings
+constrained either solely by experimental data, or by specific theory
+scenarios.
+  We find that even for the QCD axion -- whose interaction strength with matter
+is at its weakest as compared with axion-like particles -- the expected
+\v{C}herenkov-light spectrum from neutrino-nucleon interactions is modified in
+a potentially detectable way. Furthermore, detectability appears significantly
+more promising for the $N + \pi^0$ final state, as its spectrum peaks an order
+of magnitude higher and at energies twice as large compared to the $N + \gamma$
+counterpart. Given the rarity of SN events where both the neutrino and the
+hypothetical axion burst are detectable, we emphasize the importance of
+identifying additional mechanisms that could enhance such signals.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2503.17339v1' target='_blank'>Can AI expose tax loopholes? Towards a new generation of legal policy
+  assistants</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Peter Fratrič, Nils Holzenberger, David Restrepo Amariles</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-03-21 17:40:06</h6>
+<p class='card-text'>The legislative process is the backbone of a state built on solid
+institutions. Yet, due to the complexity of laws -- particularly tax law --
+policies may lead to inequality and social tensions. In this study, we
+introduce a novel prototype system designed to address the issues of tax
+loopholes and tax avoidance. Our hybrid solution integrates a natural language
+interface with a domain-specific language tailored for planning. We demonstrate
+on a case study how tax loopholes and avoidance schemes can be exposed. We
+conclude that our prototype can help enhance social welfare by systematically
+identifying and addressing tax gaps stemming from loopholes.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js'></script>
+</body>
+</html>
