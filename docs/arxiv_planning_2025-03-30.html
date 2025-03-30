@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>planning - 2025-03-30</title>
+<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap' rel='stylesheet'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css'>
+<style>
+body {
+font-family: 'Roboto', sans-serif;
+background-color: #f5f7fa;
+padding: 20px;
+}
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.card-title {
+    font-weight: 700;
+}
+.card:hover {
+    transform: scale(1.02);
+    transition: 0.3s ease-in-out;
+}
+</style>
+</head>
+<body>
+<div class='container'>
+<h1 class='text-center my-4'><i class='fas fa-book'></i>planning - 2025-03-30</h1>
+<div class='row'>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2503.21696v1' target='_blank'>Embodied-Reasoner: Synergizing Visual Search, Reasoning, and Action for
+  Embodied Interactive Tasks</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Wenqi Zhang, Mengna Wang, Gangao Liu, Xu Huixin, Yiwei Jiang, Yongliang Shen, Guiyang Hou, Zhe Zheng, Hang Zhang, Xin Li, Weiming Lu, Peng Li, Yueting Zhuang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-03-27 17:00:51</h6>
+<p class='card-text'>Recent advances in deep thinking models have demonstrated remarkable
+reasoning capabilities on mathematical and coding tasks. However, their
+effectiveness in embodied domains which require continuous interaction with
+environments through image action interleaved trajectories remains largely
+-unexplored. We present Embodied Reasoner, a model that extends o1 style
+reasoning to interactive embodied search tasks. Unlike mathematical reasoning
+that relies primarily on logical deduction, embodied scenarios demand spatial
+understanding, temporal reasoning, and ongoing self-reflection based on
+interaction history. To address these challenges, we synthesize 9.3k coherent
+Observation-Thought-Action trajectories containing 64k interactive images and
+90k diverse thinking processes (analysis, spatial reasoning, reflection,
+planning, and verification). We develop a three-stage training pipeline that
+progressively enhances the model's capabilities through imitation learning,
+self-exploration via rejection sampling, and self-correction through reflection
+tuning. The evaluation shows that our model significantly outperforms those
+advanced visual reasoning models, e.g., it exceeds OpenAI o1, o3-mini, and
+Claude-3.7 by +9\%, 24\%, and +13\%. Analysis reveals our model exhibits fewer
+repeated searches and logical inconsistencies, with particular advantages in
+complex long-horizon tasks. Real-world environments also show our superiority
+while exhibiting fewer repeated searches and logical inconsistency cases.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2503.21677v1' target='_blank'>A tale of two goals: leveraging sequentiality in multi-goal scenarios</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Olivier Serris, Stéphane Doncieux, Olivier Sigaud</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-03-27 16:47:46</h6>
+<p class='card-text'>Several hierarchical reinforcement learning methods leverage planning to
+create a graph or sequences of intermediate goals, guiding a lower-level
+goal-conditioned (GC) policy to reach some final goals. The low-level policy is
+typically conditioned on the current goal, with the aim of reaching it as
+quickly as possible. However, this approach can fail when an intermediate goal
+can be reached in multiple ways, some of which may make it impossible to
+continue toward subsequent goals. To address this issue, we introduce two
+instances of Markov Decision Process (MDP) where the optimization objective
+favors policies that not only reach the current goal but also subsequent ones.
+In the first, the agent is conditioned on both the current and final goals,
+while in the second, it is conditioned on the next two goals in the sequence.
+We conduct a series of experiments on navigation and pole-balancing tasks in
+which sequences of intermediate goals are given. By evaluating policies trained
+with TD3+HER on both the standard GC-MDP and our proposed MDPs, we show that,
+in most cases, conditioning on the next two goals improves stability and sample
+efficiency over other approaches.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2503.21668v1' target='_blank'>Cognitive Science-Inspired Evaluation of Core Capabilities for Object
+  Understanding in AI</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Danaja Rutar, Alva Markelius, Konstantinos Voudouris, José Hernández-Orallo, Lucy Cheke</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-03-27 16:35:02</h6>
+<p class='card-text'>One of the core components of our world models is 'intuitive physics' - an
+understanding of objects, space, and causality. This capability enables us to
+predict events, plan action and navigate environments, all of which rely on a
+composite sense of objecthood. Despite its importance, there is no single,
+unified account of objecthood, though multiple theoretical frameworks provide
+insights. In the first part of this paper, we present a comprehensive overview
+of the main theoretical frameworks in objecthood research - Gestalt psychology,
+enactive cognition, and developmental psychology - and identify the core
+capabilities each framework attributes to object understanding, as well as what
+functional roles they play in shaping world models in biological agents. Given
+the foundational role of objecthood in world modelling, understanding
+objecthood is also essential in AI. In the second part of the paper, we
+evaluate how current AI paradigms approach and test objecthood capabilities
+compared to those in cognitive science. We define an AI paradigm as a
+combination of how objecthood is conceptualised, the methods used for studying
+objecthood, the data utilised, and the evaluation techniques. We find that,
+whilst benchmarks can detect that AI systems model isolated aspects of
+objecthood, the benchmarks cannot detect when AI systems lack functional
+integration across these capabilities, not solving the objecthood challenge
+fully. Finally, we explore novel evaluation approaches that align with the
+integrated vision of objecthood outlined in this paper. These methods are
+promising candidates for advancing from isolated object capabilities toward
+general-purpose AI with genuine object understanding in real-world contexts.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2503.21602v1' target='_blank'>GenEdit: Compounding Operators and Continuous Improvement to Tackle
+  Text-to-SQL in the Enterprise</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Karime Maamari, Connor Landy, Amine Mhedhbi</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-03-27 15:22:02</h6>
+<p class='card-text'>Recent advancements in Text-to-SQL, driven by large language models, are
+democratizing data access. Despite these advancements, enterprise deployments
+remain challenging due to the need to capture business-specific knowledge,
+handle complex queries, and meet expectations of continuous improvements. To
+address these issues, we designed and implemented GenEdit: our Text-to-SQL
+generation system that improves with user feedback. GenEdit builds and
+maintains a company-specific knowledge set, employs a pipeline of operators
+decomposing SQL generation, and uses feedback to update its knowledge set to
+improve future SQL generations.
+  We describe GenEdit's architecture made of two core modules: (i) decomposed
+SQL generation; and (ii) knowledge set edits based on user feedback. For
+generation, GenEdit leverages compounding operators to improve knowledge
+retrieval and to create a plan as chain-of-thought steps that guides
+generation. GenEdit first retrieves relevant examples in an initial retrieval
+stage where original SQL queries are decomposed into sub-statements, clauses or
+sub-queries. It then also retrieves instructions and schema elements. Using the
+retrieved contextual information, GenEdit then generates step-by-step plan in
+natural language on how to produce the query. Finally, GenEdit uses the plan to
+generate SQL, minimizing the need for model reasoning, which enhances complex
+SQL generation. If necessary, GenEdit regenerates the query based on syntactic
+and semantic errors. The knowledge set edits are recommended through an
+interactive copilot, allowing users to iterate on their feedback and to
+regenerate SQL queries as needed. Each generation uses staged edits which
+update the generation prompt. Once the feedback is submitted, it gets merged
+after passing regression testing and obtaining an approval, improving future
+generations.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2503.21570v1' target='_blank'>HFLAV input to the 2026 update of the European Strategy for Particle
+  Physics</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:F. Archilli, Sw. Banerjee, E. Ben-Haim, F. U. Bernlochner, E. Bertholet, M. Bona, A. Bozek, C. Bozzi, J. Brodzicka, V. Chobanova, M. Chrzaszcz, M. Dorigo, U. Egede, A. Gaz, M. Gersabeck, T. Gershon, P. Goldenzweig, L. Grillo, K. Hayasaka, T. Humair, D. Johnson, M. Kenzie, T. Kuhr, O. Leroy, A. Lusiani, H. -L. Ma, M. Margoni, R. Mizuk, P. Naik, M. T. Prim, M. Roney, M. Rotondo, O. Schneider, C. Schwanda, A. J. Schwartz, J. Serrano, B. Shwartz, M. Veronesi, M. Whitehead, J. Yelton</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-03-27 14:51:18</h6>
+<p class='card-text'>Heavy-flavour physics is an essential component of the particle-physics
+programme, offering critical tests of the Standard Model and far-reaching
+sensitivity to physics beyond it. Experiments such as LHCb, Belle II, and
+BESIII drive progress in the field, along with contributions from ATLAS and
+CMS. The LHCb Upgrade II and upgraded Belle II experiments will provide unique
+and highly sensitive measurements for decades, playing a key role in the
+searches for new physics. Future facilities with significant heavy-flavour
+capabilities will further expand these opportunities. We advocate for a
+European Strategy that fully supports Upgrade II of LHCb and an upgrade of
+Belle II, along with their subsequent exploitation. Additionally, we support a
+long-term plan that fully integrates flavour physics in an $e^+e^-$ collider to
+run as a $Z$ factory.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2503.21548v1' target='_blank'>Combining Graph Attention Networks and Distributed Optimization for
+  Multi-Robot Mixed-Integer Convex Programming</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Viet-Anh Le, Panagiotis Kounatidis, Andreas A. Malikopoulos</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-03-27 14:36:45</h6>
+<p class='card-text'>In this paper, we develop a fast mixed-integer convex programming (MICP)
+framework for multi-robot navigation by combining graph attention networks and
+distributed optimization. We formulate a mixed-integer optimization problem for
+receding horizon motion planning of a multi-robot system, taking into account
+the surrounding obstacles. To address the resulting multi-agent MICP problem in
+real time, we propose a framework that utilizes heterogeneous graph attention
+networks to learn the latent mapping from problem parameters to optimal binary
+solutions. Furthermore, we apply a distributed proximal alternating direction
+method of multipliers algorithm for solving the convex continuous optimization
+problem. We demonstrate the effectiveness of our proposed framework through
+experiments conducted on a robotic testbed.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2503.21505v1' target='_blank'>Fine-Grained Evaluation of Large Vision-Language Models in Autonomous
+  Driving</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yue Li, Meng Tian, Zhenyu Lin, Jiangtong Zhu, Dechang Zhu, Haiqiang Liu, Zining Wang, Yueyi Zhang, Zhiwei Xiong, Xinhai Zhao</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-03-27 13:45:47</h6>
+<p class='card-text'>Existing benchmarks for Vision-Language Model (VLM) on autonomous driving
+(AD) primarily assess interpretability through open-form visual question
+answering (QA) within coarse-grained tasks, which remain insufficient to assess
+capabilities in complex driving scenarios. To this end, we introduce
+$\textbf{VLADBench}$, a challenging and fine-grained dataset featuring
+close-form QAs that progress from static foundational knowledge and elements to
+advanced reasoning for dynamic on-road situations. The elaborate
+$\textbf{VLADBench}$ spans 5 key domains: Traffic Knowledge Understanding,
+General Element Recognition, Traffic Graph Generation, Target Attribute
+Comprehension, and Ego Decision-Making and Planning. These domains are further
+broken down into 11 secondary aspects and 29 tertiary tasks for a granular
+evaluation. A thorough assessment of general and domain-specific (DS) VLMs on
+this benchmark reveals both their strengths and critical limitations in AD
+contexts. To further exploit the cognitive and reasoning interactions among the
+5 domains for AD understanding, we start from a small-scale VLM and train the
+DS models on individual domain datasets (collected from 1.4M DS QAs across
+public sources). The experimental results demonstrate that the proposed
+benchmark provides a crucial step toward a more comprehensive assessment of
+VLMs in AD, paving the way for the development of more cognitively
+sophisticated and reasoning-capable AD systems.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2503.21444v1' target='_blank'>Automated Analysis of Pricings in SaaS-based Information Systems</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Alejandro García-Fernández, José Antonio Parejo, Pablo Trinidad, Antonio Ruiz-Cortés</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-03-27 12:36:57</h6>
+<p class='card-text'>Software as a Service (SaaS) pricing models, encompassing features, usage
+limits, plans, and add-ons, have grown exponentially in complexity, evolving
+from offering tens to thousands of configuration options. This rapid expansion
+poses significant challenges for the development and operation of SaaS-based
+Information Systems (IS), as manual management of such configurations becomes
+time-consuming, error-prone, and ultimately unsustainable. The emerging
+paradigm of Pricing-driven DevOps aims to address these issues by automating
+pricing management tasks, such as transforming human-oriented pricings into
+machine-oriented (iPricing) or finding the optimal subscription that matches
+the requirements of a certain user, ultimately reducing human intervention.
+This paper advances the field by proposing seven analysis operations that
+partially or fully support these pricing management tasks, thus serving as a
+foundation for defining new, more specialized operations. To achieve this, we
+mapped iPricings into Constraint Satisfaction Optimization Problems (CSOP), an
+approach successfully used in similar domains, enabling us to implement and
+apply these operations to uncover latent, yet non-trivial insights from complex
+pricing models. The proposed approach has been implemented in a reference
+framework using MiniZinc, and tested with over 150 pricing models, identifying
+errors in 35 pricings of the benchmark. Results demonstrate its effectiveness
+in identifying errors and its potential to streamline Pricing-driven DevOps.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2503.21438v1' target='_blank'>Dual-Task Learning for Dead Tree Detection and Segmentation with Hybrid
+  Self-Attention U-Nets in Aerial Imagery</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Anis Ur Rahman, Einari Heinaro, Mete Ahishali, Samuli Junttila</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-03-27 12:25:20</h6>
+<p class='card-text'>Mapping standing dead trees is critical for assessing forest health,
+monitoring biodiversity, and mitigating wildfire risks, for which aerial
+imagery has proven useful. However, dense canopy structures, spectral overlaps
+between living and dead vegetation, and over-segmentation errors limit the
+reliability of existing methods. This study introduces a hybrid postprocessing
+framework that refines deep learning-based tree segmentation by integrating
+watershed algorithms with adaptive filtering, enhancing boundary delineation,
+and reducing false positives in complex forest environments. Tested on
+high-resolution aerial imagery from boreal forests, the framework improved
+instance-level segmentation accuracy by 41.5% and reduced positional errors by
+57%, demonstrating robust performance in densely vegetated regions. By
+balancing detection accuracy and over-segmentation artifacts, the method
+enabled the precise identification of individual dead trees, which is critical
+for ecological monitoring. The framework's computational efficiency supports
+scalable applications, such as wall-to-wall tree mortality mapping over large
+geographic regions using aerial or satellite imagery. These capabilities
+directly benefit wildfire risk assessment (identifying fuel accumulations),
+carbon stock estimation (tracking emissions from decaying biomass), and
+precision forestry (targeting salvage loggings). By bridging advanced remote
+sensing techniques with practical forest management needs, this work advances
+tools for large-scale ecological conservation and climate resilience planning.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2503.21406v1' target='_blank'>Neuro-Symbolic Imitation Learning: Discovering Symbolic Abstractions for
+  Skill Learning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Leon Keller, Daniel Tanneberg, Jan Peters</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-03-27 11:50:29</h6>
+<p class='card-text'>Imitation learning is a popular method for teaching robots new behaviors.
+However, most existing methods focus on teaching short, isolated skills rather
+than long, multi-step tasks. To bridge this gap, imitation learning algorithms
+must not only learn individual skills but also an abstract understanding of how
+to sequence these skills to perform extended tasks effectively. This paper
+addresses this challenge by proposing a neuro-symbolic imitation learning
+framework. Using task demonstrations, the system first learns a symbolic
+representation that abstracts the low-level state-action space. The learned
+representation decomposes a task into easier subtasks and allows the system to
+leverage symbolic planning to generate abstract plans. Subsequently, the system
+utilizes this task decomposition to learn a set of neural skills capable of
+refining abstract plans into actionable robot commands. Experimental results in
+three simulated robotic environments demonstrate that, compared to baselines,
+our neuro-symbolic approach increases data efficiency, improves generalization
+capabilities, and facilitates interpretability.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2503.21366v1' target='_blank'>Long-Baseline Atom Interferometry</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Antun Balaz, Diego Blas, Oliver Buchmueller, Sergio Calatroni, Laurentiu-Ioan Caramete, David Cerdeno, Maria Luisa Chiofalo, Fabio Di Pumpo, Goran Djordjevic, John Ellis, Pierre Fayet, Chris Foot, Naceur Gaaloul, Susan Gardner, Barry M Garraway, Alexandre Gauguet, Enno Giese, Jason M. Hogan, Onur Hosten, Alex Kehagias, Eva Kilian, Tim Kovachy, Carlos Lacasta, Marek Lewicki, Elias Lopez Asamar, J. Luis Lopez-Gonzalez, Nathan Lundblad, Michele Maggiore, Christopher McCabe, John McFerran, Gaetano Mileti, Peter Millington, Gavin W. Morley, Senad Odz, Chris Overstreet, Krzysztof Pawlowski, Emanuele Pelucchi, Johann Rafelski, Albert Roura, Marianna S. Safronova, Florian Schreck, Olga Sergijenko, Yeshpal Singh, Marcelle Soares-Santos, Nikolaos Stergioulas, Guglielmo M. Tino, J. N. Tinsley, Hendrik Ulbricht, Maurits van der Grinten, Ville Vaskonen, Wolf von Klitzing, Andre Xuereb, Emmanuel Zambrini Cruzeiro</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-03-27 10:58:27</h6>
+<p class='card-text'>Long-baseline atom interferometry is a promising technique for probing
+various aspects of fundamental physics, astrophysics and cosmology, including
+searches for ultralight dark matter (ULDM) and for gravitational waves (GWs) in
+the frequency range around 1~Hz that is not covered by present and planned
+detectors using laser interferometry. The MAGIS detector is under construction
+at Fermilab, as is the MIGA detector in France. The PX46 access shaft to the
+LHC has been identified as a very suitable site for an atom interferometer of
+height $\sim 100$m, sites at the Boulby mine in the UK and the Canfranc
+Laboratory are also under investigation, and possible sites for km-class
+detectors have been suggested. The Terrestrial Very-Long-Baseline Atom
+Interferometry (TVLBAI) Proto-Collaboration proposes a coordinated programme of
+interferometers of increasing baselines.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2503.21317v1' target='_blank'>Surface guided analysis of breast changes during post-operative
+  radiotherapy by using a functional map framework</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Pierre Galmiche, Hyewon Seo, Yvan Pin, Philippe Meyer, Georges Noël, Michel de Mathelin</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-03-27 09:56:01</h6>
+<p class='card-text'>The treatment of breast cancer using radiotherapy involves uncertainties
+regarding breast positioning. As the studies progress, more is known about the
+expected breast positioning errors, which are taken into account in the
+Planning Target Volume (PTV) in the form of the margin around the clinical
+target volume. However, little is known about the non-rigid deformations of the
+breast in the course of radiotherapy, which is a non-negligible factor to the
+treatment. Purpose: Taking into account such inter-fractional breast
+deformations would help develop a promising future direction, such as
+patient-specific adjustable irradiation plannings. Methods: In this study, we
+develop a geometric approach to analyze inter-fractional breast deformation
+throughout the radiotherapy treatment. Our data consists of 3D surface scans of
+patients acquired during radiotherapy sessions using a handheld scanner. We
+adapt functional map framework to compute inter-and intra-patient non-rigid
+correspondences, which are then used to analyze intra-patient changes and
+inter-patient variability. Results: The qualitative shape collection analysis
+highlight deformations in the contralateral breast and armpit areas, along with
+positioning shifts on the head or abdominal regions. We also perform extrinsic
+analysis, where we align surface acquisitions of the treated breast with the
+CT-derived skin surface to assess displacements and volume changes in the
+treated area. On average, displacements within the treated breast exhibit
+amplitudes of 1-2 mm across sessions, with higher values observed at the time
+of the 25 th irradiation session. Volume changes, inferred from surface
+variations, reached up to 10%, with values ranging between 2% and 5% over the
+course of treatment. Conclusions: We propose a comprehensive workflow for
+analyzing and modeling breast deformations during radiotherapy using surface
+acquisitions, incorporating a novel inter-collection shape matching approach to
+model shape variability within a i shared space across multiple patient shape
+collections. We validate our method using 3D surface data acquired from
+patients during External Beam Radiotherapy (EBRT) sessions, demonstrating its
+effectiveness. The clinical trial data used in this paper is registered under
+the ClinicalTrials.gov ID NCT03801850.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2503.21300v1' target='_blank'>Optimizing Resource Allocation and Scheduling towards FRMCS and GSM-R
+  networks coexistence in Railway Systems</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Mohamed Aziz Aboud, Nawel Zangar, Rami Langar, Marion Berbineau, Jerome Madec</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-03-27 09:26:49</h6>
+<p class='card-text'>The actual railway communication system used in Europe for high-speed trains
+(HST) is called the GSM-R system, which is a communication system based on 2G
+infrastructure. This system is meant to be replaced by a new system based on 5G
+NR infrastructure called the Future Railway Mobile Communication System (FRMCS)
+by 2030. For the next years, both systems will probably coexist in the same
+frequency band since the migration from GSM-R to FRMCS is planned to be done
+progressively until the GSM-R system is completely shut down, mainly due to
+safety and budget constraints. In this paper, we study the resource allocation
+for the FRMCS system sharing the same frequency band as the already deployed
+GSM-R system. We formulate the resource allocation problem as an integer linear
+problem (ILP), known to be NP-hard.To solve it in a reasonable time, we propose
+a scheduling algorithm, called Intelligent Traffic Scheduling Preemptor (ITSP),
+that allocates resources for the different FRMCS traffic types considered
+(critical traffic and performance traffic) in the same frequency band with the
+GSM-R system. Our algorithm is channel quality Indicator (CQI) aware and uses
+the preemption mechanism in 5G NR standards to optimize the resource allocation
+for the FRMCS system without impacting the actual GSM-R resource allocation in
+the context of the white space concept.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2503.21263v1' target='_blank'>Cultivating Game Sense for Yourself: Making VLMs Gaming Experts</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Wenxuan Lu, Jiangyang He, Zhanqiu Zhang, Yiwen Guo, Tianning Zang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-03-27 08:40:47</h6>
+<p class='card-text'>Developing agents capable of fluid gameplay in first/third-person games
+without API access remains a critical challenge in Artificial General
+Intelligence (AGI). Recent efforts leverage Vision Language Models (VLMs) as
+direct controllers, frequently pausing the game to analyze screens and plan
+action through language reasoning. However, this inefficient paradigm
+fundamentally restricts agents to basic and non-fluent interactions: relying on
+isolated VLM reasoning for each action makes it impossible to handle tasks
+requiring high reactivity (e.g., FPS shooting) or dynamic adaptability (e.g.,
+ACT combat). To handle this, we propose a paradigm shift in gameplay agent
+design: instead of directly controlling gameplay, VLM develops specialized
+execution modules tailored for tasks like shooting and combat. These modules
+handle real-time game interactions, elevating VLM to a high-level developer.
+Building upon this paradigm, we introduce GameSense, a gameplay agent framework
+where VLM develops task-specific game sense modules by observing task execution
+and leveraging vision tools and neural network training pipelines. These
+modules encapsulate action-feedback logic, ranging from direct action rules to
+neural network-based decisions. Experiments demonstrate that our framework is
+the first to achieve fluent gameplay in diverse genres, including ACT, FPS, and
+Flappy Bird, setting a new benchmark for game-playing agents.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2503.21241v1' target='_blank'>Feature-Enhanced Machine Learning for All-Cause Mortality Prediction in
+  Healthcare Data</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:HyeYoung Lee, Pavel Tsoi</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-03-27 08:04:42</h6>
+<p class='card-text'>Accurate patient mortality prediction enables effective risk stratification,
+leading to personalized treatment plans and improved patient outcomes. However,
+predicting mortality in healthcare remains a significant challenge, with
+existing studies often focusing on specific diseases or limited predictor sets.
+This study evaluates machine learning models for all-cause in-hospital
+mortality prediction using the MIMIC-III database, employing a comprehensive
+feature engineering approach. Guided by clinical expertise and literature, we
+extracted key features such as vital signs (e.g., heart rate, blood pressure),
+laboratory results (e.g., creatinine, glucose), and demographic information.
+The Random Forest model achieved the highest performance with an AUC of 0.94,
+significantly outperforming other machine learning and deep learning
+approaches. This demonstrates Random Forest's robustness in handling
+high-dimensional, noisy clinical data and its potential for developing
+effective clinical decision support tools. Our findings highlight the
+importance of careful feature engineering for accurate mortality prediction. We
+conclude by discussing implications for clinical adoption and propose future
+directions, including enhancing model robustness and tailoring prediction
+models for specific diseases.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2503.21179v1' target='_blank'>Magnet R&D for the Muon Collider</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:L. Bottura, B. Auchmann, F. Boattini, B. Bordini, B. Caiffi, L. Cooley, S. Fabbri, S. Gourlay, S. Mariotto, T. Nakamoto, S. Prestemon, M. Statera</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-03-27 06:02:46</h6>
+<p class='card-text'>A proton-driven Muon Collider, in the configuration that has resulted from
+the efforts of the International Muon Collider Collaboration (IMCC), poses
+multiple and exceptional magnet system challenges. Addressing these challenges
+will require a focused effort to advance accelerator magnet technology well
+beyond the present state of the art, including activities that have not
+previously been supported by High Energy Physics (HEP) programs, but are
+synergic with them. This proposal presents the motivation for a directed effort
+focusing on the development and testing of small- and full-scale magnet
+prototypes, ultimately culminating in their validation under collider-relevant
+conditions. This document summarizes technology status, challenges, and
+development targets, and outlines a detailed plan with staged milestones to
+advance the technological readiness of magnet systems, bringing the realization
+of the Muon Collider closer to reality. The total resources to achieve this
+goal are estimated at 82.5 MCHF and 414 FTE y over ten years, of which 39 MCHF
+and 199 FTE y are engaged over the first five years. Reaching the desired
+performance with sustainable technology will depend greatly on exploiting the
+potential of High Temperature Superconductors (HTS). Mainly because of this,
+the R&D proposed here has significant potential to broadly impact HEP and its
+other circular collider considerations such as the FCC-hh, as well as other
+fields of scientific and societal application, e.g. science in high magnetic
+fields, NMR and MRI, fusion and other power and mobility applications.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2503.21158v1' target='_blank'>Integrating Travel Behavior Forecasting and Generative Modeling for
+  Predicting Future Urban Mobility and Spatial Transformations</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Eugene Denteh, Andrews Danyo, Joshua Kofi Asamoah, Blessing Agyei Kyem, Twitchell Addai, Armstrong Aboah</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-03-27 04:52:33</h6>
+<p class='card-text'>Transportation planning plays a critical role in shaping urban development,
+economic mobility, and infrastructure sustainability. However, traditional
+planning methods often struggle to accurately predict long-term urban growth
+and transportation demands. This may sometimes result in infrastructure
+demolition to make room for current transportation planning demands. This study
+integrates a Temporal Fusion Transformer to predict travel patterns from
+demographic data with a Generative Adversarial Network to predict future urban
+settings through satellite imagery. The framework achieved a 0.76 R-square
+score in travel behavior prediction and generated high-fidelity satellite
+images with a Structural Similarity Index of 0.81. The results demonstrate that
+integrating predictive analytics and spatial visualization can significantly
+improve the decision-making process, fostering more sustainable and efficient
+urban development. This research highlights the importance of data-driven
+methodologies in modern transportation planning and presents a step toward
+optimizing infrastructure placement, capacity, and long-term viability.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2503.20974v1' target='_blank'>A Hopf-Lax Type Formula for Multi-Agent Path Planning with Pattern
+  Coordination</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Christian Parkinson, Adan Baca</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-03-26 20:34:46</h6>
+<p class='card-text'>We present an algorithm for a multi-agent path planning problem with pattern
+coordination based on dynamic programming and a Hamilton-Jacobi-Bellman
+equation. This falls broadly into the class of partial differential equation
+(PDE) based optimal path planning methods, which give a black-box-free
+alternative to machine learning hierarchies. Due to the high-dimensional state
+space of multi-agent planning problems, grid-based methods for PDE which suffer
+from the curse of dimensionality are infeasible, so we instead develop
+grid-free numerical methods based on variational Hopf-Lax type representations
+of solutions to Hamilton-Jacobi Equations. Our formulation is amenable to
+nonlinear dynamics and heterogeneous agents. We apply our method to synthetic
+examples wherein agents navigate around obstacles while attempting to maintain
+a prespecified formation, though with small changes it is likely applicable to
+much larger classes of problems.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2503.20950v1' target='_blank'>DEMENTIA-PLAN: An Agent-Based Framework for Multi-Knowledge Graph
+  Retrieval-Augmented Generation in Dementia Care</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yutong Song, Chenhan Lyu, Pengfei Zhang, Sabine Brunswicker, Nikil Dutt, Amir Rahmani</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-03-26 19:34:04</h6>
+<p class='card-text'>Mild-stage dementia patients primarily experience two critical symptoms:
+severe memory loss and emotional instability. To address these challenges, we
+propose DEMENTIA-PLAN, an innovative retrieval-augmented generation framework
+that leverages large language models to enhance conversational support. Our
+model employs a multiple knowledge graph architecture, integrating various
+dimensional knowledge representations including daily routine graphs and life
+memory graphs. Through this multi-graph architecture, DEMENTIA-PLAN
+comprehensively addresses both immediate care needs and facilitates deeper
+emotional resonance through personal memories, helping stabilize patient mood
+while providing reliable memory support. Our notable innovation is the
+self-reflection planning agent, which systematically coordinates knowledge
+retrieval and semantic integration across multiple knowledge graphs, while
+scoring retrieved content from daily routine and life memory graphs to
+dynamically adjust their retrieval weights for optimized response generation.
+DEMENTIA-PLAN represents a significant advancement in the clinical application
+of large language models for dementia care, bridging the gap between AI tools
+and caregivers interventions.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2503.20932v1' target='_blank'>Reflex: Speeding Up SMPC Query Execution through Efficient and Flexible
+  Intermediate Result Size Trimming</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Long Gu, Shaza Zeitouni, Carsten Binnig, Zsolt István</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-03-26 19:04:05</h6>
+<p class='card-text'>There is growing interest in Secure Analytics, but fully oblivious query
+execution in Secure Multi-Party Computation (MPC) settings is often
+prohibitively expensive. Recent related works propose different approaches to
+trimming the size of intermediate results between query operators, resulting in
+significant speedups at the cost of some information leakage. In this work, we
+generalize these ideas into a method of flexible and efficient trimming of
+operator outputs that can be added to MPC operators easily. This allows for
+precisely controlling the security/performance trade-off on a per-operator and
+per-query basis. We demonstrate that our work is practical by porting a
+state-of-the-art trimming approach to it, resulting in a faster runtime and
+increased security. Our work lays down the foundation for a future MPC query
+planner that can pick different performance and security targets when composing
+physical query plans.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2503.20871v1' target='_blank'>VinaBench: Benchmark for Faithful and Consistent Visual Narratives</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Silin Gao, Sheryl Mathew, Li Mi, Sepideh Mamooler, Mengjie Zhao, Hiromi Wakaki, Yuki Mitsufuji, Syrielle Montariol, Antoine Bosselut</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-03-26 18:00:03</h6>
+<p class='card-text'>Visual narrative generation transforms textual narratives into sequences of
+images illustrating the content of the text. However, generating visual
+narratives that are faithful to the input text and self-consistent across
+generated images remains an open challenge, due to the lack of knowledge
+constraints used for planning the stories. In this work, we propose a new
+benchmark, VinaBench, to address this challenge. Our benchmark annotates the
+underlying commonsense and discourse constraints in visual narrative samples,
+offering systematic scaffolds for learning the implicit strategies of visual
+storytelling. Based on the incorporated narrative constraints, we further
+propose novel metrics to closely evaluate the consistency of generated
+narrative images and the alignment of generations with the input textual
+narrative. Our results across three generative vision models demonstrate that
+learning with VinaBench's knowledge constraints effectively improves the
+faithfulness and cohesion of generated visual narratives.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2503.20754v1' target='_blank'>Flying Vines: Design, Modeling, and Control of a Soft Aerial Robotic Arm</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Rianna Jitosho, Crystal E. Winston, Shengan Yang, Jinxin Li, Maxwell Ahlquist, Nicholas John Woehrle, C. Karen Liu, Allison M. Okamura</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-03-26 17:40:31</h6>
+<p class='card-text'>Aerial robotic arms aim to enable inspection and environment interaction in
+otherwise hard-to-reach areas from the air. However, many aerial manipulators
+feature bulky or heavy robot manipulators mounted to large, high-payload aerial
+vehicles. Instead, we propose an aerial robotic arm with low mass and a small
+stowed configuration called a "flying vine". The flying vine consists of a
+small, maneuverable quadrotor equipped with a soft, growing, inflated beam as
+the arm. This soft robot arm is underactuated, and positioning of the end
+effector is achieved by controlling the coupled quadrotor-vine dynamics. In
+this work, we present the flying vine design and a modeling and control
+framework for tracking desired end effector trajectories. The dynamic model
+leverages data-driven modeling methods and introduces bilinear interpolation to
+account for time-varying dynamic parameters. We use trajectory optimization to
+plan quadrotor controls that produce desired end effector motions. Experimental
+results on a physical prototype demonstrate that our framework enables the
+flying vine to perform high-speed end effector tracking, laying a foundation
+for performing dynamic maneuvers with soft aerial manipulators.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2503.20685v2' target='_blank'>Flip Learning: Weakly Supervised Erase to Segment Nodules in Breast
+  Ultrasound</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yuhao Huang, Ao Chang, Haoran Dou, Xing Tao, Xinrui Zhou, Yan Cao, Ruobing Huang, Alejandro F Frangi, Lingyun Bao, Xin Yang, Dong Ni</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-03-26 16:20:02</h6>
+<p class='card-text'>Accurate segmentation of nodules in both 2D breast ultrasound (BUS) and 3D
+automated breast ultrasound (ABUS) is crucial for clinical diagnosis and
+treatment planning. Therefore, developing an automated system for nodule
+segmentation can enhance user independence and expedite clinical analysis.
+Unlike fully-supervised learning, weakly-supervised segmentation (WSS) can
+streamline the laborious and intricate annotation process. However, current WSS
+methods face challenges in achieving precise nodule segmentation, as many of
+them depend on inaccurate activation maps or inefficient pseudo-mask generation
+algorithms. In this study, we introduce a novel multi-agent reinforcement
+learning-based WSS framework called Flip Learning, which relies solely on 2D/3D
+boxes for accurate segmentation. Specifically, multiple agents are employed to
+erase the target from the box to facilitate classification tag flipping, with
+the erased region serving as the predicted segmentation mask. The key
+contributions of this research are as follows: (1) Adoption of a
+superpixel/supervoxel-based approach to encode the standardized environment,
+capturing boundary priors and expediting the learning process. (2) Introduction
+of three meticulously designed rewards, comprising a classification score
+reward and two intensity distribution rewards, to steer the agents' erasing
+process precisely, thereby avoiding both under- and over-segmentation. (3)
+Implementation of a progressive curriculum learning strategy to enable agents
+to interact with the environment in a progressively challenging manner, thereby
+enhancing learning efficiency. Extensively validated on the large in-house BUS
+and ABUS datasets, our Flip Learning method outperforms state-of-the-art WSS
+methods and foundation models, and achieves comparable performance as
+fully-supervised learning algorithms.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2503.20660v2' target='_blank'>DR-PETS: Learning-Based Control With Planning in Adversarial
+  Environments</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Hozefa Jesawada, Antonio Acernese, Giovanni Russo, Carmen Del Vecchio</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-03-26 15:55:44</h6>
+<p class='card-text'>Ensuring robustness against epistemic, possibly adversarial, perturbations is
+essential for reliable real-world decision-making. While the Probabilistic
+Ensembles with Trajectory Sampling (PETS) algorithm inherently handles
+uncertainty via ensemble-based probabilistic models, it lacks guarantees
+against structured adversarial or worst-case uncertainty distributions. To
+address this, we propose DR-PETS, a distributionally robust extension of PETS
+that certifies robustness against adversarial perturbations. We formalize
+uncertainty via a p-Wasserstein ambiguity set, enabling worst-case-aware
+planning through a min-max optimization framework. While PETS passively
+accounts for stochasticity, DR-PETS actively optimizes robustness via a
+tractable convex approximation integrated into PETS planning loop. Experiments
+on pendulum stabilization and cart-pole balancing show that DR-PETS certifies
+robustness against adversarial parameter perturbations, achieving consistent
+performance in worst-case scenarios where PETS deteriorates.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2503.20619v1' target='_blank'>Implementing Dynamic Power Feed-In Limitations of Photovoltaic Systems
+  in Distribution Grids for Generation Expansion Planning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Alexander Konrad, Robert Gaugl, Christoph Maier, Sonja Wogrin</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-03-26 15:08:13</h6>
+<p class='card-text'>The rapid growth of photovoltaic (PV) systems in Austria's medium- and
+low-voltage grids has intensified challenges in grid access, with technical
+limits increasingly leading to restrictions on full feed-in power. This issue
+has sparked discussions about limiting PV feed-in power and the implications
+for both generated and curtailed PV energy. At the same time, expanding PV
+capacity remains critical to achieving future climate targets. However, there
+is a lack of robust methodologies of quantify the impact of PV feed-in
+limitations when implemented in an optimization model. This impact affects both
+the curtailed energy and the increase in maximum PV installation capacity and
+total energy production. To address this gap, we have developed a mathematical
+formulation of dynamic PV feed-in limitations and integrated it into an
+optimization model. This approach enables a comprehensive evaluation of its
+effects on PV integration potential and energy curtailment, validated through
+case studies on four representative real-world Austrian medium- and low-voltage
+grids. We analyzed maximum PV expansion, energy generation, and curtailment
+under feed-in constraints. The results highlight the potential for integrating
+up to 32% additional PV systems within existing infrastructure while keeping PV
+curtailment relatively low, i.e. at 2%. We provide actionable insights for grid
+operators and policymakers aiming to balance renewable energy expansion with
+grid reliability.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2503.20550v1' target='_blank'>On the order of the shortest solution sequences for the pebble motion
+  problems</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Tomoki Nakamigawa, Tadashi Sakuma</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-03-26 13:46:44</h6>
+<p class='card-text'>Let $G$ be a connected graph with $N$ vertices. Let $k$ be the number of
+vertices in a longest path of $G$ such that every vertex on the path is a cut
+vertex of $G$, and every intermediate vertex of the path is a degree-two vertex
+of $G$. %Let $k$ be the number of vertices of such a longest path of $T$ that
+every vertex of %the path is a cut vertex and that every intermediate vertex of
+the path is a degree-two vertex of $T$. Let $P=\{1,\ldots,n\}$ be a set of
+pebbles with $n+k < N$. A \textit{configuration} of $P$ on $G$ is defined as a
+function $f$ from $V(G)$ to $\{0, 1, \ldots, n \}$ with $|f^{-1}(i)| = 1$ for
+$1 \le i \le n$, where $f^{-1}(i)$ is a vertex occupied with the $i$th pebble
+for $1 \le i \le n$ and $f^{-1}(0)$ is a set of unoccupied vertices. A
+\textit{move} is defined as shifting a pebble from a vertex to %its unoccupied
+neighbour. some unoccupied neighbor. The {\it pebble motion problem on the pair
+$(G,P)$} is to decide whether a given configuration of pebbles is reachable
+from another by executing a sequence of moves. In this paper, we show that the
+length of the shortest solution sequence of the pebble motion problem on the
+pair $(G,P)$ is in $O(Nn + n^2 \log(\min\{n,k\}))$ if $G$ is a $N$-vertex tree,
+and it is in $O(N^2 + \frac{n^3}{N-n} + n^2 \log(\min\{n,N-n\}))$ if $G$ is a
+connected general $N$-vertex graph. We provide an algorithm that can obtain a
+solution sequence of lengths that satisfy these orders, with the same
+computational complexity as the order of the length.
+  Keywords: pebble motion, motion planning, multi-agent path finding,
+$15$-puzzle, tree</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2503.20530v1' target='_blank'>Combining Machine Learning and Sampling-Based Search for Multi-Goal
+  Motion Planning with Dynamics</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yuanjie Lu, Erion Plaku</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-03-26 13:21:46</h6>
+<p class='card-text'>This paper considers multi-goal motion planning in unstructured,
+obstacle-rich environments where a robot is required to reach multiple regions
+while avoiding collisions. The planned motions must also satisfy the
+differential constraints imposed by the robot dynamics. To find solutions
+efficiently, this paper leverages machine learning, Traveling Salesman Problem
+(TSP), and sampling-based motion planning. The approach expands a motion tree
+by adding collision-free and dynamically-feasible trajectories as branches. A
+TSP solver is used to compute a tour for each node to determine the order in
+which to reach the remaining goals by utilizing a cost matrix. An important
+aspect of the approach is that it leverages machine learning to construct the
+cost matrix by combining runtime and distance predictions to single-goal
+motion-planning problems. During the motion-tree expansion, priority is given
+to nodes associated with low-cost tours. Experiments with a vehicle model
+operating in obstacle-rich environments demonstrate the computational
+efficiency and scalability of the approach.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2503.20525v1' target='_blank'>SEMPER I. Radio Predictions for Star-Forming Galaxies at $0<z<5$</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:M. Giulietti, I. Prandoni, M. Bonato, L. Bisigello, M. Bondi, G. Gandolfi, M. Massardi, L. Boco, H. J. A. Rottgering, A. Lapi</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-03-26 13:12:02</h6>
+<p class='card-text'>[Abridged] SFGs are the dominant population in the faint radio sky,
+corresponding to flux densities at 1.4 GHz $< 0.1$ mJy. A panchromatic approach
+is essential for selecting SFGs in the radio band and understanding star
+formation processes over cosmic time. Semi-empirical models are valuable tools
+to effectively study galaxy formation and evolution, relying on minimal
+assumptions and exploiting empirical relations between galaxy properties and
+enabling us to take full advantage of the recent progress in radio and
+optical/near-infrared (NIR) observations. In this paper, we develop the
+Semi-EMPirical model for Extragalactic Radio emission (SEMPER) to predict radio
+luminosity functions and number counts at 1.4 GHz and 150 MHz for SFGs. SEMPER
+is based on state-of-the-art empirical relations and combines the
+redshift-dependent galaxy stellar mass functions obtained from the recent
+COSMOS2020 catalogue, which exploits deep near-infrared observations, with
+up-to-date observed scaling relations, such as the galaxy main sequence and the
+mass-dependent far-infrared/radio correlation across cosmic time. Our
+luminosity functions are compared with recent observational determinations from
+several radio telescopes, along with previous semi-empirical models and
+simulations. Our semi-empirical model successfully reproduces the observed
+luminosity functions at 1.4 GHz and 150 MHz up to $z\sim 5$ and the most recent
+number count statistics from radio observations in the LoTSS deep fields. Our
+model, based on galaxies selected in the NIR, naturally predicts the presence
+of radio-selected massive and/or dust-obscured galaxies already in place at
+high redshift ($z\gtrsim3.5$), as suggested by recent results from JWST. Our
+predictions offer an excellent benchmark for upcoming updates from JWST and
+future ultra-deep radio surveys planned with the SKA and its precursors.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2503.20521v1' target='_blank'>Decremental Dynamics Planning for Robot Navigation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yuanjie Lu, Tong Xu, Linji Wang, Nick Hawes, Xuesu Xiao</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-03-26 13:08:07</h6>
+<p class='card-text'>Most, if not all, robot navigation systems employ a decomposed planning
+framework that includes global and local planning. To trade-off onboard
+computation and plan quality, current systems have to limit all robot dynamics
+considerations only within the local planner, while leveraging an extremely
+simplified robot representation (e.g., a point-mass holonomic model without
+dynamics) in the global level. However, such an artificial decomposition based
+on either full or zero consideration of robot dynamics can lead to gaps between
+the two levels, e.g., a global path based on a holonomic point-mass model may
+not be realizable by a non-holonomic robot, especially in highly constrained
+obstacle environments. Motivated by such a limitation, we propose a novel
+paradigm, Decremental Dynamics Planning that integrates dynamic constraints
+into the entire planning process, with a focus on high-fidelity dynamics
+modeling at the beginning and a gradual fidelity reduction as the planning
+progresses. To validate the effectiveness of this paradigm, we augment three
+different planners with DDP and show overall improved planning performance. We
+also develop a new DDP-based navigation system, which achieves first place in
+the simulation phase of the 2025 BARN Challenge. Both simulated and physical
+experiments validate DDP's hypothesized benefits.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2503.20507v1' target='_blank'>Harmonia: A Multi-Agent Reinforcement Learning Approach to Data
+  Placement and Migration in Hybrid Storage Systems</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Rakesh Nadig, Vamanan Arulchelvan, Rahul Bera, Taha Shahroodi, Gagandeep Singh, Mohammad Sadrosadati, Jisung Park, Onur Mutlu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-03-26 12:47:52</h6>
+<p class='card-text'>Hybrid storage systems (HSS) combine multiple storage devices with diverse
+characteristics to achieve high performance and capacity at low cost. The
+performance of an HSS highly depends on the effectiveness of two key policies:
+(1) the data-placement policy, which determines the best-fit storage device for
+incoming data, and (2) the data-migration policy, which rearranges stored data
+across the devices to sustain high HSS performance. Prior works focus on
+improving only data placement or only data migration in HSS, which leads to
+sub-optimal HSS performance. Unfortunately, no prior work tries to optimize
+both policies together. Our goal is to design a holistic data-management
+technique for HSS that optimizes both data-placement and data-migration
+policies to fully exploit the potential of an HSS. We propose Harmonia, a
+multi-agent reinforcement learning (RL)-based data-management technique that
+employs two light-weight autonomous RL agents, a data-placement agent and a
+data-migration agent, which adapt their policies for the current workload and
+HSS configuration, and coordinate with each other to improve overall HSS
+performance. We evaluate Harmonia on a real HSS with up to four heterogeneous
+storage devices with diverse characteristics. Our evaluation using 17
+data-intensive workloads on performance-optimized (cost-optimized) HSS with two
+storage devices shows that, on average, Harmonia (1) outperforms the
+best-performing prior approach by 49.5% (31.7%), (2) bridges the performance
+gap between the best-performing prior work and Oracle by 64.2% (64.3%). On an
+HSS with three (four) devices, Harmonia outperforms the best-performing prior
+work by 37.0% (42.0%). Harmonia's performance benefits come with low latency
+(240ns for inference) and storage overheads (206 KiB for both RL agents
+together). We plan to open-source Harmonia's implementation to aid future
+research on HSS.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js'></script>
+</body>
+</html>
