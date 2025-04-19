@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>planning - 2025-04-19</title>
+<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap' rel='stylesheet'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css'>
+<style>
+body {
+font-family: 'Roboto', sans-serif;
+background-color: #f5f7fa;
+padding: 20px;
+}
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.card-title {
+    font-weight: 700;
+}
+.card:hover {
+    transform: scale(1.02);
+    transition: 0.3s ease-in-out;
+}
+</style>
+</head>
+<body>
+<div class='container'>
+<h1 class='text-center my-4'><i class='fas fa-book'></i>planning - 2025-04-19</h1>
+<div class='row'>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2504.13149v1' target='_blank'>Long Range Navigator (LRN): Extending robot planning horizons beyond
+  metric maps</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Matt Schmittle, Rohan Baijal, Nathan Hatch, Rosario Scalise, Mateo Guaman Castro, Sidharth Talia, Khimya Khetarpal, Byron Boots, Siddhartha Srinivasa</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-04-17 17:55:08</h6>
+<p class='card-text'>A robot navigating an outdoor environment with no prior knowledge of the
+space must rely on its local sensing to perceive its surroundings and plan.
+This can come in the form of a local metric map or local policy with some fixed
+horizon. Beyond that, there is a fog of unknown space marked with some fixed
+cost. A limited planning horizon can often result in myopic decisions leading
+the robot off course or worse, into very difficult terrain. Ideally, we would
+like the robot to have full knowledge that can be orders of magnitude larger
+than a local cost map. In practice, this is intractable due to sparse sensing
+information and often computationally expensive. In this work, we make a key
+observation that long-range navigation only necessitates identifying good
+frontier directions for planning instead of full map knowledge. To this end, we
+propose Long Range Navigator (LRN), that learns an intermediate affordance
+representation mapping high-dimensional camera images to `affordable' frontiers
+for planning, and then optimizing for maximum alignment with the desired goal.
+LRN notably is trained entirely on unlabeled ego-centric videos making it easy
+to scale and adapt to new platforms. Through extensive off-road experiments on
+Spot and a Big Vehicle, we find that augmenting existing navigation stacks with
+LRN reduces human interventions at test-time and leads to faster decision
+making indicating the relevance of LRN. https://personalrobotics.github.io/lrn</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2504.13063v1' target='_blank'>An exact approach for the multi-depot electric vehicle scheduling
+  problem</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Xenia Haslinger, Elisabeth Gaar, Sophie N. Parragh</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-04-17 16:18:56</h6>
+<p class='card-text'>The "avoid - shift - improve" framework and the European Clean Vehicles
+Directive set the path for improving the efficiency and ultimately
+decarbonizing the transport sector. While electric buses have already been
+adopted in several cities, regional bus lines may pose additional challenges
+due to the potentially longer distances they have to travel. In this work, we
+model and solve the electric bus scheduling problem, lexicographically
+minimizing the size of the bus fleet, the number of charging stops, and the
+total energy consumed, to provide decision support for bus operators planning
+to replace their diesel-powered fleet with zero emission vehicles. We propose a
+graph representation which allows partial charging without explicitly relying
+on time variables and derive 3-index and 2-index mixed-integer linear
+programming formulations for the multi-depot electric vehicle scheduling
+problem. While the 3-index model can be solved by an off-the-shelf solver
+directly, the 2-index model relies on an exponential number of constraints to
+ensure the correct depot pairing. These are separated in a cutting plane
+fashion. We propose a set of instances with up to 80 service trips to compare
+the two approaches, showing that, with a small number of depots, the compact
+3-index model performs very well. However, as the number of depots increases
+the developed branch-and-cut algorithm proves to be of value. These findings
+not only offer algorithmic insights but the developed approaches also provide
+actionable guidance for transit agencies and operators, allowing to quantify
+trade-offs between fleet size, energy efficiency, and infrastructure needs
+under realistic operational conditions.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2504.12854v1' target='_blank'>Versatile, Robust, and Explosive Locomotion with Rigid and Articulated
+  Compliant Quadrupeds</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jiatao Ding, Peiyu Yang, Fabio Boekel, Jens Kober, Wei Pan, Matteo Saveriano, Cosimo Della Santina</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-04-17 11:20:29</h6>
+<p class='card-text'>Achieving versatile and explosive motion with robustness against dynamic
+uncertainties is a challenging task. Introducing parallel compliance in
+quadrupedal design is deemed to enhance locomotion performance, which, however,
+makes the control task even harder. This work aims to address this challenge by
+proposing a general template model and establishing an efficient motion
+planning and control pipeline. To start, we propose a reduced-order template
+model-the dual-legged actuated spring-loaded inverted pendulum with trunk
+rotation-which explicitly models parallel compliance by decoupling spring
+effects from active motor actuation. With this template model, versatile
+acrobatic motions, such as pronking, froggy jumping, and hop-turn, are
+generated by a dual-layer trajectory optimization, where the singularity-free
+body rotation representation is taken into consideration. Integrated with a
+linear singularity-free tracking controller, enhanced quadrupedal locomotion is
+achieved. Comparisons with the existing template model reveal the improved
+accuracy and generalization of our model. Hardware experiments with a rigid
+quadruped and a newly designed compliant quadruped demonstrate that i) the
+template model enables generating versatile dynamic motion; ii) parallel
+elasticity enhances explosive motion. For example, the maximal pronking
+distance, hop-turn yaw angle, and froggy jumping distance increase at least by
+25%, 15% and 25%, respectively; iii) parallel elasticity improves the
+robustness against dynamic uncertainties, including modelling errors and
+external disturbances. For example, the allowable support surface height
+variation increases by 100% for robust froggy jumping.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2504.12826v1' target='_blank'>UncAD: Towards Safe End-to-end Autonomous Driving via Online Map
+  Uncertainty</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Pengxuan Yang, Yupeng Zheng, Qichao Zhang, Kefei Zhu, Zebin Xing, Qiao Lin, Yun-Fu Liu, Zhiguo Su, Dongbin Zhao</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-04-17 10:40:36</h6>
+<p class='card-text'>End-to-end autonomous driving aims to produce planning trajectories from raw
+sensors directly. Currently, most approaches integrate perception, prediction,
+and planning modules into a fully differentiable network, promising great
+scalability. However, these methods typically rely on deterministic modeling of
+online maps in the perception module for guiding or constraining vehicle
+planning, which may incorporate erroneous perception information and further
+compromise planning safety. To address this issue, we delve into the importance
+of online map uncertainty for enhancing autonomous driving safety and propose a
+novel paradigm named UncAD. Specifically, UncAD first estimates the uncertainty
+of the online map in the perception module. It then leverages the uncertainty
+to guide motion prediction and planning modules to produce multi-modal
+trajectories. Finally, to achieve safer autonomous driving, UncAD proposes an
+uncertainty-collision-aware planning selection strategy according to the online
+map uncertainty to evaluate and select the best trajectory. In this study, we
+incorporate UncAD into various state-of-the-art (SOTA) end-to-end methods.
+Experiments on the nuScenes dataset show that integrating UncAD, with only a
+1.9% increase in parameters, can reduce collision rates by up to 26% and
+drivable area conflict rate by up to 42%. Codes, pre-trained models, and demo
+videos can be accessed at https://github.com/pengxuanyang/UncAD.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2504.12802v1' target='_blank'>First insight into transverse-momentum-dependent fragmentation physics
+  at photon-photon colliders</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Simone Anedda, Francesco Murgia, Cristian Pisano</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-04-17 10:02:12</h6>
+<p class='card-text'>Future planned lepton colliders, both in the circular and linear
+configurations, can effectively work as virtual and quasi-real photon-photon
+colliders and are expected to stimulate an intense physics program in the next
+few years. In this paper, we suggest to consider photon-photon scattering as a
+useful source of information on transverse momentum dependent fragmentation
+functions (TMD FFs), complementing semi-inclusive deep inelastic scattering and
+$e^+e^-$ annihilation processes, which provide most of the present
+phenomenological information on TMD FFs. As a first illustrative example, we
+study two-hadron azimuthal asymmetries around the jet thrust-axis in the
+process $\ell^+\ell^-\to\gamma^* \gamma\to q\bar q\to h_1 h_2 + X$, in which in
+a circular lepton collider one tagged, deeply-virtual photon scatters off an
+untagged quasi-real photon, both originating from the initial lepton beams,
+producing inclusively an almost back-to-back light-hadron pair with large
+transverse momentum, in the $\gamma^*\gamma$ center of mass frame. Similar
+processes, in a more complicated environment due to the presence of initial
+hadronic states, can also be studied in ultraperipheral collisions at the LHC
+and the planned future hadron colliders.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2504.12792v1' target='_blank'>Open Loop Layout Optimization: Feasible Path Planning and Exact
+  Door-to-Door Distance Calculation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Seyed Mahdi Shavarani, Bela Vizvari, Kovacs Gergely</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-04-17 09:46:06</h6>
+<p class='card-text'>The Open Loop Layout Problem (OLLP) seeks to position rectangular cells of
+varying dimensions on a plane without overlap, minimizing transportation costs
+computed as the flow-weighted sum of pairwise distances between cells. A key
+challenge in OLLP is to compute accurate inter-cell distances along feasible
+paths that avoid rectangle intersections. Existing approaches approximate
+inter-cell distances using centroids, a simplification that can ignore physical
+constraints, resulting in infeasible layouts or underestimated distances. This
+study proposes the first mathematical model that incorporates exact
+door-to-door distances and feasible paths under the Euclidean metric, with cell
+doors acting as pickup and delivery points. Feasible paths between doors must
+either follow rectangle edges as corridors or take direct, unobstructed routes.
+To address the NP-hardness of the problem, we present a metaheuristic framework
+with a novel encoding scheme that embeds exact path calculations. Experiments
+on standard benchmark instances confirm that our approach consistently
+outperforms existing methods, delivering superior solution quality and
+practical applicability.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2504.12744v1' target='_blank'>Biasing the Driving Style of an Artificial Race Driver for Online
+  Time-Optimal Maneuver Planning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Sebastiano Taddei, Mattia Piccinini, Francesco Biral</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-04-17 08:35:28</h6>
+<p class='card-text'>In this work, we present a novel approach to bias the driving style of an
+artificial race driver (ARD) for online time-optimal trajectory planning. Our
+method leverages a nonlinear model predictive control (MPC) framework that
+combines time minimization with exit speed maximization at the end of the
+planning horizon. We introduce a new MPC terminal cost formulation based on the
+trajectory planned in the previous MPC step, enabling ARD to adapt its driving
+style from early to late apex maneuvers in real-time. Our approach is
+computationally efficient, allowing for low replan times and long planning
+horizons. We validate our method through simulations, comparing the results
+against offline minimum-lap-time (MLT) optimal control and online minimum-time
+MPC solutions. The results demonstrate that our new terminal cost enables ARD
+to bias its driving style, and achieve online lap times close to the MLT
+solution and faster than the minimum-time MPC solution. Our approach paves the
+way for a better understanding of the reasons behind human drivers' choice of
+early or late apex maneuvers.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2504.12719v1' target='_blank'>B*: Efficient and Optimal Base Placement for Fixed-Base Manipulators</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Zihang Zhao, Leiyao Cui, Sirui Xie, Saiyao Zhang, Zhi Han, Lecheng Ruan, Yixin Zhu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-04-17 07:48:50</h6>
+<p class='card-text'>B* is a novel optimization framework that addresses a critical challenge in
+fixed-base manipulator robotics: optimal base placement. Current methods rely
+on pre-computed kinematics databases generated through sampling to search for
+solutions. However, they face an inherent trade-off between solution optimality
+and computational efficiency when determining sampling resolution. To address
+these limitations, B* unifies multiple objectives without database dependence.
+The framework employs a two-layer hierarchical approach. The outer layer
+systematically manages terminal constraints through progressive tightening,
+particularly for base mobility, enabling feasible initialization and broad
+solution exploration. The inner layer addresses non-convexities in each
+outer-layer subproblem through sequential local linearization, converting the
+original problem into tractable sequential linear programming (SLP). Testing
+across multiple robot platforms demonstrates B*'s effectiveness. The framework
+achieves solution optimality five orders of magnitude better than
+sampling-based approaches while maintaining perfect success rates and reduced
+computational overhead. Operating directly in configuration space, B* enables
+simultaneous path planning with customizable optimization criteria. B* serves
+as a crucial initialization tool that bridges the gap between theoretical
+motion planning and practical deployment, where feasible trajectory existence
+is fundamental.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2504.12678v1' target='_blank'>A Genetic Approach to Gradient-Free Kinodynamic Planning in Uneven
+  Terrains</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Otobong Jerome, Alexandr Klimchik, Alexander Maloletov, Geesara Kulathunga</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-04-17 06:11:31</h6>
+<p class='card-text'>This paper proposes a genetic algorithm-based kinodynamic planning algorithm
+(GAKD) for car-like vehicles navigating uneven terrains modeled as triangular
+meshes. The algorithm's distinct feature is trajectory optimization over a
+fixed-length receding horizon using a genetic algorithm with heuristic-based
+mutation, ensuring the vehicle's controls remain within its valid operational
+range. By addressing challenges posed by uneven terrain meshes, such as
+changing face normals, GAKD offers a practical solution for path planning in
+complex environments. Comparative evaluations against Model Predictive Path
+Integral (MPPI) and log-MPPI methods show that GAKD achieves up to 20 percent
+improvement in traversability cost while maintaining comparable path length.
+These results demonstrate GAKD's potential in improving vehicle navigation on
+challenging terrains.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2504.12667v1' target='_blank'>Two Tasks, One Goal: Uniting Motion and Planning for Excellent End To
+  End Autonomous Driving Performance</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Lin Liu, Ziying Song, Hongyu Pan, Lei Yang, Caiyan Jia</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-04-17 05:52:35</h6>
+<p class='card-text'>End-to-end autonomous driving has made impressive progress in recent years.
+Former end-to-end autonomous driving approaches often decouple planning and
+motion tasks, treating them as separate modules. This separation overlooks the
+potential benefits that planning can gain from learning out-of-distribution
+data encountered in motion tasks. However, unifying these tasks poses
+significant challenges, such as constructing shared contextual representations
+and handling the unobservability of other vehicles' states. To address these
+challenges, we propose TTOG, a novel two-stage trajectory generation framework.
+In the first stage, a diverse set of trajectory candidates is generated, while
+the second stage focuses on refining these candidates through vehicle state
+information. To mitigate the issue of unavailable surrounding vehicle states,
+TTOG employs a self-vehicle data-trained state estimator, subsequently extended
+to other vehicles. Furthermore, we introduce ECSA (equivariant context-sharing
+scene adapter) to enhance the generalization of scene representations across
+different agents. Experimental results demonstrate that TTOG achieves
+state-of-the-art performance across both planning and motion tasks. Notably, on
+the challenging open-loop nuScenes dataset, TTOG reduces the L2 distance by
+36.06\%. Furthermore, on the closed-loop Bench2Drive dataset, our approach
+achieves a 22\% improvement in the driving score (DS), significantly
+outperforming existing baselines.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2504.12657v1' target='_blank'>Photon Calibration Performance of KAGRA during the 4th Joint Observing
+  Run (O4)</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Dan Chen, Shingo Hido, Darkhan Tuyenbayev, Dripta Bhattacharjee, Nobuyuki Kanda, Richard Savage, Rishabh Bajpai, Sadakazu Haino, Takahiro Sawada, Takahiro Yamamoto, Takayuki Tomaru, Yoshiki Moriwaki</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-04-17 05:36:31</h6>
+<p class='card-text'>KAGRA is a kilometer-scale cryogenic gravitational-wave (GW) detector in
+Japan. It joined the 4th joint observing run (O4) in May 2023 in collaboration
+with the Laser Interferometer GW Observatory (LIGO) in the USA, and Virgo in
+Italy. After one month of observations, KAGRA entered a break period to enhance
+its sensitivity to GWs, and it is planned to rejoin O4 before its scheduled end
+in October 2025. To accurately recover the information encoded in the GW
+signals, it is essential to properly calibrate the observed signals. We employ
+a photon calibration (Pcal) system as a reference signal injector to calibrate
+the output signals obtained from the telescope. In ideal future conditions, the
+uncertainty in Pcal could dominate the uncertainty in the observed data. In
+this paper, we present the methods used to estimate the uncertainty in the Pcal
+systems employed during KAGRA O4 and report an estimated system uncertainty of
+0.79%, which is three times lower than the uncertainty achieved in the previous
+3rd joint observing run (O3) in 2020. Additionally, we investigate the
+uncertainty in the Pcal laser power sensors, which had the highest impact on
+the Pcal uncertainty, and estimate the beam positions on the KAGRA main mirror,
+which had the second highest impact. The Pcal systems in KAGRA are the first
+fully functional calibration systems for a cryogenic GW telescope. To avoid
+interference with the KAGRA cryogenic systems, the Pcal systems incorporate
+unique features regarding their placement and the use of telephoto cameras,
+which can capture images of the mirror surface at almost normal incidence. As
+future GW telescopes, such as the Einstein Telescope, are expected to adopt
+cryogenic techniques, the performance of the KAGRA Pcal systems can serve as a
+valuable reference.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2504.12616v1' target='_blank'>Graph-based Path Planning with Dynamic Obstacle Avoidance for Autonomous
+  Parking</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Farhad Nawaz, Minjun Sung, Darshan Gadginmath, Jovin D'sa, Sangjae Bae, David Isele, Nadia Figueroa, Nikolai Matni, Faizan M. Tariq</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-04-17 03:43:20</h6>
+<p class='card-text'>Safe and efficient path planning in parking scenarios presents a significant
+challenge due to the presence of cluttered environments filled with static and
+dynamic obstacles. To address this, we propose a novel and computationally
+efficient planning strategy that seamlessly integrates the predictions of
+dynamic obstacles into the planning process, ensuring the generation of
+collision-free paths. Our approach builds upon the conventional Hybrid A star
+algorithm by introducing a time-indexed variant that explicitly accounts for
+the predictions of dynamic obstacles during node exploration in the graph, thus
+enabling dynamic obstacle avoidance. We integrate the time-indexed Hybrid A
+star algorithm within an online planning framework to compute local paths at
+each planning step, guided by an adaptively chosen intermediate goal. The
+proposed method is validated in diverse parking scenarios, including
+perpendicular, angled, and parallel parking. Through simulations, we showcase
+our approach's potential in greatly improving the efficiency and safety when
+compared to the state of the art spline-based planning method for parking
+situations.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2504.12542v1' target='_blank'>Post-Hurricane Debris Segmentation Using Fine-Tuned Foundational Vision
+  Models</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Kooshan Amini, Yuhao Liu, Jamie Ellen Padgett, Guha Balakrishnan, Ashok Veeraraghavan</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-04-17 00:08:50</h6>
+<p class='card-text'>Timely and accurate detection of hurricane debris is critical for effective
+disaster response and community resilience. While post-disaster aerial imagery
+is readily available, robust debris segmentation solutions applicable across
+multiple disaster regions remain limited. Developing a generalized solution is
+challenging due to varying environmental and imaging conditions that alter
+debris' visual signatures across different regions, further compounded by the
+scarcity of training data. This study addresses these challenges by fine-tuning
+pre-trained foundational vision models, achieving robust performance with a
+relatively small, high-quality dataset. Specifically, this work introduces an
+open-source dataset comprising approximately 1,200 manually annotated aerial
+RGB images from Hurricanes Ian, Ida, and Ike. To mitigate human biases and
+enhance data quality, labels from multiple annotators are strategically
+aggregated and visual prompt engineering is employed. The resulting fine-tuned
+model, named fCLIPSeg, achieves a Dice score of 0.70 on data from Hurricane Ida
+-- a disaster event entirely excluded during training -- with virtually no
+false positives in debris-free areas. This work presents the first
+event-agnostic debris segmentation model requiring only standard RGB imagery
+during deployment, making it well-suited for rapid, large-scale post-disaster
+impact assessments and recovery planning.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2504.12540v1' target='_blank'>UniPhys: Unified Planner and Controller with Diffusion for Flexible
+  Physics-Based Character Control</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yan Wu, Korrawe Karunratanakul, Zhengyi Luo, Siyu Tang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-04-17 00:04:31</h6>
+<p class='card-text'>Generating natural and physically plausible character motion remains
+challenging, particularly for long-horizon control with diverse guidance
+signals. While prior work combines high-level diffusion-based motion planners
+with low-level physics controllers, these systems suffer from domain gaps that
+degrade motion quality and require task-specific fine-tuning. To tackle this
+problem, we introduce UniPhys, a diffusion-based behavior cloning framework
+that unifies motion planning and control into a single model. UniPhys enables
+flexible, expressive character motion conditioned on multi-modal inputs such as
+text, trajectories, and goals. To address accumulated prediction errors over
+long sequences, UniPhys is trained with the Diffusion Forcing paradigm,
+learning to denoise noisy motion histories and handle discrepancies introduced
+by the physics simulator. This design allows UniPhys to robustly generate
+physically plausible, long-horizon motions. Through guided sampling, UniPhys
+generalizes to a wide range of control signals, including unseen ones, without
+requiring task-specific fine-tuning. Experiments show that UniPhys outperforms
+prior methods in motion naturalness, generalization, and robustness across
+diverse control tasks.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2504.12527v1' target='_blank'>Analysis of the MICCAI Brain Tumor Segmentation -- Metastases
+  (BraTS-METS) 2025 Lighthouse Challenge: Brain Metastasis Segmentation on Pre-
+  and Post-treatment MRI</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Nazanin Maleki, Raisa Amiruddin, Ahmed W. Moawad, Nikolay Yordanov, Athanasios Gkampenis, Pascal Fehringer, Fabian Umeh, Crystal Chukwurah, Fatima Memon, Bojan Petrovic, Justin Cramer, Mark Krycia, Elizabeth B. Shrickel, Ichiro Ikuta, Gerard Thompson, Lorenna Vidal, Vilma Kosovic, Adam E. Goldman-Yassen, Virginia Hill, Tiffany So, Sedra Mhana, Albara Alotaibi, Nathan Page, Prisha Bhatia, Yasaman Sharifi, Marko Jakovljevic, Salma Abosabie, Sara Abosabie, Mohanad Ghonim, Mohamed Ghonim, Amirreza Manteghinejad, Anastasia Janas, Kiril Krantchev, Maruf Adewole, Jake Albrecht, Udunna Anazodo, Sanjay Aneja, Syed Muhammad Anwar, Timothy Bergquist, Veronica Chiang, Verena Chung, Gian Marco Conte, Farouk Dako, James Eddy, Ivan Ezhov, Nastaran Khalili, Keyvan Farahani, Juan Eugenio Iglesias, Zhifan Jiang, Elaine Johanson, Anahita Fathi Kazerooni, Florian Kofler, Dominic LaBella, Koen Van Leemput, Hongwei Bran Li, Marius George Linguraru, Xinyang Liu, Zeke Meier, Bjoern H Menze, Harrison Moy, Klara Osenberg, Marie Piraud, Zachary Reitman, Russell Takeshi Shinohara, Chunhao Wang, Benedikt Wiestler, Walter Wiggins, Umber Shafique, Klara Willms, Arman Avesta, Khaled Bousabarah, Satrajit Chakrabarty, Nicolo Gennaro, Wolfgang Holler, Manpreet Kaur, Pamela LaMontagne, MingDe Lin, Jan Lost, Daniel S. Marcus, Ryan Maresca, Sarah Merkaj, Gabriel Cassinelli Pedersen, Marc von Reppert, Aristeidis Sotiras, Oleg Teytelboym, Niklas Tillmans, Malte Westerhoff, Ayda Youssef, Devon Godfrey, Scott Floyd, Andreas Rauschecker, Javier Villanueva-Meyer, Irada Pflüger, Jaeyoung Cho, Martin Bendszus, Gianluca Brugnara, Gloria J. Guzman Perez-Carillo, Derek R. Johnson, Anthony Kam, Benjamin Yin Ming Kwan, Lillian Lai, Neil U. Lall, Satya Narayana Patro, Lei Wu, Anu Bansal, Frederik Barkhof, Cristina Besada, Sammy Chu, Jason Druzgal, Alexandru Dusoi, Luciano Farage, Fabricio Feltrin, Amy Fong, Steve H. Fung, R. Ian Gray, Michael Iv, Alida A. Postma, Amit Mahajan, David Joyner, Chase Krumpelman, Laurent Letourneau-Guillon, Christie M. Lincoln, Mate E. Maros, Elka Miller, Fanny Morón, Esther A. Nimchinsky, Ozkan Ozsarlak, Uresh Patel, Saurabh Rohatgi, Atin Saha, Anousheh Sayah, Eric D. Schwartz, Robert Shih, Mark S. Shiroishi, Juan E. Small, Manoj Tanwar, Jewels Valerie, Brent D. Weinberg, Matthew L. White, Robert Young, Vahe M. Zohrabian, Aynur Azizova, Melanie Maria Theresa Brüßeler, Abdullah Okar, Luca Pasquini, Yasaman Sharifi, Gagandeep Singh, Nico Sollmann, Theodora Soumala, Mahsa Taherzadeh, Philipp Vollmuth, Martha Foltyn-Dumitru, Ajay Malhotra, Francesco Dellepiane, Víctor M. Pérez-García, Hesham Elhalawani, Maria Correia de Verdier, Sanaria Al Rubaiey, Rui Duarte Armindo, Kholod Ashraf, Moamen M. Asla, Mohamed Badawy, Jeroen Bisschop, Nima Broomand Lomer, Jan Bukatz, Jim Chen, Petra Cimflova, Felix Corr, Alexis Crawley, Lisa Deptula, Tasneem Elakhdar, Islam H. Shawali, Shahriar Faghani, Alexandra Frick, Vaibhav Gulati, Muhammad Ammar Haider, Fátima Hierro, Rasmus Holmboe Dahl, Sarah Maria Jacobs, Kuang-chun Jim Hsieh, Sedat G. Kandemirli, Katharina Kersting, Laura Kida, Sofia Kollia, Ioannis Koukoulithras, Xiao Li, Ahmed Abouelatta, Aya Mansour, Ruxandra-Catrinel Maria-Zamfirescu, Marcela Marsiglia, Yohana Sarahi Mateo-Camacho, Mark McArthur, Olivia McDonnel, Maire McHugh, Mana Moassefi, Samah Mostafa Morsi, Alexander Munteanu, Khanak K. Nandolia, Syed Raza Naqvi, Yalda Nikanpour, Mostafa Alnoury, Abdullah Mohamed Aly Nouh, Francesca Pappafava, Markand D. Patel, Samantha Petrucci, Eric Rawie, Scott Raymond, Borna Roohani, Sadeq Sabouhi, Laura M. Sanchez Garcia, Zoe Shaked, Pokhraj P. Suthar, Talissa Altes, Edvin Isufi, Yaseen Dhemesh, Jaime Gass, Jonathan Thacker, Abdul Rahman Tarabishy, Benjamin Turner, Sebastiano Vacca, George K. Vilanilam, Daniel Warren, David Weiss, Fikadu Worede, Sara Yousry, Wondwossen Lerebo, Alejandro Aristizabal, Alexandros Karargyris, Hasan Kassem, Sarthak Pati, Micah Sheller, Katherine E. Link, Evan Calabrese, Nourel Hoda Tahon, Ayman Nada, Jeffrey D. Rudie, Janet Reid, Kassa Darge, Aly H. Abayazeed, Philipp Lohmann, Yuri S. Velichko, Spyridon Bakas, Mariam Aboian</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-04-16 23:17:44</h6>
+<p class='card-text'>Despite continuous advancements in cancer treatment, brain metastatic disease
+remains a significant complication of primary cancer and is associated with an
+unfavorable prognosis. One approach for improving diagnosis, management, and
+outcomes is to implement algorithms based on artificial intelligence for the
+automated segmentation of both pre- and post-treatment MRI brain images. Such
+algorithms rely on volumetric criteria for lesion identification and treatment
+response assessment, which are still not available in clinical practice.
+Therefore, it is critical to establish tools for rapid volumetric segmentations
+methods that can be translated to clinical practice and that are trained on
+high quality annotated data. The BraTS-METS 2025 Lighthouse Challenge aims to
+address this critical need by establishing inter-rater and intra-rater
+variability in dataset annotation by generating high quality annotated datasets
+from four individual instances of segmentation by neuroradiologists while being
+recorded on video (two instances doing "from scratch" and two instances after
+AI pre-segmentation). This high-quality annotated dataset will be used for
+testing phase in 2025 Lighthouse challenge and will be publicly released at the
+completion of the challenge. The 2025 Lighthouse challenge will also release
+the 2023 and 2024 segmented datasets that were annotated using an established
+pipeline of pre-segmentation, student annotation, two neuroradiologists
+checking, and one neuroradiologist finalizing the process. It builds upon its
+previous edition by including post-treatment cases in the dataset. Using these
+high-quality annotated datasets, the 2025 Lighthouse challenge plans to test
+benchmark algorithms for automated segmentation of pre-and post-treatment brain
+metastases (BM), trained on diverse and multi-institutional datasets of MRI
+images obtained from patients with brain metastases.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2504.12508v1' target='_blank'>Optimizing Utility-Scale Solar Siting for Local Economic Benefits and
+  Regional Decarbonization</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Papa Yaw Owusu-Obeng, Steven R. Miller, Sarah Banas Mills, Michael T. Craig</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-04-16 22:02:31</h6>
+<p class='card-text'>The Midwest, with its vast agricultural lands, is rapidly emerging as a key
+region for utility-scale solar expansion. However, traditional power planning
+has yet to integrate local economic impact directly into capacity expansion to
+guide optimal siting decisions. Moreover, existing economic assessments tend to
+emphasize local benefits while overlooking the opportunity costs of converting
+productive farmland for solar development. This study addresses these gaps by
+endogenously incorporating local economic metrics into a power system planning
+model to evaluate how economic impacts influence solar siting, accounting for
+the cost of lost agricultural output. We analyze all counties within the Great
+Lakes region, constructing localized supply and marginal benefit curves that
+are embedded within a multi-objective optimization framework aimed at
+minimizing system costs and maximizing community economic benefits. Our
+findings show that counties with larger economies and lower farmland
+productivity deliver the highest local economic benefit per megawatt (MW) of
+installed solar capacity. In Ohio, for example, large counties generate up to
+$34,500 per MW, driven in part by high property tax revenues, while smaller
+counties yield 31% less. Accounting for the opportunity cost of displaced
+agricultural output reduces local benefits by up to 16%, depending on farmland
+quality. A scenario prioritizing solar investment in counties with higher
+economic returns increases total economic benefits by $1 billion (or 11%) by
+2040, with solar investment shifting away from Michigan and Wisconsin (down by
+39%) toward Ohio and Indiana (up by 75%), with only a marginal increase of 0.5%
+in system-wide costs. These findings underscore the importance of integrating
+economic considerations into utility-scale solar planning to better align
+decarbonization goals with regional and local economic development.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2504.12504v1' target='_blank'>CAPERS Observations of Two UV-Bright Galaxies at z>10. More Evidence for
+  Bursting Star Formation in the Early Universe</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Vasily Kokorev, Óscar A. Chávez Ortiz, Anthony J. Taylor, Steven L. Finkelstein, Pablo Arrabal Haro, Mark Dickinson, John Chisholm, Seiji Fujimoto, Julian B. Muñoz, Ryan Endsley, Weida Hu, Lorenzo Napolitano, Stephen M. Wilkins, Hollis B. Akins, Ricardo Amoriín, Caitlin M. Casey, Yingjie Cheng, Nikko J. Cleri, Justin Cole, Fergus Cullen, Emanuele Daddi, Kelcey Davis, Callum T. Donnan, James S. Dunlop, Vital Fernández, Mauro Giavalisco, Norman A. Grogin, Nimish Hathi, Michaela Hirschmann, Jeyhan S. Kartaltepe, Anton M. Koekemoer, Ho-Hin Leung, Ray A. Lucas, Derek McLeod, Casey Papovich, Laura Pentericci, Pablo G. Pérez-González, Rachel S. Somerville, Xin Wang, L. Y. Aaron Yung, Jorge A. Zavala</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-04-16 21:45:04</h6>
+<p class='card-text'>We present the first results from the CAPERS survey, utilizing PRISM
+observations with the JWST/NIRSpec MSA in the PRIMER-UDS field. With just 14 %
+of the total planned data volume, we spectroscopically confirm two new bright
+galaxies ($M_{\rm UV}\sim -20.4$) at redshifts $z = 10.562\pm0.034$ and $z =
+11.013\pm0.028$. We examine their physical properties, morphologies, and star
+formation histories, finding evidence for recent bursting star formation in at
+least one galaxy thanks to the detection of strong (EW$_0\sim70$ A) H$\gamma$
+emission. Combining our findings with previous studies of similarly bright
+objects at high-$z$, we further assess the role of stochastic star formation
+processes in shaping early galaxy populations. Our analysis finds that the
+majority of bright ($M_{\rm UV}\lesssim -20$) spectroscopically-confirmed
+galaxies at $z>10$ were likely observed during a starburst episode,
+characterized by a median SFR$_{10}$/SFR$_{100}\sim2$, although with
+substantial scatter. Our work also finds tentative evidence that $z>10$
+galaxies are more preferentially in a bursting phase than similarly bright
+$z\sim6$ galaxies. We finally discuss the prospects of deeper spectroscopic
+observations of a statistically significant number of bright galaxies to
+quantify the true impact of bursting star formation on the evolution of the
+bright end of the ultraviolet luminosity function at these early epochs.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2504.12488v1' target='_blank'>Co-Writing with AI, on Human Terms: Aligning Research with User Demands
+  Across the Writing Process</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Mohi Reza, Jeb Thomas-Mitchell, Peter Dushniku, Nathan Laundry, Joseph Jay Williams, Anastasia Kuzminykh</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-04-16 21:05:46</h6>
+<p class='card-text'>As generative AI tools like ChatGPT become integral to everyday writing,
+critical questions arise about how to preserve writers' sense of agency and
+ownership when using these tools. Yet, a systematic understanding of how AI
+assistance affects different aspects of the writing process - and how this
+shapes writers' agency - remains underexplored. To address this gap, we
+conducted a systematic review of 109 HCI papers using the PRISMA approach. From
+this literature, we identify four overarching design strategies for AI writing
+support: structured guidance, guided exploration, active co-writing, and
+critical feedback - mapped across the four key cognitive processes in writing:
+planning, translating, reviewing, and monitoring. We complement this analysis
+with interviews of 15 writers across diverse domains. Our findings reveal that
+writers' desired levels of AI intervention vary across the writing process:
+content-focused writers (e.g., academics) prioritize ownership during planning,
+while form-focused writers (e.g., creatives) value control over translating and
+reviewing. Writers' preferences are also shaped by contextual goals, values,
+and notions of originality and authorship. By examining when ownership matters,
+what writers want to own, and how AI interactions shape agency, we surface both
+alignment and gaps between research and user needs. Our findings offer
+actionable design guidance for developing human-centered writing tools for
+co-writing with AI, on human terms.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2504.12473v1' target='_blank'>Taming systematics in distance and inclination measurements with
+  gravitational waves: role of the detector network and higher-order modes</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Adriano Frattale Mascioli, Francesco Crescimbeni, Costantino Pacilio, Paolo Pani, Francesco Pannarale</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-04-16 20:22:31</h6>
+<p class='card-text'>Gravitational-wave (GW) observations of compact binaries have the potential
+to unlock several remarkable applications in astrophysics, cosmology, and
+nuclear physics through accurate measurements of the source luminosity distance
+and inclination. However, these parameters are strongly correlated when
+performing parameter estimation, which may hamper the enormous potential of GW
+astronomy. We comprehensively explore this problem by performing Bayesian
+inference on synthetic data for a network of current and planned
+second-generation GW detectors, and for the third-generation interferometer
+Einstein Telescope~(ET). We quantify the role of the network alignment factor,
+detector sensitivity, and waveform higher-order modes in breaking this
+degeneracy. We discuss the crucial role of the binary mass ratio: in
+particular, we find that ET can efficiently remove the error in the distance as
+long as the compact binary is asymmetric in mass.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2504.12470v1' target='_blank'>A Frequency-Domain Differential Corrector for Quasi-Periodic Trajectory
+  Design and Analysis</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Beom Park, Kathleen C. Howell, Shaun Stewart</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-04-16 20:17:58</h6>
+<p class='card-text'>This paper introduces the Frequency-Domain Differential Corrector (FDDC), a
+model-agnostic approach for constructing quasi-periodic orbits (QPOs) across a
+range of dynamical regimes. In contrast to existing methods that explicitly
+enforce an invariance condition in all frequency dimensions, the FDDC targets
+dominant spectral components identified through frequency-domain analysis.
+Leveraging frequency refinement strategies such as Laskar-Numerical Analysis of
+Fundamental Frequency (L-NAFF) and G\'omez-Mondelo-Sim\'o-Collocation (GMS-C),
+the method enables efficient and scalable generation of high-dimensional QPOs.
+The FDDC is demonstrated in both single- and multiple-shooting formulations.
+While the study focuses on the Earth-Moon system, the framework is broadly
+applicable to other celestial environments. Sample applications include Distant
+Retrograde Orbits (DROs), Elliptical Lunar Frozen Orbits (ELFOs), and Near
+Rectilinear Halo Orbits (NRHOs), illustrating constellation design and the
+recovery of analog solutions in higher-fidelity models. With its
+model-independent formulation and spectral targeting capabilities, FDDC offers
+a versatile tool for robust trajectory design and mission planning in complex
+dynamical systems.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2504.12432v1' target='_blank'>Assessing the Spatial and Temporal Risk of HPAIV Transmission to Danish
+  Cattle via Wild Birds</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:You Chang, Jose L. Gonzales, Mossa Merhi Reimert, Erik Rattenborg, Mart C. M. de jong, Beate Conrady</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-04-16 19:01:19</h6>
+<p class='card-text'>A highly pathogenic avian influenza (HPAI) panzootic has severely impacted
+wild bird populations worldwide, with documented (zoonotic) transmission to
+mammals, including humans. Ongoing HPAI outbreaks on U.S. cattle farms have
+raised concerns about potential spillover of virus from birds to cattle in
+other countries, including Denmark. In the EU, the Bird Flu Radar tool,
+coordinated by EFSA, monitors the spatio-temporal risk of HPAIV infection in
+wild bird populations. A preparedness tool to assess the spillover risk to the
+cattle industry is currently lacking, despite its critical importance. This
+study aims to assess the temporal and spatial risk of HPAI virus (HPAIV)
+spillover from wild birds, particularly waterfowl, into cattle populations in
+Denmark. To support this assessment, a spillover transmission model is
+developed by integrating two well-established surveillance tools, eBird and
+Bird Flu Radar, in combination with global cattle density data. The generated
+quantitative risk maps reveal the heterogeneous temporal and spatial
+distribution of HPAIV spillover risk from wild birds to cattle across Denmark.
+The highest risk periods are observed during calendar weeks 50 to 10. The
+estimated total number of spillover cases nationwide is 1.93 (95% CI: 0.48,
+4.98) in 2024, and 0.62 cases (95% CI: 0.15, 1.25) in 2025. These risk
+estimates provide valuable insights to support veterinary contingency planning
+and enable targeted allocation of resources in highrisk areas for the early
+detection of HPAIV in cattle.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2504.12257v1' target='_blank'>QSHS: An Axion Dark Matter Resonant Search Apparatus</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:A. Alsulami, I. Bailey, G. Carosi, G. Chapman, B. Chakraborty, E. J. Daw, N. Duc, S. Durham, J. Esmenda, J. Gallop, T. Gamble, T. Godfrey, G. Gregori, J. Halliday, L. Hao, E. Hardy, E. A. Laird, P. Leek, J. March-Russell, P. J. Meeson, C. F. Mostyn, Yu. A. Pashkin, S. O. Peatain, M. Perry, M. Piscitelli, M. Reig, E. J. Romans, S. Sarkar, P. J. Smith, A. Sokolov, N. Song, A. Sundararajan, B. -K Tan, S. M. West, S. Withington</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-04-16 17:08:00</h6>
+<p class='card-text'>We describe a resonant cavity search apparatus for axion dark matter
+constructed by the Quantum Sensors for the Hidden Sector (QSHS) collaboration.
+The apparatus is configured to search for QCD axion dark matter, though also
+has the capability to detect axion-like particles (ALPs), dark photons, and
+some other forms of wave-like dark matter. Initially, a tuneable cylindrical
+oxygen-free copper cavity is read out using a low noise microwave amplifier
+feeding a heterodyne receiver. The cavity is housed in a dilution refrigerator
+and threaded by a solenoidal magnetic field, nominally 8T. The apparatus also
+houses a magnetic field shield for housing superconducting electronics, and
+several other fixed-frequency resonators for use in testing and commissioning
+various prototype quantum electronic devices sensitive at a range of axion
+masses in the range $\rm 2.0$ to $\rm 40\,eV/c^2$. We present performance data
+for the resonator, dilution refrigerator, and magnet, and plans for the first
+science run.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2504.12203v1' target='_blank'>Modality-Independent Explainable Detection of Inaccurate Organ
+  Segmentations Using Denoising Autoencoders</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Levente Lippenszky, István Megyeri, Krisztian Koos, Zsófia Karancsi, Borbála Deák-Karancsi, András Frontó, Árpád Makk, Attila Rádics, Erhan Bas, László Ruskó</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-04-16 15:53:40</h6>
+<p class='card-text'>In radiation therapy planning, inaccurate segmentations of organs at risk can
+result in suboptimal treatment delivery, if left undetected by the clinician.
+To address this challenge, we developed a denoising autoencoder-based method to
+detect inaccurate organ segmentations. We applied noise to ground truth organ
+segmentations, and the autoencoders were tasked to denoise them. Through the
+application of our method to organ segmentations generated on both MR and CT
+scans, we demonstrated that the method is independent of imaging modality. By
+providing reconstructions, our method offers visual information about
+inaccurate regions of the organ segmentations, leading to more explainable
+detection of suboptimal segmentations. We compared our method to existing
+approaches in the literature and demonstrated that it achieved superior
+performance for the majority of organs.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2504.12121v1' target='_blank'>Remote sensing colour image semantic segmentation of trails created by
+  large herbivorous Mammals</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jose Francisco Diez-Pastor, Francisco Javier Gonzalez-Moya, Pedro Latorre-Carmona, Francisco Javier Perez-Barbería, Ludmila I. Kuncheva, Antonio Canepa-Oneto, Alvar Arnaiz-González, Cesar Garcia-Osorio</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-04-16 14:33:57</h6>
+<p class='card-text'>Detection of spatial areas where biodiversity is at risk is of paramount
+importance for the conservation and monitoring of ecosystems. Large terrestrial
+mammalian herbivores are keystone species as their activity not only has deep
+effects on soils, plants, and animals, but also shapes landscapes, as large
+herbivores act as allogenic ecosystem engineers. One key landscape feature that
+indicates intense herbivore activity and potentially impacts biodiversity is
+the formation of grazing trails. Grazing trails are formed by the continuous
+trampling activity of large herbivores that can produce complex networks of
+tracks of bare soil. Here, we evaluated different algorithms based on machine
+learning techniques to identify grazing trails. Our goal is to automatically
+detect potential areas with intense herbivory activity, which might be
+beneficial for conservation and management plans.
+  We have applied five semantic segmentation methods combined with fourteen
+encoders aimed at mapping grazing trails on aerial images. Our results indicate
+that in most cases the chosen methodology successfully mapped the trails,
+although there were a few instances where the actual trail structure was
+underestimated. The UNet architecture with the MambaOut encoder was the best
+architecture for mapping trails. The proposed approach could be applied to
+develop tools for mapping and monitoring temporal changes in these landscape
+structures to support habitat conservation and land management programs. This
+is the first time, to the best of our knowledge, that competitive image
+segmentation results are obtained for the detection and delineation of trails
+of large herbivorous mammals.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2504.12115v1' target='_blank'>GripMap: An Efficient, Spatially Resolved Constraint Framework for
+  Offline and Online Trajectory Planning in Autonomous Racing</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Frederik Werner, Ann-Kathrin Schwehn, Markus Lienkamp, Johannes Betz</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-04-16 14:25:29</h6>
+<p class='card-text'>Conventional trajectory planning approaches for autonomous vehicles often
+assume a fixed vehicle model that remains constant regardless of the vehicle's
+location. This overlooks the critical fact that the tires and the surface are
+the two force-transmitting partners in vehicle dynamics; while the tires stay
+with the vehicle, surface conditions vary with location. Recognizing these
+challenges, this paper presents a novel framework for spatially resolving
+dynamic constraints in both offline and online planning algorithms applied to
+autonomous racing. We introduce the GripMap concept, which provides a spatial
+resolution of vehicle dynamic constraints in the Frenet frame, allowing
+adaptation to locally varying grip conditions. This enables compensation for
+location-specific effects, more efficient vehicle behavior, and increased
+safety, unattainable with spatially invariant vehicle models. The focus is on
+low storage demand and quick access through perfect hashing. This framework
+proved advantageous in real-world applications in the presented form.
+Experiments inspired by autonomous racing demonstrate its effectiveness. In
+future work, this framework can serve as a foundational layer for developing
+future interpretable learning algorithms that adjust to varying grip conditions
+in real-time.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2504.12109v1' target='_blank'>Self-Supervised Traversability Learning with Online Prototype Adaptation
+  for Off-Road Autonomous Driving</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yafeng Bu, Zhenping Sun, Xiaohui Li, Jun Zeng, Xin Zhang, Hui Shen</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-04-16 14:17:31</h6>
+<p class='card-text'>Achieving reliable and safe autonomous driving in off-road environments
+requires accurate and efficient terrain traversability analysis. However, this
+task faces several challenges, including the scarcity of large-scale datasets
+tailored for off-road scenarios, the high cost and potential errors of manual
+annotation, the stringent real-time requirements of motion planning, and the
+limited computational power of onboard units. To address these challenges, this
+paper proposes a novel traversability learning method that leverages
+self-supervised learning, eliminating the need for manual annotation. For the
+first time, a Birds-Eye View (BEV) representation is used as input, reducing
+computational burden and improving adaptability to downstream motion planning.
+During vehicle operation, the proposed method conducts online analysis of
+traversed regions and dynamically updates prototypes to adaptively assess the
+traversability of the current environment, effectively handling dynamic scene
+changes. We evaluate our approach against state-of-the-art benchmarks on both
+public datasets and our own dataset, covering diverse seasons and geographical
+locations. Experimental results demonstrate that our method significantly
+outperforms recent approaches. Additionally, real-world vehicle experiments
+show that our method operates at 10 Hz, meeting real-time requirements, while a
+5.5 km autonomous driving experiment further validates the generated
+traversability cost maps compatibility with downstream motion planning.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2504.11901v2' target='_blank'>Causality-enhanced Decision-Making for Autonomous Mobile Robots in
+  Dynamic Environments</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Luca Castri, Gloria Beraldo, Nicola Bellotto</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-04-16 09:26:04</h6>
+<p class='card-text'>The growing integration of robots in shared environments -- such as
+warehouses, shopping centres, and hospitals -- demands a deep understanding of
+the underlying dynamics and human behaviours, including how, when, and where
+individuals engage in various activities and interactions. This knowledge goes
+beyond simple correlation studies and requires a more comprehensive causal
+analysis. By leveraging causal inference to model cause-and-effect
+relationships, we can better anticipate critical environmental factors and
+enable autonomous robots to plan and execute tasks more effectively. To this
+end, we propose a novel causality-based decision-making framework that reasons
+over a learned causal model to predict battery usage and human obstructions,
+understanding how these factors could influence robot task execution. Such
+reasoning framework assists the robot in deciding when and how to complete a
+given task. To achieve this, we developed also PeopleFlow, a new Gazebo-based
+simulator designed to model context-sensitive human-robot spatial interactions
+in shared workspaces. PeopleFlow features realistic human and robot
+trajectories influenced by contextual factors such as time, environment layout,
+and robot state, and can simulate a large number of agents. While the simulator
+is general-purpose, in this paper we focus on a warehouse-like environment as a
+case study, where we conduct an extensive evaluation benchmarking our causal
+approach against a non-causal baseline. Our findings demonstrate the efficacy
+of the proposed solutions, highlighting how causal reasoning enables autonomous
+robots to operate more efficiently and safely in dynamic environments shared
+with humans.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2504.11872v1' target='_blank'>A Category-Fragment Segmentation Framework for Pelvic Fracture
+  Segmentation in X-ray Images</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Daiqi Liu, Fuxin Fan, Andreas Maier</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-04-16 08:49:22</h6>
+<p class='card-text'>Pelvic fractures, often caused by high-impact trauma, frequently require
+surgical intervention. Imaging techniques such as CT and 2D X-ray imaging are
+used to transfer the surgical plan to the operating room through image
+registration, enabling quick intraoperative adjustments. Specifically,
+segmenting pelvic fractures from 2D X-ray imaging can assist in accurately
+positioning bone fragments and guiding the placement of screws or metal plates.
+In this study, we propose a novel deep learning-based category and fragment
+segmentation (CFS) framework for the automatic segmentation of pelvic bone
+fragments in 2D X-ray images. The framework consists of three consecutive
+steps: category segmentation, fragment segmentation, and post-processing. Our
+best model achieves an IoU of 0.91 for anatomical structures and 0.78 for
+fracture segmentation. Results demonstrate that the CFS framework is effective
+and accurate.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2504.11851v1' target='_blank'>A Bidirectional DeepParticle Method for Efficiently Solving
+  Low-dimensional Transport Map Problems</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Tan Zhang, Zhongjian Wang, Jack Xin, Zhiwen Zhang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-04-16 08:19:43</h6>
+<p class='card-text'>This paper aims to efficiently compute transport maps between probability
+distributions arising from particle representation of bio-physical problems. We
+develop a bidirectional DeepParticle (BDP) method to learn and generate
+solutions under varying physical parameters. Solutions are approximated as
+empirical measures of particles that adaptively align with the high-gradient
+regions. The core idea of the BDP method is to learn both forward and reverse
+mappings (between the uniform and a non-trivial target distribution) by
+minimizing the discrete 2-Wasserstein distance (W2) and optimizing the
+transition map therein by a minibatch technique. We present numerical results
+demonstrating the effectiveness of the BDP method for learning and generating
+solutions to Keller-Segel chemotaxis systems in the presence of laminar flows
+and Kolmogorov flows with chaotic streamlines in three space dimensions. The
+BDP outperforms two recent representative single-step flow matching and
+diffusion models (rectified flow and shortcut diffusion models) in the
+generative AI literature. However when the target distribution is
+high-dimensional (4 and above), e.g. a mixture of two Gaussians, the
+single-step diffusion models scale better in dimensions than BDP in terms of
+W2-accuracy.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2504.11832v1' target='_blank'>Generation of Paths for Motion Planning for a Dubins Vehicle on Sphere</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Deepak Prakash Kumar, Swaroop Darbha, Satyanarayana Gupta Manyam, David Casbeer</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-04-16 07:44:02</h6>
+<p class='card-text'>In this article, the candidate optimal paths for a Dubins vehicle on a sphere
+are analytically derived. In particular, the arc angles for segments in $CGC$,
+$CCC$, $CCCC$, and $CCCCC$ paths, which have previously been shown to be
+optimal depending on the turning radius $r$ of the vehicle by Kumar \textit{et
+al.}, are analytically derived. The derived expressions are used for the
+implementation provided in
+https://github.com/DeepakPrakashKumar/Motion-planning-on-sphere.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js'></script>
+</body>
+</html>
