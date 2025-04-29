@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>planning - 2025-04-29</title>
+<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap' rel='stylesheet'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css'>
+<style>
+body {
+font-family: 'Roboto', sans-serif;
+background-color: #f5f7fa;
+padding: 20px;
+}
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.card-title {
+    font-weight: 700;
+}
+.card:hover {
+    transform: scale(1.02);
+    transition: 0.3s ease-in-out;
+}
+</style>
+</head>
+<body>
+<div class='container'>
+<h1 class='text-center my-4'><i class='fas fa-book'></i>planning - 2025-04-29</h1>
+<div class='row'>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2504.20009v1' target='_blank'>Kinodynamic Trajectory Following with STELA: Simultaneous Trajectory
+  Estimation & Local Adaptation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Edgar Granados, Sumanth Tangirala, Kostas E. Bekris</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-04-28 17:29:22</h6>
+<p class='card-text'>State estimation and control are often addressed separately, leading to
+unsafe execution due to sensing noise, execution errors, and discrepancies
+between the planning model and reality. Simultaneous control and trajectory
+estimation using probabilistic graphical models has been proposed as a unified
+solution to these challenges. Previous work, however, relies heavily on
+appropriate Gaussian priors and is limited to holonomic robots with linear
+time-varying models. The current research extends graphical optimization
+methods to vehicles with arbitrary dynamical models via Simultaneous Trajectory
+Estimation and Local Adaptation (STELA). The overall approach initializes
+feasible trajectories using a kinodynamic, sampling-based motion planner. Then,
+it simultaneously: (i) estimates the past trajectory based on noisy
+observations, and (ii) adapts the controls to be executed to minimize
+deviations from the planned, feasible trajectory, while avoiding collisions.
+The proposed factor graph representation of trajectories in STELA can be
+applied for any dynamical system given access to first or second-order state
+update equations, and introduces the duration of execution between two states
+in the trajectory discretization as an optimization variable. These features
+provide both generalization and flexibility in trajectory following. In
+addition to targeting computational efficiency, the proposed strategy performs
+incremental updates of the factor graph using the iSAM algorithm and introduces
+a time-window mechanism. This mechanism allows the factor graph to be
+dynamically updated to operate over a limited history and forward horizon of
+the planned trajectory. This enables online updates of controls at a minimum of
+10Hz. Experiments demonstrate that STELA achieves at least comparable
+performance to previous frameworks on idealized vehicles with linear
+dynamics.[...]</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2504.19967v1' target='_blank'>Enhancing short-term traffic prediction by integrating trends and
+  fluctuations with attention mechanism</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Adway Das, Agnimitra Sengupta, S. Ilgin Guler</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-04-28 16:38:46</h6>
+<p class='card-text'>Traffic flow prediction is a critical component of intelligent transportation
+systems, yet accurately forecasting traffic remains challenging due to the
+interaction between long-term trends and short-term fluctuations. Standard deep
+learning models often struggle with these challenges because their
+architectures inherently smooth over fine-grained fluctuations while focusing
+on general trends. This limitation arises from low-pass filtering effects, gate
+biases favoring stability, and memory update mechanisms that prioritize
+long-term information retention. To address these shortcomings, this study
+introduces a hybrid deep learning framework that integrates both long-term
+trend and short-term fluctuation information using two input features processed
+in parallel, designed to capture complementary aspects of traffic flow
+dynamics. Further, our approach leverages attention mechanisms, specifically
+Bahdanau attention, to selectively focus on critical time steps within traffic
+data, enhancing the model's ability to predict congestion and other transient
+phenomena. Experimental results demonstrate that features learned from both
+branches are complementary, significantly improving the goodness-of-fit
+statistics across multiple prediction horizons compared to a baseline model.
+Notably, the attention mechanism enhances short-term forecast accuracy by
+directly targeting immediate fluctuations, though challenges remain in fully
+integrating long-term trends. This framework can contribute to more effective
+congestion mitigation and urban mobility planning by advancing the robustness
+and precision of traffic prediction models.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2504.19900v1' target='_blank'>Breast Cancer Detection from Multi-View Screening Mammograms with Visual
+  Prompt Tuning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Han Chen, Anne L. Martel</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-04-28 15:31:08</h6>
+<p class='card-text'>Accurate detection of breast cancer from high-resolution mammograms is
+crucial for early diagnosis and effective treatment planning. Previous studies
+have shown the potential of using single-view mammograms for breast cancer
+detection. However, incorporating multi-view data can provide more
+comprehensive insights. Multi-view classification, especially in medical
+imaging, presents unique challenges, particularly when dealing with
+large-scale, high-resolution data. In this work, we propose a novel Multi-view
+Visual Prompt Tuning Network (MVPT-NET) for analyzing multiple screening
+mammograms. We first pretrain a robust single-view classification model on
+high-resolution mammograms and then innovatively adapt multi-view feature
+learning into a task-specific prompt tuning process. This technique selectively
+tunes a minimal set of trainable parameters (7\%) while retaining the
+robustness of the pre-trained single-view model, enabling efficient integration
+of multi-view data without the need for aggressive downsampling. Our approach
+offers an efficient alternative to traditional feature fusion methods,
+providing a more robust, scalable, and efficient solution for high-resolution
+mammogram analysis. Experimental results on a large multi-institution dataset
+demonstrate that our method outperforms conventional approaches while
+maintaining detection efficiency, achieving an AUROC of 0.852 for
+distinguishing between Benign, DCIS, and Invasive classes. This work highlights
+the potential of MVPT-NET for medical imaging tasks and provides a scalable
+solution for integrating multi-view data in breast cancer detection.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2504.19861v1' target='_blank'>HIPED: Machine Learning Framework for Spherical Tokamak Pedestal
+  Prediction and Optimization</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:J. F. Parisi, J. G. Clark, J. W. Berkery, C. Bowman, C. J. Fitzpatrick, S. M. Kaye, M. Lampert</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-04-28 14:51:55</h6>
+<p class='card-text'>We introduce a Machine Learning framework, HIPED (HeIght and width Predictor
+for Edge Dynamics), for predicting and optimizing pedestal and core performance
+in spherical tokamak plasmas. Trained on pedestal and core datasets from the
+third MAST-U campaign, HIPED provides accurate estimates of pedestal height and
+width. The results reveal notable differences compared with conventional
+aspect-ratio studies; for instance, a simple power-law relation between
+pedestal width and height has very low accuracy. Instead, additional parameters
+such as normalized plasma pressure, elongation, and Greenwald fraction
+significantly improve accuracy. HIPED can also be trained only on `control room
+parameters' to inform experimentalists of which controllable parameters to
+adjust for improving core-integrated performance. The framework further
+includes a multi-objective optimization scheme that helps guide experimental
+planning and optimization. We find Pareto-optimal discharges with respect to
+various features, including distance from edge-localized modes and normalized
+plasma pressure, track their parameter trajectories over time, and identify the
+control room parameters required for these Pareto-optimal discharges. This
+provides a framework for systematically optimizing core and edge performance
+according to different experimental priorities.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2504.19854v1' target='_blank'>NORA: A Small Open-Sourced Generalist Vision Language Action Model for
+  Embodied Tasks</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Chia-Yu Hung, Qi Sun, Pengfei Hong, Amir Zadeh, Chuan Li, U-Xuan Tan, Navonil Majumder, Soujanya Poria</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-04-28 14:47:34</h6>
+<p class='card-text'>Existing Visual-Language-Action (VLA) models have shown promising performance
+in zero-shot scenarios, demonstrating impressive task execution and reasoning
+capabilities. However, a significant challenge arises from the limitations of
+visual encoding, which can result in failures during tasks such as object
+grasping. Moreover, these models typically suffer from high computational
+overhead due to their large sizes, often exceeding 7B parameters. While these
+models excel in reasoning and task planning, the substantial computational
+overhead they incur makes them impractical for real-time robotic environments,
+where speed and efficiency are paramount. To address the limitations of
+existing VLA models, we propose NORA, a 3B-parameter model designed to reduce
+computational overhead while maintaining strong task performance. NORA adopts
+the Qwen-2.5-VL-3B multimodal model as its backbone, leveraging its superior
+visual-semantic understanding to enhance visual reasoning and action grounding.
+Additionally, our \model{} is trained on 970k real-world robot demonstrations
+and equipped with the FAST+ tokenizer for efficient action sequence generation.
+Experimental results demonstrate that NORA outperforms existing large-scale VLA
+models, achieving better task performance with significantly reduced
+computational overhead, making it a more practical solution for real-time
+robotic autonomy.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2504.19846v1' target='_blank'>Clustering-based Recurrent Neural Network Controller synthesis under
+  Signal Temporal Logic Specifications</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Kazunobu Serizawa, Kazumune Hashimoto, Wataru Hashimoto, Masako Kishida, Shigemasa Takai</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-04-28 14:44:58</h6>
+<p class='card-text'>Autonomous robotic systems require advanced control frameworks to achieve
+complex temporal objectives that extend beyond conventional stability and
+trajectory tracking. Signal Temporal Logic (STL) provides a formal framework
+for specifying such objectives, with robustness metrics widely employed for
+control synthesis. Existing optimization-based approaches using neural network
+(NN)-based controllers often rely on a single NN for both learning and control.
+However, variations in initial states and obstacle configurations can lead to
+discontinuous changes in the optimization solution, thereby degrading
+generalization and control performance. To address this issue, this study
+proposes a method to enhance recurrent neural network (RNN)-based control by
+clustering solution trajectories that satisfy STL specifications under diverse
+initial conditions. The proposed approach utilizes trajectory similarity
+metrics to generate clustering labels, which are subsequently used to train a
+classification network. This network assigns new initial states and obstacle
+configurations to the appropriate cluster, enabling the selection of a
+specialized controller. By explicitly accounting for variations in solution
+trajectories, the proposed method improves both estimation accuracy and control
+performance. Numerical experiments on a dynamic vehicle path planning problem
+demonstrate the effectiveness of the approach.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2504.19767v1' target='_blank'>Crafting a Personal Journaling Practice: Negotiating Ecosystems of
+  Materials, Personal Context, and Community in Analog Journaling</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Katherine Lin, Juna Kawai-Yue, Adira Sklar, Lucy Hecht, Sarah Sterman, Tiffany Tseng</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-04-28 13:07:29</h6>
+<p class='card-text'>Analog journaling has grown in popularity, with journaling on paper
+encompassing a range of motivations, styles, and practices including planning,
+habit-tracking, and reflecting. Journalers develop strong personal preferences
+around the tools they use, the ideas they capture, and the layout in which they
+represent their ideas and memories. Understanding how analog journaling
+practices are individually shaped and crafted over time is critical to
+supporting the varied benefits associated with journaling, including improved
+mental health and positive support for identity development. To understand this
+development, we qualitatively analyzed publicly-shared journaling content from
+YouTube and Instagram and interviewed 11 journalers. We report on our
+identification of the journaling ecosystem in which journaling practices are
+shaped by materials, personal context, and communities, sharing how this
+ecosystem plays a role in the practices and identities of journalers as they
+customize their journaling routine to best suit their personal goals. Using
+these insights, we discuss design opportunities for how future tools can better
+align with and reflect the rich affordances and practices of journaling on
+paper.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2504.19738v1' target='_blank'>Learning Efficiency Meets Symmetry Breaking</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yingbin Bai, Sylvie Thiebaux, Felipe Trevizan</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-04-28 12:33:39</h6>
+<p class='card-text'>Learning-based planners leveraging Graph Neural Networks can learn search
+guidance applicable to large search spaces, yet their potential to address
+symmetries remains largely unexplored. In this paper, we introduce a graph
+representation of planning problems allying learning efficiency with the
+ability to detect symmetries, along with two pruning methods, action pruning
+and state pruning, designed to manage symmetries during search. The integration
+of these techniques into Fast Downward achieves a first-time success over LAMA
+on the latest IPC learning track dataset. Code is released at:
+https://github.com/bybeye/Distincter.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2504.19716v1' target='_blank'>QuickGrasp: Lightweight Antipodal Grasp Planning with Point Clouds</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Navin Sriram Ravie, Keerthi Vasan M, Asokan Thondiyath, Bijo Sebastian</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-04-28 12:09:10</h6>
+<p class='card-text'>Grasping has been a long-standing challenge in facilitating the final
+interface between a robot and the environment. As environments and tasks become
+complicated, the need to embed higher intelligence to infer from the
+surroundings and act on them has become necessary. Although most methods
+utilize techniques to estimate grasp pose by treating the problem via pure
+sampling-based approaches in the six-degree-of-freedom space or as a learning
+problem, they usually fail in real-life settings owing to poor generalization
+across domains. In addition, the time taken to generate the grasp plan and the
+lack of repeatability, owing to sampling inefficiency and the probabilistic
+nature of existing grasp planning approaches, severely limits their application
+in real-world tasks. This paper presents a lightweight analytical approach
+towards robotic grasp planning, particularly antipodal grasps, with little to
+no sampling in the six-degree-of-freedom space. The proposed grasp planning
+algorithm is formulated as an optimization problem towards estimating grasp
+points on the object surface instead of directly estimating the end-effector
+pose. To this extent, a soft-region-growing algorithm is presented for
+effective plane segmentation, even in the case of curved surfaces. An
+optimization-based quality metric is then used for the evaluation of grasp
+points to ensure indirect force closure. The proposed grasp framework is
+compared with the existing state-of-the-art grasp planning approach, Grasp pose
+detection (GPD), as a baseline over multiple simulated objects. The
+effectiveness of the proposed approach in comparison to GPD is also evaluated
+in a real-world setting using image and point-cloud data, with the planned
+grasps being executed using a ROBOTIQ gripper and UR5 manipulator.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2504.19699v1' target='_blank'>Optimal Virtual Power Plant Investment Planning via Time Series
+  Aggregation with Bounded Error</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Luca Santosuosso, Sonja Wogrin</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-04-28 11:54:12</h6>
+<p class='card-text'>This study addresses the investment planning problem of a virtual power plant
+(VPP), formulated as a mixed-integer linear programming (MILP) model. As the
+number of binary variables increases and the investment time horizon extends,
+the problem can become computationally intractable. To mitigate this issue,
+time series aggregation (TSA) methods are commonly employed. However, since TSA
+typically results in a loss of accuracy, it is standard practice to derive
+bounds to control the associated error. Existing methods validate these bounds
+only in the linear case, and when applied to MILP models, they often yield
+heuristics that may even produce infeasible solutions. To bridge this gap, we
+propose an iterative TSA method for solving the VPP investment planning problem
+formulated as a MILP model, while ensuring a bounded error in the objective
+function. Our main theoretical contribution is to formally demonstrate that the
+derived bounds remain valid at each iteration. Notably, the proposed method
+consistently guarantees feasible solutions throughout the iterative process.
+Numerical results show that the proposed TSA method achieves superior
+computational efficiency compared to standard full-scale optimization.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2504.19683v1' target='_blank'>GPA-RAM: Grasp-Pretraining Augmented Robotic Attention Mamba for Spatial
+  Task Learning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Juyi Sheng, Yangjun Liu, Sheng Xu, Zhixin Yang, Mengyuan Liu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-04-28 11:20:51</h6>
+<p class='card-text'>Most existing robot manipulation methods prioritize task learning by
+enhancing perception through complex deep network architectures. However, they
+face challenges in real-time collision-free planning. Hence, Robotic Attention
+Mamba (RAM) is designed for refined planning. Specifically, by integrating
+Mamba and parallel single-view attention, RAM aligns multi-view vision and
+task-related language features, ensuring efficient fine-grained task planning
+with linear complexity and robust real-time performance. Nevertheless, it has
+the potential for further improvement in high-precision grasping and
+manipulation. Thus, Grasp-Pretraining Augmentation (GPA) is devised, with a
+grasp pose feature extractor pretrained utilizing object grasp poses directly
+inherited from whole-task demonstrations. Subsequently, the extracted grasp
+features are fused with the spatially aligned planning features from RAM
+through attention-based Pre-trained Location Fusion, preserving high-resolution
+grasping cues overshadowed by an overemphasis on global planning. To summarize,
+we propose Grasp-Pretraining Augmented Robotic Attention Mamba (GPA-RAM),
+dividing spatial task learning into RAM for planning skill learning and GPA for
+grasping skill learning. GPA-RAM demonstrates superior performance across three
+robot systems with distinct camera configurations in simulation and the real
+world. Compared with previous state-of-the-art methods, it improves the
+absolute success rate by 8.2% (from 79.3% to 87.5%) on the RLBench multi-task
+benchmark and 40\% (from 16% to 56%), 12% (from 86% to 98%) on the ALOHA
+bimanual manipulation tasks, while delivering notably faster inference.
+Furthermore, experimental results demonstrate that both RAM and GPA enhance
+task learning, with GPA proving robust to different architectures of pretrained
+grasp pose feature extractors. The website is:
+https://logssim.github.io/GPA\_RAM\_website/.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2504.19654v1' target='_blank'>Transformation & Translation Occupancy Grid Mapping: 2-Dimensional Deep
+  Learning Refined SLAM</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Leon Davies, Baihua Li, Mohamad Saada, Simon Sølvsten, Qinggang Meng</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-04-28 10:13:47</h6>
+<p class='card-text'>SLAM (Simultaneous Localisation and Mapping) is a crucial component for
+robotic systems, providing a map of an environment, the current location and
+previous trajectory of a robot. While 3D LiDAR SLAM has received notable
+improvements in recent years, 2D SLAM lags behind. Gradual drifts in odometry
+and pose estimation inaccuracies hinder modern 2D LiDAR-odometry algorithms in
+large complex environments. Dynamic robotic motion coupled with inherent
+estimation based SLAM processes introduce noise and errors, degrading map
+quality. Occupancy Grid Mapping (OGM) produces results that are often noisy and
+unclear. This is due to the fact that evidence based mapping represents maps
+according to uncertain observations. This is why OGMs are so popular in
+exploration or navigation tasks. However, this also limits OGMs' effectiveness
+for specific mapping based tasks such as floor plan creation in complex scenes.
+To address this, we propose our novel Transformation and Translation Occupancy
+Grid Mapping (TT-OGM). We adapt and enable accurate and robust pose estimation
+techniques from 3D SLAM to the world of 2D and mitigate errors to improve map
+quality using Generative Adversarial Networks (GANs). We introduce a novel data
+generation method via deep reinforcement learning (DRL) to build datasets large
+enough for training a GAN for SLAM error correction. We demonstrate our SLAM in
+real-time on data collected at Loughborough University. We also prove its
+generalisability on a variety of large complex environments on a collection of
+large scale well-known 2D occupancy maps. Our novel approach enables the
+creation of high quality OGMs in complex scenes, far surpassing the
+capabilities of current SLAM algorithms in terms of quality, accuracy and
+reliability.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2504.19653v1' target='_blank'>GAN-SLAM: Real-Time GAN Aided Floor Plan Creation Through SLAM</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Leon Davies, Baihua Li, Mohamad Saada, Simon Sølvsten, Qinggang Meng</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-04-28 10:13:38</h6>
+<p class='card-text'>SLAM is a fundamental component of modern autonomous systems, providing
+robots and their operators with a deeper understanding of their environment.
+SLAM systems often encounter challenges due to the dynamic nature of robotic
+motion, leading to inaccuracies in mapping quality, particularly in 2D
+representations such as Occupancy Grid Maps. These errors can significantly
+degrade map quality, hindering the effectiveness of specific downstream tasks
+such as floor plan creation. To address this challenge, we introduce our novel
+'GAN-SLAM', a new SLAM approach that leverages Generative Adversarial Networks
+to clean and complete occupancy grids during the SLAM process, reducing the
+impact of noise and inaccuracies introduced on the output map. We adapt and
+integrate accurate pose estimation techniques typically used for 3D SLAM into a
+2D form. This enables the quality improvement 3D LiDAR-odometry has seen in
+recent years to be effective for 2D representations. Our results demonstrate
+substantial improvements in map fidelity and quality, with minimal noise and
+errors, affirming the effectiveness of GAN-SLAM for real-world mapping
+applications within large-scale complex environments. We validate our approach
+on real-world data operating in real-time, and on famous examples of 2D maps.
+The improved quality of the output map enables new downstream tasks, such as
+floor plan drafting, further enhancing the capabilities of autonomous systems.
+Our novel approach to SLAM offers a significant step forward in the field,
+improving the usability for SLAM in mapping-based tasks, and offers insight
+into the usage of GANs for OGM error correction.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2504.19652v1' target='_blank'>Robot Motion Planning using One-Step Diffusion with Noise-Optimized
+  Approximate Motions</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Tomoharu Aizu, Takeru Oba, Yuki Kondo, Norimichi Ukita</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-04-28 10:10:17</h6>
+<p class='card-text'>This paper proposes an image-based robot motion planning method using a
+one-step diffusion model. While the diffusion model allows for high-quality
+motion generation, its computational cost is too expensive to control a robot
+in real time. To achieve high quality and efficiency simultaneously, our
+one-step diffusion model takes an approximately generated motion, which is
+predicted directly from input images. This approximate motion is optimized by
+additive noise provided by our novel noise optimizer. Unlike general isotropic
+noise, our noise optimizer adjusts noise anisotropically depending on the
+uncertainty of each motion element. Our experimental results demonstrate that
+our method outperforms state-of-the-art methods while maintaining its
+efficiency by one-step diffusion.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2504.19593v1' target='_blank'>A Time-dependent Risk-aware distributed Multi-Agent Path Finder based on
+  A*</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:S Nordström, Y Bai, B Lindqvist, G Nikolakopoulos</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-04-28 08:57:12</h6>
+<p class='card-text'>Multi-Agent Path-Finding (MAPF) focuses on the collaborative planning of
+paths for multiple agents within shared spaces, aiming for collision-free
+navigation. Conventional planning methods often overlook the presence of other
+agents, which can result in conflicts. In response, this article introduces the
+A$^*_+$T algorithm, a distributed approach that improves coordination among
+agents by anticipating their positions based on their movement speeds. The
+algorithm also considers dynamic obstacles, assessing potential collisions with
+respect to observed speeds and trajectories, thereby facilitating
+collision-free path planning in environments populated by other agents and
+moving objects. It incorporates a risk layer surrounding both dynamic and
+static entities, enhancing its utility in real-world applications. Each agent
+functions autonomously while being mindful of the paths chosen by others,
+effectively addressing the complexities inherent in multi-agent situations. The
+performance of A$^*_+$T has been rigorously tested in the Gazebo simulation
+environment and benchmarked against established approaches such as CBS, ECBS,
+and SIPP. Furthermore, the algorithm has shown competence in single-agent
+experiments, with results demonstrating its effectiveness in managing dynamic
+obstacles and affirming its practical relevance across various scenarios.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2504.19589v1' target='_blank'>Magnifier: A Multi-grained Neural Network-based Architecture for Burned
+  Area Delineation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Daniele Rege Cambrin, Luca Colomba, Paolo Garza</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-04-28 08:51:54</h6>
+<p class='card-text'>In crisis management and remote sensing, image segmentation plays a crucial
+role, enabling tasks like disaster response and emergency planning by analyzing
+visual data. Neural networks are able to analyze satellite acquisitions and
+determine which areas were affected by a catastrophic event. The problem in
+their development in this context is the data scarcity and the lack of
+extensive benchmark datasets, limiting the capabilities of training large
+neural network models. In this paper, we propose a novel methodology, namely
+Magnifier, to improve segmentation performance with limited data availability.
+The Magnifier methodology is applicable to any existing encoder-decoder
+architecture, as it extends a model by merging information at different
+contextual levels through a dual-encoder approach: a local and global encoder.
+Magnifier analyzes the input data twice using the dual-encoder approach. In
+particular, the local and global encoders extract information from the same
+input at different granularities. This allows Magnifier to extract more
+information than the other approaches given the same set of input images.
+Magnifier improves the quality of the results of +2.65% on average IoU while
+leading to a restrained increase in terms of the number of trainable parameters
+compared to the original model. We evaluated our proposed approach with
+state-of-the-art burned area segmentation models, demonstrating, on average,
+comparable or better performances in less than half of the GFLOPs.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2504.19580v1' target='_blank'>ARTEMIS: Autoregressive End-to-End Trajectory Planning with Mixture of
+  Experts for Autonomous Driving</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Renju Feng, Ning Xi, Duanfeng Chu, Rukang Wang, Zejian Deng, Anzheng Wang, Liping Lu, Jinxiang Wang, Yanjun Huang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-04-28 08:41:08</h6>
+<p class='card-text'>This paper presents ARTEMIS, an end-to-end autonomous driving framework that
+combines autoregressive trajectory planning with Mixture-of-Experts (MoE).
+Traditional modular methods suffer from error propagation, while existing
+end-to-end models typically employ static one-shot inference paradigms that
+inadequately capture the dynamic changes of the environment. ARTEMIS takes a
+different method by generating trajectory waypoints sequentially, preserves
+critical temporal dependencies while dynamically routing scene-specific queries
+to specialized expert networks. It effectively relieves trajectory quality
+degradation issues encountered when guidance information is ambiguous, and
+overcomes the inherent representational limitations of singular network
+architectures when processing diverse driving scenarios. Additionally, we use a
+lightweight batch reallocation strategy that significantly improves the
+training speed of the Mixture-of-Experts model. Through experiments on the
+NAVSIM dataset, ARTEMIS exhibits superior competitive performance, achieving
+87.0 PDMS and 83.1 EPDMS with ResNet-34 backbone, demonstrates state-of-the-art
+performance on multiple metrics.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2504.19448v1' target='_blank'>An End-to-End Framework for Optimizing Foot Trajectory and Force in Dry
+  Adhesion Legged Wall-Climbing Robots</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jichun Xiao, Jiawei Nie, Lina Hao, Zhi Li</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-04-28 03:25:32</h6>
+<p class='card-text'>Foot trajectory planning for dry adhesion legged climbing robots presents
+challenges, as the phases of foot detachment, swing, and adhesion significantly
+influence the adhesion and detachment forces essential for stable climbing. To
+tackle this, an end-to-end foot trajectory and force optimization framework
+(FTFOF) is proposed, which optimizes foot adhesion and detachment forces
+through trajectory adjustments. This framework accepts general foot trajectory
+constraints and user-defined parameters as input, ultimately producing an
+optimal single foot trajectory. It integrates three-segment $C^2$ continuous
+Bezier curves, tailored to various foot structures, enabling the generation of
+effective climbing trajectories. A dilate-based GRU predictive model
+establishes the relationship between foot trajectories and the corresponding
+foot forces. Multi-objective optimization algorithms, combined with a
+redundancy hierarchical strategy, identify the most suitable foot trajectory
+for specific tasks, thereby ensuring optimal performance across detachment
+force, adhesion force and vibration amplitude. Experimental validation on the
+quadruped climbing robot MST-M3F showed that, compared to commonly used
+trajectories in existing legged climbing robots, the proposed framework
+achieved reductions in maximum detachment force by 28 \%, vibration amplitude
+by 82 \%, which ensures the stable climbing of dry adhesion legged climbing
+robots.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2504.19432v1' target='_blank'>EarthMapper: Visual Autoregressive Models for Controllable Bidirectional
+  Satellite-Map Translation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Zhe Dong, Yuzhe Sun, Tianzhu Liu, Wangmeng Zuo, Yanfeng Gu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-04-28 02:41:12</h6>
+<p class='card-text'>Satellite imagery and maps, as two fundamental data modalities in remote
+sensing, offer direct observations of the Earth's surface and
+human-interpretable geographic abstractions, respectively. The task of
+bidirectional translation between satellite images and maps (BSMT) holds
+significant potential for applications in urban planning and disaster response.
+However, this task presents two major challenges: first, the absence of precise
+pixel-wise alignment between the two modalities substantially complicates the
+translation process; second, it requires achieving both high-level abstraction
+of geographic features and high-quality visual synthesis, which further
+elevates the technical complexity. To address these limitations, we introduce
+EarthMapper, a novel autoregressive framework for controllable bidirectional
+satellite-map translation. EarthMapper employs geographic coordinate embeddings
+to anchor generation, ensuring region-specific adaptability, and leverages
+multi-scale feature alignment within a geo-conditioned joint scale
+autoregression (GJSA) process to unify bidirectional translation in a single
+training cycle. A semantic infusion (SI) mechanism is introduced to enhance
+feature-level consistency, while a key point adaptive guidance (KPAG) mechanism
+is proposed to dynamically balance diversity and precision during inference. We
+further contribute CNSatMap, a large-scale dataset comprising 302,132 precisely
+aligned satellite-map pairs across 38 Chinese cities, enabling robust
+benchmarking. Extensive experiments on CNSatMap and the New York dataset
+demonstrate EarthMapper's superior performance, achieving significant
+improvements in visual realism, semantic consistency, and structural fidelity
+over state-of-the-art methods. Additionally, EarthMapper excels in zero-shot
+tasks like in-painting, out-painting and coordinate-conditional generation,
+underscoring its versatility.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2504.19429v1' target='_blank'>Wombat, the high intensity diffractometer in operation at the Australian
+  Centre for Neutron Scattering</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Helen E. Maynard-Casely, Siobhan M. Tobin, Chin-Wei Wang, Vanessa K. Peterson, James R. Hester, Andrew J. Studer</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-04-28 02:37:15</h6>
+<p class='card-text'>Wombat is the high intensity neutron diffractometer in operation at the
+Australian Centre for Neutron Scattering. While primarily used as a high-speed
+powder diffractometer, the high-performance area detector allows both texture
+characterisation and single-crystal measurements. The instrument can be
+configured over a large range of operational parameters, which are
+characterised in this contribution to aid experimental planning. Wombat is
+particularly optimised for the study of materials in situ and in operando using
+the wide range of sample environment available at the centre. Over 17 years of
+operation, Wombat has been used to explore a broad range of materials,
+including: novel hydrogen-storage materials, negative-thermal-expansion
+materials, cryogenic minerals, piezoelectrics, high performance battery anodes
+and cathodes, high strength alloys, multiferroics, superconductors and novel
+magnetic materials. This paper will highlight the capacity of the instrument,
+recent comprehensive characterisation measurements, and how the instrument has
+been utilised by our user community to date.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2504.19401v1' target='_blank'>Innovative Integration of 4D Cardiovascular Reconstruction and Hologram:
+  A New Visualization Tool for Coronary Artery Bypass Grafting Planning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Shuo Wang, Tong Ren, Nan Cheng, Li Zhang, Rong Wang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-04-28 00:56:06</h6>
+<p class='card-text'>Background: Coronary artery bypass grafting (CABG) planning requires advanced
+spatial visualization and consideration of coronary artery depth,
+calcification, and pericardial adhesions. Objective: To develop and evaluate a
+dynamic cardiovascular holographic visualization tool for preoperative CABG
+planning. Methods: Using 4D cardiac computed tomography angiography data from
+14 CABG candidates, we developed a semi-automated workflow for time-resolved
+segmentation of cardiac structures, epicardial adipose tissue (EAT), and
+coronary arteries with calcium scoring. The workflow incorporated methods for
+cardiac segmentation, coronary calcification quantification, visualization of
+coronary depth within EAT, and pericardial adhesion assessment through motion
+analysis. Dynamic cardiovascular holograms were displayed using the Looking
+Glass platform. Thirteen cardiac surgeons evaluated the tool using a Likert
+scale. Additionally, pericardial adhesion scores from holograms of 21 patients
+(including seven undergoing secondary cardiac surgeries) were compared with
+intraoperative findings. Results: Surgeons rated the visualization tool highly
+for preoperative planning utility (mean Likert score: 4.57/5.0). Hologram-based
+pericardial adhesion scoring strongly correlated with intraoperative findings
+(r=0.786, P<0.001). Conclusion: This study establishes a visualization
+framework for CABG planning that produces clinically relevant dynamic holograms
+from patient-specific data, with clinical feedback confirming its effectiveness
+for preoperative planning.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2504.19399v1' target='_blank'>Follow Everything: A Leader-Following and Obstacle Avoidance Framework
+  with Goal-Aware Adaptation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Qianyi Zhang, Shijian Ma, Boyi Liu, Jingtai Liu, Jianhao Jiao, Dimitrios Kanoulas</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-04-28 00:42:45</h6>
+<p class='card-text'>Robust and flexible leader-following is a critical capability for robots to
+integrate into human society. While existing methods struggle to generalize to
+leaders of arbitrary form and often fail when the leader temporarily leaves the
+robot's field of view, this work introduces a unified framework addressing both
+challenges. First, traditional detection models are replaced with a
+segmentation model, allowing the leader to be anything. To enhance recognition
+robustness, a distance frame buffer is implemented that stores leader
+embeddings at multiple distances, accounting for the unique characteristics of
+leader-following tasks. Second, a goal-aware adaptation mechanism is designed
+to govern robot planning states based on the leader's visibility and motion,
+complemented by a graph-based planner that generates candidate trajectories for
+each state, ensuring efficient following with obstacle avoidance. Simulations
+and real-world experiments with a legged robot follower and various leaders
+(human, ground robot, UAV, legged robot, stop sign) in both indoor and outdoor
+environments show competitive improvements in follow success rate, reduced
+visual loss duration, lower collision rate, and decreased leader-follower
+distance.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2504.19339v1' target='_blank'>Explanatory Summarization with Discourse-Driven Planning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Dongqi Liu, Xi Yu, Vera Demberg, Mirella Lapata</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-04-27 19:47:36</h6>
+<p class='card-text'>Lay summaries for scientific documents typically include explanations to help
+readers grasp sophisticated concepts or arguments. However, current automatic
+summarization methods do not explicitly model explanations, which makes it
+difficult to align the proportion of explanatory content with human-written
+summaries. In this paper, we present a plan-based approach that leverages
+discourse frameworks to organize summary generation and guide explanatory
+sentences by prompting responses to the plan. Specifically, we propose two
+discourse-driven planning strategies, where the plan is conditioned as part of
+the input or part of the output prefix, respectively. Empirical experiments on
+three lay summarization datasets show that our approach outperforms existing
+state-of-the-art methods in terms of summary quality, and it enhances model
+robustness, controllability, and mitigates hallucination.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2504.19335v1' target='_blank'>Exploring the Impact of Integrating UI Testing in CI/CD Workflows on
+  GitHub</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Xiaoxiao Gan, Chris Brown</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-04-27 19:13:14</h6>
+<p class='card-text'>Background: User interface (UI) testing, which is used to verify the behavior
+of interactive elements in applications, plays an important role in software
+development and quality assurance. However, little is known about the adoption
+of UI testing frameworks in continuous integration and continuous delivery
+(CI/CD) workflows and their impact on open-source software development
+processes. Objective: We aim to investigate the current usage of popular UI
+testing frameworks-Selenium, Playwright and Cypress-in CI/CD pipelines among
+GitHub repositories. Our goal is to understand how UI testing tools are used in
+CI/CD processes and assess their potential impacts on open-source development
+activity and CI/CD workflows. Method: We propose an empirical study to examine
+GitHub repositories that incorporate UI testing in CI/CD workflows. Our
+exploratory evaluation will collect repositories that implement UI testing
+frameworks in configuration files for GitHub Actions workflows to inspect UI
+testing-related and non-UI testing-related workflows. Moreover, we further plan
+to collect metrics related to repository development activity and GitHub
+Actions workflows to conduct comparative and time series analyses exploring
+whether UI testing integration and usage within CI/CD processes has an impact
+on open-source development.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2504.19322v1' target='_blank'>Learned Perceptive Forward Dynamics Model for Safe and Platform-aware
+  Robotic Navigation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Pascal Roth, Jonas Frey, Cesar Cadena, Marco Hutter</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-04-27 18:27:28</h6>
+<p class='card-text'>Ensuring safe navigation in complex environments requires accurate real-time
+traversability assessment and understanding of environmental interactions
+relative to the robot`s capabilities. Traditional methods, which assume
+simplified dynamics, often require designing and tuning cost functions to
+safely guide paths or actions toward the goal. This process is tedious,
+environment-dependent, and not generalizable.To overcome these issues, we
+propose a novel learned perceptive Forward Dynamics Model (FDM) that predicts
+the robot`s future state conditioned on the surrounding geometry and history of
+proprioceptive measurements, proposing a more scalable, safer, and
+heuristic-free solution. The FDM is trained on multiple years of simulated
+navigation experience, including high-risk maneuvers, and real-world
+interactions to incorporate the full system dynamics beyond rigid body
+simulation. We integrate our perceptive FDM into a zero-shot Model Predictive
+Path Integral (MPPI) planning framework, leveraging the learned mapping between
+actions, future states, and failure probability. This allows for optimizing a
+simplified cost function, eliminating the need for extensive cost-tuning to
+ensure safety. On the legged robot ANYmal, the proposed perceptive FDM improves
+the position estimation by on average 41% over competitive baselines, which
+translates into a 27% higher navigation success rate in rough simulation
+environments. Moreover, we demonstrate effective sim-to-real transfer and
+showcase the benefit of training on synthetic and real data. Code and models
+are made publicly available under https://github.com/leggedrobotics/fdm.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2504.19199v1' target='_blank'>HetGL2R: Learning to Rank Critical Road Segments via Attributed
+  Heterogeneous Graph Random Walks</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Ming Xu, Jinrong Xiang, Zilong Xie, Xiangfu Meng</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-04-27 11:32:41</h6>
+<p class='card-text'>Accurately identifying critical nodes with high spatial influence in road
+networks is essential for enhancing the efficiency of traffic management and
+urban planning. However, existing node importance ranking methods mainly rely
+on structural features and topological information, often overlooking critical
+factors such as origin-destination (OD) demand and route information. This
+limitation leaves considerable room for improvement in ranking accuracy. To
+address this issue, we propose HetGL2R, an attributed heterogeneous graph
+learning approach for ranking node importance in road networks. This method
+introduces a tripartite graph (trip graph) to model the structure of the road
+network, integrating OD demand, route choice, and various structural features
+of road segments. Based on the trip graph, we design an embedding method to
+learn node representations that reflect the spatial influence of road segments.
+The method consists of a heterogeneous random walk sampling algorithm
+(HetGWalk) and a Transformer encoder. HetGWalk constructs multiple
+attribute-guided graphs based on the trip graph to enrich the diversity of
+semantic associations between nodes. It then applies a joint random walk
+mechanism to convert both topological structures and node attributes into
+sequences, enabling the encoder to capture spatial dependencies more
+effectively among road segments. Finally, a listwise ranking strategy is
+employed to evaluate node importance. To validate the performance of our
+method, we construct two synthetic datasets using SUMO based on simulated road
+networks. Experimental results demonstrate that HetGL2R significantly
+outperforms baselines in incorporating OD demand and route choice information,
+achieving more accurate and robust node ranking. Furthermore, we conduct a case
+study using real-world taxi trajectory data from Beijing, further verifying the
+practicality of the proposed method.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2504.19193v1' target='_blank'>Trajectory Planning with Model Predictive Control for Obstacle Avoidance
+  Considering Prediction Uncertainty</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Eric Schöneberg, Michael Schröder, Daniel Görges, Hans D. Schotten</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-04-27 11:00:19</h6>
+<p class='card-text'>This paper introduces a novel trajectory planner for autonomous robots,
+specifically designed to enhance navigation by incorporating dynamic obstacle
+avoidance within the Robot Operating System 2 (ROS2) and Navigation 2 (Nav2)
+framework. The proposed method utilizes Model Predictive Control (MPC) with a
+focus on handling the uncertainties associated with the movement prediction of
+dynamic obstacles. Unlike existing Nav2 trajectory planners which primarily
+deal with static obstacles or react to the current position of dynamic
+obstacles, this planner predicts future obstacle positions using a stochastic
+Vector Auto-Regressive Model (VAR). The obstacles' future positions are
+represented by probability distributions, and collision avoidance is achieved
+through constraints based on the Mahalanobis distance, ensuring the robot
+avoids regions where obstacles are likely to be. This approach considers the
+robot's kinodynamic constraints, enabling it to track a reference path while
+adapting to real-time changes in the environment. The paper details the
+implementation, including obstacle prediction, tracking, and the construction
+of feasible sets for MPC. Simulation results in a Gazebo environment
+demonstrate the effectiveness of this method in scenarios where robots must
+navigate around each other, showing improved collision avoidance capabilities.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2504.19158v1' target='_blank'>SnuggleSense: Empowering Online Harm Survivors Through a Structured
+  Sensemaking Process</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Sijia Xiao, Haodi Zou, Amy Mathews, Jingshu Rui, Coye Cheshire, Niloufar Salehi</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-04-27 08:30:11</h6>
+<p class='card-text'>Online interpersonal harm, such as cyberbullying and sexual harassment,
+remains a pervasive issue on social media platforms. Traditional approaches,
+primarily content moderation, often overlook survivors' needs and agency. We
+introduce SnuggleSense, a system that empowers survivors through structured
+sensemaking. Inspired by restorative justice practices, SnuggleSense guides
+survivors through reflective questions, offers personalized recommendations
+from similar survivors, and visualizes plans using interactive sticky notes. A
+controlled experiment demonstrates that SnuggleSense significantly enhances
+sensemaking compared to an unstructured process of making sense of the harm. We
+argue that SnuggleSense fosters community awareness, cultivates a supportive
+survivor network, and promotes a restorative justice-oriented approach toward
+restoration and healing. We also discuss design insights, such as tailoring
+informational support and providing guidance while preserving survivors'
+agency.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2504.19072v1' target='_blank'>Geometric Gait Optimization for Kinodynamic Systems Using a Lie Group
+  Integrator</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yanhao Yang, Ross L. Hatton</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-04-27 01:49:35</h6>
+<p class='card-text'>This paper presents a gait optimization and motion planning framework for a
+class of locomoting systems with mixed kinematic and dynamic properties. Using
+Lagrangian reduction and differential geometry, we derive a general dynamic
+model that incorporates second-order dynamics and nonholonomic constraints,
+applicable to kinodynamic systems such as wheeled robots with nonholonomic
+constraints as well as swimming robots with nonisotropic fluid-added inertia
+and hydrodynamic drag. Building on Lie group integrators and group symmetries,
+we develop a variational gait optimization method for kinodynamic systems. By
+integrating multiple gaits and their transitions, we construct comprehensive
+motion plans that enable a wide range of motions for these systems. We evaluate
+our framework on three representative examples: roller racer, snakeboard, and
+swimmer. Simulation and hardware experiments demonstrate diverse motions,
+including acceleration, steady-state maintenance, gait transitions, and
+turning. The results highlight the effectiveness of the proposed method and its
+potential for generalization to other biological and robotic locomoting
+systems.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2504.19035v1' target='_blank'>An analytic model for description of muonic oxygen X-ray time
+  distribution in muonic experiments</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:P. Danev, I. Boradjiev, H. Tonchev</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-04-26 22:02:03</h6>
+<p class='card-text'>We propose an analytical model and perform numerical simulations to study the
+time distribution of the characteristic muonic oxygen X-ray emission following
+muon transfer from muonic hydrogen to oxygen in a $H_2+O_2$ gas mixture. The
+model accounts for all fundamental processes that alter the kinetic energy and
+spin distribution of muonic hydrogen atoms. The impact of the uncertainties in
+various experimental parameters on the precision of the computed results is
+studied in detail by means of Monte Carlo method. Verification against
+available experimental data reveals the potential of this approach for both
+description and parameter optimization in planning and analysis of muonic
+experiments.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js'></script>
+</body>
+</html>
