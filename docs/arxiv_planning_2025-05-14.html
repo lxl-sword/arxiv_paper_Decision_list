@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>planning - 2025-05-14</title>
+<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap' rel='stylesheet'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css'>
+<style>
+body {
+font-family: 'Roboto', sans-serif;
+background-color: #f5f7fa;
+padding: 20px;
+}
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.card-title {
+    font-weight: 700;
+}
+.card:hover {
+    transform: scale(1.02);
+    transition: 0.3s ease-in-out;
+}
+</style>
+</head>
+<body>
+<div class='container'>
+<h1 class='text-center my-4'><i class='fas fa-book'></i>planning - 2025-05-14</h1>
+<div class='row'>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2505.08765v1' target='_blank'>Towards Autonomous UAV Visual Object Search in City Space: Benchmark and
+  Agentic Methodology</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yatai Ji, Zhengqiu Zhu, Yong Zhao, Beidan Liu, Chen Gao, Yihao Zhao, Sihang Qiu, Yue Hu, Quanjun Yin, Yong Li</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-05-13 17:34:54</h6>
+<p class='card-text'>Aerial Visual Object Search (AVOS) tasks in urban environments require
+Unmanned Aerial Vehicles (UAVs) to autonomously search for and identify target
+objects using visual and textual cues without external guidance. Existing
+approaches struggle in complex urban environments due to redundant semantic
+processing, similar object distinction, and the exploration-exploitation
+dilemma. To bridge this gap and support the AVOS task, we introduce CityAVOS,
+the first benchmark dataset for autonomous search of common urban objects. This
+dataset comprises 2,420 tasks across six object categories with varying
+difficulty levels, enabling comprehensive evaluation of UAV agents' search
+capabilities. To solve the AVOS tasks, we also propose PRPSearcher
+(Perception-Reasoning-Planning Searcher), a novel agentic method powered by
+multi-modal large language models (MLLMs) that mimics human three-tier
+cognition. Specifically, PRPSearcher constructs three specialized maps: an
+object-centric dynamic semantic map enhancing spatial perception, a 3D
+cognitive map based on semantic attraction values for target reasoning, and a
+3D uncertainty map for balanced exploration-exploitation search. Also, our
+approach incorporates a denoising mechanism to mitigate interference from
+similar objects and utilizes an Inspiration Promote Thought (IPT) prompting
+mechanism for adaptive action planning. Experimental results on CityAVOS
+demonstrate that PRPSearcher surpasses existing baselines in both success rate
+and search efficiency (on average: +37.69% SR, +28.96% SPL, -30.69% MSS, and
+-46.40% NE). While promising, the performance gap compared to humans highlights
+the need for better semantic reasoning and spatial exploration capabilities in
+AVOS tasks. This work establishes a foundation for future advances in embodied
+target search. Dataset and source code are available at
+https://anonymous.4open.science/r/CityAVOS-3DF8.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2505.08729v1' target='_blank'>Assumption-robust Causal Inference</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Aditya Ghosh, Dominik Rothenhäusler</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-05-13 16:39:19</h6>
+<p class='card-text'>In observational causal inference, it is common to encounter multiple
+adjustment sets that appear equally plausible. It is often untestable which of
+these adjustment sets are valid to adjust for (i.e., satisfies ignorability).
+This discrepancy can pose practical challenges as it is typically unclear how
+to reconcile multiple, possibly conflicting estimates of the average treatment
+effect (ATE). A naive approach is to report the whole range (convex hull of the
+union) of the resulting confidence intervals. However, the width of this
+interval might not shrink to zero in large samples and can be unnecessarily
+wide in real applications. To address this issue, we propose a summary
+procedure that generates a single estimate, one confidence interval, and
+identifies a set of units for which the causal effect estimate remains valid,
+provided at least one adjustment set is valid. The width of our proposed
+confidence interval shrinks to zero with sample size at $n^{-1/2}$ rate, unlike
+the original range which is of constant order. Thus, our assumption-robust
+approach enables reliable causal inference on the ATE even in scenarios where
+most of the adjustment sets are invalid. Admittedly, this robustness comes at a
+cost: our inferential guarantees apply to a target population close to, but
+different from, the one originally intended. We use synthetic and real-data
+examples to demonstrate that our proposed procedure provides substantially
+tighter confidence intervals for the ATE as compared to the whole range. In
+particular, for a real-world dataset on 401(k) retirement plans our method
+produces a confidence interval 50\% shorter than the whole range of confidence
+intervals based on multiple adjustment sets.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2505.08724v1' target='_blank'>Optimal Trajectory Planning with Collision Avoidance for Autonomous
+  Vehicle Maneuvering</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jason Zalev</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-05-13 16:36:20</h6>
+<p class='card-text'>To perform autonomous driving maneuvers, such as parallel or perpendicular
+parking, a vehicle requires continual speed and steering adjustments to follow
+a generated path. In consequence, the path's quality is a limiting factor of
+the vehicle maneuver's performance. While most path planning approaches include
+finding a collision-free route, optimal trajectory planning involves solving
+the best transition from initial to final states, minimizing the action over
+all paths permitted by a kinematic model. Here we propose a novel method based
+on sequential convex optimization, which permits flexible and efficient optimal
+trajectory generation. The objective is to achieve the fastest time, shortest
+distance, and fewest number of path segments to satisfy motion requirements,
+while avoiding sensor blind-spots. In our approach, vehicle kinematics are
+represented by a discretized Dubins model. To avoid collisions, each waypoint
+is constrained by linear inequalities representing closest distance of
+obstacles to a polygon specifying the vehicle's extent. To promote smooth and
+valid trajectories, the solved kinematic state and control variables are
+constrained and regularized by penalty terms in the model's cost function,
+which enforces physical restrictions including limits for steering angle,
+acceleration and speed. In this paper, we analyze trajectories obtained for
+several parking scenarios. Results demonstrate efficient and collision-free
+motion generated by the proposed technique.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2505.08691v1' target='_blank'>VizCV: AI-assisted visualization of researchers' publications tracks</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Vladimír Lazárik, Marco Agus, Barbora Kozlíková, Pere-Pau Vázquez</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-05-13 15:47:59</h6>
+<p class='card-text'>Analyzing how the publication records of scientists and research groups have
+evolved over the years is crucial for assessing their expertise since it can
+support the management of academic environments by assisting with career
+planning and evaluation. We introduce VizCV, a novel web-based end-to-end
+visual analytics framework that enables the interactive exploration of
+researchers' scientific trajectories. It incorporates AI-assisted analysis and
+supports automated reporting of career evolution. Our system aims to model
+career progression through three key dimensions: a) research topic evolution to
+detect and visualize shifts in scholarly focus over time, b) publication record
+and the corresponding impact, c) collaboration dynamics depicting the growth
+and transformation of a researcher's co-authorship network. AI-driven insights
+provide automated explanations of career transitions, detecting significant
+shifts in research direction, impact surges, or collaboration expansions. The
+system also supports comparative analysis between researchers, allowing users
+to compare topic trajectories and impact growth. Our interactive, multi-tab and
+multiview system allows for the exploratory analysis of career milestones under
+different perspectives, such as the most impactful articles, emerging research
+themes, or obtaining a detailed analysis of the contribution of the researcher
+in a subfield. The key contributions include AI/ML techniques for: a) topic
+analysis, b) dimensionality reduction for visualizing patterns and trends, c)
+the interactive creation of textual descriptions of facets of data through
+configurable prompt generation and large language models, that include key
+indicators, to help understanding the career development of individuals or
+groups.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2505.08679v1' target='_blank'>A fully flexible joint lattice position and dose optimization method for
+  LATTICE therapy</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Xin Tong, Weijie Zhang, Ya-Nan Zhu, Xue Hong, Chao Wang, Jufri Setianegara, Yuting Lin, Hao Gao</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-05-13 15:41:22</h6>
+<p class='card-text'>Lattice radiotherapy (LATTICE) is a form of spatially fractionated radiation
+therapy (SFRT) designed to deliver high doses to tumor regions while sparing
+surrounding tissues. Traditional LATTICE uses rigid vertex patterns, limiting
+adaptability for irregular tumors or those near critical organs. This study
+introduces a novel planning method with flexible vertex placement and joint
+optimization of vertex positions and dose distribution, enhancing treatment
+precision. The method integrates vertex positioning with other treatment
+variables within a constrained optimization framework, allowing dynamic
+adjustments. Results showed that plans generated with the new method (NEW)
+demonstrated superior or comparable quality to conventional LATTICE plans, with
+improvements in the optimization objective and peak-to-valley dose ratio
+(PVDR). This approach offers significant improvements in target dose conformity
+and OAR sparing, providing an enhanced LATTICE technique.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2505.08593v1' target='_blank'>MC-Swarm: Minimal-Communication Multi-Agent Trajectory Planning and
+  Deadlock Resolution for Quadrotor Swarm</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yunwoo Lee, Jungwon Park</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-05-13 14:05:07</h6>
+<p class='card-text'>For effective multi-agent trajectory planning, it is important to consider
+lightweight communication and its potential asynchrony. This paper presents a
+distributed trajectory planning algorithm for a quadrotor swarm that operates
+asynchronously and requires no communication except during the initial planning
+phase. Moreover, our algorithm guarantees no deadlock under asynchronous
+updates and absence of communication during flight. To effectively ensure these
+points, we build two main modules: coordination state updater and trajectory
+optimizer. The coordination state updater computes waypoints for each agent
+toward its goal and performs subgoal optimization while considering deadlocks,
+as well as safety constraints with respect to neighbor agents and obstacles.
+Then, the trajectory optimizer generates a trajectory that ensures collision
+avoidance even with the asynchronous planning updates of neighboring agents. We
+provide a theoretical guarantee of collision avoidance with deadlock resolution
+and evaluate the effectiveness of our method in complex simulation
+environments, including random forests and narrow-gap mazes. Additionally, to
+reduce the total mission time, we design a faster coordination state update
+using lightweight communication. Lastly, our approach is validated through
+extensive simulations and real-world experiments with cluttered environment
+scenarios.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2505.08555v1' target='_blank'>Simulation and measurement of Black Body Radiation background in a
+  Transition Edge Sensor</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:José Alejandro Rubiera Gimeno, Katharina-Sophie Isleif, Friederike Januschek, Axel Lindner, Manuel Meyer, Gulden Othman, Elmeri Rivasto, Rikhav Shah, Christina Schwemmbauer</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-05-13 13:28:05</h6>
+<p class='card-text'>The Any Light Particle Search II (ALPS II) experiment at DESY, Hamburg, is a
+Light-Shining-through-a-Wall (LSW) experiment aiming to probe the existence of
+axions and axion-like particles (ALPs), which are candidates for dark matter.
+Data collection in ALPS II is underway utilizing a heterodyne-based detection
+scheme. A complementary run for confirmation or as an alternative method is
+planned using single photon detection, requiring a sensor capable of measuring
+low-energy photons ($1064\,\mathrm{nm}$, $1.165\,\mathrm{eV}$) with high
+efficiency (higher than $50\,\%$) and a low background rate (below
+$7.7\cdot10^{-6}\,\mathrm{cps}$). To meet these requirements, we are
+investigating a tungsten Transition Edge Sensor (TES) provided by NIST, which
+operates in its superconducting transition region at millikelvin temperatures.
+This sensor exploits the drastic change in resistance caused by the absorption
+of a single photon. We find that the background observed in the setup with a
+fiber-coupled TES is consistent with Black Body Radiation (BBR) as the primary
+background contributor. A framework was developed to simulate BBR propagation
+to the TES under realistic conditions. The framework not only allows the
+exploration of background reduction strategies, such as improving the TES
+energy resolution, but also reproduces, within uncertainties, the spectral
+distribution of the observed background. These simulations have been validated
+with experimental data, in agreement with the modeled background distribution,
+and show that the improved energy resolution reduces the background rate in the
+$1064\,\mathrm{nm}$ signal region by one order of magnitude, to approximately
+$10^{-4}\,\mathrm{cps}$. However, this rate must be reduced further to meet the
+ALPS II requirements.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2505.08515v1' target='_blank'>CoVoL: A Cooperative Vocabulary Learning Game for Children with Autism</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Pawel Chodkiewicz, Pragya Verma, Grischa Liebel</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-05-13 12:48:02</h6>
+<p class='card-text'>Children with Autism commonly face difficulties in vocabulary acquisition,
+which can have an impact on their social communication. Using digital tools for
+vocabulary learning can prove beneficial for these children, as they can
+provide a predictable environment and effective individualized feedback. While
+existing work has explored the use of technology-assisted vocabulary learning
+for children with Autism, no study has incorporated turn-taking to facilitate
+learning and use of vocabulary similar to that used in real-world social
+contexts. To address this gap, we propose the design of a cooperative
+two-player vocabulary learning game, CoVoL. CoVoL allows children to engage in
+game-based vocabulary learning useful for real-world social communication
+scenarios. We discuss our first prototype and its evaluation. Additionally, we
+present planned features which are based on feedback obtained through ten
+interviews with researchers and therapists, as well as an evaluation plan for
+the final release of CoVoL.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2505.08510v1' target='_blank'>FOCI: Trajectory Optimization on Gaussian Splats</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Mario Gomez Andreu, Maximum Wilder-Smith, Victor Klemm, Vaishakh Patil, Jesus Tordesillas, Marco Hutter</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-05-13 12:40:19</h6>
+<p class='card-text'>3D Gaussian Splatting (3DGS) has recently gained popularity as a faster
+alternative to Neural Radiance Fields (NeRFs) in 3D reconstruction and view
+synthesis methods. Leveraging the spatial information encoded in 3DGS, this
+work proposes FOCI (Field Overlap Collision Integral), an algorithm that is
+able to optimize trajectories directly on the Gaussians themselves. FOCI
+leverages a novel and interpretable collision formulation for 3DGS using the
+notion of the overlap integral between Gaussians. Contrary to other approaches,
+which represent the robot with conservative bounding boxes that underestimate
+the traversability of the environment, we propose to represent the environment
+and the robot as Gaussian Splats. This not only has desirable computational
+properties, but also allows for orientation-aware planning, allowing the robot
+to pass through very tight and narrow spaces. We extensively test our algorithm
+in both synthetic and real Gaussian Splats, showcasing that collision-free
+trajectories for the ANYmal legged robot that can be computed in a few seconds,
+even with hundreds of thousands of Gaussians making up the environment. The
+project page and code are available at
+https://rffr.leggedrobotics.com/works/foci/</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2505.08444v1' target='_blank'>Symbolically-Guided Visual Plan Inference from Uncurated Video Data</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Wenyan Yang, Ahmet Tikna, Yi Zhao, Yuying Zhang, Luigi Palopoli, Marco Roveri, Joni Pajarinen</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-05-13 11:13:00</h6>
+<p class='card-text'>Visual planning, by offering a sequence of intermediate visual subgoals to a
+goal-conditioned low-level policy, achieves promising performance on
+long-horizon manipulation tasks. To obtain the subgoals, existing methods
+typically resort to video generation models but suffer from model hallucination
+and computational cost. We present Vis2Plan, an efficient, explainable and
+white-box visual planning framework powered by symbolic guidance. From raw,
+unlabeled play data, Vis2Plan harnesses vision foundation models to
+automatically extract a compact set of task symbols, which allows building a
+high-level symbolic transition graph for multi-goal, multi-stage planning. At
+test time, given a desired task goal, our planner conducts planning at the
+symbolic level and assembles a sequence of physically consistent intermediate
+sub-goal images grounded by the underlying symbolic representation. Our
+Vis2Plan outperforms strong diffusion video generation-based visual planners by
+delivering 53\% higher aggregate success rate in real robot settings while
+generating visual plans 35$\times$ faster. The results indicate that Vis2Plan
+is able to generate physically consistent image goals while offering fully
+inspectable reasoning steps.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2505.08382v1' target='_blank'>Continuous World Coverage Path Planning for Fixed-Wing UAVs using Deep
+  Reinforcement Learning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Mirco Theile, Andres R. Zapata Rodriguez, Marco Caccamo, Alberto L. Sangiovanni-Vincentelli</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-05-13 09:29:16</h6>
+<p class='card-text'>Unmanned Aerial Vehicle (UAV) Coverage Path Planning (CPP) is critical for
+applications such as precision agriculture and search and rescue. While
+traditional methods rely on discrete grid-based representations, real-world UAV
+operations require power-efficient continuous motion planning. We formulate the
+UAV CPP problem in a continuous environment, minimizing power consumption while
+ensuring complete coverage. Our approach models the environment with
+variable-size axis-aligned rectangles and UAV motion with curvature-constrained
+B\'ezier curves. We train a reinforcement learning agent using an
+action-mapping-based Soft Actor-Critic (AM-SAC) algorithm employing a
+self-adaptive curriculum. Experiments on both procedurally generated and
+hand-crafted scenarios demonstrate the effectiveness of our method in learning
+energy-efficient coverage strategies.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2505.08367v1' target='_blank'>MA-ROESL: Motion-aware Rapid Reward Optimization for Efficient Robot
+  Skill Learning from Single Videos</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Xianghui Wang, Xinming Zhang, Yanjun Chen, Xiaoyu Shen, Wei Zhang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-05-13 09:12:32</h6>
+<p class='card-text'>Vision-language models (VLMs) have demonstrated excellent high-level planning
+capabilities, enabling locomotion skill learning from video demonstrations
+without the need for meticulous human-level reward design. However, the
+improper frame sampling method and low training efficiency of current methods
+remain a critical bottleneck, resulting in substantial computational overhead
+and time costs. To address this limitation, we propose Motion-aware Rapid
+Reward Optimization for Efficient Robot Skill Learning from Single Videos
+(MA-ROESL). MA-ROESL integrates a motion-aware frame selection method to
+implicitly enhance the quality of VLM-generated reward functions. It further
+employs a hybrid three-phase training pipeline that improves training
+efficiency via rapid reward optimization and derives the final policy through
+online fine-tuning. Experimental results demonstrate that MA-ROESL
+significantly enhances training efficiency while faithfully reproducing
+locomotion skills in both simulated and real-world settings, thereby
+underscoring its potential as a robust and scalable framework for efficient
+robot locomotion skill learning from video demonstrations.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2505.08318v1' target='_blank'>A Unified Model for Cardinality Estimation by Learning from Data and
+  Queries via Sum-Product Networks</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jiawei Liu, Ju Fan, Tongyu Liu, Kai Zeng, Jiannan Wang, Quehuan Liu, Tao Ye, Nan Tang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-05-13 07:49:29</h6>
+<p class='card-text'>Cardinality estimation is a fundamental component in database systems,
+crucial for generating efficient execution plans. Despite advancements in
+learning-based cardinality estimation, existing methods may struggle to
+simultaneously optimize the key criteria: estimation accuracy, inference time,
+and storage overhead, limiting their practical applicability in real-world
+database environments. This paper introduces QSPN, a unified model that
+integrates both data distribution and query workload. QSPN achieves high
+estimation accuracy by modeling data distribution using the simple yet
+effective Sum-Product Network (SPN) structure. To ensure low inference time and
+reduce storage overhead, QSPN further partitions columns based on query access
+patterns. We formalize QSPN as a tree-based structure that extends SPNs by
+introducing two new node types: QProduct and QSplit. This paper studies the
+research challenges of developing efficient algorithms for the offline
+construction and online computation of QSPN. We conduct extensive experiments
+to evaluate QSPN in both single-table and multi-table cardinality estimation
+settings. The experimental results have demonstrated that QSPN achieves
+superior and robust performance on the three key criteria, compared with
+state-of-the-art approaches.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2505.08271v1' target='_blank'>The Evolutionary Map of the Universe: A new radio atlas for the southern
+  hemisphere sky</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:A. M. Hopkins, A. Kapinska, J. Marvil, T. Vernstrom, J. D. Collier, R. P. Norris, Y. A. Gordon, S. W. Duchesne, L. Rudnick, N. Gupta, E. Carretti, C. S. Anderson, S. Dai, G. Gürkan, D. Parkinson, I. Prandoni, S. Riggi, C. S. Saraf, Y. K. Ma, M. D. Filipović, G. Umana, B. Bahr-Kalus, B. S. Koribalski, E. Lenc, A. Ingallinera, J. Afonso, A. Ahmad, U. T. Ahmed, E. L. Alexander, H. Andernach, J. Asorey, A. J. Battisti, M. Bilicki, A. Botteon, M. J. I. Brown, M. Brüggen, M. Cowley, K. C. Dage, C. L. Hale, M. J. Hardcastle, R. Kothes, S. Lazarević, Y. -T. Lin, K. J. Luken, J. P. Moss, J. Prathap, S. F. Rahman, T. H. Reiprich, C. J. Riseley, M. Salvato, N. Seymour, S. S. Shabala, D. J. B. Smith, M. Vaccari, J. Th. van Loon, O. I. Wong, R. Z. E. Alsaberi, A. D. Asher, B. D. Ball, D. Barbosa, N. Biava, A. C. Bradley, R. Carvajal, E. J. Crawford, T. J. Galvin, M. T. Huynh, D. A. Leahy, I. Matute, V. A. Moss, C. Pappalardo, Z. J. Smeaton, V. Velović, T. Zafar</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-05-13 06:36:07</h6>
+<p class='card-text'>We present the Evolutionary Map of the Universe (EMU) survey conducted with
+the Australian Square Kilometre Array Pathfinder (ASKAP). EMU aims to deliver
+the touchstone radio atlas of the southern hemisphere. We introduce EMU and
+review its science drivers and key science goals, updated and tailored to the
+current ASKAP five-year survey plan. The development of the survey strategy and
+planned sky coverage is presented, along with the operational aspects of the
+survey and associated data analysis, together with a selection of diagnostics
+demonstrating the imaging quality and data characteristics. We give a general
+description of the value-added data pipeline and data products before
+concluding with a discussion of links to other surveys and projects and an
+outline of EMU's legacy value.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2505.08239v1' target='_blank'>ACT-R: Adaptive Camera Trajectories for 3D Reconstruction from Single
+  Image</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yizhi Wang, Mingrui Zhao, Ali Mahdavi-Amiri, Hao Zhang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-05-13 05:31:59</h6>
+<p class='card-text'>We introduce adaptive view planning to multi-view synthesis, aiming to
+improve both occlusion revelation and 3D consistency for single-view 3D
+reconstruction. Instead of generating an unordered set of views independently
+or simultaneously, we generate a sequence of views, leveraging temporal
+consistency to enhance 3D coherence. Most importantly, our view sequence is not
+determined by a pre-determined camera setup. Instead, we compute an adaptive
+camera trajectory (ACT), specifically, an orbit of camera views, which
+maximizes the visibility of occluded regions of the 3D object to be
+reconstructed. Once the best orbit is found, we feed it to a video diffusion
+model to generate novel views around the orbit, which in turn, are passed to a
+multi-view 3D reconstruction model to obtain the final reconstruction. Our
+multi-view synthesis pipeline is quite efficient since it involves no run-time
+training/optimization, only forward inferences by applying the pre-trained
+models for occlusion analysis and multi-view synthesis. Our method predicts
+camera trajectories that reveal occlusions effectively and produce consistent
+novel views, significantly improving 3D reconstruction over SOTA on the unseen
+GSO dataset, both quantitatively and qualitatively.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2505.08238v1' target='_blank'>Motion Control of High-Dimensional Musculoskeletal Systems with
+  Hierarchical Model-Based Planning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yunyue Wei, Shanning Zhuang, Vincent Zhuang, Yanan Sui</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-05-13 05:31:32</h6>
+<p class='card-text'>Controlling high-dimensional nonlinear systems, such as those found in
+biological and robotic applications, is challenging due to large state and
+action spaces. While deep reinforcement learning has achieved a number of
+successes in these domains, it is computationally intensive and time consuming,
+and therefore not suitable for solving large collections of tasks that require
+significant manual tuning. In this work, we introduce Model Predictive Control
+with Morphology-aware Proportional Control (MPC^2), a hierarchical model-based
+learning algorithm for zero-shot and near-real-time control of high-dimensional
+complex dynamical systems. MPC^2 uses a sampling-based model predictive
+controller for target posture planning, and enables robust control for
+high-dimensional tasks by incorporating a morphology-aware proportional
+controller for actuator coordination. The algorithm enables motion control of a
+high-dimensional human musculoskeletal model in a variety of motion tasks, such
+as standing, walking on different terrains, and imitating sports activities.
+The reward function of MPC^2 can be tuned via black-box optimization,
+drastically reducing the need for human-intensive reward engineering.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2505.08229v1' target='_blank'>Constrained Factor Graph Optimization for Robust Networked Pedestrian
+  Inertial Navigation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yingjie Hu, Wang Hu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-05-13 05:15:10</h6>
+<p class='card-text'>This paper presents a novel constrained Factor Graph Optimization (FGO)-based
+approach for networked inertial navigation in pedestrian localization. To
+effectively mitigate the drift inherent in inertial navigation solutions, we
+incorporate kinematic constraints directly into the nonlinear optimization
+framework. Specifically, we utilize equality constraints, such as Zero-Velocity
+Updates (ZUPTs), and inequality constraints representing the maximum allowable
+distance between body-mounted Inertial Measurement Units (IMUs) based on human
+anatomical limitations. While equality constraints are straightforwardly
+integrated as error factors, inequality constraints cannot be explicitly
+represented in standard FGO formulations. To address this, we introduce a
+differentiable softmax-based penalty term in the FGO cost function to enforce
+inequality constraints smoothly and robustly. The proposed constrained FGO
+approach leverages temporal correlations across multiple epochs, resulting in
+optimal state trajectory estimates while consistently maintaining constraint
+satisfaction. Experimental results confirm that our method outperforms
+conventional Kalman filter approaches, demonstrating its effectiveness and
+robustness for pedestrian navigation.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2505.08093v1' target='_blank'>Implicit Toolpath Generation for Functionally Graded Additive
+  Manufacturing via Gradient-Aware Slicing</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Charles Wade, Devon Beck, Robert MacCurdy</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-05-12 21:56:32</h6>
+<p class='card-text'>This paper presents a novel gradient-aware slicing method for functionally
+graded additive manufacturing (FGM) that overcomes the limitations of
+conventional toolpath planning approaches, which struggle to produce truly
+continuous gradients. By integrating multi-material gradients into the toolpath
+generation process, our method enables the fabrication of FGMs with complex
+gradients that vary seamlessly along all three axes. We leverage OpenVCAD's
+implicit representation of geometry and material fields to directly extract
+iso-contours, enabling accurate, controlled gradient toolpaths. Two novel
+strategies are introduced to integrate these gradients into the toolpath
+planning process. The first strategy maintains traditional perimeter, skin, and
+infill structures subdivided by mixture ratios, with automated 'zippering' to
+mitigate stress concentrations. The second strategy fills iso-contoured regions
+densely, printing directly against gradients to eliminate purging and reduce
+waste. Both strategies accommodate gradually changing printing parameters, such
+as mixed filament ratios, toolhead switching, and variable nozzle temperatures
+for foaming materials. This capability allows for controlled variation of
+composition, density, and other properties within a single build, expanding the
+design space for functionally graded parts. Experimental results demonstrate
+the fabrication of high-quality FGMs with complex, multi-axis gradients,
+highlighting the versatility of our method. We showcase the successful
+implementation of both strategies on a range of geometries and material
+combinations, demonstrating the potential of our approach to produce intricate
+and functional FGMs. This work provides a robust, open-source, and automated
+framework for designing and fabricating advanced FGMs, accelerating research in
+multi-material additive manufacturing.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2505.08064v1' target='_blank'>Justified Evidence Collection for Argument-based AI Fairness Assurance</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Alpay Sabuncuoglu, Christopher Burr, Carsten Maple</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-05-12 21:05:33</h6>
+<p class='card-text'>It is well recognised that ensuring fair AI systems is a complex
+sociotechnical challenge, which requires careful deliberation and continuous
+oversight across all stages of a system's lifecycle, from defining requirements
+to model deployment and deprovisioning. Dynamic argument-based assurance cases,
+which present structured arguments supported by evidence, have emerged as a
+systematic approach to evaluating and mitigating safety risks and hazards in
+AI-enabled system development and have also been extended to deal with broader
+normative goals such as fairness and explainability. This paper introduces a
+systems-engineering-driven framework, supported by software tooling, to
+operationalise a dynamic approach to argument-based assurance in two stages. In
+the first stage, during the requirements planning phase, a multi-disciplinary
+and multi-stakeholder team define goals and claims to be established (and
+evidenced) by conducting a comprehensive fairness governance process. In the
+second stage, a continuous monitoring interface gathers evidence from existing
+artefacts (e.g. metrics from automated tests), such as model, data, and use
+case documentation, to support these arguments dynamically. The framework's
+effectiveness is demonstrated through an illustrative case study in finance,
+with a focus on supporting fairness-related arguments.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2505.08060v1' target='_blank'>Land-Coverage Aware Path-Planning for Multi-UAV Swarms in Search and
+  Rescue Scenarios</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Pedro Antonio Alarcon Granadeno, Jane Cleland-Huang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-05-12 20:56:52</h6>
+<p class='card-text'>Unmanned Aerial Vehicles (UAVs) have become vital in search-and-rescue (SAR)
+missions, with autonomous mission planning improving response times and
+coverage efficiency. Early approaches primarily used path planning techniques
+such as A*, potential-fields, or Dijkstra's algorithm, while recent approaches
+have incorporated meta-heuristic frameworks like genetic algorithms and
+particle swarm optimization to balance competing objectives such as network
+connectivity, energy efficiency, and strategic placement of charging stations.
+However, terrain-aware path planning remains under-explored, despite its
+critical role in optimizing UAV SAR deployments. To address this gap, we
+present a computer-vision based terrain-aware mission planner that autonomously
+extracts and analyzes terrain topology to enhance SAR pre-flight planning. Our
+framework uses a deep segmentation network fine-tuned on our own collection of
+landcover datasets to transform satellite imagery into a structured, grid-based
+representation of the operational area. This classification enables
+terrain-specific UAV-task allocation, improving deployment strategies in
+complex environments. We address the challenge of irregular terrain partitions,
+by introducing a two-stage partitioning scheme that first evaluates terrain
+monotonicity along coordinate axes before applying a cost-based recursive
+partitioning process, minimizing unnecessary splits and optimizing path
+efficiency. Empirical validation in a high-fidelity simulation environment
+demonstrates that our approach improves search and dispatch time over multiple
+meta-heuristic techniques and against a competing state-of-the-art method.
+These results highlight its potential for large-scale SAR operations, where
+rapid response and efficient UAV coordination are critical.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2505.08057v1' target='_blank'>Stochastic Production Planning with Regime Switching: Numerical and
+  Sensitivity Analysis, Optimal Control, and Python Implementation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Dragos-Patru Covei</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-05-12 20:49:11</h6>
+<p class='card-text'>This study investigates a stochastic production planning problem with
+regime-switching parameters, inspired by economic cycles impacting production
+and inventory costs. The model considers types of goods and employs a Markov
+chain to capture probabilistic regime transitions, coupled with a
+multidimensional Brownian motion representing stochastic demand dynamics. The
+production and inventory cost optimization problem is formulated as a quadratic
+cost functional, with the solution characterized by a regime-dependent system
+of elliptic partial differential equations (PDEs). Numerical solutions to the
+PDE system are computed using a monotone iteration algorithm, enabling
+quantitative analysis. Sensitivity analysis and model risk evaluation
+illustrate the effects of regime-dependent volatility, holding costs, and
+discount factors, revealing the conservative bias of regime-switching models
+when compared to static alternatives. Practical implications include optimizing
+production strategies under fluctuating economic conditions and exploring
+future extensions such as correlated Brownian dynamics, non-quadratic cost
+functions, and geometric inventory frameworks. This research bridges the gap
+between theoretical modeling and practical applications, offering a robust
+framework for dynamic production planning.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2505.08025v1' target='_blank'>PRISM: Complete Online Decentralized Multi-Agent Pathfinding with Rapid
+  Information Sharing using Motion Constraints</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Hannah Lee, Zachary Serlin, James Motes, Brendan Long, Marco Morales, Nancy M. Amato</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-05-12 19:48:32</h6>
+<p class='card-text'>We introduce PRISM (Pathfinding with Rapid Information Sharing using Motion
+Constraints), a decentralized algorithm designed to address the multi-task
+multi-agent pathfinding (MT-MAPF) problem. PRISM enables large teams of agents
+to concurrently plan safe and efficient paths for multiple tasks while avoiding
+collisions. It employs a rapid communication strategy that uses information
+packets to exchange motion constraint information, enhancing cooperative
+pathfinding and situational awareness, even in scenarios without direct
+communication. We prove that PRISM resolves and avoids all deadlock scenarios
+when possible, a critical challenge in decentralized pathfinding. Empirically,
+we evaluate PRISM across five environments and 25 random scenarios,
+benchmarking it against the centralized Conflict-Based Search (CBS) and the
+decentralized Token Passing with Task Swaps (TPTS) algorithms. PRISM
+demonstrates scalability and solution quality, supporting 3.4 times more agents
+than CBS and handling up to 2.5 times more tasks in narrow passage environments
+than TPTS. Additionally, PRISM matches CBS in solution quality while achieving
+faster computation times, even under low-connectivity conditions. Its
+decentralized design reduces the computational burden on individual agents,
+making it scalable for large environments. These results confirm PRISM's
+robustness, scalability, and effectiveness in complex and dynamic pathfinding
+scenarios.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2505.07983v1' target='_blank'>Virtual Holonomic Constraints in Motion Planning: Revisiting Feasibility
+  and Limitations</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Maksim Surov</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-05-12 18:29:35</h6>
+<p class='card-text'>This paper addresses the feasibility of virtual holonomic constraints (VHCs)
+in the context of motion planning for underactuated mechanical systems with a
+single degree of underactuation. While existing literature has established a
+widely accepted definition of VHC, we argue that this definition is overly
+restrictive and excludes a broad class of admissible trajectories from
+consideration. To illustrate this point, we analyze a periodic motion of the
+Planar Vertical Take-Off and Landing (PVTOL) aircraft. The corresponding phase
+trajectory and reference control input are analytic functions. We demonstrate
+the stabilizability of this solution by constructing a feedback controller that
+ensures asymptotic orbital stability. However, for this solution -- as well as
+for a broad class of similar ones -- there exists no VHC that satisfies the
+conventional definition. This observation calls for a reconsideration of how
+the notion of VHC is defined, with the potential to significantly expand the
+practical applicability of VHCs in motion planning.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2505.07802v1' target='_blank'>Improving Trajectory Stitching with Flow Models</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Reece O'Mahoney, Wanming Yu, Ioannis Havoutis</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-05-12 17:50:10</h6>
+<p class='card-text'>Generative models have shown great promise as trajectory planners, given
+their affinity to modeling complex distributions and guidable inference
+process. Previous works have successfully applied these in the context of
+robotic manipulation but perform poorly when the required solution does not
+exist as a complete trajectory within the training set. We identify that this
+is a result of being unable to plan via stitching, and subsequently address the
+architectural and dataset choices needed to remedy this. On top of this, we
+propose a novel addition to the training and inference procedures to both
+stabilize and enhance these capabilities. We demonstrate the efficacy of our
+approach by generating plans with out of distribution boundary conditions and
+performing obstacle avoidance on the Franka Panda in simulation and on real
+hardware. In both of these tasks our method performs significantly better than
+the baselines and is able to avoid obstacles up to four times as large.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2505.07779v1' target='_blank'>Multi-Agent Path Finding via Finite-Horizon Hierarchical Factorization</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jiarui Li, Alessandro Zanardi, Gioele Zardini</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-05-12 17:31:51</h6>
+<p class='card-text'>We present a novel algorithm for large-scale Multi-Agent Path Finding (MAPF)
+that enables fast, scalable planning in dynamic environments such as automated
+warehouses. Our approach introduces finite-horizon hierarchical factorization,
+a framework that plans one step at a time in a receding-horizon fashion. Robots
+first compute individual plans in parallel, and then dynamically group based on
+spatio-temporal conflicts and reachability. The framework accounts for conflict
+resolution, and for immediate execution and concurrent planning, significantly
+reducing response time compared to offline algorithms. Experimental results on
+benchmark maps demonstrate that our method achieves up to 60% reduction in
+time-to-first-action while consistently delivering high-quality solutions,
+outperforming state-of-the-art offline baselines across a range of problem
+sizes and planning horizons.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2505.07699v1' target='_blank'>Image Restoration via Integration of Optimal Control Techniques and the
+  Hamilton-Jacobi-Bellman Equation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Dragos-Patru Covei</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-05-12 16:07:57</h6>
+<p class='card-text'>In this paper, we propose a novel image restoration framework that integrates
+optimal control techniques with the Hamilton-Jacobi-Bellman (HJB) equation.
+Motivated by models from production planning, our method restores degraded
+images by balancing an intervention cost against a state-dependent penalty that
+quantifies the loss of critical image information. Under the assumption of
+radial symmetry, the HJB equation is reduced to an ordinary differential
+equation and solved via a shooting method, from which the optimal feedback
+control is derived. Numerical experiments, supported by extensive parameter
+tuning and quality metrics such as PSNR and SSIM, demonstrate that the proposed
+framework achieves significant improvement in image quality. The results not
+only validate the theoretical model but also suggest promising directions for
+future research in adaptive and hybrid image restoration techniques.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2505.07668v1' target='_blank'>Intuitive Human-Robot Interfaces Leveraging on Autonomy Features for the
+  Control of Highly-redundant Robots</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Davide Torielli</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-05-12 15:33:43</h6>
+<p class='card-text'>[...] With the TelePhysicalOperation interface, the user can teleoperate the
+different capabilities of a robot (e.g., single/double arm manipulation,
+wheel/leg locomotion) by applying virtual forces on selected robot body parts.
+This approach emulates the intuitiveness of physical human-robot interaction,
+but at the same time it permits to teleoperate the robot from a safe distance,
+in a way that resembles a "Marionette" interface. The system is further
+enhanced with wearable haptic feedback functions to align better with the
+"Marionette" metaphor, and a user study has been conducted to validate its
+efficacy with and without the haptic channel enabled. Considering the
+importance of robot independence, the TelePhysicalOperation interface
+incorporates autonomy modules to face, for example, the teleoperation of
+dual-arm mobile base robots for bimanual object grasping and transportation
+tasks.
+  With the laser-guided interface, the user can indicate points of interest to
+the robot through the utilization of a simple but effective laser emitter
+device. With a neural network-based vision system, the robot tracks the laser
+projection in real time, allowing the user to indicate not only fixed goals,
+like objects, but also paths to follow. With the implemented autonomous
+behavior, a mobile manipulator employs its locomanipulation abilities to follow
+the indicated goals. The behavior is modeled using Behavior Trees, exploiting
+their reactivity to promptly respond to changes in goal positions, and their
+modularity to adapt the motion planning to the task needs. The proposed laser
+interface has also been employed in an assistive scenario. In this case, users
+with upper limbs impairments can control an assistive manipulator by directing
+a head-worn laser emitter to the point of interests, to collaboratively address
+activities of everyday life. [...]</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2505.07913v1' target='_blank'>Unequal Journeys to Food Markets: Continental-Scale Evidence from Open
+  Data in Africa</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Robert Benassai-Dalmau, Vasiliki Voukelatou, Rossano Schifanella, Stefania Fiandrino, Daniela Paolotti, Kyriaki Kalimeri</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-05-12 13:43:09</h6>
+<p class='card-text'>Food market accessibility is a critical yet underexplored dimension of food
+systems, particularly in low- and middle-income countries. Here, we present a
+continent-wide assessment of spatial food market accessibility in Africa,
+integrating open geospatial data from OpenStreetMap and the World Food
+Programme. We compare three complementary metrics: travel time to the nearest
+market, market availability within a 30-minute threshold, and an entropy-based
+measure of spatial distribution, to quantify accessibility across diverse
+settings. Our analysis reveals pronounced disparities: rural and economically
+disadvantaged populations face substantially higher travel times, limited
+market reach, and less spatial redundancy. These accessibility patterns align
+with socioeconomic stratification, as measured by the Relative Wealth Index,
+and moderately correlate with food insecurity levels, assessed using the
+Integrated Food Security Phase Classification. Overall, results suggest that
+access to food markets plays a relevant role in shaping food security outcomes
+and reflects broader geographic and economic inequalities. This framework
+provides a scalable, data-driven approach for identifying underserved regions
+and supporting equitable infrastructure planning and policy design across
+diverse African contexts.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2505.07484v1' target='_blank'>Integrated Localization and Path Planning for an Ocean Exploring Team of
+  Autonomous Underwater Vehicles with Consensus Graph Model Predictive Control</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Mohsen Eskandari, Andrey V. Savkin, Mohammad Deghat</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-05-12 12:14:50</h6>
+<p class='card-text'>Navigation of a team of autonomous underwater vehicles (AUVs) coordinated by
+an unmanned surface vehicle (USV) is efficient and reliable for deep ocean
+exploration. AUVs depart from and return to the USV after collaborative
+navigation, data collection, and ocean exploration missions. Efficient path
+planning and accurate localization are essential, the latter of which is
+critical due to the lack of global localization signals and poor radio
+frequency (RF) communication in deep waters. Inertial navigation and acoustic
+communication are common solutions for localization. However, the former is
+subject to odometry drifts, and the latter is limited to short distances. This
+paper proposes a systematic approach for localization-aware energy-efficient
+collision-free path planning for a USV-AUVs team. Path planning is formulated
+as finite receding horizon model predictive control (MPC) optimization. A
+dynamic-aware linear kinodynamic motion equation is developed. The mathematical
+formulation for the MPC optimization is effectively developed where
+localization is integrated as consensus graph optimization among AUV nodes.
+Edges in the optimized AUV-to-USV (A2U) and AUV-to-AUV (A2A) graphs are
+constrained to the sonar range of acoustic modems. The time complexity of the
+consensus MPC optimization problem is analyzed, revealing a nonconvex NP-hard
+problem, which is solved using sequential convex programming. Numerical
+simulation results are provided to evaluate the proposed method.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2505.07472v1' target='_blank'>Solar Orbiter's 2024 Major Flare Campaigns: An Overview</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Daniel F. Ryan, Laura A. Hayes, Hannah Collier, Graham S. Kerr, Andrew R. Inglis, David Williams, Andrew P. Walsh, Miho Janvier, Daniel Müller, David Berghmans, Cis Verbeeck, Emil Kraaikamp, Peter R. Young, Therese A. Kucera, Säm Krucker, Muriel Z. Stiefel, Daniele Calchetti, Katharine K. Reeves, Sabrina Savage, Vanessa Polito</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-05-12 12:05:45</h6>
+<p class='card-text'>Solar Orbiter conducted a series of flare-optimised observing campaigns in
+2024 utilising the Major Flare Solar Orbiter Observing Plan (SOOP). Dedicated
+observations were performed during two distinct perihelia intervals in
+March/April and October, during which over 22 flares were observed, ranging
+from B- to M-class. These campaigns leveraged high-resolution and high-cadence
+observations from the mission's remote-sensing suite, including the
+High-Resolution EUV Imager (EUI/HRI_EUV), the Spectrometer/Telescope for
+Imaging X-rays (STIX), the Spectral Imaging of the Coronal Environment (SPICE)
+spectrometer, and the High Resolution Telescope of the Polarimetric and
+Helioseismic Imager (PHI/HRT), as well as coordinated ground-based and
+Earth-orbiting observations. EUI/HRI_EUV operating in short-exposure modes,
+provided two-second-cadence, non-saturated EUV images, revealing structures and
+dynamics on scales not previously observed. Simultaneously, STIX captured hard
+X-ray imaging and spectroscopy of accelerated electrons, while SPICE acquired
+EUV slit spectroscopy to probe chromospheric and coronal responses. Together,
+these observations offer an unprecedented view of magnetic reconnection, energy
+release, particle acceleration, and plasma heating across a broad range of
+temperatures and spatial scales. These campaigns have generated a rich dataset
+that will be the subject of numerous future studies addressing Solar Orbiter's
+top-level science goal: "How do solar eruptions produce energetic particle
+radiation that fills the heliosphere?". This paper presents the scientific
+motivations, operational planning, and observational strategies behind the 2024
+flare campaigns, along with initial insights into the observed flares. We also
+discuss lessons learned for optimizing future Solar Orbiter Major Flare
+campaigns and provide a resource for researchers aiming to utilize these unique
+observations.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js'></script>
+</body>
+</html>
