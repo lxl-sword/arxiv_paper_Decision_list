@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>planning - 2025-05-16</title>
+<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap' rel='stylesheet'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css'>
+<style>
+body {
+font-family: 'Roboto', sans-serif;
+background-color: #f5f7fa;
+padding: 20px;
+}
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.card-title {
+    font-weight: 700;
+}
+.card:hover {
+    transform: scale(1.02);
+    transition: 0.3s ease-in-out;
+}
+</style>
+</head>
+<body>
+<div class='container'>
+<h1 class='text-center my-4'><i class='fas fa-book'></i>planning - 2025-05-16</h1>
+<div class='row'>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2505.10547v1' target='_blank'>Real-Time Out-of-Distribution Failure Prevention via Multi-Modal
+  Reasoning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Milan Ganai, Rohan Sinha, Christopher Agia, Daniel Morton, Marco Pavone</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-05-15 17:55:28</h6>
+<p class='card-text'>Foundation models can provide robust high-level reasoning on appropriate
+safety interventions in hazardous scenarios beyond a robot's training data,
+i.e. out-of-distribution (OOD) failures. However, due to the high inference
+latency of Large Vision and Language Models, current methods rely on manually
+defined intervention policies to enact fallbacks, thereby lacking the ability
+to plan generalizable, semantically safe motions. To overcome these challenges
+we present FORTRESS, a framework that generates and reasons about semantically
+safe fallback strategies in real time to prevent OOD failures. At a low
+frequency in nominal operations, FORTRESS uses multi-modal reasoners to
+identify goals and anticipate failure modes. When a runtime monitor triggers a
+fallback response, FORTRESS rapidly synthesizes plans to fallback goals while
+inferring and avoiding semantically unsafe regions in real time. By bridging
+open-world, multi-modal reasoning with dynamics-aware planning, we eliminate
+the need for hard-coded fallbacks and human safety interventions. FORTRESS
+outperforms on-the-fly prompting of slow reasoning models in safety
+classification accuracy on synthetic benchmarks and real-world ANYmal robot
+data, and further improves system safety and planning success in simulation and
+on quadrotor hardware for urban navigation.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2505.10543v1' target='_blank'>Towards a Deeper Understanding of Reasoning Capabilities in Large
+  Language Models</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Annie Wong, Thomas Bäck, Aske Plaat, Niki van Stein, Anna V. Kononova</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-05-15 17:53:47</h6>
+<p class='card-text'>While large language models demonstrate impressive performance on static
+benchmarks, the true potential of large language models as self-learning and
+reasoning agents in dynamic environments remains unclear. This study
+systematically evaluates the efficacy of self-reflection, heuristic mutation,
+and planning as prompting techniques to test the adaptive capabilities of
+agents. We conduct experiments with various open-source language models in
+dynamic environments and find that larger models generally outperform smaller
+ones, but that strategic prompting can close this performance gap. Second, a
+too-long prompt can negatively impact smaller models on basic reactive tasks,
+while larger models show more robust behaviour. Third, advanced prompting
+techniques primarily benefit smaller models on complex games, but offer less
+improvement for already high-performing large language models. Yet, we find
+that advanced reasoning methods yield highly variable outcomes: while capable
+of significantly improving performance when reasoning and decision-making
+align, they also introduce instability and can lead to big performance drops.
+Compared to human performance, our findings reveal little evidence of true
+emergent reasoning. Instead, large language model performance exhibits
+persistent limitations in crucial areas such as planning, reasoning, and
+spatial coordination, suggesting that current-generation large language models
+still suffer fundamental shortcomings that may not be fully overcome through
+self-reflective prompting alone. Reasoning is a multi-faceted task, and while
+reasoning methods like Chain of thought improves multi-step reasoning on math
+word problems, our findings using dynamic benchmarks highlight important
+shortcomings in general reasoning capabilities, indicating a need to move
+beyond static benchmarks to capture the complexity of reasoning.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2505.10542v1' target='_blank'>AORRTC: Almost-Surely Asymptotically Optimal Planning with RRT-Connect</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Tyler Wilson, Wil Thomason, Zachary Kingston, Jonathan Gammell</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-05-15 17:53:11</h6>
+<p class='card-text'>Finding high-quality solutions quickly is an important objective in motion
+planning. This is especially true for high-degree-of-freedom robots.
+Satisficing planners have traditionally found feasible solutions quickly but
+provide no guarantees on their optimality, while almost-surely asymptotically
+optimal (a.s.a.o.) planners have probabilistic guarantees on their convergence
+towards an optimal solution but are more computationally expensive.
+  This paper uses the AO-x meta-algorithm to extend the satisficing RRT-Connect
+planner to optimal planning. The resulting Asymptotically Optimal RRT-Connect
+(AORRTC) finds initial solutions in similar times as RRT-Connect and uses any
+additional planning time to converge towards the optimal solution in an anytime
+manner. It is proven to be probabilistically complete and a.s.a.o.
+  AORRTC was tested with the Panda (7 DoF) and Fetch (8 DoF) robotic arms on
+the MotionBenchMaker dataset. These experiments show that AORRTC finds initial
+solutions as fast as RRT-Connect and faster than the tested state-of-the-art
+a.s.a.o. algorithms while converging to better solutions faster. AORRTC finds
+solutions to difficult high-DoF planning problems in milliseconds where the
+other a.s.a.o. planners could not consistently find solutions in seconds. This
+performance was demonstrated both with and without single instruction/multiple
+data (SIMD) acceleration.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2505.10502v1' target='_blank'>WeGA: Weakly-Supervised Global-Local Affinity Learning Framework for
+  Lymph Node Metastasis Prediction in Rectal Cancer</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yifan Gao, Yaoxian Dong, Wenbin Wu, Chaoyang Ge, Feng Yuan, Jiaxi Sheng, Haoyue Li, Xin Gao</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-05-15 17:05:21</h6>
+<p class='card-text'>Accurate lymph node metastasis (LNM) assessment in rectal cancer is essential
+for treatment planning, yet current MRI-based evaluation shows unsatisfactory
+accuracy, leading to suboptimal clinical decisions. Developing automated
+systems also faces significant obstacles, primarily the lack of node-level
+annotations. Previous methods treat lymph nodes as isolated entities rather
+than as an interconnected system, overlooking valuable spatial and contextual
+information. To solve this problem, we present WeGA, a novel weakly-supervised
+global-local affinity learning framework that addresses these challenges
+through three key innovations: 1) a dual-branch architecture with DINOv2
+backbone for global context and residual encoder for local node details; 2) a
+global-local affinity extractor that aligns features across scales through
+cross-attention fusion; and 3) a regional affinity loss that enforces
+structural coherence between classification maps and anatomical regions.
+Experiments across one internal and two external test centers demonstrate that
+WeGA outperforms existing methods, achieving AUCs of 0.750, 0.822, and 0.802
+respectively. By effectively modeling the relationships between individual
+lymph nodes and their collective context, WeGA provides a more accurate and
+generalizable approach for lymph node metastasis prediction, potentially
+enhancing diagnostic precision and treatment selection for rectal cancer
+patients.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2505.10398v1' target='_blank'>AutoCam: Hierarchical Path Planning for an Autonomous Auxiliary Camera
+  in Surgical Robotics</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Alexandre Banks, Randy Moore, Sayem Nazmuz Zaman, Alaa Eldin Abdelaal, Septimiu E. Salcudean</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-05-15 15:21:46</h6>
+<p class='card-text'>Incorporating an autonomous auxiliary camera into robot-assisted minimally
+invasive surgery (RAMIS) enhances spatial awareness and eliminates manual
+viewpoint control. Existing path planning methods for auxiliary cameras track
+two-dimensional surgical features but do not simultaneously account for camera
+orientation, workspace constraints, and robot joint limits. This study presents
+AutoCam: an automatic auxiliary camera placement method to improve
+visualization in RAMIS. Implemented on the da Vinci Research Kit, the system
+uses a priority-based, workspace-constrained control algorithm that combines
+heuristic geometric placement with nonlinear optimization to ensure robust
+camera tracking. A user study (N=6) demonstrated that the system maintained
+99.84% visibility of a salient feature and achieved a pose error of 4.36 $\pm$
+2.11 degrees and 1.95 $\pm$ 5.66 mm. The controller was computationally
+efficient, with a loop time of 6.8 $\pm$ 12.8 ms. An additional pilot study
+(N=6), where novices completed a Fundamentals of Laparoscopic Surgery training
+task, suggests that users can teleoperate just as effectively from AutoCam's
+viewpoint as from the endoscope's while still benefiting from AutoCam's
+improved visual coverage of the scene. These results indicate that an auxiliary
+camera can be autonomously controlled using the da Vinci patient-side
+manipulators to track a salient feature, laying the groundwork for new
+multi-camera visualization methods in RAMIS.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2505.10387v1' target='_blank'>Multi-Agent Path Finding For Large Agents Is Intractable</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Artem Agafonov, Konstantin Yakovlev</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-05-15 15:07:40</h6>
+<p class='card-text'>The multi-agent path finding (MAPF) problem asks to find a set of paths on a
+graph such that when synchronously following these paths the agents never
+encounter a conflict. In the most widespread MAPF formulation, the so-called
+Classical MAPF, the agents sizes are neglected and two types of conflicts are
+considered: occupying the same vertex or using the same edge at the same time
+step. Meanwhile in numerous practical applications, e.g. in robotics, taking
+into account the agents' sizes is vital to ensure that the MAPF solutions can
+be safely executed. Introducing large agents yields an additional type of
+conflict arising when one agent follows an edge and its body overlaps with the
+body of another agent that is actually not using this same edge (e.g. staying
+still at some distinct vertex of the graph). Until now it was not clear how
+harder the problem gets when such conflicts are to be considered while
+planning. Specifically, it was known that Classical MAPF problem on an
+undirected graph can be solved in polynomial time, however no complete
+polynomial-time algorithm was presented to solve MAPF with large agents. In
+this paper we, for the first time, establish that the latter problem is NP-hard
+and, thus, if P!=NP no polynomial algorithm for it can, unfortunately, be
+presented. Our proof is based on the prevalent in the field technique of
+reducing the seminal 3SAT problem (which is known to be an NP-complete problem)
+to the problem at hand. In particular, for an arbitrary 3SAT formula we
+procedurally construct a dedicated graph with specific start and goal vertices
+and show that the given 3SAT formula is satisfiable iff the corresponding path
+finding instance has a solution.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2505.10355v1' target='_blank'>pc-dbCBS: Kinodynamic Motion Planning of Physically-Coupled Robot Teams</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Khaled Wahba, Wolfgang Hönig</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-05-15 14:46:19</h6>
+<p class='card-text'>Motion planning problems for physically-coupled multi-robot systems in
+cluttered environments are challenging due to their high dimensionality.
+Existing methods combining sampling-based planners with trajectory optimization
+produce suboptimal results and lack theoretical guarantees. We propose
+Physically-coupled discontinuity-bounded Conflict-Based Search (pc-dbCBS), an
+anytime kinodynamic motion planner, that extends discontinuity-bounded CBS to
+rigidly-coupled systems. Our approach proposes a tri-level conflict detection
+and resolution framework that includes the physical coupling between the
+robots. Moreover, pc-dbCBS alternates iteratively between state space
+representations, thereby preserving probabilistic completeness and asymptotic
+optimality while relying only on single-robot motion primitives. Across 25
+simulated and six real-world problems involving multirotors carrying a
+cable-suspended payload and differential-drive robots linked by rigid rods,
+pc-dbCBS solves up to 92% more instances than a state-of-the-art baseline and
+plans trajectories that are 50-60% faster while reducing planning time by an
+order of magnitude.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2505.10337v1' target='_blank'>PolarCat: Catalog of polars, low-accretion rate polars, and candidate
+  objects</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Axel D. Schwope</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-05-15 14:26:24</h6>
+<p class='card-text'>Polars and low-accretion rate polars (LARPs) are strongly magnetic
+cataclysmic variables. Mediated by the magnetic field of the white dwarf, their
+spin and binary orbit are (mostly) synchronized. They play an important role in
+our understanding of close binary evolution and the generation of strong
+magnetic fields in white dwarfs. Thanks to X-ray all-sky surveys, optical
+variability, and spectroscopic surveys, the number of polars and LARPs has
+grown from just a few in the 1980s to more than 200 today. Follow-up studies
+are facilitated by the systematic compilation of these systems presented here,
+which is also made available as an online resource. Yearly updates are planned,
+and community input is highly appreciated.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2505.10262v1' target='_blank'>Electric Bus Charging Schedules Relying on Real Data-Driven Targets
+  Based on Hierarchical Deep Reinforcement Learning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jiaju Qi, Lei Lei, Thorsteinn Jonsson, Lajos Hanzo</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-05-15 13:13:41</h6>
+<p class='card-text'>The charging scheduling problem of Electric Buses (EBs) is investigated based
+on Deep Reinforcement Learning (DRL). A Markov Decision Process (MDP) is
+conceived, where the time horizon includes multiple charging and operating
+periods in a day, while each period is further divided into multiple time
+steps. To overcome the challenge of long-range multi-phase planning with sparse
+reward, we conceive Hierarchical DRL (HDRL) for decoupling the original MDP
+into a high-level Semi-MDP (SMDP) and multiple low-level MDPs. The Hierarchical
+Double Deep Q-Network (HDDQN)-Hindsight Experience Replay (HER) algorithm is
+proposed for simultaneously solving the decision problems arising at different
+temporal resolutions. As a result, the high-level agent learns an effective
+policy for prescribing the charging targets for every charging period, while
+the low-level agent learns an optimal policy for setting the charging power of
+every time step within a single charging period, with the aim of minimizing the
+charging costs while meeting the charging target. It is proved that the flat
+policy constructed by superimposing the optimal high-level policy and the
+optimal low-level policy performs as well as the optimal policy of the original
+MDP. Since jointly learning both levels of policies is challenging due to the
+non-stationarity of the high-level agent and the sampling inefficiency of the
+low-level agent, we divide the joint learning process into two phases and
+exploit our new HER algorithm to manipulate the experience replay buffers for
+both levels of agents. Numerical experiments are performed with the aid of
+real-world data to evaluate the performance of the proposed algorithm.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2505.10258v1' target='_blank'>Inferring Driving Maps by Deep Learning-based Trail Map Extraction</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Michael Hubbertz, Pascal Colling, Qi Han, Tobias Meisen</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-05-15 13:09:19</h6>
+<p class='card-text'>High-definition (HD) maps offer extensive and accurate environmental
+information about the driving scene, making them a crucial and essential
+element for planning within autonomous driving systems. To avoid extensive
+efforts from manual labeling, methods for automating the map creation have
+emerged. Recent trends have moved from offline mapping to online mapping,
+ensuring availability and actuality of the utilized maps. While the performance
+has increased in recent years, online mapping still faces challenges regarding
+temporal consistency, sensor occlusion, runtime, and generalization. We propose
+a novel offline mapping approach that integrates trails - informal routes used
+by drivers - into the map creation process. Our method aggregates trail data
+from the ego vehicle and other traffic participants to construct a
+comprehensive global map using transformer-based deep learning models. Unlike
+traditional offline mapping, our approach enables continuous updates while
+remaining sensor-agnostic, facilitating efficient data transfer. Our method
+demonstrates superior performance compared to state-of-the-art online mapping
+approaches, achieving improved generalization to previously unseen environments
+and sensor configurations. We validate our approach on two benchmark datasets,
+highlighting its robustness and applicability in autonomous driving systems.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2505.10251v1' target='_blank'>SRT-H: A Hierarchical Framework for Autonomous Surgery via Language
+  Conditioned Imitation Learning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Ji Woong Kim, Juo-Tung Chen, Pascal Hansen, Lucy X. Shi, Antony Goldenberg, Samuel Schmidgall, Paul Maria Scheikl, Anton Deguet, Brandon M. White, De Ru Tsai, Richard Cha, Jeffrey Jopling, Chelsea Finn, Axel Krieger</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-05-15 13:04:53</h6>
+<p class='card-text'>Research on autonomous robotic surgery has largely focused on simple task
+automation in controlled environments. However, real-world surgical
+applications require dexterous manipulation over extended time scales while
+demanding generalization across diverse variations in human tissue. These
+challenges remain difficult to address using existing logic-based or
+conventional end-to-end learning strategies. To bridge this gap, we propose a
+hierarchical framework for dexterous, long-horizon surgical tasks. Our method
+employs a high-level policy for task planning and a low-level policy for
+generating task-space controls for the surgical robot. The high-level planner
+plans tasks using language, producing task-specific or corrective instructions
+that guide the robot at a coarse level. Leveraging language as a planning
+modality offers an intuitive and generalizable interface, mirroring how
+experienced surgeons instruct traineers during procedures. We validate our
+framework in ex-vivo experiments on a complex minimally invasive procedure,
+cholecystectomy, and conduct ablative studies to assess key design choices. Our
+approach achieves a 100% success rate across n=8 different ex-vivo
+gallbladders, operating fully autonomously without human intervention. The
+hierarchical approach greatly improves the policy's ability to recover from
+suboptimal states that are inevitable in the highly dynamic environment of
+realistic surgical applications. This work represents the first demonstration
+of step-level autonomy, marking a critical milestone toward autonomous surgical
+systems for clinical studies. By advancing generalizable autonomy in surgical
+robotics, our approach brings the field closer to real-world deployment.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2505.10228v1' target='_blank'>Quad-LCD: Layered Control Decomposition Enables Actuator-Feasible
+  Quadrotor Trajectory Planning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Anusha Srikanthan, Hanli Zhang, Spencer Folk, Vijay Kumar, Nikolai Matni</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-05-15 12:37:35</h6>
+<p class='card-text'>In this work, we specialize contributions from prior work on data-driven
+trajectory generation for a quadrotor system with motor saturation constraints.
+When motors saturate in quadrotor systems, there is an ``uncontrolled drift" of
+the vehicle that results in a crash. To tackle saturation, we apply a control
+decomposition and learn a tracking penalty from simulation data consisting of
+low, medium and high-cost reference trajectories. Our approach reduces crash
+rates by around $49\%$ compared to baselines on aggressive maneuvers in
+simulation. On the Crazyflie hardware platform, we demonstrate feasibility
+through experiments that lead to successful flights. Motivated by the growing
+interest in data-driven methods to quadrotor planning, we provide open-source
+lightweight code with an easy-to-use abstraction of hardware platforms.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2505.10075v1' target='_blank'>FlowDreamer: A RGB-D World Model with Flow-based Motion Representations
+  for Robot Manipulation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jun Guo, Xiaojian Ma, Yikai Wang, Min Yang, Huaping Liu, Qing Li</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-05-15 08:27:16</h6>
+<p class='card-text'>This paper investigates training better visual world models for robot
+manipulation, i.e., models that can predict future visual observations by
+conditioning on past frames and robot actions. Specifically, we consider world
+models that operate on RGB-D frames (RGB-D world models). As opposed to
+canonical approaches that handle dynamics prediction mostly implicitly and
+reconcile it with visual rendering in a single model, we introduce FlowDreamer,
+which adopts 3D scene flow as explicit motion representations. FlowDreamer
+first predicts 3D scene flow from past frame and action conditions with a
+U-Net, and then a diffusion model will predict the future frame utilizing the
+scene flow. FlowDreamer is trained end-to-end despite its modularized nature.
+We conduct experiments on 4 different benchmarks, covering both video
+prediction and visual planning tasks. The results demonstrate that FlowDreamer
+achieves better performance compared to other baseline RGB-D world models by 7%
+on semantic similarity, 11% on pixel quality, and 6% on success rate in various
+robot manipulation domains.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2505.10028v1' target='_blank'>Fast Heuristic Scheduling and Trajectory Planning for Robotic Fruit
+  Harvesters with Multiple Cartesian Arms</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yuankai Zhu, Stavros Vougioukas</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-05-15 07:20:12</h6>
+<p class='card-text'>This work proposes a fast heuristic algorithm for the coupled scheduling and
+trajectory planning of multiple Cartesian robotic arms harvesting fruits. Our
+method partitions the workspace, assigns fruit-picking sequences to arms,
+determines tight and feasible fruit-picking schedules and vehicle travel speed,
+and generates smooth, collision-free arm trajectories. The fruit-picking
+throughput achieved by the algorithm was assessed using synthetically generated
+fruit coordinates and a harvester design featuring up to 12 arms. The
+throughput increased monotonically as more arms were added. Adding more arms
+when fruit densities were low resulted in diminishing gains because it took
+longer to travel from one fruit to another. However, when there were enough
+fruits, the proposed algorithm achieved a linear speedup as the number of arms
+increased.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2505.10014v1' target='_blank'>Monotone three-dimensional surface and equivalent formulations of the
+  generalized bathtub model</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Wen-Long Jin, Irene Martinez</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-05-15 06:56:49</h6>
+<p class='card-text'>In the Lighthill-Whitham-Richards (LWR) model for single-lane traffic,
+vehicle trajectories follow the first-in-first-out (FIFO) principle and can be
+represented by a monotone three-dimensional surface of cumulative vehicle
+count. In contrast, the generalized bathtub model, which describes congestion
+dynamics in transportation networks using relative space, typically violates
+the FIFO principle, making its representation more challenging.
+  Building on the characteristic distance ordering concept, we observe that
+trips in the generalized bathtub model can be ordered by their characteristic
+distances (remaining trip distance plus network travel distance). We define a
+new cumulative number of trips ahead of a trip with a given remaining distance
+at a time instant, showing it forms a monotone three-dimensional surface
+despite FIFO violations. Using the inverse function theorem, we derive
+equivalent formulations with different coordinates and dependent variables,
+including special cases for Vickrey's bathtub model and the basic bathtub
+model.
+  We demonstrate numerical methods based on these formulations and discuss
+trip-based approaches for discrete demand patterns. This study enhances
+understanding of the generalized bathtub model's properties, facilitating its
+application in network traffic flow modeling, congestion pricing, and
+transportation planning.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2505.09993v1' target='_blank'>Automated grading and staging of ovarian cancer using deep learning on
+  the transmission optical microscopy bright-field images of thin biopsy tissue
+  samples</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Ashmit K Mishra, Mousa Alrubayan, Prabhakar Pradhan</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-05-15 06:06:24</h6>
+<p class='card-text'>Ovarian cancer remains a challenging malignancy to diagnose and manage, with
+prognosis heavily dependent on the stage at detection. Accurate grading and
+staging, primarily based on histopathological examination of biopsy tissue
+samples, are crucial for treatment planning and predicting outcomes. However,
+this manual process is time-consuming and subject to inter-observer variability
+among pathologists. The increasing volume of digital histopathology slides
+necessitates the development of robust, automated methods to assist in this
+critical diagnostic step for ovarian cancer. (Methods) This study presents a
+deep learning framework for the automated prediction of ovarian cancer stage
+(classified into five categories: 0, I, II, III, IV) using routine
+histopathological images. We employed a transfer learning approach, fine-tuning
+a ResNet-101 convolutional neural network pre-trained on ImageNet. The training
+process incorporated comprehensive data augmentation, weighted random sampling,
+and class weighting to address dataset characteristics. Hyperparameter
+optimization for learning rate, dropout rate, and weight decay was performed
+using a genetic algorithm to enhance model performance and generalization.
+(Results) Evaluated on an independent test set of ovarian thin tissue
+brightfield images, the developed model achieved a high overall classification
+accuracy of 97.62%.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2505.09988v1' target='_blank'>Provably safe and human-like car-following behaviors: Part 2. A
+  parsimonious multi-phase model with projected braking</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Wen-Long Jin</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-05-15 06:03:02</h6>
+<p class='card-text'>Ensuring safe and human-like trajectory planning for automated vehicles
+amidst real-world uncertainties remains a critical challenge. While existing
+car-following models often struggle to consistently provide rigorous safety
+proofs alongside human-like acceleration and deceleration patterns, we
+introduce a novel multi-phase projection-based car-following model. This model
+is designed to balance safety and performance by incorporating bounded
+acceleration and deceleration rates while emulating key human driving
+principles. Building upon a foundation of fundamental driving principles and a
+multi-phase dynamical systems analysis (detailed in Part 1 of this study
+\citep{jin2025WA20-02_Part1}), we first highlight the limitations of extending
+standard models like Newell's with simple bounded deceleration. Inspired by
+human drivers' anticipatory behavior, we mathematically define and analyze
+projected braking profiles for both leader and follower vehicles, establishing
+safety criteria and new phase definitions based on the projected braking
+lead-vehicle problem. The proposed parsimonious model combines an extended
+Newell's model for nominal driving with a new control law for scenarios
+requiring projected braking. Using speed-spacing phase plane analysis, we
+provide rigorous mathematical proofs of the model's adherence to defined safe
+and human-like driving principles, including collision-free operation, bounded
+deceleration, and acceptable safe stopping distance, under reasonable initial
+conditions. Numerical simulations validate the model's superior performance in
+achieving both safety and human-like braking profiles for the stationary
+lead-vehicle problem. Finally, we discuss the model's implications and future
+research directions.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2505.09987v1' target='_blank'>Provably safe and human-like car-following behaviors: Part 1. Analysis
+  of phases and dynamics in standard models</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Wen-Long Jin</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-05-15 05:56:13</h6>
+<p class='card-text'>Trajectory planning is essential for ensuring safe driving in the face of
+uncertainties related to communication, sensing, and dynamic factors such as
+weather, road conditions, policies, and other road users. Existing
+car-following models often lack rigorous safety proofs and the ability to
+replicate human-like driving behaviors consistently. This article applies
+multi-phase dynamical systems analysis to well-known car-following models to
+highlight the characteristics and limitations of existing approaches. We begin
+by formulating fundamental principles for safe and human-like car-following
+behaviors, which include zeroth-order principles for comfort and minimum jam
+spacings, first-order principles for speeds and time gaps, and second-order
+principles for comfort acceleration/deceleration bounds as well as braking
+profiles. From a set of these zeroth- and first-order principles, we derive
+Newell's simplified car-following model. Subsequently, we analyze phases within
+the speed-spacing plane for the stationary lead-vehicle problem in Newell's
+model and its extensions, which incorporate both bounded acceleration and
+deceleration. We then analyze the performance of the Intelligent Driver Model
+and the Gipps model. Through this analysis, we highlight the limitations of
+these models with respect to some of the aforementioned principles. Numerical
+simulations and empirical observations validate the theoretical insights.
+Finally, we discuss future research directions to further integrate safety,
+human-like behaviors, and vehicular automation in car-following models, which
+are addressed in Part 2 of this study \citep{jin2025WA20-02_Part2}, where we
+develop a novel multi-phase projection-based car-following model that addresses
+the limitations identified here.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2505.09899v1' target='_blank'>Promise of Data-Driven Modeling and Decision Support for Precision
+  Oncology and Theranostics</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Binesh Sadanandan, Vahid Behzadan</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-05-15 02:02:03</h6>
+<p class='card-text'>Cancer remains a leading cause of death worldwide, necessitating personalized
+treatment approaches to improve outcomes. Theranostics, combining
+molecular-level imaging with targeted therapy, offers potential for precision
+oncology but requires optimized, patient-specific care plans. This paper
+investigates state-of-the-art data-driven decision support applications with a
+reinforcement learning focus in precision oncology. We review current
+applications, training environments, state-space representation, performance
+evaluation criteria, and measurement of risk and reward, highlighting key
+challenges. We propose a framework integrating data-driven modeling with
+reinforcement learning-based decision support to optimize radiopharmaceutical
+therapy dosing, addressing identified challenges and setting directions for
+future research. The framework leverages Neural Ordinary Differential Equations
+and Physics-Informed Neural Networks to enhance Physiologically Based
+Pharmacokinetic models while applying reinforcement learning algorithms to
+iteratively refine treatment policies based on patient-specific data.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2505.09837v1' target='_blank'>EdgeAI Drone for Autonomous Construction Site Demonstrator</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Emre Girgin, Arda Taha Candan, Coşkun Anıl Zaman</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-05-14 22:34:26</h6>
+<p class='card-text'>The fields of autonomous systems and robotics are receiving considerable
+attention in civil applications such as construction, logistics, and
+firefighting. Nevertheless, the widespread adoption of these technologies is
+hindered by the necessity for robust processing units to run AI models. Edge-AI
+solutions offer considerable promise, enabling low-power, cost-effective
+robotics that can automate civil services, improve safety, and enhance
+sustainability. This paper presents a novel Edge-AI-enabled drone-based
+surveillance system for autonomous multi-robot operations at construction
+sites. Our system integrates a lightweight MCU-based object detection model
+within a custom-built UAV platform and a 5G-enabled multi-agent coordination
+infrastructure. We specifically target the real-time obstacle detection and
+dynamic path planning problem in construction environments, providing a
+comprehensive dataset specifically created for MCU-based edge applications.
+Field experiments demonstrate practical viability and identify optimal
+operational parameters, highlighting our approach's scalability and
+computational efficiency advantages compared to existing UAV solutions. The
+present and future roles of autonomous vehicles on construction sites are also
+discussed, as well as the effectiveness of edge-AI solutions. We share our
+dataset publicly at github.com/egirgin/storaige-b950</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2505.09833v1' target='_blank'>Learning Rock Pushability on Rough Planetary Terrain</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Tuba Girgin, Emre Girgin, Cagri Kilic</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-05-14 22:23:30</h6>
+<p class='card-text'>In the context of mobile navigation in unstructured environments, the
+predominant approach entails the avoidance of obstacles. The prevailing path
+planning algorithms are contingent upon deviating from the intended path for an
+indefinite duration and returning to the closest point on the route after the
+obstacle is left behind spatially. However, avoiding an obstacle on a path that
+will be used repeatedly by multiple agents can hinder long-term efficiency and
+lead to a lasting reliance on an active path planning system. In this study, we
+propose an alternative approach to mobile navigation in unstructured
+environments by leveraging the manipulation capabilities of a robotic
+manipulator mounted on top of a mobile robot. Our proposed framework integrates
+exteroceptive and proprioceptive feedback to assess the push affordance of
+obstacles, facilitating their repositioning rather than avoidance. While our
+preliminary visual estimation takes into account the characteristics of both
+the obstacle and the surface it relies on, the push affordance estimation
+module exploits the force feedback obtained by interacting with the obstacle
+via a robotic manipulator as the guidance signal. The objective of our
+navigation approach is to enhance the efficiency of routes utilized by multiple
+agents over extended periods by reducing the overall time spent by a fleet in
+environments where autonomous infrastructure development is imperative, such as
+lunar or Martian surfaces.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2505.09803v1' target='_blank'>LatticeVision: Image to Image Networks for Modeling Non-Stationary
+  Spatial Data</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Antony Sikorski, Michael Ivanitskiy, Nathan Lenssen, Douglas Nychka, Daniel McKenzie</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-05-14 20:59:10</h6>
+<p class='card-text'>In many scientific and industrial applications, we are given a handful of
+instances (a 'small ensemble') of a spatially distributed quantity (a 'field')
+but would like to acquire many more. For example, a large ensemble of global
+temperature sensitivity fields from a climate model can help farmers, insurers,
+and governments plan appropriately. When acquiring more data is prohibitively
+expensive -- as is the case with climate models -- statistical emulation offers
+an efficient alternative for simulating synthetic yet realistic fields.
+However, parameter inference using maximum likelihood estimation (MLE) is
+computationally prohibitive, especially for large, non-stationary fields. Thus,
+many recent works train neural networks to estimate parameters given spatial
+fields as input, sidestepping MLE completely. In this work we focus on a
+popular class of parametric, spatially autoregressive (SAR) models. We make a
+simple yet impactful observation; because the SAR parameters can be arranged on
+a regular grid, both inputs (spatial fields) and outputs (model parameters) can
+be viewed as images. Using this insight, we demonstrate that image-to-image
+(I2I) networks enable faster and more accurate parameter estimation for a class
+of non-stationary SAR models with unprecedented complexity.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2505.09796v1' target='_blank'>Virtual Dosimetrists: A Radiotherapy Training "Flight Simulator"</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Skylar S. Gay, Tucker Netherton, Barbara Marquez, Raymond Mumme, Mary Gronberg, Brent Parker, Chelsea Pinnix, Sanjay Shete, Carlos Cardenas, Laurence Court</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-05-14 20:47:13</h6>
+<p class='card-text'>Effective education in radiotherapy plan quality review requires a robust,
+regularly updated set of examples and the flexibility to demonstrate multiple
+possible planning approaches and their consequences. However, the current
+clinic-based paradigm does not support these needs. To address this, we have
+developed 'Virtual Dosimetrist' models that can both generate training examples
+of suboptimal treatment plans and then allow trainees to improve the plan
+quality through simple natural language prompts, as if communicating with a
+dosimetrist. The dose generation and modification process is accurate, rapid,
+and requires only modest resources. This work is the first to combine dose
+distribution prediction with natural language processing; providing a robust
+pipeline for both generating suboptimal training plans and allowing trainees to
+practice their critical plan review and improvement skills that addresses the
+challenges of the current clinic-based paradigm.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2505.09781v1' target='_blank'>Velocity shift and SNR limits for high-resolution spectroscopy of hot
+  Jupiters using Keck/KPIC</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Kevin S. Hong, Luke Finnerty, Michael P. Fitzgerald</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-05-14 20:18:59</h6>
+<p class='card-text'>High-resolution cross-correlation spectroscopy (HRCCS) is a technique for
+detecting the atmospheres of close-in planets using the change in the projected
+planet velocity over a few hours. To date, this technique has most often been
+applied to hot Jupiters, which show a large change in velocity on short
+timescales. Applying this technique to planets with longer orbital periods
+requires an improved understanding of how the size of the velocity shift and
+the observational signal-to-noise ratio impact detectability. We present grids
+of simulated Keck/KPIC observations of hot Jupiter systems, varying the
+observed planet velocity shift and signal-to-noise ratio (SNR), to estimate the
+minimum thresholds for a successful detection. These simulations realistically
+model the cross-correlation process, which includes a time-varying telluric
+spectrum in the simulated data and data detrending via PCA. We test three
+different planet models based on an ultra-hot Jupiter, a classical hot Jupiter,
+and a metal-rich hot Saturn. For a ${6}\sigma$ detection suitable for retrieval
+analysis, we estimate a minimum velocity shift of $\Delta v_\text{pl} \sim {30,
+50, 60}$ km/s, compared to an instrumental resolution of 9 km/s, and minimum
+SNR $\sim 370, 800, 1200$ for the respective planet models. We find that
+reported KPIC detections to-date fall above or near the ${6}\sigma$ limit.
+These simulations can be efficiently re-run for other planet models and
+observational parameters, which can be useful in observation planning and
+detection validation.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2505.09739v1' target='_blank'>Trailblazer: Learning offroad costmaps for long range planning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Kasi Viswanath, Felix Sanchez, Timothy Overbye, Jason M. Gregory, Srikanth Saripalli</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-05-14 19:00:28</h6>
+<p class='card-text'>Autonomous navigation in off-road environments remains a significant
+challenge in field robotics, particularly for Unmanned Ground Vehicles (UGVs)
+tasked with search and rescue, exploration, and surveillance. Effective
+long-range planning relies on the integration of onboard perception systems
+with prior environmental knowledge, such as satellite imagery and LiDAR data.
+This work introduces Trailblazer, a novel framework that automates the
+conversion of multi-modal sensor data into costmaps, enabling efficient path
+planning without manual tuning. Unlike traditional approaches, Trailblazer
+leverages imitation learning and a differentiable A* planner to learn costmaps
+directly from expert demonstrations, enhancing adaptability across diverse
+terrains. The proposed methodology was validated through extensive real-world
+testing, achieving robust performance in dynamic and complex environments,
+demonstrating Trailblazer's potential for scalable, efficient autonomous
+navigation.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2505.09737v1' target='_blank'>General Dynamic Goal Recognition</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Osher Elhadad, Reuth Mirsky</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-05-14 18:57:51</h6>
+<p class='card-text'>Understanding an agent's intent through its behavior is essential in
+human-robot interaction, interactive AI systems, and multi-agent
+collaborations. This task, known as Goal Recognition (GR), poses significant
+challenges in dynamic environments where goals are numerous and constantly
+evolving. Traditional GR methods, designed for a predefined set of goals, often
+struggle to adapt to these dynamic scenarios. To address this limitation, we
+introduce the General Dynamic GR problem - a broader definition of GR - aimed
+at enabling real-time GR systems and fostering further research in this area.
+Expanding on this foundation, this paper employs a model-free goal-conditioned
+RL approach to enable fast adaptation for GR across various changing tasks.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2505.09667v1' target='_blank'>An ion treatment planning framework for inclusion of nanodosimetric
+  ionization detail through cluster dose</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Simona Facchiano, Ramon Ortiz, Remo Cristoforetti, Naoki D-Kondo, Oliver Jaekel, Bruce Faddegon, Niklas Wahl</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-05-14 17:52:27</h6>
+<p class='card-text'>Nanodosimetry relates Ionization Detail (ID) and ionization parameters (Ip)
+to biological endpoints relevant for charged-particle radiotherapy. This
+supports a more physics-based modeling of biological effectiveness than
+traditional dose-response relationships and RBE models. Faddegon et al. (2023)
+introduced cluster dose g(Ip) as a physical quantity, bridging ID to the
+treatment planning level, which can be directly optimized. We developed a
+framework enabling cluster dose optimization via a pencil-beam (PB) algorithm,
+and validated against Monte Carlo (MC) simulations. The framework, integrated
+into the treatment planning toolkit matRad, uses precomputed Ip values obtained
+from MC track-structure simulations. We applied our tool for plan optimization
+with protons, helium, and carbon ions in a water phantom and a prostate case.
+Recalculation with TOPAS showed 3D gamma passing rates >97% (phantom) and >98%
+(patient) using a 3%/3mm criterion and a threshold of 10% of the maximum dose.
+Cluster dose F5 optimization produced homogeneous target coverage, with heavier
+ions requiring lower absorbed doses for the same prescribed cluster dose level.
+This demonstrates the feasibility of fast, accurate cluster dose optimization
+using PB algorithms.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2505.09562v1' target='_blank'>Camera-Only 3D Panoptic Scene Completion for Autonomous Driving through
+  Differentiable Object Shapes</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Nicola Marinello, Simen Cassiman, Jonas Heylen, Marc Proesmans, Luc Van Gool</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-05-14 17:05:12</h6>
+<p class='card-text'>Autonomous vehicles need a complete map of their surroundings to plan and
+act. This has sparked research into the tasks of 3D occupancy prediction, 3D
+scene completion, and 3D panoptic scene completion, which predict a dense map
+of the ego vehicle's surroundings as a voxel grid. Scene completion extends
+occupancy prediction by predicting occluded regions of the voxel grid, and
+panoptic scene completion further extends this task by also distinguishing
+object instances within the same class; both aspects are crucial for path
+planning and decision-making. However, 3D panoptic scene completion is
+currently underexplored. This work introduces a novel framework for 3D panoptic
+scene completion that extends existing 3D semantic scene completion models. We
+propose an Object Module and Panoptic Module that can easily be integrated with
+3D occupancy and scene completion methods presented in the literature. Our
+approach leverages the available annotations in occupancy benchmarks, allowing
+individual object shapes to be learned as a differentiable problem. The code is
+available at https://github.com/nicolamarinello/OffsetOcc .</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2505.09490v1' target='_blank'>The Blinking Crystallinity of Europa: A Competition between Irradiation
+  and Thermal Alteration</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Cyril Mergny, Frédéric Schmidt, Felix Keil</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-05-14 15:41:20</h6>
+<p class='card-text'>The surface of Europa experiences a competition between thermally-induced
+crystallization and radiation-induced amorphization processes, leading to
+changes of its crystalline structure. The non-linear crystallization and
+temperature-dependent amorphization rate, incorporating ions, electrons and UV
+doses, are integrated into our multiphysics surface model (MSM) LunaIcy,
+enabling simulations of these coupled processes on icy moons.
+  Thirty simulations spanning 100 000 years, covering the full ranges of albedo
+and latitude values on Europa, explore the competition between crystallization
+and irradiation. This is the first modeling of depth-dependent crystallinity
+profiles on icy moons. The results of our simulations are coherent with
+existing spectroscopic studies of Europa, both methods showing a primarily
+amorphous phase at the surface, followed by a crystalline phase after the first
+millimeter depth. Our method provides quantitative insights into how various
+parameters found on Europa can influence the subsurface crystallinity profiles.
+  Interpolating upon our simulations, we have generated a crystallinity map of
+Europa showing, within the top millimeter, highly crystalline ice near the
+equator, amorphous ice at the poles, and a mix of the two at mid-latitudes.
+Regions/depths with balanced competition between crystallization and
+amorphization rates are of high interest due to their periodic fluctuations in
+crystalline fraction. Our interpolated map reveals periodic variations, with
+seasonal amplitudes reaching up to 35% of crystalline fraction. These
+variations could be detected through spectroscopy, and we propose a plan to
+observe them in forthcoming missions.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2505.09475v1' target='_blank'>aUToPath: Unified Planning and Control for Autonomous Vehicles in Urban
+  Environments Using Hybrid Lattice and Free-Space Search</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Tanmay P. Patel, Connor Wilson, Ellina R. Zhang, Morgan Tran, Chang Keun Paik, Steven L. Waslander, Timothy D. Barfoot</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-05-14 15:25:50</h6>
+<p class='card-text'>This paper presents aUToPath, a unified online framework for global
+path-planning and control to address the challenge of autonomous navigation in
+cluttered urban environments. A key component of our framework is a novel
+hybrid planner that combines pre-computed lattice maps with dynamic free-space
+sampling to efficiently generate optimal driveable corridors in cluttered
+scenarios. Our system also features sequential convex programming (SCP)-based
+model predictive control (MPC) to refine the corridors into smooth, dynamically
+consistent trajectories. A single optimization problem is used to both generate
+a trajectory and its corresponding control commands; this addresses limitations
+of decoupled approaches by guaranteeing a safe and feasible path. Simulation
+results of the novel planner on randomly generated obstacle-rich scenarios
+demonstrate the success rate of a free-space Adaptively Informed Trees*
+(AIT*)-based planner, and runtimes comparable to a lattice-based planner.
+Real-world experiments of the full system on a Chevrolet Bolt EUV further
+validate performance in dense obstacle fields, demonstrating no violations of
+traffic, kinematic, or vehicle constraints, and a 100% success rate across
+eight trials.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js'></script>
+</body>
+</html>
