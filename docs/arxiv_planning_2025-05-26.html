@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>planning - 2025-05-26</title>
+<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap' rel='stylesheet'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css'>
+<style>
+body {
+font-family: 'Roboto', sans-serif;
+background-color: #f5f7fa;
+padding: 20px;
+}
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.card-title {
+    font-weight: 700;
+}
+.card:hover {
+    transform: scale(1.02);
+    transition: 0.3s ease-in-out;
+}
+</style>
+</head>
+<body>
+<div class='container'>
+<h1 class='text-center my-4'><i class='fas fa-book'></i>planning - 2025-05-26</h1>
+<div class='row'>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2505.18088v1' target='_blank'>Early-Exit Graph Neural Networks</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Andrea Giuseppe Di Francesco, Maria Sofia Bucarelli, Franco Maria Nardini, Raffaele Perego, Nicola Tonellotto, Fabrizio Silvestri</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-05-23 16:45:14</h6>
+<p class='card-text'>Early-exit mechanisms allow deep neural networks to halt inference as soon as
+classification confidence is high enough, adaptively trading depth for
+confidence, and thereby cutting latency and energy on easy inputs while
+retaining full-depth accuracy for harder ones. Similarly, adding early exit
+mechanisms to Graph Neural Networks (GNNs), the go-to models for
+graph-structured data, allows for dynamic trading depth for confidence on
+simple graphs while maintaining full-depth accuracy on harder and more complex
+graphs to capture intricate relationships. Although early exits have proven
+effective across various deep learning domains, their potential within GNNs in
+scenarios that require deep architectures while resisting over-smoothing and
+over-squashing remains largely unexplored. We unlock that potential by first
+introducing Symmetric-Anti-Symmetric Graph Neural Networks (SAS-GNN), whose
+symmetry-based inductive biases mitigate these issues and yield stable
+intermediate representations that can be useful to allow early exiting in GNNs.
+Building on this backbone, we present Early-Exit Graph Neural Networks
+(EEGNNs), which append confidence-aware exit heads that allow on-the-fly
+termination of propagation based on each node or the entire graph. Experiments
+show that EEGNNs preserve robust performance as depth grows and deliver
+competitive accuracy on heterophilic and long-range benchmarks, matching
+attention-based and asynchronous message-passing models while substantially
+reducing computation and latency. We plan to release the code to reproduce our
+experiments.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2505.18083v1' target='_blank'>What Do You Need for Diverse Trajectory Stitching in Diffusion Planning?</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Quentin Clark, Florian Shkurti</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-05-23 16:41:08</h6>
+<p class='card-text'>In planning, stitching is an ability of algorithms to piece together
+sub-trajectories of data they are trained on to generate new and diverse
+behaviours. While stitching is historically a strength of offline reinforcement
+learning, recent generative behavioural cloning (BC) methods have also shown
+proficiency at stitching. However, the main factors behind this are poorly
+understood, hindering the development of new algorithms that can reliably
+stitch. Focusing on diffusion planners trained via BC, we find two properties
+are needed to compose: \emph{positional equivariance} and \emph{local
+receptiveness}. We use these two properties to explain architecture, data, and
+inference choices in existing generative BC methods based on diffusion
+planning, including replanning frequency, data augmentation, and data scaling.
+Experimental comparisions show that (1) while locality is more important than
+positional equivariance in creating a diffusion planner capable of composition,
+both are crucial (2) enabling these properties through relatively simple
+architecture choices can be competitive with more computationally expensive
+methods such as replanning or scaling data, and (3) simple inpainting-based
+guidance can guide architecturally compositional models to enable
+generalization in goal-conditioned settings.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2505.18030v1' target='_blank'>Automata Learning of Preferences over Temporal Logic Formulas from
+  Pairwise Comparisons</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Hazhar Rahmani, Jie Fu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-05-23 15:35:39</h6>
+<p class='card-text'>Many preference elicitation algorithms consider preference over propositional
+logic formulas or items with different attributes. In sequential decision
+making, a user's preference can be a preorder over possible outcomes, each of
+which is a temporal sequence of events. This paper considers a class of
+preference inference problems where the user's unknown preference is
+represented by a preorder over regular languages (sets of temporal sequences),
+referred to as temporal goals. Given a finite set of pairwise comparisons
+between finite words, the objective is to learn both the set of temporal goals
+and the preorder over these goals. We first show that a preference relation
+over temporal goals can be modeled by a Preference Deterministic Finite
+Automaton (PDFA), which is a deterministic finite automaton augmented with a
+preorder over acceptance conditions. The problem of preference inference
+reduces to learning the PDFA. This problem is shown to be computationally
+challenging, with the problem of determining whether there exists a PDFA of
+size smaller than a given integer $k$, consistent with the sample, being
+NP-Complete. We formalize the properties of characteristic samples and develop
+an algorithm that guarantees to learn, given a characteristic sample, the
+minimal PDFA equivalent to the true PDFA from which the sample is drawn. We
+present the method through a running example and provide detailed analysis
+using a robotic motion planning problem.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2505.18021v1' target='_blank'>Building Floor Number Estimation from Crowdsourced Street-Level Images:
+  Munich Dataset and Baseline Method</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yao Sun, Sining Chen, Yifan Tian, Xiao Xiang Zhu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-05-23 15:27:46</h6>
+<p class='card-text'>Accurate information on the number of building floors, or above-ground
+storeys, is essential for household estimation, utility provision, risk
+assessment, evacuation planning, and energy modeling. Yet large-scale
+floor-count data are rarely available in cadastral and 3D city databases. This
+study proposes an end-to-end deep learning framework that infers floor numbers
+directly from unrestricted, crowdsourced street-level imagery, avoiding
+hand-crafted features and generalizing across diverse facade styles. To enable
+benchmarking, we release the Munich Building Floor Dataset, a public set of
+over 6800 geo-tagged images collected from Mapillary and targeted field
+photography, each paired with a verified storey label. On this dataset, the
+proposed classification-regression network attains 81.2% exact accuracy and
+predicts 97.9% of buildings within +/-1 floor. The method and dataset together
+offer a scalable route to enrich 3D city models with vertical information and
+lay a foundation for future work in urban informatics, remote sensing, and
+geographic information science. Source code and data will be released under an
+open license at https://github.com/ya0-sun/Munich-SVI-Floor-Benchmark.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2505.17996v1' target='_blank'>A 1.8 m class pathfinder Raman LIDAR for the Northern Site of the
+  Cherenkov Telescope Array Observatory -- Performance</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Pedro Jose Bauza-Ruiz, Oscar Blanch, Paolo G. Calisse, Anna Campoy-Ordaz, Sidika Merve Colak, Michele Doro, Lluis Font, Markus Gaug, Roger Grau, Darko Kolar, Camilla Maggio, Manel Martinez, Samo Stanic, Santiago Ubach, Marko Zavrtanik, Miha Zivec</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-05-23 15:00:47</h6>
+<p class='card-text'>The Barcelona Raman LIDAR (BRL) will provide continuous monitoring of the
+aerosol extinction profile along the line of sight of the Cherenkov Telescope
+Array Observatory (CTAO). It will be located at its Northern site (CTAO-N) on
+the Observatorio del Roque de Los Muchachos. This article presents the
+performance of the pathfinder Barcelona Raman LIDAR (pBRL), a prototype
+instrument for the final BRL. Power budget simulations were carried out for the
+pBRL operating. under various conditions, including clear nights, moon
+conditions, and dust intrusions. The LIDAR PreProcessing (LPP) software suite
+is presented, which includes several new statistical methods for background
+subtraction, signal gluing, ground layer and cloud detection and inversion,
+based on two elastic and one Raman lines. Preliminary test campaigns were
+conducted, first close to Barcelona and later at CTAO-N, albeit during moonlit
+nights only. The pBRL, under these non-optimal conditions, achieves maximum
+ranges up to about 35 km, range resolution of about 50 m for strongly absorbing
+dust layers, and 500 m for optically thin clouds with the Raman channel only,
+leading to similar resolutions for the LIDAR ratios and Angstrom exponents.
+Given the reasonable agreement between the extinction coefficients obtained
+from the Raman and elastic lines independently, an accuracy of aerosol optical
+depth retrieval in the order of 0.05 can be assumed with the current setup. The
+results show that the pBRL can provide valuable scientific results on aerosol
+characteristics and structure, although not all performance requirements could
+be validated under the conditions found at the two test sites. Several moderate
+hardware improvements are planned for its final upgraded version [truncated].</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2505.17908v1' target='_blank'>ComfyMind: Toward General-Purpose Generation via Tree-Based Planning and
+  Reactive Feedback</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Litao Guo, Xinli Xu, Luozhou Wang, Jiantao Lin, Jinsong Zhou, Zixin Zhang, Bolan Su, Ying-Cong Chen</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-05-23 13:53:03</h6>
+<p class='card-text'>With the rapid advancement of generative models, general-purpose generation
+has gained increasing attention as a promising approach to unify diverse tasks
+across modalities within a single system. Despite this progress, existing
+open-source frameworks often remain fragile and struggle to support complex
+real-world applications due to the lack of structured workflow planning and
+execution-level feedback. To address these limitations, we present ComfyMind, a
+collaborative AI system designed to enable robust and scalable general-purpose
+generation, built on the ComfyUI platform. ComfyMind introduces two core
+innovations: Semantic Workflow Interface (SWI) that abstracts low-level node
+graphs into callable functional modules described in natural language, enabling
+high-level composition and reducing structural errors; Search Tree Planning
+mechanism with localized feedback execution, which models generation as a
+hierarchical decision process and allows adaptive correction at each stage.
+Together, these components improve the stability and flexibility of complex
+generative workflows. We evaluate ComfyMind on three public benchmarks:
+ComfyBench, GenEval, and Reason-Edit, which span generation, editing, and
+reasoning tasks. Results show that ComfyMind consistently outperforms existing
+open-source baselines and achieves performance comparable to GPT-Image-1.
+ComfyMind paves a promising path for the development of open-source
+general-purpose generative AI systems. Project page:
+https://github.com/LitaoGuo/ComfyMind</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2505.17896v1' target='_blank'>Geometric Shape Modelling and Volume Estimation of Dry Bulk Cargo Piles
+  using a Single Image</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Debanshu Ratha, Madhu Koirala, Pål Gunnar Ellingsen</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-05-23 13:44:03</h6>
+<p class='card-text'>Volume estimation of onshore cargo piles is of economic importance for
+shipping and mining companies as well as public authorities for real-time
+planning of logistics, business intelligence, transport services by land or sea
+and governmental oversight. In remote sensing literature, the volume of pile is
+estimated by relying on the illumination property of object to construct the
+geometric shape from a single image, alternatively, stereographic imaging for
+construction of a digital elevation model from pairs of images. In a fresh
+perspective, we propose a novel approach for estimating volume from a single
+optical image in this work where we use the material property, which relates
+the base dimensions of the pile to its height through the critical angle of
+repose. In materials literature, often this is well-studied for fixed base and
+their \textit{in situ} volume estimation for different materials. In this work,
+however, we mathematically model the geometric shape of the pile through a
+fixed height model. This is appropriate because the unloading crane arm that
+forms the pile can rise only up to a certain height and generally moved in the
+horizontal plane during unloading of the material. After mathematically
+modelling the geometric shape of regular piles for fixed heights under
+rectilinear motion of unloader, we provide closed form formula to estimate
+their volume. Apart from laying the mathematical foundations, we also test it
+on real optical remote sensing data of an open bulk cargo storage facility for
+silica sand and present the results. We obtain an accuracy of $95\%$ in
+estimating the total bulk storage volume of the storage facility. This is a
+first demonstration study and will be integrated with applied machine learning
+approaches or current state-of-art approaches in the future for more complex
+scenarios for estimating dry bulk cargo pile volume.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2505.17866v1' target='_blank'>DesignX: Human-Competitive Algorithm Designer for Black-Box Optimization</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Hongshu Guo, Zeyuan Ma, Yining Ma, Xinglin Zhang, Wei-Neng Chen, Yue-Jiao Gong</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-05-23 13:16:01</h6>
+<p class='card-text'>Designing effective black-box optimizers is hampered by limited
+problem-specific knowledge and manual control that spans months for almost
+every detail. In this paper, we present DesignX, the first automated algorithm
+design framework that generates an effective optimizer specific to a given
+black-box optimization problem within seconds. Rooted in the first principles,
+we identify two key sub-tasks: 1) algorithm structure generation and 2)
+hyperparameter control. To enable systematic construction, a comprehensive
+modular algorithmic space is first built, embracing hundreds of algorithm
+components collected from decades of research. We then introduce a dual-agent
+reinforcement learning system that collaborates on structural and parametric
+design through a novel cooperative training objective, enabling large-scale
+meta-training across 10k diverse instances. Remarkably, through days of
+autonomous learning, the DesignX-generated optimizers continuously surpass
+human-crafted optimizers by orders of magnitude, either on synthetic testbed or
+on realistic optimization scenarios such as Protein-docking, AutoML and UAV
+path planning. Further in-depth analysis reveals DesignX's capability to
+discover non-trivial algorithm patterns beyond expert intuition, which,
+conversely, provides valuable design insights for the optimization community.
+We provide DesignX's inference code at https://github.com/MetaEvo/DesignX.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2505.17864v1' target='_blank'>Urban Household Behavior in Indonesia: Drivers of Zero Waste
+  Participation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Faizal Amir, Alimuddin S. Miru, Edy Sabara</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-05-23 13:14:59</h6>
+<p class='card-text'>The 3R-based Zero Waste approach aims to minimize household solid waste
+through the principles of Reduce, Reuse, and Recycle. This study examines the
+relationship between household environmental knowledge, personal attitude,
+subjective norms, and perceived behavioral control as key behavioral
+predictors. A structured survey was conducted among 1,200 urban households
+across 12 Indonesian cities. Data were analyzed using Pearson correlation and
+multiple regression analysis. The results indicate that perceived behavioral
+control is the strongest predictor of household waste management behavior (beta
+= 0.367, p <= 0.001), followed by subjective norms (beta = 0.358, p <= 0.001)
+and environmental knowledge (beta = 0.126, p <= 0.001). This suggests that
+individuals' confidence in managing household waste significantly influences
+their practical actions. Overall, perceived behavioral control, subjective
+norms, and environmental knowledge contribute to Zero Waste behavior in urban
+households. Given that households regularly generate and dispose of waste, they
+represent a fundamental element in municipal waste management strategies. These
+findings offer valuable insights for designing behavior-based interventions and
+inform policy development using the Theory of Planned Behavior.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2505.17814v1' target='_blank'>Searching for extreme mass ratio inspirals in LISA: from identification
+  to parameter estimation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Stefan H. Strub, Lorenzo Speri, Domenico Giardini</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-05-23 12:29:46</h6>
+<p class='card-text'>The Laser Interferometer Space Antenna (LISA) is a planned space-based
+observatory designed to detect gravitational waves (GWs) within the millihertz
+frequency range. LISA is anticipated to observe the inspiral of compact objects
+into black holes at the centers of galaxies, so called extreme-mass-ratio
+inspirals (EMRIs). However, the extraction of these long-lived complex signals
+is challenging due to the large size and multimodality of the search space. In
+this study, we introduce a new search strategy that allows us to find EMRI
+signals in noisy data from wide priors all the way to performing parameter
+estimation. This work is an important step in understanding how to extract
+EMRIs from future LISA data.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2505.17732v1' target='_blank'>RQR3D: Reparametrizing the regression targets for BEV-based 3D object
+  detection</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Ozsel Kilinc, Cem Tarhan</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-05-23 10:52:34</h6>
+<p class='card-text'>Accurate, fast, and reliable 3D perception is essential for autonomous
+driving. Recently, bird's-eye view (BEV)-based perception approaches have
+emerged as superior alternatives to perspective-based solutions, offering
+enhanced spatial understanding and more natural outputs for planning. Existing
+BEV-based 3D object detection methods, typically adhering to angle-based
+representation, directly estimate the size and orientation of rotated bounding
+boxes. We observe that BEV-based 3D object detection is analogous to aerial
+oriented object detection, where angle-based methods are recognized for being
+affected by discontinuities in their loss functions. Drawing inspiration from
+this domain, we propose Restricted Quadrilateral Representation to define 3D
+regression targets. RQR3D regresses the smallest horizontal bounding box
+encapsulating the oriented box, along with the offsets between the corners of
+these two boxes, thereby transforming the oriented object detection problem
+into a keypoint regression task. RQR3D is compatible with any 3D object
+detection approach. We employ RQR3D within an anchor-free single-stage object
+detection method and introduce an objectness head to address class imbalance
+problem. Furthermore, we introduce a simplified radar fusion backbone that
+eliminates the need for voxel grouping and processes the BEV-mapped point cloud
+with standard 2D convolutions, rather than sparse convolutions. Extensive
+evaluations on the nuScenes dataset demonstrate that RQR3D achieves
+state-of-the-art performance in camera-radar 3D object detection, outperforming
+the previous best method by +4% in NDS and +2.4% in mAP, and significantly
+reducing the translation and orientation errors, which are crucial for safe
+autonomous driving. These consistent gains highlight the robustness, precision,
+and real-world readiness of our approach.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2505.17727v1' target='_blank'>SafeMVDrive: Multi-view Safety-Critical Driving Video Synthesis in the
+  Real World Domain</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jiawei Zhou, Linye Lyu, Zhuotao Tian, Cheng Zhuo, Yu Li</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-05-23 10:45:43</h6>
+<p class='card-text'>Safety-critical scenarios are rare yet pivotal for evaluating and enhancing
+the robustness of autonomous driving systems. While existing methods generate
+safety-critical driving trajectories, simulations, or single-view videos, they
+fall short of meeting the demands of advanced end-to-end autonomous systems
+(E2E AD), which require real-world, multi-view video data. To bridge this gap,
+we introduce SafeMVDrive, the first framework designed to generate
+high-quality, safety-critical, multi-view driving videos grounded in real-world
+domains. SafeMVDrive strategically integrates a safety-critical trajectory
+generator with an advanced multi-view video generator. To tackle the challenges
+inherent in this integration, we first enhance scene understanding ability of
+the trajectory generator by incorporating visual context -- which is previously
+unavailable to such generator -- and leveraging a GRPO-finetuned
+vision-language model to achieve more realistic and context-aware trajectory
+generation. Second, recognizing that existing multi-view video generators
+struggle to render realistic collision events, we introduce a two-stage,
+controllable trajectory generation mechanism that produces collision-evasion
+trajectories, ensuring both video quality and safety-critical fidelity.
+Finally, we employ a diffusion-based multi-view video generator to synthesize
+high-quality safety-critical driving videos from the generated trajectories.
+Experiments conducted on an E2E AD planner demonstrate a significant increase
+in collision rate when tested with our generated data, validating the
+effectiveness of SafeMVDrive in stress-testing planning modules. Our code,
+examples, and datasets are publicly available at:
+https://zhoujiawei3.github.io/SafeMVDrive/.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2505.17685v1' target='_blank'>FutureSightDrive: Thinking Visually with Spatio-Temporal CoT for
+  Autonomous Driving</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Shuang Zeng, Xinyuan Chang, Mengwei Xie, Xinran Liu, Yifan Bai, Zheng Pan, Mu Xu, Xing Wei</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-05-23 09:55:32</h6>
+<p class='card-text'>Visual language models (VLMs) have attracted increasing interest in
+autonomous driving due to their powerful reasoning capabilities. However,
+existing VLMs typically utilize discrete text Chain-of-Thought (CoT) tailored
+to the current scenario, which essentially represents highly abstract and
+symbolic compression of visual information, potentially leading to
+spatio-temporal relationship ambiguity and fine-grained information loss. Is
+autonomous driving better modeled on real-world simulation and imagination than
+on pure symbolic logic? In this paper, we propose a spatio-temporal CoT
+reasoning method that enables models to think visually. First, VLM serves as a
+world model to generate unified image frame for predicting future world states:
+where perception results (e.g., lane divider and 3D detection) represent the
+future spatial relationships, and ordinary future frame represent the temporal
+evolution relationships. This spatio-temporal CoT then serves as intermediate
+reasoning steps, enabling the VLM to function as an inverse dynamics model for
+trajectory planning based on current observations and future predictions. To
+implement visual generation in VLMs, we propose a unified pretraining paradigm
+integrating visual generation and understanding, along with a progressive
+visual CoT enhancing autoregressive image generation. Extensive experimental
+results demonstrate the effectiveness of the proposed method, advancing
+autonomous driving towards visual reasoning.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2505.17659v1' target='_blank'>Plan-R1: Safe and Feasible Trajectory Planning as Language Modeling</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Xiaolong Tang, Meina Kan, Shiguang Shan, Xilin Chen</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-05-23 09:22:19</h6>
+<p class='card-text'>Safe and feasible trajectory planning is essential for real-world autonomous
+driving systems. However, existing learning-based planning methods often rely
+on expert demonstrations, which not only lack explicit safety awareness but
+also risk inheriting unsafe behaviors such as speeding from suboptimal human
+driving data. Inspired by the success of large language models, we propose
+Plan-R1, a novel two-stage trajectory planning framework that formulates
+trajectory planning as a sequential prediction task, guided by explicit
+planning principles such as safety, comfort, and traffic rule compliance. In
+the first stage, we train an autoregressive trajectory predictor via next
+motion token prediction on expert data. In the second stage, we design
+rule-based rewards (e.g., collision avoidance, speed limits) and fine-tune the
+model using Group Relative Policy Optimization (GRPO), a reinforcement learning
+strategy, to align its predictions with these planning principles. Experiments
+on the nuPlan benchmark demonstrate that our Plan-R1 significantly improves
+planning safety and feasibility, achieving state-of-the-art performance.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2505.17637v1' target='_blank'>Causal Spatio-Temporal Prediction: An Effective and Efficient
+  Multi-Modal Approach</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yuting Huang, Ziquan Fang, Zhihao Zeng, Lu Chen, Yunjun Gao</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-05-23 08:58:38</h6>
+<p class='card-text'>Spatio-temporal prediction plays a crucial role in intelligent
+transportation, weather forecasting, and urban planning. While integrating
+multi-modal data has shown potential for enhancing prediction accuracy, key
+challenges persist: (i) inadequate fusion of multi-modal information, (ii)
+confounding factors that obscure causal relations, and (iii) high computational
+complexity of prediction models. To address these challenges, we propose
+E^2-CSTP, an Effective and Efficient Causal multi-modal Spatio-Temporal
+Prediction framework. E^2-CSTP leverages cross-modal attention and gating
+mechanisms to effectively integrate multi-modal data. Building on this, we
+design a dual-branch causal inference approach: the primary branch focuses on
+spatio-temporal prediction, while the auxiliary branch mitigates bias by
+modeling additional modalities and applying causal interventions to uncover
+true causal dependencies. To improve model efficiency, we integrate GCN with
+the Mamba architecture for accelerated spatio-temporal encoding. Extensive
+experiments on 4 real-world datasets show that E^2-CSTP significantly
+outperforms 9 state-of-the-art methods, achieving up to 9.66% improvements in
+accuracy as well as 17.37%-56.11% reductions in computational overhead.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2505.17528v1' target='_blank'>DECT-based Space-Squeeze Method for Multi-Class Classification of
+  Metastatic Lymph Nodes in Breast Cancer</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Hai Jiang, Chushan Zheng, Jiawei Pan, Yuanpin Zhou, Qiongting Liu, Xiang Zhang, Jun Shen, Yao Lu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-05-23 06:35:18</h6>
+<p class='card-text'>Background: Accurate assessment of metastatic burden in axillary lymph nodes
+is crucial for guiding breast cancer treatment decisions, yet conventional
+imaging modalities struggle to differentiate metastatic burden levels and
+capture comprehensive lymph node characteristics. This study leverages
+dual-energy computed tomography (DECT) to exploit spectral-spatial information
+for improved multi-class classification. Purpose: To develop a noninvasive
+DECT-based model classifying sentinel lymph nodes into three categories: no
+metastasis ($N_0$), low metastatic burden ($N_{+(1-2)}$), and heavy metastatic
+burden ($N_{+(\geq3)}$), thereby aiding therapeutic planning. Methods: We
+propose a novel space-squeeze method combining two innovations: (1) a
+channel-wise attention mechanism to compress and recalibrate spectral-spatial
+features across 11 energy levels, and (2) virtual class injection to sharpen
+inter-class boundaries and compact intra-class variations in the representation
+space. Results: Evaluated on 227 biopsy-confirmed cases, our method achieved an
+average test AUC of 0.86 (95% CI: 0.80-0.91) across three cross-validation
+folds, outperforming established CNNs (VGG, ResNet, etc). The channel-wise
+attention and virtual class components individually improved AUC by 5.01% and
+5.87%, respectively, demonstrating complementary benefits. Conclusions: The
+proposed framework enhances diagnostic AUC by effectively integrating DECT's
+spectral-spatial data and mitigating class ambiguity, offering a promising tool
+for noninvasive metastatic burden assessment in clinical practice.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2505.17438v1' target='_blank'>HEPP: Hyper-efficient Perception and Planning for High-speed Obstacle
+  Avoidance of UAVs</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Minghao Lu, Xiyu Fan, Bowen Xu, Zexuan Yan, Rui Peng, Han Chen, Lixian Zhang, Peng Lu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-05-23 03:37:01</h6>
+<p class='card-text'>High-speed obstacle avoidance of uncrewed aerial vehicles (UAVs) in cluttered
+environments is a significant challenge. Existing UAV planning and obstacle
+avoidance systems can only fly at moderate speeds or at high speeds over empty
+or sparse fields. In this article, we propose a hyper-efficient perception and
+planning system for the high-speed obstacle avoidance of UAVs. The system
+mainly consists of three modules: 1) A novel incremental robocentric mapping
+method with distance and gradient information, which takes 89.5% less time
+compared to existing methods. 2) A novel obstacle-aware topological path search
+method that generates multiple distinct paths. 3) An adaptive gradient-based
+high-speed trajectory generation method with a novel time pre-allocation
+algorithm. With these innovations, the system has an excellent real-time
+performance with only milliseconds latency in each iteration, taking 79.24%
+less time than existing methods at high speeds (15 m/s in cluttered
+environments), allowing UAVs to fly swiftly and avoid obstacles in cluttered
+environments. The planned trajectory of the UAV is close to the global optimum
+in both temporal and spatial domains. Finally, extensive validations in both
+simulation and real-world experiments demonstrate the effectiveness of our
+proposed system for high-speed navigation in cluttered environments.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2505.17394v1' target='_blank'>Emergence of Anti-chemotactic Flocking in Active Biomimetic Colloids</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Joseph D. Lopes, Benjamin Winterstrain, Fernando Caballero, Amélie Chardac, Izaiah Alvarado, Adrielle T. Cusi, Shibani Dalal, Gess Kelly, Michael R. Stehnach, Bruce L. Goode, Thomas G. Fai, Michael F. Hagan, Michael M. Norton, Guillaume Duclos</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-05-23 02:07:57</h6>
+<p class='card-text'>Competition for resources is a fundamental constraint that guides the
+self-organization of natural, biological, and human systems, ranging from urban
+planning and ecosystem development to intracellular pattern formation. Here, we
+reveal that competition for resources is at the origin of the collective
+dynamics that emerge in a population of colloids propelled by actin
+treadmilling, an out-of-equilibrium process where filaments grow from one end
+while shrinking from the other. Using a combination of experiments and theory,
+we show that symmetry-breaking, self-propulsion, and flocking emerge from the
+local competition for actin monomers. We demonstrate that beads propelled by
+actin treadmilling are anti-chemotactic and spontaneously generate asymmetric
+actin gradients that trigger and sustain directed motility. Flocking emerges
+from the combined effects of anti-chemotaxis and local competition for
+monomers. The flocking transition depends on the actin polymerization rate,
+actin monomer diffusivity, and the bead's motility, whose interplay controls
+the emergence of short-range attractive interactions between the colloids. Our
+findings demonstrate that active stress generation coupled to
+reaction-diffusion is a generic mechanism that can lead to a multiscale cascade
+of behaviors when active agents remodel their environment. Actin treadmilling
+offers a platform to study how motile agents that interact through a field
+self-organize in novel dynamical phases, with potential applications in
+non-reciprocal and trainable active matter.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2505.17352v1' target='_blank'>Alignment and Safety of Diffusion Models via Reinforcement Learning and
+  Reward Modeling: A Survey</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Preeti Lamba, Kiran Ravish, Ankita Kushwaha, Pawan Kumar</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-05-23 00:08:49</h6>
+<p class='card-text'>Diffusion models have emerged as leading generative models for images and
+other modalities, but aligning their outputs with human preferences and safety
+constraints remains a critical challenge. This thesis proposal investigates
+methods to align diffusion models using reinforcement learning (RL) and reward
+modeling. We survey recent advances in fine-tuning text-to-image diffusion
+models with human feedback, including reinforcement learning from human and AI
+feedback, direct preference optimization, and differentiable reward approaches.
+We classify these methods based on the type of feedback (human, automated,
+binary or ranked preferences), the fine-tuning technique (policy gradient,
+reward-weighted likelihood, direct backpropagation, etc.), and their efficiency
+and safety outcomes. We compare key algorithms and frameworks, highlighting how
+they improve alignment with user intent or safety standards, and discuss
+inter-relationships such as how newer methods build on or diverge from earlier
+ones. Based on the survey, we identify five promising research directions for
+the next two years: (1) multi-objective alignment with combined rewards, (2)
+efficient human feedback usage and active learning, (3) robust safety alignment
+against adversarial inputs, (4) continual and online alignment of diffusion
+models, and (5) interpretable and trustworthy reward modeling for generative
+images. Each direction is elaborated with its problem statement, challenges,
+related work, and a proposed research plan. The proposal is organized as a
+comprehensive document with literature review, comparative tables of methods,
+and detailed research plans, aiming to contribute new insights and techniques
+for safer and value-aligned diffusion-based generative AI.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2505.17338v1' target='_blank'>Render-FM: A Foundation Model for Real-time Photorealistic Volumetric
+  Rendering</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Zhongpai Gao, Meng Zheng, Benjamin Planche, Anwesa Choudhuri, Terrence Chen, Ziyan Wu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-05-22 23:18:30</h6>
+<p class='card-text'>Volumetric rendering of Computed Tomography (CT) scans is crucial for
+visualizing complex 3D anatomical structures in medical imaging. Current
+high-fidelity approaches, especially neural rendering techniques, require
+time-consuming per-scene optimization, limiting clinical applicability due to
+computational demands and poor generalizability. We propose Render-FM, a novel
+foundation model for direct, real-time volumetric rendering of CT scans.
+Render-FM employs an encoder-decoder architecture that directly regresses 6D
+Gaussian Splatting (6DGS) parameters from CT volumes, eliminating per-scan
+optimization through large-scale pre-training on diverse medical data. By
+integrating robust feature extraction with the expressive power of 6DGS, our
+approach efficiently generates high-quality, real-time interactive 3D
+visualizations across diverse clinical CT data. Experiments demonstrate that
+Render-FM achieves visual fidelity comparable or superior to specialized
+per-scan methods while drastically reducing preparation time from nearly an
+hour to seconds for a single inference step. This advancement enables seamless
+integration into real-time surgical planning and diagnostic workflows. The
+project page is: https://gaozhongpai.github.io/renderfm/.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2505.17295v1' target='_blank'>ScanBot: Towards Intelligent Surface Scanning in Embodied Robotic
+  Systems</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Zhiling Chen, Yang Zhang, Fardin Jalil Piran, Qianyu Zhou, Jiong Tang, Farhad Imani</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-05-22 21:22:50</h6>
+<p class='card-text'>We introduce ScanBot, a novel dataset designed for instruction-conditioned,
+high-precision surface scanning in robotic systems. In contrast to existing
+robot learning datasets that focus on coarse tasks such as grasping,
+navigation, or dialogue, ScanBot targets the high-precision demands of
+industrial laser scanning, where sub-millimeter path continuity and parameter
+stability are critical. The dataset covers laser scanning trajectories executed
+by a robot across 12 diverse objects and 6 task types, including full-surface
+scans, geometry-focused regions, spatially referenced parts, functionally
+relevant structures, defect inspection, and comparative analysis. Each scan is
+guided by natural language instructions and paired with synchronized RGB,
+depth, and laser profiles, as well as robot pose and joint states. Despite
+recent progress, existing vision-language action (VLA) models still fail to
+generate stable scanning trajectories under fine-grained instructions and
+real-world precision demands. To investigate this limitation, we benchmark a
+range of multimodal large language models (MLLMs) across the full
+perception-planning-execution loop, revealing persistent challenges in
+instruction-following under realistic constraints.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2505.17264v1' target='_blank'>Solving MDPs with LTLf+ and PPLTL+ Temporal Objectives</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Giuseppe De Giacomo, Yong Li, Sven Schewe, Christoph Weinhuber, Pian Yu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-05-22 20:21:16</h6>
+<p class='card-text'>The temporal logics LTLf+ and PPLTL+ have recently been proposed to express
+objectives over infinite traces. These logics are appealing because they match
+the expressive power of LTL on infinite traces while enabling efficient
+DFA-based techniques, which have been crucial to the scalability of reactive
+synthesis and adversarial planning in LTLf and PPLTL over finite traces. In
+this paper, we demonstrate that these logics are also highly effective in the
+context of MDPs. Introducing a technique tailored for probabilistic systems, we
+leverage the benefits of efficient DFA-based methods and compositionality. This
+approach is simpler than its non-probabilistic counterparts in reactive
+synthesis and adversarial planning, as it accommodates a controlled form of
+nondeterminism (``good for MDPs") in the automata when transitioning from
+finite to infinite traces. Notably, by exploiting compositionality, our
+solution is both implementation-friendly and well-suited for straightforward
+symbolic implementations.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2505.17239v1' target='_blank'>LiDAR 2.0: Hierarchical Curvy Waveguide Detailed Routing for Large-Scale
+  Photonic Integrated Circuits</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Hongjian Zhou, Haoyu Yang, Ziang Ying, Nicholas Gangi, Zhaoran, Huang, Haoxing Ren, Joaquin Matres, Jiaqi Gu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-05-22 19:33:48</h6>
+<p class='card-text'>Driven by innovations in photonic computing and interconnects, photonic
+integrated circuit (PIC) designs advance and grow in complexity. Traditional
+manual physical design processes have become increasingly cumbersome. Available
+PIC layout tools are mostly schematic-driven, which has not alleviated the
+burden of manual waveguide planning and layout drawing. Previous research in
+PIC automated routing is largely adapted from electronic design, focusing on
+high-level planning and overlooking photonic-specific constraints such as curvy
+waveguides, bending, and port alignment. As a result, they fail to scale and
+cannot generate DRV-free layouts, highlighting the need for dedicated
+electronic-photonic design automation tools to streamline PIC physical design.
+In this work, we present LiDAR, the first automated PIC detailed router for
+large-scale designs. It features a grid-based, curvy-aware A* engine with
+adaptive crossing insertion, congestion-aware net ordering, and insertion-loss
+optimization. To enable routing in more compact and complex designs, we further
+extend our router to hierarchical routing as LiDAR 2.0. It introduces
+redundant-bend elimination, crossing space preservation, and routing order
+refinement for improved conflict resilience. We also develop and open-source a
+YAML-based PIC intermediate representation and diverse benchmarks, including
+TeMPO, GWOR, and Bennes, which feature hierarchical structures and high
+crossing densities. Evaluations across various benchmarks show that LiDAR 2.0
+consistently produces DRV-free layouts, achieving up to 16% lower insertion
+loss and 7.69x speedup over prior methods on spacious cases, and 9% lower
+insertion loss with 6.95x speedup over LiDAR 1.0 on compact cases. Our codes
+are open-sourced at https://github.com/ScopeX-ASU/LiDAR.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2505.17012v1' target='_blank'>SpatialScore: Towards Unified Evaluation for Multimodal Spatial
+  Understanding</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Haoning Wu, Xiao Huang, Yaohui Chen, Ya Zhang, Yanfeng Wang, Weidi Xie</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-05-22 17:59:03</h6>
+<p class='card-text'>Multimodal large language models (MLLMs) have achieved impressive success in
+question-answering tasks, yet their capabilities for spatial understanding are
+less explored. This work investigates a critical question: do existing MLLMs
+possess 3D spatial perception and understanding abilities? Concretely, we make
+the following contributions in this paper: (i) we introduce VGBench, a
+benchmark specifically designed to assess MLLMs for visual geometry perception,
+e.g., camera pose and motion estimation; (ii) we propose SpatialScore, the most
+comprehensive and diverse multimodal spatial understanding benchmark to date,
+integrating VGBench with relevant data from the other 11 existing datasets.
+This benchmark comprises 28K samples across various spatial understanding
+tasks, modalities, and QA formats, along with a carefully curated challenging
+subset, SpatialScore-Hard; (iii) we develop SpatialAgent, a novel multi-agent
+system incorporating 9 specialized tools for spatial understanding, supporting
+both Plan-Execute and ReAct reasoning paradigms; (iv) we conduct extensive
+evaluations to reveal persistent challenges in spatial reasoning while
+demonstrating the effectiveness of SpatialAgent. We believe SpatialScore will
+offer valuable insights and serve as a rigorous benchmark for the next
+evolution of MLLMs.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2505.16833v1' target='_blank'>Strategically Linked Decisions in Long-Term Planning and Reinforcement
+  Learning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Alihan Hüyük, Finale Doshi-Velez</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-05-22 16:04:17</h6>
+<p class='card-text'>Long-term planning, as in reinforcement learning (RL), involves finding
+strategies: actions that collectively work toward a goal rather than
+individually optimizing their immediate outcomes. As part of a strategy, some
+actions are taken at the expense of short-term benefit to enable future actions
+with even greater returns. These actions are only advantageous if followed up
+by the actions they facilitate, consequently, they would not have been taken if
+those follow-ups were not available. In this paper, we quantify such
+dependencies between planned actions with strategic link scores: the drop in
+the likelihood of one decision under the constraint that a follow-up decision
+is no longer available. We demonstrate the utility of strategic link scores
+through three practical applications: (i) explaining black-box RL agents by
+identifying strategically linked pairs among decisions they make, (ii)
+improving the worst-case performance of decision support systems by
+distinguishing whether recommended actions can be adopted as standalone
+improvements or whether they are strategically linked hence requiring a
+commitment to a broader strategy to be effective, and (iii) characterizing the
+planning processes of non-RL agents purely through interventions aimed at
+measuring strategic link scores - as an example, we consider a realistic
+traffic simulator and analyze through road closures the effective planning
+horizon of the emergent routing behavior of many drivers.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2505.16832v1' target='_blank'>From EduVisBench to EduVisAgent: A Benchmark and Multi-Agent Framework
+  for Pedagogical Visualization</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Haonian Ji, Shi Qiu, Siyang Xin, Siwei Han, Zhaorun Chen, Hongyi Wang, Dake Zhang, Huaxiu Yao</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-05-22 16:02:18</h6>
+<p class='card-text'>While foundation models (FMs), such as diffusion models and large
+vision-language models (LVLMs), have been widely applied in educational
+contexts, their ability to generate pedagogically effective visual explanations
+remains limited. Most existing approaches focus primarily on textual reasoning,
+overlooking the critical role of structured and interpretable visualizations in
+supporting conceptual understanding. To better assess the visual reasoning
+capabilities of FMs in educational settings, we introduce EduVisBench, a
+multi-domain, multi-level benchmark. EduVisBench features diverse STEM problem
+sets requiring visually grounded solutions, along with a fine-grained
+evaluation rubric informed by pedagogical theory. Our empirical analysis
+reveals that existing models frequently struggle with the inherent challenge of
+decomposing complex reasoning and translating it into visual representations
+aligned with human cognitive processes. To address these limitations, we
+propose EduVisAgent, a multi-agent collaborative framework that coordinates
+specialized agents for instructional planning, reasoning decomposition,
+metacognitive prompting, and visualization design. Experimental results show
+that EduVisAgent substantially outperforms all baselines, achieving a 40.2%
+improvement and delivering more educationally aligned visualizations.
+EduVisBench and EduVisAgent are available at
+https://github.com/aiming-lab/EduVisBench and
+https://github.com/aiming-lab/EduVisAgent.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2505.16805v1' target='_blank'>SOLVE: Synergy of Language-Vision and End-to-End Networks for Autonomous
+  Driving</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Xuesong Chen, Linjiang Huang, Tao Ma, Rongyao Fang, Shaoshuai Shi, Hongsheng Li</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-05-22 15:44:30</h6>
+<p class='card-text'>The integration of Vision-Language Models (VLMs) into autonomous driving
+systems has shown promise in addressing key challenges such as learning
+complexity, interpretability, and common-sense reasoning. However, existing
+approaches often struggle with efficient integration and realtime
+decision-making due to computational demands. In this paper, we introduce
+SOLVE, an innovative framework that synergizes VLMs with end-to-end (E2E)
+models to enhance autonomous vehicle planning. Our approach emphasizes
+knowledge sharing at the feature level through a shared visual encoder,
+enabling comprehensive interaction between VLM and E2E components. We propose a
+Trajectory Chain-of-Thought (T-CoT) paradigm, which progressively refines
+trajectory predictions, reducing uncertainty and improving accuracy. By
+employing a temporal decoupling strategy, SOLVE achieves efficient cooperation
+by aligning high-quality VLM outputs with E2E real-time performance. Evaluated
+on the nuScenes dataset, our method demonstrates significant improvements in
+trajectory prediction accuracy, paving the way for more robust and reliable
+autonomous driving systems.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2505.16793v1' target='_blank'>REOBench: Benchmarking Robustness of Earth Observation Foundation Models</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Xiang Li, Yong Tao, Siyuan Zhang, Siwei Liu, Zhitong Xiong, Chunbo Luo, Lu Liu, Mykola Pechenizkiy, Xiao Xiang Zhu, Tianjin Huang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-05-22 15:34:50</h6>
+<p class='card-text'>Earth observation foundation models have shown strong generalization across
+multiple Earth observation tasks, but their robustness under real-world
+perturbations remains underexplored. To bridge this gap, we introduce REOBench,
+the first comprehensive benchmark for evaluating the robustness of Earth
+observation foundation models across six tasks and twelve types of image
+corruptions, including both appearance-based and geometric perturbations. To
+ensure realistic and fine-grained evaluation, our benchmark focuses on
+high-resolution optical remote sensing images, which are widely used in
+critical applications such as urban planning and disaster response. We conduct
+a systematic evaluation of a broad range of models trained using masked image
+modeling, contrastive learning, and vision-language pre-training paradigms. Our
+results reveal that (1) existing Earth observation foundation models experience
+significant performance degradation when exposed to input corruptions. (2) The
+severity of degradation varies across tasks, model architectures, backbone
+sizes, and types of corruption, with performance drop varying from less than 1%
+to over 20%. (3) Vision-language models show enhanced robustness, particularly
+in multimodal tasks. REOBench underscores the vulnerability of current Earth
+observation foundation models to real-world corruptions and provides actionable
+insights for developing more robust and reliable models.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2505.16787v1' target='_blank'>Gaze Into the Abyss -- Planning to Seek Entropy When Reward is Scarce</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Ashish Sundar, Chunbo Luo, Xiaoyang Wang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-05-22 15:28:50</h6>
+<p class='card-text'>Model-based reinforcement learning (MBRL) offers an intuitive way to increase
+the sample efficiency of model-free RL methods by simultaneously training a
+world model that learns to predict the future. MBRL methods have progressed by
+largely prioritising the actor; optimising the world model learning has been
+neglected meanwhile. Improving the fidelity of the world model and reducing its
+time to convergence can yield significant downstream benefits, one of which is
+improving the ensuing performance of any actor it may train. We propose a novel
+approach that anticipates and actively seeks out high-entropy states using
+short-horizon latent predictions generated by the world model, offering a
+principled alternative to traditional curiosity-driven methods that chase
+once-novel states well after they were stumbled into. While many model
+predictive control (MPC) based methods offer similar alternatives, they
+typically lack commitment, synthesising multi step plans after every step. To
+mitigate this, we present a hierarchical planner that dynamically decides when
+to replan, planning horizon length, and the weighting between reward and
+entropy. While our method can theoretically be applied to any model that trains
+its own actors with solely model generated data, we have applied it to just
+Dreamer as a proof of concept. Our method finishes the Miniworld procedurally
+generated mazes 50% faster than base Dreamer at convergence and the policy
+trained in imagination converges in only 60% of the environment steps that base
+Dreamer needs.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2505.16756v1' target='_blank'>Representation Discrepancy Bridging Method for Remote Sensing Image-Text
+  Retrieval</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Hailong Ning, Siying Wang, Tao Lei, Xiaopeng Cao, Huanmin Dou, Bin Zhao, Asoke K. Nandi, Petia Radeva</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-05-22 14:59:30</h6>
+<p class='card-text'>Remote Sensing Image-Text Retrieval (RSITR) plays a critical role in
+geographic information interpretation, disaster monitoring, and urban planning
+by establishing semantic associations between image and textual descriptions.
+Existing Parameter-Efficient Fine-Tuning (PEFT) methods for Vision-and-Language
+Pre-training (VLP) models typically adopt symmetric adapter structures for
+exploring cross-modal correlations. However, the strong discriminative nature
+of text modality may dominate the optimization process and inhibits image
+representation learning. The nonnegligible imbalanced cross-modal optimization
+remains a bottleneck to enhancing the model performance. To address this issue,
+this study proposes a Representation Discrepancy Bridging (RDB) method for the
+RSITR task. On the one hand, a Cross-Modal Asymmetric Adapter (CMAA) is
+designed to enable modality-specific optimization and improve feature
+alignment. The CMAA comprises a Visual Enhancement Adapter (VEA) and a Text
+Semantic Adapter (TSA). VEA mines fine-grained image features by Differential
+Attention (DA) mechanism, while TSA identifies key textual semantics through
+Hierarchical Attention (HA) mechanism. On the other hand, this study extends
+the traditional single-task retrieval framework to a dual-task optimization
+framework and develops a Dual-Task Consistency Loss (DTCL). The DTCL improves
+cross-modal alignment robustness through an adaptive weighted combination of
+cross-modal, classification, and exponential moving average consistency
+constraints. Experiments on RSICD and RSITMD datasets show that the proposed
+RDB method achieves a 6%-11% improvement in mR metrics compared to
+state-of-the-art PEFT methods and a 1.15%-2% improvement over the full
+fine-tuned GeoRSCLIP model.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js'></script>
+</body>
+</html>
