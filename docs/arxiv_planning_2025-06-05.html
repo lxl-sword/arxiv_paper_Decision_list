@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>planning - 2025-06-05</title>
+<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap' rel='stylesheet'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css'>
+<style>
+body {
+font-family: 'Roboto', sans-serif;
+background-color: #f5f7fa;
+padding: 20px;
+}
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.card-title {
+    font-weight: 700;
+}
+.card:hover {
+    transform: scale(1.02);
+    transition: 0.3s ease-in-out;
+}
+</style>
+</head>
+<body>
+<div class='container'>
+<h1 class='text-center my-4'><i class='fas fa-book'></i>planning - 2025-06-05</h1>
+<div class='row'>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.04220v1' target='_blank'>Struct2D: A Perception-Guided Framework for Spatial Reasoning in Large
+  Multimodal Models</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Fangrui Zhu, Hanhui Wang, Yiming Xie, Jing Gu, Tianye Ding, Jianwei Yang, Huaizu Jiang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-04 17:58:04</h6>
+<p class='card-text'>Unlocking spatial reasoning in Large Multimodal Models (LMMs) is crucial for
+enabling intelligent interaction with 3D environments. While prior efforts
+often rely on explicit 3D inputs or specialized model architectures, we ask:
+can LMMs reason about 3D space using only structured 2D representations derived
+from perception? We introduce Struct2D, a perception-guided prompting framework
+that combines bird's-eye-view (BEV) images with object marks and object-centric
+metadata, optionally incorporating egocentric keyframes when needed. Using
+Struct2D, we conduct an in-depth zero-shot analysis of closed-source LMMs
+(e.g., GPT-o3) and find that they exhibit surprisingly strong spatial reasoning
+abilities when provided with structured 2D inputs, effectively handling tasks
+such as relative direction estimation and route planning. Building on these
+insights, we construct Struct2D-Set, a large-scale instruction tuning dataset
+with 200K fine-grained QA pairs across eight spatial reasoning categories,
+generated automatically from 3D indoor scenes. We fine-tune an open-source LMM
+(Qwen2.5VL) on Struct2D-Set, achieving competitive performance on multiple
+benchmarks, including 3D question answering, dense captioning, and object
+grounding. Our approach demonstrates that structured 2D inputs can effectively
+bridge perception and language reasoning in LMMs-without requiring explicit 3D
+representations as input. We will release both our code and dataset to support
+future research.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.04098v1' target='_blank'>TextAtari: 100K Frames Game Playing with Language Agents</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Wenhao Li, Wenwu Li, Chuyun Shen, Junjie Sheng, Zixiao Huang, Di Wu, Yun Hua, Wei Yin, Xiangfeng Wang, Hongyuan Zha, Bo Jin</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-04 15:55:27</h6>
+<p class='card-text'>We present TextAtari, a benchmark for evaluating language agents on very
+long-horizon decision-making tasks spanning up to 100,000 steps. By translating
+the visual state representations of classic Atari games into rich textual
+descriptions, TextAtari creates a challenging test bed that bridges sequential
+decision-making with natural language processing. The benchmark includes nearly
+100 distinct tasks with varying complexity, action spaces, and planning
+horizons, all rendered as text through an unsupervised representation learning
+framework (AtariARI). We evaluate three open-source large language models
+(Qwen2.5-7B, Gemma-7B, and Llama3.1-8B) across three agent frameworks
+(zero-shot, few-shot chain-of-thought, and reflection reasoning) to assess how
+different forms of prior knowledge affect performance on these long-horizon
+challenges. Four scenarios-Basic, Obscured, Manual Augmentation, and
+Reference-based-investigate the impact of semantic understanding, instruction
+comprehension, and expert demonstrations on agent decision-making. Our results
+reveal significant performance gaps between language agents and human players
+in extensive planning tasks, highlighting challenges in sequential reasoning,
+state tracking, and strategic planning across tens of thousands of steps.
+TextAtari provides standardized evaluation protocols, baseline implementations,
+and a framework for advancing research at the intersection of language models
+and planning.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.04034v1' target='_blank'>Rex-Thinker: Grounded Object Referring via Chain-of-Thought Reasoning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Qing Jiang, Xingyu Chen, Zhaoyang Zeng, Junzhi Yu, Lei Zhang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-04 14:56:57</h6>
+<p class='card-text'>Object referring aims to detect all objects in an image that match a given
+natural language description. We argue that a robust object referring model
+should be grounded, meaning its predictions should be both explainable and
+faithful to the visual content. Specifically, it should satisfy two key
+properties: 1) Verifiable, by producing interpretable reasoning that justifies
+its predictions and clearly links them to visual evidence; and 2) Trustworthy,
+by learning to abstain when no object in the image satisfies the given
+expression. However, most methods treat referring as a direct bounding box
+prediction task, offering limited interpretability and struggling to reject
+expressions with no matching object. In this work, we propose Rex-Thinker, a
+model that formulates object referring as an explicit CoT reasoning task. Given
+a referring expression, we first identify all candidate object instances
+corresponding to the referred object category. Rex-Thinker then performs
+step-by-step reasoning over each candidate to assess whether it matches the
+given expression, before making a final prediction. To support this paradigm,
+we construct a large-scale CoT-style referring dataset named HumanRef-CoT by
+prompting GPT-4o on the HumanRef dataset. Each reasoning trace follows a
+structured planning, action, and summarization format, enabling the model to
+learn decomposed, interpretable reasoning over object candidates. We then train
+Rex-Thinker in two stages: a cold-start supervised fine-tuning phase to teach
+the model how to perform structured reasoning, followed by GRPO-based RL
+learning to improve accuracy and generalization. Experiments show that our
+approach outperforms standard baselines in both precision and interpretability
+on in-domain evaluation, while also demonstrating improved ability to reject
+hallucinated outputs and strong generalization in out-of-domain settings.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.04009v1' target='_blank'>Investigating the emergent invariant properties of Hungarian electric
+  distribution networks</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Michelle T. Cirunay, Bálint Hartmann, Tímea Erdei, Tamás Soha</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-04 14:34:57</h6>
+<p class='card-text'>Electric power distribution networks serve as the final and essential stage
+in power delivery, bridging transmission infrastructure and end users. The
+structural configuration of these networks plays a critical role in determining
+system reliability, fault tolerance, and operational efficiency. Although the
+design of distribution systems is influenced by various regional factors, such
+as geography, customer density, and planning standards, the extent to which
+consistent structural characteristics emerge across different networks remains
+an open question. In this study, we perform a detailed spatial and topological
+analysis of five MV distribution networks in Hungary. Despite notable
+differences in geographic layout and consumer distribution, we identify
+statistically consistent patterns across several key metrics, including degree,
+BC, and powerline length. These findings suggest the influence of common
+underlying design principles or optimization constraints, potentially
+indicating universal structural tendencies in MV network design. The results
+provide insight into the organization of real-world distribution systems and
+offer a basis for improved planning, risk mitigation, and system optimization
+in future grid developments.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.03999v1' target='_blank'>Large deviations for scaled families of Schrödinger bridges with
+  reflection</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Viktor Nilsson</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-04 14:28:34</h6>
+<p class='card-text'>In this paper, we show a large deviation principle for certain sequences of
+static Schr\"{o}dinger bridges, typically motivated by a scale-parameter
+decreasing towards zero, extending existing large deviation results to cover a
+wider range of reference processes. Our results provide a theoretical
+foundation for studying convergence of such Schr\"{o}dinger bridges to their
+limiting optimal transport plans. Within generative modeling, Schr\"{o}dinger
+bridges, or entropic optimal transport problems, constitute a prominent class
+of methods, in part because of their computational feasibility in
+high-dimensional settings. Recently, Bernton et al. established a large
+deviation principle, in the small-noise limit, for fixed-cost entropic optimal
+transport problems. In this paper, we address an open problem posed by Bernton
+et al. and extend their results to hold for Schr\"{o}dinger bridges associated
+with certain sequences of more general reference measures with enough
+regularity in a similar small-noise limit. These can be viewed as sequences of
+entropic optimal transport plans with non-fixed cost functions. Using a
+detailed analysis of the associated Skorokhod maps and transition densities, we
+show that the new large deviation results cover Schr\"{o}dinger bridges where
+the reference process is a reflected diffusion on bounded convex domains,
+corresponding to recently introduced model choices in the generative modeling
+literature.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.03998v1' target='_blank'>The QTF-Backbone: Proposal for a Nationwide Optical Fibre Backbone in
+  Germany for Quantum Technology and Time and Frequency Metrology</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Klaus Blaum, Peter Kaufmann, Jochen Kronjäger, Stefan Kück, Tara Cubel Liebisch, Dieter Meschede, Susanne Naegele-Jackson, Stephan Schiller, Harald Schnatz</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-04 14:27:50</h6>
+<p class='card-text'>The recent breakthroughs in the distribution of quantum information and
+high-precision time and frequency (T&F) signals over long-haul optical fibre
+networks have transformative potential for physically secure communications,
+resilience of Global Navigation Satellite Systems (GNSS) and fundamental
+physics. However, so far these capabilities remain confined to isolated
+testbeds, with quantum and T&F signals accessible, for example in Germany, to
+only a few institutions.
+  We propose the QTF-Backbone: a dedicated national fibre-optic infrastructure
+in Germany for the networked distribution of quantum and T&F signals using dark
+fibres and specialized hardware. The QTF-Backbone is planned as a four-phase
+deployment over ten years to ensure scalable, sustainable access for research
+institutions and industry. The concept builds on successful demonstrations of
+high-TRL time and frequency distribution across Europe, including PTB-MPQ links
+in Germany, REFIMEVE in France, and the Italian LIFT network. The QTF-Backbone
+will enable transformative R&D, support a nationwide QTF ecosystem, and ensure
+the transition from innovation to deployment. As a national and European hub,
+it will position Germany and Europe at the forefront of quantum networking, as
+well as time and frequency transfer.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.03830v1' target='_blank'>Construction of Urban Greenland Resources Collaborative Management
+  Platform</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Dongyang Lyu, Xiaoqi Li, Zongwei Li</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-04 10:58:19</h6>
+<p class='card-text'>Nowadays, environmental protection has become a global consensus. At the same
+time, with the rapid development of science and technology, urbanisation has
+become a phenomenon that has become the norm. Therefore, the urban greening
+management system is an essential component in protecting the urban
+environment. The system utilises a transparent management process known as"
+monitoring - early warning - response - optimisation," which enhances the
+tracking of greening resources, streamlines maintenance scheduling, and
+encourages employee involvement in planning. Designed with a microservice
+architecture, the system can improve the utilisation of greening resources by
+30\% , increase citizen satisfaction by 20\%, and support carbon neutrality
+objectives, ultimately making urban governance more intelligent and focused on
+the community. The Happy City Greening Management System effectively manages
+gardeners, trees, flowers, and green spaces. It comprises modules for gardener
+management, purchase and supplier management, tree and flower management, and
+maintenance planning. Its automation feature allows for real-time updates of
+greening data, thereby enhancing decision-making. The system is built using
+Java for the backend and MySQL for data storage, complemented by a
+user-friendly frontend designed with the Vue framework. Additionally, it
+leverages features from the Spring Boot framework to enhance maintainability
+and scalability.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.03812v1' target='_blank'>Impact of friction force and retrieval speed on in silico mechanical
+  thrombectomies: a sensitivity analysis</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Mahesh S. Nagargoje, Virginia Fregona, Giulia Luraghi, Francesco Migliavacca, Demitria A Poulos, Bryan C Good, Jose Felix Rodriguez Matas</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-04 10:34:03</h6>
+<p class='card-text'>Background: Mechanical Thrombectomy (MT) is a widely accepted first-line
+treatment for Acute Ischemic Stroke (AIS) and it has been studied using in
+vitro and in silico models. Thrombectomy outcomes have been performed for
+patient-specific cases using in silico models. However, until now, in vivo
+friction coefficients for stent-vessel, stent-clot, and clot-vessel
+interactions are unknown, but in vitro experiments have been attempted with
+significant standard deviations. These interactions and friction coefficients
+have been considered an important aspect of thrombectomy success. Objectives:
+In the current study, we explored the influence of variation in friction forces
+for stent-vessel, stent-clot, and clot-vessel interactions using virtual
+mechanical thrombectomy (VMT). We have performed three simulations for each
+interaction and varied friction coefficients around the standard deviation
+observed in the past in vitro studies. Results: (i) clot-vessel friction:
+higher friction leads to clot fragmentation and VMT failure. (ii) stent-clot
+friction: it is susceptible to VMT outcomes, with lower values showing the
+slippage of the clot while higher values lead to fragmentation. (iii)
+stent-vessel friction: higher friction shows compression of the stent in curved
+vessels and dislodgment of clot from stent retriever (SR) due to its
+compression, which leads to VMT failure. (iv) retrieval speed (RS): higher RS
+(>30 mm/s) leads to significant stent compression and unrealistic behavior of
+the SR. Conclusions: Analysis of results proposes the necessity for calculating
+accurate friction factor values and their implementation into in silico models,
+due to their sensitivity towards thrombectomy outcomes. Such in silico models
+mimic in vivo thrombectomy more closely and can be used in mechanical
+thrombectomy planning, management, and decision-making.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.03704v1' target='_blank'>ScoreRAG: A Retrieval-Augmented Generation Framework with
+  Consistency-Relevance Scoring and Structured Summarization for News
+  Generation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Pei-Yun Lin, Yen-lung Tsai</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-04 08:35:06</h6>
+<p class='card-text'>This research introduces ScoreRAG, an approach to enhance the quality of
+automated news generation. Despite advancements in Natural Language Processing
+and large language models, current news generation methods often struggle with
+hallucinations, factual inconsistencies, and lack of domain-specific expertise
+when producing news articles. ScoreRAG addresses these challenges through a
+multi-stage framework combining retrieval-augmented generation, consistency
+relevance evaluation, and structured summarization. The system first retrieves
+relevant news documents from a vector database, maps them to complete news
+items, and assigns consistency relevance scores based on large language model
+evaluations. These documents are then reranked according to relevance, with
+low-quality items filtered out. The framework proceeds to generate graded
+summaries based on relevance scores, which guide the large language model in
+producing complete news articles following professional journalistic standards.
+Through this methodical approach, ScoreRAG aims to significantly improve the
+accuracy, coherence, informativeness, and professionalism of generated news
+articles while maintaining stability and consistency throughout the generation
+process. The code and demo are available at:
+https://github.com/peiyun2260/ScoreRAG.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.03663v1' target='_blank'>An Improved Grey Wolf Optimizer Inspired by Advanced Cooperative
+  Predation for UAV Shortest Path Planning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Zuhao Teng, Qian Dong, Ze Zhang, Shuangyao Huang, Wenzhang Zhang, Jingchen Wang, Ji Li, Xi Chen</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-04 07:55:13</h6>
+<p class='card-text'>With the widespread application of Unmanned Aerial Vehicles (UAVs) in domains
+like military reconnaissance, emergency rescue, and logistics delivery,
+efficiently planning the shortest flight path has become a critical challenge.
+Traditional heuristic-based methods often suffer from the inability to escape
+from local optima, which limits their effectiveness in finding the shortest
+path. To address these issues, a novel Improved Grey Wolf Optimizer (IGWO) is
+presented in this study. The proposed IGWO incorporates an Advanced Cooperative
+Predation (ACP) and a Lens Opposition-based Learning Strategy (LOBL) in order
+to improve the optimization capability of the method. Simulation results show
+that IGWO ranks first in optimization performance on benchmark functions F1-F5,
+F7, and F9-F12, outperforming all other compared algorithms. Subsequently, IGWO
+is applied to UAV shortest path planning in various obstacle-laden
+environments. Simulation results show that the paths planned by IGWO are, on
+average, shorter than those planned by GWO, PSO, and WOA by 1.70m, 1.68m, and
+2.00m, respectively, across four different maps.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.03537v1' target='_blank'>Robust Position Estimation by Rao-Blackwellized Particle Filter without
+  Integer Ambiguity Resolution in Urban Environments</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Daiki Niimi, An Fujino, Taro Suzuki, Junichi Meguro</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-04 03:34:38</h6>
+<p class='card-text'>This study proposes a centimeter-accurate positioning method that utilizes a
+Rao-Blackwellized particle filter (RBPF) without requiring integer ambiguity
+resolution in global navigation satellite system (GNSS) carrier phase
+measurements. The conventional positioning method employing a particle filter
+(PF) eliminates the necessity for ambiguity resolution by calculating the
+likelihood from the residuals of the carrier phase based on the particle
+position. However, this method encounters challenges, particularly in urban
+environments characterized by non-line-of-sight (NLOS) multipath errors. In
+such scenarios, PF tracking may fail due to the degradation of velocity
+estimation accuracy used for state transitions, thereby complicating subsequent
+position estimation. To address this issue, we apply Rao-Blackwellization to
+the conventional PF framework, treating position and velocity as distinct
+states and employing the Kalman filter for velocity estimation. This approach
+enhances the accuracy of velocity estimation and, consequently, the precision
+of position estimation. Moreover, the proposed method rejects NLOS multipath
+signals based on the pseudorange residuals at each particle position during the
+velocity estimation step. This process not only enhances velocity accuracy, but
+also preserves particle diversity by allowing particles to transition to unique
+states with varying velocities. Consequently, particles are more likely to
+cluster around the true position, thereby enabling more accurate position
+estimation. Vehicular experiments in urban environments demonstrated the
+effectiveness of proposed method in achieving a higher positioning accuracy
+than conventional PF-based and conventional GNSS positioning methods.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.03422v1' target='_blank'>On Loss-Minimal Radial Topologies in MV Systems</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Anton Hinneck, Mathias Duckheim, Michael Metzger, Stefan Niessen</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-03 22:01:02</h6>
+<p class='card-text'>Distribution system reconfiguration (DSR) means optimizing the topology of a
+distribution grid using switching actions. Switching actions are a degrees of
+freedom available to distribution system operators, e.g. to manage planned and
+unplanned outages. DSR is a NP-hard combinatorial problem. Finding good or even
+optimal solutions is computationally expensive. While transmission and
+high-voltage grids are generally operated in a meshed state, MV distribution
+systems are commonly operated as radial networks even though meshed operation
+would be supported. This improves resilience because faults can be isolated
+more easily keeping the rest of the system operational and minimizing impact on
+customers. We propose an AC DSR formulation and benchmark it against a common
+formulation from the literature. Our results indicate that additional
+acyclicity constraints can significantly improve solver performance.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.03390v1' target='_blank'>The Roman View of Strong Gravitational Lenses</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Bryce Wedig, Tansu Daylan, Simon Birrer, Francis-Yan Cyr-Racine, Cora Dvorkin, Douglas P. Finkbeiner, Alan Huang, Xiaosheng Huang, Rahul Karthik, Narayan Khadka, Priyamvada Natarajan, Anna M. Nierenberg, Annika H. G. Peter, Justin D. R. Pierel, Xianzhe TZ Tang, Risa H. Wechsler</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-03 21:00:31</h6>
+<p class='card-text'>Galaxy-galaxy strong gravitational lenses can constrain dark matter models
+and the Lambda Cold Dark Matter cosmological paradigm at sub-galactic scales.
+Currently, there is a dearth of images of these rare systems with high
+signal-to-noise and angular resolution. The Nancy Grace Roman Space Telescope
+(hereafter, Roman), scheduled for launch in late 2026, will play a
+transformative role in strong lensing science with its planned wide-field
+surveys. With its remarkable 0.281 square degree field of view and
+diffraction-limited angular resolution of ~0.1 arcsec, Roman is uniquely suited
+to characterizing dark matter substructure from a robust population of strong
+lenses. We present a yield simulation of detectable strong lenses in Roman's
+planned High Latitude Wide Area Survey (HLWAS). We simulate a population of
+galaxy-galaxy strong lenses across cosmic time with Cold Dark Matter subhalo
+populations, select those detectable in the HLWAS, and generate simulated
+images accounting for realistic Wide Field Instrument detector effects. For a
+fiducial case of single 146-second exposures, we predict around 160,000
+detectable strong lenses in the HLWAS, of which about 500 will have sufficient
+signal-to-noise to be amenable to detailed substructure characterization. We
+investigate the effect of the variation of the point-spread function across
+Roman's field of view on detecting individual subhalos and the suppression of
+the subhalo mass function at low masses. Our simulation products are available
+to support strong lens science with Roman, such as training neural networks and
+validating dark matter substructure analysis pipelines.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.03381v1' target='_blank'>Automated Traffic Incident Response Plans using Generative Artificial
+  Intelligence: Part 1 -- Building the Incident Response Benchmark</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Artur Grigorev, Khaled Saleh, Jiwon Kim, Adriana-Simona Mihaita</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-03 20:40:44</h6>
+<p class='card-text'>Traffic incidents remain a critical public safety concern worldwide, with
+Australia recording 1,300 road fatalities in 2024, which is the highest toll in
+12 years. Similarly, the United States reports approximately 6 million crashes
+annually, raising significant challenges in terms of a fast reponse time and
+operational management. Traditional response protocols rely on human
+decision-making, which introduces potential inconsistencies and delays during
+critical moments when every minute impacts both safety outcomes and network
+performance. To address this issue, we propose a novel Incident Response
+Benchmark that uses generative artificial intelligence to automatically
+generate response plans for incoming traffic incidents. Our approach aims to
+significantly reduce incident resolution times by suggesting
+context-appropriate actions such as variable message sign deployment, lane
+closures, and emergency resource allocation adapted to specific incident
+characteristics. First, the proposed methodology uses real-world incident
+reports from the Performance Measurement System (PeMS) as training and
+evaluation data. We extract historically implemented actions from these reports
+and compare them against AI-generated response plans that suggest specific
+actions, such as lane closures, variable message sign announcements, and/or
+dispatching appropriate emergency resources. Second, model evaluations reveal
+that advanced generative AI models like GPT-4o and Grok 2 achieve superior
+alignment with expert solutions, demonstrated by minimized Hamming distances
+(averaging 2.96-2.98) and low weighted differences (approximately 0.27-0.28).
+Conversely, while Gemini 1.5 Pro records the lowest count of missed actions,
+its extremely high number of unnecessary actions (1547 compared to 225 for
+GPT-4o) indicates an over-triggering strategy that reduces the overall plan
+efficiency.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.03362v1' target='_blank'>Robustness-Aware Tool Selection and Manipulation Planning with Learned
+  Energy-Informed Guidance</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yifei Dong, Yan Zhang, Sylvain Calinon, Florian T. Pokorny</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-03 20:14:49</h6>
+<p class='card-text'>Humans subconsciously choose robust ways of selecting and using tools, based
+on years of embodied experience -- for example, choosing a ladle instead of a
+flat spatula to serve meatballs. However, robustness under uncertainty remains
+underexplored in robotic tool-use planning. This paper presents a
+robustness-aware framework that jointly selects tools and plans contact-rich
+manipulation trajectories, explicitly optimizing for robustness against
+environmental disturbances. At the core of our approach is a learned,
+energy-based robustness metric, which guides the planner towards robust
+manipulation behaviors. We formulate a hierarchical optimization pipeline that
+first identifies a tool and configuration that optimizes robustness, and then
+plans a corresponding manipulation trajectory that maintains robustness
+throughout execution. We evaluate our approach across three representative
+tool-use tasks. Simulation and real-world results demonstrate that our approach
+consistently selects robust tools and generates disturbance-resilient
+manipulation plans.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.03270v1' target='_blank'>Grounded Vision-Language Interpreter for Integrated Task and Motion
+  Planning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jeremy Siburian, Keisuke Shirai, Cristian C. Beltran-Hernandez, Masashi Hamaya, Michael Görner, Atsushi Hashimoto</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-03 18:00:32</h6>
+<p class='card-text'>While recent advances in vision-language models (VLMs) have accelerated the
+development of language-guided robot planners, their black-box nature often
+lacks safety guarantees and interpretability crucial for real-world deployment.
+Conversely, classical symbolic planners offer rigorous safety verification but
+require significant expert knowledge for setup. To bridge the current gap, this
+paper proposes ViLaIn-TAMP, a hybrid planning framework for enabling
+verifiable, interpretable, and autonomous robot behaviors. ViLaIn-TAMP
+comprises three main components: (1) ViLaIn (Vision-Language Interpreter) - A
+prior framework that converts multimodal inputs into structured problem
+specifications using off-the-shelf VLMs without additional domain-specific
+training, (2) a modular Task and Motion Planning (TAMP) system that grounds
+these specifications in actionable trajectory sequences through symbolic and
+geometric constraint reasoning and can utilize learning-based skills for key
+manipulation phases, and (3) a corrective planning module which receives
+concrete feedback on failed solution attempts from the motion and task planning
+components and can feed adapted logic and geometric feasibility constraints
+back to ViLaIn to improve and further refine the specification. We evaluate our
+framework on several challenging manipulation tasks in a cooking domain. We
+demonstrate that the proposed closed-loop corrective architecture exhibits a
+more than 30% higher mean success rate for ViLaIn-TAMP compared to without
+corrective planning.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.03143v1' target='_blank'>GUI-Actor: Coordinate-Free Visual Grounding for GUI Agents</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Qianhui Wu, Kanzhi Cheng, Rui Yang, Chaoyun Zhang, Jianwei Yang, Huiqiang Jiang, Jian Mu, Baolin Peng, Bo Qiao, Reuben Tan, Si Qin, Lars Liden, Qingwei Lin, Huan Zhang, Tong Zhang, Jianbing Zhang, Dongmei Zhang, Jianfeng Gao</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-03 17:59:08</h6>
+<p class='card-text'>One of the principal challenges in building VLM-powered GUI agents is visual
+grounding, i.e., localizing the appropriate screen region for action execution
+based on both the visual content and the textual plans. Most existing work
+formulates this as a text-based coordinate generation task. However, these
+approaches suffer from several limitations: weak spatial-semantic alignment,
+inability to handle ambiguous supervision targets, and a mismatch between the
+dense nature of screen coordinates and the coarse, patch-level granularity of
+visual features extracted by models like Vision Transformers. In this paper, we
+propose GUI-Actor, a VLM-based method for coordinate-free GUI grounding. At its
+core, GUI-Actor introduces an attention-based action head that learns to align
+a dedicated <ACTOR> token with all relevant visual patch tokens, enabling the
+model to propose one or more action regions in a single forward pass. In line
+with this, we further design a grounding verifier to evaluate and select the
+most plausible action region from the candidates proposed for action execution.
+Extensive experiments show that GUI-Actor outperforms prior state-of-the-art
+methods on multiple GUI action grounding benchmarks, with improved
+generalization to unseen screen resolutions and layouts. Notably, GUI-Actor-7B
+even surpasses UI-TARS-72B (38.1) on ScreenSpot-Pro, achieving scores of 40.7
+with Qwen2-VL and 44.6 with Qwen2.5-VL as backbones. Furthermore, by
+incorporating the verifier, we find that fine-tuning only the newly introduced
+action head (~100M parameters for 7B model) while keeping the VLM backbone
+frozen is sufficient to achieve performance comparable to previous
+state-of-the-art models, highlighting that GUI-Actor can endow the underlying
+VLM with effective grounding capabilities without compromising its
+general-purpose strengths.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.02955v1' target='_blank'>UniConFlow: A Unified Constrained Generalization Framework for Certified
+  Motion Planning with Flow Matching Models</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Zewen Yang, Xiaobing Dai, Dian Yu, Qianru Li, Yu Li, Valentin Le Mesle</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-03 14:48:04</h6>
+<p class='card-text'>Generative models have become increasingly powerful tools for robot motion
+generation, enabling flexible and multimodal trajectory generation across
+various tasks. Yet, most existing approaches remain limited in handling
+multiple types of constraints, such as collision avoidance and dynamic
+consistency, which are often treated separately or only partially considered.
+This paper proposes UniConFlow, a unified flow matching (FM) based framework
+for trajectory generation that systematically incorporates both equality and
+inequality constraints. UniConFlow introduces a novel prescribed-time zeroing
+function to enhance flexibility during the inference process, allowing the
+model to adapt to varying task requirements. To ensure constraint satisfaction,
+particularly with respect to obstacle avoidance, admissible action range, and
+kinodynamic consistency, the guidance inputs to the FM model are derived
+through a quadratic programming formulation, which enables constraint-aware
+generation without requiring retraining or auxiliary controllers. We conduct
+mobile navigation and high-dimensional manipulation tasks, demonstrating
+improved safety and feasibility compared to state-of-the-art constrained
+generative planners. Project page is available at https://uniconflow.github.io.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.02917v1' target='_blank'>Text-guided Generation of Efficient Personalized Inspection Plans</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Xingpeng Sun, Zherong Pan, Xifeng Gao, Kui Wu, Aniket Bera</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-03 14:18:37</h6>
+<p class='card-text'>We propose a training-free, Vision-Language Model (VLM)-guided approach for
+efficiently generating trajectories to facilitate target inspection planning
+based on text descriptions. Unlike existing Vision-and-Language Navigation
+(VLN) methods designed for general agents in unknown environments, our approach
+specifically targets the efficient inspection of known scenes, with widespread
+applications in fields such as medical, marine, and civil engineering.
+Leveraging VLMs, our method first extracts points of interest (POIs) from the
+text description, then identifies a set of waypoints from which POIs are both
+salient and align with the spatial constraints defined in the prompt. Next, we
+interact with the VLM to iteratively refine the trajectory, preserving the
+visibility and prominence of the POIs. Further, we solve a Traveling Salesman
+Problem (TSP) to find the most efficient visitation order that satisfies the
+order constraint implied in the text description. Finally, we apply trajectory
+optimization to generate smooth, executable inspection paths for aerial and
+underwater vehicles. We have evaluated our method across a series of both
+handcrafted and real-world scanned environments. The results demonstrate that
+our approach effectively generates inspection planning trajectories that adhere
+to user instructions.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.02896v2' target='_blank'>FlySearch: Exploring how vision-language models explore</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Adam Pardyl, Dominik Matuszek, Mateusz Przebieracz, Marek Cygan, Bartosz Zieliński, Maciej Wołczyk</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-03 14:03:42</h6>
+<p class='card-text'>The real world is messy and unstructured. Uncovering critical information
+often requires active, goal-driven exploration. It remains to be seen whether
+Vision-Language Models (VLMs), which recently emerged as a popular zero-shot
+tool in many difficult tasks, can operate effectively in such conditions. In
+this paper, we answer this question by introducing FlySearch, a 3D, outdoor,
+photorealistic environment for searching and navigating to objects in complex
+scenes. We define three sets of scenarios with varying difficulty and observe
+that state-of-the-art VLMs cannot reliably solve even the simplest exploration
+tasks, with the gap to human performance increasing as the tasks get harder. We
+identify a set of central causes, ranging from vision hallucination, through
+context misunderstanding, to task planning failures, and we show that some of
+them can be addressed by finetuning. We publicly release the benchmark,
+scenarios, and the underlying codebase.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.02835v1' target='_blank'>High-speed control and navigation for quadrupedal robots on complex and
+  discrete terrain</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Hyeongjun Kim, Hyunsik Oh, Jeongsoo Park, Yunho Kim, Donghoon Youm, Moonkyu Jung, Minho Lee, Jemin Hwangbo</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-03 13:04:26</h6>
+<p class='card-text'>High-speed legged navigation in discrete and geometrically complex
+environments is a challenging task because of the high-degree-of-freedom
+dynamics and long-horizon, nonconvex nature of the optimization problem. In
+this work, we propose a hierarchical navigation pipeline for legged robots that
+can traverse such environments at high speed. The proposed pipeline consists of
+a planner and tracker module. The planner module finds physically feasible
+foothold plans by sampling-based optimization with fast sequential filtering
+using heuristics and a neural network. Subsequently, rollouts are performed in
+a physics simulation to identify the best foothold plan regarding the
+engineered cost function and to confirm its physical consistency. This
+hierarchical planning module is computationally efficient and physically
+accurate at the same time. The tracker aims to accurately step on the target
+footholds from the planning module. During the training stage, the foothold
+target distribution is given by a generative model that is trained
+competitively with the tracker. This process ensures that the tracker is
+trained in an environment with the desired difficulty. The resulting tracker
+can overcome terrains that are more difficult than what the previous methods
+could manage. We demonstrated our approach using Raibo, our in-house dynamic
+quadruped robot. The results were dynamic and agile motions: Raibo is capable
+of running on vertical walls, jumping a 1.3-meter gap, running over stepping
+stones at 4 meters per second, and autonomously navigating on terrains full of
+30{\deg} ramps, stairs, and boxes of various sizes.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.02808v1' target='_blank'>Optimal control of the Poisson equation with transport regularization:
+  Properties of optimal transport plans and transport map</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Christian Meyer, Gerd Wachsmuth</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-03 12:36:36</h6>
+<p class='card-text'>An optimal control problem in the space of Borel measures governed by the
+Poisson equation is investigated. The characteristic feature of the problem
+under consideration is the Tikhonov regularization term in form of the
+transportation distance of the control to a given prior. Existence of optimal
+solutions is shown and first-order necessary optimality conditions are derived.
+The latter are used to deduce structural a priori information about the optimal
+control and its support based on properties of the associated optimal transport
+plan.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.02802v1' target='_blank'>A Learned Cost Model-based Cross-engine Optimizer for SQL Workloads</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:András Strausz, Niels Pardon, Ioana Giurgiu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-03 12:32:56</h6>
+<p class='card-text'>Lakehouse systems enable the same data to be queried with multiple execution
+engines. However, selecting the engine best suited to run a SQL query still
+requires a priori knowledge of the query computational requirements and an
+engine capability, a complex and manual task that only becomes more difficult
+with the emergence of new engines and workloads. In this paper, we address this
+limitation by proposing a cross-engine optimizer that can automate engine
+selection for diverse SQL queries through a learned cost model. Optimized with
+hints, a query plan is used for query cost prediction and routing. Cost
+prediction is formulated as a multi-task learning problem, and multiple
+predictor heads, corresponding to different engines and provisionings, are used
+in the model architecture. This eliminates the need to train engine-specific
+models and allows the flexible addition of new engines at a minimal fine-tuning
+cost. Results on various databases and engines show that using a query
+optimized logical plan for cost estimation decreases the average Q-error by
+even 12.6% over using unoptimized plans as input. Moreover, the proposed
+cross-engine optimizer reduces the total workload runtime by up to 25.2% in a
+zero-shot setting and 30.4% in a few-shot setting when compared to random
+routing.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.02795v1' target='_blank'>Optimization of Robotic Liquid Handling as a Capacitated Vehicle Routing
+  Problem</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Guangqi Wu, Runzhong Wang, Connor W. Coley</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-03 12:22:33</h6>
+<p class='card-text'>We present an optimization strategy to reduce the execution time of liquid
+handling operations in the context of an automated chemical laboratory. By
+formulating the task as a capacitated vehicle routing problem (CVRP), we
+leverage heuristic solvers traditionally used in logistics and transportation
+planning to optimize task execution times. As exemplified using an 8-channel
+pipette with individually controllable tips, our approach demonstrates robust
+optimization performance across different labware formats (e.g., well-plates,
+vial holders), achieving up to a 37% reduction in execution time for randomly
+generated tasks compared to the baseline sorting method. We further apply the
+method to a real-world high-throughput materials discovery campaign and observe
+that 3 minutes of optimization time led to a reduction of 61 minutes in
+execution time compared to the best-performing sorting-based strategy. Our
+results highlight the potential for substantial improvements in throughput and
+efficiency in automated laboratories without any hardware modifications. This
+optimization strategy offers a practical and scalable solution to accelerate
+combinatorial experimentation in areas such as drug combination screening,
+reaction condition optimization, materials development, and formulation
+engineering.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.03224v1' target='_blank'>OpenCarbon: A Contrastive Learning-based Cross-Modality Neural Approach
+  for High-Resolution Carbon Emission Prediction Using Open Data</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jinwei Zeng, Yu Liu, Guozhen Zhang, Jingtao Ding, Yuming Lin, Jian Yuan, Yong Li</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-03 10:12:10</h6>
+<p class='card-text'>Accurately estimating high-resolution carbon emissions is crucial for
+effective emission governance and mitigation planning. While conventional
+methods for precise carbon accounting are hindered by substantial data
+collection efforts, the rise of open data and advanced learning techniques
+offers a promising solution. Once an open data-based prediction model is
+developed and trained, it can easily infer emissions for new areas based on
+available open data. To address this, we incorporate two modalities of open
+data, satellite images and point-of-interest (POI) data, to predict
+high-resolution urban carbon emissions, with satellite images providing
+macroscopic and static and POI data offering fine-grained and relatively
+dynamic functionality information. However, estimating high-resolution carbon
+emissions presents two significant challenges: the intertwined and implicit
+effects of various functionalities on carbon emissions, and the complex spatial
+contiguity correlations that give rise to the agglomeration effect. Our model,
+OpenCarbon, features two major designs that target the challenges: a
+cross-modality information extraction and fusion module to extract
+complementary functionality information from two modules and model their
+interactions, and a neighborhood-informed aggregation module to capture the
+spatial contiguity correlations. Extensive experiments demonstrate our model's
+superiority, with a significant performance gain of 26.6\% on R2. Further
+generalizability tests and case studies also show OpenCarbon's capacity to
+capture the intrinsic relation between urban functionalities and carbon
+emissions, validating its potential to empower efficient carbon governance and
+targeted carbon mitigation planning. Codes and data are available:
+https://github.com/JinweiZzz/OpenCarbon.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.02619v1' target='_blank'>HGOT: Self-supervised Heterogeneous Graph Neural Network with Optimal
+  Transport</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yanbei Liu, Chongxu Wang, Zhitao Xiao, Lei Geng, Yanwei Pang, Xiao Wang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-03 08:35:29</h6>
+<p class='card-text'>Heterogeneous Graph Neural Networks (HGNNs), have demonstrated excellent
+capabilities in processing heterogeneous information networks. Self-supervised
+learning on heterogeneous graphs, especially contrastive self-supervised
+strategy, shows great potential when there are no labels. However, this
+approach requires the use of carefully designed graph augmentation strategies
+and the selection of positive and negative samples. Determining the exact level
+of similarity between sample pairs is non-trivial.To solve this problem, we
+propose a novel self-supervised Heterogeneous graph neural network with Optimal
+Transport (HGOT) method which is designed to facilitate self-supervised
+learning for heterogeneous graphs without graph augmentation strategies.
+Different from traditional contrastive self-supervised learning, HGOT employs
+the optimal transport mechanism to relieve the laborious sampling process of
+positive and negative samples. Specifically, we design an aggregating view
+(central view) to integrate the semantic information contained in the views
+represented by different meta-paths (branch views). Then, we introduce an
+optimal transport plan to identify the transport relationship between the
+semantics contained in the branch view and the central view. This allows the
+optimal transport plan between graphs to align with the representations,
+forcing the encoder to learn node representations that are more similar to the
+graph space and of higher quality. Extensive experiments on four real-world
+datasets demonstrate that our proposed HGOT model can achieve state-of-the-art
+performance on various downstream tasks. In particular, in the node
+classification task, HGOT achieves an average of more than 6% improvement in
+accuracy compared with state-of-the-art methods.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.02593v1' target='_blank'>A Hybrid Approach to Indoor Social Navigation: Integrating Reactive
+  Local Planning and Proactive Global Planning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Arnab Debnath, Gregory J. Stein, Jana Kosecka</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-03 08:12:55</h6>
+<p class='card-text'>We consider the problem of indoor building-scale social navigation, where the
+robot must reach a point goal as quickly as possible without colliding with
+humans who are freely moving around. Factors such as varying crowd densities,
+unpredictable human behavior, and the constraints of indoor spaces add
+significant complexity to the navigation task, necessitating a more advanced
+approach. We propose a modular navigation framework that leverages the
+strengths of both classical methods and deep reinforcement learning (DRL). Our
+approach employs a global planner to generate waypoints, assigning soft costs
+around anticipated pedestrian locations, encouraging caution around potential
+future positions of humans. Simultaneously, the local planner, powered by DRL,
+follows these waypoints while avoiding collisions. The combination of these
+planners enables the agent to perform complex maneuvers and effectively
+navigate crowded and constrained environments while improving reliability. Many
+existing studies on social navigation are conducted in simplistic or open
+environments, limiting the ability of trained models to perform well in
+complex, real-world settings. To advance research in this area, we introduce a
+new 2D benchmark designed to facilitate development and testing of social
+navigation strategies in indoor environments. We benchmark our method against
+traditional and RL-based navigation strategies, demonstrating that our approach
+outperforms both.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.02580v1' target='_blank'>V2X-UniPool: Unifying Multimodal Perception and Knowledge Reasoning for
+  Autonomous Driving</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Xuewen Luo, Fengze Yang, Fan Ding, Xiangbo Gao, Shuo Xing, Yang Zhou, Zhengzhong Tu, Chenxi Liu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-03 08:00:57</h6>
+<p class='card-text'>Knowledge-driven autonomous driving systems(ADs) offer powerful reasoning
+capabilities, but face two critical challenges: limited perception due to the
+short-sightedness of single-vehicle sensors, and hallucination arising from the
+lack of real-time environmental grounding. To address these issues, this paper
+introduces V2X-UniPool, a unified framework that integrates multimodal
+Vehicle-to-Everything (V2X) data into a time-indexed and language-based
+knowledge pool. By leveraging a dual-query Retrieval-Augmented Generation (RAG)
+mechanism, which enables retrieval of both static and dynamic knowledge, our
+system enables ADs to perform accurate, temporally consistent reasoning over
+both static environment and dynamic traffic context. Experiments on a
+real-world cooperative driving dataset demonstrate that V2X-UniPool
+significantly enhances motion planning accuracy and reasoning capability.
+Remarkably, it enables even zero-shot vehicle-side models to achieve
+state-of-the-art performance by leveraging V2X-UniPool, while simultaneously
+reducing transmission cost by over 99.9\% compared to prior V2X methods.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.02552v1' target='_blank'>Correlating lepton flavour violating $b \to s$ and leptonic decay modes
+  in a minimal abelian extension of the Standard Model</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Pietro Colangelo, Fulvia De Fazio, Davide Milillo</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-03 07:40:26</h6>
+<p class='card-text'>We consider an abelian extension of the Standard Model (SM) comprising a new
+gauge group $U(1)^\prime$, with the neutral gauge boson $Z^\prime$ having
+flavour violating couplings to quarks and leptons. The fermion content is the
+same as in SM except for the addition of three right-handed neutrinos. The
+model describes the couplings of $Z^\prime$ to fermions in terms of three
+rational parameters $\epsilon_{1,2,3}$ that sum to zero imposing the
+cancellation of the gauge anomalies. Each $\epsilon_i$ is common to all
+fermions in a generation, a feature producing correlations among quark and
+lepton observables. We focus on $b \to s \ell_1^- \ell_2^+$ transitions for the
+lepton flavour conserving $\ell_1=\ell_2$ and lepton flavour violating case
+$\ell_1 \neq \ell_2$. Small deviations with respect to the SM predictions are
+found in the first case, which reflects a feature of the model where quark and
+lepton sectors prevent each other to manifest large discrepancies with respect
+to SM. We investigate the correlations with the flavour violating leptonic
+decays $\mu^- \to e^- \gamma$, $\tau^- \to \mu^- \mu^+ \mu^-$. The experimental
+upper bound on the branching ratio of $\mu^- \to e^- \gamma$ constrains the
+range for the lepton flavour violating $B_{d,s}$ decays, which however are
+predicted to be within the reach of the planned new facilities.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.02539v1' target='_blank'>VerificAgent: Integrating Expert Knowledge and Fact-Checked Memory for
+  Robust Domain-Specific Task Planning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Thong Q. Nguyen, Shubhang Desai, Yash Jain, Tanvir Aumi, Vishal Chowdhary</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-03 07:25:49</h6>
+<p class='card-text'>Continual memory augmentation allows computer-use agents (CUAs) to learn from
+past interactions and refine their task-solving strategies over time. However,
+unchecked memory accumulation can introduce spurious or hallucinated
+"learnings" that degrade agent performance, particularly in domain-specific
+workflows such as productivity software. We present a novel framework,
+VerificAgent, that effectively manages memory for CUAs through (1) an
+expert-curated seed of domain knowledge, (2) iterative, trajectory-based memory
+refinement during training, and (3) a post-hoc fact-checking pass by human
+experts to sanitize accumulated memory before deployment. On OSWorld
+productivity tasks, VerificAgent achieves a 111.1% relative improvement in
+success rate over baseline CUA without any additional fine-tuning.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js'></script>
+</body>
+</html>
