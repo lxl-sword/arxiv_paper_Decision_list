@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>planning - 2025-06-06</title>
+<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap' rel='stylesheet'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css'>
+<style>
+body {
+font-family: 'Roboto', sans-serif;
+background-color: #f5f7fa;
+padding: 20px;
+}
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.card-title {
+    font-weight: 700;
+}
+.card:hover {
+    transform: scale(1.02);
+    transition: 0.3s ease-in-out;
+}
+</style>
+</head>
+<body>
+<div class='container'>
+<h1 class='text-center my-4'><i class='fas fa-book'></i>planning - 2025-06-06</h1>
+<div class='row'>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.05294v1' target='_blank'>A Smooth Sea Never Made a Skilled $\texttt{SAILOR}$: Robust Imitation
+  via Learning to Search</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Arnav Kumar Jain, Vibhakar Mohta, Subin Kim, Atiksh Bhardwaj, Juntao Ren, Yunhai Feng, Sanjiban Choudhury, Gokul Swamy</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-05 17:47:40</h6>
+<p class='card-text'>The fundamental limitation of the behavioral cloning (BC) approach to
+imitation learning is that it only teaches an agent what the expert did at
+states the expert visited. This means that when a BC agent makes a mistake
+which takes them out of the support of the demonstrations, they often don't
+know how to recover from it. In this sense, BC is akin to giving the agent the
+fish -- giving them dense supervision across a narrow set of states -- rather
+than teaching them to fish: to be able to reason independently about achieving
+the expert's outcome even when faced with unseen situations at test-time. In
+response, we explore learning to search (L2S) from expert demonstrations, i.e.
+learning the components required to, at test time, plan to match expert
+outcomes, even after making a mistake. These include (1) a world model and (2)
+a reward model. We carefully ablate the set of algorithmic and design decisions
+required to combine these and other components for stable and
+sample/interaction-efficient learning of recovery behavior without additional
+human corrections. Across a dozen visual manipulation tasks from three
+benchmarks, our approach $\texttt{SAILOR}$ consistently out-performs
+state-of-the-art Diffusion Policies trained via BC on the same data.
+Furthermore, scaling up the amount of demonstrations used for BC by
+5-10$\times$ still leaves a performance gap. We find that $\texttt{SAILOR}$ can
+identify nuanced failures and is robust to reward hacking. Our code is
+available at https://github.com/arnavkj1995/SAILOR .</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.05251v1' target='_blank'>Cooperation and the Design of Public Goods</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:J. Carlos Martínez Mori, Alejandro Toriello</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-05 17:11:53</h6>
+<p class='card-text'>We consider the cooperative elements that arise in the design of public
+goods, such as transportation policies and infrastructure. These involve a
+variety of stakeholders: governments, businesses, advocates, and users. Their
+eventual deployment depends on the decision maker's ability to garner
+sufficient support from each of these groups; we formalize these strategic
+requirements from the perspective of cooperative game theory. Specifically, we
+introduce non-transferable utility, linear production (NTU LP) games, which
+combine the game-theoretic tensions inherent in public decision-making with the
+modeling flexibility of linear programming. We derive structural properties
+regarding the non-emptiness, representability and complexity of the core, a
+solution concept that models the viability of cooperation. In particular, we
+provide fairly general sufficient conditions under which the core of an NTU LP
+game is guaranteed to be non-empty, prove that determining membership in the
+core is co-NP-complete, and develop a cutting plane algorithm to optimize
+various social welfare objectives subject to core membership. Lastly, we apply
+these results in a data-driven case study on service plan optimization for the
+Chicago bus system. As our study illustrates, cooperation is necessary for the
+successful deployment of transportation service plans and similar public goods,
+but it may also have adverse or counterintuitive distributive implications.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.05168v1' target='_blank'>Fabrica: Dual-Arm Assembly of General Multi-Part Objects via Integrated
+  Planning and Learning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yunsheng Tian, Joshua Jacob, Yijiang Huang, Jialiang Zhao, Edward Gu, Pingchuan Ma, Annan Zhang, Farhad Javid, Branden Romero, Sachin Chitta, Shinjiro Sueda, Hui Li, Wojciech Matusik</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-05 15:43:52</h6>
+<p class='card-text'>Multi-part assembly poses significant challenges for robots to execute
+long-horizon, contact-rich manipulation with generalization across complex
+geometries. We present Fabrica, a dual-arm robotic system capable of end-to-end
+planning and control for autonomous assembly of general multi-part objects. For
+planning over long horizons, we develop hierarchies of precedence, sequence,
+grasp, and motion planning with automated fixture generation, enabling general
+multi-step assembly on any dual-arm robots. The planner is made efficient
+through a parallelizable design and is optimized for downstream control
+stability. For contact-rich assembly steps, we propose a lightweight
+reinforcement learning framework that trains generalist policies across object
+geometries, assembly directions, and grasp poses, guided by equivariance and
+residual actions obtained from the plan. These policies transfer zero-shot to
+the real world and achieve 80% successful steps. For systematic evaluation, we
+propose a benchmark suite of multi-part assemblies resembling industrial and
+daily objects across diverse categories and geometries. By integrating
+efficient global planning and robust local control, we showcase the first
+system to achieve complete and generalizable real-world multi-part assembly
+without domain knowledge or human demonstrations. Project website:
+http://fabrica.csail.mit.edu/</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.05148v1' target='_blank'>Polarized Neutrons at ISIS: Recent Developments And Highlights</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Polly Mitchell, Holly I. Barnfield, Mark Devonport, Kirill Nemkovski, Gøran J. Nilsen, Peter Galsworthy, Gavin B. G. Stenning</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-05 15:28:11</h6>
+<p class='card-text'>We present two recent projects which aim to improve the performance of
+polarized neutron scattering experiments using hyperpolarized $^{3}He$ spin
+filters at ISIS. The first is the optimization of a new compact magnetostatic
+cavity ("Magic Box") to house the $^{3}He$ spin filters based on an existing
+design. With a length of only 380 mm, it provides a field gradient relaxation
+time for the $^{3}He$ cell of 421 h in ambient conditions. It also contains a
+radiofrequency coil for adiabatic fast passage flipping. The second project is
+dedicated to the improvement of the $^{3}He$ relaxation time inside the spin
+filter cell. We have developed a chamber which allows for the deposition of
+alkali metal coatings on the surface of substrates. This emulates the spin
+filter cell walls, as well as subsequent heat treatment, thus mimicking the
+preparation of a new spin filter cell. The chamber is air-tight and has
+transparent windows, so that the structure resulting from the deposition of
+alkali metal on the surface of the wafer can be studied by X-ray or neutron
+reflectometry. We plan to continue this work by performing a systematic study
+at various conditions, which should help to shed light on the long-standing
+mystery of how alkali metal coatings help to improve relaxation time of
+$^{3}He$ cells. The first results are discussed in the text.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.05109v1' target='_blank'>Truly Self-Improving Agents Require Intrinsic Metacognitive Learning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Tennison Liu, Mihaela van der Schaar</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-05 14:53:35</h6>
+<p class='card-text'>Self-improving agents aim to continuously acquire new capabilities with
+minimal supervision. However, current approaches face two key limitations:
+their self-improvement processes are often rigid, fail to generalize across
+tasks domains, and struggle to scale with increasing agent capabilities. We
+argue that effective self-improvement requires intrinsic metacognitive
+learning, defined as an agent's intrinsic ability to actively evaluate, reflect
+on, and adapt its own learning processes. Drawing inspiration from human
+metacognition, we introduce a formal framework comprising three components:
+metacognitive knowledge (self-assessment of capabilities, tasks, and learning
+strategies), metacognitive planning (deciding what and how to learn), and
+metacognitive evaluation (reflecting on learning experiences to improve future
+learning). Analyzing existing self-improving agents, we find they rely
+predominantly on extrinsic metacognitive mechanisms, which are fixed,
+human-designed loops that limit scalability and adaptability. Examining each
+component, we contend that many ingredients for intrinsic metacognition are
+already present. Finally, we explore how to optimally distribute metacognitive
+responsibilities between humans and agents, and robustly evaluate and improve
+intrinsic metacognitive learning, key challenges that must be addressed to
+enable truly sustained, generalized, and aligned self-improvement.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.05106v1' target='_blank'>EDEN: Efficient Dual-Layer Exploration Planning for Fast UAV Autonomous
+  Exploration in Large 3-D Environments</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Qianli Dong, Xuebo Zhang, Shiyong Zhang, Ziyu Wang, Zhe Ma, Haobo Xi</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-05 14:49:17</h6>
+<p class='card-text'>Efficient autonomous exploration in large-scale environments remains
+challenging due to the high planning computational cost and low-speed
+maneuvers. In this paper, we propose a fast and computationally efficient
+dual-layer exploration planning method. The insight of our dual-layer method is
+efficiently finding an acceptable long-term region routing and greedily
+exploring the target in the region of the first routing area with high speed.
+Specifically, the proposed method finds the long-term area routing through an
+approximate algorithm to ensure real-time planning in large-scale environments.
+Then, the viewpoint in the first routing region with the lowest
+curvature-penalized cost, which can effectively reduce decelerations caused by
+sharp turn motions, will be chosen as the next exploration target. To further
+speed up the exploration, we adopt an aggressive and safe exploration-oriented
+trajectory to enhance exploration continuity. The proposed method is compared
+to state-of-the-art methods in challenging simulation environments. The results
+show that the proposed method outperforms other methods in terms of exploration
+efficiency, computational cost, and trajectory speed. We also conduct
+real-world experiments to validate the effectiveness of the proposed method.
+The code will be open-sourced.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.05087v1' target='_blank'>Interpretable Multimodal Framework for Human-Centered Street Assessment:
+  Integrating Visual-Language Models for Perceptual Urban Diagnostics</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:HaoTian Lan</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-05 14:34:04</h6>
+<p class='card-text'>While objective street metrics derived from imagery or GIS have become
+standard in urban analytics, they remain insufficient to capture subjective
+perceptions essential to inclusive urban design. This study introduces a novel
+Multimodal Street Evaluation Framework (MSEF) that fuses a vision transformer
+(VisualGLM-6B) with a large language model (GPT-4), enabling interpretable
+dual-output assessment of streetscapes. Leveraging over 15,000 annotated
+street-view images from Harbin, China, we fine-tune the framework using LoRA
+and P-Tuning v2 for parameter-efficient adaptation. The model achieves an F1
+score of 0.84 on objective features and 89.3 percent agreement with aggregated
+resident perceptions, validated across stratified socioeconomic geographies.
+Beyond classification accuracy, MSEF captures context-dependent contradictions:
+for instance, informal commerce boosts perceived vibrancy while simultaneously
+reducing pedestrian comfort. It also identifies nonlinear and semantically
+contingent patterns -- such as the divergent perceptual effects of
+architectural transparency across residential and commercial zones -- revealing
+the limits of universal spatial heuristics. By generating natural-language
+rationales grounded in attention mechanisms, the framework bridges sensory data
+with socio-affective inference, enabling transparent diagnostics aligned with
+SDG 11. This work offers both methodological innovation in urban perception
+modeling and practical utility for planning systems seeking to reconcile
+infrastructural precision with lived experience.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.05080v1' target='_blank'>Parking, Perception, and Retail: Street-Level Determinants of Community
+  Vitality in Harbin</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:HaoTian Lan</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-05 14:28:48</h6>
+<p class='card-text'>The commercial vitality of community-scale streets in Chinese cities is
+shaped by complex interactions between vehicular accessibility, environmental
+quality, and pedestrian perception. This study proposes an interpretable,
+image-based framework to examine how street-level features -- including parked
+vehicle density, greenery, cleanliness, and street width -- impact retail
+performance and user satisfaction in Harbin, China. Leveraging street view
+imagery and a multimodal large language model (VisualGLM-6B), we construct a
+Community Commercial Vitality Index (CCVI) from Meituan and Dianping data and
+analyze its relationship with spatial attributes extracted via GPT-4-based
+perception modeling. Our findings reveal that while moderate vehicle presence
+may enhance commercial access, excessive on-street parking -- especially in
+narrow streets -- erodes walkability and reduces both satisfaction and
+shop-level pricing. In contrast, streets with higher perceived greenery and
+cleanliness show significantly greater satisfaction scores but only weak
+associations with pricing. Street width moderates the effects of vehicle
+presence, underscoring the importance of spatial configuration. These results
+demonstrate the value of integrating AI-assisted perception with urban
+morphological analysis to capture non-linear and context-sensitive drivers of
+commercial success. This study advances both theoretical and methodological
+frontiers by highlighting the conditional role of vehicle activity in
+neighborhood commerce and demonstrating the feasibility of multimodal AI for
+perceptual urban diagnostics. The implications extend to urban design, parking
+management, and scalable planning tools for community revitalization.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.04970v1' target='_blank'>Bringing SAM to new heights: Leveraging elevation data for tree crown
+  segmentation from drone imagery</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Mélisande Teng, Arthur Ouaknine, Etienne Laliberté, Yoshua Bengio, David Rolnick, Hugo Larochelle</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-05 12:43:11</h6>
+<p class='card-text'>Information on trees at the individual level is crucial for monitoring forest
+ecosystems and planning forest management. Current monitoring methods involve
+ground measurements, requiring extensive cost, time and labor. Advances in
+drone remote sensing and computer vision offer great potential for mapping
+individual trees from aerial imagery at broad-scale. Large pre-trained vision
+models, such as the Segment Anything Model (SAM), represent a particularly
+compelling choice given limited labeled data. In this work, we compare methods
+leveraging SAM for the task of automatic tree crown instance segmentation in
+high resolution drone imagery in three use cases: 1) boreal plantations, 2)
+temperate forests and 3) tropical forests. We also study the integration of
+elevation data into models, in the form of Digital Surface Model (DSM)
+information, which can readily be obtained at no additional cost from RGB drone
+imagery. We present BalSAM, a model leveraging SAM and DSM information, which
+shows potential over other methods, particularly in the context of plantations.
+We find that methods using SAM out-of-the-box do not outperform a custom Mask
+R-CNN, even with well-designed prompts. However, efficiently tuning SAM
+end-to-end and integrating DSM information are both promising avenues for tree
+crown instance segmentation models.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.04968v1' target='_blank'>En Route Path-planning for Partially Occupied Vehicles in Ride-pooling
+  Systems</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Pengbo Zhu, Giancarlo Ferrari-Trecate, Nikolas Geroliminis</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-05 12:43:05</h6>
+<p class='card-text'>Ride-pooling services, such as UberPool and Lyft Shared Saver, enable a
+single vehicle to serve multiple customers within one shared trip. Efficient
+path-planning algorithms are crucial for improving the performance of such
+systems. For partially occupied vehicles with available capacity, we introduce
+a novel routing algorithm designed to maximize the likelihood of picking up
+additional passengers while serving the current passengers to their
+destination. Unlike traditional methods that group passengers and vehicles
+based on predefined time windows, our algorithm allows for immediate responses
+to passenger requests. Our approach optimizes travel time while dynamically
+considering passenger demand and coordinating with other vehicles. Formulated
+as an integer linear programming (ILP) problem, our method is computationally
+efficient and suitable for real-time applications. Simulation results
+demonstrate that our proposed method can significantly enhance service quality.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.04892v1' target='_blank'>Learning to Plan via Supervised Contrastive Learning and Strategic
+  Interpolation: A Chess Case Study</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Andrew Hamara, Greg Hamerly, Pablo Rivas, Andrew C. Freeman</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-05 11:19:26</h6>
+<p class='card-text'>Modern chess engines achieve superhuman performance through deep tree search
+and regressive evaluation, while human players rely on intuition to select
+candidate moves followed by a shallow search to validate them. To model this
+intuition-driven planning process, we train a transformer encoder using
+supervised contrastive learning to embed board states into a latent space
+structured by positional evaluation. In this space, distance reflects
+evaluative similarity, and visualized trajectories display interpretable
+transitions between game states. We demonstrate that move selection can occur
+entirely within this embedding space by advancing toward favorable regions,
+without relying on deep search. Despite using only a 6-ply beam search, our
+model achieves an estimated Elo rating of 2593. Performance improves with both
+model size and embedding dimensionality, suggesting that latent planning may
+offer a viable alternative to traditional search. Although we focus on chess,
+the proposed embedding-based planning method can be generalized to other
+perfect-information games where state evaluations are learnable. All source
+code is available at https://github.com/andrewhamara/SOLIS.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.04881v1' target='_blank'>Efficient Path Planning and Task Allocation Algorithm for Boolean
+  Specifications</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Ioana Hustiu, Roozbeh Abolpour, Cristian Mahulea, Marius Kloetzer</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-05 11:00:31</h6>
+<p class='card-text'>This paper presents a novel path-planning and task assignment algorithm for
+multi-robot systems that should fulfill a global Boolean specification. The
+proposed method is based on Integer Linear Programming (ILP) formulations,
+which are combined with structural insights from Petri nets to improve
+scalability and computational efficiency. By proving that the \emph{constraint
+matrix} is totally unimodular (TU) for certain classes of problems, the ILP
+formulation can be relaxed into a Linear Programming (LP) problem without
+losing the integrality of the solution. This relaxation eliminates complex
+combinatorial techniques, significantly reducing computational overhead and
+thus ensuring scalability for large-scale systems. Using the approach proposed
+in this paper, we can solve path-planning problems for teams made up to 500
+robots. The method guarantees computational tractability, handles collision
+avoidance and reduces computational demands through iterative LP optimization
+techniques. Case studies demonstrate the efficiency of the algorithm in
+generating scalable, collision-free paths for large robot teams navigating in
+complex environments. While the conservative nature of collision avoidance
+introduces additional constraints, and thus, computational requirements, the
+solution remains practical and impactful for diverse applications. The
+algorithm is particularly applicable to real-world scenarios, including
+warehouse logistics where autonomous robots must efficiently coordinate tasks
+or search-and-rescue operations in various environments. This work contributes
+both theoretically and practically to scalable multi-robot path planning and
+task allocation, offering an efficient framework for coordinating autonomous
+agents in shared environments.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.04858v1' target='_blank'>Beyond the Desktop: XR-Driven Segmentation with Meta Quest 3 and MX Ink</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Lisle Faray de Paiva, Gijs Luijten, Ana Sofia Ferreira Santos, Moon Kim, Behrus Puladi, Jens Kleesiek, Jan Egger</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-05 10:25:46</h6>
+<p class='card-text'>Medical imaging segmentation is essential in clinical settings for diagnosing
+diseases, planning surgeries, and other procedures. However, manual annotation
+is a cumbersome and effortful task. To mitigate these aspects, this study
+implements and evaluates the usability and clinical applicability of an
+extended reality (XR)-based segmentation tool for anatomical CT scans, using
+the Meta Quest 3 headset and Logitech MX Ink stylus. We develop an immersive
+interface enabling real-time interaction with 2D and 3D medical imaging data in
+a customizable workspace designed to mitigate workflow fragmentation and
+cognitive demands inherent to conventional manual segmentation tools. The
+platform combines stylus-driven annotation, mirroring traditional pen-on-paper
+workflows, with instant 3D volumetric rendering. A user study with a public
+craniofacial CT dataset demonstrated the tool's foundational viability,
+achieving a System Usability Scale (SUS) score of 66, within the expected range
+for medical applications. Participants highlighted the system's intuitive
+controls (scoring 4.1/5 for self-descriptiveness on ISONORM metrics) and
+spatial interaction design, with qualitative feedback highlighting strengths in
+hybrid 2D/3D navigation and realistic stylus ergonomics. While users identified
+opportunities to enhance task-specific precision and error management, the
+platform's core workflow enabled dynamic slice adjustment, reducing cognitive
+load compared to desktop tools. Results position the XR-stylus paradigm as a
+promising foundation for immersive segmentation tools, with iterative
+refinements targeting haptic feedback calibration and workflow personalization
+to advance adoption in preoperative planning.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.04828v1' target='_blank'>Safe Planning and Policy Optimization via World Model Learning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Artem Latyshev, Gregory Gorbov, Aleksandr I. Panov</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-05 09:50:02</h6>
+<p class='card-text'>Reinforcement Learning (RL) applications in real-world scenarios must
+prioritize safety and reliability, which impose strict constraints on agent
+behavior. Model-based RL leverages predictive world models for action planning
+and policy optimization, but inherent model inaccuracies can lead to
+catastrophic failures in safety-critical settings. We propose a novel
+model-based RL framework that jointly optimizes task performance and safety. To
+address world model errors, our method incorporates an adaptive mechanism that
+dynamically switches between model-based planning and direct policy execution.
+We resolve the objective mismatch problem of traditional model-based approaches
+using an implicit world model. Furthermore, our framework employs dynamic
+safety thresholds that adapt to the agent's evolving capabilities, consistently
+selecting actions that surpass safe policy suggestions in both performance and
+safety. Experiments demonstrate significant improvements over non-adaptive
+methods, showing that our approach optimizes safety and performance
+simultaneously rather than merely meeting minimum safety requirements. The
+proposed framework achieves robust performance on diverse safety-critical
+continuous control tasks, outperforming existing methods.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.04682v1' target='_blank'>MARS: Radio Map Super-resolution and Reconstruction Method under Sparse
+  Channel Measurements</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Chuyun Deng, Na Liu, Wei Xie, Lianming Xu, Li Wang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-05 07:03:50</h6>
+<p class='card-text'>Radio maps reflect the spatial distribution of signal strength and are
+essential for applications like smart cities, IoT, and wireless network
+planning. However, reconstructing accurate radio maps from sparse measurements
+remains challenging. Traditional interpolation and inpainting methods lack
+environmental awareness, while many deep learning approaches depend on detailed
+scene data, limiting generalization. To address this, we propose MARS, a
+Multi-scale Aware Radiomap Super-resolution method that combines CNNs and
+Transformers with multi-scale feature fusion and residual connections. MARS
+focuses on both global and local feature extraction, enhancing feature
+representation across different receptive fields and improving reconstruction
+accuracy. Experiments across different scenes and antenna locations show that
+MARS outperforms baseline models in both MSE and SSIM, while maintaining low
+computational cost, demonstrating strong practical potential.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.04646v1' target='_blank'>ActivePusher: Active Learning and Planning with Residual Physics for
+  Nonprehensile Manipulation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Zhuoyun Zhong, Seyedali Golestaneh, Constantinos Chamzas</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-05 05:28:14</h6>
+<p class='card-text'>Planning with learned dynamics models offers a promising approach toward
+real-world, long-horizon manipulation, particularly in nonprehensile settings
+such as pushing or rolling, where accurate analytical models are difficult to
+obtain. Although learning-based methods hold promise, collecting training data
+can be costly and inefficient, as it often relies on randomly sampled
+interactions that are not necessarily the most informative. To address this
+challenge, we propose ActivePusher, a novel framework that combines
+residual-physics modeling with kernel-based uncertainty-driven active learning
+to focus data acquisition on the most informative skill parameters.
+Additionally, ActivePusher seamlessly integrates with model-based kinodynamic
+planners, leveraging uncertainty estimates to bias control sampling toward more
+reliable actions. We evaluate our approach in both simulation and real-world
+environments and demonstrate that it improves data efficiency and planning
+success rates compared to baseline methods.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.04595v1' target='_blank'>Hierarchical-Task-Aware Multi-modal Mixture of Incremental LoRA Experts
+  for Embodied Continual Learning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Ziqi Jia, Anmin Wang, Xiaoyang Qu, Xiaowen Yang, Jianzong Wang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-05 03:20:47</h6>
+<p class='card-text'>Previous continual learning setups for embodied intelligence focused on
+executing low-level actions based on human commands, neglecting the ability to
+learn high-level planning and multi-level knowledge. To address these issues,
+we propose the Hierarchical Embodied Continual Learning Setups (HEC) that
+divide the agent's continual learning process into two layers: high-level
+instructions and low-level actions, and define five embodied continual learning
+sub-setups. Building on these setups, we introduce the Task-aware Mixture of
+Incremental LoRA Experts (Task-aware MoILE) method. This approach achieves task
+recognition by clustering visual-text embeddings and uses both a task-level
+router and a token-level router to select the appropriate LoRA experts. To
+effectively address the issue of catastrophic forgetting, we apply Singular
+Value Decomposition (SVD) to the LoRA parameters obtained from prior tasks,
+preserving key components while orthogonally training the remaining parts. The
+experimental results show that our method stands out in reducing the forgetting
+of old tasks compared to other methods, effectively supporting agents in
+retaining prior knowledge while continuously learning new tasks.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.04484v1' target='_blank'>Online Adaptation of Terrain-Aware Dynamics for Planning in Unstructured
+  Environments</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:William Ward, Sarah Etter, Tyler Ingebrand, Christian Ellis, Adam J. Thorpe, Ufuk Topcu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-04 22:03:57</h6>
+<p class='card-text'>Autonomous mobile robots operating in remote, unstructured environments must
+adapt to new, unpredictable terrains that can change rapidly during operation.
+In such scenarios, a critical challenge becomes estimating the robot's dynamics
+on changing terrain in order to enable reliable, accurate navigation and
+planning. We present a novel online adaptation approach for terrain-aware
+dynamics modeling and planning using function encoders. Our approach
+efficiently adapts to new terrains at runtime using limited online data without
+retraining or fine-tuning. By learning a set of neural network basis functions
+that span the robot dynamics on diverse terrains, we enable rapid online
+adaptation to new, unseen terrains and environments as a simple least-squares
+calculation. We demonstrate our approach for terrain adaptation in a
+Unity-based robotics simulator and show that the downstream controller has
+better empirical performance due to higher accuracy of the learned model. This
+leads to fewer collisions with obstacles while navigating in cluttered
+environments as compared to a neural ODE baseline.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.04479v1' target='_blank'>Comparative performance of ensemble models in predicting dental provider
+  types: insights from fee-for-service data</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Mohammad Subhi Al-Batah, Muhyeeddin Alqaraleh, Mowafaq Salem Alzboon, Abdullah Alourani</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-04 21:55:27</h6>
+<p class='card-text'>Dental provider classification plays a crucial role in optimizing healthcare
+resource allocation and policy planning. Effective categorization of providers,
+such as standard rendering providers and safety net clinic (SNC) providers,
+enhances service delivery to underserved populations. This study aimed to
+evaluate the performance of machine learning models in classifying dental
+providers using a 2018 dataset. A dataset of 24,300 instances with 20 features
+was analyzed, including beneficiary and service counts across fee-for-service
+(FFS), Geographic Managed Care, and Pre-Paid Health Plans. Providers were
+categorized by delivery system and patient age groups (0-20 and 21+). Despite
+38.1% missing data, multiple machine learning algorithms were tested, including
+k-Nearest Neighbors (kNN), Decision Trees, Support Vector Machines (SVM),
+Stochastic Gradient Descent (SGD), Random Forest, Neural Networks, and Gradient
+Boosting. A 10-fold cross-validation approach was applied, and models were
+evaluated using AUC, classification accuracy (CA), F1-score, precision, and
+recall. Neural Networks achieved the highest AUC (0.975) and CA (94.1%),
+followed by Random Forest (AUC: 0.948, CA: 93.0%). These models effectively
+handled imbalanced data and complex feature interactions, outperforming
+traditional classifiers like Logistic Regression and SVM. Advanced machine
+learning techniques, particularly ensemble and deep learning models,
+significantly enhance dental workforce classification. Their integration into
+healthcare analytics can improve provider identification and resource
+distribution, benefiting underserved populations.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.04467v1' target='_blank'>Diffusion Transformer-based Universal Dose Denoising for Pencil Beam
+  Scanning Proton Therapy</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yuzhen Ding, Jason Holmes, Hongying Feng, Martin Bues, Lisa A. McGee, Jean-Claude M. Rwigema, Nathan Y. Yu, Terence S. Sio, Sameer R. Keole, William W. Wong, Steven E. Schild, Jonathan B. Ashman, Sujay A. Vora, Daniel J. Ma, Samir H. Patel, Wei Liu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-04 21:37:15</h6>
+<p class='card-text'>Purpose: Intensity-modulated proton therapy (IMPT) offers precise tumor
+coverage while sparing organs at risk (OARs) in head and neck (H&N) cancer.
+However, its sensitivity to anatomical changes requires frequent adaptation
+through online adaptive radiation therapy (oART), which depends on fast,
+accurate dose calculation via Monte Carlo (MC) simulations. Reducing particle
+count accelerates MC but degrades accuracy. To address this, denoising
+low-statistics MC dose maps is proposed to enable fast, high-quality dose
+generation.
+  Methods: We developed a diffusion transformer-based denoising framework. IMPT
+plans and 3D CT images from 80 H&N patients were used to generate noisy and
+high-statistics dose maps using MCsquare (1 min and 10 min per plan,
+respectively). Data were standardized into uniform chunks with zero-padding,
+normalized, and transformed into quasi-Gaussian distributions. Testing was done
+on 10 H&N, 10 lung, 10 breast, and 10 prostate cancer cases, preprocessed
+identically. The model was trained with noisy dose maps and CT images as input
+and high-statistics dose maps as ground truth, using a combined loss of mean
+square error (MSE), residual loss, and regional MAE (focusing on top/bottom 10%
+dose voxels). Performance was assessed via MAE, 3D Gamma passing rate, and DVH
+indices.
+  Results: The model achieved MAEs of 0.195 (H&N), 0.120 (lung), 0.172
+(breast), and 0.376 Gy[RBE] (prostate). 3D Gamma passing rates exceeded 92%
+(3%/2mm) across all sites. DVH indices for clinical target volumes (CTVs) and
+OARs closely matched the ground truth.
+  Conclusion: A diffusion transformer-based denoising framework was developed
+and, though trained only on H&N data, generalizes well across multiple disease
+sites.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.04439v1' target='_blank'>RETRO SYNFLOW: Discrete Flow Matching for Accurate and Diverse
+  Single-Step Retrosynthesis</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Robin Yadav, Qi Yan, Guy Wolf, Avishek Joey Bose, Renjie Liao</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-04 20:46:05</h6>
+<p class='card-text'>A fundamental problem in organic chemistry is identifying and predicting the
+series of reactions that synthesize a desired target product molecule. Due to
+the combinatorial nature of the chemical search space, single-step reactant
+prediction -- i.e. single-step retrosynthesis -- remains challenging even for
+existing state-of-the-art template-free generative approaches to produce an
+accurate yet diverse set of feasible reactions. In this paper, we model
+single-step retrosynthesis planning and introduce RETRO SYNFLOW (RSF) a
+discrete flow-matching framework that builds a Markov bridge between the
+prescribed target product molecule and the reactant molecule. In contrast to
+past approaches, RSF employs a reaction center identification step to produce
+intermediate structures known as synthons as a more informative source
+distribution for the discrete flow. To further enhance diversity and
+feasibility of generated samples, we employ Feynman-Kac steering with
+Sequential Monte Carlo based resampling to steer promising generations at
+inference using a new reward oracle that relies on a forward-synthesis model.
+Empirically, we demonstrate \nameshort achieves $60.0 \%$ top-1 accuracy, which
+outperforms the previous SOTA by $20 \%$. We also substantiate the benefits of
+steering at inference and demonstrate that FK-steering improves top-$5$
+round-trip accuracy by $19 \%$ over prior template-free SOTA methods, all while
+preserving competitive top-$k$ accuracy results.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.04363v1' target='_blank'>WorldPrediction: A Benchmark for High-level World Modeling and
+  Long-horizon Procedural Planning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Delong Chen, Willy Chung, Yejin Bang, Ziwei Ji, Pascale Fung</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-04 18:22:40</h6>
+<p class='card-text'>Humans are known to have an internal "world model" that enables us to carry
+out action planning based on world states. AI agents need to have such a world
+model for action planning as well. It is not clear how current AI models,
+especially generative models, are able to learn such world models and carry out
+procedural planning in diverse environments. We introduce WorldPrediction, a
+video-based benchmark for evaluating world modeling and procedural planning
+capabilities of different AI models. In contrast to prior benchmarks that focus
+primarily on low-level world modeling and robotic motion planning,
+WorldPrediction is the first benchmark that emphasizes actions with temporal
+and semantic abstraction. Given initial and final world states, the task is to
+distinguish the proper action (WorldPrediction-WM) or the properly ordered
+sequence of actions (WorldPrediction-PP) from a set of counterfactual
+distractors. This discriminative task setup enable us to evaluate different
+types of world models and planners and realize a thorough comparison across
+different hypothesis. The benchmark represents states and actions using visual
+observations. In order to prevent models from exploiting low-level continuity
+cues in background scenes, we provide "action equivalents" - identical actions
+observed in different contexts - as candidates for selection. This benchmark is
+grounded in a formal framework of partially observable semi-MDP, ensuring
+better reliability and robustness of the evaluation. We conduct extensive human
+filtering and validation on our benchmark and show that current frontier models
+barely achieve 57% accuracy on WorldPrediction-WM and 38% on WorldPrediction-PP
+whereas humans are able to solve both tasks perfectly.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.04362v1' target='_blank'>Learning Smooth State-Dependent Traversability from Dense Point Clouds</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Zihao Dong, Alan Papalia, Leonard Jung, Alenna Spiro, Philip R. Osteen, Christa S. Robison, Michael Everett</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-04 18:21:54</h6>
+<p class='card-text'>A key open challenge in off-road autonomy is that the traversability of
+terrain often depends on the vehicle's state. In particular, some obstacles are
+only traversable from some orientations. However, learning this interaction by
+encoding the angle of approach as a model input demands a large and diverse
+training dataset and is computationally inefficient during planning due to
+repeated model inference. To address these challenges, we present SPARTA, a
+method for estimating approach angle conditioned traversability from point
+clouds. Specifically, we impose geometric structure into our network by
+outputting a smooth analytical function over the 1-Sphere that predicts risk
+distribution for any angle of approach with minimal overhead and can be reused
+for subsequent queries. The function is composed of Fourier basis functions,
+which has important advantages for generalization due to their periodic nature
+and smoothness. We demonstrate SPARTA both in a high-fidelity simulation
+platform, where our model achieves a 91\% success rate crossing a 40m boulder
+field (compared to 73\% for the baseline), and on hardware, illustrating the
+generalization ability of the model to real-world settings.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.04220v1' target='_blank'>Struct2D: A Perception-Guided Framework for Spatial Reasoning in Large
+  Multimodal Models</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Fangrui Zhu, Hanhui Wang, Yiming Xie, Jing Gu, Tianye Ding, Jianwei Yang, Huaizu Jiang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-04 17:58:04</h6>
+<p class='card-text'>Unlocking spatial reasoning in Large Multimodal Models (LMMs) is crucial for
+enabling intelligent interaction with 3D environments. While prior efforts
+often rely on explicit 3D inputs or specialized model architectures, we ask:
+can LMMs reason about 3D space using only structured 2D representations derived
+from perception? We introduce Struct2D, a perception-guided prompting framework
+that combines bird's-eye-view (BEV) images with object marks and object-centric
+metadata, optionally incorporating egocentric keyframes when needed. Using
+Struct2D, we conduct an in-depth zero-shot analysis of closed-source LMMs
+(e.g., GPT-o3) and find that they exhibit surprisingly strong spatial reasoning
+abilities when provided with structured 2D inputs, effectively handling tasks
+such as relative direction estimation and route planning. Building on these
+insights, we construct Struct2D-Set, a large-scale instruction tuning dataset
+with 200K fine-grained QA pairs across eight spatial reasoning categories,
+generated automatically from 3D indoor scenes. We fine-tune an open-source LMM
+(Qwen2.5VL) on Struct2D-Set, achieving competitive performance on multiple
+benchmarks, including 3D question answering, dense captioning, and object
+grounding. Our approach demonstrates that structured 2D inputs can effectively
+bridge perception and language reasoning in LMMs-without requiring explicit 3D
+representations as input. We will release both our code and dataset to support
+future research.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.04098v1' target='_blank'>TextAtari: 100K Frames Game Playing with Language Agents</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Wenhao Li, Wenwu Li, Chuyun Shen, Junjie Sheng, Zixiao Huang, Di Wu, Yun Hua, Wei Yin, Xiangfeng Wang, Hongyuan Zha, Bo Jin</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-04 15:55:27</h6>
+<p class='card-text'>We present TextAtari, a benchmark for evaluating language agents on very
+long-horizon decision-making tasks spanning up to 100,000 steps. By translating
+the visual state representations of classic Atari games into rich textual
+descriptions, TextAtari creates a challenging test bed that bridges sequential
+decision-making with natural language processing. The benchmark includes nearly
+100 distinct tasks with varying complexity, action spaces, and planning
+horizons, all rendered as text through an unsupervised representation learning
+framework (AtariARI). We evaluate three open-source large language models
+(Qwen2.5-7B, Gemma-7B, and Llama3.1-8B) across three agent frameworks
+(zero-shot, few-shot chain-of-thought, and reflection reasoning) to assess how
+different forms of prior knowledge affect performance on these long-horizon
+challenges. Four scenarios-Basic, Obscured, Manual Augmentation, and
+Reference-based-investigate the impact of semantic understanding, instruction
+comprehension, and expert demonstrations on agent decision-making. Our results
+reveal significant performance gaps between language agents and human players
+in extensive planning tasks, highlighting challenges in sequential reasoning,
+state tracking, and strategic planning across tens of thousands of steps.
+TextAtari provides standardized evaluation protocols, baseline implementations,
+and a framework for advancing research at the intersection of language models
+and planning.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.04034v1' target='_blank'>Rex-Thinker: Grounded Object Referring via Chain-of-Thought Reasoning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Qing Jiang, Xingyu Chen, Zhaoyang Zeng, Junzhi Yu, Lei Zhang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-04 14:56:57</h6>
+<p class='card-text'>Object referring aims to detect all objects in an image that match a given
+natural language description. We argue that a robust object referring model
+should be grounded, meaning its predictions should be both explainable and
+faithful to the visual content. Specifically, it should satisfy two key
+properties: 1) Verifiable, by producing interpretable reasoning that justifies
+its predictions and clearly links them to visual evidence; and 2) Trustworthy,
+by learning to abstain when no object in the image satisfies the given
+expression. However, most methods treat referring as a direct bounding box
+prediction task, offering limited interpretability and struggling to reject
+expressions with no matching object. In this work, we propose Rex-Thinker, a
+model that formulates object referring as an explicit CoT reasoning task. Given
+a referring expression, we first identify all candidate object instances
+corresponding to the referred object category. Rex-Thinker then performs
+step-by-step reasoning over each candidate to assess whether it matches the
+given expression, before making a final prediction. To support this paradigm,
+we construct a large-scale CoT-style referring dataset named HumanRef-CoT by
+prompting GPT-4o on the HumanRef dataset. Each reasoning trace follows a
+structured planning, action, and summarization format, enabling the model to
+learn decomposed, interpretable reasoning over object candidates. We then train
+Rex-Thinker in two stages: a cold-start supervised fine-tuning phase to teach
+the model how to perform structured reasoning, followed by GRPO-based RL
+learning to improve accuracy and generalization. Experiments show that our
+approach outperforms standard baselines in both precision and interpretability
+on in-domain evaluation, while also demonstrating improved ability to reject
+hallucinated outputs and strong generalization in out-of-domain settings.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.04009v1' target='_blank'>Investigating the emergent invariant properties of Hungarian electric
+  distribution networks</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Michelle T. Cirunay, Bálint Hartmann, Tímea Erdei, Tamás Soha</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-04 14:34:57</h6>
+<p class='card-text'>Electric power distribution networks serve as the final and essential stage
+in power delivery, bridging transmission infrastructure and end users. The
+structural configuration of these networks plays a critical role in determining
+system reliability, fault tolerance, and operational efficiency. Although the
+design of distribution systems is influenced by various regional factors, such
+as geography, customer density, and planning standards, the extent to which
+consistent structural characteristics emerge across different networks remains
+an open question. In this study, we perform a detailed spatial and topological
+analysis of five MV distribution networks in Hungary. Despite notable
+differences in geographic layout and consumer distribution, we identify
+statistically consistent patterns across several key metrics, including degree,
+BC, and powerline length. These findings suggest the influence of common
+underlying design principles or optimization constraints, potentially
+indicating universal structural tendencies in MV network design. The results
+provide insight into the organization of real-world distribution systems and
+offer a basis for improved planning, risk mitigation, and system optimization
+in future grid developments.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.03999v1' target='_blank'>Large deviations for scaled families of Schrödinger bridges with
+  reflection</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Viktor Nilsson</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-04 14:28:34</h6>
+<p class='card-text'>In this paper, we show a large deviation principle for certain sequences of
+static Schr\"{o}dinger bridges, typically motivated by a scale-parameter
+decreasing towards zero, extending existing large deviation results to cover a
+wider range of reference processes. Our results provide a theoretical
+foundation for studying convergence of such Schr\"{o}dinger bridges to their
+limiting optimal transport plans. Within generative modeling, Schr\"{o}dinger
+bridges, or entropic optimal transport problems, constitute a prominent class
+of methods, in part because of their computational feasibility in
+high-dimensional settings. Recently, Bernton et al. established a large
+deviation principle, in the small-noise limit, for fixed-cost entropic optimal
+transport problems. In this paper, we address an open problem posed by Bernton
+et al. and extend their results to hold for Schr\"{o}dinger bridges associated
+with certain sequences of more general reference measures with enough
+regularity in a similar small-noise limit. These can be viewed as sequences of
+entropic optimal transport plans with non-fixed cost functions. Using a
+detailed analysis of the associated Skorokhod maps and transition densities, we
+show that the new large deviation results cover Schr\"{o}dinger bridges where
+the reference process is a reflected diffusion on bounded convex domains,
+corresponding to recently introduced model choices in the generative modeling
+literature.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.03998v1' target='_blank'>The QTF-Backbone: Proposal for a Nationwide Optical Fibre Backbone in
+  Germany for Quantum Technology and Time and Frequency Metrology</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Klaus Blaum, Peter Kaufmann, Jochen Kronjäger, Stefan Kück, Tara Cubel Liebisch, Dieter Meschede, Susanne Naegele-Jackson, Stephan Schiller, Harald Schnatz</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-04 14:27:50</h6>
+<p class='card-text'>The recent breakthroughs in the distribution of quantum information and
+high-precision time and frequency (T&F) signals over long-haul optical fibre
+networks have transformative potential for physically secure communications,
+resilience of Global Navigation Satellite Systems (GNSS) and fundamental
+physics. However, so far these capabilities remain confined to isolated
+testbeds, with quantum and T&F signals accessible, for example in Germany, to
+only a few institutions.
+  We propose the QTF-Backbone: a dedicated national fibre-optic infrastructure
+in Germany for the networked distribution of quantum and T&F signals using dark
+fibres and specialized hardware. The QTF-Backbone is planned as a four-phase
+deployment over ten years to ensure scalable, sustainable access for research
+institutions and industry. The concept builds on successful demonstrations of
+high-TRL time and frequency distribution across Europe, including PTB-MPQ links
+in Germany, REFIMEVE in France, and the Italian LIFT network. The QTF-Backbone
+will enable transformative R&D, support a nationwide QTF ecosystem, and ensure
+the transition from innovation to deployment. As a national and European hub,
+it will position Germany and Europe at the forefront of quantum networking, as
+well as time and frequency transfer.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.04296v1' target='_blank'>Deep learning for predicting hauling fleet production capacity under
+  uncertainties in open pit mines using real and simulated data</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:N Guerin, M Nakhla, A Dehoux, J L Loyer</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-04 12:12:56</h6>
+<p class='card-text'>Accurate short-term forecasting of hauling-fleet capacity is crucial in
+open-pit mining, where weather fluctuations, mechanical breakdowns, and
+variable crew availability introduce significant operational uncertainties. We
+propose a deep-learning framework that blends real-world operational records
+(high-resolution rainfall measurements, fleet performance telemetry) with
+synthetically generated mechanical-breakdown scenarios to enable the model to
+capture fluctuating high-impact failure events. We evaluate two architectures:
+an XGBoost regressor achieving a median absolute error (MedAE) of 14.3 per cent
+and a Long Short-Term Memory network with a MedAE of 15.1 per cent. Shapley
+Additive exPlanations (SHAP) value analyses identify cumulative rainfall,
+historical payload trends, and simulated breakdown frequencies as dominant
+predictors. Integration of simulated breakdown data and shift-planning features
+notably reduces prediction volatility. Future work will further integrate
+maintenance-scheduling indicators (Mean Time Between Failures, Mean Time to
+Repair), detailed human resource data (operator absenteeism, crew efficiency
+metrics), blast event scheduling, and other operational constraints to enhance
+forecast robustness and adaptability. This hybrid modelling approach offers a
+comprehensive decision-support tool for proactive, data-driven fleet management
+under dynamically uncertain conditions.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js'></script>
+</body>
+</html>
