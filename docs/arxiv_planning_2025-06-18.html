@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>planning - 2025-06-18</title>
+<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap' rel='stylesheet'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css'>
+<style>
+body {
+font-family: 'Roboto', sans-serif;
+background-color: #f5f7fa;
+padding: 20px;
+}
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.card-title {
+    font-weight: 700;
+}
+.card:hover {
+    transform: scale(1.02);
+    transition: 0.3s ease-in-out;
+}
+</style>
+</head>
+<body>
+<div class='container'>
+<h1 class='text-center my-4'><i class='fas fa-book'></i>planning - 2025-06-18</h1>
+<div class='row'>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.14769v1' target='_blank'>CDP: Towards Robust Autoregressive Visuomotor Policy Learning via Causal
+  Diffusion</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jiahua Ma, Yiran Qin, Yixiong Li, Xuanqi Liao, Yulan Guo, Ruimao Zhang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-17 17:59:12</h6>
+<p class='card-text'>Diffusion Policy (DP) enables robots to learn complex behaviors by imitating
+expert demonstrations through action diffusion. However, in practical
+applications, hardware limitations often degrade data quality, while real-time
+constraints restrict model inference to instantaneous state and scene
+observations. These limitations seriously reduce the efficacy of learning from
+expert demonstrations, resulting in failures in object localization, grasp
+planning, and long-horizon task execution. To address these challenges, we
+propose Causal Diffusion Policy (CDP), a novel transformer-based diffusion
+model that enhances action prediction by conditioning on historical action
+sequences, thereby enabling more coherent and context-aware visuomotor policy
+learning. To further mitigate the computational cost associated with
+autoregressive inference, a caching mechanism is also introduced to store
+attention key-value pairs from previous timesteps, substantially reducing
+redundant computations during execution. Extensive experiments in both
+simulated and real-world environments, spanning diverse 2D and 3D manipulation
+tasks, demonstrate that CDP uniquely leverages historical action sequences to
+achieve significantly higher accuracy than existing methods. Moreover, even
+when faced with degraded input observation quality, CDP maintains remarkable
+precision by reasoning through temporal continuity, which highlights its
+practical robustness for robotic control under realistic, imperfect conditions.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.14763v1' target='_blank'>RobotSmith: Generative Robotic Tool Design for Acquisition of Complex
+  Manipulation Skills</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Chunru Lin, Haotian Yuan, Yian Wang, Xiaowen Qiu, Tsun-Hsuan Wang, Minghao Guo, Bohan Wang, Yashraj Narang, Dieter Fox, Chuang Gan</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-17 17:57:37</h6>
+<p class='card-text'>Endowing robots with tool design abilities is critical for enabling them to
+solve complex manipulation tasks that would otherwise be intractable. While
+recent generative frameworks can automatically synthesize task settings, such
+as 3D scenes and reward functions, they have not yet addressed the challenge of
+tool-use scenarios. Simply retrieving human-designed tools might not be ideal
+since many tools (e.g., a rolling pin) are difficult for robotic manipulators
+to handle. Furthermore, existing tool design approaches either rely on
+predefined templates with limited parameter tuning or apply generic 3D
+generation methods that are not optimized for tool creation. To address these
+limitations, we propose RobotSmith, an automated pipeline that leverages the
+implicit physical knowledge embedded in vision-language models (VLMs) alongside
+the more accurate physics provided by physics simulations to design and use
+tools for robotic manipulation. Our system (1) iteratively proposes tool
+designs using collaborative VLM agents, (2) generates low-level robot
+trajectories for tool use, and (3) jointly optimizes tool geometry and usage
+for task performance. We evaluate our approach across a wide range of
+manipulation tasks involving rigid, deformable, and fluid objects. Experiments
+show that our method consistently outperforms strong baselines in terms of both
+task success rate and overall performance. Notably, our approach achieves a
+50.0\% average success rate, significantly surpassing other baselines such as
+3D generation (21.4%) and tool retrieval (11.1%). Finally, we deploy our system
+in real-world settings, demonstrating that the generated tools and their usage
+plans transfer effectively to physical execution, validating the practicality
+and generalization capabilities of our approach.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.14749v1' target='_blank'>Swarm-STL: A Framework for Motion Planning in Large-Scale, Multi-Swarm
+  Systems</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Shiyu Cheng, Luyao Niu, Bhaskar Ramasubramanian, Andrew Clark, Radha Poovendran</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-17 17:40:12</h6>
+<p class='card-text'>In multi-agent systems, signal temporal logic (STL) is widely used for path
+planning to accomplish complex objectives with formal safety guarantees.
+However, as the number of agents increases, existing approaches encounter
+significant computational challenges. Recognizing that many complex tasks
+require cooperation among multiple agents, we propose swarm STL specifications
+to describe the collective tasks that need to be achieved by a team of agents.
+Next, we address the motion planning problem for all the agents in two stages.
+First, we abstract a group of cooperating agents as a swarm and construct a
+reduced-dimension state space whose dimension does not increase with the number
+of agents. The path planning is performed at the swarm level, ensuring the
+safety and swarm STL specifications are satisfied. Then, we design low-level
+control strategies for agents within each swarm based on the path synthesized
+in the first step. The trajectories of agents generated by the two-step policy
+ensure satisfaction of the STL specifications. We evaluate our two-stage
+approach in both single-swarm and multi-swarm scenarios. The results
+demonstrate that all tasks are completed with safety guarantees. Compared to
+the baseline multi-agent planning approach, our method maintains computational
+efficiency as the number of agents increases, since the computational time
+scales with the number of swarms rather than the number of agents.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.14713v1' target='_blank'>Linear Planar 3-SAT and Its Applications in Planning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Victorien Desbois, Ocan Sankur, François Schwarzentruber</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-17 16:51:03</h6>
+<p class='card-text'>Several fragments of the satisfiability problem have been studied in the
+literature. Among these, Linear 3-SAT is a satisfaction problem in which each
+clause (viewed as a set of literals) intersects with at most one other clause;
+moreover, any pair of clauses have at most one literal in common. Planar 3-SAT
+is a fragment which requires that the so-called variable-clause graph is
+planar. Both fragments are NP-complete and have applications in encoding
+NP-hard planning problems. In this paper, we investigate the complexity and
+applications of the fragment obtained combining both features. We define Linear
+Planar 3-SAT and prove its NP-completeness. We also study the reconfiguration
+problem of Linear Planar 3-SAT and show that it is PSPACE-complete. As an
+application, we use these new results to prove the NP-completeness of Bounded
+Connected Multi-Agent Pathfinding and the PSPACE-completeness of Connected
+Multi-Agent Pathfinding in two-dimensional grids.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.14701v1' target='_blank'>A Digital Twin Framework for Adaptive Treatment Planning in Radiotherapy</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Chih-Wei Chang, Sri Akkineni, Mingzhe Hu, Keyur D. Shah, Jun Zhou, Xiaofeng Yang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-17 16:40:10</h6>
+<p class='card-text'>This study aims to develop and evaluate a digital twin (DT) framework to
+enhance adaptive proton therapy for prostate stereotactic body radiotherapy
+(SBRT), focusing on improving treatment precision for dominant intraprostatic
+lesions (DILs) while minimizing organ-at-risk (OAR) toxicity. We propose a
+decision-theoretic (DT) framework combining deep learning (DL)-based deformable
+image registration (DIR) with a prior treatment database to generate synthetic
+CTs (sCTs) for predicting interfractional anatomical changes. Using daily CBCT
+from five prostate SBRT patients with DILs, the framework precomputes multiple
+plans with high (DT-H) and low (DT-L) similarity sCTs. Plan optimization is
+performed in RayStation 2023B, assuming a constant RBE of 1.1 and robustly
+accounting for positional and range uncertainties. Plan quality is evaluated
+via a modified ProKnow score across two fractions, with reoptimization limited
+to 10 minutes. Daily CBCT evaluation showed clinical plans often violated OAR
+constraints (e.g., bladder V20.8Gy, rectum V23Gy), with DIL V100 < 90% in 2
+patients, indicating SIFB failure. DT-H plans, using high-similarity sCTs,
+achieved better or comparable DIL/CTV coverage and lower OAR doses, with
+reoptimization completed within 10 min (e.g., DT-H-REopt-A score: 154.3-165.9).
+DT-L plans showed variable outcomes; lower similarity correlated with reduced
+DIL coverage (e.g., Patient 4: 84.7%). DT-H consistently outperformed clinical
+plans within time limits, while extended optimization brought DT-L and clinical
+plans closer to DT-H quality. This DT framework enables rapid, personalized
+adaptive proton therapy, improving DIL targeting and reducing toxicity. By
+addressing geometric uncertainties, it supports outcome gains in
+ultra-hypofractionated prostate RT and lays groundwork for future multimodal
+anatomical prediction.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.14697v1' target='_blank'>AGENTSAFE: Benchmarking the Safety of Embodied Agents on Hazardous
+  Instructions</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Aishan Liu, Zonghao Ying, Le Wang, Junjie Mu, Jinyang Guo, Jiakai Wang, Yuqing Ma, Siyuan Liang, Mingchuan Zhang, Xianglong Liu, Dacheng Tao</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-17 16:37:35</h6>
+<p class='card-text'>The rapid advancement of vision-language models (VLMs) and their integration
+into embodied agents have unlocked powerful capabilities for decision-making.
+However, as these systems are increasingly deployed in real-world environments,
+they face mounting safety concerns, particularly when responding to hazardous
+instructions. In this work, we propose AGENTSAFE, the first comprehensive
+benchmark for evaluating the safety of embodied VLM agents under hazardous
+instructions. AGENTSAFE simulates realistic agent-environment interactions
+within a simulation sandbox and incorporates a novel adapter module that
+bridges the gap between high-level VLM outputs and low-level embodied controls.
+Specifically, it maps recognized visual entities to manipulable objects and
+translates abstract planning into executable atomic actions in the environment.
+Building on this, we construct a risk-aware instruction dataset inspired by
+Asimovs Three Laws of Robotics, including base risky instructions and mutated
+jailbroken instructions. The benchmark includes 45 adversarial scenarios, 1,350
+hazardous tasks, and 8,100 hazardous instructions, enabling systematic testing
+under adversarial conditions ranging from perception, planning, and action
+execution stages.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.14691v1' target='_blank'>Application of a modified commercial laser mass spectrometer as a
+  science analog of the Mars Organic Molecule Analyzer (MOMA)</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Zachary K. Garvin, Anaïs Roussel, Luoth Chou, Marco E. Castillo, Xiang Li, William B. Brinckerhoff, Sarah Stewart Johnson</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-17 16:29:09</h6>
+<p class='card-text'>The ESA/NASA Rosalind Franklin rover, planned for launch in 2028, will carry
+the first laser desorption ionization mass spectrometer (LDI-MS) to Mars as
+part of the Mars Organic Molecule Analyzer (MOMA) instrument. MOMA will
+contribute to the astrobiology goals of the mission through the analysis of
+potential organic biosignatures. Due to the minimal availability of comparable
+equipment, laboratory analyses using similar techniques and instrumentation
+have been limited. In this study, we present a modified commercial benchtop
+LDI-MS designed to replicate MOMA functionality and to enable rapid testing of
+samples for MOMA validation experiments. We demonstrate that our instrument can
+detect organic standards in mineral matrices, with MS/MS enabling structural
+identification even in complex mixtures. Performance was additionally validated
+against an existing LDI-MS prototype through the comparison of spectra derived
+from natural samples from a Mars analog site in the Atacama Desert. Lastly,
+analysis of Mars analog synthetic mineral mixes highlights the capacity of the
+instrument to characterize both the mineralogical and organic signals in
+mission-relevant samples. This modified benchtop instrument will serve as a
+platform for collaborative research to prepare for MOMA operations, test LDI
+parameters, and generate pre-flight reference data in support of the mission
+science and astrobiology specific goals.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.14585v1' target='_blank'>The Effect of Photometric Errors on the Measured Width of the Main
+  Sequence in Star Clusters</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Steven R. Spangler</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-17 14:42:43</h6>
+<p class='card-text'>This paper deals with the effect of errors in the B and V magnitudes, or
+measurements in any other color system, on the width of the main sequence in a
+color-magnitude (Hertzsprung-Russell) diagram. The width is defined as the
+dispersion in apparent (or absolute) magnitude at a fixed, measured photometric
+color. I find that the dispersion is larger than might be thought, a priori. A
+statistical analysis is presented which demonstrates that the error in the
+magnitude residual from a linear approximation to the main sequence is
+Gaussian, but with a standard deviation which is much larger, in general, than
+the errors in the individual B and V magnitudes. This result is confirmed by a
+Monte Carlo simulation of a main sequence population with specified errors in B
+and V magnitudes, and can be explained on the basis of simple algebraic
+arguments.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.14570v1' target='_blank'>From Points to Places: Towards Human Mobility-Driven Spatiotemporal
+  Foundation Models via Understanding Places</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Mohammad Hashemi, Andreas Zufle</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-17 14:27:24</h6>
+<p class='card-text'>Capturing human mobility is essential for modeling how people interact with
+and move through physical spaces, reflecting social behavior, access to
+resources, and dynamic spatial patterns. To support scalable and transferable
+analysis across diverse geographies and contexts, there is a need for a
+generalizable foundation model for spatiotemporal data. While foundation models
+have transformed language and vision, they remain limited in handling the
+unique challenges posed by the spatial, temporal, and semantic complexity of
+mobility data. This vision paper advocates for a new class of spatial
+foundation models that integrate geolocation semantics with human mobility
+across multiple scales. Central to our vision is a shift from modeling discrete
+points of interest to understanding places: dynamic, context-rich regions
+shaped by human behavior and mobility that may comprise many places of
+interest. We identify key gaps in adaptability, scalability, and multi-granular
+reasoning, and propose research directions focused on modeling places and
+enabling efficient learning. Our goal is to guide the development of scalable,
+context-aware models for next-generation geospatial intelligence. These models
+unlock powerful applications ranging from personalized place discovery and
+logistics optimization to urban planning, ultimately enabling smarter and more
+responsive spatial decision-making.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.14551v1' target='_blank'>Empirically-Calibrated H100 Node Power Models for Reducing Uncertainty
+  in AI Training Energy Estimation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Alex C. Newkirk, Jared Fernandez, Jonathan Koomey, Imran Latif, Emma Strubell, Arman Shehabi, Constantine Samaras</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-17 14:07:27</h6>
+<p class='card-text'>As AI's energy demand continues to grow, it is critical to enhance the
+understanding of characteristics of this demand, to improve grid infrastructure
+planning and environmental assessment. By combining empirical measurements from
+Brookhaven National Laboratory during AI training on 8-GPU H100 systems with
+open-source benchmarking data, we develop statistical models relating
+computational intensity to node-level power consumption. We measure the gap
+between manufacturer-rated thermal design power (TDP) and actual power demand
+during AI training. Our analysis reveals that even computationally intensive
+workloads operate at only 76% of the 10.2 kW TDP rating. Our
+architecture-specific model, calibrated to floating-point operations, predicts
+energy consumption with 11.4% mean absolute percentage error, significantly
+outperforming TDP-based approaches (27-37% error). We identified distinct power
+signatures between transformer and CNN architectures, with transformers showing
+characteristic fluctuations that may impact grid stability.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.14513v1' target='_blank'>GAMORA: A Gesture Articulated Meta Operative Robotic Arm for Hazardous
+  Material Handling in Containment-Level Environments</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Farha Abdul Wasay, Mohammed Abdul Rahman, Hania Ghouse</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-17 13:40:16</h6>
+<p class='card-text'>The convergence of robotics and virtual reality (VR) has enabled safer and
+more efficient workflows in high-risk laboratory settings, particularly
+virology labs. As biohazard complexity increases, minimizing direct human
+exposure while maintaining precision becomes essential. We propose GAMORA
+(Gesture Articulated Meta Operative Robotic Arm), a novel VR-guided robotic
+system that enables remote execution of hazardous tasks using natural hand
+gestures. Unlike existing scripted automation or traditional teleoperation,
+GAMORA integrates the Oculus Quest 2, NVIDIA Jetson Nano, and Robot Operating
+System (ROS) to provide real-time immersive control, digital twin simulation,
+and inverse kinematics-based articulation. The system supports VR-based
+training and simulation while executing precision tasks in physical
+environments via a 3D-printed robotic arm. Inverse kinematics ensure accurate
+manipulation for delicate operations such as specimen handling and pipetting.
+The pipeline includes Unity-based 3D environment construction, real-time motion
+planning, and hardware-in-the-loop testing. GAMORA achieved a mean positional
+discrepancy of 2.2 mm (improved from 4 mm), pipetting accuracy within 0.2 mL,
+and repeatability of 1.2 mm across 50 trials. Integrated object detection via
+YOLOv8 enhances spatial awareness, while energy-efficient operation (50%
+reduced power output) ensures sustainable deployment. The system's
+digital-physical feedback loop enables safe, precise, and repeatable automation
+of high-risk lab tasks. GAMORA offers a scalable, immersive solution for
+robotic control and biosafety in biomedical research environments.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.14507v1' target='_blank'>Can Pretrained Vision-Language Embeddings Alone Guide Robot Navigation?</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Nitesh Subedi, Adam Haroon, Shreyan Ganguly, Samuel T. K. Tetteh, Prajwal Koirala, Cody Fleming, Soumik Sarkar</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-17 13:31:05</h6>
+<p class='card-text'>Foundation models have revolutionized robotics by providing rich semantic
+representations without task-specific training. While many approaches integrate
+pretrained vision-language models (VLMs) with specialized navigation
+architectures, the fundamental question remains: can these pretrained
+embeddings alone successfully guide navigation without additional fine-tuning
+or specialized modules? We present a minimalist framework that decouples this
+question by training a behavior cloning policy directly on frozen
+vision-language embeddings from demonstrations collected by a privileged
+expert. Our approach achieves a 74% success rate in navigation to
+language-specified targets, compared to 100% for the state-aware expert, though
+requiring 3.2 times more steps on average. This performance gap reveals that
+pretrained embeddings effectively support basic language grounding but struggle
+with long-horizon planning and spatial reasoning. By providing this empirical
+baseline, we highlight both the capabilities and limitations of using
+foundation models as drop-in representations for embodied tasks, offering
+critical insights for robotics researchers facing practical design tradeoffs
+between system complexity and performance in resource-constrained scenarios.
+Our code is available at https://github.com/oadamharoon/text2nav</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.14487v1' target='_blank'>ros2 fanuc interface: Design and Evaluation of a Fanuc CRX Hardware
+  Interface in ROS2</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Paolo Franceschi, Marco Faroni, Stefano Baraldo, Anna Valente</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-17 13:08:32</h6>
+<p class='card-text'>This paper introduces the ROS2 control and the Hardware Interface (HW)
+integration for the Fanuc CRX- robot family. It explains basic implementation
+details and communication protocols, and its integration with the Moveit2
+motion planning library. We conducted a series of experiments to evaluate
+relevant performances in the robotics field. We tested the developed
+ros2_fanuc_interface for four relevant robotics cases: step response,
+trajectory tracking, collision avoidance integrated with Moveit2, and dynamic
+velocity scaling, respectively. Results show that, despite a non-negligible
+delay between command and feedback, the robot can track the defined path with
+negligible errors (if it complies with joint velocity limits), ensuring
+collision avoidance. Full code is open source and available at
+https://github.com/paolofrance/ros2_fanuc_interface.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.14453v1' target='_blank'>Active Digital Twins via Active Inference</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Matteo Torzoni, Domenico Maisto, Andrea Manzoni, Francesco Donnarumma, Giovanni Pezzulo, Alberto Corigliano</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-17 12:16:03</h6>
+<p class='card-text'>Digital twins are transforming engineering and applied sciences by enabling
+real-time monitoring, simulation, and predictive analysis of physical systems
+and processes. However, conventional digital twins rely primarily on passive
+data assimilation, which limits their adaptability in uncertain and dynamic
+environments. This paper introduces the active digital twin paradigm, based on
+active inference. Active inference is a neuroscience-inspired, Bayesian
+framework for probabilistic reasoning and predictive modeling that unifies
+inference, decision-making, and learning under a unique, free energy
+minimization objective. By formulating the evolution of the active digital twin
+as a partially observable Markov decision process, the active inference agent
+continuously refines its generative model through Bayesian updates and
+forecasts future states and observations. Decision-making emerges from an
+optimization process that balances pragmatic exploitation (maximizing
+goal-directed utility) and epistemic exploration or information gain (actively
+resolving uncertainty). Actions are dynamically planned to minimize expected
+free energy, which quantifies both the divergence between predicted and
+preferred future observations, and the epistemic value of expected information
+gain about hidden states. This approach enables a new level of autonomy and
+resilience in digital twins, offering superior spontaneous exploration
+capabilities. The proposed framework is assessed on the health monitoring and
+predictive maintenance of a railway bridge.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.14414v1' target='_blank'>GHAR: GeoPose-based Handheld Augmented Reality for Architectural
+  Positioning, Manipulation and Visual Exploration</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Sabahat Israr, Dawar Khan, Zhanglin Cheng, Mukhtaj Khan, Kiyoshi Kiyokawa</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-17 11:17:26</h6>
+<p class='card-text'>Handheld Augmented Reality (HAR) is revolutionizing the civil infrastructure
+application domain. The current trend in HAR relies on marker tracking
+technology. However, marker-based systems have several limitations, such as
+difficulty in use and installation, sensitivity to light, and marker design. In
+this paper, we propose a markerless HAR framework with GeoPose-based tracking.
+We use different gestures for manipulation and achieve 7 DOF (3 DOF each for
+translation and rotation, and 1 DOF for scaling). The proposed framework,
+called GHAR, is implemented for architectural building models. It augments
+virtual CAD models of buildings on the ground, enabling users to manipulate and
+visualize an architectural model before actual construction. The system offers
+a quick view of the building infrastructure, playing a vital role in
+requirement analysis and planning in construction technology. We evaluated the
+usability, manipulability, and comprehensibility of the proposed system using a
+standard user study with the System Usability Scale (SUS) and Handheld
+Augmented Reality User Study (HARUS). We compared our GeoPose-based markerless
+HAR framework with a marker-based HAR framework, finding significant
+improvement in the aforementioned three parameters with the markerless
+framework.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.14391v1' target='_blank'>HiLight: A Hierarchical Reinforcement Learning Framework with Global
+  Adversarial Guidance for Large-Scale Traffic Signal Control</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yaqiao Zhu, Hongkai Wen, Geyong Min, Man Luo</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-17 10:39:42</h6>
+<p class='card-text'>Efficient traffic signal control (TSC) is essential for mitigating urban
+congestion, yet existing reinforcement learning (RL) methods face challenges in
+scaling to large networks while maintaining global coordination. Centralized RL
+suffers from scalability issues, while decentralized approaches often lack
+unified objectives, resulting in limited network-level efficiency. In this
+paper, we propose HiLight, a hierarchical reinforcement learning framework with
+global adversarial guidance for large-scale TSC. HiLight consists of a
+high-level Meta-Policy, which partitions the traffic network into subregions
+and generates sub-goals using a Transformer-LSTM architecture, and a low-level
+Sub-Policy, which controls individual intersections with global awareness. To
+improve the alignment between global planning and local execution, we introduce
+an adversarial training mechanism, where the Meta-Policy generates challenging
+yet informative sub-goals, and the Sub-Policy learns to surpass these targets,
+leading to more effective coordination. We evaluate HiLight across both
+synthetic and real-world benchmarks, and additionally construct a large-scale
+Manhattan network with diverse traffic conditions, including peak transitions,
+adverse weather, and holiday surges. Experimental results show that HiLight
+exhibits significant advantages in large-scale scenarios and remains
+competitive across standard benchmarks of varying sizes.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.14382v1' target='_blank'>DepthSeg: Depth prompting in remote sensing semantic segmentation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Ning Zhou, Shanxiong Chen, Mingting Zhou, Haigang Sui, Lieyun Hu, Han Li, Li Hua, Qiming Zhou</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-17 10:27:59</h6>
+<p class='card-text'>Remote sensing semantic segmentation is crucial for extracting detailed land
+surface information, enabling applications such as environmental monitoring,
+land use planning, and resource assessment. In recent years, advancements in
+artificial intelligence have spurred the development of automatic remote
+sensing semantic segmentation methods. However, the existing semantic
+segmentation methods focus on distinguishing spectral characteristics of
+different objects while ignoring the differences in the elevation of the
+different targets. This results in land cover misclassification in complex
+scenarios involving shadow occlusion and spectral confusion. In this paper, we
+introduce a depth prompting two-dimensional (2D) remote sensing semantic
+segmentation framework (DepthSeg). It automatically models depth/height
+information from 2D remote sensing images and integrates it into the semantic
+segmentation framework to mitigate the effects of spectral confusion and shadow
+occlusion. During the feature extraction phase of DepthSeg, we introduce a
+lightweight adapter to enable cost-effective fine-tuning of the large-parameter
+vision transformer encoder pre-trained by natural images. In the depth
+prompting phase, we propose a depth prompter to model depth/height features
+explicitly. In the semantic prediction phase, we introduce a semantic
+classification decoder that couples the depth prompts with high-dimensional
+land-cover features, enabling accurate extraction of land-cover types.
+Experiments on the LiuZhou dataset validate the advantages of the DepthSeg
+framework in land cover mapping tasks. Detailed ablation studies further
+highlight the significance of the depth prompts in remote sensing semantic
+segmentation.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.14373v1' target='_blank'>Discrete JEPA: Learning Discrete Token Representations without
+  Reconstruction</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Junyeob Baek, Hosung Lee, Christopher Hoang, Mengye Ren, Sungjin Ahn</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-17 10:15:17</h6>
+<p class='card-text'>The cornerstone of cognitive intelligence lies in extracting hidden patterns
+from observations and leveraging these principles to systematically predict
+future outcomes. However, current image tokenization methods demonstrate
+significant limitations in tasks requiring symbolic abstraction and logical
+reasoning capabilities essential for systematic inference. To address this
+challenge, we propose Discrete-JEPA, extending the latent predictive coding
+framework with semantic tokenization and novel complementary objectives to
+create robust tokenization for symbolic reasoning tasks. Discrete-JEPA
+dramatically outperforms baselines on visual symbolic prediction tasks, while
+striking visual evidence reveals the spontaneous emergence of deliberate
+systematic patterns within the learned semantic token space. Though an initial
+model, our approach promises a significant impact for advancing Symbolic world
+modeling and planning capabilities in artificial intelligence systems.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.14287v1' target='_blank'>Steering Robots with Inference-Time Interactions</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yanwei Wang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-17 07:59:07</h6>
+<p class='card-text'>Imitation learning has driven the development of generalist policies capable
+of autonomously solving multiple tasks. However, when a pretrained policy makes
+errors during deployment, there are limited mechanisms for users to correct its
+behavior. While collecting additional data for finetuning can address such
+issues, doing so for each downstream use case is inefficient at deployment. My
+research proposes an alternative: keeping pretrained policies frozen as a fixed
+skill repertoire while allowing user interactions to guide behavior generation
+toward user preferences at inference time. By making pretrained policies
+steerable, users can help correct policy errors when the model struggles to
+generalize-without needing to finetune the policy. Specifically, I propose (1)
+inference-time steering, which leverages user interactions to switch between
+discrete skills, and (2) task and motion imitation, which enables user
+interactions to edit continuous motions while satisfying task constraints
+defined by discrete symbolic plans. These frameworks correct misaligned policy
+predictions without requiring additional training, maximizing the utility of
+pretrained models while achieving inference-time user objectives.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.14278v1' target='_blank'>Whole-Body Control Framework for Humanoid Robots with Heavy Limbs: A
+  Model-Based Approach</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Tianlin Zhang, Linzhu Yue, Hongbo Zhang, Lingwei Zhang, Xuanqi Zeng, Zhitao Song, Yun-Hui Liu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-17 07:45:09</h6>
+<p class='card-text'>Humanoid robots often face significant balance issues due to the motion of
+their heavy limbs. These challenges are particularly pronounced when attempting
+dynamic motion or operating in environments with irregular terrain. To address
+this challenge, this manuscript proposes a whole-body control framework for
+humanoid robots with heavy limbs, using a model-based approach that combines a
+kino-dynamics planner and a hierarchical optimization problem. The
+kino-dynamics planner is designed as a model predictive control (MPC) scheme to
+account for the impact of heavy limbs on mass and inertia distribution. By
+simplifying the robot's system dynamics and constraints, the planner enables
+real-time planning of motion and contact forces. The hierarchical optimization
+problem is formulated using Hierarchical Quadratic Programming (HQP) to
+minimize limb control errors and ensure compliance with the policy generated by
+the kino-dynamics planner. Experimental validation of the proposed framework
+demonstrates its effectiveness. The humanoid robot with heavy limbs controlled
+by the proposed framework can achieve dynamic walking speeds of up to 1.2~m/s,
+respond to external disturbances of up to 60~N, and maintain balance on
+challenging terrains such as uneven surfaces, and outdoor environments.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.14178v1' target='_blank'>TACS-Graphs: Traversability-Aware Consistent Scene Graphs for Ground
+  Robot Indoor Localization and Mapping</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jeewon Kim, Minho Oh, Hyun Myung</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-17 04:39:51</h6>
+<p class='card-text'>Scene graphs have emerged as a powerful tool for robots, providing a
+structured representation of spatial and semantic relationships for advanced
+task planning. Despite their potential, conventional 3D indoor scene graphs
+face critical limitations, particularly under- and over-segmentation of room
+layers in structurally complex environments. Under-segmentation misclassifies
+non-traversable areas as part of a room, often in open spaces, while
+over-segmentation fragments a single room into overlapping segments in complex
+environments. These issues stem from naive voxel-based map representations that
+rely solely on geometric proximity, disregarding the structural constraints of
+traversable spaces and resulting in inconsistent room layers within scene
+graphs. To the best of our knowledge, this work is the first to tackle
+segmentation inconsistency as a challenge and address it with
+Traversability-Aware Consistent Scene Graphs (TACS-Graphs), a novel framework
+that integrates ground robot traversability with room segmentation. By
+leveraging traversability as a key factor in defining room boundaries, the
+proposed method achieves a more semantically meaningful and topologically
+coherent segmentation, effectively mitigating the inaccuracies of voxel-based
+scene graph approaches in complex environments. Furthermore, the enhanced
+segmentation consistency improves loop closure detection efficiency in the
+proposed Consistent Scene Graph-leveraging Loop Closure Detection (CoSG-LCD)
+leading to higher pose estimation accuracy. Experimental results confirm that
+the proposed approach outperforms state-of-the-art methods in terms of scene
+graph consistency and pose graph optimization performance.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.14159v1' target='_blank'>StorySage: Conversational Autobiography Writing Powered by a Multi-Agent
+  Framework</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Shayan Talaei, Meijin Li, Kanu Grover, James Kent Hippler, Diyi Yang, Amin Saberi</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-17 03:44:47</h6>
+<p class='card-text'>Every individual carries a unique and personal life story shaped by their
+memories and experiences. However, these memories are often scattered and
+difficult to organize into a coherent narrative, a challenge that defines the
+task of autobiography writing. Existing conversational writing assistants tend
+to rely on generic user interactions and pre-defined guidelines, making it
+difficult for these systems to capture personal memories and develop a complete
+biography over time. We introduce StorySage, a user-driven software system
+designed to meet the needs of a diverse group of users that supports a flexible
+conversation and a structured approach to autobiography writing. Powered by a
+multi-agent framework composed of an Interviewer, Session Scribe, Planner,
+Section Writer, and Session Coordinator, our system iteratively collects user
+memories, updates their autobiography, and plans for future conversations. In
+experimental simulations, StorySage demonstrates its ability to navigate
+multiple sessions and capture user memories across many conversations. User
+studies (N=28) highlight how StorySage maintains improved conversational flow,
+narrative completeness, and higher user satisfaction when compared to a
+baseline. In summary, StorySage contributes both a novel architecture for
+autobiography writing and insights into how multi-agent systems can enhance
+human-AI creative partnerships.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.14130v1' target='_blank'>KDMOS:Knowledge Distillation for Motion Segmentation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Chunyu Cao, Jintao Cheng, Zeyu Chen, Linfan Zhan, Rui Fan, Zhijian He, Xiaoyu Tang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-17 02:47:49</h6>
+<p class='card-text'>Motion Object Segmentation (MOS) is crucial for autonomous driving, as it
+enhances localization, path planning, map construction, scene flow estimation,
+and future state prediction. While existing methods achieve strong performance,
+balancing accuracy and real-time inference remains a challenge. To address
+this, we propose a logits-based knowledge distillation framework for MOS,
+aiming to improve accuracy while maintaining real-time efficiency.
+Specifically, we adopt a Bird's Eye View (BEV) projection-based model as the
+student and a non-projection model as the teacher. To handle the severe
+imbalance between moving and non-moving classes, we decouple them and apply
+tailored distillation strategies, allowing the teacher model to better learn
+key motion-related features. This approach significantly reduces false
+positives and false negatives. Additionally, we introduce dynamic upsampling,
+optimize the network architecture, and achieve a 7.69% reduction in parameter
+count, mitigating overfitting. Our method achieves a notable IoU of 78.8% on
+the hidden test set of the SemanticKITTI-MOS dataset and delivers competitive
+results on the Apollo dataset. The KDMOS implementation is available at
+https://github.com/SCNU-RISLAB/KDMOS.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.14100v1' target='_blank'>A Hierarchical Test Platform for Vision Language Model (VLM)-Integrated
+  Real-World Autonomous Driving</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yupeng Zhou, Can Cui, Juntong Peng, Zichong Yang, Juanwu Lu, Jitesh H Panchal, Bin Yao, Ziran Wang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-17 01:32:28</h6>
+<p class='card-text'>Vision-Language Models (VLMs) have demonstrated notable promise in autonomous
+driving by offering the potential for multimodal reasoning through pretraining
+on extensive image-text pairs. However, adapting these models from broad
+web-scale data to the safety-critical context of driving presents a significant
+challenge, commonly referred to as domain shift. Existing simulation-based and
+dataset-driven evaluation methods, although valuable, often fail to capture the
+full complexity of real-world scenarios and cannot easily accommodate
+repeatable closed-loop testing with flexible scenario manipulation. In this
+paper, we introduce a hierarchical real-world test platform specifically
+designed to evaluate VLM-integrated autonomous driving systems. Our approach
+includes a modular, low-latency on-vehicle middleware that allows seamless
+incorporation of various VLMs, a clearly separated perception-planning-control
+architecture that can accommodate both VLM-based and conventional modules, and
+a configurable suite of real-world testing scenarios on a closed track that
+facilitates controlled yet authentic evaluations. We demonstrate the
+effectiveness of the proposed platform`s testing and evaluation ability with a
+case study involving a VLM-enabled autonomous vehicle, highlighting how our
+test framework supports robust experimentation under diverse conditions.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.14075v1' target='_blank'>Comparing a Few Qubit Systems for Superconducting Hardware Compatibility
+  and Circuit Design Sensitivity in Qiskit</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Hillol Biswas</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-17 00:18:46</h6>
+<p class='card-text'>In the current quantum computing ecosystem, building complex and integrated
+circuits for addressing real-world problems often involves using basic
+historical components like Bell states to take advantage of superposition,
+entanglement, and coherence. The availability of the simulator and the IBM
+quantum computing endeavor through Qiskit further broadens the scope of
+application based on domain use. In the NISQ era, however, error mitigation is
+a criterion that is applied when comparing a QPU run result with the simulator.
+As the real-world scope of application for quantum computing is being
+broadened, using simulators as a baseline offers confidence; however, concerns
+about computation resources and availability arise in the high-speed
+computational regime. As complex problems entail using a larger number of
+superconducting physical qubits, what should be the basis of framing a quantum
+circuit for building quantum algorithms in a real-world scenario, given
+hardware compatibility that should ideally provide confidence baselining with
+the simulator outcome? This work implements three base circuits for different
+qubit systems in the simulator and corresponding 127-qubit IBM Sherbrooke
+superconducting quantum processing units (QPU) to explore the tradeoff between
+generalizability, sensitivity of circuit design to parameters, noise
+resilience, resource planning, and efficient qubit usage insights.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.14070v1' target='_blank'>Into the Unknown: Applying Inductive Spatial-Semantic Location
+  Embeddings for Predicting Individuals' Mobility Beyond Visited Places</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Xinglei Wang, Tao Cheng, Stephen Law, Zichao Zeng, Ilya Ilyankou, Junyuan Liu, Lu Yin, Weiming Huang, Natchapon Jongwiriyanurak</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-17 00:00:09</h6>
+<p class='card-text'>Predicting individuals' next locations is a core task in human mobility
+modelling, with wide-ranging implications for urban planning, transportation,
+public policy and personalised mobility services. Traditional approaches
+largely depend on location embeddings learned from historical mobility
+patterns, limiting their ability to encode explicit spatial information,
+integrate rich urban semantic context, and accommodate previously unseen
+locations. To address these challenges, we explore the application of CaLLiPer
+-- a multimodal representation learning framework that fuses spatial
+coordinates and semantic features of points of interest through contrastive
+learning -- for location embedding in individual mobility prediction.
+CaLLiPer's embeddings are spatially explicit, semantically enriched, and
+inductive by design, enabling robust prediction performance even in scenarios
+involving emerging locations. Through extensive experiments on four public
+mobility datasets under both conventional and inductive settings, we
+demonstrate that CaLLiPer consistently outperforms strong baselines,
+particularly excelling in inductive scenarios. Our findings highlight the
+potential of multimodal, inductive location embeddings to advance the
+capabilities of human mobility prediction systems. We also release the code and
+data (https://github.com/xlwang233/Into-the-Unknown) to foster reproducibility
+and future research.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.14066v1' target='_blank'>A Point Cloud Completion Approach for the Grasping of Partially Occluded
+  Objects and Its Applications in Robotic Strawberry Harvesting</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Ali Abouzeid, Malak Mansour, Chengsong Hu, Dezhen Song</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-16 23:49:15</h6>
+<p class='card-text'>In robotic fruit picking applications, managing object occlusion in
+unstructured settings poses a substantial challenge for designing grasping
+algorithms. Using strawberry harvesting as a case study, we present an
+end-to-end framework for effective object detection, segmentation, and grasp
+planning to tackle this issue caused by partially occluded objects. Our
+strategy begins with point cloud denoising and segmentation to accurately
+locate fruits. To compensate for incomplete scans due to occlusion, we apply a
+point cloud completion model to create a dense 3D reconstruction of the
+strawberries. The target selection focuses on ripe strawberries while
+categorizing others as obstacles, followed by converting the refined point
+cloud into an occupancy map for collision-aware motion planning. Our
+experimental results demonstrate high shape reconstruction accuracy, with the
+lowest Chamfer Distance compared to state-of-the-art methods with 1.10 mm, and
+significantly improved grasp success rates of 79.17%, yielding an overall
+success-to-attempt ratio of 89.58\% in real-world strawberry harvesting.
+Additionally, our method reduces the obstacle hit rate from 43.33% to 13.95%,
+highlighting its effectiveness in improving both grasp quality and safety
+compared to prior approaches. This pipeline substantially improves autonomous
+strawberry harvesting, advancing more efficient and reliable robotic fruit
+picking systems.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.14039v1' target='_blank'>Quadrotor Morpho-Transition: Learning vs Model-Based Control Strategies</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Ioannis Mandralis, Richard M. Murray, Morteza Gharib</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-16 22:23:28</h6>
+<p class='card-text'>Quadrotor Morpho-Transition, or the act of transitioning from air to ground
+through mid-air transformation, involves complex aerodynamic interactions and a
+need to operate near actuator saturation, complicating controller design. In
+recent work, morpho-transition has been studied from a model-based control
+perspective, but these approaches remain limited due to unmodeled dynamics and
+the requirement for planning through contacts. Here, we train an end-to-end
+Reinforcement Learning (RL) controller to learn a morpho-transition policy and
+demonstrate successful transfer to hardware. We find that the RL control policy
+achieves agile landing, but only transfers to hardware if motor dynamics and
+observation delays are taken into account. On the other hand, a baseline MPC
+controller transfers out-of-the-box without knowledge of the actuator dynamics
+and delays, at the cost of reduced recovery from disturbances in the event of
+unknown actuator failures. Our work opens the way for more robust control of
+agile in-flight quadrotor maneuvers that require mid-air transformation.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.13993v1' target='_blank'>Mapping Farmed Landscapes from Remote Sensing</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Michelangelo Conserva, Alex Wilson, Charlotte Stanton, Vishal Batchu, Varun Gulshan</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-16 20:50:05</h6>
+<p class='card-text'>Effective management of agricultural landscapes is critical for meeting
+global biodiversity targets, but efforts are hampered by the absence of
+detailed, large-scale ecological maps. To address this, we introduce
+Farmscapes, the first large-scale (covering most of England), high-resolution
+(25cm) map of rural landscape features, including ecologically vital elements
+like hedgerows, woodlands, and stone walls. This map was generated using a deep
+learning segmentation model trained on a novel, dataset of 942 manually
+annotated tiles derived from aerial imagery. Our model accurately identifies
+key habitats, achieving high f1-scores for woodland (96\%) and farmed land
+(95\%), and demonstrates strong capability in segmenting linear features, with
+an F1-score of 72\% for hedgerows. By releasing the England-wide map on Google
+Earth Engine, we provide a powerful, open-access tool for ecologists and
+policymakers. This work enables data-driven planning for habitat restoration,
+supports the monitoring of initiatives like the EU Biodiversity Strategy, and
+lays the foundation for advanced analysis of landscape connectivity.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.13853v1' target='_blank'>Two Higgs Doublet Solutions to the Strong CP Problem</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Quentin Bonnefoy, Lawrence J. Hall, Claudio Andrea Manzari, Bea Noether</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-16 18:00:00</h6>
+<p class='card-text'>We solve the strong CP problem in a broad class of two Higgs doublet theories
+that will be probed at the Large Hadron Collider and at future colliders.These
+theories feature CP and Abelian flavor symmetries, both broken softly in the
+scalar potential, that yield realistic quark masses and mixings. The flavor
+symmetry charges are chosen so that $\bar{\theta}=0$ at tree level for all
+values of the Yukawa and quartic couplings of the theory. We prove that in all
+such theories the 1-loop contribution to $\bar{\theta}$ also vanishes,
+independently of the mass scale of the second Higgs doublet. We study two
+illustrative models with flavor group $\mathbb{Z}_3$. The direct contributions
+to the neutron electric dipole moment are negligible in both models. While the
+2-loop contribution to $\bar{\theta}$ is less than $10^{-12}$ in one model, it
+can be as large as $10^{-10}$ in the other, yielding the prospect of a signal
+in planned experiments. Even with Abelian flavor symmetries, CP violation in
+neutral kaon mixing is generally expected to yield naturalness bounds on the
+masses of additional Higgs doublets of order 20 TeV. We prove that for all
+models in our class, where the flavor symmetry forces $\bar{\theta}$ to vanish
+at tree-level, the flavor-changing neutral currents are CP-conserving, yielding
+model-dependent bounds from neutral meson mixing near 1 TeV. Mixing of the two
+CP-even scalars gives corrections to the couplings of the 125 GeV Higgs state
+to $\bar{t}t, \bar{b}b, \bar{c}c, \bar{\tau}\tau$ and $\bar{\mu} \mu$, giving
+possible signals at high luminosity runs at LHC and at future colliders.
+Furthermore, distinctive correlations between corrections in the various
+channels can probe the underlying flavor symmetry.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js'></script>
+</body>
+</html>
