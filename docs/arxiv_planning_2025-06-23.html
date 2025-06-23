@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>planning - 2025-06-23</title>
+<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap' rel='stylesheet'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css'>
+<style>
+body {
+font-family: 'Roboto', sans-serif;
+background-color: #f5f7fa;
+padding: 20px;
+}
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.card-title {
+    font-weight: 700;
+}
+.card:hover {
+    transform: scale(1.02);
+    transition: 0.3s ease-in-out;
+}
+</style>
+</head>
+<body>
+<div class='container'>
+<h1 class='text-center my-4'><i class='fas fa-book'></i>planning - 2025-06-23</h1>
+<div class='row'>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.17221v1' target='_blank'>VLN-R1: Vision-Language Navigation via Reinforcement Fine-Tuning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Zhangyang Qi, Zhixiong Zhang, Yizhou Yu, Jiaqi Wang, Hengshuang Zhao</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-20 17:59:59</h6>
+<p class='card-text'>Vision-Language Navigation (VLN) is a core challenge in embodied AI,
+requiring agents to navigate real-world environments using natural language
+instructions. Current language model-based navigation systems operate on
+discrete topological graphs, limiting path planning to predefined node
+connections. We propose VLN-R1, an end-to-end framework that leverages Large
+Vision-Language Models (LVLM) to directly translate egocentric video streams
+into continuous navigation actions, adopting GRPO-based training inspired by
+DeepSeek-R1. To enable effective training, we first construct the VLN-Ego
+dataset using a 3D simulator, Habitat, and propose Long-Short Memory Sampling
+to balance historical and current observations. While large language models can
+supervise complete textual instructions, they lack fine-grained action-level
+control. Our framework employs a two-stage training approach: a) Supervised
+fine-tuning (SFT) to align the model's action sequence text predictions with
+expert demonstrations, followed by b) Reinforcement fine-tuning (RFT) enhanced
+with a Time-Decayed Reward (TDR) mechanism that strategically weights
+multi-step future actions. Experimental results show VLN-R1 achieves strong
+performance on VLN-CE benchmark. VLN-R1 proves LVLMs can drive embodied
+navigation and enhance task-specific reasoning through data-efficient,
+reward-driven post-training.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.17184v1' target='_blank'>Judo: A User-Friendly Open-Source Package for Sampling-Based Model
+  Predictive Control</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Albert H. Li, Brandon Hung, Aaron D. Ames, Jiuguang Wang, Simon Le Cleac'h, Preston Culbertson</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-20 17:39:01</h6>
+<p class='card-text'>Recent advancements in parallel simulation and successful robotic
+applications are spurring a resurgence in sampling-based model predictive
+control. To build on this progress, however, the robotics community needs
+common tooling for prototyping, evaluating, and deploying sampling-based
+controllers. We introduce Judo, a software package designed to address this
+need. To facilitate rapid prototyping and evaluation, Judo provides robust
+implementations of common sampling-based MPC algorithms and standardized
+benchmark tasks. It further emphasizes usability with simple but extensible
+interfaces for controller and task definitions, asynchronous execution for
+straightforward simulation-to-hardware transfer, and a highly customizable
+interactive GUI for tuning controllers interactively. While written in Python,
+the software leverages MuJoCo as its physics backend to achieve real-time
+performance, which we validate across both consumer and server-grade hardware.
+Code at https://github.com/bdaiinstitute/judo.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.16931v1' target='_blank'>Multimodal Fused Learning for Solving the Generalized Traveling Salesman
+  Problem in Robotic Task Planning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jiaqi Chen, Mingfeng Fan, Xuefeng Zhang, Jingsong Liang, Yuhong Cao, Guohua Wu, Guillaume Adrien Sartoretti</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-20 11:51:52</h6>
+<p class='card-text'>Effective and efficient task planning is essential for mobile robots,
+especially in applications like warehouse retrieval and environmental
+monitoring. These tasks often involve selecting one location from each of
+several target clusters, forming a Generalized Traveling Salesman Problem
+(GTSP) that remains challenging to solve both accurately and efficiently. To
+address this, we propose a Multimodal Fused Learning (MMFL) framework that
+leverages both graph and image-based representations to capture complementary
+aspects of the problem, and learns a policy capable of generating high-quality
+task planning schemes in real time. Specifically, we first introduce a
+coordinate-based image builder that transforms GTSP instances into spatially
+informative representations. We then design an adaptive resolution scaling
+strategy to enhance adaptability across different problem scales, and develop a
+multimodal fusion module with dedicated bottlenecks that enables effective
+integration of geometric and spatial features. Extensive experiments show that
+our MMFL approach significantly outperforms state-of-the-art methods across
+various GTSP instances while maintaining the computational efficiency required
+for real-time robotic applications. Physical robot tests further validate its
+practical effectiveness in real-world scenarios.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.16764v1' target='_blank'>Reinforcement learning for hybrid charging stations planning and
+  operation considering fixed and mobile chargers</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yanchen Zhu, Honghui Zou, Chufan Liu, Yuyu Luo, Yuankai Wu, Yuxuan Liang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-20 05:51:02</h6>
+<p class='card-text'>The success of vehicle electrification, which brings significant societal and
+environmental benefits, is contingent upon the availability of efficient and
+adaptable charging infrastructure. Traditional fixed-location charging stations
+often face issues like underutilization or congestion due to the dynamic nature
+of charging demand. Mobile chargers have emerged as a flexible solution,
+capable of relocating to align with these demand fluctuations. This paper
+addresses the optimal planning and operation of hybrid charging
+infrastructures, integrating both fixed and mobile chargers within urban road
+networks. We introduce the Hybrid Charging Station Planning and Operation
+(HCSPO) problem, which simultaneously optimizes the location and configuration
+of fixed charging stations and schedules mobile chargers for dynamic
+operations. Our approach incorporates a charging demand prediction model
+grounded in Model Predictive Control (MPC) to enhance decision-making. To solve
+the HCSPO problem, we propose a deep reinforcement learning method, augmented
+with heuristic scheduling techniques, to effectively bridge the planning of
+fixed chargers with the real-time operation of mobile chargers. Extensive case
+studies using real-world urban scenarios demonstrate that our method
+significantly improves the availability of charging infrastructure and reduces
+user inconvenience compared to existing solutions and baselines.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.16762v1' target='_blank'>Exploring the effect of spatial scales in studying urban mobility
+  pattern</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Hoai Nguyen Huynh</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-20 05:39:39</h6>
+<p class='card-text'>Urban mobility plays a crucial role in the functioning of cities, influencing
+economic activity, accessibility, and quality of life. However, the
+effectiveness of analytical models in understanding urban mobility patterns can
+be significantly affected by the spatial scales employed in the analysis. This
+paper explores the impact of spatial scales on the performance of the gravity
+model in explaining urban mobility patterns using public transport flow data in
+Singapore. The model is evaluated across multiple spatial scales of origin and
+destination locations, ranging from individual bus stops and train stations to
+broader regional aggregations. Results indicate the existence of an optimal
+intermediate spatial scale at which the gravity model performs best. At the
+finest scale, where individual transport nodes are considered, the model
+exhibits poor performance due to noisy and highly variable travel patterns.
+Conversely, at larger scales, model performance also suffers as
+over-aggregation of transport nodes results in excessive generalisation which
+obscures the underlying mobility dynamics. Furthermore, distance-based spatial
+aggregation of transport nodes proves to outperform administrative
+boundary-based aggregation, suggesting that actual urban organisation and
+movement patterns may not necessarily align with imposed administrative
+divisions. These insights highlight the importance of selecting appropriate
+spatial scales in mobility analysis and urban modelling in general, offering
+valuable guidance for urban and transport planning efforts aimed at enhancing
+mobility in complex urban environments.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.16755v1' target='_blank'>Language-Informed Synthesis of Rational Agent Models for Grounded
+  Theory-of-Mind Reasoning On-The-Fly</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Lance Ying, Ryan Truong, Katherine M. Collins, Cedegao E. Zhang, Megan Wei, Tyler Brooke-Wilson, Tan Zhi-Xuan, Lionel Wong, Joshua B. Tenenbaum</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-20 05:21:42</h6>
+<p class='card-text'>Drawing real world social inferences usually requires taking into account
+information from multiple modalities. Language is a particularly powerful
+source of information in social settings, especially in novel situations where
+language can provide both abstract information about the environment dynamics
+and concrete specifics about an agent that cannot be easily visually observed.
+In this paper, we propose Language-Informed Rational Agent Synthesis (LIRAS), a
+framework for drawing context-specific social inferences that integrate
+linguistic and visual inputs. LIRAS frames multimodal social reasoning as a
+process of constructing structured but situation-specific agent and environment
+representations - leveraging multimodal language models to parse language and
+visual inputs into unified symbolic representations, over which a Bayesian
+inverse planning engine can be run to produce granular probabilistic judgments.
+On a range of existing and new social reasoning tasks derived from cognitive
+science experiments, we find that our model (instantiated with a comparatively
+lightweight VLM) outperforms ablations and state-of-the-art models in capturing
+human judgments across all domains.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.16748v1' target='_blank'>A Scalable Post-Processing Pipeline for Large-Scale Free-Space
+  Multi-Agent Path Planning with PiBT</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Arjo Chakravarty, Michael X. Grey, M. A. Viraj J. Muthugala, Mohan Rajesh Elara</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-20 04:50:35</h6>
+<p class='card-text'>Free-space multi-agent path planning remains challenging at large scales.
+Most existing methods either offer optimality guarantees but do not scale
+beyond a few dozen agents, or rely on grid-world assumptions that do not
+generalize well to continuous space. In this work, we propose a hybrid,
+rule-based planning framework that combines Priority Inheritance with
+Backtracking (PiBT) with a novel safety-aware path smoothing method. Our
+approach extends PiBT to 8-connected grids and selectively applies
+string-pulling based smoothing while preserving collision safety through local
+interaction awareness and a fallback collision resolution step based on Safe
+Interval Path Planning (SIPP). This design allows us to reduce overall path
+lengths while maintaining real-time performance. We demonstrate that our method
+can scale to over 500 agents in large free-space environments, outperforming
+existing any-angle and optimal methods in terms of runtime, while producing
+near-optimal trajectories in sparse domains. Our results suggest this framework
+is a promising building block for scalable, real-time multi-agent navigation in
+robotics systems operating beyond grid constraints.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.16727v1' target='_blank'>A Self-Organized Criticality Model of Extreme Events and Cascading
+  Disasters of Hub and Spoke Air Traffic Networks</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Mary Lai O. Salvaña, Harold Jay M. Bolingot, Gregory L. Tangonan</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-20 03:50:49</h6>
+<p class='card-text'>Critical infrastructure networks--including transportation, power grids, and
+communication systems--exhibit complex interdependencies that can lead to
+cascading failures with catastrophic consequences. These disasters often
+originate from failures at critical points in the network, where single-node
+disruptions can propagate rapidly due to structural dependencies and
+high-impact linkages. Such vulnerabilities are exacerbated in systems that have
+been highly optimized for efficiency or have self-organized into fragile
+configurations over time. The U.S. air transportation system, built on a
+hub-and-spoke model, exemplifies this type of critical infrastructure. Its
+reliance on a small number of high-throughput hubs means that even localized
+disruptions--especially those triggered by increasingly frequent and extreme
+weather events--can initiate cascades with nationwide impact. We introduce a
+novel application of Self-Organized Criticality (SOC) theory to model and
+analyze cascading failures in such systems. Through a detailed case study of
+U.S. airline operations, we show how the SOC model captures the power-law
+distribution of disruptions and the long-tail risk of systemic failures,
+reflecting the interplay between structural fragility and climate shocks. Our
+approach enables quantitative assessment of network vulnerability,
+identification of critical nodes, and evaluation of proactive strategies for
+disaster risk reduction. The results demonstrate that the SOC model replicates
+the observed statistical patterns--frequent small events and rare, severe
+failures--offering a powerful systems-level framework for infrastructure
+resilience planning and emergency response.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.16720v1' target='_blank'>DRARL: Disengagement-Reason-Augmented Reinforcement Learning for
+  Efficient Improvement of Autonomous Driving Policy</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Weitao Zhou, Bo Zhang, Zhong Cao, Xiang Li, Qian Cheng, Chunyang Liu, Yaqin Zhang, Diange Yang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-20 03:32:01</h6>
+<p class='card-text'>With the increasing presence of automated vehicles on open roads under driver
+supervision, disengagement cases are becoming more prevalent. While some
+data-driven planning systems attempt to directly utilize these disengagement
+cases for policy improvement, the inherent scarcity of disengagement data
+(often occurring as a single instances) restricts training effectiveness.
+Furthermore, some disengagement data should be excluded since the disengagement
+may not always come from the failure of driving policies, e.g. the driver may
+casually intervene for a while. To this end, this work proposes
+disengagement-reason-augmented reinforcement learning (DRARL), which enhances
+driving policy improvement process according to the reason of disengagement
+cases. Specifically, the reason of disengagement is identified by a
+out-of-distribution (OOD) state estimation model. When the reason doesn't
+exist, the case will be identified as a casual disengagement case, which
+doesn't require additional policy adjustment. Otherwise, the policy can be
+updated under a reason-augmented imagination environment, improving the policy
+performance of disengagement cases with similar reasons. The method is
+evaluated using real-world disengagement cases collected by autonomous driving
+robotaxi. Experimental results demonstrate that the method accurately
+identifies policy-related disengagement reasons, allowing the agent to handle
+both original and semantically similar cases through reason-augmented training.
+Furthermore, the approach prevents the agent from becoming overly conservative
+after policy adjustments. Overall, this work provides an efficient way to
+improve driving policy performance with disengagement cases.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.16710v1' target='_blank'>Experimental Setup and Software Pipeline to Evaluate Optimization based
+  Autonomous Multi-Robot Search Algorithms</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Aditya Bhatt, Mary Katherine Corra, Franklin Merlo, Prajit KrisshnaKumar, Souma Chowdhury</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-20 03:06:43</h6>
+<p class='card-text'>Signal source localization has been a problem of interest in the multi-robot
+systems domain given its applications in search \& rescue and hazard
+localization in various industrial and outdoor settings. A variety of
+multi-robot search algorithms exist that usually formulate and solve the
+associated autonomous motion planning problem as a heuristic model-free or
+belief model-based optimization process. Most of these algorithms however
+remains tested only in simulation, thereby losing the opportunity to generate
+knowledge about how such algorithms would compare/contrast in a real physical
+setting in terms of search performance and real-time computing performance. To
+address this gap, this paper presents a new lab-scale physical setup and
+associated open-source software pipeline to evaluate and benchmark multi-robot
+search algorithms. The presented physical setup innovatively uses an acoustic
+source (that is safe and inexpensive) and small ground robots (e-pucks)
+operating in a standard motion-capture environment. This setup can be easily
+recreated and used by most robotics researchers. The acoustic source also
+presents interesting uncertainty in terms of its noise-to-signal ratio, which
+is useful to assess sim-to-real gaps. The overall software pipeline is designed
+to readily interface with any multi-robot search algorithm with minimal effort
+and is executable in parallel asynchronous form. This pipeline includes a
+framework for distributed implementation of multi-robot or swarm search
+algorithms, integrated with a ROS (Robotics Operating System)-based software
+stack for motion capture supported localization. The utility of this novel
+setup is demonstrated by using it to evaluate two state-of-the-art multi-robot
+search algorithms, based on swarm optimization and batch-Bayesian Optimization
+(called Bayes-Swarm), as well as a random walk baseline.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.16703v1' target='_blank'>VLM-Empowered Multi-Mode System for Efficient and Safe Planetary
+  Navigation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Sinuo Cheng, Ruyi Zhou, Wenhao Feng, Huaiguang Yang, Haibo Gao, Zongquan Deng, Liang Ding</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-20 02:47:55</h6>
+<p class='card-text'>The increasingly complex and diverse planetary exploration environment
+requires more adaptable and flexible rover navigation strategy. In this study,
+we propose a VLM-empowered multi-mode system to achieve efficient while safe
+autonomous navigation for planetary rovers. Vision-Language Model (VLM) is used
+to parse scene information by image inputs to achieve a human-level
+understanding of terrain complexity. Based on the complexity classification,
+the system switches to the most suitable navigation mode, composing of
+perception, mapping and planning modules designed for different terrain types,
+to traverse the terrain ahead before reaching the next waypoint. By integrating
+the local navigation system with a map server and a global waypoint generation
+module, the rover is equipped to handle long-distance navigation tasks in
+complex scenarios. The navigation system is evaluated in various simulation
+environments. Compared to the single-mode conservative navigation method, our
+multi-mode system is able to bootstrap the time and energy efficiency in a
+long-distance traversal with varied type of obstacles, enhancing efficiency by
+79.5%, while maintaining its avoidance capabilities against terrain hazards to
+guarantee rover safety. More system information is shown at
+https://chengsn1234.github.io/multi-mode-planetary-navigation/.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.16688v1' target='_blank'>Fast and Stable Diffusion Planning through Variational Adaptive
+  Weighting</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Zhiying Qiu, Tao Lin</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-20 02:12:04</h6>
+<p class='card-text'>Diffusion models have recently shown promise in offline RL. However, these
+methods often suffer from high training costs and slow convergence,
+particularly when using transformer-based denoising backbones. While several
+optimization strategies have been proposed -- such as modified noise schedules,
+auxiliary prediction targets, and adaptive loss weighting -- challenges remain
+in achieving stable and efficient training. In particular, existing loss
+weighting functions typically rely on neural network approximators, which can
+be ineffective in early training phases due to limited generalization capacity
+of MLPs when exposed to sparse feedback in the early training stages. In this
+work, we derive a variationally optimal uncertainty-aware weighting function
+and introduce a closed-form polynomial approximation method for its online
+estimation under the flow-based generative modeling framework. We integrate our
+method into a diffusion planning pipeline and evaluate it on standard offline
+RL benchmarks. Experimental results on Maze2D and Kitchen tasks show that our
+method achieves competitive performance with up to 10 times fewer training
+steps, highlighting its practical effectiveness.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.16596v1' target='_blank'>A Community-driven vision for a new Knowledge Resource for AI</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Vinay K Chaudhri, Chaitan Baru, Brandon Bennett, Mehul Bhatt, Darion Cassel, Anthony G Cohn, Rina Dechter, Esra Erdem, Dave Ferrucci, Ken Forbus, Gregory Gelfond, Michael Genesereth, Andrew S. Gordon, Benjamin Grosof, Gopal Gupta, Jim Hendler, Sharat Israni, Tyler R. Josephson, Patrick Kyllonen, Yuliya Lierler, Vladimir Lifschitz, Clifton McFate, Hande K. McGinty, Leora Morgenstern, Alessandro Oltramari, Praveen Paritosh, Dan Roth, Blake Shepard, Cogan Shimzu, Denny Vrandečić, Mark Whiting, Michael Witbrock</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-19 20:51:28</h6>
+<p class='card-text'>The long-standing goal of creating a comprehensive, multi-purpose knowledge
+resource, reminiscent of the 1984 Cyc project, still persists in AI. Despite
+the success of knowledge resources like WordNet, ConceptNet, Wolfram|Alpha and
+other commercial knowledge graphs, verifiable, general-purpose widely available
+sources of knowledge remain a critical deficiency in AI infrastructure. Large
+language models struggle due to knowledge gaps; robotic planning lacks
+necessary world knowledge; and the detection of factually false information
+relies heavily on human expertise. What kind of knowledge resource is most
+needed in AI today? How can modern technology shape its development and
+evaluation? A recent AAAI workshop gathered over 50 researchers to explore
+these questions. This paper synthesizes our findings and outlines a
+community-driven vision for a new knowledge infrastructure. In addition to
+leveraging contemporary advances in knowledge representation and reasoning, one
+promising idea is to build an open engineering framework to exploit knowledge
+modules effectively within the context of practical applications. Such a
+framework should include sets of conventions and social structures that are
+adopted by contributors.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.16565v1' target='_blank'>Reimagination with Test-time Observation Interventions:
+  Distractor-Robust World Model Predictions for Visual Model Predictive Control</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yuxin Chen, Jianglan Wei, Chenfeng Xu, Boyi Li, Masayoshi Tomizuka, Andrea Bajcsy, Ran Tian</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-19 19:41:29</h6>
+<p class='card-text'>World models enable robots to "imagine" future observations given current
+observations and planned actions, and have been increasingly adopted as
+generalized dynamics models to facilitate robot learning. Despite their
+promise, these models remain brittle when encountering novel visual distractors
+such as objects and background elements rarely seen during training.
+Specifically, novel distractors can corrupt action outcome predictions, causing
+downstream failures when robots rely on the world model imaginations for
+planning or action verification. In this work, we propose Reimagination with
+Observation Intervention (ReOI), a simple yet effective test-time strategy that
+enables world models to predict more reliable action outcomes in open-world
+scenarios where novel and unanticipated visual distractors are inevitable.
+Given the current robot observation, ReOI first detects visual distractors by
+identifying which elements of the scene degrade in physically implausible ways
+during world model prediction. Then, it modifies the current observation to
+remove these distractors and bring the observation closer to the training
+distribution. Finally, ReOI "reimagines" future outcomes with the modified
+observation and reintroduces the distractors post-hoc to preserve visual
+consistency for downstream planning and verification. We validate our approach
+on a suite of robotic manipulation tasks in the context of action verification,
+where the verifier needs to select desired action plans based on predictions
+from a world model. Our results show that ReOI is robust to both
+in-distribution and out-of-distribution visual distractors. Notably, it
+improves task success rates by up to 3x in the presence of novel distractors,
+significantly outperforming action verification that relies on world model
+predictions without imagination interventions.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.16555v1' target='_blank'>An Optimization-Augmented Control Framework for Single and Coordinated
+  Multi-Arm Robotic Manipulation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Melih Özcan, Ozgur S. Oguz</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-19 19:19:27</h6>
+<p class='card-text'>Robotic manipulation demands precise control over both contact forces and
+motion trajectories. While force control is essential for achieving compliant
+interaction and high-frequency adaptation, it is limited to operations in close
+proximity to the manipulated object and often fails to maintain stable
+orientation during extended motion sequences. Conversely, optimization-based
+motion planning excels in generating collision-free trajectories over the
+robot's configuration space but struggles with dynamic interactions where
+contact forces play a crucial role. To address these limitations, we propose a
+multi-modal control framework that combines force control and
+optimization-augmented motion planning to tackle complex robotic manipulation
+tasks in a sequential manner, enabling seamless switching between control modes
+based on task requirements. Our approach decomposes complex tasks into
+subtasks, each dynamically assigned to one of three control modes: Pure
+optimization for global motion planning, pure force control for precise
+interaction, or hybrid control for tasks requiring simultaneous trajectory
+tracking and force regulation. This framework is particularly advantageous for
+bimanual and multi-arm manipulation, where synchronous motion and coordination
+among arms are essential while considering both the manipulated object and
+environmental constraints. We demonstrate the versatility of our method through
+a range of long-horizon manipulation tasks, including single-arm, bimanual, and
+multi-arm applications, highlighting its ability to handle both free-space
+motion and contact-rich manipulation with robustness and precision.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.16546v1' target='_blank'>BIDA: A Bi-level Interaction Decision-making Algorithm for Autonomous
+  Vehicles in Dynamic Traffic Scenarios</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Liyang Yu, Tianyi Wang, Junfeng Jiao, Fengwu Shan, Hongqing Chu, Bingzhao Gao</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-19 19:03:40</h6>
+<p class='card-text'>In complex real-world traffic environments, autonomous vehicles (AVs) need to
+interact with other traffic participants while making real-time and
+safety-critical decisions accordingly. The unpredictability of human behaviors
+poses significant challenges, particularly in dynamic scenarios, such as
+multi-lane highways and unsignalized T-intersections. To address this gap, we
+design a bi-level interaction decision-making algorithm (BIDA) that integrates
+interactive Monte Carlo tree search (MCTS) with deep reinforcement learning
+(DRL), aiming to enhance interaction rationality, efficiency and safety of AVs
+in dynamic key traffic scenarios. Specifically, we adopt three types of DRL
+algorithms to construct a reliable value network and policy network, which
+guide the online deduction process of interactive MCTS by assisting in value
+update and node selection. Then, a dynamic trajectory planner and a trajectory
+tracking controller are designed and implemented in CARLA to ensure smooth
+execution of planned maneuvers. Experimental evaluations demonstrate that our
+BIDA not only enhances interactive deduction and reduces computational costs,
+but also outperforms other latest benchmarks, which exhibits superior safety,
+efficiency and interaction rationality under varying traffic conditions.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.16537v1' target='_blank'>Agile, Autonomous Spacecraft Constellations with Disruption Tolerant
+  Networking to Monitor Precipitation and Urban Floods</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Sreeja Roy-Singh, Alan P. Li, Vinay Ravindra, Roderick Lammers, Marc Sanchez Net</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-19 18:45:16</h6>
+<p class='card-text'>Fully re-orientable small spacecraft are now supported by commercial
+technologies, allowing them to point their instruments in any direction and
+capture images, with short notice. When combined with improved onboard
+processing, and implemented on a constellation of inter-communicable
+satellites, this intelligent agility can significantly increase responsiveness
+to transient or evolving phenomena. We demonstrate a ground-based and onboard
+algorithmic framework that combines orbital mechanics, attitude control,
+inter-satellite communication, intelligent prediction and planning to schedule
+the time-varying, re-orientation of agile, small satellites in a constellation.
+Planner intelligence is improved by updating the predictive value of future
+space-time observations based on shared observations of evolving episodic
+precipitation and urban flood forecasts. Reliable inter-satellite communication
+within a fast, dynamic constellation topology is modeled in the physical,
+access control and network layer. We apply the framework on a representative
+24-satellite constellation observing 5 global regions. Results show
+appropriately low latency in information exchange (average within 1/3rd
+available time for implicit consensus), enabling the onboard scheduler to
+observe ~7% more flood magnitude than a ground-based implementation. Both
+onboard and offline versions performed ~98% better than constellations without
+agility.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.16423v1' target='_blank'>A Dynamic Strategic Plan for Transition to Campus-Scale Clean
+  Electricity Using Multi-Stage Stochastic Programming</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Ahmet Emir Şener, Burak Kocuk, Tuğçe Yüksel</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-19 15:57:42</h6>
+<p class='card-text'>The transition to clean energy systems at large-scale campuses is a critical
+step toward achieving global decarbonization goals. However, this transition
+poses significant challenges, including substantial capital requirements,
+technological uncertainties, and the operational complexities of integrating
+renewable energy technologies. This study presents a dynamic strategic planning
+framework for campus-scale clean electricity transitions, utilizing a
+multi-stage stochastic programming model that jointly optimizes technology
+deployment, storage operations, and grid interactions. The model enables
+adaptive decision-making by incorporating uncertainties in technological cost
+trajectories and efficiency improvements, providing a tool for large-scale
+electricity consumers aiming to achieve clean and self-sufficient electricity
+systems. The framework is applied to a case study of Middle East Technical
+University, which has committed to achieving carbon-neutral electricity by
+2040. By integrating solar photovoltaic, wind, and lithium-ion battery
+technologies, the model generates annual investment and operational strategies
+aligned with high-resolution temporal demand and generation profiles. The
+results demonstrate that uncertainty-aware, temporally detailed planning can
+significantly enhance the economic viability and operational feasibility of
+campus-scale clean energy transitions.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.16402v1' target='_blank'>IS-Bench: Evaluating Interactive Safety of VLM-Driven Embodied Agents in
+  Daily Household Tasks</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Xiaoya Lu, Zeren Chen, Xuhao Hu, Yijin Zhou, Weichen Zhang, Dongrui Liu, Lu Sheng, Jing Shao</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-19 15:34:46</h6>
+<p class='card-text'>Flawed planning from VLM-driven embodied agents poses significant safety
+hazards, hindering their deployment in real-world household tasks. However,
+existing static, non-interactive evaluation paradigms fail to adequately assess
+risks within these interactive environments, since they cannot simulate dynamic
+risks that emerge from an agent's actions and rely on unreliable post-hoc
+evaluations that ignore unsafe intermediate steps. To bridge this critical gap,
+we propose evaluating an agent's interactive safety: its ability to perceive
+emergent risks and execute mitigation steps in the correct procedural order. We
+thus present IS-Bench, the first multi-modal benchmark designed for interactive
+safety, featuring 161 challenging scenarios with 388 unique safety risks
+instantiated in a high-fidelity simulator. Crucially, it facilitates a novel
+process-oriented evaluation that verifies whether risk mitigation actions are
+performed before/after specific risk-prone steps. Extensive experiments on
+leading VLMs, including the GPT-4o and Gemini-2.5 series, reveal that current
+agents lack interactive safety awareness, and that while safety-aware
+Chain-of-Thought can improve performance, it often compromises task completion.
+By highlighting these critical limitations, IS-Bench provides a foundation for
+developing safer and more reliable embodied AI systems.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.16311v1' target='_blank'>Towards Emergency Scenarios: An Integrated Decision-making Framework of
+  Multi-lane Platoon Reorganization</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Aijing Kong, Chengkai Xu, Xian Wu, Xinbo Chen, Peng Hang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-19 13:35:27</h6>
+<p class='card-text'>To enhance the ability for vehicle platoons to respond to emergency
+scenarios, a platoon distribution reorganization decision-making framework is
+proposed. This framework contains platoon distribution layer, vehicle
+cooperative decision-making layer and vehicle planning and control layer.
+Firstly, a reinforcement-learning-based platoon distribution model is
+presented, where a risk potential field is established to quantitatively assess
+driving risks, and a reward function tailored to the platoon reorganization
+process is constructed. Then, a coalition-game-based vehicle cooperative
+decision-making model is put forward, modeling the cooperative relationships
+among vehicles through dividing coalitions and generating the optimal decision
+results for each vehicle. Additionally, a novel graph-theory-based Platoon
+Disposition Index (PDI) is incorporated into the game reward function to
+measure the platoon's distribution state during the reorganization process, in
+order to accelerating the reorganization process. Finally, the validation of
+the proposed framework is conducted in two high-risk scenarios under random
+traffic flows. The results show that, compared to the baseline models, the
+proposed method can significantly reduce the collision rate and improve driving
+efficiency. Moreover, the model with PDI can significantly decrease the platoon
+formation reorganization time and improve the reorganization efficiency.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.16236v1' target='_blank'>Refining Ray-Tracing Accuracy and Efficiency in the Context of FRMCS
+  Urban Railway Channel Predictions</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Romain Charbonnier, Thierry Tenoux, Yoann Corre</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-19 11:47:53</h6>
+<p class='card-text'>The upcoming roll-out of the new wireless communication standard for wireless
+railway services, FRMCS, requires a thorough understanding of the system
+performance in real-world conditions, since this will strongly influence the
+deployment costs and the effectiveness of an infrastructure planned for
+decades. The virtual testing of the equipment and network performance in
+realistic simulated scenarios is key; its accuracy depends on the reliability
+of the predicted radio channel properties. In this article, the authors explain
+how they are evolving a ray-tracing (RT) tool to apply it to the specific case
+of simulating the radio link between the FRMCS fixed infrastructure and an
+antenna placed on the roof of a train moving in an urban environment. First, a
+dynamic version of the RT tool is used to capture the rapid variations of all
+channel metrics; a compromise is sought between computation time and accuracy.
+Besides, a hybridization of RT and physical optics (PO) allows the integration
+of objects near the track, such as catenary pylons, into the simulation. A case
+study shows that the scattering by metallic pylons brings a significant
+contribution.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.16124v1' target='_blank'>Seven-Probe Fiber Detector for Time-Resolved Source Tracking in
+  HDR-Brachytherapy: Experimental Evaluation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Mathieu Gonod, Miguel Angel Suarez, Samir Laskri, Gwenael Rolin, Karine Charriere, Emmanuel Dordor, Julien Crouzilles, Thomas Lihoreau, Lionel Pazart, Jean-Francois Vinchant, Leone Aubignac, Thierry Grosjean</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-19 08:19:04</h6>
+<p class='card-text'>{\bf Purpose:} This study evaluates a compact biocompatible Seven-probe
+Scintillator Detector (7SD) for monitoring HDR-BT treatment sequences across a
+range of dwell times and source-probe spacings representative of most HDR-BT
+techniques.
+  {\bf Methods:} The SSD comprises seven detection cells made of
+Gd$_2$O$_2$S:Tb, each measuring 0.28 $\pm$ 0.02 mm in diameter and 0.43 $\pm$
+0.02 mm in length, coupled to the microstructured tips of silica optical fibers
+(110-micron diameter). The probes, spaced 15 mm apart along the fiber axis, are
+organized into a bundle with a total diameter of less than 0.45 mm. The SSD was
+tested using a MicroSelectron 9.1 Ci Ir-192 HDR afterloader connected to a BT
+stainless steel interstitial needle. Detection signals were acquired with an
+sCMOS camera equipped. Monitoring of dwell times and positions was performed by
+combining detection signals from all seven probes.
+  {\bf Results:} A total of 4,040 dwell positions were analyzed, covering
+source-probe spacings from 10 to 36 mm and a source travel range of 62 mm, with
+dwell times ranging from 0.1 to 19.5 s. The 7SD successfully identified 99.5\%
+of the dwell positions. In cylindrical coordinates, the measured dwell
+positions deviated from the planned values by 0.224 $\pm$ 0.155 mm (radial) and
+0.077 $\pm$ 0.181 mm (axial, source travel axis). The average deviation from
+planned dwell times was 0.006 $\pm$ 0.061 s. 99.4\% of the dwell positions were
+measured within the 1 mm reliability threshold. The remaining 0.6\% of
+deviations consistently occurred at the initial dwell position of treatment
+sequences and appear to stem from a systematic source positioning error by the
+afterloader. Additionally, the detector accurately identified intentional
+needle mispositioning scenarios with sub-millimeter accuracy.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.16079v1' target='_blank'>Investigating Lagrangian Neural Networks for Infinite Horizon Planning
+  in Quadrupedal Locomotion</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Prakrut Kotecha, Aditya Shirwatkar, Shishir Kolathaya</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-19 07:04:24</h6>
+<p class='card-text'>Lagrangian Neural Networks (LNNs) present a principled and interpretable
+framework for learning the system dynamics by utilizing inductive biases. While
+traditional dynamics models struggle with compounding errors over long
+horizons, LNNs intrinsically preserve the physical laws governing any system,
+enabling accurate and stable predictions essential for sustainable locomotion.
+This work evaluates LNNs for infinite horizon planning in quadrupedal robots
+through four dynamics models: (1) full-order forward dynamics (FD) training and
+inference, (2) diagonalized representation of Mass Matrix in full order FD, (3)
+full-order inverse dynamics (ID) training with FD inference, (4) reduced-order
+modeling via torso centre-of-mass (CoM) dynamics. Experiments demonstrate that
+LNNs bring improvements in sample efficiency (10x) and superior prediction
+accuracy (up to 2-10x) compared to baseline methods. Notably, the
+diagonalization approach of LNNs reduces computational complexity while
+retaining some interpretability, enabling real-time receding horizon control.
+These findings highlight the advantages of LNNs in capturing the underlying
+structure of system dynamics in quadrupeds, leading to improved performance and
+efficiency in locomotion planning and control. Additionally, our approach
+achieves a higher control frequency than previous LNN methods, demonstrating
+its potential for real-world deployment on quadrupeds.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.16042v1' target='_blank'>OSWorld-Human: Benchmarking the Efficiency of Computer-Use Agents</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Reyna Abhyankar, Qi Qi, Yiying Zhang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-19 05:26:40</h6>
+<p class='card-text'>Generative AI is being leveraged to solve a variety of computer-use tasks
+involving desktop applications. State-of-the-art systems have focused solely on
+improving accuracy on leading benchmarks. However, these systems are
+practically unusable due to extremely high end-to-end latency (e.g., tens of
+minutes) for tasks that typically take humans just a few minutes to complete.
+To understand the cause behind this and to guide future developments of
+computer agents, we conduct the first study on the temporal performance of
+computer-use agents on OSWorld, the flagship benchmark in computer-use AI. We
+find that large model calls for planning and reflection account for the
+majority of the overall latency, and as an agent uses more steps to complete a
+task, each successive step can take 3x longer than steps at the beginning of a
+task. We then construct OSWorld-Human, a manually annotated version of the
+original OSWorld dataset that contains a human-determined trajectory for each
+task. We evaluate 16 agents on their efficiency using OSWorld-Human and found
+that even the highest-scoring agents on OSWorld take 1.4-2.7x more steps than
+necessary.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.16041v1' target='_blank'>Transporting a Dirac mass in a mean field planning problem</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Pierre Cardaliaguet, Sebastian Munoz, Alessio Porretta</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-19 05:25:25</h6>
+<p class='card-text'>We study a mean field planning problem in which the initial density is a
+Dirac mass. We show that there exists a unique solution which converges to a
+self-similar profile as time tends to $0$. We proceed by studying a continuous
+rescaling of the solution, and characterizing its behavior near the initial
+time through an appropriate Lyapunov functional.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.16012v1' target='_blank'>DualTHOR: A Dual-Arm Humanoid Simulation Platform for Contingency-Aware
+  Planning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Boyu Li, Siyuan He, Hang Xu, Haoqi Yuan, Yu Zang, Liwei Hu, Junpeng Yue, Zhenxiong Jiang, Pengbo Hu, Börje F. Karlsson, Yehui Tang, Zongqing Lu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-19 04:13:36</h6>
+<p class='card-text'>Developing embodied agents capable of performing complex interactive tasks in
+real-world scenarios remains a fundamental challenge in embodied AI. Although
+recent advances in simulation platforms have greatly enhanced task diversity to
+train embodied Vision Language Models (VLMs), most platforms rely on simplified
+robot morphologies and bypass the stochastic nature of low-level execution,
+which limits their transferability to real-world robots. To address these
+issues, we present a physics-based simulation platform DualTHOR for complex
+dual-arm humanoid robots, built upon an extended version of AI2-THOR. Our
+simulator includes real-world robot assets, a task suite for dual-arm
+collaboration, and inverse kinematics solvers for humanoid robots. We also
+introduce a contingency mechanism that incorporates potential failures through
+physics-based low-level execution, bridging the gap to real-world scenarios.
+Our simulator enables a more comprehensive evaluation of the robustness and
+generalization of VLMs in household environments. Extensive evaluations reveal
+that current VLMs struggle with dual-arm coordination and exhibit limited
+robustness in realistic environments with contingencies, highlighting the
+importance of using our simulator to develop more capable VLMs for embodied
+tasks. The code is available at https://github.com/ds199895/DualTHOR.git.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.15920v1' target='_blank'>Learning from Planned Data to Improve Robotic Pick-and-Place Planning
+  Efficiency</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Liang Qin, Weiwei Wan, Jun Takahashi, Ryo Negishi, Masaki Matsushita, Kensuke Harada</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-18 23:45:12</h6>
+<p class='card-text'>This work proposes a learning method to accelerate robotic pick-and-place
+planning by predicting shared grasps. Shared grasps are defined as grasp poses
+feasible to both the initial and goal object configurations in a pick-and-place
+task. Traditional analytical methods for solving shared grasps evaluate grasp
+candidates separately, leading to substantial computational overhead as the
+candidate set grows. To overcome the limitation, we introduce an Energy-Based
+Model (EBM) that predicts shared grasps by combining the energies of feasible
+grasps at both object poses. This formulation enables early identification of
+promising candidates and significantly reduces the search space. Experiments
+show that our method improves grasp selection performance, offers higher data
+efficiency, and generalizes well to unseen grasps and similarly shaped objects.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.15913v1' target='_blank'>Sample size re-estimation in blinded hybrid-control design using inverse
+  probability weighting</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Masahiro Kojima, Shunichiro Orihara, Keisuke Hanada, Tomohiro Ohigashi</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-18 23:22:10</h6>
+<p class='card-text'>With the increasing availability of data from historical studies and
+real-world data sources, hybrid control designs that incorporate external data
+into the evaluation of current studies are being increasingly adopted. In these
+designs, it is necessary to pre-specify during the planning phase the extent to
+which information will be borrowed from historical control data. However, if
+substantial differences in baseline covariate distributions between the current
+and historical studies are identified at the final analysis, the amount of
+effective borrowing may be limited, potentially resulting in lower actual power
+than originally targeted. In this paper, we propose two sample size
+re-estimation strategies that can be applied during the course of the blinded
+current study. Both strategies utilize inverse probability weighting (IPW)
+based on the probability of assignment to either the current or historical
+study. When large discrepancies in baseline covariates are detected, the
+proposed strategies adjust the sample size upward to prevent a loss of
+statistical power. The performance of the proposed strategies is evaluated
+through simulation studies, and their practical implementation is demonstrated
+using a case study based on two actual randomized clinical studies.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.15902v1' target='_blank'>Optimal Navigation in Microfluidics via the Optimization of a Discrete
+  Loss</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Petr Karnakov, Lucas Amoudruz, Petros Koumoutsakos</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-18 22:05:31</h6>
+<p class='card-text'>Optimal path planning and control of microscopic devices navigating in fluid
+environments is essential for applications ranging from targeted drug delivery
+to environmental monitoring. These tasks are challenging due to the complexity
+of microdevice-flow interactions. We introduce a closed-loop control method
+that optimizes a discrete loss (ODIL) in terms of dynamics and path objectives.
+In comparison with reinforcement learning, ODIL is more robust, up to three
+orders faster, and excels in high-dimensional action/state spaces, making it a
+powerful tool for navigating complex flow environments.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.15899v1' target='_blank'>Advancing Autonomous Racing: A Comprehensive Survey of the RoboRacer
+  (F1TENTH) Platform</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Israel Charles, Hossein Maghsoumi, Yaser Fallah</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-18 21:59:17</h6>
+<p class='card-text'>The RoboRacer (F1TENTH) platform has emerged as a leading testbed for
+advancing autonomous driving research, offering a scalable, cost-effective, and
+community-driven environment for experimentation. This paper presents a
+comprehensive survey of the platform, analyzing its modular hardware and
+software architecture, diverse research applications, and role in autonomous
+systems education. We examine critical aspects such as bridging the
+simulation-to-reality (Sim2Real) gap, integration with simulation environments,
+and the availability of standardized datasets and benchmarks. Furthermore, the
+survey highlights advancements in perception, planning, and control algorithms,
+as well as insights from global competitions and collaborative research
+efforts. By consolidating these contributions, this study positions RoboRacer
+as a versatile framework for accelerating innovation and bridging the gap
+between theoretical research and real-world deployment. The findings underscore
+the platform's significance in driving forward developments in autonomous
+racing and robotics.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js'></script>
+</body>
+</html>
