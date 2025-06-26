@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>planning - 2025-06-26</title>
+<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap' rel='stylesheet'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css'>
+<style>
+body {
+font-family: 'Roboto', sans-serif;
+background-color: #f5f7fa;
+padding: 20px;
+}
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.card-title {
+    font-weight: 700;
+}
+.card:hover {
+    transform: scale(1.02);
+    transition: 0.3s ease-in-out;
+}
+</style>
+</head>
+<body>
+<div class='container'>
+<h1 class='text-center my-4'><i class='fas fa-book'></i>planning - 2025-06-26</h1>
+<div class='row'>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.20639v1' target='_blank'>DiffuCoder: Understanding and Improving Masked Diffusion Models for Code
+  Generation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Shansan Gong, Ruixiang Zhang, Huangjie Zheng, Jiatao Gu, Navdeep Jaitly, Lingpeng Kong, Yizhe Zhang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-25 17:35:47</h6>
+<p class='card-text'>Diffusion large language models (dLLMs) are compelling alternatives to
+autoregressive (AR) models because their denoising models operate over the
+entire sequence. The global planning and iterative refinement features of dLLMs
+are particularly useful for code generation. However, current training and
+inference mechanisms for dLLMs in coding are still under-explored. To demystify
+the decoding behavior of dLLMs and unlock their potential for coding, we
+systematically investigate their denoising processes and reinforcement learning
+(RL) methods. We train a 7B dLLM, \textbf{DiffuCoder}, on 130B tokens of code.
+Using this model as a testbed, we analyze its decoding behavior, revealing how
+it differs from that of AR models: (1) dLLMs can decide how causal their
+generation should be without relying on semi-AR decoding, and (2) increasing
+the sampling temperature diversifies not only token choices but also their
+generation order. This diversity creates a rich search space for RL rollouts.
+For RL training, to reduce the variance of token log-likelihood estimates and
+maintain training efficiency, we propose \textbf{coupled-GRPO}, a novel
+sampling scheme that constructs complementary mask noise for completions used
+in training. In our experiments, coupled-GRPO significantly improves
+DiffuCoder's performance on code generation benchmarks (+4.4\% on EvalPlus) and
+reduces reliance on AR causal during decoding. Our work provides deeper insight
+into the machinery of dLLM generation and offers an effective, diffusion-native
+RL training framework. https://github.com/apple/ml-diffucoder.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.20579v1' target='_blank'>Communication-Aware Map Compression for Online Path-Planning: A
+  Rate-Distortion Approach</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Ali Reza Pedram, Evangelos Psomiadis, Dipankar Maity, Panagiotis Tsiotras</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-25 16:14:17</h6>
+<p class='card-text'>This paper addresses the problem of collaborative navigation in an unknown
+environment, where two robots, referred to in the sequel as the Seeker and the
+Supporter, traverse the space simultaneously. The Supporter assists the Seeker
+by transmitting a compressed representation of its local map under bandwidth
+constraints to support the Seeker's path-planning task. We introduce a bit-rate
+metric based on the expected binary codeword length to quantify communication
+cost. Using this metric, we formulate the compression design problem as a
+rate-distortion optimization problem that determines when to communicate, which
+regions of the map should be included in the compressed representation, and at
+what resolution (i.e., quantization level) they should be encoded. Our
+formulation allows different map regions to be encoded at varying quantization
+levels based on their relevance to the Seeker's path-planning task. We
+demonstrate that the resulting optimization problem is convex, and admits a
+closed-form solution known in the information theory literature as reverse
+water-filling, enabling efficient, low-computation, and real-time
+implementation. Additionally, we show that the Seeker can infer the compression
+decisions of the Supporter independently, requiring only the encoded map
+content and not the encoding policy itself to be transmitted, thereby reducing
+communication overhead. Simulation results indicate that our method effectively
+constructs compressed, task-relevant map representations, both in content and
+resolution, that guide the Seeker's planning decisions even under tight
+bandwidth limitations.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.20522v1' target='_blank'>AI-assisted radiographic analysis in detecting alveolar bone-loss
+  severity and patterns</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Chathura Wimalasiri, Piumal Rathnayake, Shamod Wijerathne, Sumudu Rasnayaka, Dhanushka Leuke Bandara, Roshan Ragel, Vajira Thambawita, Isuru Nawinne</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-25 15:08:52</h6>
+<p class='card-text'>Periodontitis, a chronic inflammatory disease causing alveolar bone loss,
+significantly affects oral health and quality of life. Accurate assessment of
+bone loss severity and pattern is critical for diagnosis and treatment
+planning. In this study, we propose a novel AI-based deep learning framework to
+automatically detect and quantify alveolar bone loss and its patterns using
+intraoral periapical (IOPA) radiographs. Our method combines YOLOv8 for tooth
+detection with Keypoint R-CNN models to identify anatomical landmarks, enabling
+precise calculation of bone loss severity. Additionally, YOLOv8x-seg models
+segment bone levels and tooth masks to determine bone loss patterns (horizontal
+vs. angular) via geometric analysis. Evaluated on a large, expertly annotated
+dataset of 1000 radiographs, our approach achieved high accuracy in detecting
+bone loss severity (intra-class correlation coefficient up to 0.80) and bone
+loss pattern classification (accuracy 87%). This automated system offers a
+rapid, objective, and reproducible tool for periodontal assessment, reducing
+reliance on subjective manual evaluation. By integrating AI into dental
+radiographic analysis, our framework has the potential to improve early
+diagnosis and personalized treatment planning for periodontitis, ultimately
+enhancing patient care and clinical outcomes.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.20499v1' target='_blank'>Adaptive Supergeo Design: A Scalable Framework for Geographic Marketing
+  Experiments</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Charles Shaw</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-25 14:47:00</h6>
+<p class='card-text'>Geographic experiments are a gold-standard for measuring incremental return
+on ad spend (iROAS) at scale, yet their design is challenging: the unit count
+is small, heterogeneity is large, and the optimal Supergeo partitioning problem
+is NP-hard. We introduce Adaptive Supergeo Design (ASD), a two-stage framework
+that renders Supergeo designs practical for thousands of markets. A bespoke
+graph-neural network first learns geo-embeddings and proposes a concise
+candidate set of 'supergeos'; a CP-SAT solver then selects a partition that
+balances both baseline outcomes and pre-treatment covariates believed to modify
+the treatment effect. We prove that ASD's objective value is within (1+epsilon)
+of the global optimum under mild community-structure assumptions. In
+simulations with up to 1,000 Designated Market Areas ASD completes in minutes
+on standard hardware, retains every media dollar, and cuts iROAS bias
+substantively relative to existing methods. ASD therefore turns geo-lift
+testing into a routine, scalable component of media planning while preserving
+statistical rigour.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.20394v1' target='_blank'>SPARK: Graph-Based Online Semantic Integration System for Robot Task
+  Planning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Mimo Shirasaka, Yuya Ikeda, Tatsuya Matsushima, Yutaka Matsuo, Yusuke Iwasawa</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-25 13:02:59</h6>
+<p class='card-text'>The ability to update information acquired through various means online
+during task execution is crucial for a general-purpose service robot. This
+information includes geometric and semantic data. While SLAM handles geometric
+updates on 2D maps or 3D point clouds, online updates of semantic information
+remain unexplored. We attribute the challenge to the online scene graph
+representation, for its utility and scalability. Building on previous works
+regarding offline scene graph representations, we study online graph
+representations of semantic information in this work. We introduce SPARK:
+Spatial Perception and Robot Knowledge Integration. This framework extracts
+semantic information from environment-embedded cues and updates the scene graph
+accordingly, which is then used for subsequent task planning. We demonstrate
+that graph representations of spatial relationships enhance the robot system's
+ability to perform tasks in dynamic environments and adapt to unconventional
+spatial cues, like gestures.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.20376v1' target='_blank'>Enhanced Robotic Navigation in Deformable Environments using Learning
+  from Demonstration and Dynamic Modulation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Lingyun Chen, Xinrui Zhao, Marcos P. S. Campanha, Alexander Wegener, Abdeldjallil Naceri, Abdalla Swikir, Sami Haddadin</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-25 12:40:27</h6>
+<p class='card-text'>This paper presents a novel approach for robot navigation in environments
+containing deformable obstacles. By integrating Learning from Demonstration
+(LfD) with Dynamical Systems (DS), we enable adaptive and efficient navigation
+in complex environments where obstacles consist of both soft and hard regions.
+We introduce a dynamic modulation matrix within the DS framework, allowing the
+system to distinguish between traversable soft regions and impassable hard
+areas in real-time, ensuring safe and flexible trajectory planning. We validate
+our method through extensive simulations and robot experiments, demonstrating
+its ability to navigate deformable environments. Additionally, the approach
+provides control over both trajectory and velocity when interacting with
+deformable objects, including at intersections, while maintaining adherence to
+the original DS trajectory and dynamically adapting to obstacles for smooth and
+reliable navigation.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.20375v1' target='_blank'>Evoluindo resiliência em rotas de ônibus: Proposta de um método
+  para a maximização de acessibilidade em cenários de incerteza por
+  meio de algoritmo genético</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Andre Borgato Morelli, André Luiz Cunha</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-25 12:38:50</h6>
+<p class='card-text'>Resilience has raised interest in transport planning as rare phenomena, such
+as fuel supply crises, have recently shown their potential to destabilize
+transport systems. However, the proposed methods for planning resilience in
+transit systems fail to consider the impact that bus frequency has on user
+accessibility. To address this gap, this paper proposes a bus allocation method
+aimed at maximizing accessibility in impact scenarios - where some bus routes
+have their frequency reduced - making use of a genetic algorithm. The method is
+applied in the city of S\~ao Paulo and the results show that evolving the
+system foreseeing moderate impacts not only contributes to reducing the
+negative effects of lower route frequency, but also improves its efficiency in
+normal conditions, showing the importance of the contribution of this research
+to the planning of efficient systems.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.20320v1' target='_blank'>Finding the Easy Way Through -- the Probabilistic Gap Planner for Social
+  Robot Navigation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Malte Probst, Raphael Wenzel, Tim Puphal, Monica Dasi, Nico A. Steinhardt, Sango Matsuzaki, Misa Komuro</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-25 11:01:51</h6>
+<p class='card-text'>In Social Robot Navigation, autonomous agents need to resolve many sequential
+interactions with other agents. State-of-the art planners can efficiently
+resolve the next, imminent interaction cooperatively and do not focus on longer
+planning horizons. This makes it hard to maneuver scenarios where the agent
+needs to select a good strategy to find gaps or channels in the crowd. We
+propose to decompose trajectory planning into two separate steps: Conflict
+avoidance for finding good, macroscopic trajectories, and cooperative collision
+avoidance (CCA) for resolving the next interaction optimally. We propose the
+Probabilistic Gap Planner (PGP) as a conflict avoidance planner. PGP modifies
+an established probabilistic collision risk model to include a general
+assumption of cooperativity. PGP biases the short-term CCA planner to head
+towards gaps in the crowd. In extensive simulations with crowds of varying
+density, we show that using PGP in addition to state-of-the-art CCA planners
+improves the agents' performance: On average, agents keep more space to others,
+create less tension, and cause fewer collisions. This typically comes at the
+expense of slightly longer paths. PGP runs in real-time on WaPOCHI mobile robot
+by Honda R&D.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.20315v1' target='_blank'>Building Forest Inventories with Autonomous Legged Robots -- System,
+  Lessons, and Challenges Ahead</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Matías Mattamala, Nived Chebrolu, Jonas Frey, Leonard Freißmuth, Haedam Oh, Benoit Casseau, Marco Hutter, Maurice Fallon</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-25 10:53:26</h6>
+<p class='card-text'>Legged robots are increasingly being adopted in industries such as oil, gas,
+mining, nuclear, and agriculture. However, new challenges exist when moving
+into natural, less-structured environments, such as forestry applications. This
+paper presents a prototype system for autonomous, under-canopy forest inventory
+with legged platforms. Motivated by the robustness and mobility of modern
+legged robots, we introduce a system architecture which enabled a quadruped
+platform to autonomously navigate and map forest plots. Our solution involves a
+complete navigation stack for state estimation, mission planning, and tree
+detection and trait estimation. We report the performance of the system from
+trials executed over one and a half years in forests in three European
+countries. Our results with the ANYmal robot demonstrate that we can survey
+plots up to 1 ha plot under 30 min, while also identifying trees with typical
+DBH accuracy of 2cm. The findings of this project are presented as five lessons
+and challenges. Particularly, we discuss the maturity of hardware development,
+state estimation limitations, open problems in forest navigation, future
+avenues for robotic forest inventory, and more general challenges to assess
+autonomous systems. By sharing these lessons and challenges, we offer insight
+and new directions for future research on legged robots, navigation systems,
+and applications in natural environments. Additional videos can be found in
+https://dynamic.robots.ox.ac.uk/projects/legged-robots</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.20314v1' target='_blank'>Near Time-Optimal Hybrid Motion Planning for Timber Cranes</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Marc-Philip Ecker, Bernhard Bischof, Minh Nhat Vu, Christoph Fröhlich, Tobias Glück, Wolfgang Kemmetmüller</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-25 10:51:57</h6>
+<p class='card-text'>Efficient, collision-free motion planning is essential for automating
+large-scale manipulators like timber cranes. They come with unique challenges
+such as hydraulic actuation constraints and passive joints-factors that are
+seldom addressed by current motion planning methods. This paper introduces a
+novel approach for time-optimal, collision-free hybrid motion planning for a
+hydraulically actuated timber crane with passive joints. We enhance the
+via-point-based stochastic trajectory optimization (VP-STO) algorithm to
+include pump flow rate constraints and develop a novel collision cost
+formulation to improve robustness. The effectiveness of the enhanced VP-STO as
+an optimal single-query global planner is validated by comparison with an
+informed RRT* algorithm using a time-optimal path parameterization (TOPP). The
+overall hybrid motion planning is formed by combination with a gradient-based
+local planner that is designed to follow the global planner's reference and to
+systematically consider the passive joint dynamics for both collision avoidance
+and sway damping.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.20311v1' target='_blank'>Real-Time Obstacle Avoidance Algorithms for Unmanned Aerial and Ground
+  Vehicles</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jingwen Wei</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-25 10:49:17</h6>
+<p class='card-text'>The growing use of mobile robots in sectors such as automotive, agriculture,
+and rescue operations reflects progress in robotics and autonomy. In unmanned
+aerial vehicles (UAVs), most research emphasizes visual SLAM, sensor fusion,
+and path planning. However, applying UAVs to search and rescue missions in
+disaster zones remains underexplored, especially for autonomous navigation.
+  This report develops methods for real-time and secure UAV maneuvering in
+complex 3D environments, crucial during forest fires. Building upon past
+research, it focuses on designing navigation algorithms for unfamiliar and
+hazardous environments, aiming to improve rescue efficiency and safety through
+UAV-based early warning and rapid response.
+  The work unfolds in phases. First, a 2D fusion navigation strategy is
+explored, initially for mobile robots, enabling safe movement in dynamic
+settings. This sets the stage for advanced features such as adaptive obstacle
+handling and decision-making enhancements. Next, a novel 3D reactive navigation
+strategy is introduced for collision-free movement in forest fire simulations,
+addressing the unique challenges of UAV operations in such scenarios.
+  Finally, the report proposes a unified control approach that integrates UAVs
+and unmanned ground vehicles (UGVs) for coordinated rescue missions in forest
+environments. Each phase presents challenges, proposes control models, and
+validates them with mathematical and simulation-based evidence. The study
+offers practical value and academic insights for improving the role of UAVs in
+natural disaster rescue operations.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.20253v1' target='_blank'>Time-series surrogates from energy consumers generated by machine
+  learning approaches for long-term forecasting scenarios</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Ben Gerhards, Nikita Popkov, Annekatrin König, Marcel Arpogaus, Bastian Schäfermeier, Leonie Riedl, Stephan Vogt, Philip Hehlert</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-25 08:54:47</h6>
+<p class='card-text'>Forecasting attracts a lot of research attention in the electricity value
+chain. However, most studies concentrate on short-term forecasting of
+generation or consumption with a focus on systems and less on individual
+consumers. Even more neglected is the topic of long-term forecasting of
+individual power consumption.
+  Here, we provide an in-depth comparative evaluation of data-driven methods
+for generating synthetic time series data tailored to energy consumption
+long-term forecasting. High-fidelity synthetic data is crucial for a wide range
+of applications, including state estimations in energy systems or power grid
+planning. In this study, we assess and compare the performance of multiple
+state-of-the-art but less common techniques: a hybrid Wasserstein Generative
+Adversarial Network (WGAN), Denoising Diffusion Probabilistic Model (DDPM),
+Hidden Markov Model (HMM), and Masked Autoregressive Bernstein polynomial
+normalizing Flows (MABF). We analyze the ability of each method to replicate
+the temporal dynamics, long-range dependencies, and probabilistic transitions
+characteristic of individual energy consumption profiles. Our comparative
+evaluation highlights the strengths and limitations of: WGAN, DDPM, HMM and
+MABF aiding in selecting the most suitable approach for state estimations and
+other energy-related tasks. Our generation and analysis framework aims to
+enhance the accuracy and reliability of synthetic power consumption data while
+generating data that fulfills criteria like anonymisation - preserving privacy
+concerns mitigating risks of specific profiling of single customers. This study
+utilizes an open-source dataset from households in Germany with 15min time
+resolution. The generated synthetic power profiles can readily be used in
+applications like state estimations or consumption forecasting.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.20062v1' target='_blank'>Beyond Autocomplete: Designing CopilotLens Towards Transparent and
+  Explainable AI Coding Agents</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Runlong Ye, Zeling Zhang, Boushra Almazroua, Michael Liut</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-24 23:50:03</h6>
+<p class='card-text'>AI-powered code assistants are widely used to generate code completions,
+significantly boosting developer productivity. However, these tools typically
+present suggestions without explaining their rationale, leaving their
+decision-making process inscrutable. This opacity hinders developers' ability
+to critically evaluate the output, form accurate mental models, and build
+calibrated trust in the system. To address this, we introduce CopilotLens, a
+novel interactive framework that reframes code completion from a simple
+suggestion into a transparent, explainable event. CopilotLens operates as an
+explanation layer that reveals the AI agent's "thought process" through a
+dynamic two-level interface, surfacing everything from its reconstructed
+high-level plans to the specific codebase context influencing the code. This
+paper presents the design and rationale of CopilotLens, offering a concrete
+framework for building future agentic code assistants that prioritize clarity
+of reasoning over speed of suggestion, thereby fostering deeper comprehension
+and more robust human-AI collaboration.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.20054v1' target='_blank'>On sharp stable recovery from clipped and folded measurements</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Pedro Abdalla, Daniel Freeman, João P. G. Ramos, Mitchell A. Taylor</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-24 23:24:05</h6>
+<p class='card-text'>We investigate the stability of vector recovery from random linear
+measurements which have been either clipped or folded. This is motivated by
+applications where measurement devices detect inputs outside of their effective
+range.
+  As examples of our main results, we prove sharp lower bounds on the recovery
+constant for both the declipping and unfolding problems whenever samples are
+taken according to a uniform distribution on the sphere. Moreover, we show such
+estimates under (almost) the best possible conditions on both the number of
+samples and the distribution of the data. We then prove that all of the above
+results have suitable (effectively) sparse counterparts. In the special case
+that one restricts the stability analysis to vectors which belong to the unit
+sphere of $\mathbb{R}^n$, we show that the problem of declipping directly
+extends the one-bit compressed sensing results of Oymak-Recht and
+Plan-Vershynin.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.20031v1' target='_blank'>Automated Generation of Diverse Courses of Actions for Multi-Agent
+  Operations using Binary Optimization and Graph Learning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Prithvi Poddar, Ehsan Tarkesh Esfahani, Karthik Dantu, Souma Chowdhury</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-24 21:58:30</h6>
+<p class='card-text'>Operations in disaster response, search \& rescue, and military missions that
+involve multiple agents demand automated processes to support the planning of
+the courses of action (COA). Moreover, traverse-affecting changes in the
+environment (rain, snow, blockades, etc.) may impact the expected performance
+of a COA, making it desirable to have a pool of COAs that are diverse in task
+distributions across agents. Further, variations in agent capabilities, which
+could be human crews and/or autonomous systems, present practical opportunities
+and computational challenges to the planning process. This paper presents a new
+theoretical formulation and computational framework to generate such diverse
+pools of COAs for operations with soft variations in agent-task compatibility.
+Key to the problem formulation is a graph abstraction of the task space and the
+pool of COAs itself to quantify its diversity. Formulating the COAs as a
+centralized multi-robot task allocation problem, a genetic algorithm is used
+for (order-ignoring) allocations of tasks to each agent that jointly maximize
+diversity within the COA pool and overall compatibility of the agent-task
+mappings. A graph neural network is trained using a policy gradient approach to
+then perform single agent task sequencing in each COA, which maximizes
+completion rates adaptive to task features. Our tests of the COA generation
+process in a simulated environment demonstrate significant performance gain
+over a random walk baseline, small optimality gap in task sequencing, and
+execution time of about 50 minutes to plan up to 20 COAs for 5 agent/100 task
+operations.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.19995v1' target='_blank'>Refining Participatory Design for AAC Users</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Blade Frisch, Keith Vertanen</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-24 20:28:27</h6>
+<p class='card-text'>Augmentative and alternative communication (AAC) is a field of research and
+practice that works with people who have a communication disability. One form
+AAC can take is a high-tech tool, such as a software-based communication
+system. Like all user interfaces, these systems must be designed and it is
+critical to include AAC users in the design process for their systems. A
+participatory design approach can include AAC users in the design process, but
+modifications may be necessary to make these methods more accessible. We
+present a two-part design process we are investigating for improving the
+participatory design for high-tech AAC systems. We discuss our plans to refine
+the accessibility of this process based on participant feedback.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.19843v1' target='_blank'>Temporal-IRL: Modeling Port Congestion and Berth Scheduling with Inverse
+  Reinforcement Learning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Guo Li, Zixiang Xu, Wei Zhang, Yikuan Hu, Xinyu Yang, Nikolay Aristov, Mingjie Tang, Elenna R Dugundji</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-24 17:59:12</h6>
+<p class='card-text'>Predicting port congestion is crucial for maintaining reliable global supply
+chains. Accurate forecasts enableimprovedshipment planning, reducedelaysand
+costs, and optimizeinventoryanddistributionstrategies, thereby ensuring timely
+deliveries and enhancing supply chain resilience. To achieve accurate
+predictions, analyzing vessel behavior and their stay times at specific port
+terminals is essential, focusing particularly on berth scheduling under various
+conditions. Crucially, the model must capture and learn the underlying
+priorities and patterns of berth scheduling. Berth scheduling and planning are
+influenced by a range of factors, including incoming vessel size, waiting
+times, and the status of vessels within the port terminal. By observing
+historical Automatic Identification System (AIS) positions of vessels, we
+reconstruct berth schedules, which are subsequently utilized to determine the
+reward function via Inverse Reinforcement Learning (IRL). For this purpose, we
+modeled a specific terminal at the Port of New York/New Jersey and developed
+Temporal-IRL. This Temporal-IRL model learns berth scheduling to predict vessel
+sequencing at the terminal and estimate vessel port stay, encompassing both
+waiting and berthing times, to forecast port congestion. Utilizing data from
+Maher Terminal spanning January 2015 to September 2023, we trained and tested
+the model, achieving demonstrably excellent results.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.19719v1' target='_blank'>Cross-sections and experimental signatures for detection of a
+  well-defined dark matter WIMP</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Bailey Tallman, Jehu Martinez, Rohan Shankar, Kane Rylander, Roland E. Allen</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-24 15:29:57</h6>
+<p class='card-text'>We report the following calculations for a recently proposed bosonic dark
+matter WIMP with well-defined interactions: (1)~the mass as determined by
+fitting to the relic abundance; (2)~the current annihilation cross-section for
+indirect detection; (3)~cross-sections for pair production accompanied by jets
+in proton colliders with center-of-mass energies ranging from 13 to 100 TeV;
+(4)~for the high-luminosity LHC, and planned 100 TeV proton collider, detailed
+plots of experimentally accessible quantities before and after optimal cuts;
+(5)~cross-sections, and plots of experimentally accessible quantities, for
+production in e$^+$e$^-$ or muon colliders with center-of-mass energies up to
+10 TeV; (6)~cross-section per nucleon for direct detection. The conclusions are
+given in the text, including the principal prediction that (with optimal cuts)
+this particle should be detectable at the high-luminosity LHC, perhaps after
+only two years with an integrated luminosity of 500 fb$^{-1}$.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.19712v1' target='_blank'>Estimating Spatially-Dependent GPS Errors Using a Swarm of Robots</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Praneeth Somisetty, Robert Griffin, Victor M. Baez, Miguel F. Arevalo-Castiblanco, Aaron T. Becker, Jason M. O'Kane</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-24 15:19:39</h6>
+<p class='card-text'>External factors, including urban canyons and adversarial interference, can
+lead to Global Positioning System (GPS) inaccuracies that vary as a function of
+the position in the environment. This study addresses the challenge of
+estimating a static, spatially-varying error function using a team of robots.
+We introduce a State Bias Estimation Algorithm (SBE) whose purpose is to
+estimate the GPS biases. The central idea is to use sensed estimates of the
+range and bearing to the other robots in the team to estimate changes in bias
+across the environment. A set of drones moves in a 2D environment, each
+sampling data from GPS, range, and bearing sensors. The biases calculated by
+the SBE at estimated positions are used to train a Gaussian Process Regression
+(GPR) model. We use a Sparse Gaussian process-based Informative Path Planning
+(IPP) algorithm that identifies high-value regions of the environment for data
+collection. The swarm plans paths that maximize information gain in each
+iteration, further refining their understanding of the environment's positional
+bias landscape. We evaluated SBE and IPP in simulation and compared the IPP
+methodology to an open-loop strategy.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.19703v1' target='_blank'>Learning-aided Bigraph Matching Approach to Multi-Crew Restoration of
+  Damaged Power Networks Coupled with Road Transportation Networks</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Nathan Maurer, Harshal Kaushik, Roshni Anna Jacob, Jie Zhang, Souma Chowdhury</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-24 15:12:45</h6>
+<p class='card-text'>The resilience of critical infrastructure networks (CINs) after disruptions,
+such as those caused by natural hazards, depends on both the speed of
+restoration and the extent to which operational functionality can be regained.
+Allocating resources for restoration is a combinatorial optimal planning
+problem that involves determining which crews will repair specific network
+nodes and in what order. This paper presents a novel graph-based formulation
+that merges two interconnected graphs, representing crew and transportation
+nodes and power grid nodes, into a single heterogeneous graph. To enable
+efficient planning, graph reinforcement learning (GRL) is integrated with
+bigraph matching. GRL is utilized to design the incentive function for
+assigning crews to repair tasks based on the graph-abstracted state of the
+environment, ensuring generalization across damage scenarios. Two learning
+techniques are employed: a graph neural network trained using Proximal Policy
+Optimization and another trained via Neuroevolution. The learned incentive
+functions inform a bipartite graph that links crews to repair tasks, enabling
+weighted maximum matching for crew-to-task allocations. An efficient simulation
+environment that pre-computes optimal node-to-node path plans is used to train
+the proposed restoration planning methods. An IEEE 8500-bus power distribution
+test network coupled with a 21 square km transportation network is used as the
+case study, with scenarios varying in terms of numbers of damaged nodes,
+depots, and crews. Results demonstrate the approach's generalizability and
+scalability across scenarios, with learned policies providing 3-fold better
+performance than random policies, while also outperforming optimization-based
+solutions in both computation time (by several orders of magnitude) and power
+restored.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.19698v1' target='_blank'>Toward Decision-Oriented Prognostics: An Integrated Estimate-Optimize
+  Framework for Predictive Maintenance</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Zhuojun Xie, Adam Abdin, Yiping Fang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-24 15:10:15</h6>
+<p class='card-text'>Recent research increasingly integrates machine learning (ML) into predictive
+maintenance (PdM) to reduce operational and maintenance costs in data-rich
+operational settings. However, uncertainty due to model misspecification
+continues to limit widespread industrial adoption. This paper proposes a PdM
+framework in which sensor-driven prognostics inform decision-making under
+economic trade-offs within a finite decision space. We investigate two key
+questions: (1) Does higher predictive accuracy necessarily lead to better
+maintenance decisions? (2) If not, how can the impact of prediction errors on
+downstream maintenance decisions be mitigated? We first demonstrate that in the
+traditional estimate-then-optimize (ETO) framework, errors in probabilistic
+prediction can result in inconsistent and suboptimal maintenance decisions. To
+address this, we propose an integrated estimate-optimize (IEO) framework that
+jointly tunes predictive models while directly optimizing for maintenance
+outcomes. We establish theoretical finite-sample guarantees on decision
+consistency under standard assumptions. Specifically, we develop a stochastic
+perturbation gradient descent algorithm suitable for small run-to-failure
+datasets. Empirical evaluations on a turbofan maintenance case study show that
+the IEO framework reduces average maintenance regret up to 22% compared to ETO.
+This study provides a principled approach to managing prediction errors in
+data-driven PdM. By aligning prognostic model training with maintenance
+objectives, the IEO framework improves robustness under model misspecification
+and improves decision quality. The improvement is particularly pronounced when
+the decision-making policy is misaligned with the decision-maker's target.
+These findings support more reliable maintenance planning in uncertain
+operational environments.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.19686v1' target='_blank'>From memories to maps: Mechanisms of in context reinforcement learning
+  in transformers</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Ching Fang, Kanaka Rajan</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-24 14:55:43</h6>
+<p class='card-text'>Humans and animals show remarkable learning efficiency, adapting to new
+environments with minimal experience. This capability is not well captured by
+standard reinforcement learning algorithms that rely on incremental value
+updates. Rapid adaptation likely depends on episodic memory -- the ability to
+retrieve specific past experiences to guide decisions in novel contexts.
+Transformers provide a useful setting for studying these questions because of
+their ability to learn rapidly in-context and because their key-value
+architecture resembles episodic memory systems in the brain. We train a
+transformer to in-context reinforcement learn in a distribution of planning
+tasks inspired by rodent behavior. We then characterize the learning algorithms
+that emerge in the model. We first find that representation learning is
+supported by in-context structure learning and cross-context alignment, where
+representations are aligned across environments with different sensory stimuli.
+We next demonstrate that the reinforcement learning strategies developed by the
+model are not interpretable as standard model-free or model-based planning.
+Instead, we show that in-context reinforcement learning is supported by caching
+intermediate computations within the model's memory tokens, which are then
+accessed at decision time. Overall, we find that memory may serve as a
+computational resource, storing both raw experience and cached computations to
+support flexible behavior. Furthermore, the representations developed in the
+model resemble computations associated with the hippocampal-entorhinal system
+in the brain, suggesting that our findings may be relevant for natural
+cognition. Taken together, our work offers a mechanistic hypothesis for the
+rapid adaptation that underlies in-context learning in artificial and natural
+settings.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.19639v1' target='_blank'>HOIverse: A Synthetic Scene Graph Dataset With Human Object Interactions</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Mrunmai Vivek Phatak, Julian Lorenz, Nico Hörmann, Jörg Hähner, Rainer Lienhart</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-24 14:00:31</h6>
+<p class='card-text'>When humans and robotic agents coexist in an environment, scene understanding
+becomes crucial for the agents to carry out various downstream tasks like
+navigation and planning. Hence, an agent must be capable of localizing and
+identifying actions performed by the human. Current research lacks reliable
+datasets for performing scene understanding within indoor environments where
+humans are also a part of the scene. Scene Graphs enable us to generate a
+structured representation of a scene or an image to perform visual scene
+understanding. To tackle this, we present HOIverse a synthetic dataset at the
+intersection of scene graph and human-object interaction, consisting of
+accurate and dense relationship ground truths between humans and surrounding
+objects along with corresponding RGB images, segmentation masks, depth images
+and human keypoints. We compute parametric relations between various pairs of
+objects and human-object pairs, resulting in an accurate and unambiguous
+relation definitions. In addition, we benchmark our dataset on state-of-the-art
+scene graph generation models to predict parametric relations and human-object
+interactions. Through this dataset, we aim to accelerate research in the field
+of scene understanding involving people.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.19621v1' target='_blank'>VideoPCDNet: Video Parsing and Prediction with Phase Correlation
+  Networks</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Noel José Rodrigues Vicente, Enrique Lehner, Angel Villar-Corrales, Jan Nogga, Sven Behnke</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-24 13:39:47</h6>
+<p class='card-text'>Understanding and predicting video content is essential for planning and
+reasoning in dynamic environments. Despite advancements, unsupervised learning
+of object representations and dynamics remains challenging. We present
+VideoPCDNet, an unsupervised framework for object-centric video decomposition
+and prediction. Our model uses frequency-domain phase correlation techniques to
+recursively parse videos into object components, which are represented as
+transformed versions of learned object prototypes, enabling accurate and
+interpretable tracking. By explicitly modeling object motion through a
+combination of frequency domain operations and lightweight learned modules,
+VideoPCDNet enables accurate unsupervised object tracking and prediction of
+future video frames. In our experiments, we demonstrate that VideoPCDNet
+outperforms multiple object-centric baseline models for unsupervised tracking
+and prediction on several synthetic datasets, while learning interpretable
+object and motion representations.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.19531v1' target='_blank'>ReMAR-DS: Recalibrated Feature Learning for Metal Artifact Reduction and
+  CT Domain Transformation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Mubashara Rehman, Niki Martinel, Michele Avanzo, Riccardo Spizzo, Christian Micheloni</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-24 11:34:35</h6>
+<p class='card-text'>Artifacts in kilo-Voltage CT (kVCT) imaging degrade image quality, impacting
+clinical decisions. We propose a deep learning framework for metal artifact
+reduction (MAR) and domain transformation from kVCT to Mega-Voltage CT (MVCT).
+The proposed framework, ReMAR-DS, utilizes an encoder-decoder architecture with
+enhanced feature recalibration, effectively reducing artifacts while preserving
+anatomical structures. This ensures that only relevant information is utilized
+in the reconstruction process. By infusing recalibrated features from the
+encoder block, the model focuses on relevant spatial regions (e.g., areas with
+artifacts) and highlights key features across channels (e.g., anatomical
+structures), leading to improved reconstruction of artifact-corrupted regions.
+Unlike traditional MAR methods, our approach bridges the gap between
+high-resolution kVCT and artifact-resistant MVCT, enhancing radiotherapy
+planning. It produces high-quality MVCT-like reconstructions, validated through
+qualitative and quantitative evaluations. Clinically, this enables oncologists
+to rely on kVCT alone, reducing repeated high-dose MVCT scans and lowering
+radiation exposure for cancer patients.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.19479v1' target='_blank'>An analytical model of depth-dose distributions for carbon-ion beams</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Fulya Halıcılar, Metin Arık</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-24 10:14:36</h6>
+<p class='card-text'>Improving effective treatment plans in carbon ion therapy, especially for
+targeting radioresistant tumors located in deep seated regions while sparing
+normal tissues, depends on a precise and computationally efficient dose
+calculation model. Although dose calculations are mostly performed using Monte
+Carlo simulations, the large amount of computational effort required for these
+simulations hinders their use in clinical practice. To address this gap, we
+propose, for the first time in the literature, an analytical model for the
+depth dose distribution of carbon ion beams by adapting and extending Bortfeld
+proton dose model. The Bortfeld model was modified and expanded by introducing
+additional terms and parameters to account for the energy deposition and
+fragmentation effects characteristic of carbon ions. Our model was implemented
+in MATLAB software to calculate depth-dose distributions of carbon ion beams
+across the clinical energy range of 100-430 MeV/u. The calculated results for
+carbon ion energies of 280 MeV/u and 430 MeV/u were compared with Monte Carlo
+simulation results from TOPAS to assess the precision of our model. It is
+observed that the results of the proposed model are in good agreement with
+those of several analytical and experimental studies for clinical carbon ion
+beams within the therapeutic energy range of 100-400 MeV/u. At 280 MeV/u, the
+analytical model result exhibited strong consistency with the depth dose curve
+produced by TOPAS Monte Carlo simulations. However, noticeable discrepancies
+appeared at higher energies, such as 430 MeV/u, particularly in the Bragg peak
+height and the dose falloff. In the clinically useful energy range, our model
+could potentially be an effective tool in carbon ion therapy as an alternative
+to complex Monte Carlo simulations. It will enable fast dose assessment with
+accuracy and in real time, thus improving workflow efficiency.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.19398v1' target='_blank'>ClearerVoice-Studio: Bridging Advanced Speech Processing Research and
+  Practical Deployment</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Shengkui Zhao, Zexu Pan, Bin Ma</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-24 08:01:33</h6>
+<p class='card-text'>This paper introduces ClearerVoice-Studio, an open-source, AI-powered speech
+processing toolkit designed to bridge cutting-edge research and practical
+application. Unlike broad platforms like SpeechBrain and ESPnet,
+ClearerVoice-Studio focuses on interconnected speech tasks of speech
+enhancement, separation, super-resolution, and multimodal target speaker
+extraction. A key advantage is its state-of-the-art pretrained models,
+including FRCRN with 3 million uses and MossFormer with 2.5 million uses,
+optimized for real-world scenarios. It also offers model optimization tools,
+multi-format audio support, the SpeechScore evaluation toolkit, and
+user-friendly interfaces, catering to researchers, developers, and end-users.
+Its rapid adoption attracting 3000 GitHub stars and 239 forks highlights its
+academic and industrial impact. This paper details ClearerVoice-Studio's
+capabilities, architectures, training strategies, benchmarks, community impact,
+and future plan. Source code is available at
+https://github.com/modelscope/ClearerVoice-Studio.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.19391v1' target='_blank'>Generate the Forest before the Trees -- A Hierarchical Diffusion model
+  for Climate Downscaling</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Declan J. Curran, Sanaa Hobeichi, Hira Saleem, Hao Xue, Flora D. Salim</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-24 07:39:53</h6>
+<p class='card-text'>Downscaling is essential for generating the high-resolution climate data
+needed for local planning, but traditional methods remain computationally
+demanding. Recent years have seen impressive results from AI downscaling
+models, particularly diffusion models, which have attracted attention due to
+their ability to generate ensembles and overcome the smoothing problem common
+in other AI methods. However, these models typically remain computationally
+intensive. We introduce a Hierarchical Diffusion Downscaling (HDD) model, which
+introduces an easily-extensible hierarchical sampling process to the diffusion
+framework. A coarse-to-fine hierarchy is imposed via a simple downsampling
+scheme. HDD achieves competitive accuracy on ERA5 reanalysis datasets and CMIP6
+models, significantly reducing computational load by running on up to half as
+many pixels with competitive results. Additionally, a single model trained at
+0.25{\deg} resolution transfers seamlessly across multiple CMIP6 models with
+much coarser resolution. HDD thus offers a lightweight alternative for
+probabilistic climate downscaling, facilitating affordable large-ensemble
+high-resolution climate projections. See a full code implementation at:
+https://github.com/HDD-Hierarchical-Diffusion-Downscaling/HDD-Hierarchical-Diffusion-Downscaling.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.19118v2' target='_blank'>LKA: Large Kernel Adapter for Enhanced Medical Image Classification</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Ziquan Zhu, Si-Yuan Lu, Tianjin Huang, Lu Liu, Zhe Liu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-23 20:47:33</h6>
+<p class='card-text'>Despite the notable success of current Parameter-Efficient Fine-Tuning (PEFT)
+methods across various domains, their effectiveness on medical datasets falls
+short of expectations. This limitation arises from two key factors: (1) medical
+images exhibit extensive anatomical variation and low contrast, necessitating a
+large receptive field to capture critical features, and (2) existing PEFT
+methods do not explicitly address the enhancement of receptive fields. To
+overcome these challenges, we propose the Large Kernel Adapter (LKA), designed
+to expand the receptive field while maintaining parameter efficiency. The
+proposed LKA consists of three key components: down-projection, channel-wise
+large kernel convolution, and up-projection. Through extensive experiments on
+various datasets and pre-trained models, we demonstrate that the incorporation
+of a larger kernel size is pivotal in enhancing the adaptation of pre-trained
+models for medical image analysis. Our proposed LKA outperforms 11 commonly
+used PEFT methods, surpassing the state-of-the-art by 3.5% in top-1 accuracy
+across five medical datasets.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.19880v1' target='_blank'>Physics-Guided Radiotherapy Treatment Planning with Deep Learning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Stefanos Achlatis, Efstratios Gavves, Jan-Jakob Sonke</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-23 19:44:56</h6>
+<p class='card-text'>Radiotherapy (RT) is a critical cancer treatment, with volumetric modulated
+arc therapy (VMAT) being a commonly used technique that enhances dose
+conformity by dynamically adjusting multileaf collimator (MLC) positions and
+monitor units (MU) throughout gantry rotation. Adaptive radiotherapy requires
+frequent modifications to treatment plans to account for anatomical variations,
+necessitating time-efficient solutions. Deep learning offers a promising
+solution to automate this process. To this end, we propose a two-stage,
+physics-guided deep learning pipeline for radiotherapy planning. In the first
+stage, our network is trained with direct supervision on treatment plan
+parameters, consisting of MLC and MU values. In the second stage, we
+incorporate an additional supervision signal derived from the predicted 3D dose
+distribution, integrating physics-based guidance into the training process. We
+train and evaluate our approach on 133 prostate cancer patients treated with a
+uniform 2-arc VMAT protocol delivering a dose of 62 Gy to the planning target
+volume (PTV). Our results demonstrate that the proposed approach, implemented
+using both 3D U-Net and UNETR architectures, consistently produces treatment
+plans that closely match clinical ground truths. Our method achieves a mean
+difference of D95% = 0.42 +/- 1.83 Gy and V95% = -0.22 +/- 1.87% at the PTV
+while generating dose distributions that reduce radiation exposure to organs at
+risk. These findings highlight the potential of physics-guided deep learning in
+RT planning.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js'></script>
+</body>
+</html>
