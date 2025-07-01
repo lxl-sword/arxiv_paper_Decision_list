@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>planning - 2025-07-01</title>
+<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap' rel='stylesheet'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css'>
+<style>
+body {
+font-family: 'Roboto', sans-serif;
+background-color: #f5f7fa;
+padding: 20px;
+}
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.card-title {
+    font-weight: 700;
+}
+.card:hover {
+    transform: scale(1.02);
+    transition: 0.3s ease-in-out;
+}
+</style>
+</head>
+<body>
+<div class='container'>
+<h1 class='text-center my-4'><i class='fas fa-book'></i>planning - 2025-07-01</h1>
+<div class='row'>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.24113v1' target='_blank'>Epona: Autoregressive Diffusion World Model for Autonomous Driving</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Kaiwen Zhang, Zhenyu Tang, Xiaotao Hu, Xingang Pan, Xiaoyang Guo, Yuan Liu, Jingwei Huang, Li Yuan, Qian Zhang, Xiao-Xiao Long, Xun Cao, Wei Yin</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-30 17:56:35</h6>
+<p class='card-text'>Diffusion models have demonstrated exceptional visual quality in video
+generation, making them promising for autonomous driving world modeling.
+However, existing video diffusion-based world models struggle with
+flexible-length, long-horizon predictions and integrating trajectory planning.
+This is because conventional video diffusion models rely on global joint
+distribution modeling of fixed-length frame sequences rather than sequentially
+constructing localized distributions at each timestep. In this work, we propose
+Epona, an autoregressive diffusion world model that enables localized
+spatiotemporal distribution modeling through two key innovations: 1) Decoupled
+spatiotemporal factorization that separates temporal dynamics modeling from
+fine-grained future world generation, and 2) Modular trajectory and video
+prediction that seamlessly integrate motion planning with visual modeling in an
+end-to-end framework. Our architecture enables high-resolution, long-duration
+generation while introducing a novel chain-of-forward training strategy to
+address error accumulation in autoregressive loops. Experimental results
+demonstrate state-of-the-art performance with 7.4\% FVD improvement and minutes
+longer prediction duration compared to prior works. The learned world model
+further serves as a real-time motion planner, outperforming strong end-to-end
+planners on NAVSIM benchmarks. Code will be publicly available at
+\href{https://github.com/Kevin-thu/Epona/}{https://github.com/Kevin-thu/Epona/}.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.24061v1' target='_blank'>Beyond Distance: Mobility Neural Embeddings Reveal Visible and Invisible
+  Barriers in Urban Space</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Guangyuan Weng, Minsuk Kim, Yong-Yeol Ahn, Esteban Moro</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-30 17:08:26</h6>
+<p class='card-text'>Human mobility in cities is shaped not only by visible structures such as
+highways, rivers, and parks but also by invisible barriers rooted in
+socioeconomic segregation, uneven access to amenities, and administrative
+divisions. Yet identifying and quantifying these barriers at scale and their
+relative importance on people's movements remains a major challenge. Neural
+embedding models, originally developed for language, offer a powerful way to
+capture the complexity of human mobility from large-scale data. Here, we apply
+this approach to 25.4 million observed trajectories across 11 major U.S.
+cities, learning mobility embeddings that reveal how people move through urban
+space. These mobility embeddings define a functional distance between places,
+one that reflects behavioral rather than physical proximity, and allow us to
+detect barriers between neighborhoods that are geographically close but
+behaviorally disconnected. We find that the strongest predictors of these
+barriers are differences in access to amenities, administrative borders, and
+residential segregation by income and race. These invisible borders are
+concentrated in urban cores and persist across cities, spatial scales, and time
+periods. Physical infrastructure, such as highways and parks, plays a secondary
+but still significant role, especially at short distances. We also find that
+individuals who cross barriers tend to do so outside of traditional commuting
+hours and are more likely to live in areas with greater racial diversity, and
+higher transit use or income. Together, these findings reveal how spatial,
+social, and behavioral forces structure urban accessibility and provide a
+scalable framework to detect and monitor barriers in cities, with applications
+in planning, policy evaluation, and equity analysis.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.24019v1' target='_blank'>Ella: Embodied Social Agents with Lifelong Memory</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Hongxin Zhang, Zheyuan Zhang, Zeyuan Wang, Zunzhe Zhang, Lixing Fang, Qinhong Zhou, Chuang Gan</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-30 16:22:51</h6>
+<p class='card-text'>We introduce Ella, an embodied social agent capable of lifelong learning
+within a community in a 3D open world, where agents accumulate experiences and
+acquire knowledge through everyday visual observations and social interactions.
+At the core of Ella's capabilities is a structured, long-term multimodal memory
+system that stores, updates, and retrieves information effectively. It consists
+of a name-centric semantic memory for organizing acquired knowledge and a
+spatiotemporal episodic memory for capturing multimodal experiences. By
+integrating this lifelong memory system with foundation models, Ella retrieves
+relevant information for decision-making, plans daily activities, builds social
+relationships, and evolves autonomously while coexisting with other intelligent
+beings in the open world. We conduct capability-oriented evaluations in a
+dynamic 3D open world where 15 agents engage in social activities for days and
+are assessed with a suite of unseen controlled evaluations. Experimental
+results show that Ella can influence, lead, and cooperate with other agents
+well to achieve goals, showcasing its ability to learn effectively through
+observation and social interaction. Our findings highlight the transformative
+potential of combining structured memory systems with foundation models for
+advancing embodied intelligence. More videos can be found at
+https://umass-embodied-agi.github.io/Ella/.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.23999v1' target='_blank'>Predictive Risk Analysis and Safe Trajectory Planning for Intelligent
+  and Connected Vehicles</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Zeyu Han, Mengchi Cai, Chaoyi Chen, Qingwen Meng, Guangwei Wang, Ying Liu, Qing Xu, Jianqiang Wang, Keqiang Li</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-30 16:02:54</h6>
+<p class='card-text'>The safe trajectory planning of intelligent and connected vehicles is a key
+component in autonomous driving technology. Modeling the environment risk
+information by field is a promising and effective approach for safe trajectory
+planning. However, existing risk assessment theories only analyze the risk by
+current information, ignoring future prediction. This paper proposes a
+predictive risk analysis and safe trajectory planning framework for intelligent
+and connected vehicles. This framework first predicts future trajectories of
+objects by a local risk-aware algorithm, following with a
+spatiotemporal-discretised predictive risk analysis using the prediction
+results. Then the safe trajectory is generated based on the predictive risk
+analysis. Finally, simulation and vehicle experiments confirm the efficacy and
+real-time practicability of our approach.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.23995v1' target='_blank'>STCLocker: Deadlock Avoidance Testing for Autonomous Driving Systems</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Mingfei Cheng, Renzhi Wang, Xiaofei Xie, Yuan Zhou, Lei Ma</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-30 15:58:10</h6>
+<p class='card-text'>Autonomous Driving System (ADS) testing is essential to ensure the safety and
+reliability of autonomous vehicles (AVs) before deployment. However, existing
+techniques primarily focus on evaluating ADS functionalities in single-AV
+settings. As ADSs are increasingly deployed in multi-AV traffic, it becomes
+crucial to assess their cooperative performance, particularly regarding
+deadlocks, a fundamental coordination failure in which multiple AVs enter a
+circular waiting state indefinitely, resulting in motion planning failures.
+Despite its importance, the cooperative capability of ADSs to prevent deadlocks
+remains insufficiently underexplored. To address this gap, we propose the first
+dedicated Spatio-Temporal Conflict-Guided Deadlock Avoidance Testing technique,
+STCLocker, for generating DeadLock Scenarios (DLSs), where a group of AVs
+controlled by the ADS under test are in a circular wait state. STCLocker
+consists of three key components: Deadlock Oracle, Conflict Feedback, and
+Conflict-aware Scenario Generation. Deadlock Oracle provides a reliable
+black-box mechanism for detecting deadlock cycles among multiple AVs within a
+given scenario. Conflict Feedback and Conflict-aware Scenario Generation
+collaborate to actively guide AVs into simultaneous competition over spatial
+conflict resources (i.e., shared passing regions) and temporal competitive
+behaviors (i.e., reaching the conflict region at the same time), thereby
+increasing the effectiveness of generating conflict-prone deadlocks. We
+evaluate STCLocker on two types of ADSs: Roach, an end-to-end ADS, and OpenCDA,
+a module-based ADS supporting cooperative communication. Experimental results
+show that, on average, STCLocker generates more DLS than the best-performing
+baseline.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.23934v1' target='_blank'>QPART: Adaptive Model Quantization and Dynamic Workload Balancing for
+  Accuracy-aware Edge Inference</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Xiangchen Li, Saeid Ghafouri, Bo Ji, Hans Vandierendonck, Deepu John, Dimitrios S. Nikolopoulos</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-30 15:03:35</h6>
+<p class='card-text'>As machine learning inferences increasingly move to edge devices, adapting to
+diverse computational capabilities, hardware, and memory constraints becomes
+more critical. Instead of relying on a pre-trained model fixed for all future
+inference queries across diverse edge devices, we argue that planning an
+inference pattern with a request-specific model tailored to the device's
+computational capacity, accuracy requirements, and time constraints is more
+cost-efficient and robust to diverse scenarios. To this end, we propose an
+accuracy-aware and workload-balanced inference system that integrates joint
+model quantization and inference partitioning. In this approach, the server
+dynamically responds to inference queries by sending a quantized model and
+adaptively sharing the inference workload with the device. Meanwhile, the
+device's computational power, channel capacity, and accuracy requirements are
+considered when deciding.
+  Furthermore, we introduce a new optimization framework for the inference
+system, incorporating joint model quantization and partitioning. Our approach
+optimizes layer-wise quantization bit width and partition points to minimize
+time consumption and cost while accounting for varying accuracy requirements of
+tasks through an accuracy degradation metric in our optimization model. To our
+knowledge, this work represents the first exploration of optimizing
+quantization layer-wise bit-width in the inference serving system, by
+introducing theoretical measurement of accuracy degradation. Simulation results
+demonstrate a substantial reduction in overall time and power consumption, with
+computation payloads decreasing by over 80% and accuracy degradation kept below
+1%.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.23926v1' target='_blank'>Industrial brain: a human-like autonomous neuro-symbolic cognitive
+  decision-making system</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Junping Wang, Bicheng Wang, Yibo Xuea, Yuan Xie</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-30 14:54:52</h6>
+<p class='card-text'>Resilience non-equilibrium measurement, the ability to maintain fundamental
+functionality amidst failures and errors, is crucial for scientific management
+and engineering applications of industrial chain. The problem is particularly
+challenging when the number or types of multiple co-evolution of resilience
+(for example, randomly placed) are extremely chaos. Existing end-to-end deep
+learning ordinarily do not generalize well to unseen full-feld reconstruction
+of spatiotemporal co-evolution structure, and predict resilience of network
+topology, especially in multiple chaos data regimes typically seen in
+real-world applications. To address this challenge, here we propose industrial
+brain, a human-like autonomous cognitive decision-making and planning framework
+integrating higher-order activity-driven neuro network and CT-OODA symbolic
+reasoning to autonomous plan resilience directly from observational data of
+global variable. The industrial brain not only understands and model structure
+of node activity dynamics and network co-evolution topology without simplifying
+assumptions, and reveal the underlying laws hidden behind complex networks, but
+also enabling accurate resilience prediction, inference, and planning.
+Experimental results show that industrial brain significantly outperforms
+resilience prediction and planning methods, with an accurate improvement of up
+to 10.8\% over GoT and OlaGPT framework and 11.03\% over spectral dimension
+reduction. It also generalizes to unseen topologies and dynamics and maintains
+robust performance despite observational disturbances. Our findings suggest
+that industrial brain addresses an important gap in resilience prediction and
+planning for industrial chain.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.23793v1' target='_blank'>Advancing Learnable Multi-Agent Pathfinding Solvers with Active
+  Fine-Tuning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Anton Andreychuk, Konstantin Yakovlev, Aleksandr Panov, Alexey Skrynnik</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-30 12:34:31</h6>
+<p class='card-text'>Multi-agent pathfinding (MAPF) is a common abstraction of multi-robot
+trajectory planning problems, where multiple homogeneous robots simultaneously
+move in the shared environment. While solving MAPF optimally has been proven to
+be NP-hard, scalable, and efficient, solvers are vital for real-world
+applications like logistics, search-and-rescue, etc. To this end, decentralized
+suboptimal MAPF solvers that leverage machine learning have come on stage.
+Building on the success of the recently introduced MAPF-GPT, a pure imitation
+learning solver, we introduce MAPF-GPT-DDG. This novel approach effectively
+fine-tunes the pre-trained MAPF model using centralized expert data. Leveraging
+a novel delta-data generation mechanism, MAPF-GPT-DDG accelerates training
+while significantly improving performance at test time. Our experiments
+demonstrate that MAPF-GPT-DDG surpasses all existing learning-based MAPF
+solvers, including the original MAPF-GPT, regarding solution quality across
+many testing scenarios. Remarkably, it can work with MAPF instances involving
+up to 1 million agents in a single environment, setting a new milestone for
+scalability in MAPF domains.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.23781v1' target='_blank'>Data-Driven Predictive Planning and Control for Aerial 3D Inspection
+  with Back-face Elimination</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Savvas Papaioannou, Panayiotis Kolios, Christos G. Panayiotou, Marios M. Polycarpou</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-30 12:23:34</h6>
+<p class='card-text'>Automated inspection with Unmanned Aerial Systems (UASs) is a transformative
+capability set to revolutionize various application domains. However, this task
+is inherently complex, as it demands the seamless integration of perception,
+planning, and control which existing approaches often treat separately.
+Moreover, it requires accurate long-horizon planning to predict action
+sequences, in contrast to many current techniques, which tend to be myopic. To
+overcome these limitations, we propose a 3D inspection approach that unifies
+perception, planning, and control within a single data-driven predictive
+control framework. Unlike traditional methods that rely on known UAS dynamic
+models, our approach requires only input-output data, making it easily
+applicable to off-the-shelf black-box UASs. Our method incorporates back-face
+elimination, a visibility determination technique from 3D computer graphics,
+directly into the control loop, thereby enabling the online generation of
+accurate, long-horizon 3D inspection trajectories.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.23780v1' target='_blank'>Production Planning Under Demand and Endogenous Supply Uncertainty</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Mike Hewitt, Giovanni Pantuso</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-30 12:22:40</h6>
+<p class='card-text'>We study the problem of determining how much finished goods inventory to
+source from different capacitated facilities in order to maximize profits
+resulting from sales of such inventory. We consider a problem wherein there is
+uncertainty in demand for finished goods inventory and production yields at
+facilities. Further, we consider that uncertainty in production yields is
+endogenous, as it depends on both the facilities where a product is produced
+and the volumes produced at those facilities. We model the problem as a two
+stage stochastic program and propose an exact, Benders-based algorithm for
+solving instances of the problem. We prove the correctness of the algorithm and
+with an extensive computational study demonstrate that it outperforms known
+benchmarks. Finally, we establish the value in modeling uncertainty in both
+demands and production yields.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.23768v1' target='_blank'>Motion Tracking with Muscles: Predictive Control of a Parametric
+  Musculoskeletal Canine Model</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Vittorio La Barbera, Steven Bohez, Leonard Hasenclever, Yuval Tassa, John R. Hutchinson</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-30 12:13:37</h6>
+<p class='card-text'>We introduce a novel musculoskeletal model of a dog, procedurally generated
+from accurate 3D muscle meshes. Accompanying this model is a motion
+capture-based locomotion task compatible with a variety of control algorithms,
+as well as an improved muscle dynamics model designed to enhance convergence in
+differentiable control frameworks. We validate our approach by comparing
+simulated muscle activation patterns with experimentally obtained
+electromyography (EMG) data from previous canine locomotion studies. This work
+aims to bridge gaps between biomechanics, robotics, and computational
+neuroscience, offering a robust platform for researchers investigating muscle
+actuation and neuromuscular control.We plan to release the full model along
+with the retargeted motion capture clips to facilitate further research and
+development.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.23740v1' target='_blank'>Campus5G: A Campus Scale Private 5G Open RAN Testbed</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Andrew E. Ferguson, Ujjwal Pawar, Tianxin Wang, Mahesh K. Marina</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-30 11:27:57</h6>
+<p class='card-text'>Mobile networks are embracing disaggregation, reflected by the industry trend
+towards Open RAN. Private 5G networks are viewed as particularly suitable
+contenders as early adopters of Open RAN, owing to their setting, high degree
+of control, and opportunity for innovation they present. Motivated by this, we
+have recently deployed Campus5G, the first of its kind campus-wide,
+O-RAN-compliant private 5G testbed across the central campus of the University
+of Edinburgh. We present in detail our process developing the testbed, from
+planning, to architecting, to deployment, and measuring the testbed
+performance. We then discuss the lessons learned from building the testbed, and
+highlight some research opportunities that emerged from our deployment
+experience.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.23700v1' target='_blank'>MedSAM-CA: A CNN-Augmented ViT with Attention-Enhanced Multi-Scale
+  Fusion for Medical Image Segmentation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Peiting Tian, Xi Chen, Haixia Bi, Fan Li</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-30 10:24:29</h6>
+<p class='card-text'>Medical image segmentation plays a crucial role in clinical diagnosis and
+treatment planning, where accurate boundary delineation is essential for
+precise lesion localization, organ identification, and quantitative assessment.
+In recent years, deep learning-based methods have significantly advanced
+segmentation accuracy. However, two major challenges remain. First, the
+performance of these methods heavily relies on large-scale annotated datasets,
+which are often difficult to obtain in medical scenarios due to privacy
+concerns and high annotation costs. Second, clinically challenging scenarios,
+such as low contrast in certain imaging modalities and blurry lesion boundaries
+caused by malignancy, still pose obstacles to precise segmentation. To address
+these challenges, we propose MedSAM-CA, an architecture-level fine-tuning
+approach that mitigates reliance on extensive manual annotations by adapting
+the pretrained foundation model, Medical Segment Anything (MedSAM). MedSAM-CA
+introduces two key components: the Convolutional Attention-Enhanced Boundary
+Refinement Network (CBR-Net) and the Attention-Enhanced Feature Fusion Block
+(Atte-FFB). CBR-Net operates in parallel with the MedSAM encoder to recover
+boundary information potentially overlooked by long-range attention mechanisms,
+leveraging hierarchical convolutional processing. Atte-FFB, embedded in the
+MedSAM decoder, fuses multi-level fine-grained features from skip connections
+in CBR-Net with global representations upsampled within the decoder to enhance
+boundary delineation accuracy. Experiments on publicly available datasets
+covering dermoscopy, CT, and MRI imaging modalities validate the effectiveness
+of MedSAM-CA. On dermoscopy dataset, MedSAM-CA achieves 94.43% Dice with only
+2% of full training data, reaching 97.25% of full-data training performance,
+demonstrating strong effectiveness in low-resource clinical settings.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.23624v1' target='_blank'>Towards Universal Shared Control in Teleoperation Without Haptic
+  Feedback</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Max Grobbel, Tristan Schneider, Sören Hohmann</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-30 08:40:52</h6>
+<p class='card-text'>Teleoperation with non-haptic VR controllers deprives human operators of
+critical motion feedback. We address this by embedding a multi-objective
+optimization problem that converts user input into collision-free UR5e joint
+trajectories while actively suppressing liquid slosh in a glass. The controller
+maintains 13 ms average planning latency, confirming real-time performance and
+motivating the augmentation of this teleoperation approach to further
+objectives.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.23614v1' target='_blank'>Passage-traversing optimal path planning with sampling-based algorithms</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jing Huang, Hao Su, Kwok Wai Samuel Au</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-30 08:19:04</h6>
+<p class='card-text'>This paper introduces a new paradigm of optimal path planning, i.e.,
+passage-traversing optimal path planning (PTOPP), that optimizes paths'
+traversed passages for specified optimization objectives. In particular, PTOPP
+is utilized to find the path with optimal accessible free space along its
+entire length, which represents a basic requirement for paths in robotics. As
+passages are places where free space shrinks and becomes constrained, the core
+idea is to leverage the path's passage traversal status to characterize its
+accessible free space comprehensively. To this end, a novel passage detection
+and free space decomposition method using proximity graphs is proposed,
+enabling fast detection of sparse but informative passages and environment
+decompositions. Based on this preprocessing, optimal path planning with
+accessible free space objectives or constraints is formulated as PTOPP problems
+compatible with sampling-based optimal planners. Then, sampling-based
+algorithms for PTOPP, including their dependent primitive procedures, are
+developed leveraging partitioned environments for fast passage traversal check.
+All these methods are implemented and thoroughly tested for effectiveness and
+efficiency validation. Compared to existing approaches, such as clearance-based
+methods, PTOPP demonstrates significant advantages in configurability, solution
+optimality, and efficiency, addressing prior limitations and incapabilities. It
+is believed to provide an efficient and versatile solution to accessible free
+space optimization over conventional avenues and more generally, to a broad
+class of path planning problems that can be formulated as PTOPP.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.23509v1' target='_blank'>Power-Gas Infrastructure Planning under Weather-induced Supply and
+  Demand Uncertainties</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Rahman Khorramfar, Dharik Mallapragada, Saurabh Amin</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-30 04:20:40</h6>
+<p class='card-text'>Implementing economy-wide decarbonization strategies based on decarbonizing
+the power grid via variable renewable energy (VRE) expansion and
+electrification of end-uses requires new approaches for energy infrastructure
+planning that consider, among other factors, weather-induced uncertainty in
+demand and VRE supply. An energy planning model that fails to account for these
+uncertainties can hinder the intended transition efforts to a low-carbon grid
+and increase the risk of supply shortage especially during extreme weather
+conditions. Here, we consider the generation and transmission expansion problem
+of joint power-gas infrastructure and operations planning under the uncertainty
+of both demand and renewable supply. We propose two distributionally robust
+optimization approaches based on moment (MDRO) and Wasserstein distance (WDRO)
+ambiguity sets to endogenize these uncertainties and account for the change in
+the underlying distribution of these parameters that is caused by the climate
+change, among other factors. Furthermore, our model considers the risk-aversion
+of the energy planners in the modeling framework via the conditional
+value-at-risk (CVaR) metric. An equivalent mixed-integer linear programming
+(MILP) reformulation of both modeling frameworks is presented, and a
+computationally efficient approximation scheme to obtain near-optimal solutions
+is proposed. We demonstrate the resulting DRO planning models and solution
+strategy via a New England case study under different levels of end-use
+electrification and decarbonization targets. Our experiments systematically
+explore different modeling aspects and compare the DRO models with stochastic
+programming (SP) results.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.23490v1' target='_blank'>UltraTwin: Towards Cardiac Anatomical Twin Generation from Multi-view 2D
+  Ultrasound</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Junxuan Yu, Yaofei Duan, Yuhao Huang, Yu Wang, Rongbo Ling, Weihao Luo, Ang Zhang, Jingxian Xu, Qiongying Ni, Yongsong Zhou, Binghan Li, Haoran Dou, Liping Liu, Yanfen Chu, Feng Geng, Zhe Sheng, Zhifeng Ding, Dingxin Zhang, Rui Huang, Yuhang Zhang, Xiaowei Xu, Tao Tan, Dong Ni, Zhongshan Gou, Xin Yang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-30 03:27:42</h6>
+<p class='card-text'>Echocardiography is routine for cardiac examination. However, 2D ultrasound
+(US) struggles with accurate metric calculation and direct observation of 3D
+cardiac structures. Moreover, 3D US is limited by low resolution, small field
+of view and scarce availability in practice. Constructing the cardiac
+anatomical twin from 2D images is promising to provide precise treatment
+planning and clinical quantification. However, it remains challenging due to
+the rare paired data, complex structures, and US noises. In this study, we
+introduce a novel generative framework UltraTwin, to obtain cardiac anatomical
+twin from sparse multi-view 2D US. Our contribution is three-fold. First,
+pioneered the construction of a real-world and high-quality dataset containing
+strictly paired multi-view 2D US and CT, and pseudo-paired data. Second, we
+propose a coarse-to-fine scheme to achieve hierarchical reconstruction
+optimization. Last, we introduce an implicit autoencoder for topology-aware
+constraints. Extensive experiments show that UltraTwin reconstructs
+high-quality anatomical twins versus strong competitors. We believe it advances
+anatomical twin modeling for potential applications in personalized cardiac
+care.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.23477v1' target='_blank'>Thermal Inertia Controls on Titan's Surface Temperature and Planetary
+  Boundary Layer Structure</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Sooman Han, Juan M. Lora</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-30 02:46:00</h6>
+<p class='card-text'>Understanding Titan's planetary boundary layer (PBL) -- the lowest region of
+the atmosphere influenced by surface conditions -- remains challenging due to
+Titan's thick atmosphere and limited observations. Previous modeling studies
+have also produced inconsistent estimates of surface temperature, a critical
+determinant of PBL behavior, often without clear explanations grounded in
+surface energy balance. In this study, we develop a theoretical framework and
+apply a three-dimensional dry general circulation model (GCM) to investigate
+how surface thermal inertia influences surface energy balance and temperature
+variability across diurnal and seasonal timescales. At diurnal timescales,
+lower thermal inertia surfaces exhibit larger temperature swings and enhanced
+sensible heat fluxes due to inefficient subsurface heat conduction. In
+contrast, at seasonal timescales, surface temperature variations show weak
+sensitivity to thermal inertia, as atmospheric damping tends to dominate over
+subsurface conduction. The PBL depth ranges from a few hundred meters to 1,000
+m on diurnal timescales, while seasonal maxima reach 2,000--3,000 m, supporting
+the interpretation from a previous study that the Huygens probe captured the
+two PBL structures. Simulated seasonal winds at the Huygens landing site
+successfully reproduce key observed features, including near-surface retrograde
+winds and meridional wind reversals within the lowest few kilometers,
+consistent with Titan's cross-equatorial Hadley circulation. Simulations at the
+planned Dragonfly landing site predict shallower thermal PBLs with broadly
+similar wind patterns. This work establishes a physically grounded framework
+for understanding Titan's surface temperature and boundary layer variability,
+and offers a unified explanation of Titan's PBL behavior that provides improved
+guidance for future missions.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.23468v1' target='_blank'>NavMorph: A Self-Evolving World Model for Vision-and-Language Navigation
+  in Continuous Environments</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Xuan Yao, Junyu Gao, Changsheng Xu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-30 02:20:00</h6>
+<p class='card-text'>Vision-and-Language Navigation in Continuous Environments (VLN-CE) requires
+agents to execute sequential navigation actions in complex environments guided
+by natural language instructions. Current approaches often struggle with
+generalizing to novel environments and adapting to ongoing changes during
+navigation. Inspired by human cognition, we present NavMorph, a self-evolving
+world model framework that enhances environmental understanding and
+decision-making in VLN-CE tasks. NavMorph employs compact latent
+representations to model environmental dynamics, equipping agents with
+foresight for adaptive planning and policy refinement. By integrating a novel
+Contextual Evolution Memory, NavMorph leverages scene-contextual information to
+support effective navigation while maintaining online adaptability. Extensive
+experiments demonstrate that our method achieves notable performance
+improvements on popular VLN-CE benchmarks. Code is available at
+\href{https://github.com/Feliciaxyao/NavMorph}{this https URL}.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.23436v1' target='_blank'>Uncertainty Annotations for Holistic Test Description of Cyber-physical
+  Energy Systems</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Kai Heussen, Jan Sören Schwarz, Eike Schulte, Zhiwang Feng, Leonard Enrique Ramos Perez, John Nikoletatos, Filip Pröstl Andren</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-30 00:20:07</h6>
+<p class='card-text'>The complexity of experimental setups in the field of cyber-physical energy
+systems has motivated the development of the Holistic Test Description (HTD), a
+well-adopted approach for documenting and communicating test designs.
+Uncertainty, in its many flavours, is an important factor influencing the
+communication about experiment plans, execution of, and the reproducibility of
+experimental results. The work presented here focuses on supporting the
+structured analysis of experimental uncertainty aspects during planning and
+documenting complex energy systems tests. This paper introduces uncertainty
+extensions to the original HTD and an additional uncertainty analysis tool. The
+templates and tools are openly available and their use is exemplified in two
+case studies.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.23379v1' target='_blank'>Quantum Computing Architecture and Hardware for Engineers -- Step by
+  Step -- Volume II</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Hiu Yung Wong</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-29 19:28:45</h6>
+<p class='card-text'>After publishing my book "Quantum Computing Architecture and Hardware for
+Engineers: Step by Step" [1] (now I call it Volume I), in which spin qubit and
+superconducting qubit quantum computers were covered, I decided to continue to
+write the second volume to cover the trapped ion qubit quantum computer, which
+was also taught in my EE274 class. I follow the same structure as in Volume I
+by discussing the physics, mathematics, and their connection to laser pulses
+and electronics based on how they fulfill the five DiVincenzo's criteria. I
+also think it would be a good idea to share the second volume on arXiv so that
+more people can read it for free, and I can continue to update the contents. As
+of July 2025, I have finished the trapped ion quantum computer part. In the
+future, I plan to write more critical topics in a step-by-step manner to bridge
+engineers who did not receive rigorous training in Physics to the quantum
+computing world.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.23369v1' target='_blank'>GS-NBV: a Geometry-based, Semantics-aware Viewpoint Planning Algorithm
+  for Avocado Harvesting under Occlusions</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Xiao'ao Song, Konstantinos Karydis</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-29 19:07:40</h6>
+<p class='card-text'>Efficient identification of picking points is critical for automated fruit
+harvesting. Avocados present unique challenges owing to their irregular shape,
+weight, and less-structured growing environments, which require specific
+viewpoints for successful harvesting. We propose a geometry-based,
+semantics-aware viewpoint-planning algorithm to address these challenges. The
+planning process involves three key steps: viewpoint sampling, evaluation, and
+execution. Starting from a partially occluded view, the system first detects
+the fruit, then leverages geometric information to constrain the viewpoint
+search space to a 1D circle, and uniformly samples four points to balance the
+efficiency and exploration. A new picking score metric is introduced to
+evaluate the viewpoint suitability and guide the camera to the next-best view.
+We validate our method through simulation against two state-of-the-art
+algorithms. Results show a 100% success rate in two case studies with
+significant occlusions, demonstrating the efficiency and robustness of our
+approach. Our code is available at https://github.com/lineojcd/GSNBV</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.23368v1' target='_blank'>Optimizing Solar Energy Production in the USA: Time-Series Analysis
+  Using AI for Smart Energy Management</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Istiaq Ahmed, Md Asif Ul Hoq Khan, MD Zahedul Islam, Md Sakibul Hasan, Tanaya Jakir, Arat Hossain, Joynal Abed, Muhammad Hasanuzzaman, Sadia Sharmeen Shatyi, Kazi Nehal Hasnain</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-29 19:03:17</h6>
+<p class='card-text'>As the US rapidly moves towards cleaner energy sources, solar energy is fast
+becoming the pillar of its renewable energy mix. Even while solar energy is
+increasingly being used, its variability is a key hindrance to grid stability,
+storage efficiency, and system stability overall. Solar energy has emerged as
+one of the fastest-growing renewable energy sources in the United States,
+adding noticeably to the country's energy mix. Retrospectively, the necessity
+of inserting the sun's energy into the grid without disrupting reliability and
+cost efficiencies highlights the necessity of good forecasting software and
+smart control systems. The dataset utilized for this research project comprised
+both hourly and daily solar energy production records collected from multiple
+utility-scale solar farms across diverse U.S. regions, including California,
+Texas, and Arizona. Training and evaluation of all models were performed with a
+time-based cross-validation scheme, namely, sliding window validation. Both the
+Random Forest and the XG-Boost models demonstrated noticeably greater and the
+same performance across each of the measures considered, with relatively high
+accuracy. The almost perfect and equal performance by the Random Forest and
+XG-Boost models also shows both models to have learned the patterns in the data
+very comprehensively, with high reliability in their predictions. By
+incorporating AI-powered time-series models like XG-Boost in grid management
+software, utility companies can dynamically modify storage cycles in real-time
+as well as dispatch and peak load planning, based on their predictions.
+AI-powered solar forecasting also has profound implications for renewable
+energy policy and planning, particularly as U.S. federal and state governments
+accelerate toward ambitious decarbonization goals.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.23309v1' target='_blank'>SurgTPGS: Semantic 3D Surgical Scene Understanding with Text Promptable
+  Gaussian Splatting</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yiming Huang, Long Bai, Beilei Cui, Kun Yuan, Guankun Wang, Mobarakol Islam, Nicolas Padoy, Nassir Navab, Hongliang Ren</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-29 15:55:01</h6>
+<p class='card-text'>In contemporary surgical research and practice, accurately comprehending 3D
+surgical scenes with text-promptable capabilities is particularly crucial for
+surgical planning and real-time intra-operative guidance, where precisely
+identifying and interacting with surgical tools and anatomical structures is
+paramount. However, existing works focus on surgical vision-language model
+(VLM), 3D reconstruction, and segmentation separately, lacking support for
+real-time text-promptable 3D queries. In this paper, we present SurgTPGS, a
+novel text-promptable Gaussian Splatting method to fill this gap. We introduce
+a 3D semantics feature learning strategy incorporating the Segment Anything
+model and state-of-the-art vision-language models. We extract the segmented
+language features for 3D surgical scene reconstruction, enabling a more
+in-depth understanding of the complex surgical environment. We also propose
+semantic-aware deformation tracking to capture the seamless deformation of
+semantic features, providing a more precise reconstruction for both texture and
+semantic features. Furthermore, we present semantic region-aware optimization,
+which utilizes regional-based semantic information to supervise the training,
+particularly promoting the reconstruction quality and semantic smoothness. We
+conduct comprehensive experiments on two real-world surgical datasets to
+demonstrate the superiority of SurgTPGS over state-of-the-art methods,
+highlighting its potential to revolutionize surgical practices. SurgTPGS paves
+the way for developing next-generation intelligent surgical systems by
+enhancing surgical precision and safety. Our code is available at:
+https://github.com/lastbasket/SurgTPGS.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.23306v1' target='_blank'>GATSim: Urban Mobility Simulation with Generative Agents</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Qi Liu, Can Li, Wanjing Ma</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-29 15:52:16</h6>
+<p class='card-text'>Traditional agent-based urban mobility simulations rely on rigid rule-based
+systems that fail to capture the complexity, adaptability, and behavioral
+diversity characteristic of human travel decision-making. Recent advances in
+large language models and AI agent technology offer opportunities to create
+agents with reasoning capabilities, persistent memory, and adaptive learning
+mechanisms. We propose GATSim (Generative-Agent Transport Simulation), a novel
+framework that leverages these advances to create generative agents with rich
+behavioral characteristics for urban mobility simulation. Unlike conventional
+approaches, GATSim agents possess diverse socioeconomic attributes, individual
+lifestyles, and evolving preferences that shape their mobility decisions
+through psychologically-informed memory systems, tool usage capabilities, and
+lifelong learning mechanisms. The main contributions of this study include: (1)
+a comprehensive architecture combining an urban mobility foundation model with
+agent cognitive systems and transport simulation environment, (2) a fully
+functional prototype implementation, and (3) systematic validation
+demonstrating that generative agents produce believable travel behaviors.
+Through designed reflection processes, generative agents in this study can
+transform specific travel experiences into generalized insights, enabling
+realistic behavioral adaptation over time with specialized mechanisms for
+activity planning and real-time reactive behaviors tailored to urban mobility
+contexts. Experiments show that generative agents perform competitively with
+human annotators in mobility scenarios while naturally producing macroscopic
+traffic evolution patterns. The code for the prototype system is shared at
+https://github.com/qiliuchn/gatsim.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.23248v1' target='_blank'>Joint Trajectory and Resource Optimization for HAPs-SAR Systems with
+  Energy-Aware Constraints</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Bang Huang, Kihong Park, Xiaowei Pang, Mohamed-Slim Alouini</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-29 14:11:30</h6>
+<p class='card-text'>This paper investigates the joint optimization of trajectory planning and
+resource allocation for a high-altitude platform stations synthetic aperture
+radar (HAPs-SAR) system. To support real-time sensing and conserve the limited
+energy budget of the HAPs, the proposed framework assumes that the acquired
+radar data are transmitted in real time to a ground base station for SAR image
+reconstruction. A dynamic trajectory model is developed, and the power
+consumption associated with radar sensing, data transmission, and circular
+flight is comprehensively analyzed. In addition, solar energy harvesting is
+considered to enhance system sustainability. An energy-aware mixed-integer
+nonlinear programming (MINLP) problem is formulated to maximize radar beam
+coverage while satisfying operational constraints. To solve this challenging
+problem, a sub-optimal successive convex approximation (SCA)-based framework is
+proposed, incorporating iterative optimization and finite search. Simulation
+results validate the convergence of the proposed algorithm and demonstrate its
+effectiveness in balancing SAR performance, communication reliability, and
+energy efficiency. A final SAR imaging simulation on a 9-target lattice
+scenario further confirms the practical feasibility of the proposed solution.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.23163v1' target='_blank'>Importance of the numerical schemes in the CFD of the human nose</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Andrea Schillaci, Maurizio Quadrio</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-29 09:50:18</h6>
+<p class='card-text'>Computational fluid dynamics of the air flow in the human nasal cavities,
+starting from patient-specific Computer Tomography (CT) scans, is an important
+tool for diagnostics and surgery planning. However, a complete and systematic
+assessment of the influence of the main modeling assumptions is still lacking.
+In designing such simulations, choosing the discretization scheme, which is the
+main subject of the present work, is an often overlooked decision of primary
+importance. We use a comparison framework to quantify the effects of the major
+design choices on the results. The reconstructed airways of a healthy,
+representative adult patient are used to set up a computational study where
+such effects are systematically measured. It is found that the choice of the
+numerical scheme is the most important aspect, although all varied parameters
+impact the solution noticeably. For a physiologically meaningful flow rate,
+changes of the global pressure drop up to more than 50\% are observed; locally,
+velocity differences can become extremely significant. Our results call for an
+improved standard in the description of this type of numerical studies, where
+way too often the order of accuracy of the numerical scheme is not mentioned.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.23129v1' target='_blank'>Flatness-based Finite-Horizon Multi-UAV Formation Trajectory Planning
+  and Directionally Aware Collision Avoidance Tracking</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Hossein B. Jond, Logan Beaver, Martin Jiroušek, Naiemeh Ahmadlou, Veli Bakırcıoğlu, Martin Saska</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-29 07:45:03</h6>
+<p class='card-text'>Collision-free optimal formation control of unmanned aerial vehicle (UAV)
+teams is challenging. The state-of-the-art optimal control approaches often
+rely on numerical methods sensitive to initial guesses. This paper presents an
+innovative collision-free finite-time formation control scheme for multiple
+UAVs leveraging the differential flatness of the UAV dynamics, eliminating the
+need for numerical methods. We formulate a finite-time optimal control problem
+to plan a formation trajectory for feasible initial states. This formation
+trajectory planning optimal control problem involves a collective performance
+index to meet the formation requirements of achieving relative positions and
+velocity consensus. It is solved by applying Pontryagin's principle.
+Subsequently, a collision-constrained regulating problem is addressed to ensure
+collision-free tracking of the planned formation trajectory. The tracking
+problem incorporates a directionally aware collision avoidance strategy that
+prioritizes avoiding UAVs in the forward path and relative approach. It assigns
+lower priority to those on the sides with an oblique relative approach and
+disregards UAVs behind and not in the relative approach. The simulation results
+for a four-UAV team (re)formation problem confirm the efficacy of the proposed
+control scheme.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.23121v1' target='_blank'>CRISP-SAM2: SAM2 with Cross-Modal Interaction and Semantic Prompting for
+  Multi-Organ Segmentation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Xinlei Yu, Chanmiao Wang, Hui Jin, Ahmed Elazab, Gangyong Jia, Xiang Wan, Changqing Zou, Ruiquan Ge</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-29 07:05:27</h6>
+<p class='card-text'>Multi-organ medical segmentation is a crucial component of medical image
+processing, essential for doctors to make accurate diagnoses and develop
+effective treatment plans. Despite significant progress in this field, current
+multi-organ segmentation models often suffer from inaccurate details,
+dependence on geometric prompts and loss of spatial information. Addressing
+these challenges, we introduce a novel model named CRISP-SAM2 with CRoss-modal
+Interaction and Semantic Prompting based on SAM2. This model represents a
+promising approach to multi-organ medical segmentation guided by textual
+descriptions of organs. Our method begins by converting visual and textual
+inputs into cross-modal contextualized semantics using a progressive
+cross-attention interaction mechanism. These semantics are then injected into
+the image encoder to enhance the detailed understanding of visual information.
+To eliminate reliance on geometric prompts, we use a semantic prompting
+strategy, replacing the original prompt encoder to sharpen the perception of
+challenging targets. In addition, a similarity-sorting self-updating strategy
+for memory and a mask-refining process is applied to further adapt to medical
+imaging and enhance localized details. Comparative experiments conducted on
+seven public datasets indicate that CRISP-SAM2 outperforms existing models.
+Extensive analysis also demonstrates the effectiveness of our method, thereby
+confirming its superior performance, especially in addressing the limitations
+mentioned earlier. Our code is available at:
+https://github.com/YU-deep/CRISP\_SAM2.git.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.23022v1' target='_blank'>Predictive Analysis of Gmelina arborea (Melina) Growth in Plantations of
+  Esmeraldas: A Perspective for Silvicultural Management in Tropical Ecuador</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:José Gabriel Carvajal Benavides, Hugo Orlando Paredes Rodríguez, Oscar Armando Rosales Enríquez, Eduardo Jaime Chagna Avila, Xavier Germán Valencia Valenzuela, Guillermo David Varela Jácome</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-28 21:55:28</h6>
+<p class='card-text'>This study presents a rigorous assessment of the growth performance of
+Gmelina arborea (melina) in a 67-hectare plantation located in Chontaduro,
+Tabiazo Parish, Esmeraldas, Ecuador. The plantation was established in 2017
+under a high-density planting system (650 trees/ha). Permanent monitoring
+techniques were applied in 16 one-hectare plots to analyze structural growth
+variables, including survival rate, diameter at breast height (DBH), total
+height, commercial height, basal area, volume, and mean annual increment (MAI).
+The results show an average survival rate of 80.2%, with a mean DBH of 25.3 cm
+at five years, indicating sustained growth under favorable edaphoclimatic
+conditions. Volume was calculated using the equation V = G HT Ff, yielding
+average values of 183.262 m3 for total volume and 166.19 m3 for commercial
+volume. The estimated MAI for diameter and height was 5.06 cm/year and 3.61
+m/year, respectively, with values comparable to studies conducted in other
+Ecuadorian sites, although lower productivity was observed in Esmeraldas,
+attributed to edaphic and climatic differences identified through soil type and
+environmental condition analyses. The research highlights the significant
+influence of edaphic conditions, silvicultural management, and environmental
+variables on the performance of Gmelina arborea in tropical Ecuador. The
+findings provide a foundation for optimizing forest management strategies and
+improving growth indicators in commercial plantations, contributing to the
+sustainable development of forest resources in the region and strengthening
+silvicultural planning based on predictive models tailored to local conditions.
+This study represents a step forward in the scientific assessment of melina
+growth under Ecuadorian conditions, promoting more precise and sustainable
+silvicultural practices</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js'></script>
+</body>
+</html>
