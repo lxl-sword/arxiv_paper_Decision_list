@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>planning - 2025-07-16</title>
+<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap' rel='stylesheet'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css'>
+<style>
+body {
+font-family: 'Roboto', sans-serif;
+background-color: #f5f7fa;
+padding: 20px;
+}
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.card-title {
+    font-weight: 700;
+}
+.card:hover {
+    transform: scale(1.02);
+    transition: 0.3s ease-in-out;
+}
+</style>
+</head>
+<body>
+<div class='container'>
+<h1 class='text-center my-4'><i class='fas fa-book'></i>planning - 2025-07-16</h1>
+<div class='row'>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2507.11506v1' target='_blank'>Elk: Exploring the Efficiency of Inter-core Connected AI Chips with Deep
+  Learning Compiler Techniques</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yiqi Liu, Yuqi Xue, Noelle Crawford, Jilong Xue, Jian Huang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-07-15 17:21:31</h6>
+<p class='card-text'>To meet the increasing demand of deep learning (DL) models, AI chips are
+employing both off-chip memory (e.g., HBM) and high-bandwidth low-latency
+interconnect for direct inter-core data exchange. However, it is not easy to
+explore the efficiency of these inter-core connected AI (ICCA) chips, due to a
+fundamental tussle among compute (per-core execution), communication
+(inter-core data exchange), and I/O (off-chip data access).
+  In this paper, we develop Elk, a DL compiler framework to maximize the
+efficiency of ICCA chips by jointly trading off all the three performance
+factors discussed above. Elk structures these performance factors into
+configurable parameters and forms a global trade-off space in the DL compiler.
+To systematically explore this space and maximize overall efficiency, Elk
+employs a new inductive operator scheduling policy and a cost-aware on-chip
+memory allocation algorithm. It generates globally optimized execution plans
+that best overlap off-chip data loading and on-chip execution. To examine the
+efficiency of Elk, we build a full-fledged emulator based on a real ICCA chip
+IPU-POD4, and an ICCA chip simulator for sensitivity analysis with different
+interconnect network topologies. Elk achieves 94% of the ideal roofline
+performance of ICCA chips on average, showing the benefits of supporting large
+DL models on ICCA chips. We also show Elk's capability of enabling architecture
+design space exploration for new ICCA chip development.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2507.11489v1' target='_blank'>Solving Integrated Periodic Railway Timetabling with Satisfiability
+  Modulo Theories: A Scalable Approach to Routing and Vehicle Circulation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Florian Fuchs, Bernardo Martin-Iradi, Francesco Corman</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-07-15 17:02:03</h6>
+<p class='card-text'>This paper introduces a novel approach for jointly solving the periodic Train
+Timetabling Problem (TTP), train routing, and Vehicle Circulation Problem (VCP)
+through a unified optimization model. While these planning stages are
+traditionally addressed sequentially, their interdependencies often lead to
+suboptimal vehicle usage. We propose the VCR-PESP, an integrated formulation
+that minimizes fleet size while ensuring feasible and infrastructure-compliant
+periodic timetables. We present the first Satisfiability Modulo Theories
+(SMT)-based method for the VCR-PESP to solve the resulting large-scale
+instances. Unlike the Boolean Satisfiability Problem (SAT), which requires time
+discretisation, SMT supports continuous time via difference constraints,
+eliminating the trade-off between temporal precision and encoding size. Our
+approach avoids rounding artifacts and scales effectively, outperforming both
+SAT and Mixed Integer Program (MIP) models across non-trivial instances. Using
+real-world data from the Swiss narrow-gauge operator RhB, we conduct extensive
+experiments to assess the impact of time discretisation, vehicle circulation
+strategies, route flexibility, and planning integration. We show that discrete
+models inflate vehicle requirements and that fully integrated solutions
+substantially reduce fleet needs compared to sequential approaches. Our
+framework consistently delivers high-resolution solutions with tractable
+runtimes, even in large and complex networks. By combining modeling accuracy
+with scalable solver technology, this work establishes SMT as a powerful tool
+for integrated railway planning. It demonstrates how relaxing discretisation
+and solving across planning layers enables more efficient and implementable
+timetables.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2507.11474v1' target='_blank'>HUG-VAS: A Hierarchical NURBS-Based Generative Model for Aortic Geometry
+  Synthesis and Controllable Editing</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Pan Du, Mingqi Xu, Xiaozhi Zhu, Jian-xun Wang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-07-15 16:45:43</h6>
+<p class='card-text'>Accurate characterization of vascular geometry is essential for
+cardiovascular diagnosis and treatment planning. Traditional statistical shape
+modeling (SSM) methods rely on linear assumptions, limiting their expressivity
+and scalability to complex topologies such as multi-branch vascular structures.
+We introduce HUG-VAS, a Hierarchical NURBS Generative model for Vascular
+geometry Synthesis, which integrates NURBS surface parameterization with
+diffusion-based generative modeling to synthesize realistic, fine-grained
+aortic geometries. Trained with 21 patient-specific samples, HUG-VAS generates
+anatomically faithful aortas with supra-aortic branches, yielding biomarker
+distributions that closely match those of the original dataset. HUG-VAS adopts
+a hierarchical architecture comprising a denoising diffusion model that
+generates centerlines and a guided diffusion model that synthesizes radial
+profiles conditioned on those centerlines, thereby capturing two layers of
+anatomical variability. Critically, the framework supports zero-shot
+conditional generation from image-derived priors, enabling practical
+applications such as interactive semi-automatic segmentation, robust
+reconstruction under degraded imaging conditions, and implantable device
+optimization. To our knowledge, HUG-VAS is the first SSM framework to bridge
+image-derived priors with generative shape modeling via a unified integration
+of NURBS parameterization and hierarchical diffusion processes.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2507.11464v1' target='_blank'>LF: Online Multi-Robot Path Planning Meets Optimal Trajectory Control</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Ajay Shankar, Keisuke Okumura, Amanda Prorok</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-07-15 16:35:37</h6>
+<p class='card-text'>We propose a multi-robot control paradigm to solve point-to-point navigation
+tasks for a team of holonomic robots with access to the full environment
+information. The framework invokes two processes asynchronously at high
+frequency: (i) a centralized, discrete, and full-horizon planner for computing
+collision- and deadlock-free paths rapidly, leveraging recent advances in
+multi-agent pathfinding (MAPF), and (ii) dynamics-aware, robot-wise optimal
+trajectory controllers that ensure all robots independently follow their
+assigned paths reliably. This hierarchical shift in planning representation
+from (i) discrete and coupled to (ii) continuous and decoupled domains enables
+the framework to maintain long-term scalable motion synthesis. As an
+instantiation of this idea, we present LF, which combines a fast
+state-of-the-art MAPF solver (LaCAM), and a robust feedback control stack
+(Freyja) for executing agile robot maneuvers. LF provides a robust and
+versatile mechanism for lifelong multi-robot navigation even under asynchronous
+and partial goal updates, and adapts to dynamic workspaces simply by quick
+replanning. We present various multirotor and ground robot demonstrations,
+including the deployment of 15 real multirotors with random, consecutive target
+updates while a person walks through the operational workspace.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2507.11402v1' target='_blank'>From Production Logistics to Smart Manufacturing: The Vision for a New
+  RoboCup Industrial League</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Supun Dissanayaka, Alexander Ferrein, Till Hofmann, Kosuke Nakajima, Mario Sanz-Lopez, Jesus Savage, Daniel Swoboda, Matteo Tschesche, Wataru Uemura, Tarik Viehmann, Shohei Yasuda</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-07-15 15:17:04</h6>
+<p class='card-text'>The RoboCup Logistics League is a RoboCup competition in a smart factory
+scenario that has focused on task planning, job scheduling, and multi-agent
+coordination. The focus on production logistics allowed teams to develop highly
+competitive strategies, but also meant that some recent developments in the
+context of smart manufacturing are not reflected in the competition, weakening
+its relevance over the years. In this paper, we describe the vision for the
+RoboCup Smart Manufacturing League, a new competition designed as a larger
+smart manufacturing scenario, reflecting all the major aspects of a modern
+factory. It will consist of several tracks that are initially independent but
+gradually combined into one smart manufacturing scenario. The new tracks will
+cover industrial robotics challenges such as assembly, human-robot
+collaboration, and humanoid robotics, but also retain a focus on production
+logistics. We expect the reenvisioned competition to be more attractive to
+newcomers and well-tried teams, while also shifting the focus to current and
+future challenges of industrial robotics.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2507.11368v1' target='_blank'>Community Report from the 2025 SNOLAB Future Projects Workshop</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:M. D. Diamond, P. Abbamonte, A. Arvanitaki, D. M. Asner, D. Balut, D. Baxter, C. Blanco, D. Boreham, M. Boulay, B. Broerman, T. Brunner, E. Caden, A. Chavarria, M. Chen, J. P. Davis, A. Drlica-Wagner, J. Estrada, N. Fatemighomi, J. Foster, D. Freedman, C. Gao, J. Hall, S. Hall, W. Halperin, M. Hirschel, N. Hoch, Z. Hong, A. Ianni, C. Jillings, D. Johnson, Y. Kahn, C. B. Krauss, T. Laframboise, M. Lai, M. R. Lapointe, B. Lillard, H. Ma, E. Marrufo Villalpando, K. Mistry, M. Nguyen, J. Oh, A. Radick, H. Reaume, B. Roach, J. Schütte-Engel, S. Scorza, J. W. Scott, S. J. Sekula, D. Sinclair, C. Thome, L. Thompson, J. Tiffenberg, K. J. Vetter, A. Williams, L. A. Winslow, M. Wurm</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-07-15 14:39:47</h6>
+<p class='card-text'>SNOLAB hosts a biannual Future Projects Workshop (FPW) with the goal of
+encouraging future project stakeholders to present ideas, concepts, and needs
+for experiments or programs that could one day be hosted at SNOLAB. The 2025
+FPW was held in the larger context of a 15-year planning exercise requested by
+the Canada Foundation for Innovation. This report collects input from the
+community, including both contributions to the workshop and contributions that
+could not be scheduled in the workshop but nonetheless are important to the
+community.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2507.11361v1' target='_blank'>Adaptive Robust Optimization for European Electricity System Planning
+  Considering Regional Dunkelflaute Events</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Maximilian Bernecker, Smaranda Sgarciu, Xiaoming Kan, Mehrnaz Anvari, Iegor Riepin, Felix Müsgens</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-07-15 14:28:23</h6>
+<p class='card-text'>This study develops a capacity expansion model for a fully decarbonized
+European electricity system using an Adaptive Robust Optimization (ARO)
+framework. The model endogenously identifies the worst regional Dunkelflaute
+events, prolonged periods of low wind and solar availability, and incorporates
+multiple extreme weather realizations within a single optimization run. Results
+show that system costs rise nonlinearly with the geographic extent of these
+events: a single worst-case regional disruption increases costs by 9%, but
+broader disruptions across multiple regions lead to much sharper increases, up
+to 51%. As Dunkelflaute conditions extend across most of Europe, additional
+cost impacts level off, with a maximum increase of 71%. The optimal technology
+mix evolves with the severity of weather stress: while renewables, batteries,
+and interregional transmission are sufficient to manage localized events,
+large-scale disruptions require long-term hydrogen storage and load shedding to
+maintain system resilience. Central European regions, especially Germany and
+France, emerge as systemic bottlenecks, while peripheral regions bear the cost
+of compensatory overbuilding. These findings underscore the need for a
+coordinated European policy strategy that goes beyond national planning to
+support cross-border infrastructure investment, scale up flexible technologies
+such as long-duration storage, and promote a geographically balanced deployment
+of renewables to mitigate systemic risks associated with Dunkelflaute events.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2507.11345v1' target='_blank'>Acting and Planning with Hierarchical Operational Models on a Mobile
+  Robot: A Study with RAE+UPOM</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Oscar Lima, Marc Vinci, Sunandita Patra, Sebastian Stock, Joachim Hertzberg, Martin Atzmueller, Malik Ghallab, Dana Nau, Paolo Traverso</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-07-15 14:20:26</h6>
+<p class='card-text'>Robotic task execution faces challenges due to the inconsistency between
+symbolic planner models and the rich control structures actually running on the
+robot. In this paper, we present the first physical deployment of an integrated
+actor-planner system that shares hierarchical operational models for both
+acting and planning, interleaving the Reactive Acting Engine (RAE) with an
+anytime UCT-like Monte Carlo planner (UPOM). We implement RAE+UPOM on a mobile
+manipulator in a real-world deployment for an object collection task. Our
+experiments demonstrate robust task execution under action failures and sensor
+noise, and provide empirical insights into the interleaved acting-and-planning
+decision making process.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2507.11325v1' target='_blank'>HANS-Net: Hyperbolic Convolution and Adaptive Temporal Attention for
+  Accurate and Generalizable Liver and Tumor Segmentation in CT Imaging</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Arefin Ittesafun Abian, Ripon Kumar Debnath, Md. Abdur Rahman, Mohaimenul Azam Khan Raiaan, Md Rafiqul Islam, Asif Karim, Reem E. Mohamed, Sami Azam</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-07-15 13:56:37</h6>
+<p class='card-text'>Accurate liver and tumor segmentation on abdominal CT images is critical for
+reliable diagnosis and treatment planning, but remains challenging due to
+complex anatomical structures, variability in tumor appearance, and limited
+annotated data. To address these issues, we introduce Hyperbolic-convolutions
+Adaptive-temporal-attention with Neural-representation and Synaptic-plasticity
+Network (HANS-Net), a novel segmentation framework that synergistically
+combines hyperbolic convolutions for hierarchical geometric representation, a
+wavelet-inspired decomposition module for multi-scale texture learning, a
+biologically motivated synaptic plasticity mechanism for adaptive feature
+enhancement, and an implicit neural representation branch to model fine-grained
+and continuous anatomical boundaries. Additionally, we incorporate
+uncertainty-aware Monte Carlo dropout to quantify prediction confidence and
+lightweight temporal attention to improve inter-slice consistency without
+sacrificing efficiency. Extensive evaluations of the LiTS dataset demonstrate
+that HANS-Net achieves a mean Dice score of 93.26%, an IoU of 88.09%, an
+average symmetric surface distance (ASSD) of 0.72 mm, and a volume overlap
+error (VOE) of 11.91%. Furthermore, cross-dataset validation on the
+3D-IRCADb-01 dataset obtains an average Dice of 87.45%, IoU of 80.30%, ASSD of
+1.525 mm, and VOE of 19.71%, indicating strong generalization across different
+datasets. These results confirm the effectiveness and robustness of HANS-Net in
+providing anatomically consistent, accurate, and confident liver and tumor
+segmentation.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2507.11301v1' target='_blank'>Detección y Cuantificación de Erosión Fluvial con Visión
+  Artificial</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Paúl Maji, Marlon Túquerres, Stalin Valencia, Marcela Valenzuela, Christian Mejia-Escobar</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-07-15 13:30:58</h6>
+<p class='card-text'>Fluvial erosion is a natural process that can generate significant impacts on
+soil stability and strategic infrastructures. The detection and monitoring of
+this phenomenon is traditionally addressed by photogrammetric methods and
+analysis in geographic information systems. These tasks require specific
+knowledge and intensive manual processing. This study proposes an artificial
+intelligence-based approach for automatic identification of eroded zones and
+estimation of their area. The state-of-the-art computer vision model YOLOv11,
+adjusted by fine-tuning and trained with photographs and LiDAR images, is used.
+This combined dataset was segmented and labeled using the Roboflow platform.
+Experimental results indicate efficient detection of erosion patterns with an
+accuracy of 70%, precise identification of eroded areas and reliable
+calculation of their extent in pixels and square meters. As a final product,
+the EROSCAN system has been developed, an interactive web application that
+allows users to upload images and obtain automatic segmentations of fluvial
+erosion, together with the estimated area. This tool optimizes the detection
+and quantification of the phenomenon, facilitating decision making in risk
+management and territorial planning.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2507.11283v1' target='_blank'>Ocean Diviner: A Diffusion-Augmented Reinforcement Learning for AUV
+  Robust Control in the Underwater Tasks</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Weiyi Liu, Jingzehua Xu, Guanwen Xie, Yi Li</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-07-15 13:00:58</h6>
+<p class='card-text'>This paper presents a diffusion-augmented reinforcement learning (RL)
+approach for robust autonomous underwater vehicle (AUV) control, addressing key
+challenges in underwater trajectory planning and dynamic environment
+adaptation. The proposed method integrates three core innovations: (1) A
+diffusion-based trajectory generation framework that produces physically
+feasible multi-step trajectories, enhanced by a high-dimensional state encoding
+mechanism combining current observations with historical states and actions
+through a novel diffusion U-Net architecture, significantly improving
+long-horizon planning. (2) A sample-efficient hybrid learning architecture that
+synergizes diffusion-guided exploration with RL policy optimization, where the
+diffusion model generates diverse candidate actions and the RL critic selects
+optimal actions, achieving higher exploration efficiency and policy stability
+in dynamic underwater environments. Extensive simulation experiments validating
+the method's superior robustness and flexibility, outperforms conventional
+control methods in challenging marine conditions, offering enhanced
+adaptability and reliability for AUV operations in the underwater tasks.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2507.11211v1' target='_blank'>MPC-based Coarse-to-Fine Motion Planning for Robotic Object
+  Transportation in Cluttered Environments</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Chen Cai, Ernesto Dickel Saraiva, Ya-jun Pan, Steven Liu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-07-15 11:27:57</h6>
+<p class='card-text'>This letter presents a novel coarse-to-fine motion planning framework for
+robotic manipulation in cluttered, unmodeled environments. The system
+integrates a dual-camera perception setup with a B-spline-based model
+predictive control (MPC) scheme. Initially, the planner generates feasible
+global trajectories from partial and uncertain observations. As new visual data
+are incrementally fused, both the environment model and motion planning are
+progressively refined. A vision-based cost function promotes target-driven
+exploration, while a refined kernel-perceptron collision detector enables
+efficient constraint updates for real-time planning. The framework accommodates
+closed-chain kinematics and supports dynamic replanning. Experiments on a
+multi-arm platform validate its robustness and adaptability under uncertainties
+and clutter.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2507.11173v1' target='_blank'>Real-Time Bayesian Detection of Drift-Evasive GNSS Spoofing in
+  Reinforcement Learning Based UAV Deconfliction</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Deepak Kumar Panda, Weisi Guo</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-07-15 10:27:27</h6>
+<p class='card-text'>Autonomous unmanned aerial vehicles (UAVs) rely on global navigation
+satellite system (GNSS) pseudorange measurements for accurate real-time
+localization and navigation. However, this dependence exposes them to
+sophisticated spoofing threats, where adversaries manipulate pseudoranges to
+deceive UAV receivers. Among these, drift-evasive spoofing attacks subtly
+perturb measurements, gradually diverting the UAVs trajectory without
+triggering conventional signal-level anti-spoofing mechanisms. Traditional
+distributional shift detection techniques often require accumulating a
+threshold number of samples, causing delays that impede rapid detection and
+timely response. Consequently, robust temporal-scale detection methods are
+essential to identify attack onset and enable contingency planning with
+alternative sensing modalities, improving resilience against stealthy
+adversarial manipulations. This study explores a Bayesian online change point
+detection (BOCPD) approach that monitors temporal shifts in value estimates
+from a reinforcement learning (RL) critic network to detect subtle behavioural
+deviations in UAV navigation. Experimental results show that this temporal
+value-based framework outperforms conventional GNSS spoofing detectors,
+temporal semi-supervised learning frameworks, and the Page-Hinkley test,
+achieving higher detection accuracy and lower false-positive and false-negative
+rates for drift-evasive spoofing attacks.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2507.11027v1' target='_blank'>Functional Emotion Modeling in Biomimetic Reinforcement Learning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Louis Wang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-07-15 06:48:59</h6>
+<p class='card-text'>We explore a functionalist approach to emotion by employing an ansatz -- an
+initial set of assumptions -- that a hypothetical concept generation model
+incorporates unproven but biologically plausible traits. From these traits, we
+mathematically construct a theoretical reinforcement learning framework
+grounded in functionalist principles and examine how the resulting utility
+function aligns with emotional valence in biological systems. Our focus is on
+structuring the functionalist perspective through a conceptual network,
+particularly emphasizing the construction of the utility function, not to
+provide an exhaustive explanation of emotions. The primary emphasis is not of
+planning or action execution, but such factors are addressed when pertinent.
+Finally, we apply the framework to psychological phenomena such as humor,
+psychopathy, and advertising, demonstrating its breadth of explanatory power.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2507.11006v1' target='_blank'>Enhancing Autonomous Manipulator Control with Human-in-loop for
+  Uncertain Assembly Environments</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Ashutosh Mishra, Shreya Santra, Hazal Gozbasi, Kentaro Uno, Kazuya Yoshida</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-07-15 05:53:12</h6>
+<p class='card-text'>This study presents an advanced approach to enhance robotic manipulation in
+uncertain and challenging environments, with a focus on autonomous operations
+augmented by human-in-the-loop (HITL) control for lunar missions. By
+integrating human decision-making with autonomous robotic functions, the
+research improves task reliability and efficiency for space applications. The
+key task addressed is the autonomous deployment of flexible solar panels using
+an extendable ladder-like structure and a robotic manipulator with real-time
+feedback for precision. The manipulator relays position and force-torque data,
+enabling dynamic error detection and adaptive control during deployment. To
+mitigate the effects of sinkage, variable payload, and low-lighting conditions,
+efficient motion planning strategies are employed, supplemented by human
+control that allows operators to intervene in ambiguous scenarios. Digital twin
+simulation enhances system robustness by enabling continuous feedback,
+iterative task refinement, and seamless integration with the deployment
+pipeline. The system has been tested to validate its performance in simulated
+lunar conditions and ensure reliability in extreme lighting, variable terrain,
+changing payloads, and sensor limitations.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2507.10924v1' target='_blank'>OffsetCrust: Variable-Radius Offset Approximation with Power Diagrams</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Zihan Zhao, Pengfei Wang, Minfeng Xu, Shuangmin Chen, Shiqing Xin, Changhe Tu, Wenping Wang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-07-15 02:32:38</h6>
+<p class='card-text'>Offset surfaces, defined as the Minkowski sum of a base surface and a rolling
+ball, play a crucial role in geometry processing, with applications ranging
+from coverage motion planning to brush modeling. While considerable progress
+has been made in computing constant-radius offset surfaces, computing
+variable-radius offset surfaces remains a challenging problem. In this paper,
+we present OffsetCrust, a novel framework that efficiently addresses the
+variable-radius offsetting problem by computing a power diagram. Let $R$ denote
+the radius function defined on the base surface $S$. The power diagram is
+constructed from contributing sites, consisting of carefully sampled base
+points on $S$ and their corresponding off-surface points, displaced along
+$R$-dependent directions. In the constant-radius case only, these displacement
+directions align exactly with the surface normals of $S$. Moreover, our method
+mitigates the misalignment issues commonly seen in crust-based approaches
+through a lightweight fine-tuning procedure. We validate the accuracy and
+efficiency of OffsetCrust through extensive experiments, and demonstrate its
+practical utility in applications such as reconstructing original boundary
+surfaces from medial axis transform (MAT) representations.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2507.10890v1' target='_blank'>Outbound Modeling for Inventory Management</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Riccardo Savorgnan, Udaya Ghai, Carson Eisenach, Dean Foster</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-07-15 01:10:38</h6>
+<p class='card-text'>We study the problem of forecasting the number of units fulfilled (or
+``drained'') from each inventory warehouse to meet customer demand, along with
+the associated outbound shipping costs. The actual drain and shipping costs are
+determined by complex production systems that manage the planning and execution
+of customers' orders fulfillment, i.e. from where and how to ship a unit to be
+delivered to a customer. Accurately modeling these processes is critical for
+regional inventory planning, especially when using Reinforcement Learning (RL)
+to develop control policies. For the RL usecase, a drain model is incorporated
+into a simulator to produce long rollouts, which we desire to be
+differentiable. While simulating the calls to the internal software systems can
+be used to recover this transition, they are non-differentiable and too slow
+and costly to run within an RL training environment. Accordingly, we frame this
+as a probabilistic forecasting problem, modeling the joint distribution of
+outbound drain and shipping costs across all warehouses at each time period,
+conditioned on inventory positions and exogenous customer demand. To ensure
+robustness in an RL environment, the model must handle out-of-distribution
+scenarios that arise from off-policy trajectories. We propose a validation
+scheme that leverages production systems to evaluate the drain model on
+counterfactual inventory states induced by RL policies. Preliminary results
+demonstrate the model's accuracy within the in-distribution setting.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2507.10878v1' target='_blank'>Mixed Discrete and Continuous Planning using Shortest Walks in Graphs of
+  Convex Sets</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Savva Morozov, Tobia Marcucci, Bernhard Paus Graesdal, Alexandre Amice, Pablo A. Parrilo, Russ Tedrake</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-07-15 00:42:02</h6>
+<p class='card-text'>We study the Shortest-Walk Problem (SWP) in a Graph of Convex Sets (GCS). A
+GCS is a graph where each vertex is paired with a convex program, and each edge
+couples adjacent programs via additional costs and constraints. A walk in a GCS
+is a sequence of vertices connected by edges, where vertices may be repeated.
+The length of a walk is given by the cumulative optimal value of the
+corresponding convex programs. To solve the SWP in GCS, we first synthesize a
+piecewise-quadratic lower bound on the problem's cost-to-go function using
+semidefinite programming. Then we use this lower bound to guide an
+incremental-search algorithm that yields an approximate shortest walk. We show
+that the SWP in GCS is a natural language for many mixed discrete-continuous
+planning problems in robotics, unifying problems that typically require
+specialized solutions while delivering high performance and computational
+efficiency. We demonstrate this through experiments in collision-free motion
+planning, skill chaining, and optimal control of hybrid systems.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2507.10548v1' target='_blank'>EmbRACE-3K: Embodied Reasoning and Action in Complex Environments</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Mingxian Lin, Wei Huang, Yitang Li, Chengjie Jiang, Kui Wu, Fangwei Zhong, Shengju Qian, Xin Wang, Xiaojuan Qi</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-07-14 17:59:46</h6>
+<p class='card-text'>Recent advanced vision-language models(VLMs) have demonstrated strong
+performance on passive, offline image and video understanding tasks. However,
+their effectiveness in embodied settings, which require online interaction and
+active scene understanding remains limited. In such scenarios, an agent
+perceives the environment from a first-person perspective, with each action
+dynamically shaping subsequent observations. Even state-of-the-art models such
+as GPT-4o, Claude 3.5 Sonnet, and Gemini 2.5 Pro struggle in open-environment
+interactions, exhibiting clear limitations in spatial reasoning and
+long-horizon planning. To address this gap, we introduce EmRACE-3K, a dataset
+of over 3,000 language-guided tasks situated in diverse, photorealistic
+environments constructed using Unreal Engine and the UnrealCV-Zoo framework.
+The tasks encompass a wide range of embodied challenges, including navigation,
+object manipulation, and multi-stage goal execution. Each task unfolds as a
+multi-step trajectory, pairing first-person visual observations with high-level
+instructions, grounded actions, and natural language rationales that express
+the agent's intent at every step. Using EmRACE-3K, we establish a benchmark to
+evaluate the embodied reasoning capabilities of VLMs across three key
+dimensions: Exploration, Dynamic Spatial-Semantic Reasoning, and Multi-stage
+Goal Execution. In zero-shot settings, all models achieve success rates below
+20%, underscoring the challenge posed by our benchmark and the current
+limitations of VLMs in interactive environments. To demonstrate the utility of
+EmRACE-3K, we further fine-tune Qwen2.5-VL-7B using supervised learning
+followed by reinforcement learning. This approach yields substantial
+improvements across all three challenge categories, highlighting the dataset's
+effectiveness in enabling the development of embodied reasoning capabilities.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2507.10539v1' target='_blank'>Graph World Model</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Tao Feng, Yexin Wu, Guanyu Lin, Jiaxuan You</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-07-14 17:57:45</h6>
+<p class='card-text'>World models (WMs) demonstrate strong capabilities in prediction, generation,
+and planning tasks. Existing WMs primarily focus on unstructured data and
+cannot leverage the ubiquitous structured data, often represented as graphs, in
+the digital world. While multiple graph foundation models have been proposed,
+they focus on graph learning tasks and cannot extend to diverse multi-modal
+data and interdisciplinary tasks. To address these challenges, we propose the
+Graph World Model (GWM), a world model that supports both unstructured and
+graph-structured states with multi-modal information and represents diverse
+tasks as actions. The core of a GWM is a generic message-passing algorithm to
+aggregate structured information, either over a unified multi-modal token space
+by converting multi-modal data into text (GWM-T) or a unified multi-modal
+embedding space by modality-specific encoders (GWM-E). Notably, GWM introduces
+action nodes to support diverse tasks, where action nodes are linked to other
+nodes via direct reference or similarity computation. Extensive experiments on
+six tasks from diverse domains, including multi-modal generation and matching,
+recommendation, graph prediction, multi-agent, retrieval-augmented generation,
+and planning and optimization, show that the same GWM outperforms or matches
+domain-specific baselines' performance, benefits from multi-hop structures, and
+demonstrates strong zero-shot/few-shot capabilities on unseen new tasks. Our
+code for GWM is released at https://github.com/ulab-uiuc/GWM.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2507.10487v1' target='_blank'>$^{88}$Sr Reference Data</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Sebastian Pucher, Sofus Laguna Kristensen, Ronen M. Kroeze</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-07-14 17:09:39</h6>
+<p class='card-text'>Strontium-88 is a versatile atomic species often used in quantum optics,
+precision metrology, and quantum computing. Consolidated atomic data is
+essential for the planning, execution, and evaluation of experiments. In this
+reference, we present physical and optical properties of neutral $^{88}$Sr
+relevant to these applications. Here we focus on experimental results and
+supplement these with theoretical values. We present equations to convert
+values and derive important parameters. Tabulated results include key
+parameters for commonly used transitions in $^{88}$Sr ($^1\mathrm{S}_0
+\rightarrow \, ^1\mathrm{P}_1$, $^1\mathrm{S}_0 \rightarrow \,
+^3\mathrm{P}_{0,1,2}$, and $^3\mathrm{P}_{0,1,2} \rightarrow \,
+^3\mathrm{S}_1$). This dataset serves as an up-to-date reference for studies
+involving bosonic $^{88}$Sr.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2507.10416v1' target='_blank'>Intimate partner violence and women's economic preferences</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Dan Anderberg, Rachel Cassidy, Anaya Dam, Melissa Hidrobo, Jessica Leight, Karlijn Morsink</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-07-14 15:57:32</h6>
+<p class='card-text'>One in three women globally experiences intimate partner violence (IPV), yet
+little is known about how such trauma affects economic decision-making. We
+provide causal evidence that IPV influences women's time preferences - a key
+parameter in models of savings, investment, and labor supply. We combine two
+empirical strategies using four distinct datasets. First, in two randomized
+recall experiments in Ethiopia, we randomly assigned women to recall specific
+acts of abuse before eliciting their intertemporal choices. Women with IPV
+experiences prompted to recall IPV display significantly greater impatience
+than otherwise similar women who are not prompted. Second, we exploit exogenous
+reductions in IPV generated by two randomized interventions - one involving
+cash transfers, the other psychotherapy - and use treatment assignment as an
+instrument for IPV exposure. Women who experience reduced IPV as a result of
+treatment exhibit more patient time preferences. Together, these results
+provide consistent, novel causal evidence that exposure to IPV induces
+individuals to discount the future more heavily. This evidence suggests a
+psychological channel through which violence can perpetuate economic
+disadvantage and constrain women's ability to take actions - such as saving,
+investing, or exiting abusive relationships - that require planning over time.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2507.10290v1' target='_blank'>TOP: Trajectory Optimization via Parallel Optimization towards Constant
+  Time Complexity</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jiajun Yu, Nanhe Chen, Guodong Liu, Chao Xu, Fei Gao, Yanjun Cao</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-07-14 13:56:59</h6>
+<p class='card-text'>Optimization has been widely used to generate smooth trajectories for motion
+planning. However, existing trajectory optimization methods show weakness when
+dealing with large-scale long trajectories. Recent advances in parallel
+computing have accelerated optimization in some fields, but how to efficiently
+solve trajectory optimization via parallelism remains an open question. In this
+paper, we propose a novel trajectory optimization framework based on the
+Consensus Alternating Direction Method of Multipliers (CADMM) algorithm, which
+decomposes the trajectory into multiple segments and solves the subproblems in
+parallel. The proposed framework reduces the time complexity to O(1) per
+iteration to the number of segments, compared to O(N) of the state-of-the-art
+(SOTA) approaches. Furthermore, we introduce a closed-form solution that
+integrates convex linear and quadratic constraints to speed up the
+optimization, and we also present numerical solutions for general inequality
+constraints. A series of simulations and experiments demonstrate that our
+approach outperforms the SOTA approach in terms of efficiency and smoothness.
+Especially for a large-scale trajectory, with one hundred segments, achieving
+over a tenfold speedup. To fully explore the potential of our algorithm on
+modern parallel computing architectures, we deploy our framework on a GPU and
+show high performance with thousands of segments.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2507.10256v1' target='_blank'>A Cost Effective Optimization of the hybrid-DOM Design for TRIDENT</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Hengbin Shao, Fuyudi Zhang, Qichao Chang, Shuhua Hao, Ruike Cao, Jingtao Huang, Weilun Huang, Hai Liu, Hualin Mei, Iwan Morton-Blake, Wei Tian, Yingwei Wang, Xin Xiang, Donglian Xu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-07-14 13:28:22</h6>
+<p class='card-text'>TRIDENT is a planned multi-cubic-kilometer deep-sea neutrino telescope to be
+built in the South China Sea, designed to rapidly discover high-energy
+astrophysical neutrino sources with sensitivity to all neutrino flavors.
+Achieving this at scale requires a detector design that balances performance
+with power, cost, and mechanical simplicity. This study presents a
+cost-effective optimization of TRIDENT's hybrid Digital Optical Module (hDOM)
+design, comparing configurations using high-quantum-efficiency (QE) 3-inch PMTs
+and larger 4-inch PMTs, the latter evaluated with both baseline and enhanced QE
+assumptions. Using full-chain detector simulations incorporating site-specific
+seawater optical properties and realistic backgrounds, we assess performance in
+all-flavor neutrino detection efficiency, directional reconstruction, and tau
+neutrino flavor identification from 1 TeV to 10 PeV. We find that if 4-inch
+PMTs can achieve QE comparable to 3-inch PMTs, their performance matches or
+improves upon that of the 3-inch design, while significantly reducing channel
+count, power consumption, and cost. These findings support the 4-inch PMT hDOM
+as a promising and scalable choice for TRIDENT's future instrumentation.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2507.10204v1' target='_blank'>REACT: Real-time Entanglement-Aware Coverage Path Planning for Tethered
+  Underwater Vehicles</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Abdelhakim Amer, Mohit Mehindratta, Yury Brodskiy, Bilal Wehbe, Erdal Kayacan</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-07-14 12:18:01</h6>
+<p class='card-text'>Inspection of complex underwater structures with tethered underwater vehicles
+is often hindered by the risk of tether entanglement. We propose REACT
+(real-time entanglement-aware coverage path planning for tethered underwater
+vehicles), a framework designed to overcome this limitation. REACT comprises a
+fast geometry-based tether model using the signed distance field (SDF) map for
+accurate, real-time simulation of taut tether configurations around arbitrary
+structures in 3D. This model enables an efficient online replanning strategy by
+enforcing a maximum tether length constraint, thereby actively preventing
+entanglement. By integrating REACT into a coverage path planning framework, we
+achieve safe and optimal inspection paths, previously challenging due to tether
+constraints. The complete REACT framework's efficacy is validated in a pipe
+inspection scenario, demonstrating safe, entanglement-free navigation and
+full-coverage inspection. Simulation results show that REACT achieves complete
+coverage while maintaining tether constraints and completing the total mission
+20% faster than conventional planners, despite a longer inspection time due to
+proactive avoidance of entanglement that eliminates extensive post-mission
+disentanglement. Real-world experiments confirm these benefits, where REACT
+completes the full mission, while the baseline planner fails due to physical
+tether entanglement.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2507.10166v1' target='_blank'>Recursive Feasibility without Terminal Constraints via Parent-Child MPC
+  Architecture</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Filip Surmaa, Anahita Jamshidnejad</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-07-14 11:26:59</h6>
+<p class='card-text'>This paper proposes a novel hierarchical model predictive control (MPC)
+framework, called the Parent-Child MPC architecture, to steer nonlinear systems
+under uncertainty towards a target set, balancing computational complexity and
+guaranteeing recursive feasibility and stability without relying on
+conservative terminal constraints in online decision-making. By coupling a
+small-horizon Child MPC layer with one or more large-horizon Parent MPC layers,
+the architecture ensures recursive feasibility and stability through adjustable
+stage-wise constraints derived from tube-based control. As is demonstrated in
+our case studies, compared to traditional MPC methods, the proposed
+Parent-Child MPC architecture enhances performance and computational
+efficiency, reduces conservativeness, and enables scalable planning for certain
+nonlinear systems.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2507.10119v1' target='_blank'>Analysis of AI Techniques for Orchestrating Edge-Cloud Application
+  Migration</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Sadig Gojayev, Ahmad Anaqreh, Carolina Fortuna</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-07-14 10:03:23</h6>
+<p class='card-text'>Application migration in edge-cloud system enables high QoS and cost
+effective service delivery. However, automatically orchestrating such migration
+is typically solved with heuristic approaches. Starting from the Markov
+Decision Process (MDP), in this paper, we identify, analyze and compare
+selected state-of-the-art Artificial Intelligence (AI) planning and
+Reinforcement Learning (RL) approaches for solving the class of edge-cloud
+application migration problems that can be modeled as Towers of Hanoi (ToH)
+problems. We introduce a new classification based on state space definition and
+analyze the compared models also through this lense. The aim is to understand
+available techniques capable of orchestrating such application migration in
+emerging computing continuum environments.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2507.10047v1' target='_blank'>MP-RBFN: Learning-based Vehicle Motion Primitives using Radial Basis
+  Function Networks</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Marc Kaufeld, Mattia Piccinini, Johannes Betz</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-07-14 08:26:41</h6>
+<p class='card-text'>This research introduces MP-RBFN, a novel formulation leveraging Radial Basis
+Function Networks for efficiently learning Motion Primitives derived from
+optimal control problems for autonomous driving. While traditional motion
+planning approaches based on optimization are highly accurate, they are often
+computationally prohibitive. In contrast, sampling-based methods demonstrate
+high performance but impose constraints on the geometric shape of trajectories.
+MP-RBFN combines the strengths of both by coupling the high-fidelity trajectory
+generation of sampling-based methods with an accurate description of vehicle
+dynamics. Empirical results show compelling performance compared to previous
+methods, achieving a precise description of motion primitives at low inference
+times. MP-RBFN yields a seven times higher accuracy in generating optimized
+motion primitives compared to existing semi-analytic approaches. We demonstrate
+the practical applicability of MP-RBFN for motion planning by integrating the
+method into a sampling-based trajectory planner. MP-RBFN is available as
+open-source software at https://github.com/TUM-AVS/RBFN-Motion-Primitives.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2507.10003v1' target='_blank'>Ariel Explores: Vision-based underwater exploration and inspection via
+  generalist drone-level autonomy</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Mohit Singh, Mihir Dharmadhikari, Kostas Alexis</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-07-14 07:36:25</h6>
+<p class='card-text'>This work presents a vision-based underwater exploration and inspection
+autonomy solution integrated into Ariel, a custom vision-driven underwater
+robot. Ariel carries a $5$ camera and IMU based sensing suite, enabling a
+refraction-aware multi-camera visual-inertial state estimation method aided by
+a learning-based proprioceptive robot velocity prediction method that enhances
+robustness against visual degradation. Furthermore, our previously developed
+and extensively field-verified autonomous exploration and general visual
+inspection solution is integrated on Ariel, providing aerial drone-level
+autonomy underwater. The proposed system is field-tested in a submarine dry
+dock in Trondheim under challenging visual conditions. The field demonstration
+shows the robustness of the state estimation solution and the generalizability
+of the path planning techniques across robot embodiments.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2507.09995v2' target='_blank'>Graph-based Multi-Modal Interaction Lightweight Network for Brain Tumor
+  Segmentation (GMLN-BTS) in Edge Iterative MRI Lesion Localization System
+  (EdgeIMLocSys)</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Guohao Huo, Ruiting Dai, Hao Tang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-07-14 07:29:49</h6>
+<p class='card-text'>Brain tumor segmentation plays a critical role in clinical diagnosis and
+treatment planning, yet the variability in imaging quality across different MRI
+scanners presents significant challenges to model generalization. To address
+this, we propose the Edge Iterative MRI Lesion Localization System
+(EdgeIMLocSys), which integrates Continuous Learning from Human Feedback to
+adaptively fine-tune segmentation models based on clinician feedback, thereby
+enhancing robustness to scanner-specific imaging characteristics. Central to
+this system is the Graph-based Multi-Modal Interaction Lightweight Network for
+Brain Tumor Segmentation (GMLN-BTS), which employs a Modality-Aware Adaptive
+Encoder (M2AE) to extract multi-scale semantic features efficiently, and a
+Graph-based Multi-Modal Collaborative Interaction Module (G2MCIM) to model
+complementary cross-modal relationships via graph structures. Additionally, we
+introduce a novel Voxel Refinement UpSampling Module (VRUM) that
+synergistically combines linear interpolation and multi-scale transposed
+convolutions to suppress artifacts while preserving high-frequency details,
+improving segmentation boundary accuracy. Our proposed GMLN-BTS model achieves
+a Dice score of 85.1% on the BraTS2017 dataset with only 4.58 million
+parameters, representing a 98% reduction compared to mainstream 3D Transformer
+models, and significantly outperforms existing lightweight approaches. This
+work demonstrates a synergistic breakthrough in achieving high-accuracy,
+resource-efficient brain tumor segmentation suitable for deployment in
+resource-constrained clinical environments.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js'></script>
+</body>
+</html>
