@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>planning - 2025-07-23</title>
+<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap' rel='stylesheet'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css'>
+<style>
+body {
+font-family: 'Roboto', sans-serif;
+background-color: #f5f7fa;
+padding: 20px;
+}
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.card-title {
+    font-weight: 700;
+}
+.card:hover {
+    transform: scale(1.02);
+    transition: 0.3s ease-in-out;
+}
+</style>
+</head>
+<body>
+<div class='container'>
+<h1 class='text-center my-4'><i class='fas fa-book'></i>planning - 2025-07-23</h1>
+<div class='row'>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2507.16746v1' target='_blank'>Zebra-CoT: A Dataset for Interleaved Vision Language Reasoning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Ang Li, Charles Wang, Kaiyu Yue, Zikui Cai, Ollie Liu, Deqing Fu, Peng Guo, Wang Bill Zhu, Vatsal Sharan, Robin Jia, Willie Neiswanger, Furong Huang, Tom Goldstein, Micah Goldblum</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-07-22 16:35:36</h6>
+<p class='card-text'>Humans often use visual aids, for example diagrams or sketches, when solving
+complex problems. Training multimodal models to do the same, known as Visual
+Chain of Thought (Visual CoT), is challenging due to: (1) poor off-the-shelf
+visual CoT performance, which hinders reinforcement learning, and (2) the lack
+of high-quality visual CoT training data. We introduce $\textbf{Zebra-CoT}$, a
+diverse large-scale dataset with 182,384 samples, containing logically coherent
+interleaved text-image reasoning traces. We focus on four categories of tasks
+where sketching or visual reasoning is especially natural, spanning scientific
+questions such as geometry, physics, and algorithms; 2D visual reasoning tasks
+like visual search and jigsaw puzzles; 3D reasoning tasks including 3D
+multi-hop inference, embodied and robot planning; visual logic problems and
+strategic games like chess. Fine-tuning the Anole-7B model on the Zebra-CoT
+training corpus results in an improvement of +12% in our test-set accuracy and
+yields up to +13% performance gain on standard VLM benchmark evaluations.
+Fine-tuning Bagel-7B yields a model that generates high-quality interleaved
+visual reasoning chains, underscoring Zebra-CoT's effectiveness for developing
+multimodal reasoning abilities. We open-source our dataset and models to
+support development and evaluation of visual CoT.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2507.16713v1' target='_blank'>Experience is the Best Teacher: Grounding VLMs for Robotics through
+  Self-Generated Memory</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Guowei Lan, Kaixian Qu, René Zurbrügg, Changan Chen, Christopher E. Mower, Haitham Bou-Ammar, Marco Hutter</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-07-22 15:48:49</h6>
+<p class='card-text'>Vision-language models (VLMs) have been widely adopted in robotics to enable
+autonomous planning. However, grounding VLMs, originally trained on internet
+data, to diverse real-world robots remains a challenge. This paper presents
+ExpTeach, a framework that grounds VLMs to physical robots by building a
+self-generated memory of real-world experiences. In ExpTeach, the VLM
+autonomously plans actions, verifies outcomes, reflects on failures, and adapts
+robot behaviors in a closed loop. The self-generated experiences during this
+process are then summarized into a long-term memory, enabling retrieval of
+learned knowledge to guide future tasks via retrieval-augmented generation
+(RAG). Additionally, ExpTeach enhances the spatial understanding of VLMs with
+an on-demand image annotation module. In experiments, we show that reflection
+improves success rates from 36% to 84% on four challenging robotic tasks and
+observe the emergence of intelligent object interactions, including creative
+tool use. Across extensive tests on 12 real-world scenarios (including eight
+unseen ones), we find that grounding with long-term memory boosts single-trial
+success rates from 22% to 80%, demonstrating the effectiveness and
+generalizability of ExpTeach.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2507.16635v1' target='_blank'>Novel Multi-Agent Action Masked Deep Reinforcement Learning for General
+  Industrial Assembly Lines Balancing Problems</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Ali Mohamed Ali, Luca Tirel, Hashim A. Hashim</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-07-22 14:34:36</h6>
+<p class='card-text'>Efficient planning of activities is essential for modern industrial assembly
+lines to uphold manufacturing standards, prevent project constraint violations,
+and achieve cost-effective operations. While exact solutions to such challenges
+can be obtained through Integer Programming (IP), the dependence of the search
+space on input parameters often makes IP computationally infeasible for
+large-scale scenarios. Heuristic methods, such as Genetic Algorithms, can also
+be applied, but they frequently produce suboptimal solutions in extensive
+cases. This paper introduces a novel mathematical model of a generic industrial
+assembly line formulated as a Markov Decision Process (MDP), without imposing
+assumptions on the type of assembly line a notable distinction from most
+existing models. The proposed model is employed to create a virtual environment
+for training Deep Reinforcement Learning (DRL) agents to optimize task and
+resource scheduling. To enhance the efficiency of agent training, the paper
+proposes two innovative tools. The first is an action-masking technique, which
+ensures the agent selects only feasible actions, thereby reducing training
+time. The second is a multi-agent approach, where each workstation is managed
+by an individual agent, as a result, the state and action spaces were reduced.
+A centralized training framework with decentralized execution is adopted,
+offering a scalable learning architecture for optimizing industrial assembly
+lines. This framework allows the agents to learn offline and subsequently
+provide real-time solutions during operations by leveraging a neural network
+that maps the current factory state to the optimal action. The effectiveness of
+the proposed scheme is validated through numerical simulations, demonstrating
+significantly faster convergence to the optimal solution compared to a
+comparable model-based approach.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2507.16628v1' target='_blank'>Augmenting Von Neumann's Architecture for an Intelligent Future</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Rajpreet Singh, Vidhi Kothari</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-07-22 14:19:53</h6>
+<p class='card-text'>This work presents a novel computer architecture that extends the Von Neumann
+model with a dedicated Reasoning Unit (RU) to enable native artificial general
+intelligence capabilities. The RU functions as a specialized co-processor that
+executes symbolic inference, multi-agent coordination, and hybrid
+symbolic-neural computation as fundamental architectural primitives. This
+hardware-embedded approach allows autonomous agents to perform goal-directed
+planning, dynamic knowledge manipulation, and introspective reasoning directly
+within the computational substrate at system scale. The architecture
+incorporates a reasoning-specific instruction set architecture, parallel
+symbolic processing pipelines, agent-aware kernel abstractions, and a unified
+memory hierarchy that seamlessly integrates cognitive and numerical workloads.
+Through systematic co-design across hardware, operating system, and agent
+runtime layers, this architecture establishes a computational foundation where
+reasoning, learning, and adaptation emerge as intrinsic execution properties
+rather than software abstractions, potentially enabling the development of
+general-purpose intelligent machines.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2507.16600v1' target='_blank'>A Robust 5G Terrestrial Positioning System with Sensor Fusion in
+  GNSS-denied Scenarios</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Hamed Talebian, Nazrul Mohamed Nazeer, Darius Chmieliauskas, Jakub Nikonowicz, Mehdi Haghshenas, Łukasz Matuszewski, Mairo Leier, Aamir Mahmood</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-07-22 13:57:34</h6>
+<p class='card-text'>This paper presents a terrestrial localization system based on 5G
+infrastructure as a viable alternative to GNSS, particularly in scenarios where
+GNSS signals are obstructed or unavailable. It discusses network planning aimed
+at enabling positioning as a primary service, in contrast to the traditional
+focus on communication services in terrestrial networks. Building on a network
+infrastructure optimized for positioning, the paper proposes a system that
+leverages carrier phase (CP) ranging in combination with trilateration to
+localize the user within the network when at least three base stations (BSs)
+provide line-of-sight (LOS) conditions. Achieving accurate CP-based positioning
+requires addressing three key challenges: integer ambiguity resolution,
+LOS/NLOS link identification, and localization under obstructed LOS conditions.
+To this end, the system employs a multi-carrier CP approach, which eliminates
+the need for explicit integer ambiguity estimation. Additionally, a deep
+learning model is developed to identify NLOS links and exclude them from the
+trilateration process. In cases where LOS is obstructed and CP ranging becomes
+unreliable, the system incorporates an error-state extended Kalman filter to
+fuse complementary data from other sensors, such as inertial measurement units
+(IMUs) and cameras. This hybrid approach enables robust tracking of moving
+users across diverse channel conditions. The performance of the proposed
+terrestrial positioning system is evaluated using the real-world KITTI dataset,
+featuring a moving vehicle in an urban environment. Simulation results show
+that the system can achieve a positioning error of less than 5 meters in the
+KITTI urban scenario--comparable to that of public commercial GNSS
+services--highlighting its potential as a resilient and accurate solution for
+GNSS-denied environments.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2507.16573v1' target='_blank'>Semantic Segmentation for Preoperative Planning in Transcatheter Aortic
+  Valve Replacement</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Cedric Zöllner, Simon Reiß, Alexander Jaus, Amroalalaa Sholi, Ralf Sodian, Rainer Stiefelhagen</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-07-22 13:24:45</h6>
+<p class='card-text'>When preoperative planning for surgeries is conducted on the basis of medical
+images, artificial intelligence methods can support medical doctors during
+assessment. In this work, we consider medical guidelines for preoperative
+planning of the transcatheter aortic valve replacement (TAVR) and identify
+tasks, that may be supported via semantic segmentation models by making
+relevant anatomical structures measurable in computed tomography scans. We
+first derive fine-grained TAVR-relevant pseudo-labels from coarse-grained
+anatomical information, in order to train segmentation models and quantify how
+well they are able to find these structures in the scans. Furthermore, we
+propose an adaptation to the loss function in training these segmentation
+models and through this achieve a +1.27% Dice increase in performance. Our
+fine-grained TAVR-relevant pseudo-labels and the computed tomography scans we
+build upon are available at https://doi.org/10.5281/zenodo.16274176.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2507.16511v1' target='_blank'>Analogy making as amortised model construction</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:David G. Nagy, Tingke Shen, Hanqi Zhou, Charley M. Wu, Peter Dayan</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-07-22 12:16:45</h6>
+<p class='card-text'>Humans flexibly construct internal models to navigate novel situations. To be
+useful, these internal models must be sufficiently faithful to the environment
+that resource-limited planning leads to adequate outcomes; equally, they must
+be tractable to construct in the first place. We argue that analogy plays a
+central role in these processes, enabling agents to reuse solution-relevant
+structure from past experiences and amortise the computational costs of both
+model construction (construal) and planning. Formalising analogies as partial
+homomorphisms between Markov decision processes, we sketch a framework in which
+abstract modules, derived from previous construals, serve as composable
+building blocks for new ones. This modular reuse allows for flexible adaptation
+of policies and representations across domains with shared structural essence.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2507.16434v1' target='_blank'>From model-based learning to model-free behaviour with Meta-Interpretive
+  Learning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Stassa Patsantzis</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-07-22 10:28:08</h6>
+<p class='card-text'>A "model" is a theory that describes the state of an environment and the
+effects of an agent's decisions on the environment. A model-based agent can use
+its model to predict the effects of its future actions and so plan ahead, but
+must know the state of the environment. A model-free agent cannot plan, but can
+act without a model and without completely observing the environment. An
+autonomous agent capable of acting independently in novel environments must
+combine both sets of capabilities. We show how to create such an agent with
+Meta-Interpretive Learning used to learn a model-based Solver used to train a
+model-free Controller that can solve the same planning problems as the Solver.
+We demonstrate the equivalence in problem-solving ability of the two agents on
+grid navigation problems in two kinds of environment: randomly generated mazes,
+and lake maps with wide open areas. We find that all navigation problems solved
+by the Solver are also solved by the Controller, indicating the two are
+equivalent.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2507.16306v1' target='_blank'>COMPASS: Cooperative Multi-Agent Persistent Monitoring using
+  Spatio-Temporal Attention Network</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Xingjian Zhang, Yizhuo Wang, Guillaume Sartoretti</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-07-22 07:44:08</h6>
+<p class='card-text'>Persistent monitoring of dynamic targets is essential in real-world
+applications such as disaster response, environmental sensing, and wildlife
+conservation, where mobile agents must continuously gather information under
+uncertainty. We propose COMPASS, a multi-agent reinforcement learning (MARL)
+framework that enables decentralized agents to persistently monitor multiple
+moving targets efficiently. We model the environment as a graph, where nodes
+represent spatial locations and edges capture topological proximity, allowing
+agents to reason over structured layouts and revisit informative regions as
+needed. Each agent independently selects actions based on a shared
+spatio-temporal attention network that we design to integrate historical
+observations and spatial context. We model target dynamics using Gaussian
+Processes (GPs), which support principled belief updates and enable
+uncertainty-aware planning. We train COMPASS using centralized value estimation
+and decentralized policy execution under an adaptive reward setting. Our
+extensive experiments demonstrate that COMPASS consistently outperforms strong
+baselines in uncertainty reduction, target coverage, and coordination
+efficiency across dynamic multi-target scenarios.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2507.16305v1' target='_blank'>Trajectory Planning of a Curtain Wall Installation Robot Based on
+  Biomimetic Mechanisms</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Xiao Liu, Weijun Wang, Tianlun Huang, Zhiyong Wang, Wei Feng</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-07-22 07:43:54</h6>
+<p class='card-text'>As the robotics market rapidly evolves, energy consumption has become a
+critical issue, particularly restricting the application of construction
+robots. To tackle this challenge, our study innovatively draws inspiration from
+the mechanics of human upper limb movements during weight lifting, proposing a
+bio-inspired trajectory planning framework that incorporates human energy
+conversion principles. By collecting motion trajectories and electromyography
+(EMG) signals during dumbbell curls, we construct an anthropomorphic trajectory
+planning that integrates human force exertion patterns and energy consumption
+patterns. Utilizing the Particle Swarm Optimization (PSO) algorithm, we achieve
+dynamic load distribution for robotic arm trajectory planning based on
+human-like movement features. In practical application, these bio-inspired
+movement characteristics are applied to curtain wall installation tasks,
+validating the correctness and superiority of our trajectory planning method.
+Simulation results demonstrate a 48.4% reduction in energy consumption through
+intelligent conversion between kinetic and potential energy. This approach
+provides new insights and theoretical support for optimizing energy use in
+curtain wall installation robots during actual handling tasks.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2507.16294v1' target='_blank'>Challan: Solar Full-disk Imaging-Spectroscopic Telescope using the
+  Drift-Scanning Technique</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Heesu Yang, Maria S. Madjarska, Donguk Song, Hannah Kwak, Sung-Hong Park, Eun-Kyung Lim, Sujin Kim, Su-Chan Bong, Yeon-Han Kim, Seonghwan Choi</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-07-22 07:29:23</h6>
+<p class='card-text'>The Challan instrument is a solar full-disk imaging spectroscopic telescope
+planned to be installed at three sites with a 120-degree longitudinal
+difference, enabling continuous 24-hour observations of the Sun. It will take
+data every 2.5 min with a spatial resolution of $2-3^{\prime\prime}$ and a
+spectral resolving power (R) of >43,000 in H$\alpha$ and Ca II 854.2 nm bands
+simultaneously. Challan is composed of two modules, each dedicated to a
+specific waveband. This modular design is beneficial in minimizing the
+scattered light and simplifying the structure and engineering. The primary
+scientific goal of Challan is to investigate solar flares and filament
+eruptions. It is also expected to detect small-scale events in the solar
+chromosphere. In 2025, Challan will be installed at the Big Bear Solar
+Observatory for test observational runs, followed by scientific runs in 2026.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2507.16259v1' target='_blank'>Physics-aware Truck and Drone Delivery Planning Using Optimization &
+  Machine Learning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yineng Sun, Armin Fügenschuh, Vikrant Vaze</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-07-22 06:17:11</h6>
+<p class='card-text'>Combining an energy-efficient drone with a high-capacity truck for last-mile
+package delivery can benefit operators and customers by reducing delivery times
+and environmental impact. However, directly integrating drone flight dynamics
+into the combinatorially hard truck route planning problem is challenging.
+Simplified models that ignore drone flight physics can lead to suboptimal
+delivery plans. We propose an integrated formulation for the joint problem of
+truck route and drone trajectory planning and a new end-to-end solution
+approach that combines optimization and machine learning to generate
+high-quality solutions in practical online runtimes. Our solution method trains
+neural network predictors based on offline solutions to the drone trajectory
+optimization problem instances to approximate drone flight times, and uses
+these approximations to optimize the overall truck-and-drone delivery plan by
+augmenting an existing order-first-split-second heuristic. Our method
+explicitly incorporates key kinematics and energy equations in drone trajectory
+optimization, and thereby outperforms state-of-the-art benchmarks that ignore
+drone flight physics. Extensive experimentation using synthetic datasets and
+real-world case studies shows that the integration of drone trajectories into
+package delivery planning substantially improves system performance in terms of
+tour duration and drone energy consumption. Our modeling and computational
+framework can help delivery planners achieve annual savings worth millions of
+dollars while also benefiting the environment.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2507.16233v1' target='_blank'>GFM-Planner: Perception-Aware Trajectory Planning with Geometric Feature
+  Metric</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yue Lin, Xiaoxuan Zhang, Yang Liu, Dong Wang, Huchuan Lu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-07-22 05:07:11</h6>
+<p class='card-text'>Like humans who rely on landmarks for orientation, autonomous robots depend
+on feature-rich environments for accurate localization. In this paper, we
+propose the GFM-Planner, a perception-aware trajectory planning framework based
+on the geometric feature metric, which enhances LiDAR localization accuracy by
+guiding the robot to avoid degraded areas. First, we derive the Geometric
+Feature Metric (GFM) from the fundamental LiDAR localization problem. Next, we
+design a 2D grid-based Metric Encoding Map (MEM) to efficiently store GFM
+values across the environment. A constant-time decoding algorithm is further
+proposed to retrieve GFM values for arbitrary poses from the MEM. Finally, we
+develop a perception-aware trajectory planning algorithm that improves LiDAR
+localization capabilities by guiding the robot in selecting trajectories
+through feature-rich areas. Both simulation and real-world experiments
+demonstrate that our approach enables the robot to actively select trajectories
+that significantly enhance LiDAR localization accuracy.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2507.16177v1' target='_blank'>A Sparsity-Aware Autonomous Path Planning Accelerator with HW/SW
+  Co-Design and Multi-Level Dataflow Optimization</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yifan Zhang, Xiaoyu Niu, Hongzheng Tian, Yanjun Zhang, Bo Yu, Shaoshan Liu, Sitao Huang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-07-22 02:46:18</h6>
+<p class='card-text'>Path planning is critical for autonomous driving, generating smooth,
+collision-free, feasible paths based on perception and localization inputs.
+However, its computationally intensive nature poses significant challenges for
+resource-constrained autonomous driving hardware. This paper presents an
+end-to-end FPGA-based acceleration framework targeting the quadratic
+programming (QP), core of optimization-based path planning. We employ a
+hardware-friendly alternating direction method of multipliers (ADMM) for QP
+solving and a parallelizable preconditioned conjugate gradient (PCG) method for
+linear systems. By analyzing sparse matrix patterns, we propose customized
+storage schemes and efficient sparse matrix multiplication units, significantly
+reducing resource usage and accelerating matrix operations. Our multi-level
+dataflow optimization strategy incorporates intra-operator parallelization and
+pipelining, inter-operator fine-grained pipelining, and CPU-FPGA system-level
+task mapping. Implemented on the AMD ZCU102 platform, our framework achieves
+state-of-the-art latency and energy efficiency, including 1.48x faster
+performance than the best FPGA-based design, 2.89x over an Intel i7-11800H CPU,
+5.62x over an ARM Cortex-A57 embedded CPU, and 1.56x over a state-of-the-art
+GPU solution, along with a 2.05x throughput improvement over existing
+FPGA-based designs.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2507.16175v1' target='_blank'>Scanning Bot: Efficient Scan Planning using Panoramic Cameras</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Euijeong Lee, Kyung Min Han, Young J. Kim</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-07-22 02:43:25</h6>
+<p class='card-text'>Panoramic RGB-D cameras are known for their ability to produce high quality
+3D scene reconstructions. However, operating these cameras involves manually
+selecting viewpoints and physically transporting the camera, making the
+generation of a 3D model time consuming and tedious. Additionally, the process
+can be challenging for novice users due to spatial constraints, such as
+ensuring sufficient feature overlap between viewpoint frames. To address these
+challenges, we propose a fully autonomous scan planning that generates an
+efficient tour plan for environment scanning, ensuring collision-free
+navigation and adequate overlap between viewpoints within the plan. Extensive
+experiments conducted in both synthetic and real-world environments validate
+the performance of our planner against state-of-the-art view planners. In
+particular, our method achieved an average scan coverage of 99 percent in the
+real-world experiment, with our approach being up to 3 times faster than
+state-of-the-art planners in total scan time.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2507.16166v1' target='_blank'>Ten Essential Guidelines for Building High-Quality Research Software</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Nasir U. Eisty, David E. Bernholdt, Alex Koufos, David J. Luet, Miranda Mundt</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-07-22 02:22:41</h6>
+<p class='card-text'>High-quality research software is a cornerstone of modern scientific
+progress, enabling researchers to analyze complex data, simulate phenomena, and
+share reproducible results. However, creating such software requires adherence
+to best practices that ensure robustness, usability, and sustainability. This
+paper presents ten guidelines for producing high-quality research software,
+covering every stage of the development lifecycle. These guidelines emphasize
+the importance of planning, writing clean and readable code, using version
+control, and implementing thorough testing strategies. Additionally, they
+address key principles such as modular design, reproducibility, performance
+optimization, and long-term maintenance. The paper also highlights the role of
+documentation and community engagement in enhancing software usability and
+impact. By following these guidelines, researchers can create software that
+advances their scientific objectives and contributes to a broader ecosystem of
+reliable and reusable research tools. This work serves as a practical resource
+for researchers and developers aiming to elevate the quality and impact of
+their research software.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2507.16096v1' target='_blank'>Online Joint Replenishment Problem with Arbitrary Holding and Backlog
+  Costs</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yossi Azar, Shahar Lewkowicz</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-07-21 22:40:51</h6>
+<p class='card-text'>In their seminal paper Moseley, Niaparast, and Ravi introduced the Joint
+Replenishment Problem (JRP) with holding and backlog costs that models the
+trade-off between ordering costs, holding costs, and backlog costs in supply
+chain planning systems. Their model generalized the classical the make-to-order
+version as well make-to-stock version. For the case where holding costs
+function of all items are the same and all backlog costs are the same, they
+provide a constant competitive algorithm, leaving designing a constant
+competitive algorithm for arbitrary functions open. Moreover, they noticed that
+their algorithm does not work for arbitrary (request dependent) holding costs
+and backlog costs functions. We resolve their open problem and design a
+constant competitive algorithm that works for arbitrary request dependent
+functions. Specifically, we establish a 4-competitive algorithm for the
+single-item case and a 16-competitive for the general (multi-item) version. The
+algorithm of Moseley, Niaparast, and Ravi is based on fixed priority on the
+requests to items, and request to an item are always served by order of
+deadlines. In contrast, we design an algorithm with dynamic priority over the
+requests such that instead of servicing a prefix by deadline of requests, we
+may need to service a general subset of the requests.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2507.16087v1' target='_blank'>Iterative Born Solver for the Acoustic Helmholtz Equation with
+  Heterogeneous Sound Speed and Density</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Antonio Stanziola, Simon R. Arridge, Bradley E. Treeby, Benjamin T. Cox</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-07-21 21:51:38</h6>
+<p class='card-text'>Efficient numerical solution of the acoustic Helmholtz equation in
+heterogeneous media remains challenging, particularly for large-scale problems
+with spatially-varying density - a limitation that restricts applications in
+biomedical acoustics and seismic imaging. We present a fast iterative solver
+that extends the Convergent Born Series method to handle arbitrary variations
+in sound speed, density, and absorption simultaneously. Our approach
+reformulates the Helmholtz equation as a first-order system and applies
+Vettenburg and Vellekoop's universal split-preconditioner, yielding a
+matrix-free algorithm that leverages Fast Fourier Transforms for computational
+efficiency. Unlike existing Born series methods, our solver accommodates
+heterogeneous density without requiring expensive matrix decompositions or
+pre-processing steps, making it suitable for large-scale 3D problems with
+minimal memory overhead. The method provides both forward and adjoint
+solutions, enabling its application for inverse problems. We validate accuracy
+through comparison against an analytical solution and demonstrate the solver's
+practical utility through transcranial ultrasound simulations. The solver
+achieves convergence for strong scattering scenarios, offering a
+computationally efficient alternative to time-domain methods and matrix-based
+Helmholtz solvers for applications ranging from medical ultrasound treatment
+planning to seismic exploration.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2507.16067v1' target='_blank'>A Unifying Framework for Semiring-Based Constraint Logic Programming
+  With Negation (full version)</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jeroen Spaans, Jesse Heyninck</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-07-21 21:04:03</h6>
+<p class='card-text'>Constraint Logic Programming (CLP) is a logic programming formalism used to
+solve problems requiring the consideration of constraints, like resource
+allocation and automated planning and scheduling. It has previously been
+extended in various directions, for example to support fuzzy constraint
+satisfaction, uncertainty, or negation, with different notions of semiring
+being used as a unifying abstraction for these generalizations. None of these
+extensions have studied clauses with negation allowed in the body. We
+investigate an extension of CLP which unifies many of these extensions and
+allows negation in the body. We provide semantics for such programs, using the
+framework of approximation fixpoint theory, and give a detailed overview of the
+impacts of properties of the semirings on the resulting semantics. As such, we
+provide a unifying framework that captures existing approaches and allows
+extending them with a more expressive language.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2507.16053v1' target='_blank'>Interplanetary magnetic correlation and low-frequency spectrum over many
+  solar rotations</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jiaming Wang, Francesco Pecora, Rohit Chhiber, Sohom Roy, William H. Matthaeus</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-07-21 20:39:10</h6>
+<p class='card-text'>Fluctuations and structure across a wide range of spatial and temporal scales
+are frequently studied in the solar wind. The properties of the low-frequency
+fluctuations are of relevance to turbulent energy injection into the plasma and
+the transport of high-energy cosmic rays. Correlation analysis of decade-long
+intervals of interplanetary data permits study of fluctuations at time scales
+much longer than suitably defined correlation times, and therefore at
+frequencies well below those associated with the Kolmogorov inertial range of
+in situ turbulence. At the frequencies of interest, we study the familiar
+occurrence of the 1/f spectral signature. We also study point spectral features
+due to solar rotation and their relation with the 1/f signal. We report novel
+properties at timescales ranging from minutes up to years, using data selected
+by wind speed, phase of solar cycle, and cartesian components of the magnetic
+field. A surprising finding is that the power in solar rotation harmonics is
+consistent with an extension of the 1/f spectrum, down to frequencies as low as
+around 5e-7 Hz. The presence of a broadband 1/f spectrum across different wind
+types supports the interpretation that 1/f signals may be related to or even
+originate from the solar dynamo.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2507.16048v1' target='_blank'>Evaluating virtual-control-augmented trials for reproducing treatment
+  effect from original RCTs</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Alex Fernandes, Raphaël Porcher, Viet-Thi Tran, François Petit</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-07-21 20:33:08</h6>
+<p class='card-text'>This study investigates the use of virtual patient data to augment control
+arms in randomised controlled trials (RCTs). Using data from the IST and IST3
+trials, we simulated RCTs in which the recruitment in the control arms would
+stop after a fraction of the initially planned sample size, and would be
+completed by virtual patients generated by CTGAN and TVAE, two AI algorithms
+trained on the recruited control patients. In IST, the absolute risk
+difference(ARD) on death or dependency at 14 days was -0.012 (SE 0.014).
+Completing the control arm by CTGAN-generated virtual patients after the
+recruitment of 10% and 50% of participants, yielded an ARD of 0.004 (SE 0.014)
+(relative difference 133%) and -0.021 (SE 0.014) (relative difference 76%),
+respectively. Results were comparable with IST3 or TVAE. This is the first
+empirical demonstration of the risk of errors and misleading conclusions
+associated with generating virtual controls solely from trial data.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2507.16038v1' target='_blank'>Discovering and using Spelke segments</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Rahul Venkatesh, Klemen Kotar, Lilian Naing Chen, Seungwoo Kim, Luca Thomas Wheeler, Jared Watrous, Ashley Xu, Gia Ancone, Wanhee Lee, Honglin Chen, Daniel Bear, Stefan Stojanov, Daniel Yamins</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-07-21 20:11:57</h6>
+<p class='card-text'>Segments in computer vision are often defined by semantic considerations and
+are highly dependent on category-specific conventions. In contrast,
+developmental psychology suggests that humans perceive the world in terms of
+Spelke objects--groupings of physical things that reliably move together when
+acted on by physical forces. Spelke objects thus operate on category-agnostic
+causal motion relationships which potentially better support tasks like
+manipulation and planning. In this paper, we first benchmark the Spelke object
+concept, introducing the SpelkeBench dataset that contains a wide variety of
+well-defined Spelke segments in natural images. Next, to extract Spelke
+segments from images algorithmically, we build SpelkeNet, a class of visual
+world models trained to predict distributions over future motions. SpelkeNet
+supports estimation of two key concepts for Spelke object discovery: (1) the
+motion affordance map, identifying regions likely to move under a poke, and (2)
+the expected-displacement map, capturing how the rest of the scene will move.
+These concepts are used for "statistical counterfactual probing", where diverse
+"virtual pokes" are applied on regions of high motion-affordance, and the
+resultant expected displacement maps are used define Spelke segments as
+statistical aggregates of correlated motion statistics. We find that SpelkeNet
+outperforms supervised baselines like SegmentAnything (SAM) on SpelkeBench.
+Finally, we show that the Spelke concept is practically useful for downstream
+applications, yielding superior performance on the 3DEditBench benchmark for
+physical object manipulation when used in a variety of off-the-shelf object
+manipulation models.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2507.15975v1' target='_blank'>Fast Task Planning with Neuro-Symbolic Relaxation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Qiwei Du, Bowen Li, Yi Du, Shaoshu Su, Taimeng Fu, Zitong Zhan, Zhipeng Zhao, Chen Wang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-07-21 18:10:23</h6>
+<p class='card-text'>Real-world task planning requires long-horizon reasoning over large sets of
+entities with complex relationships and attributes, leading to a combinatorial
+explosion for classical symbolic planners. To prune the search space, recent
+methods prioritize searching on a simplified task only containing a few
+"important" entities predicted by a neural network. However, such a simple
+neuro-symbolic (NeSy) integration risks omitting critical entities and wasting
+resources on unsolvable simplified tasks. To enable Fast and reliable planning,
+we introduce a NeSy relaxation strategy (Flax), combining neural importance
+prediction with symbolic expansion. Specifically, we first learn a graph neural
+network to predict entity importance to create a simplified task and solve it
+with a symbolic planner. Then, we solve a rule-relaxed task to obtain a quick
+rough plan, and reintegrate all referenced entities into the simplified task to
+recover any overlooked but essential elements. Finally, we apply complementary
+rules to refine the updated task, keeping it both reliable and compact.
+Extensive experiments are conducted on both synthetic and real-world maze
+navigation benchmarks where a robot must traverse through a maze and interact
+with movable objects. The results show that Flax boosts the average success
+rate by 20.82% and cuts mean wall-clock planning time by 17.65% compared with
+the state-of-the-art NeSy baseline. We expect that Flax offers a practical path
+toward fast, scalable, long-horizon task planning in complex environments.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2507.15951v1' target='_blank'>Distinguishing Neutron Star vs. Low-Mass Black Hole Binaries with
+  Postmerger Gravitational Waves $-$ Sensitivity to Transmuted Black Holes and
+  Non-Annihilating Dark Matter</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Sulagna Bhattacharya, Shasvath Kapadia, Basudeb Dasgupta</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-07-21 18:00:07</h6>
+<p class='card-text'>The astrophysical origin of observed low-mass compact binary coalescences in
+the 1-2.5 $M_{\odot}$ range remains ambiguous. Both binary neutron star (BNS)
+and binary low-mass black hole (LMBH) mergers produce nearly identical inspiral
+waveforms, and electromagnetic follow-up is not always possible. Distinguishing
+between these scenarios therefore presents a key challenge. We demonstrate that
+waveform differences in the late-inspiral to postmerger epochs create
+significant mismatches that will be detectable by planned detectors, viz.,
+NEMO, Cosmic Explorer, and Einstein Telescope, while the currently operational
+LIGO A+ will be effective only for nearby sources. These differences are
+enhanced for stiffer equations of state. We show how the redshift-dependent
+compact binary merger rate inferred from gravitational wave observations can be
+parsed into BNS and LMBH components, accounting for misclassification
+probability. We forecast model-independent 90% exclusion sensitivities for the
+LMBH fraction. Interpreting these LMBHs as dark matter capture-induced
+transmuted black holes, we convert exclusion sensitivities into projected
+exclusion bounds on heavy non-annihilating dark matter. Our results illustrate
+how gravitational wave measurements can disentangle compact object populations
+and provide new insights into particle dark matter interactions.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2507.15942v1' target='_blank'>The HETDEX Survey: Probing neutral hydrogen in the circumgalactic medium
+  of ~88,000 Lyman Alpha Emitters</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Mahan Mirza Khanlari, Karl Gebhardt, Laurel H. Weiss, Dustin Davis, Erin Mentuch Cooper, Mahdi Qezlou, Maja Lujan Niemeyer, Robin Ciardullo, Donald P. Schneider, Shiro Mukae, Chenxu Liu, Daniel Farrow, Gary J. Hill, Gregory R. Zeimann, Wolfram Kollatschny</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-07-21 18:00:04</h6>
+<p class='card-text'>We explore the neutral hydrogen (H I) gas around 1.9 < z < 3.5 Lyman Alpha
+Emitters (LAEs) from the Hobby-Eberly Telescope Dark Energy Experiment (HETDEX)
+using faint Ly$\alpha$ absorption. This absorption is the result of H I in the
+halo of the LAE scattering Ly$\alpha$ photons from the integrated light of
+background galaxies along the line of sight. We stack millions of spectra from
+regions around ~88,000 LAEs to focus on the physics of the gas at large radii.
+The extensive number of fiber spectra contributing to the stacks ensures
+significant signal-to-noise ratio (S/N) to detect the faint Ly$\alpha$
+absorption which would otherwise be buried within the noise. We detect
+absorption out to a projected ~350 kpc around an average LAE at z~2.5. We use
+these results to create an empirical radial $W_\lambda$(Ly$\alpha$) profile
+around LAEs. Comparison with numerical simulations reveals a profile similar to
+the empirical one within this region. Compared to previous studies, the profile
+is similar but modestly higher. We also outline a simple physical picture
+motivated by the observed trends in the data. We plan to quantify this radial
+profile as a function of redshift, local density, and Ly$\alpha$ luminosity to
+explore the relationship between LAE environments and H I distribution.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2507.15777v1' target='_blank'>Label tree semantic losses for rich multi-class medical image
+  segmentation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Junwen Wang, Oscar MacCormac, William Rochford, Aaron Kujawa, Jonathan Shapey, Tom Vercauteren</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-07-21 16:32:48</h6>
+<p class='card-text'>Rich and accurate medical image segmentation is poised to underpin the next
+generation of AI-defined clinical practice by delineating critical anatomy for
+pre-operative planning, guiding real-time intra-operative navigation, and
+supporting precise post-operative assessment. However, commonly used learning
+methods for medical and surgical imaging segmentation tasks penalise all errors
+equivalently and thus fail to exploit any inter-class semantics in the labels
+space. This becomes particularly problematic as the cardinality and richness of
+labels increases to include subtly different classes. In this work, we propose
+two tree-based semantic loss functions which take advantage of a hierarchical
+organisation of the labels. We further incorporate our losses in a recently
+proposed approach for training with sparse, background-free annotations to
+extend the applicability of our proposed losses. Extensive experiments are
+reported on two medical and surgical image segmentation tasks, namely head MRI
+for whole brain parcellation (WBP) with full supervision and neurosurgical
+hyperspectral imaging (HSI) for scene understanding with sparse annotations.
+Results demonstrate that our proposed method reaches state-of-the-art
+performance in both cases.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2507.15743v1' target='_blank'>Towards physician-centered oversight of conversational diagnostic AI</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Elahe Vedadi, David Barrett, Natalie Harris, Ellery Wulczyn, Shashir Reddy, Roma Ruparel, Mike Schaekermann, Tim Strother, Ryutaro Tanno, Yash Sharma, Jihyeon Lee, Cían Hughes, Dylan Slack, Anil Palepu, Jan Freyberg, Khaled Saab, Valentin Liévin, Wei-Hung Weng, Tao Tu, Yun Liu, Nenad Tomasev, Kavita Kulkarni, S. Sara Mahdavi, Kelvin Guu, Joëlle Barral, Dale R. Webster, James Manyika, Avinatan Hassidim, Katherine Chou, Yossi Matias, Pushmeet Kohli, Adam Rodman, Vivek Natarajan, Alan Karthikesalingam, David Stutz</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-07-21 15:54:36</h6>
+<p class='card-text'>Recent work has demonstrated the promise of conversational AI systems for
+diagnostic dialogue. However, real-world assurance of patient safety means that
+providing individual diagnoses and treatment plans is considered a regulated
+activity by licensed professionals. Furthermore, physicians commonly oversee
+other team members in such activities, including nurse practitioners (NPs) or
+physician assistants/associates (PAs). Inspired by this, we propose a framework
+for effective, asynchronous oversight of the Articulate Medical Intelligence
+Explorer (AMIE) AI system. We propose guardrailed-AMIE (g-AMIE), a multi-agent
+system that performs history taking within guardrails, abstaining from
+individualized medical advice. Afterwards, g-AMIE conveys assessments to an
+overseeing primary care physician (PCP) in a clinician cockpit interface. The
+PCP provides oversight and retains accountability of the clinical decision.
+This effectively decouples oversight from intake and can thus happen
+asynchronously. In a randomized, blinded virtual Objective Structured Clinical
+Examination (OSCE) of text consultations with asynchronous oversight, we
+compared g-AMIE to NPs/PAs or a group of PCPs under the same guardrails. Across
+60 scenarios, g-AMIE outperformed both groups in performing high-quality
+intake, summarizing cases, and proposing diagnoses and management plans for the
+overseeing PCP to review. This resulted in higher quality composite decisions.
+PCP oversight of g-AMIE was also more time-efficient than standalone PCP
+consultations in prior work. While our study does not replicate existing
+clinical practices and likely underestimates clinicians' capabilities, our
+results demonstrate the promise of asynchronous oversight as a feasible
+paradigm for diagnostic AI systems to operate under expert human oversight for
+enhancing real-world care.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2507.15710v1' target='_blank'>Selective Densification for Rapid Motion Planning in High Dimensions
+  with Narrow Passages</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Lu Huang, Lingxiao Meng, Jiankun Wang, Xingjian Jing</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-07-21 15:17:59</h6>
+<p class='card-text'>Sampling-based algorithms are widely used for motion planning in
+high-dimensional configuration spaces. However, due to low sampling efficiency,
+their performance often diminishes in complex configuration spaces with narrow
+corridors. Existing approaches address this issue using handcrafted or learned
+heuristics to guide sampling toward useful regions. Unfortunately, these
+strategies often lack generalizability to various problems or require extensive
+prior training. In this paper, we propose a simple yet efficient sampling-based
+planning framework along with its bidirectional version that overcomes these
+issues by integrating different levels of planning granularity. Our approach
+probes configuration spaces with uniform random samples at varying resolutions
+and explores these multi-resolution samples online with a bias towards sparse
+samples when traveling large free configuration spaces. By seamlessly
+transitioning between sparse and dense samples, our approach can navigate
+complex configuration spaces while maintaining planning speed and completeness.
+The simulation results demonstrate that our approach outperforms several
+state-of-the-art sampling-based planners in $\mathbb{SE}(2)$, $\mathbb{SE}(3)$,
+and $\mathbb{R}^{14}$ with challenging terrains. Furthermore, experiments
+conducted with the Franka Emika Panda robot operating in a constrained
+workspace provide additional evidence of the superiority of the proposed
+method.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2507.15622v1' target='_blank'>A Voxel-Wise Uncertainty-Guided Framework for Glioma Segmentation Using
+  Spherical Projection-Based U-Net and Localized Refinement in Multi-Parametric
+  MRI</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Zhenyu Yang, Chen Yang, Rihui Zhang, Minbin Chen, Chunhao Wang, Fang-Fang Yin</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-07-21 13:46:26</h6>
+<p class='card-text'>Purpose: Accurate segmentation of glioma subregions in multi-parametric MRI
+(MP-MRI) is essential for diagnosis and treatment planning but remains
+challenging due to tumor heterogeneity and ambiguous boundaries. This study
+proposes an uncertainty-guided hybrid framework integrating spherical
+projection-based 2D modeling with targeted 3D refinement to enhance
+segmentation accuracy and interpretability. Methods: Using the BraTS2020
+dataset (369 patients, four-modality MP-MRI), three 2D U-Nets were trained to
+segment enhancing tumor (ET), tumor core (TC), and whole tumor (WT). Voxel-wise
+uncertainty was quantified via a spherical projection-based 2D nnU-Net,
+capturing prediction variance across deformed inputs. A 3D sliding window was
+used to identify high-uncertainty regions, which were refined using a dedicated
+3D nnU-Net. Final outputs combined 2D and 3D predictions through a weighted
+fusion optimized via Particle Swarm Optimization. Results: The proposed method
+outperformed standalone 2D and 3D baselines, achieving Dice scores of 0.8124
+(ET), 0.7499 (TC), and 0.9055 (WT), with consistent gains in sensitivity and
+visual coherence. Conclusion: This work presents a novel uncertainty-aware
+segmentation strategy that adaptively integrates 2D and 3D modeling. By
+focusing refinement on ambiguous regions, it improves both efficiency and
+accuracy, offering broad applicability to precision neuro-oncology and other
+high-stakes medical imaging tasks.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2507.15607v1' target='_blank'>A Universal Vehicle-Trailer Navigation System with Neural Kinematics and
+  Online Residual Learning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yanbo Chen, Yunzhe Tan, Yaojia Wang, Zhengzhe Xu, Junbo Tan, Xueqian Wang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-07-21 13:31:02</h6>
+<p class='card-text'>Autonomous navigation of vehicle-trailer systems is crucial in environments
+like airports, supermarkets, and concert venues, where various types of
+trailers are needed to navigate with different payloads and conditions.
+However, accurately modeling such systems remains challenging, especially for
+trailers with castor wheels. In this work, we propose a novel universal
+vehicle-trailer navigation system that integrates a hybrid nominal kinematic
+model--combining classical nonholonomic constraints for vehicles and neural
+network-based trailer kinematics--with a lightweight online residual learning
+module to correct real-time modeling discrepancies and disturbances.
+Additionally, we develop a model predictive control framework with a weighted
+model combination strategy that improves long-horizon prediction accuracy and
+ensures safer motion planning. Our approach is validated through extensive
+real-world experiments involving multiple trailer types and varying payload
+conditions, demonstrating robust performance without manual tuning or
+trailer-specific calibration.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js'></script>
+</body>
+</html>
