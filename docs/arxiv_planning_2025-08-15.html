@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>planning - 2025-08-15</title>
+<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap' rel='stylesheet'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css'>
+<style>
+body {
+font-family: 'Roboto', sans-serif;
+background-color: #f5f7fa;
+padding: 20px;
+}
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.card-title {
+    font-weight: 700;
+}
+.card:hover {
+    transform: scale(1.02);
+    transition: 0.3s ease-in-out;
+}
+</style>
+</head>
+<body>
+<div class='container'>
+<h1 class='text-center my-4'><i class='fas fa-book'></i>planning - 2025-08-15</h1>
+<div class='row'>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2508.10872v1' target='_blank'>TLE-Based A2C Agent for Terrestrial Coverage Orbital Path Planning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Anantha Narayanan, Battu Bhanu Teja, Pruthwik Mishra</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-08-14 17:44:51</h6>
+<p class='card-text'>The increasing congestion of Low Earth Orbit (LEO) poses persistent
+challenges to the efficient deployment and safe operation of Earth observation
+satellites. Mission planners must now account not only for mission-specific
+requirements but also for the increasing collision risk with active satellites
+and space debris. This work presents a reinforcement learning framework using
+the Advantage Actor-Critic (A2C) algorithm to optimize satellite orbital
+parameters for precise terrestrial coverage within predefined surface radii. By
+formulating the problem as a Markov Decision Process (MDP) within a custom
+OpenAI Gymnasium environment, our method simulates orbital dynamics using
+classical Keplerian elements. The agent progressively learns to adjust five of
+the orbital parameters - semi-major axis, eccentricity, inclination, right
+ascension of ascending node, and the argument of perigee-to achieve targeted
+terrestrial coverage. Comparative evaluation against Proximal Policy
+Optimization (PPO) demonstrates A2C's superior performance, achieving 5.8x
+higher cumulative rewards (10.0 vs 9.263025) while converging in 31.5x fewer
+timesteps (2,000 vs 63,000). The A2C agent consistently meets mission
+objectives across diverse target coordinates while maintaining computational
+efficiency suitable for real-time mission planning applications. Key
+contributions include: (1) a TLE-based orbital simulation environment
+incorporating physics constraints, (2) validation of actor-critic methods'
+superiority over trust region approaches in continuous orbital control, and (3)
+demonstration of rapid convergence enabling adaptive satellite deployment. This
+approach establishes reinforcement learning as a computationally efficient
+alternative for scalable and intelligent LEO mission planning.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2508.10837v1' target='_blank'>Local structure of centred tangent cones in the Wasserstein space</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Averil Aussedat</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-08-14 17:03:04</h6>
+<p class='card-text'>This article investigates the geometric tangent cone to a probability measure
+with finite second moment. It is known that the tangent elements induced by a
+map belong to the $L^2_{\mu}$ closure of smooth gradients. We show that at the
+opposite, the elements that have barycenter 0 are characterized by a local
+condition, i.e. as the barycenter-free measures that are concentrated on a
+family of vector subspaces attached to any point. Our results rely on a
+decomposition of a measure into $d+1$ components, each allowing optimal plans
+to split mass in a fixed number of directions. We conclude by giving some links
+with Preiss tangent measures and illustrating the difference with Alberti and
+Marchese's decomposability bundle.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2508.10833v1' target='_blank'>UI-Venus Technical Report: Building High-performance UI Agents with RFT</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Zhangxuan Gu, Zhengwen Zeng, Zhenyu Xu, Xingran Zhou, Shuheng Shen, Yunfei Liu, Beitong Zhou, Changhua Meng, Tianyu Xia, Weizhi Chen, Yue Wen, Jingya Dou, Fei Tang, Jinzhen Lin, Yulin Liu, Zhenlin Guo, Yichen Gong, Heng Jia, Changlong Gao, Yuan Guo, Yong Deng, Zhenyu Guo, Liang Chen, Weiqiang Wang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-08-14 16:58:07</h6>
+<p class='card-text'>We present UI-Venus, a native UI agent that takes only screenshots as input
+based on a multimodal large language model. UI-Venus achieves SOTA performance
+on both UI grounding and navigation tasks using only several hundred thousand
+high-quality training samples through reinforcement finetune (RFT) based on
+Qwen2.5-VL. Specifically, the 7B and 72B variants of UI-Venus obtain 94.1% /
+50.8% and 95.3% / 61.9% on the standard grounding benchmarks, i.e.,
+Screenspot-V2 / Pro, surpassing the previous SOTA baselines including
+open-source GTA1 and closed-source UI-TARS-1.5.To show UI-Venus's summary and
+planing ability, we also evaluate it on the AndroidWorld, an online UI
+navigation arena, on which our 7B and 72B variants achieve 49.1% and 65.9%
+success rate, also beating existing models.To achieve this, we introduce
+carefully designed reward functions for both UI grounding and navigation tasks
+and corresponding efficient data cleaning strategies.To further boost
+navigation performance, we propose Self-Evolving Trajectory History Alignment
+\& Sparse Action Enhancement that refine historical reasoning traces and
+balances the distribution of sparse but critical actions, leading to more
+coherent planning and better generalization in complex UI tasks. Our
+contributions include the publish of SOTA open-source UI agents, comprehensive
+data cleaning protocols and a novel self-evolving framework for improving
+navigation performance, which encourage further research and development in the
+community. Code is available at https://github.com/antgroup/UI-Venus.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2508.10789v1' target='_blank'>Accelerating Stochastic Energy System Optimization Models: Temporally
+  Split Benders Decomposition</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Shima Sasanpour, Manuel Wetzel, Karl-Kiên Cao, Hans Christian Gils, Andrés Ramos</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-08-14 16:15:17</h6>
+<p class='card-text'>Stochastic programming can be applied to consider uncertainties in energy
+system optimization models for capacity expansion planning. However, these
+models become increasingly large and time-consuming to solve, even without
+considering uncertainties. For two-stage stochastic capacity expansion planning
+problems, Benders decomposition is often applied to ensure that the problem
+remains solvable. Since stochastic scenarios can be optimized independently
+within subproblems, their optimization can be parallelized. However,
+hourly-resolved capacity expansion planning problems typically have a larger
+temporal than scenario cardinality. Therefore, we present a temporally split
+Benders decomposition that further exploits the parallelization potential of
+stochastic expansion planning problems. A compact reformulation of the storage
+level constraint into linking variables ensures that long-term storage
+operation can still be optimized despite the temporal decomposition. We
+demonstrate this novel approach with model instances of the German power system
+with up to 87 million rows and columns. Our results show a reduction in
+computing times of up to 60% and reduced memory requirements. Additional
+enhancement strategies and the use of distributed memory on high-performance
+computers further improve the computing time by over 80%.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2508.10781v1' target='_blank'>Generating Compilers for Qubit Mapping and Routing</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Abtin Molavi, Amanda Xu, Ethan Cecchetti, Swamit Tannu, Aws Albarghouthi</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-08-14 16:07:07</h6>
+<p class='card-text'>Quantum computers promise to solve important problems faster than classical
+computers, potentially unlocking breakthroughs in materials science, chemistry,
+and beyond. Optimizing compilers are key to realizing this potential, as they
+minimize expensive resource usage and limit error rates. A critical compilation
+step is qubit mapping and routing (QMR), which finds mappings from circuit
+qubits to qubits on a target device and plans instruction execution while
+satisfying the device's connectivity constraints. The challenge is that the
+landscape of quantum architectures is incredibly diverse and fast-evolving.
+Given this diversity, hundreds of papers have addressed the QMR problem for
+different qubit hardware, connectivity constraints, and quantum error
+correction schemes.
+  We present an approach for automatically generating qubit mapping and routing
+compilers for arbitrary quantum architectures. Though each QMR problem is
+different, we identify a common core structure-device state machine-that we use
+to formulate an abstract QMR problem. Our formulation naturally leads to a
+domain-specific language, Marol, for specifying QMR problems-for example, the
+well-studied NISQ mapping and routing problem requires only 12 lines of Marol.
+We demonstrate that QMR problems, defined in Marol, can be solved with a
+powerful parametric solver that can be instantiated for any Marol program. We
+evaluate our approach through case studies of important QMR problems from prior
+and recent work, covering noisy and fault-tolerant quantum architectures on all
+major hardware platforms. Our thorough evaluation shows that generated
+compilers are competitive with handwritten, specialized compilers in terms of
+runtime and solution quality. We envision that our approach will simplify
+development of future quantum compilers as new quantum architectures continue
+to emerge.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2508.10760v1' target='_blank'>FROGENT: An End-to-End Full-process Drug Design Agent</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Qihua Pan, Dong Xu, Jenna Xinyi Yao, Lijia Ma, Zexuan Zhu, Junkai Ji</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-08-14 15:45:53</h6>
+<p class='card-text'>Powerful AI tools for drug discovery reside in isolated web apps, desktop
+programs, and code libraries. Such fragmentation forces scientists to manage
+incompatible interfaces and specialized scripts, which can be a cumbersome and
+repetitive process. To address this issue, a Full-pROcess druG dEsign ageNT,
+named FROGENT, has been proposed. Specifically, FROGENT utilizes a Large
+Language Model and the Model Context Protocol to integrate multiple dynamic
+biochemical databases, extensible tool libraries, and task-specific AI models.
+This agentic framework allows FROGENT to execute complicated drug discovery
+workflows dynamically, including component tasks such as target identification,
+molecule generation and retrosynthetic planning. FROGENT has been evaluated on
+eight benchmarks that cover various aspects of drug discovery, such as
+knowledge retrieval, property prediction, virtual screening, mechanistic
+analysis, molecular design, and synthesis. It was compared against six
+increasingly advanced ReAct-style agents that support code execution and
+literature searches. Empirical results demonstrated that FROGENT triples the
+best baseline performance in hit-finding and doubles it in interaction
+profiling, significantly outperforming both the open-source model Qwen3-32B and
+the commercial model GPT-4o. In addition, real-world cases have been utilized
+to validate the practicability and generalization of FROGENT. This development
+suggests that streamlining the agentic drug discovery pipeline can
+significantly enhance researcher productivity.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2508.10747v1' target='_blank'>Scaling Up without Fading Out: Goal-Aware Sparse GNN for RL-based
+  Generalized Planning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Sangwoo Jeon, Juchul Shin, Gyeong-Tae Kim, YeonJe Cho, Seongwoo Kim</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-08-14 15:30:28</h6>
+<p class='card-text'>Generalized planning using deep reinforcement learning (RL) combined with
+graph neural networks (GNNs) has shown promising results in various symbolic
+planning domains described by PDDL. However, existing approaches typically
+represent planning states as fully connected graphs, leading to a combinatorial
+explosion in edge information and substantial sparsity as problem scales grow,
+especially evident in large grid-based environments. This dense representation
+results in diluted node-level information, exponentially increases memory
+requirements, and ultimately makes learning infeasible for larger-scale
+problems. To address these challenges, we propose a sparse, goal-aware GNN
+representation that selectively encodes relevant local relationships and
+explicitly integrates spatial features related to the goal. We validate our
+approach by designing novel drone mission scenarios based on PDDL within a grid
+world, effectively simulating realistic mission execution environments. Our
+experimental results demonstrate that our method scales effectively to larger
+grid sizes previously infeasible with dense graph representations and
+substantially improves policy generalization and success rates. Our findings
+provide a practical foundation for addressing realistic, large-scale
+generalized planning tasks.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2508.10733v1' target='_blank'>Traffic Intersection Simulation Using Turning Movement Count Data in
+  SUMO: A Case Study of Toronto Intersections</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Harshit Maheshwari, Li Yang, Richard W Pazzi</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-08-14 15:12:50</h6>
+<p class='card-text'>Urban traffic simulation is vital in planning, modeling, and analyzing road
+networks. However, the realism of a simulation depends extensively on the
+quality of input data. This paper presents an intersection traffic simulation
+tool that leverages real-world vehicle turning movement count (TMC) data from
+the City of Toronto to model traffic in an urban environment at an individual
+or multiple intersections using Simulation of Urban MObility (SUMO). The
+simulation performed in this research focuses specifically on
+intersection-level traffic generation without creating full vehicle routes
+through the network. This also helps keep the network's complexity to a
+minimum. The simulated traffic is evaluated against actual data to show that
+the simulation closely reproduces real intersection flows. This validates that
+the real data can drive practical simulations, and these scenarios can replace
+synthetic or random generated data, which is prominently used in developing new
+traffic-related methodologies. This is the first tool to integrate TMC data
+from Toronto into SUMO via an easy-to-use Graphical User Interface. This work
+contributes to the research and traffic planning community on data-driven
+traffic simulation. It provides transportation engineers with a framework to
+evaluate intersection design and traffic signal optimization strategies using
+readily available aggregate traffic data.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2508.10635v1' target='_blank'>ChatENV: An Interactive Vision-Language Model for Sensor-Guided
+  Environmental Monitoring and Scenario Simulation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Hosam Elgendy, Ahmed Sharshar, Ahmed Aboeitta, Mohsen Guizani</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-08-14 13:33:44</h6>
+<p class='card-text'>Understanding environmental changes from aerial imagery is vital for climate
+resilience, urban planning, and ecosystem monitoring. Yet, current vision
+language models (VLMs) overlook causal signals from environmental sensors, rely
+on single-source captions prone to stylistic bias, and lack interactive
+scenario-based reasoning. We present ChatENV, the first interactive VLM that
+jointly reasons over satellite image pairs and real-world sensor data. Our
+framework: (i) creates a 177k-image dataset forming 152k temporal pairs across
+62 land-use classes in 197 countries with rich sensor metadata (e.g.,
+temperature, PM10, CO); (ii) annotates data using GPT- 4o and Gemini 2.0 for
+stylistic and semantic diversity; and (iii) fine-tunes Qwen-2.5-VL using
+efficient Low-Rank Adaptation (LoRA) adapters for chat purposes. ChatENV
+achieves strong performance in temporal and "what-if" reasoning (e.g., BERT-F1
+0.903) and rivals or outperforms state-of-the-art temporal models, while
+supporting interactive scenario-based analysis. This positions ChatENV as a
+powerful tool for grounded, sensor-aware environmental monitoring.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2508.10617v1' target='_blank'>FIND-Net -- Fourier-Integrated Network with Dictionary Kernels for Metal
+  Artifact Reduction</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Farid Tasharofi, Fuxin Fan, Melika Qahqaie, Mareike Thies, Andreas Maier</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-08-14 13:13:54</h6>
+<p class='card-text'>Metal artifacts, caused by high-density metallic implants in computed
+tomography (CT) imaging, severely degrade image quality, complicating diagnosis
+and treatment planning. While existing deep learning algorithms have achieved
+notable success in Metal Artifact Reduction (MAR), they often struggle to
+suppress artifacts while preserving structural details. To address this
+challenge, we propose FIND-Net (Fourier-Integrated Network with Dictionary
+Kernels), a novel MAR framework that integrates frequency and spatial domain
+processing to achieve superior artifact suppression and structural
+preservation. FIND-Net incorporates Fast Fourier Convolution (FFC) layers and
+trainable Gaussian filtering, treating MAR as a hybrid task operating in both
+spatial and frequency domains. This approach enhances global contextual
+understanding and frequency selectivity, effectively reducing artifacts while
+maintaining anatomical structures. Experiments on synthetic datasets show that
+FIND-Net achieves statistically significant improvements over state-of-the-art
+MAR methods, with a 3.07% MAE reduction, 0.18% SSIM increase, and 0.90% PSNR
+improvement, confirming robustness across varying artifact complexities.
+Furthermore, evaluations on real-world clinical CT scans confirm FIND-Net's
+ability to minimize modifications to clean anatomical regions while effectively
+suppressing metal-induced distortions. These findings highlight FIND-Net's
+potential for advancing MAR performance, offering superior structural
+preservation and improved clinical applicability. Code is available at
+https://github.com/Farid-Tasharofi/FIND-Net</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2508.10596v1' target='_blank'>A Unified Framework from Boltzmann Transport to Proton Treatment
+  Planning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Andreas E. Kyprianou, Aaron Pim, Tristan Pryer</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-08-14 12:37:25</h6>
+<p class='card-text'>This work develops a rigorous mathematical formulation of proton transport by
+integrating both deterministic and stochastic perspectives. The deterministic
+framework is based on the Boltzmann-Fokker-Planck equation, formulated as an
+operator equation in a suitable functional setting. The stochastic approach
+models proton evolution via a track-length parameterised diffusion process,
+whose infinitesimal generator provides an alternative description of transport.
+  A key result is the duality between the stochastic and deterministic
+formulations, established through the adjoint relationship between the
+transport operator and the stochastic generator. We prove that the resolvent of
+the stochastic process corresponds to the Green's function of the deterministic
+equation, providing a natural link between fluence-based and particle-based
+transport descriptions. The theory is applied to dose computation, where we
+show that the classical relation: dose = (fluence * mass stopping power) arises
+consistently in both approaches.
+  Building on this foundation, we formulate a hybrid optimisation framework for
+treatment planning, in which dose is computed using a stochastic model while
+optimisation proceeds via adjoint-based PDE methods. We prove existence and
+differentiability of the objective functional and derive the first-order
+optimality system. This framework bridges stochastic simulation with
+deterministic control theory and provides a foundation for future work in
+constrained, adaptive and uncertainty-aware optimisation in proton therapy.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2508.10567v1' target='_blank'>SpaRC-AD: A Baseline for Radar-Camera Fusion in End-to-End Autonomous
+  Driving</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Philipp Wolters, Johannes Gilg, Torben Teepe, Gerhard Rigoll</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-08-14 12:02:41</h6>
+<p class='card-text'>End-to-end autonomous driving systems promise stronger performance through
+unified optimization of perception, motion forecasting, and planning. However,
+vision-based approaches face fundamental limitations in adverse weather
+conditions, partial occlusions, and precise velocity estimation - critical
+challenges in safety-sensitive scenarios where accurate motion understanding
+and long-horizon trajectory prediction are essential for collision avoidance.
+To address these limitations, we propose SpaRC-AD, a query-based end-to-end
+camera-radar fusion framework for planning-oriented autonomous driving. Through
+sparse 3D feature alignment, and doppler-based velocity estimation, we achieve
+strong 3D scene representations for refinement of agent anchors, map polylines
+and motion modelling. Our method achieves strong improvements over the
+state-of-the-art vision-only baselines across multiple autonomous driving
+tasks, including 3D detection (+4.8% mAP), multi-object tracking (+8.3% AMOTA),
+online mapping (+1.8% mAP), motion prediction (-4.0% mADE), and trajectory
+planning (-0.1m L2 and -9% TPC). We achieve both spatial coherence and temporal
+consistency on multiple challenging benchmarks, including real-world open-loop
+nuScenes, long-horizon T-nuScenes, and closed-loop simulator Bench2Drive. We
+show the effectiveness of radar-based fusion in safety-critical scenarios where
+accurate motion understanding and long-horizon trajectory prediction are
+essential for collision avoidance. The source code of all experiments is
+available at https://phi-wol.github.io/sparcad/</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2508.10554v1' target='_blank'>AR Surgical Navigation With Surface Tracing: Comparing
+  In-SitVisualization with Tool-Tracking Guidance for Neurosurgical
+  Applications</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Marc J. Fischer, Jeffrey Potts, Gabriel Urreola, Dax Jones, Paolo Palmisciano, E. Bradley Strong, Branden Cord, Andrew D. Hernandez, Julia D. Sharma, E. Brandon Strong</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-08-14 11:46:30</h6>
+<p class='card-text'>Augmented Reality (AR) surgical navigation systems are emerging as the next
+generation of intraoperative surgical guidance, promising to overcome
+limitations of traditional navigation systems. However, known issues with AR
+depth perception due to vergence-accommodation conflict and occlusion handling
+limitations of the currently commercially available display technology present
+acute challenges in surgical settings where precision is paramount. This study
+presents a novel methodology for utilizing AR guidance to register anatomical
+targets and provide real-time instrument navigation using placement of
+simulated external ventricular drain catheters on a phantom model as the
+clinical scenario. The system registers target positions to the patient through
+a novel surface tracing method and uses real-time infrared tool tracking to aid
+in catheter placement, relying only on the onboard sensors of the Microsoft
+HoloLens 2. A group of intended users performed the procedure of simulated
+insertions under two AR guidance conditions: static in-situ visualization,
+where planned trajectories are overlaid directly onto the patient anatomy, and
+real-time tool-tracking guidance, where live feedback of the catheter's pose is
+provided relative to the plan. Following the insertion tests, computed
+tomography scans of the phantom models were acquired, allowing for evaluation
+of insertion accuracy, target deviation, angular error, and depth precision.
+System Usability Scale surveys assessed user experience and cognitive workload.
+Tool-tracking guidance improved performance metrics across all accuracy
+measures and was preferred by users in subjective evaluations. A free copy of
+this paper and all supplemental materials are available at
+https://bit.ly/45l89Hq.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2508.10531v1' target='_blank'>Projected Coupled Diffusion for Test-Time Constrained Joint Generation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Hao Luan, Yi Xian Goh, See-Kiong Ng, Chun Kai Ling</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-08-14 11:05:31</h6>
+<p class='card-text'>Modifications to test-time sampling have emerged as an important extension to
+diffusion algorithms, with the goal of biasing the generative process to
+achieve a given objective without having to retrain the entire diffusion model.
+However, generating jointly correlated samples from multiple pre-trained
+diffusion models while simultaneously enforcing task-specific constraints
+without costly retraining has remained challenging. To this end, we propose
+Projected Coupled Diffusion (PCD), a novel test-time framework for constrained
+joint generation. PCD introduces a coupled guidance term into the generative
+dynamics to encourage coordination between diffusion models and incorporates a
+projection step at each diffusion step to enforce hard constraints.
+Empirically, we demonstrate the effectiveness of PCD in application scenarios
+of image-pair generation, object manipulation, and multi-robot motion planning.
+Our results show improved coupling effects and guaranteed constraint
+satisfaction without incurring excessive computational costs.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2508.10480v1' target='_blank'>Pinet: Optimizing hard-constrained neural networks with orthogonal
+  projection layers</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Panagiotis D. Grontas, Antonio Terpin, Efe C. Balta, Raffaello D'Andrea, John Lygeros</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-08-14 09:32:09</h6>
+<p class='card-text'>We introduce an output layer for neural networks that ensures satisfaction of
+convex constraints. Our approach, $\Pi$net, leverages operator splitting for
+rapid and reliable projections in the forward pass, and the implicit function
+theorem for backpropagation. We deploy $\Pi$net as a feasible-by-design
+optimization proxy for parametric constrained optimization problems and obtain
+modest-accuracy solutions faster than traditional solvers when solving a single
+problem, and significantly faster for a batch of problems. We surpass
+state-of-the-art learning approaches in terms of training time, solution
+quality, and robustness to hyperparameter tuning, while maintaining similar
+inference times. Finally, we tackle multi-vehicle motion planning with
+non-convex trajectory preferences and provide $\Pi$net as a GPU-ready package
+implemented in JAX with effective tuning heuristics.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2508.10449v1' target='_blank'>SkeySpot: Automating Service Key Detection for Digital Electrical Layout
+  Plans in the Construction Industry</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Dhruv Dosi, Rohit Meena, Param Rajpura, Yogesh Kumar Meena</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-08-14 08:36:11</h6>
+<p class='card-text'>Legacy floor plans, often preserved only as scanned documents, remain
+essential resources for architecture, urban planning, and facility management
+in the construction industry. However, the lack of machine-readable floor plans
+render large-scale interpretation both time-consuming and error-prone.
+Automated symbol spotting offers a scalable solution by enabling the
+identification of service key symbols directly from floor plans, supporting
+workflows such as cost estimation, infrastructure maintenance, and regulatory
+compliance. This work introduces a labelled Digitised Electrical Layout Plans
+(DELP) dataset comprising 45 scanned electrical layout plans annotated with
+2,450 instances across 34 distinct service key classes. A systematic evaluation
+framework is proposed using pretrained object detection models for DELP
+dataset. Among the models benchmarked, YOLOv8 achieves the highest performance
+with a mean Average Precision (mAP) of 82.5\%. Using YOLOv8, we develop
+SkeySpot, a lightweight, open-source toolkit for real-time detection,
+classification, and quantification of electrical symbols. SkeySpot produces
+structured, standardised outputs that can be scaled up for interoperable
+building information workflows, ultimately enabling compatibility across
+downstream applications and regulatory platforms. By lowering dependency on
+proprietary CAD systems and reducing manual annotation effort, this approach
+makes the digitisation of electrical layouts more accessible to small and
+medium-sized enterprises (SMEs) in the construction industry, while supporting
+broader goals of standardisation, interoperability, and sustainability in the
+built environment.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2508.10446v1' target='_blank'>A Structured Framework for Prioritizing Unsafe Control Actions in STPA:
+  Case Study on eVTOL Operations</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Halima El Badaoui</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-08-14 08:34:07</h6>
+<p class='card-text'>Systems Theoretic Process Analysis (STPA) is a widely recommended method for
+analysing complex system safety. STPA can identify numerous Unsafe Control
+Actions (UCAs) and requirements depending on the level of granularity of the
+analysis and the complexity of the system being analysed. Managing numerous
+results is challenging, especially during a fast-paced development lifecycle.
+Extensive research has been done to optimize the efficiency of managing and
+prioritising the STPA results. However, maintaining the objectivity of
+prioritisation and communicating the prioritised results have become common
+challenges. In this paper, the authors present a complementary approach that
+incorporates inputs from both the safety analysts and domain experts to more
+objectively prioritise UCAs. This is done by evaluating the severity of each
+UCA, the impact factor of each controller or decision maker that issues the
+UCA, and the ranking provided by the subject matter experts who assess the UCA
+criticalities based on different factors. In addition, a Monte Carlo simulation
+is introduced to reduce subjectivity and relativity, thus enabling more
+objective prioritisation of the UCAs. As part of the approach to better
+communicate the prioritisation results and plan the next steps of system
+development, a dynamic-scaling prioritisation matrix was developed to capture
+different sets of prioritised UCAs. The approach was applied to a real project
+to improve the safe operations of Electric Vertical Take-off and Landing
+(eVTOL). The results highlighted critical UCAs that need to be prioritised for
+safer eVTOL operation. 318 UCAs were identified in total. Based on the
+application of the prioritisation methodology, 110 were recognized as
+high-priority UCAs to strengthen the system design.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2508.10438v1' target='_blank'>Repairing General Game Descriptions (extended version)</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yifan He, Munyque Mittelmann, Aniello Murano, Abdallah Saffidine, Michael Thielscher</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-08-14 08:19:21</h6>
+<p class='card-text'>The Game Description Language (GDL) is a widely used formalism for specifying
+the rules of general games. Writing correct GDL descriptions can be
+challenging, especially for non-experts. Automated theorem proving has been
+proposed to assist game design by verifying if a GDL description satisfies
+desirable logical properties. However, when a description is proved to be
+faulty, the repair task itself can only be done manually. Motivated by the work
+on repairing unsolvable planning domain descriptions, we define a more general
+problem of finding minimal repairs for GDL descriptions that violate formal
+requirements, and we provide complexity results for various computational
+problems related to minimal repair. Moreover, we present an Answer Set
+Programming-based encoding for solving the minimal repair problem and
+demonstrate its application for automatically repairing ill-defined game
+descriptions.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2508.10437v1' target='_blank'>Joint Planning and Operations of Wind Power under Decision-dependent
+  Uncertainty</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Zhiqiang Chen, Caihua Chen, Jingshi Cui, Qian Hu, Wei Xu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-08-14 08:19:06</h6>
+<p class='card-text'>We study a joint wind farm planning and operational scheduling problem under
+decision-dependent uncertainty. The objective is to determine the optimal
+number of wind turbines at each location to minimize total cost, including both
+investment and operational expenses. Due to the stochastic nature and
+geographical heterogeneity of wind power, fluctuations across dispersed wind
+farms can partially offset one another, thereby influencing the distribution of
+aggregated wind power generation-a phenomenon known as the smoothing effect.
+Effectively harnessing this effect requires strategic capacity allocation,
+which introduces decision-dependent uncertainty into the planning process. To
+address this challenge, we propose a two-stage distributionally robust
+optimization model with a decision-dependent Wasserstein ambiguity set, in
+which both the distribution and the radius are modeled as functions of the
+planning decisions, reflecting the statistical characteristics of wind power
+resources. Then, we reformulate the model as a mixed-integer second-order cone
+program, and the optimal objective value provides a probabilistic guarantee on
+the out-of-sample performance. To improve computational efficiency, we develop
+a constraint generation based solution framework that accelerates the solution
+procedure by hundreds of times. Numerical experiments using different datasets
+validate the effectiveness of the solution framework and demonstrate the
+superior performance of the proposed model.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2508.10399v1' target='_blank'>Large Model Empowered Embodied AI: A Survey on Decision-Making and
+  Embodied Learning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Wenlong Liang, Rui Zhou, Yang Ma, Bing Zhang, Songlin Li, Yijia Liao, Ping Kuang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-08-14 06:56:16</h6>
+<p class='card-text'>Embodied AI aims to develop intelligent systems with physical forms capable
+of perceiving, decision-making, acting, and learning in real-world
+environments, providing a promising way to Artificial General Intelligence
+(AGI). Despite decades of explorations, it remains challenging for embodied
+agents to achieve human-level intelligence for general-purpose tasks in open
+dynamic environments. Recent breakthroughs in large models have revolutionized
+embodied AI by enhancing perception, interaction, planning and learning. In
+this article, we provide a comprehensive survey on large model empowered
+embodied AI, focusing on autonomous decision-making and embodied learning. We
+investigate both hierarchical and end-to-end decision-making paradigms,
+detailing how large models enhance high-level planning, low-level execution,
+and feedback for hierarchical decision-making, and how large models enhance
+Vision-Language-Action (VLA) models for end-to-end decision making. For
+embodied learning, we introduce mainstream learning methodologies, elaborating
+on how large models enhance imitation learning and reinforcement learning
+in-depth. For the first time, we integrate world models into the survey of
+embodied AI, presenting their design methods and critical roles in enhancing
+decision-making and learning. Though solid advances have been achieved,
+challenges still exist, which are discussed at the end of this survey,
+potentially as the further research directions.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2508.10378v1' target='_blank'>A Semantic-Aware Framework for Safe and Intent-Integrative Assistance in
+  Upper-Limb Exoskeletons</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yu Chen, Shu Miao, Chunyu Wu, Jingsong Mu, Bo OuYang, Xiang Li</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-08-14 06:18:20</h6>
+<p class='card-text'>Upper-limb exoskeletons are primarily designed to provide assistive support
+by accurately interpreting and responding to human intentions. In home-care
+scenarios, exoskeletons are expected to adapt their assistive configurations
+based on the semantic information of the task, adjusting appropriately in
+accordance with the nature of the object being manipulated. However, existing
+solutions often lack the ability to understand task semantics or
+collaboratively plan actions with the user, limiting their generalizability. To
+address this challenge, this paper introduces a semantic-aware framework that
+integrates large language models into the task planning framework, enabling the
+delivery of safe and intent-integrative assistance. The proposed approach
+begins with the exoskeleton operating in transparent mode to capture the
+wearer's intent during object grasping. Once semantic information is extracted
+from the task description, the system automatically configures appropriate
+assistive parameters. In addition, a diffusion-based anomaly detector is used
+to continuously monitor the state of human-robot interaction and trigger
+real-time replanning in response to detected anomalies. During task execution,
+online trajectory refinement and impedance control are used to ensure safety
+and regulate human-robot interaction. Experimental results demonstrate that the
+proposed method effectively aligns with the wearer's cognition, adapts to
+semantically varying tasks, and responds reliably to anomalies.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2508.10330v1' target='_blank'>The Southern-sky MWA Rapid Two-metre (SMART) pulsar survey -- III. A
+  census of millisecond pulsars at 154 MHz</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:C. P. Lee, N. D. R. Bhat, B. W. Meyers, S. J. McSweeney, W. van Straten, C. M. Tan, M. Xue, N. A. Swainston, S. M. Ord, G. Sleap, S. E. Tremblay, A. Williams</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-08-14 04:08:50</h6>
+<p class='card-text'>Observations of millisecond pulsars (MSPs) at low radio frequencies play an
+important role in understanding the Galactic pulsar population and
+characterising both their emission properties and the effects of the ionised
+interstellar medium on the received signals. To date, only a relatively small
+fraction of the known MSP population has been detected at frequencies below 300
+MHz, and nearly all previous MSP studies at these frequencies have been
+conducted with northern telescopes. We present a census of MSPs in the SMART
+pulsar survey, covering declinations south of +30 deg at a centre frequency of
+154 MHz. We detected 40 MSPs, with 11 being the first published detections
+below 300 MHz. For each detection, we provide coherently-dedispersed
+full-polarimetric integrated pulse profiles and mean flux densities. We
+measured significant Faraday rotation measures (RMs) for 25 MSPs, and
+identified apparent phase-dependent RM variations for three MSPs. Comparison
+with published profiles at other frequencies supports previous studies
+suggesting that the pulse component separations of MSPs vary negligibly over a
+wide frequency range due to their compact magnetospheres. We observe that
+integrated pulse profiles tend to be more polarised at low frequencies,
+consistent with depolarisation due to superposed orthogonal polarisation modes.
+The results of this census will be a valuable resource for planning future MSP
+monitoring projects at low frequencies, and will also help to improve survey
+simulations to forecast the detectable MSP population with the SKA-Low.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2508.10310v1' target='_blank'>Beyond Self-Regulated Learning Processes: Unveiling Hidden Tactics in
+  Generative AI-Assisted Writing</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Kaixun Yang, Yizhou Fan, Luzhen Tang, Mladen Raković, Xinyu Li, Dragan Gašević, Guanliang Chen</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-08-14 03:28:36</h6>
+<p class='card-text'>The integration of Generative AI (GenAI) into education is reshaping how
+students learn, making self-regulated learning (SRL) - the ability to plan,
+monitor, and adapt one's learning - more important than ever. To support
+learners in these new contexts, it is essential to understand how SRL unfolds
+during interaction with GenAI tools. Learning analytics offers powerful
+techniques for analyzing digital trace data to infer SRL behaviors. However,
+existing approaches often assume SRL processes are linear, segmented, and
+non-overlapping-assumptions that overlook the dynamic, recursive, and
+non-linear nature of real-world learning. We address this by conceptualizing
+SRL as a layered system: observable learning patterns reflect hidden tactics
+(short, purposeful action states), which combine into broader SRL strategies.
+Using Hidden Markov Models (HMMs), we analyzed trace data from higher education
+students engaged in GenAI-assisted academic writing. We identified three
+distinct groups of learners, each characterized by different SRL strategies.
+These groups showed significant differences in performance, indicating that
+students' use of different SRL strategies in GenAI-assisted writing led to
+varying task outcomes. Our findings advance the methodological toolkit for
+modeling SRL and inform the design of adaptive learning technologies that more
+effectively support learners in GenAI-enhanced educational environments.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2508.10284v1' target='_blank'>Uncertainty-Aware Prediction of Parkinson's Disease Medication Needs: A
+  Two-Stage Conformal Prediction Approach</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Ricardo Diaz-Rincon, Muxuan Liang, Adolfo Ramirez-Zamora, Benjamin Shickel</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-08-14 02:22:41</h6>
+<p class='card-text'>Parkinson's Disease (PD) medication management presents unique challenges due
+to heterogeneous disease progression and treatment response. Neurologists must
+balance symptom control with optimal dopaminergic dosing based on functional
+disability while minimizing side effects. This balance is crucial as inadequate
+or abrupt changes can cause levodopa-induced dyskinesia, wearing off, and
+neuropsychiatric effects, significantly reducing quality of life. Current
+approaches rely on trial-and-error decisions without systematic predictive
+methods. Despite machine learning advances, clinical adoption remains limited
+due to reliance on point predictions that do not account for prediction
+uncertainty, undermining clinical trust and utility. Clinicians require not
+only predictions of future medication needs but also reliable confidence
+measures. Without quantified uncertainty, adjustments risk premature escalation
+to maximum doses or prolonged inadequate symptom control. We developed a
+conformal prediction framework anticipating medication needs up to two years in
+advance with reliable prediction intervals and statistical guarantees. Our
+approach addresses zero-inflation in PD inpatient data, where patients maintain
+stable medication regimens between visits. Using electronic health records from
+631 inpatient admissions at University of Florida Health (2011-2021), our
+two-stage approach identifies patients likely to need medication changes, then
+predicts required levodopa equivalent daily dose adjustments. Our framework
+achieved marginal coverage while reducing prediction interval lengths compared
+to traditional approaches, providing precise predictions for short-term
+planning and wider ranges for long-term forecasting. By quantifying
+uncertainty, our approach enables evidence-based decisions about levodopa
+dosing, optimizing symptom control while minimizing side effects and improving
+life quality.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2508.10269v1' target='_blank'>Hybrid Data-Driven Predictive Control for Robust and Reactive
+  Exoskeleton Locomotion Synthesis</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Kejun Li, Jeeseop Kim, Maxime Brunet, Marine Pétriaux, Yisong Yue, Aaron D. Ames</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-08-14 01:28:58</h6>
+<p class='card-text'>Robust bipedal locomotion in exoskeletons requires the ability to dynamically
+react to changes in the environment in real time. This paper introduces the
+hybrid data-driven predictive control (HDDPC) framework, an extension of the
+data-enabled predictive control, that addresses these challenges by
+simultaneously planning foot contact schedules and continuous domain
+trajectories. The proposed framework utilizes a Hankel matrix-based
+representation to model system dynamics, incorporating step-to-step (S2S)
+transitions to enhance adaptability in dynamic environments. By integrating
+contact scheduling with trajectory planning, the framework offers an efficient,
+unified solution for locomotion motion synthesis that enables robust and
+reactive walking through online replanning. We validate the approach on the
+Atalante exoskeleton, demonstrating improved robustness and adaptability.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2508.10216v1' target='_blank'>CarAT: Carbon Atom Tracing across Industrial Chemical Value Chains via
+  Chemistry Language Models</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Emma Pajak, David Walz, Olga Walz, Laura Marie Helleckes, Klaus Hellgardt, Antonio del Rio Chanona</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-08-13 22:03:16</h6>
+<p class='card-text'>The chemical industry is increasingly prioritising sustainability, with a
+focus on reducing carbon footprints to achieve net zero. By 2026, the Together
+for Sustainability (TfS) consortium will require reporting of biogenic carbon
+content (BCC) in chemical products, posing a challenge as BCC depends on
+feedstocks, value chain configuration, and process-specific variables. While
+carbon-14 isotope analysis can measure BCC, it is impractical for continuous
+industrial monitoring. This work presents CarAT (Carbon Atom Tracker), an
+automated methodology for calculating BCC across industrial value chains,
+enabling dynamic and accurate sustainability reporting. The approach leverages
+existing Enterprise Resource Planning data in three stages: (1) preparing value
+chain data, (2) performing atom mapping in chemical reactions using chemistry
+language models, and (3) applying a linear program to calculate BCC given known
+inlet compositions. The methodology is validated on a 27-node industrial
+toluene diisocyanate value chain. Three scenarios are analysed: a base case
+with fossil feedstocks, a case incorporating a renewable feedstock, and a
+butanediol value chain with a recycle stream. Results are visualised with
+Sankey diagrams showing the flow of carbon attributes across the value chain.
+The key contribution is a scalable, automated method for real-time BCC
+calculation under changing industrial conditions. CarAT supports compliance
+with upcoming reporting mandates and advances carbon neutrality goals by
+enabling systematic fossil-to-biogenic substitution. Through transparent,
+auditable tracking of carbon sources in production networks, it empowers
+data-driven decisions to accelerate the transition to sustainable
+manufacturing.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2508.10215v1' target='_blank'>Data-Efficient Learning for Generalizable Surgical Video Understanding</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Sahar Nasirihaghighi</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-08-13 22:00:23</h6>
+<p class='card-text'>Advances in surgical video analysis are transforming operating rooms into
+intelligent, data-driven environments. Computer-assisted systems support full
+surgical workflow, from preoperative planning to intraoperative guidance and
+postoperative assessment. However, developing robust and generalizable models
+for surgical video understanding remains challenging due to (I) annotation
+scarcity, (II) spatiotemporal complexity, and (III) domain gap across
+procedures and institutions. This doctoral research aims to bridge the gap
+between deep learning-based surgical video analysis in research and its
+real-world clinical deployment. To address the core challenge of recognizing
+surgical phases, actions, and events, critical for analysis, I benchmarked
+state-of-the-art neural network architectures to identify the most effective
+designs for each task. I further improved performance by proposing novel
+architectures and integrating advanced modules. Given the high cost of expert
+annotations and the domain gap across surgical video sources, I focused on
+reducing reliance on labeled data. We developed semi-supervised frameworks that
+improve model performance across tasks by leveraging large amounts of unlabeled
+surgical video. We introduced novel semi-supervised frameworks, including DIST,
+SemiVT-Surge, and ENCORE, that achieved state-of-the-art results on challenging
+surgical datasets by leveraging minimal labeled data and enhancing model
+training through dynamic pseudo-labeling. To support reproducibility and
+advance the field, we released two multi-task datasets: GynSurg, the largest
+gynecologic laparoscopy dataset, and Cataract-1K, the largest cataract surgery
+video dataset. Together, this work contributes to robust, data-efficient, and
+clinically scalable solutions for surgical video analysis, laying the
+foundation for generalizable AI systems that can meaningfully impact surgical
+care and training.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2508.10203v1' target='_blank'>Systematic Constraint Formulation and Collision-Free Trajectory Planning
+  Using Space-Time Graphs of Convex Sets</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Matthew D. Osburn, Cameron K. Peterson, John L. Salmon</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-08-13 21:31:23</h6>
+<p class='card-text'>In this paper, we create optimal, collision-free, time-dependent trajectories
+through cluttered dynamic environments. The many spatial and temporal
+constraints make finding an initial guess for a numerical solver difficult.
+Graphs of Convex Sets (GCS) and the recently developed Space-Time Graphs of
+Convex Sets formulation (ST-GCS) enable us to generate optimal minimum distance
+collision-free trajectories without providing an initial guess to the solver.
+We also explore the derivation of general GCS-compatible constraints and
+document an intuitive strategy for adapting general constraints to the
+framework. We show that ST-GCS produces equivalent trajectories to the standard
+GCS formulation when the environment is static. We then show ST-GCS operating
+in dynamic environments to find minimum distance collision-free trajectories.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2508.10189v1' target='_blank'>Contested Route Planning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jakub Černý, Garud Iyengar, Christian Kroer</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-08-13 20:54:07</h6>
+<p class='card-text'>We consider the problem of routing for logistics purposes, in a contested
+environment where an adversary attempts to disrupt the vehicle along the chosen
+route. We construct a game-theoretic model that captures the problem of optimal
+routing in such an environment. While basic robust deterministic routing plans
+are already challenging to devise, they tend to be predictable, which can limit
+their effectiveness. By introducing calculated randomness via modeling the
+route planning process as a two-player zero-sum game, we compute immediately
+deployable plans that are diversified and harder to anticipate. Although
+solving the game exactly is intractable in theory, our use of the double-oracle
+framework enables us to achieve computation times on the order of seconds,
+making the approach operationally viable. In particular, the framework is
+modular enough to accommodate specialized routing algorithms as oracles. We
+evaluate our method on real-world scenarios, showing that it scales effectively
+to realistic problem sizes and significantly benefits from explicitly modeling
+the adversary's capabilities, as demonstrated through ablation studies and
+comparisons with baseline approaches.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2508.10172v1' target='_blank'>In-orbit Spectral Calibration Prospects for the COSI Space Telescope</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Aravind B. Valluvan, Steven E. Boggs, Savitri Gallego, Jarred Roberts, Gabriel Brewster, Sophia Haight, Carolyn Kierans, Sean Pike, Albert Y. Shih, John A. Tomsick, Andreas Zogaluer</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-08-13 20:10:53</h6>
+<p class='card-text'>The Compton Spectrometer and Imager is an upcoming NASA space telescope in
+the MeV range. COSI's primary science goals include precisely mapping nuclear
+line and positron annihilation emission in the Milky Way galaxy through Compton
+imaging. This relies on our ability to maintain COSI's spectral performance
+over its mission lifetime. Changes to the detectors' gain characteristics over
+time will result in a non-linear stretching of the entire energy range.
+Moreover, observations from past MeV telescopes and proton-beam experiments
+have shown that radiation damage in space causes photopeak shifts and spectral
+line broadening. These necessitate a plan for regular, in-orbit calibration. In
+this study, we demonstrate a method to monitor and recalibrate the COSI
+detectors using background line emissions produced by the space radiation
+environment. We employ Monte Carlo simulations of particle background and show
+that strong background lines arise from nuclear excitation of COSI's detectors
+(germanium) and cryostat (aluminum) materials. These span COSI's entire
+bandwidth for single-site interactions and can be used to monitor the effects
+of radiation damage and gain shifts every eight hours at the full instrument
+level and every 24 days at the individual detector level. Methods developed by
+Pike et al. to correct the effects of hole trapping and gain characteristics
+can then be applied to recover the original spectral performance. These results
+inform COSI's telemetry requirements for calibration and housekeeping data, and
+rule out the need for an on-board radioactive calibration source which would
+have increased the complexity of the spacecraft.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js'></script>
+</body>
+</html>
