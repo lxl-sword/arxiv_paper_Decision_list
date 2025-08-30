@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>planning - 2025-08-30</title>
+<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap' rel='stylesheet'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css'>
+<style>
+body {
+font-family: 'Roboto', sans-serif;
+background-color: #f5f7fa;
+padding: 20px;
+}
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.card-title {
+    font-weight: 700;
+}
+.card:hover {
+    transform: scale(1.02);
+    transition: 0.3s ease-in-out;
+}
+</style>
+</head>
+<body>
+<div class='container'>
+<h1 class='text-center my-4'><i class='fas fa-book'></i>planning - 2025-08-30</h1>
+<div class='row'>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2508.21048v1' target='_blank'>Veritas: Generalizable Deepfake Detection via Pattern-Aware Reasoning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Hao Tan, Jun Lan, Zichang Tan, Ajian Liu, Chuanbiao Song, Senyuan Shi, Huijia Zhu, Weiqiang Wang, Jun Wan, Zhen Lei</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-08-28 17:53:05</h6>
+<p class='card-text'>Deepfake detection remains a formidable challenge due to the complex and
+evolving nature of fake content in real-world scenarios. However, existing
+academic benchmarks suffer from severe discrepancies from industrial practice,
+typically featuring homogeneous training sources and low-quality testing
+images, which hinder the practical deployments of current detectors. To
+mitigate this gap, we introduce HydraFake, a dataset that simulates real-world
+challenges with hierarchical generalization testing. Specifically, HydraFake
+involves diversified deepfake techniques and in-the-wild forgeries, along with
+rigorous training and evaluation protocol, covering unseen model architectures,
+emerging forgery techniques and novel data domains. Building on this resource,
+we propose Veritas, a multi-modal large language model (MLLM) based deepfake
+detector. Different from vanilla chain-of-thought (CoT), we introduce
+pattern-aware reasoning that involves critical reasoning patterns such as
+"planning" and "self-reflection" to emulate human forensic process. We further
+propose a two-stage training pipeline to seamlessly internalize such deepfake
+reasoning capacities into current MLLMs. Experiments on HydraFake dataset
+reveal that although previous detectors show great generalization on
+cross-model scenarios, they fall short on unseen forgeries and data domains.
+Our Veritas achieves significant gains across different OOD scenarios, and is
+capable of delivering transparent and faithful detection outputs.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2508.21043v1' target='_blank'>HITTER: A HumanoId Table TEnnis Robot via Hierarchical Planning and
+  Learning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Zhi Su, Bike Zhang, Nima Rahmanian, Yuman Gao, Qiayuan Liao, Caitlin Regan, Koushil Sreenath, S. Shankar Sastry</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-08-28 17:49:12</h6>
+<p class='card-text'>Humanoid robots have recently achieved impressive progress in locomotion and
+whole-body control, yet they remain constrained in tasks that demand rapid
+interaction with dynamic environments through manipulation. Table tennis
+exemplifies such a challenge: with ball speeds exceeding 5 m/s, players must
+perceive, predict, and act within sub-second reaction times, requiring both
+agility and precision. To address this, we present a hierarchical framework for
+humanoid table tennis that integrates a model-based planner for ball trajectory
+prediction and racket target planning with a reinforcement learning-based
+whole-body controller. The planner determines striking position, velocity and
+timing, while the controller generates coordinated arm and leg motions that
+mimic human strikes and maintain stability and agility across consecutive
+rallies. Moreover, to encourage natural movements, human motion references are
+incorporated during training. We validate our system on a general-purpose
+humanoid robot, achieving up to 106 consecutive shots with a human opponent and
+sustained exchanges against another humanoid. These results demonstrate
+real-world humanoid table tennis with sub-second reactive control, marking a
+step toward agile and interactive humanoid behaviors.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2508.21001v1' target='_blank'>Train-Once Plan-Anywhere Kinodynamic Motion Planning via Diffusion Trees</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yaniv Hassidof, Tom Jurgenson, Kiril Solovey</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-08-28 17:04:00</h6>
+<p class='card-text'>Kinodynamic motion planning is concerned with computing collision-free
+trajectories while abiding by the robot's dynamic constraints. This critical
+problem is often tackled using sampling-based planners (SBPs) that explore the
+robot's high-dimensional state space by constructing a search tree via action
+propagations. Although SBPs can offer global guarantees on completeness and
+solution quality, their performance is often hindered by slow exploration due
+to uninformed action sampling. Learning-based approaches can yield
+significantly faster runtimes, yet they fail to generalize to
+out-of-distribution (OOD) scenarios and lack critical guarantees, e.g., safety,
+thus limiting their deployment on physical robots. We present Diffusion Tree
+(DiTree): a \emph{provably-generalizable} framework leveraging diffusion
+policies (DPs) as informed samplers to efficiently guide state-space search
+within SBPs. DiTree combines DP's ability to model complex distributions of
+expert trajectories, conditioned on local observations, with the completeness
+of SBPs to yield \emph{provably-safe} solutions within a few action propagation
+iterations for complex dynamical systems. We demonstrate DiTree's power with an
+implementation combining the popular RRT planner with a DP action sampler
+trained on a \emph{single environment}. In comprehensive evaluations on OOD
+scenarios, % DiTree has comparable runtimes to a standalone DP (3x faster than
+classical SBPs), while improving the average success rate over DP and SBPs.
+DiTree is on average 3x faster than classical SBPs, and outperforms all other
+approaches by achieving roughly 30\% higher success rate. Project webpage:
+https://sites.google.com/view/ditree.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2508.20981v1' target='_blank'>ActLoc: Learning to Localize on the Move via Active Viewpoint Selection</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jiajie Li, Boyang Sun, Luca Di Giammarino, Hermann Blum, Marc Pollefeys</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-08-28 16:36:02</h6>
+<p class='card-text'>Reliable localization is critical for robot navigation, yet most existing
+systems implicitly assume that all viewing directions at a location are equally
+informative. In practice, localization becomes unreliable when the robot
+observes unmapped, ambiguous, or uninformative regions. To address this, we
+present ActLoc, an active viewpoint-aware planning framework for enhancing
+localization accuracy for general robot navigation tasks. At its core, ActLoc
+employs a largescale trained attention-based model for viewpoint selection. The
+model encodes a metric map and the camera poses used during map construction,
+and predicts localization accuracy across yaw and pitch directions at arbitrary
+3D locations. These per-point accuracy distributions are incorporated into a
+path planner, enabling the robot to actively select camera orientations that
+maximize localization robustness while respecting task and motion constraints.
+ActLoc achieves stateof-the-art results on single-viewpoint selection and
+generalizes effectively to fulltrajectory planning. Its modular design makes it
+readily applicable to diverse robot navigation and inspection tasks.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2508.20918v1' target='_blank'>Vibe Coding: Is Human Nature the Ghost in the Machine?</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Cory Knobel, Nicole Radziwill</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-08-28 15:48:48</h6>
+<p class='card-text'>This exploratory study examined the consistency of human-AI collaboration by
+analyzing three extensive "vibe coding" sessions between a human product lead
+and an AI software engineer. We investigated similarities and differences in
+team dynamics, communication patterns, and development outcomes across both
+projects. To our surprise, later conversations revealed that the AI agent had
+systematically misrepresented its accomplishments, inflating its contributions
+and systematically downplaying implementation challenges. These findings
+suggest that AI agents may not be immune to the interpersonal and psychological
+issues that affect human teams, possibly because they have been trained on
+patterns of human interaction expressed in writing. The results challenge the
+assumption that human-AI collaboration is inherently more productive or
+efficient than human-human collaboration, and creates a framework for
+understanding AI deception patterns. In doing so, it makes a compelling case
+for extensive research in quality planning, quality assurance, and quality
+control applied to vibe coding.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2508.20884v1' target='_blank'>Deep Fuzzy Optimization for Batch-Size and Nearest Neighbors in Optimal
+  Robot Motion Planning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Liding Zhang, Qiyang Zong, Yu Zhang, Zhenshan Bing, Alois Knoll</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-08-28 15:14:15</h6>
+<p class='card-text'>Efficient motion planning algorithms are essential in robotics. Optimizing
+essential parameters, such as batch size and nearest neighbor selection in
+sampling-based methods, can enhance performance in the planning process.
+However, existing approaches often lack environmental adaptability. Inspired by
+the method of the deep fuzzy neural networks, this work introduces
+Learning-based Informed Trees (LIT*), a sampling-based deep fuzzy
+learning-based planner that dynamically adjusts batch size and nearest neighbor
+parameters to obstacle distributions in the configuration spaces. By encoding
+both global and local ratios via valid and invalid states, LIT* differentiates
+between obstacle-sparse and obstacle-dense regions, leading to lower-cost paths
+and reduced computation time. Experimental results in high-dimensional spaces
+demonstrate that LIT* achieves faster convergence and improved solution
+quality. It outperforms state-of-the-art single-query, sampling-based planners
+in environments ranging from R^8 to R^14 and is successfully validated on a
+dual-arm robot manipulation task. A video showcasing our experimental results
+is available at: https://youtu.be/NrNs9zebWWk</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2508.20871v1' target='_blank'>Genetic Informed Trees (GIT*): Path Planning via Reinforced Genetic
+  Programming Heuristics</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Liding Zhang, Kuanqi Cai, Zhenshan Bing, Chaoqun Wang, Alois Knoll</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-08-28 15:02:02</h6>
+<p class='card-text'>Optimal path planning involves finding a feasible state sequence between a
+start and a goal that optimizes an objective. This process relies on heuristic
+functions to guide the search direction. While a robust function can improve
+search efficiency and solution quality, current methods often overlook
+available environmental data and simplify the function structure due to the
+complexity of information relationships. This study introduces Genetic Informed
+Trees (GIT*), which improves upon Effort Informed Trees (EIT*) by integrating a
+wider array of environmental data, such as repulsive forces from obstacles and
+the dynamic importance of vertices, to refine heuristic functions for better
+guidance. Furthermore, we integrated reinforced genetic programming (RGP),
+which combines genetic programming with reward system feedback to mutate
+genotype-generative heuristic functions for GIT*. RGP leverages a multitude of
+data types, thereby improving computational efficiency and solution quality
+within a set timeframe. Comparative analyses demonstrate that GIT* surpasses
+existing single-query, sampling-based planners in problems ranging from R^4 to
+R^16 and was tested on a real-world mobile manipulation task. A video
+showcasing our experimental results is available at
+https://youtu.be/URjXbc_BiYg</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2508.20812v1' target='_blank'>Uncertainty Aware-Predictive Control Barrier Functions: Safer Human
+  Robot Interaction through Probabilistic Motion Forecasting</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Lorenzo Busellato, Federico Cunico, Diego Dall'Alba, Marco Emporio, Andrea Giachetti, Riccardo Muradore, Marco Cristani</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-08-28 14:11:26</h6>
+<p class='card-text'>To enable flexible, high-throughput automation in settings where people and
+robots share workspaces, collaborative robotic cells must reconcile stringent
+safety guarantees with the need for responsive and effective behavior. A
+dynamic obstacle is the stochastic, task-dependent variability of human motion:
+when robots fall back on purely reactive or worst-case envelopes, they brake
+unnecessarily, stall task progress, and tamper with the fluidity that true
+Human-Robot Interaction demands. In recent years, learning-based human-motion
+prediction has rapidly advanced, although most approaches produce worst-case
+scenario forecasts that often do not treat prediction uncertainty in a
+well-structured way, resulting in over-conservative planning algorithms,
+limiting their flexibility. We introduce Uncertainty-Aware Predictive Control
+Barrier Functions (UA-PCBFs), a unified framework that fuses probabilistic
+human hand motion forecasting with the formal safety guarantees of Control
+Barrier Functions. In contrast to other variants, our framework allows for
+dynamic adjustment of the safety margin thanks to the human motion uncertainty
+estimation provided by a forecasting module. Thanks to uncertainty estimation,
+UA-PCBFs empower collaborative robots with a deeper understanding of future
+human states, facilitating more fluid and intelligent interactions through
+informed motion planning. We validate UA-PCBFs through comprehensive real-world
+experiments with an increasing level of realism, including automated setups (to
+perform exactly repeatable motions) with a robotic hand and direct human-robot
+interactions (to validate promptness, usability, and human confidence).
+Relative to state-of-the-art HRI architectures, UA-PCBFs show better
+performance in task-critical metrics, significantly reducing the number of
+violations of the robot's safe space during interaction with respect to the
+state-of-the-art.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2508.20804v1' target='_blank'>Ising energy model for the stochastic prediction of tumor islets</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Lucas Amoudruz, Gregory Buti, Luciano Rivetti, Ali Ajdari, Gregory Sharp, Petros Koumoutsakos, Simon Spohn, Anca L Grosu, Thomas Bortfeld</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-08-28 14:06:38</h6>
+<p class='card-text'>A major challenge in diagnosing and treating cancer is the infiltrative
+growth of tumors into surrounding tissues.
+  This microscopic spread of the disease is invisible on most diagnostic
+imaging modalities and can often only be detected histologically in biopsies.
+  The purpose of this paper is to develop a physically based model of tumor
+spread that captures the histologically observed behavior in terms of seeding
+small tumor islets in prostate cancer.
+  The model is based on three elementary events: a tumor cell can move,
+duplicate, or die.
+  The propensity of each event is given by an Ising-like Hamiltonian that
+captures correlations between neighboring cells.
+  The model parameters were fitted to clinical data obtained from surgical
+specimens taken from 23 prostate cancer patients.
+  The results demonstrate that this straightforward physical model effectively
+describes the distribution of the size and the number of tumor islets in
+prostate cancer.
+  The simulated tumor islets exhibit a regular, approximately spherical shape,
+correctly mimicking the shapes observed in histology.
+  This is due to the Ising interaction term between neighboring cells acting as
+a surface tension that gives rise to regularly shaped islets.
+  The model addresses the important clinical need of calculating the
+probability of tumor involvement in specific sub-volumes of the prostate, which
+is required for radiation treatment planning and other applications.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2508.20567v1' target='_blank'>KCS: Diversify Multi-hop Question Generation with Knowledge Composition
+  Sampling</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yangfan Wang, Jie Liu, Chen Tang, Lian Yan, Jingchi Jiang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-08-28 09:06:38</h6>
+<p class='card-text'>Multi-hop question answering faces substantial challenges due to data
+sparsity, which increases the likelihood of language models learning spurious
+patterns. To address this issue, prior research has focused on diversifying
+question generation through content planning and varied expression. However,
+these approaches often emphasize generating simple questions and neglect the
+integration of essential knowledge, such as relevant sentences within
+documents. This paper introduces the Knowledge Composition Sampling (KCS), an
+innovative framework designed to expand the diversity of generated multi-hop
+questions by sampling varied knowledge compositions within a given context. KCS
+models the knowledge composition selection as a sentence-level conditional
+prediction task and utilizes a probabilistic contrastive loss to predict the
+next most relevant piece of knowledge. During inference, we employ a stochastic
+decoding strategy to effectively balance accuracy and diversity. Compared to
+competitive baselines, our KCS improves the overall accuracy of knowledge
+composition selection by 3.9%, and its application for data augmentation yields
+improvements on HotpotQA and 2WikiMultihopQA datasets. Our code is available
+at: https://github.com/yangfanww/kcs.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2508.20528v1' target='_blank'>Learning What is Worth Learning: Active and Sequential Domain Adaptation
+  for Multi-modal Gross Tumor Volume Segmentation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jingyun Yang, Guoqing Zhang, Jingge Wang, Yang Li</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-08-28 08:14:55</h6>
+<p class='card-text'>Accurate gross tumor volume segmentation on multi-modal medical data is
+critical for radiotherapy planning in nasopharyngeal carcinoma and
+glioblastoma. Recent advances in deep neural networks have brought promising
+results in medical image segmentation, leading to an increasing demand for
+labeled data. Since labeling medical images is time-consuming and
+labor-intensive, active learning has emerged as a solution to reduce annotation
+costs by selecting the most informative samples to label and adapting
+high-performance models with as few labeled samples as possible. Previous
+active domain adaptation (ADA) methods seek to minimize sample redundancy by
+selecting samples that are farthest from the source domain. However, such
+one-off selection can easily cause negative transfer, and access to source
+medical data is often limited. Moreover, the query strategy for multi-modal
+medical data remains unexplored. In this work, we propose an active and
+sequential domain adaptation framework for dynamic multi-modal sample selection
+in ADA. We derive a query strategy to prioritize labeling and training on the
+most valuable samples based on their informativeness and representativeness.
+Empirical validation on diverse gross tumor volume segmentation tasks
+demonstrates that our method achieves favorable segmentation performance,
+significantly outperforming state-of-the-art ADA methods. Code is available at
+the git repository: \href{https://github.com/Hiyoochan/mmActS}{mmActS}.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2508.20479v1' target='_blank'>Joint Contact Planning for Navigation and Communication in
+  GNSS-Libration Point Systems</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Huan Yan, Juan A. Fraire, Ziqi Yang, Kanglian Zhao, Wenfeng Li, Xiyun Hou, Haohan Li, Yuxuan Miao, Jinjun Zheng, Chengbin Kang, Huichao Zhou, Xinuo Chang, Lu Wang, Linshan Xue</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-08-28 06:55:31</h6>
+<p class='card-text'>Deploying satellites at Earth-Moon Libration Points (LPs) addresses the
+inherent deep-space coverage gaps of low-altitude GNSS constellations.
+Integrating LP satellites with GNSS into a joint constellation enables a more
+robust and comprehensive Positioning, Navigation, and Timing (PNT) system,
+while also extending navigation and communication services to spacecraft
+operating in cislunar space (i.e., users). However, the long propagation delays
+between LP satellites, users, and GNSS satellites result in significantly
+different link durations compared to those within the GNSS constellation.
+Scheduling inter-satellite links (ISLs) is a core task of Contact Plan Design
+(CPD). Existing CPD approaches focus exclusively on GNSS constellations,
+assuming uniform link durations, and thus cannot accommodate the heterogeneous
+link timescales present in a joint GNSS-LP system. To overcome this limitation,
+we introduce a Joint CPD (J-CPD) scheme tailored to handle ISLs with differing
+duration units across integrated constellations. The key contributions of J-CPD
+are: (i):introduction of LongSlots (Earth-Moon scale links) and ShortSlots
+(GNSS-scale links); (ii):a hierarchical and crossed CPD process for scheduling
+LongSlots and ShortSlots ISLs; (iii):an energy-driven link scheduling algorithm
+adapted to the CPD process. Simulations on a joint BeiDou-LP constellation
+demonstrate that J-CPD surpasses the baseline FCP method in both delay and
+ranging coverage, while maintaining high user satisfaction and enabling tunable
+trade-offs through adjustable potential-energy parameters. To our knowledge,
+this is the first CPD framework to jointly optimize navigation and
+communication in GNSS-LP systems, representing a key step toward unified and
+resilient deep-space PNT architectures.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2508.20469v1' target='_blank'>Prediction of Distant Metastasis for Head and Neck Cancer Patients Using
+  Multi-Modal Tumor and Peritumoral Feature Fusion Network</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Zizhao Tang, Changhao Liu, Nuo Tong, Shuiping Gou, Mei Shi</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-08-28 06:39:38</h6>
+<p class='card-text'>Metastasis remains the major challenge in the clinical management of head and
+neck squamous cell carcinoma (HNSCC). Reliable pre-treatment prediction of
+metastatic risk is crucial for optimizing treatment strategies and prognosis.
+This study develops a deep learning-based multimodal framework to predict
+metastasis risk in HNSCC patients by integrating computed tomography (CT)
+images, radiomics, and clinical data. 1497 HNSCC patients were included. Tumor
+and organ masks were derived from pretreatment CT images. A 3D Swin Transformer
+extracted deep features from tumor regions. Meanwhile, 1562 radiomics features
+were obtained using PyRadiomics, followed by correlation filtering and random
+forest selection, leaving 36 features. Clinical variables including age, sex,
+smoking, and alcohol status were encoded and fused with imaging-derived
+features. Multimodal features were fed into a fully connected network to
+predict metastasis risk. Performance was evaluated using five-fold
+cross-validation with area under the curve (AUC), accuracy (ACC), sensitivity
+(SEN), and specificity (SPE). The proposed fusion model outperformed
+single-modality models. The 3D deep learning module alone achieved an AUC of
+0.715, and when combined with radiomics and clinical features, predictive
+performance improved (AUC = 0.803, ACC = 0.752, SEN = 0.730, SPE = 0.758).
+Stratified analysis showed generalizability across tumor subtypes. Ablation
+studies indicated complementary information from different modalities.
+Evaluation showed the 3D Swin Transformer provided more robust representation
+learning than conventional networks. This multimodal fusion model demonstrated
+high accuracy and robustness in predicting metastasis risk in HNSCC, offering a
+comprehensive representation of tumor biology. The interpretable model has
+potential as a clinical decision-support tool for personalized treatment
+planning.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2508.20464v1' target='_blank'>Human-Centered Design for Connected Automation: Predicting Pedestrian
+  Crossing Intentions</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Sanaz Motamedi, Viktoria Marcus, Griffin Pitts</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-08-28 06:31:03</h6>
+<p class='card-text'>Road traffic remains a leading cause of death worldwide, with pedestrians and
+other vulnerable road users accounting for over half of the 1.19 million annual
+fatalities, much of it due to human error. Level-5 automated driving systems
+(ADSs), capable of full self-driving without human oversight, have the
+potential to reduce these incidents. However, their effectiveness depends not
+only on automation performance but also on their ability to communicate intent
+and coordinate safely with pedestrians in the absence of traditional driver
+cues. Understanding how pedestrians interpret and respond to ADS behavior is
+therefore critical to the development of connected vehicle systems. This study
+extends the Theory of Planned Behavior (TPB) by incorporating four external
+factors (i.e. safety, trust, compatibility, and understanding) to model
+pedestrian decision-making in road-crossing scenarios involving level-5 ADSs.
+Using data from an online survey (n = 212), results show that perceived
+behavioral control, attitude, and social information significantly predict
+pedestrians' crossing intentions. External factors, particularly perceived
+safety and understanding, strongly influence these constructs. Findings provide
+actionable insights for designing external human-machine interfaces (eHMIs) and
+cooperative V2X communication strategies that support safe, transparent
+interactions between automated vehicles and pedestrians. This work contributes
+to the development of inclusive, human-centered connected mobility systems.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2508.20371v1' target='_blank'>P2C: Path to Counterfactuals</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Sopam Dasgupta, Sadaf MD Halim, Joaquín Arias, Elmer Salazar, Gopal Gupta</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-08-28 02:36:02</h6>
+<p class='card-text'>Machine-learning models are increasingly driving decisions in high-stakes
+settings, such as finance, law, and hiring, thus, highlighting the need for
+transparency. However, the key challenge is to balance transparency --
+clarifying `why' a decision was made -- with recourse: providing actionable
+steps on `how' to achieve a favourable outcome from an unfavourable outcome.
+Counterfactual explanations reveal `why' an undesired outcome occurred and
+`how' to reverse it through targeted feature changes (interventions).
+  Current counterfactual approaches have limitations: 1) they often ignore
+causal dependencies between features, and 2) they typically assume all
+interventions can happen simultaneously, an unrealistic assumption in practical
+scenarios where actions are typically taken in a sequence. As a result, these
+counterfactuals are often not achievable in the real world.
+  We present P2C (Path-to-Counterfactuals), a model-agnostic framework that
+produces a plan (ordered sequence of actions) converting an unfavourable
+outcome to a causally consistent favourable outcome. P2C addresses both
+limitations by 1) Explicitly modelling causal relationships between features
+and 2) Ensuring that each intermediate state in the plan is feasible and
+causally valid. P2C uses the goal-directed Answer Set Programming system
+s(CASP) to generate the plan accounting for feature changes that happen
+automatically due to causal dependencies. Furthermore, P2C refines cost
+(effort) computation by only counting changes actively made by the user,
+resulting in realistic cost estimates. Finally, P2C highlights how its causal
+planner outperforms standard planners, which lack causal knowledge and thus can
+generate illegal actions.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2508.20357v1' target='_blank'>Prospects for relic neutrino detection using nuclear spin experiments</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yeray Garcia del Castillo, Giovanni Pierobon, Dipan Sengupta, Yvonne Y. Y. Wong</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-08-28 02:12:29</h6>
+<p class='card-text'>Direct detection of the cosmic neutrino background (C$\nu$B) remains one of
+the most formidable experimental challenges in modern physics. In this work, we
+extend recent studies of C$\nu$B-induced coherent transitions in polarised
+nuclear spin ensembles. Adopting an open quantum system framework, we model
+coherent neutrino effects in large spin ensembles using a Lindblad master
+equation that also incorporates realistic experimental imperfections such as
+local dephasing and imperfect polarisation. We solve the Lindblad equation
+numerically by way of a fast and computationally inexpensive method that can be
+extended to an arbitrarily large number of spins. Using our numerical
+solutions, we forecast the sensitivities of future experiments such as CASPEr
+to the local C$\nu$B overdensity parameter $\delta_\nu$. Our findings indicate
+that a CASPEr-like experiment, though primarily aimed at axion dark matter
+search, could also constrain the C$\nu$B overdensity to $\delta_\nu \sim
+10^{9}-10^{11}$ in configurations achievable by currently planned experimental
+efforts, and down to $\delta_\nu \sim 10^7$ in the most optimised scenario.
+While C$\nu$B detection remains out of reach in the foreseeable future, our
+results highlight the potential of using quantum sensing to probe fundamental
+physics.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2508.20332v1' target='_blank'>Optimized Observation Sequencing in Low-Earth Orbit with the SPHEREx
+  Survey Planning Software</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Sean Bryan, James Bock, Thomas Burk, Tzu-Ching Chang, Brendan P. Crill, Ari Cukierman, Olivier Dore, C. Darren Dowell, Gregory Dubois-Felsmann, Beth Fabinsky, Sergi Hildebrandt-Rafels, Howard Hui, Kyle Hughes, Phillip Korngut, Philip Mauskopf, Julian Mena, Chi Nguyen, Milad Pourrahmani, Dustin Putnam, Keshav Ramanathan, Flora Ridenhour, Cody Roberson, Amy Trangsrud, Stephen Unwin, Pao-Yu Wang, the SPHEREx Team</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-08-28 00:28:23</h6>
+<p class='card-text'>SPHEREx is a NASA infrared astronomy mission that launched on March 12th,
+2025 and is operating successfully in low-Earth orbit (LEO). The mission is
+currently observing the entire sky in 102 spectral channels in four independent
+all-sky surveys and also achieves enhanced coverage in two deep fields. This
+data will resolve key science questions about the early universe, galaxy
+formation, and the origin of water and biogenic molecules. In this paper, we
+describe the survey planning software (SPS) that enables SPHEREx to observe
+efficiently while mitigating a range of operational challenges in LEO. Our
+optimal target selection algorithm achieves the required high coverage in both
+the All-Sky and Deep Surveys. The algorithm plans observations to stay within
+our time-varying allowable pointing zone, interleaves required data downlink
+passes, and mitigates outages due to the South Atlantic Anomaly and other
+events. As demonstrated by the sky coverage achieved in the first SPHEREx
+public data release, our approach is performing well in flight. The SPHEREx SPS
+is a key new capability that enables the mission to deliver groundbreaking
+science from LEO.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2508.20324v1' target='_blank'>Can Compact Language Models Search Like Agents? Distillation-Guided
+  Policy Optimization for Preserving Agentic RAG Capabilities</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Rikuto Kotoge, Mai Nishimura, Jiaxin Ma</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-08-27 23:57:29</h6>
+<p class='card-text'>Reinforcement Learning has emerged as a post-training approach to elicit
+agentic RAG behaviors such as search and planning from language models.
+However, compact language models (e.g., 0.5B parameters) struggle due to poor
+reasoning ability, resulting in sparse rewards and unstable training. To
+overcome these difficulties, we propose Distillation-Guided Policy Optimization
+(DGPO), which addresses the challenges through cold-start initialization from
+teacher demonstrations and continuous teacher guidance during policy
+optimization. To systematically evaluate our approach, we introduce Agentic RAG
+Capabilities (ARC), a fine-grained metric analyzing reasoning, search
+coordination, and response synthesis. Comprehensive experiments demonstrate
+that DGPO enables compact models to achieve sophisticated agentic search
+behaviors, even outperforming the larger teacher model in some cases. DGPO
+makes agentic RAG feasible in computing resource-constrained environments.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2508.20203v1' target='_blank'>Regulation-Aware Game-Theoretic Motion Planning for Autonomous Racing</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Francesco Prignoli, Francesco Borrelli, Paolo Falcone, Mark Pustilnik</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-08-27 18:30:28</h6>
+<p class='card-text'>This paper presents a regulation-aware motion planning framework for
+autonomous racing scenarios. Each agent solves a Regulation-Compliant Model
+Predictive Control problem, where racing rules - such as right-of-way and
+collision avoidance responsibilities - are encoded using Mixed Logical
+Dynamical constraints. We formalize the interaction between vehicles as a
+Generalized Nash Equilibrium Problem (GNEP) and approximate its solution using
+an Iterative Best Response scheme. Building on this, we introduce the
+Regulation-Aware Game-Theoretic Planner (RA-GTP), in which the attacker reasons
+over the defender's regulation-constrained behavior. This game-theoretic layer
+enables the generation of overtaking strategies that are both safe and
+non-conservative. Simulation results demonstrate that the RA-GTP outperforms
+baseline methods that assume non-interacting or rule-agnostic opponent models,
+leading to more effective maneuvers while consistently maintaining compliance
+with racing regulations.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2508.20096v1' target='_blank'>CODA: Coordinating the Cerebrum and Cerebellum for a Dual-Brain Computer
+  Use Agent with Decoupled Reinforcement Learning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Zeyi Sun, Yuhang Cao, Jianze Liang, Qiushi Sun, Ziyu Liu, Zhixiong Zhang, Yuhang Zang, Xiaoyi Dong, Kai Chen, Dahua Lin, Jiaqi Wang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-08-27 17:59:50</h6>
+<p class='card-text'>Autonomous agents for Graphical User Interfaces (GUIs) face significant
+challenges in specialized domains such as scientific computing, where both
+long-horizon planning and precise execution are required. Existing approaches
+suffer from a trade-off: generalist agents excel at planning but perform poorly
+in execution, while specialized agents demonstrate the opposite weakness.
+Recent compositional frameworks attempt to bridge this gap by combining a
+planner and an actor, but they are typically static and non-trainable, which
+prevents adaptation from experience. This is a critical limitation given the
+scarcity of high-quality data in scientific domains. To address these
+limitations, we introduce CODA, a novel and trainable compositional framework
+that integrates a generalist planner (Cerebrum) with a specialist executor
+(Cerebellum), trained via a dedicated two-stage pipeline. In the first stage,
+Specialization, we apply a decoupled GRPO approach to train an expert planner
+for each scientific application individually, bootstrapping from a small set of
+task trajectories. In the second stage, Generalization, we aggregate all
+successful trajectories from the specialized experts to build a consolidated
+dataset, which is then used for supervised fine-tuning of the final planner.
+This equips CODA with both robust execution and cross-domain generalization.
+Evaluated on four challenging applications from the ScienceBoard benchmark,
+CODA significantly outperforms baselines and establishes a new state of the art
+among open-source models.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2508.20095v1' target='_blank'>Discrete-Guided Diffusion for Scalable and Safe Multi-Robot Motion
+  Planning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jinhao Liang, Sven Koenig, Ferdinando Fioretto</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-08-27 17:59:36</h6>
+<p class='card-text'>Multi-Robot Motion Planning (MRMP) involves generating collision-free
+trajectories for multiple robots operating in a shared continuous workspace.
+While discrete multi-agent path finding (MAPF) methods are broadly adopted due
+to their scalability, their coarse discretization severely limits trajectory
+quality. In contrast, continuous optimization-based planners offer
+higher-quality paths but suffer from the curse of dimensionality, resulting in
+poor scalability with respect to the number of robots. This paper tackles the
+limitations of these two approaches by introducing a novel framework that
+integrates discrete MAPF solvers with constrained generative diffusion models.
+The resulting framework, called Discrete-Guided Diffusion (DGD), has three key
+characteristics: (1) it decomposes the original nonconvex MRMP problem into
+tractable subproblems with convex configuration spaces, (2) it combines
+discrete MAPF solutions with constrained optimization techniques to guide
+diffusion models capture complex spatiotemporal dependencies among robots, and
+(3) it incorporates a lightweight constraint repair mechanism to ensure
+trajectory feasibility. The proposed method sets a new state-of-the-art
+performance in large-scale, complex environments, scaling to 100 robots while
+achieving planning efficiency and high success rates.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2508.20064v1' target='_blank'>Patch Progression Masked Autoencoder with Fusion CNN Network for
+  Classifying Evolution Between Two Pairs of 2D OCT Slices</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Philippe Zhang, Weili Jiang, Yihao Li, Jing Zhang, Sarah Matta, Yubo Tan, Hui Lin, Haoshen Wang, Jiangtian Pan, Hui Xu, Laurent Borderie, Alexandre Le Guilcher, Béatrice Cochener, Chubin Ou, Gwenolé Quellec, Mathieu Lamard</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-08-27 17:18:30</h6>
+<p class='card-text'>Age-related Macular Degeneration (AMD) is a prevalent eye condition affecting
+visual acuity. Anti-vascular endothelial growth factor (anti-VEGF) treatments
+have been effective in slowing the progression of neovascular AMD, with better
+outcomes achieved through timely diagnosis and consistent monitoring. Tracking
+the progression of neovascular activity in OCT scans of patients with exudative
+AMD allows for the development of more personalized and effective treatment
+plans. This was the focus of the Monitoring Age-related Macular Degeneration
+Progression in Optical Coherence Tomography (MARIO) challenge, in which we
+participated. In Task 1, which involved classifying the evolution between two
+pairs of 2D slices from consecutive OCT acquisitions, we employed a fusion CNN
+network with model ensembling to further enhance the model's performance. For
+Task 2, which focused on predicting progression over the next three months
+based on current exam data, we proposed the Patch Progression Masked
+Autoencoder that generates an OCT for the next exam and then classifies the
+evolution between the current OCT and the one generated using our solution from
+Task 1. The results we achieved allowed us to place in the Top 10 for both
+tasks. Some team members are part of the same organization as the challenge
+organizers; therefore, we are not eligible to compete for the prize.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2508.20034v1' target='_blank'>FlyMeThrough: Human-AI Collaborative 3D Indoor Mapping with Commodity
+  Drones</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Xia Su, Ruiqi Chen, Jingwei Ma, Chu Li, Jon E. Froehlich</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-08-27 16:36:47</h6>
+<p class='card-text'>Indoor mapping data is crucial for routing, navigation, and building
+management, yet such data are widely lacking due to the manual labor and
+expense of data collection, especially for larger indoor spaces. Leveraging
+recent advancements in commodity drones and photogrammetry, we introduce
+FlyMeThrough -- a drone-based indoor scanning system that efficiently produces
+3D reconstructions of indoor spaces with human-AI collaborative annotations for
+key indoor points-of-interest (POI) such as entrances, restrooms, stairs, and
+elevators. We evaluated FlyMeThrough in 12 indoor spaces with varying sizes and
+functionality. To investigate use cases and solicit feedback from target
+stakeholders, we also conducted a qualitative user study with five building
+managers and five occupants. Our findings indicate that FlyMeThrough can
+efficiently and precisely create indoor 3D maps for strategic space planning,
+resource management, and navigation.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2508.20018v1' target='_blank'>SWIRL: A Staged Workflow for Interleaved Reinforcement Learning in
+  Mobile GUI Control</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Quanfeng Lu, Zhantao Ma, Shuai Zhong, Jin Wang, Dahai Yu, Michael K. Ng, Ping Luo</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-08-27 16:27:19</h6>
+<p class='card-text'>The rapid advancement of large vision language models (LVLMs) and agent
+systems has heightened interest in mobile GUI agents that can reliably
+translate natural language into interface operations. Existing single-agent
+approaches, however, remain limited by structural constraints. Although
+multi-agent systems naturally decouple different competencies, recent progress
+in multi-agent reinforcement learning (MARL) has often been hindered by
+inefficiency and remains incompatible with current LVLM architectures. To
+address these challenges, we introduce SWIRL, a staged workflow for interleaved
+reinforcement learning designed for multi-agent systems. SWIRL reformulates
+MARL into a sequence of single-agent reinforcement learning tasks, updating one
+agent at a time while keeping the others fixed. This formulation enables stable
+training and promotes efficient coordination across agents. Theoretically, we
+provide a stepwise safety bound, a cross-round monotonic improvement theorem,
+and convergence guarantees on return, ensuring robust and principled
+optimization. In application to mobile GUI control, SWIRL instantiates a
+Navigator that converts language and screen context into structured plans, and
+an Interactor that grounds these plans into executable atomic actions.
+Extensive experiments demonstrate superior performance on both high-level and
+low-level GUI benchmarks. Beyond GUI tasks, SWIRL also demonstrates strong
+capability in multi-agent mathematical reasoning, underscoring its potential as
+a general framework for developing efficient and robust multi-agent systems.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2508.19945v2' target='_blank'>Constraint Learning in Multi-Agent Dynamic Games from Demonstrations of
+  Local Nash Interactions</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Zhouyu Zhang, Chih-Yuan Chiu, Glen Chou</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-08-27 15:01:09</h6>
+<p class='card-text'>We present an inverse dynamic game-based algorithm to learn parametric
+constraints from a given dataset of local generalized Nash equilibrium
+interactions between multiple agents. Specifically, we introduce mixed-integer
+linear programs (MILP) encoding the Karush-Kuhn-Tucker (KKT) conditions of the
+interacting agents, which recover constraints consistent with the Nash
+stationarity of the interaction demonstrations. We establish theoretical
+guarantees that our method learns inner approximations of the true safe and
+unsafe sets, as well as limitations of constraint learnability from
+demonstrations of Nash equilibrium interactions. We also use the interaction
+constraints recovered by our method to design motion plans that robustly
+satisfy the underlying constraints. Across simulations and hardware
+experiments, our methods proved capable of inferring constraints and designing
+interactive motion plans for various classes of constraints, both convex and
+non-convex, from interaction demonstrations of agents with nonlinear dynamics.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2508.19933v1' target='_blank'>Combined Stochastic and Robust Optimization for Electric Autonomous
+  Mobility-on-Demand with Nested Benders Decomposition</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Sten Elling Tingstad Jacobsen, Balázs Kulcsár, Anders Lindman</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-08-27 14:48:34</h6>
+<p class='card-text'>The electrification and automation of mobility are reshaping how cities
+operate on-demand transport systems. Managing Electric Autonomous
+Mobility-on-Demand (EAMoD) fleets effectively requires coordinating dispatch,
+rebalancing, and charging decisions under multiple uncertainties, including
+travel demand, travel time, energy consumption, and charger availability. We
+address this challenge with a combined stochastic and robust model predictive
+control (MPC) framework. The framework integrates spatio-temporal Bayesian
+neural network forecasts with a multi-stage stochastic optimization model,
+formulated as a large-scale mixed-integer linear program. To ensure real-time
+applicability, we develop a tailored Nested Benders Decomposition that exploits
+the scenario tree structure and enables efficient parallelized solution.
+Stochastic optimization is employed to anticipate demand and infrastructure
+variability, while robust constraints on energy consumption and travel times
+safeguard feasibility under worst-case realizations. We evaluate the framework
+using high-fidelity simulations of San Francisco and Chicago. Compared with
+deterministic, reactive, and robust baselines, the combined stochastic and
+robust approach reduces median passenger waiting times by up to 36% and
+95th-percentile delays by nearly 20%, while also lowering rebalancing distance
+by 27% and electricity costs by more than 35%. We also conduct a sensitivity
+analysis of battery size and vehicle efficiency, finding that energy-efficient
+vehicles maintain stable performance even with small batteries, whereas less
+efficient vehicles require larger batteries and greater infrastructure support.
+Our results emphasize the importance of jointly optimizing predictive control,
+vehicle capabilities, and infrastructure planning to enable scalable,
+cost-efficient EAMoD operations.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2508.19921v1' target='_blank'>An assessment of estimation models and investment gaps for the
+  deployment of high-speed broadband networks in NUTS3 regions to meet the
+  objectives of the European Gigabit Society</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Ferrandis Jesus, Ramos Sergio, Feijoo Claudio</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-08-27 14:27:00</h6>
+<p class='card-text'>This paper analyses the deployment of high speed broadband networks in the
+European Union (EU). Its aim is to assess the investment required to meet the
+targets set by the European Commission (EC) for 2025, within the framework of
+the European Gigabit Society (EGS). This plan aims to ensure the availability
+and take up of very high capacity fixed and wireless networks, in both urban
+and rural areas, among households and the main socioeconomic drivers. The
+estimation model presented here uses a methodology supported by data at the
+local (NUTS3) level to give a bottom up estimation of the investment gap for
+each of the EGS objectives, using three different scenarios depending on the
+mix of wired and wireless technologies offered. The methodology and estimation
+model used in the paper are examined against other examples and assumptions
+available in the literature. We also offer a dynamic perspective on the
+analysis of the evolution of this investment gap over the years 2017 2019,
+which includes an assessment of the usefulness of these estimation models.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2508.19852v2' target='_blank'>Ego-centric Predictive Model Conditioned on Hand Trajectories</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Binjie Zhang, Mike Zheng Shou</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-08-27 13:09:55</h6>
+<p class='card-text'>In egocentric scenarios, anticipating both the next action and its visual
+outcome is essential for understanding human-object interactions and for
+enabling robotic planning. However, existing paradigms fall short of jointly
+modeling these aspects. Vision-Language-Action (VLA) models focus on action
+prediction but lack explicit modeling of how actions influence the visual
+scene, while video prediction models generate future frames without
+conditioning on specific actions, often resulting in implausible or
+contextually inconsistent outcomes. To bridge this gap, we propose a unified
+two-stage predictive framework that jointly models action and visual future in
+egocentric scenarios, conditioned on hand trajectories. In the first stage, we
+perform consecutive state modeling to process heterogeneous inputs (visual
+observations, language, and action history) and explicitly predict future hand
+trajectories. In the second stage, we introduce causal cross-attention to fuse
+multi-modal cues, leveraging inferred action signals to guide an image-based
+Latent Diffusion Model (LDM) for frame-by-frame future video generation. Our
+approach is the first unified model designed to handle both egocentric human
+activity understanding and robotic manipulation tasks, providing explicit
+predictions of both upcoming actions and their visual consequences. Extensive
+experiments on Ego4D, BridgeData, and RLBench demonstrate that our method
+outperforms state-of-the-art baselines in both action prediction and future
+video synthesis.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2508.19790v1' target='_blank'>APT*: Asymptotically Optimal Motion Planning via Adaptively Prolated
+  Elliptical R-Nearest Neighbors</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Liding Zhang, Sicheng Wang, Kuanqi Cai, Zhenshan Bing, Fan Wu, Chaoqun Wang, Sami Haddadin, Alois Knoll</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-08-27 11:16:36</h6>
+<p class='card-text'>Optimal path planning aims to determine a sequence of states from a start to
+a goal while accounting for planning objectives. Popular methods often
+integrate fixed batch sizes and neglect information on obstacles, which is not
+problem-specific. This study introduces Adaptively Prolated Trees (APT*), a
+novel sampling-based motion planner that extends based on Force Direction
+Informed Trees (FDIT*), integrating adaptive batch-sizing and elliptical
+$r$-nearest neighbor modules to dynamically modulate the path searching process
+based on environmental feedback. APT* adjusts batch sizes based on the
+hypervolume of the informed sets and considers vertices as electric charges
+that obey Coulomb's law to define virtual forces via neighbor samples, thereby
+refining the prolate nearest neighbor selection. These modules employ
+non-linear prolate methods to adaptively adjust the electric charges of
+vertices for force definition, thereby improving the convergence rate with
+lower solution costs. Comparative analyses show that APT* outperforms existing
+single-query sampling-based planners in dimensions from $\mathbb{R}^4$ to
+$\mathbb{R}^{16}$, and it was further validated through a real-world robot
+manipulation task. A video showcasing our experimental results is available at:
+https://youtu.be/gCcUr8LiEw4</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2508.19776v1' target='_blank'>Tree-Based Grafting Approach for Bidirectional Motion Planning with
+  Local Subsets Optimization</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Liding Zhang, Yao Ling, Zhenshan Bing, Fan Wu, Sami Haddadin, Alois Knoll</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-08-27 11:00:25</h6>
+<p class='card-text'>Bidirectional motion planning often reduces planning time compared to its
+unidirectional counterparts. It requires connecting the forward and reverse
+search trees to form a continuous path. However, this process could fail and
+restart the asymmetric bidirectional search due to the limitations of
+lazy-reverse search. To address this challenge, we propose Greedy GuILD
+Grafting Trees (G3T*), a novel path planner that grafts invalid edge
+connections at both ends to re-establish tree-based connectivity, enabling
+rapid path convergence. G3T* employs a greedy approach using the minimum
+Lebesgue measure of guided incremental local densification (GuILD) subsets to
+optimize paths efficiently. Furthermore, G3T* dynamically adjusts the sampling
+distribution between the informed set and GuILD subsets based on historical and
+current cost improvements, ensuring asymptotic optimality. These features
+enhance the forward search's growth towards the reverse tree, achieving faster
+convergence and lower solution costs. Benchmark experiments across dimensions
+from R^2 to R^8 and real-world robotic evaluations demonstrate G3T*'s superior
+performance compared to existing single-query sampling-based planners. A video
+showcasing our experimental results is available at:
+https://youtu.be/3mfCRL5SQIU</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js'></script>
+</body>
+</html>
