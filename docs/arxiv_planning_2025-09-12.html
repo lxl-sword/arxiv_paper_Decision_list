@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>planning - 2025-09-12</title>
+<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap' rel='stylesheet'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css'>
+<style>
+body {
+font-family: 'Roboto', sans-serif;
+background-color: #f5f7fa;
+padding: 20px;
+}
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.card-title {
+    font-weight: 700;
+}
+.card:hover {
+    transform: scale(1.02);
+    transition: 0.3s ease-in-out;
+}
+</style>
+</head>
+<body>
+<div class='container'>
+<h1 class='text-center my-4'><i class='fas fa-book'></i>planning - 2025-09-12</h1>
+<div class='row'>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2509.09674v1' target='_blank'>SimpleVLA-RL: Scaling VLA Training via Reinforcement Learning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Haozhan Li, Yuxin Zuo, Jiale Yu, Yuhao Zhang, Zhaohui Yang, Kaiyan Zhang, Xuekai Zhu, Yuchen Zhang, Tianxing Chen, Ganqu Cui, Dehui Wang, Dingxiang Luo, Yuchen Fan, Youbang Sun, Jia Zeng, Jiangmiao Pang, Shanghang Zhang, Yu Wang, Yao Mu, Bowen Zhou, Ning Ding</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-09-11 17:59:17</h6>
+<p class='card-text'>Vision-Language-Action (VLA) models have recently emerged as a powerful
+paradigm for robotic manipulation. Despite substantial progress enabled by
+large-scale pretraining and supervised fine-tuning (SFT), these models face two
+fundamental challenges: (i) the scarcity and high cost of large-scale
+human-operated robotic trajectories required for SFT scaling, and (ii) limited
+generalization to tasks involving distribution shift. Recent breakthroughs in
+Large Reasoning Models (LRMs) demonstrate that reinforcement learning (RL) can
+dramatically enhance step-by-step reasoning capabilities, raising a natural
+question: Can RL similarly improve the long-horizon step-by-step action
+planning of VLA? In this work, we introduce SimpleVLA-RL, an efficient RL
+framework tailored for VLA models. Building upon veRL, we introduce
+VLA-specific trajectory sampling, scalable parallelization, multi-environment
+rendering, and optimized loss computation. When applied to OpenVLA-OFT,
+SimpleVLA-RL achieves SoTA performance on LIBERO and even outperforms $\pi_0$
+on RoboTwin 1.0\&2.0 with the exploration-enhancing strategies we introduce.
+SimpleVLA-RL not only reduces dependence on large-scale data and enables robust
+generalization, but also remarkably surpasses SFT in real-world tasks.
+Moreover, we identify a novel phenomenon ``pushcut'' during RL training,
+wherein the policy discovers previously unseen patterns beyond those seen in
+the previous training process. Github: https://github.com/PRIME-RL/SimpleVLA-RL</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2509.09637v1' target='_blank'>A neural drift-plus-penalty algorithm for network power allocation and
+  routing</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Ahmed Rashwan, Keith Briggs, Chris Budd</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-09-11 17:23:47</h6>
+<p class='card-text'>The drift-plus-penalty method is a Lyapunov optimisation technique commonly
+applied to network routing problems. It reduces the original stochastic
+planning task to a sequence of greedy optimizations, enabling the design of
+distributed routing algorithms which stabilize data queues while simultaneously
+optimizing a specified penalty function. While drift-plus-penalty methods have
+desirable asymptotic properties, they tend to incur higher network delay than
+alternative control methods, especially under light network load. In this work,
+we propose a learned variant of the drift-plus-penalty method that can preserve
+its theoretical guarantees, while being flexible enough to learn routing
+strategies directly from a model of the problem. Our approach introduces a
+novel mechanism for learning routing decisions and employs an optimal
+transport-based method for link scheduling. Applied to the joint task of
+transmit-power allocation and data routing, the method achieves consistent
+improvements over common baselines under a broad set of scenarios.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2509.09594v1' target='_blank'>ObjectReact: Learning Object-Relative Control for Visual Navigation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Sourav Garg, Dustin Craggs, Vineeth Bhat, Lachlan Mares, Stefan Podgorski, Madhava Krishna, Feras Dayoub, Ian Reid</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-09-11 16:34:17</h6>
+<p class='card-text'>Visual navigation using only a single camera and a topological map has
+recently become an appealing alternative to methods that require additional
+sensors and 3D maps. This is typically achieved through an "image-relative"
+approach to estimating control from a given pair of current observation and
+subgoal image. However, image-level representations of the world have
+limitations because images are strictly tied to the agent's pose and
+embodiment. In contrast, objects, being a property of the map, offer an
+embodiment- and trajectory-invariant world representation. In this work, we
+present a new paradigm of learning "object-relative" control that exhibits
+several desirable characteristics: a) new routes can be traversed without
+strictly requiring to imitate prior experience, b) the control prediction
+problem can be decoupled from solving the image matching problem, and c) high
+invariance can be achieved in cross-embodiment deployment for variations across
+both training-testing and mapping-execution settings. We propose a topometric
+map representation in the form of a "relative" 3D scene graph, which is used to
+obtain more informative object-level global path planning costs. We train a
+local controller, dubbed "ObjectReact", conditioned directly on a high-level
+"WayObject Costmap" representation that eliminates the need for an explicit RGB
+input. We demonstrate the advantages of learning object-relative control over
+its image-relative counterpart across sensor height variations and multiple
+navigation tasks that challenge the underlying spatial understanding
+capability, e.g., navigating a map trajectory in the reverse direction. We
+further show that our sim-only policy is able to generalize well to real-world
+indoor environments. Code and supplementary material are accessible via project
+page: https://object-react.github.io/</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2509.09575v1' target='_blank'>Deep learning-based prediction of Precipitable Water Vapor in the
+  Chajnantor area</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Alison Matus-Bello, Silvia E. Restrepo, Ricardo Bustos, Yi Hu, Fujia Du, Jaime Cariñe, Pablo García, Rodrigo Reeves, Zhaohui Shang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-09-11 16:11:09</h6>
+<p class='card-text'>Astronomical observations at millimeter and submillimeter wavelengths heavily
+depend on the amount of Precipitable Water Vapor (PWV) in the atmosphere,
+directly affecting the sky transparency and degrading the quality of the
+signals received by radio telescopes. Predictions of PWV at different
+forecasting horizons is crucial to support telescope operations, engineering
+planning, and observational scheduling and efficiency of radio observatories
+installed in the Chajnantor area in northern Chile. We developed and validated
+a Long Short-Term Memory (LSTM) deep learning-based model to predict PWV at
+forecasting horizons of 12, 24, 36, and 48 hours using historical data from two
+183 GHz radiometers and a weather station in the Chajnantor area. We find the
+LSTM method is able to predict PWV in the 12 and 24 hours forecasting horizons
+with Mean Absolute Percentage Error (MAPE) of 22% compared to 36% of the
+traditional Global Forecast System (GFS) method used by Atacama Pathfinder
+EXperiment (APEX) and the Root Mean Square Error (RMSE) in mm are reduced by
+50%. We present a first application of deep learning techniques for preliminary
+predictions of PWV in the Chajnantor area. The prediction performance shows
+significant improvements to traditional methods in 12 and 24 hours time
+windows. We also propose upgrades to improve our method in short (< 1 hour) and
+long (> 36 hours) forecasting timescales for future work.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2509.09556v1' target='_blank'>A Hybrid Analytical Framework for Asymmetric Pressure and Boundary Layer
+  Wind Simulation in Nor'easters</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Seyedeh Fatemeh Mirfakhar, Reda Snaiki, Frank Lombardo</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-09-11 15:45:44</h6>
+<p class='card-text'>Nor'easters frequently impact the North American East Coast, bringing
+hazardous precipitation, winds, and coastal flooding. Accurate simulation of
+their pressure and wind fields is essential for forecasting, risk assessment,
+and infrastructure planning, yet remains challenging due to their complex,
+asymmetric structure. This study introduces a novel hybrid
+analytical-data-driven model designed to efficiently simulate Nor'easter
+pressure and boundary layer wind fields. The pressure field is modeled using an
+adapted Holland-type formulation, with azimuthally varying parameters estimated
+through Kriging surrogate models informed by sensitivity analysis of reanalysis
+data. The wind field is then derived analytically from the momentum equations
+by decomposing the wind flow into gradient and frictional components. Model
+performance is assessed against ERA-Interim reanalysis data and surface wind
+observations from a historical event. Results show that the proposed pressure
+model accurately reproduces elliptical isobars and key asymmetrical patterns,
+while the wind model captures the fundamental structure and intensity of the
+boundary layer flow, including the presence of supergradient winds. Owing to
+its physical basis, computational efficiency, and ability to represent critical
+storm asymmetries, the model offers a valuable alternative to computationally
+expensive numerical simulations for hazard assessment and scenario analysis of
+extreme Nor'easters.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2509.09514v1' target='_blank'>Mapping of discrete range modulated proton radiograph to
+  water-equivalent path length using machine learning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Atiq Ur Rahman, Chun-Chieh Wang, Shu-Wei Wu, Tsi-Chian Chao, I-Chun Cho</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-09-11 14:55:55</h6>
+<p class='card-text'>Objective. Proton beams enable localized dose delivery. Accurate range
+estimation is essential, but planning still relies on X-ray CT, which
+introduces uncertainty in stopping power and range. Proton CT measures water
+equivalent thickness directly but suffers resolution loss from multiple Coulomb
+scattering. We develop a data driven method that reconstructs water equivalent
+path length (WEPL) maps from energy resolved proton radiographs, bypassing
+intermediate reconstructions. Approach. We present a machine learning pipeline
+for WEPL from high dimensional radiographs. Data were generated with the TOPAS
+Monte Carlo toolkit, modeling a clinical nozzle and a patient CT. Proton
+energies spanned 70-230 MeV across 72 projection angles. Principal component
+analysis reduced input dimensionality while preserving signal. A conditional
+GAN with gradient penalty was trained for WEPL prediction using a composite
+loss (adversarial, MSE, SSIM, perceptual) to balance sharpness, accuracy, and
+stability. Main results. The model reached a mean relative WEPL deviation of
+2.5 percent, an SSIM of 0.97, and a proton radiography gamma index passing rate
+of 97.1 percent (2 percent delta WEPL, 3 mm distance-to-agreement) on a
+simulated head phantom. Results indicate high spatial fidelity and strong
+structural agreement. Significance. WEPL can be mapped directly from proton
+radiographs with deep learning while avoiding intermediate steps. The method
+mitigates limits of analytic techniques and may improve treatment planning.
+Future work will tune the number of PCA components, include detector response,
+explore low dose settings, and extend multi angle data toward full proton CT
+reconstruction; it is compatible with clinical workflows.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2509.09484v1' target='_blank'>BagIt! An Adaptive Dual-Arm Manipulation of Fabric Bags for Object
+  Bagging</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Peng Zhou, Jiaming Qi, Hongmin Wu, Chen Wang, Yizhou Chen, Zeqing Zhang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-09-11 14:15:20</h6>
+<p class='card-text'>Bagging tasks, commonly found in industrial scenarios, are challenging
+considering deformable bags' complicated and unpredictable nature. This paper
+presents an automated bagging system from the proposed adaptive
+Structure-of-Interest (SOI) manipulation strategy for dual robot arms. The
+system dynamically adjusts its actions based on real-time visual feedback,
+removing the need for pre-existing knowledge of bag properties. Our framework
+incorporates Gaussian Mixture Models (GMM) for estimating SOI states,
+optimization techniques for SOI generation, motion planning via Constrained
+Bidirectional Rapidly-exploring Random Tree (CBiRRT), and dual-arm coordination
+using Model Predictive Control (MPC). Extensive experiments validate the
+capability of our system to perform precise and robust bagging across various
+objects, showcasing its adaptability. This work offers a new solution for
+robotic deformable object manipulation (DOM), particularly in automated bagging
+tasks. Video of this work is available at https://youtu.be/6JWjCOeTGiQ.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2509.09469v1' target='_blank'>Resource-Efficient Glioma Segmentation on Sub-Saharan MRI</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Freedmore Sidume, Oumayma Soula, Joseph Muthui Wacira, YunFei Zhu, Abbas Rabiu Muhammad, Abderrazek Zeraii, Oluwaseun Kalejaye, Hajer Ibrahim, Olfa Gaddour, Brain Halubanza, Dong Zhang, Udunna C Anazodo, Confidence Raymond</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-09-11 13:52:47</h6>
+<p class='card-text'>Gliomas are the most prevalent type of primary brain tumors, and their
+accurate segmentation from MRI is critical for diagnosis, treatment planning,
+and longitudinal monitoring. However, the scarcity of high-quality annotated
+imaging data in Sub-Saharan Africa (SSA) poses a significant challenge for
+deploying advanced segmentation models in clinical workflows. This study
+introduces a robust and computationally efficient deep learning framework
+tailored for resource-constrained settings. We leveraged a 3D Attention UNet
+architecture augmented with residual blocks and enhanced through transfer
+learning from pre-trained weights on the BraTS 2021 dataset. Our model was
+evaluated on 95 MRI cases from the BraTS-Africa dataset, a benchmark for glioma
+segmentation in SSA MRI data. Despite the limited data quality and quantity,
+our approach achieved Dice scores of 0.76 for the Enhancing Tumor (ET), 0.80
+for Necrotic and Non-Enhancing Tumor Core (NETC), and 0.85 for Surrounding
+Non-Functional Hemisphere (SNFH). These results demonstrate the
+generalizability of the proposed model and its potential to support clinical
+decision making in low-resource settings. The compact architecture,
+approximately 90 MB, and sub-minute per-volume inference time on consumer-grade
+hardware further underscore its practicality for deployment in SSA health
+systems. This work contributes toward closing the gap in equitable AI for
+global health by empowering underserved regions with high-performing and
+accessible medical imaging solutions.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2509.09332v1' target='_blank'>OmniEVA: Embodied Versatile Planner via Task-Adaptive 3D-Grounded and
+  Embodiment-aware Reasoning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yuecheng Liu, Dafeng Chi, Shiguang Wu, Zhanguang Zhang, Yuzheng Zhuang, Bowen Yang, He Zhu, Lingfeng Zhang, Pengwei Xie, David Gamaliel Arcos Bravo, Yingxue Zhang, Jianye Hao, Xingyue Quan</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-09-11 10:32:22</h6>
+<p class='card-text'>Recent advances in multimodal large language models (MLLMs) have opened new
+opportunities for embodied intelligence, enabling multimodal understanding,
+reasoning, and interaction, as well as continuous spatial decision-making.
+Nevertheless, current MLLM-based embodied systems face two critical
+limitations. First, Geometric Adaptability Gap: models trained solely on 2D
+inputs or with hard-coded 3D geometry injection suffer from either insufficient
+spatial information or restricted 2D generalization, leading to poor
+adaptability across tasks with diverse spatial demands. Second, Embodiment
+Constraint Gap: prior work often neglects the physical constraints and
+capacities of real robots, resulting in task plans that are theoretically valid
+but practically infeasible.To address these gaps, we introduce OmniEVA -- an
+embodied versatile planner that enables advanced embodied reasoning and task
+planning through two pivotal innovations: (1) a Task-Adaptive 3D Grounding
+mechanism, which introduces a gated router to perform explicit selective
+regulation of 3D fusion based on contextual requirements, enabling
+context-aware 3D grounding for diverse embodied tasks. (2) an Embodiment-Aware
+Reasoning framework that jointly incorporates task goals and embodiment
+constraints into the reasoning loop, resulting in planning decisions that are
+both goal-directed and executable. Extensive experimental results demonstrate
+that OmniEVA not only achieves state-of-the-art general embodied reasoning
+performance, but also exhibits a strong ability across a wide range of
+downstream scenarios. Evaluations of a suite of proposed embodied benchmarks,
+including both primitive and composite tasks, confirm its robust and versatile
+planning capabilities. Project page: https://omnieva.github.io</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2509.09325v1' target='_blank'>Swept Volume Computation with Enhanced Geometric Detail Preservation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Pengfei Wang, Yuexin Yang, Shuangmin Chen, Shiqing Xin, Changhe Tu, Wenping Wang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-09-11 10:18:34</h6>
+<p class='card-text'>Swept volume computation, the determination of regions occupied by moving
+objects, is essential in graphics, robotics, and manufacturing. Existing
+approaches either explicitly track surfaces, suffering from robustness issues
+under complex interactions, or employ implicit representations that trade off
+geometric fidelity and face optimization difficulties. We propose a novel
+inversion of motion perspective: rather than tracking object motion, we fix the
+object and trace spatial points backward in time, reducing complex trajectories
+to efficiently linearizable point motions. Based on this, we introduce a multi
+field tetrahedral framework that maintains multiple distance fileds per
+element, preserving fine geometric details at trajectory intersections where
+single field methods fail. Our method robustly computes swept volumes for
+diverse motions, including translations and screw motions, and enables
+practical applications in path planning and collision detection.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2509.09219v1' target='_blank'>Vejde: A Framework for Inductive Deep Reinforcement Learning Based on
+  Factor Graph Color Refinement</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jakob Nyberg, Pontus Johnson</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-09-11 07:51:38</h6>
+<p class='card-text'>We present and evaluate Vejde; a framework which combines data abstraction,
+graph neural networks and reinforcement learning to produce inductive policy
+functions for decision problems with richly structured states, such as object
+classes and relations. MDP states are represented as data bases of facts about
+entities, and Vejde converts each state to a bipartite graph, which is mapped
+to latent states through neural message passing. The factored representation of
+both states and actions allows Vejde agents to handle problems of varying size
+and structure. We tested Vejde agents on eight problem domains defined in RDDL,
+with ten problem instances each, where policies were trained using both
+supervised and reinforcement learning. To test policy generalization, we
+separate problem instances in two sets, one for training and the other solely
+for testing. Test results on unseen instances for the Vejde agents were
+compared to MLP agents trained on each problem instance, as well as the online
+planning algorithm Prost. Our results show that Vejde policies in average
+generalize to the test instances without a significant loss in score.
+Additionally, the inductive agents received scores on unseen test instances
+that on average were close to the instance-specific MLP agents.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2509.09210v1' target='_blank'>ProgD: Progressive Multi-scale Decoding with Dynamic Graphs for Joint
+  Multi-agent Motion Forecasting</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Xing Gao, Zherui Huang, Weiyao Lin, Xiao Sun</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-09-11 07:36:54</h6>
+<p class='card-text'>Accurate motion prediction of surrounding agents is crucial for the safe
+planning of autonomous vehicles. Recent advancements have extended prediction
+techniques from individual agents to joint predictions of multiple interacting
+agents, with various strategies to address complex interactions within future
+motions of agents. However, these methods overlook the evolving nature of these
+interactions. To address this limitation, we propose a novel progressive
+multi-scale decoding strategy, termed ProgD, with the help of dynamic
+heterogeneous graph-based scenario modeling. In particular, to explicitly and
+comprehensively capture the evolving social interactions in future scenarios,
+given their inherent uncertainty, we design a progressive modeling of scenarios
+with dynamic heterogeneous graphs. With the unfolding of such dynamic
+heterogeneous graphs, a factorized architecture is designed to process the
+spatio-temporal dependencies within future scenarios and progressively
+eliminate uncertainty in future motions of multiple agents. Furthermore, a
+multi-scale decoding procedure is incorporated to improve on the future
+scenario modeling and consistent prediction of agents' future motion. The
+proposed ProgD achieves state-of-the-art performance on the INTERACTION
+multi-agent prediction benchmark, ranking $1^{st}$, and the Argoverse 2
+multi-world forecasting benchmark.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2509.09206v1' target='_blank'>Occupancy-aware Trajectory Planning for Autonomous Valet Parking in
+  Uncertain Dynamic Environments</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Farhad Nawaz, Faizan M. Tariq, Sangjae Bae, David Isele, Avinash Singh, Nadia Figueroa, Nikolai Matni, Jovin D'sa</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-09-11 07:29:19</h6>
+<p class='card-text'>Accurately reasoning about future parking spot availability and integrated
+planning is critical for enabling safe and efficient autonomous valet parking
+in dynamic, uncertain environments. Unlike existing methods that rely solely on
+instantaneous observations or static assumptions, we present an approach that
+predicts future parking spot occupancy by explicitly distinguishing between
+initially vacant and occupied spots, and by leveraging the predicted motion of
+dynamic agents. We introduce a probabilistic spot occupancy estimator that
+incorporates partial and noisy observations within a limited Field-of-View
+(FoV) model and accounts for the evolving uncertainty of unobserved regions.
+Coupled with this, we design a strategy planner that adaptively balances
+goal-directed parking maneuvers with exploratory navigation based on
+information gain, and intelligently incorporates wait-and-go behaviors at
+promising spots. Through randomized simulations emulating large parking lots,
+we demonstrate that our framework significantly improves parking efficiency,
+safety margins, and trajectory smoothness compared to existing approaches.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2509.09074v1' target='_blank'>KoopMotion: Learning Almost Divergence Free Koopman Flow Fields for
+  Motion Planning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Alice Kate Li, Thales C Silva, Victoria Edwards, Vijay Kumar, M. Ani Hsieh</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-09-11 00:42:01</h6>
+<p class='card-text'>In this work, we propose a novel flow field-based motion planning method that
+drives a robot from any initial state to a desired reference trajectory such
+that it converges to the trajectory's end point. Despite demonstrated efficacy
+in using Koopman operator theory for modeling dynamical systems, Koopman does
+not inherently enforce convergence to desired trajectories nor to specified
+goals -- a requirement when learning from demonstrations (LfD). We present
+KoopMotion which represents motion flow fields as dynamical systems,
+parameterized by Koopman Operators to mimic desired trajectories, and leverages
+the divergence properties of the learnt flow fields to obtain smooth motion
+fields that converge to a desired reference trajectory when a robot is placed
+away from the desired trajectory, and tracks the trajectory until the end
+point. To demonstrate the effectiveness of our approach, we show evaluations of
+KoopMotion on the LASA human handwriting dataset and a 3D manipulator
+end-effector trajectory dataset, including spectral analysis. We also perform
+experiments on a physical robot, verifying KoopMotion on a miniature autonomous
+surface vehicle operating in a non-static fluid flow environment. Our approach
+is highly sample efficient in both space and time, requiring only 3\% of the
+LASA dataset to generate dense motion plans. Additionally, KoopMotion provides
+a significant improvement over baselines when comparing metrics that measure
+spatial and temporal dynamics modeling efficacy.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2509.09058v1' target='_blank'>Optimizing the Variant Calling Pipeline Execution on Human Genomes Using
+  GPU-Enabled Machines</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Ajay Kumar, Praveen Rao, Peter Sanders</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-09-10 23:40:54</h6>
+<p class='card-text'>Variant calling is the first step in analyzing a human genome and aims to
+detect variants in an individual's genome compared to a reference genome. Due
+to the computationally-intensive nature of variant calling, genomic data are
+increasingly processed in cloud environments as large amounts of compute and
+storage resources can be acquired with the pay-as-you-go pricing model. In this
+paper, we address the problem of efficiently executing a variant calling
+pipeline for a workload of human genomes on graphics processing unit
+(GPU)-enabled machines. We propose a novel machine learning (ML)-based approach
+for optimizing the workload execution to minimize the total execution time. Our
+approach encompasses two key techniques: The first technique employs ML to
+predict the execution times of different stages in a variant calling pipeline
+based on the characteristics of a genome sequence. Using the predicted times,
+the second technique generates optimal execution plans for the machines by
+drawing inspiration from the flexible job shop scheduling problem. The plans
+are executed via careful synchronization across different machines. We
+evaluated our approach on a workload of publicly available genome sequences
+using a testbed with different types of GPU hardware. We observed that our
+approach was effective in predicting the execution times of variant calling
+pipeline stages using ML on features such as sequence size, read quality,
+percentage of duplicate reads, and average read length. In addition, our
+approach achieved 2X speedup (on an average) over a greedy approach that also
+used ML for predicting the execution times on the tested workload of sequences.
+Finally, our approach achieved 1.6X speedup (on an average) over a dynamic
+approach that executed the workload based on availability of resources without
+using any ML-based time predictions.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2509.08976v1' target='_blank'>Toward a Multi-Echelon Cyber Warfare Theory: A Meta-Game-Theoretic
+  Paradigm for Defense and Dominance</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Ya-Ting Yang, Quanyan Zhu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-09-10 20:20:12</h6>
+<p class='card-text'>Cyber warfare has become a central element of modern conflict, especially
+within multi-domain operations. As both a distinct and critical domain, cyber
+warfare requires integrating defensive and offensive technologies into coherent
+strategies. While prior research has emphasized isolated tactics or fragmented
+technologies, a holistic understanding is essential for effective resource
+deployment and risk mitigation. Game theory offers a unifying framework for
+this purpose. It not only models attacker-defender interactions but also
+provides quantitative tools for equilibrium analysis, risk assessment, and
+strategic reasoning. Integrated with modern AI techniques, game-theoretic
+models enable the design and optimization of strategies across multiple levels
+of cyber warfare, from policy and strategy to operations, tactics, and
+technical implementations. These models capture the paradoxical logic of
+conflict, where more resources do not always translate into greater advantage,
+and where nonlinear dynamics govern outcomes. To illustrate the approach, this
+chapter examines RedCyber, a synthetic cyber conflict, demonstrating how
+game-theoretic methods capture the interdependencies of cyber operations. The
+chapter concludes with directions for future research on resilience,
+cros-echelon planning, and the evolving role of AI in cyber warfare.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2509.08962v1' target='_blank'>Detection of Millimeter-Wavelength Flares from Two Accreting White Dwarf
+  Systems in the SPT-3G Galactic Plane Survey</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Y. Wan, J. D. Vieira, P. M. Chichura, T. J. Maccarone, A. J. Anderson, B. Ansarinejad, A. Anumarlapudi, M. Archipley, L. Balkenhol, P. S. Barry, K. Benabed, A. N. Bender, B. A. Benson, F. Bianchini, L. E. Bleem, F. R. Bouchet, L. Bryant, E. Camphuis, M. G. Campitiello, J. E. Carlstrom, C. L. Chang, P. Chaubal, A. Chokshi, T. -L. Chou, A. Coerver, T. M. Crawford, C. Daley, T. de Haan, K. R. Dibert, M. A. Dobbs, M. Doohan, A. Doussot, D. Dutcher, W. Everett, C. Feng, K. R. Ferguson, K. Fichman, A. Foster, S. Galli, A. E. Gambrel, R. W. Gardner, F. Ge, N. Goeckner-Wald, R. Gualtieri, F. Guidi, S. Guns, N. W. Halverson, E. Hivon, G. P. Holder, W. L. Holzapfel, J. C. Hood, A. Hryciuk, N. Huang, D. L. Kaplan, F. Keruzore, A. R. Khalife, L. Knox, M. Korman, K. Kornoelje, C. -L. Kuo, K. Levy, A. E. Lowitz, C. Lu, G. P. Lynch, A. Maniyar, E. S. Martsen, F. Menanteau, M. Millea, J. Montgomery, Y. Nakato, T. Natoli, G. I. Noble, Y. Omori, A. Ouellette, Z. Pan, P. Paschos, K. A. Phadke, A. W. Pollak, K. Prabhu, W. Quan, M. Rahimi, A. Rahlin, C. L. Reichardt, M. Rouble, J. E. Ruhl, E. Schiappucci, A. Simpson, J. A. Sobrin, A. A. Stark, J. Stephen, C. Tandoi, B. Thorne, C. Trendafilova, C. Umilta, A. Vitrier, N. Whitehorn, W. L. K. Wu, M. R. Young, J. A. Zebrowski</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-09-10 19:49:33</h6>
+<p class='card-text'>Blind discoveries of millimeter-wave (mm-wave) transient events in
+non-targeted surveys, as opposed to follow-up or pointed observations, have
+only become possible in the past decade using cosmic microwave background
+surveys. Here we present the first results from the SPT-3G Galactic Plane
+Survey -- the first dedicated high-sensitivity, wide-field, time-domain,
+mm-wave survey of the Galactic Plane, conducted with the South Pole Telescope
+(SPT) using the SPT-3G camera. The survey field covers approximately 100
+$\text{deg}^2$ near the Galactic center. In 2023 and 2024, this survey consists
+of roughly 1,500 individual 20-minute observations in three bands centered at
+95, 150, and 220 GHz, with plans for more observations in the coming years. We
+report the detection of two transient events exceeding a 5$\sigma$ threshold in
+both the 95 and 150 GHz bands in the first two years of SPT-3G Galactic Plane
+Survey data. Both events are unpolarized and exhibit durations of approximately
+one day, with peak flux densities at 150 GHz of at least 50 mJy. The peak
+isotropic luminosities at 150 GHz are on the order of
+$10^{31}~\text{erg}~\text{s}^{-1}$. Both events are associated with previously
+identified accreting white dwarfs. Magnetic reconnection in the accretion disk
+is a likely explanation for the observed millimeter flares. In the future, we
+plan to expand the transient search in the Galactic Plane by lowering the
+detection threshold, enabling single-band detections, analyzing lightcurves on
+a range of timescales, and including additional data from future observations.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2509.08901v1' target='_blank'>ORLCA: A concept for an open-source Life Cycle Assessment repository
+  built for research</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Hannah Wakeling, Kristin Lohwasser, Peter Millington</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-09-10 18:03:22</h6>
+<p class='card-text'>Comprehensive Life Cycle Assessment (LCA) as a tool to account for the full
+range of environmental impacts of resource use in commodities or services is a
+first step in reducing these impacts. There is an increasing necessity to
+account for these aspects in the planning, running and end-of-life of
+scientific experiments and research infrastructure. In the following, the
+concept for an Open Research Life Cycle Assessment (ORLCA) repository is
+presented to support this endeavour. It is designed to comply fully with the
+principles of findability, accessibility, interoperability, and reusability
+(FAIR).</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2509.08775v2' target='_blank'>Joint Model-based Model-free Diffusion for Planning with Constraints</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Wonsuhk Jung, Utkarsh A. Mishra, Nadun Ranawaka Arachchige, Yongxin Chen, Danfei Xu, Shreyas Kousik</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-09-10 17:05:16</h6>
+<p class='card-text'>Model-free diffusion planners have shown great promise for robot motion
+planning, but practical robotic systems often require combining them with
+model-based optimization modules to enforce constraints, such as safety.
+Naively integrating these modules presents compatibility challenges when
+diffusion's multi-modal outputs behave adversarially to optimization-based
+modules. To address this, we introduce Joint Model-based Model-free Diffusion
+(JM2D), a novel generative modeling framework. JM2D formulates module
+integration as a joint sampling problem to maximize compatibility via an
+interaction potential, without additional training. Using importance sampling,
+JM2D guides modules outputs based only on evaluations of the interaction
+potential, thus handling non-differentiable objectives commonly arising from
+non-convex optimization modules. We evaluate JM2D via application to aligning
+diffusion planners with safety modules on offline RL and robot manipulation.
+JM2D significantly improves task performance compared to conventional safety
+filters without sacrificing safety. Further, we show that conditional
+generation is a special case of JM2D and elucidate key design choices by
+comparing with SOTA gradient-based and projection-based diffusion planners.
+More details at: https://jm2d-corl25.github.io/.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2509.08766v1' target='_blank'>Demonstration of a next-generation wavefront actuator for
+  gravitational-wave detection</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Tyler Rosauer, Huy Tuong Cao, Mohak Bhattacharya, Peter Carney, Luke Johnson, Shane Levin, Cynthia Liang, Xuesi Ma, Luis Martin Gutierrez, Michael Padilla, Liu Tao, Aiden Wilkin, Aidan Brooks, Jonathan W. Richardson</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-09-10 16:59:46</h6>
+<p class='card-text'>In the last decade, the Laser Interferometer Gravitational-Wave Observatory
+(LIGO) and the European Virgo observatory have opened a new observational
+window on the universe. These cavity-enhanced laser interferometers sense
+spacetime strain, generated by distant astrophysical events such as black hole
+mergers, to an RMS fluctuation of a few parts in $10^{21}$ over a
+multi-kilometer baseline. Optical advancements in laser wavefront control are
+key to advancing the sensitivity of current detectors and enabling a planned
+next-generation 40-km gravitational wave observatory in the United States,
+known as Cosmic Explorer. We report the first experimental demonstration of a
+new wavefront control technique for gravitational-wave detection, obtained from
+testing a full-scale prototype on a 40-kg LIGO mirror. Our results indicate
+that this design can meet the unique and challenging requirements of providing
+higher-order precision wavefront corrections at megawatt laser power levels,
+while introducing extremely low effective displacement noise into the
+interferometer. This new technology will have a direct and enabling impact on
+the observational science, expanding the gravitational-wave detection horizon
+to very early times in the universe, before the first stars formed, and
+enabling new tests of gravity, cosmology, and dense nuclear matter.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2509.08699v1' target='_blank'>TANGO: Traversability-Aware Navigation with Local Metric Control for
+  Topological Goals</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Stefan Podgorski, Sourav Garg, Mehdi Hosseinzadeh, Lachlan Mares, Feras Dayoub, Ian Reid</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-09-10 15:43:32</h6>
+<p class='card-text'>Visual navigation in robotics traditionally relies on globally-consistent 3D
+maps or learned controllers, which can be computationally expensive and
+difficult to generalize across diverse environments. In this work, we present a
+novel RGB-only, object-level topometric navigation pipeline that enables
+zero-shot, long-horizon robot navigation without requiring 3D maps or
+pre-trained controllers. Our approach integrates global topological path
+planning with local metric trajectory control, allowing the robot to navigate
+towards object-level sub-goals while avoiding obstacles. We address key
+limitations of previous methods by continuously predicting local trajectory
+using monocular depth and traversability estimation, and incorporating an
+auto-switching mechanism that falls back to a baseline controller when
+necessary. The system operates using foundational models, ensuring open-set
+applicability without the need for domain-specific fine-tuning. We demonstrate
+the effectiveness of our method in both simulated environments and real-world
+tests, highlighting its robustness and deployability. Our approach outperforms
+existing state-of-the-art methods, offering a more adaptable and effective
+solution for visual navigation in open-set environments. The source code is
+made publicly available: https://github.com/podgorki/TANGO.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2509.08654v1' target='_blank'>Robust Belief-State Policy Learning for Quantum Network Routing Under
+  Decoherence and Time-Varying Conditions</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Amirhossein Taherpour, Abbas Taherpour, Tamer Khattab</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-09-10 14:50:03</h6>
+<p class='card-text'>This paper presents a feature-based Partially Observable Markov Decision
+Process (POMDP) framework for quantum network routing, combining belief-state
+planning with Graph Neural Networks (GNNs) to address partial observability,
+decoherence, and scalability challenges in dynamic quantum systems. Our
+approach encodes complex quantum network dynamics, including entanglement
+degradation and time-varying channel noise, into a low-dimensional feature
+space, enabling efficient belief updates and scalable policy learning. The core
+of our framework is a hybrid GNN-POMDP architecture that processes
+graph-structured representations of entangled links to learn routing policies,
+coupled with a noise-adaptive mechanism that fuses POMDP belief updates with
+GNN outputs for robust decision making. We provide a theoretical analysis
+establishing guarantees for belief convergence, policy improvement, and
+robustness to noise. Experiments on simulated quantum networks with up to 100
+nodes demonstrate significant improvements in routing fidelity and entanglement
+delivery rates compared to state-of-the-art baselines, particularly under high
+decoherence and nonstationary conditions.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2509.08602v1' target='_blank'>A parallel algorithm for generating Pareto-optimal radiosurgery
+  treatment plans</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Joakim da Silva, Daniel Hernández Escobar, Tor Kjellsson Lindblom, Håkan Nordström, Jens Sjölund</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-09-10 14:01:49</h6>
+<p class='card-text'>Using inverse planning tools to create radiotherapy treatment plans is an
+iterative process, where clinical trade-offs are explored by changing the
+relative importance of different objectives and rerunning the optimizer until a
+desirable plan is found. We seek to optimize hundreds of radiosurgery treatment
+plans, corresponding to different weightings of objectives, fast enough to
+incorporate interactive Pareto navigation of clinical trade-offs into the
+clinical workflow. We apply the alternating direction method of multipliers
+(ADMM) to the linear-program formulation of the optimization problem used in
+Lightning. We implement both a CPU and a GPU version of ADMM in Matlab and
+compare them to Matlab's built-in, single-threaded dual-simplex solver. The
+ADMM implementation is adapted to the optimization procedure used in the
+clinical software, with a bespoke algorithm for maximizing overlap between
+low-dose points for different objective weights. The method is evaluated on a
+test dataset consisting of 20 cases from three different indications, with
+between one and nine targets and total target volumes ranging from 0.66 to 52
+cm3, yielding speedups of 1.6-97 and 54-1500 times on CPU and GPU,
+respectively, compared to simplex. Plan quality was evaluated by rerunning the
+ADMM optimization 20 times, each with a different random seed, for each test
+case and for nine objective weightings per case. The resulting clinical metrics
+closely mimicked those obtained when rerunning the simplex solver, verifying
+the validity of the method. In conclusion, we show how ADMM can be adapted for
+radiosurgery plan optimization, allowing hundreds of high-quality Gamma Knife
+treatment plans to be created in under two minutes on a single GPU, also for
+very large cases.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2509.08595v1' target='_blank'>The Role of Legacy Mobile Networks in Infrastructure Resilience:
+  Evidence from the Southern Brazil Flood</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Daniel Meyer, Lisandro Z Granville, Leandro M. Bertholdo</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-09-10 13:48:38</h6>
+<p class='card-text'>This paper investigates the resilience of mobile communication networks
+during the extreme flooding that affected Rio Grande do Sul, Brazil, in May
+2024. Based on regulatory data and technical insights from operators, the study
+identifies the leading causes of mobile network disruptions, primarily related
+to flooding and prolonged power outages. The results reveal the significant
+vulnerability of modern networks (4G/5G) during the event and the essential
+role played by legacy technologies (2G/3G) in sustaining basic connectivity
+under adverse conditions. The findings underscore the necessity of
+disaster-aware infrastructure planning, taking into account the ongoing
+significance of legacy systems, diversified power supply strategies, and
+resilient network designs to enhance service continuity during future crises.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2509.08580v1' target='_blank'>Implicit Shape-Prior for Few-Shot Assisted 3D Segmentation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Mathilde Monvoisin, Louise Piecuch, Blanche Texier, Cédric Hémon, Anaïs Barateau, Jérémie Huet, Antoine Nordez, Anne-Sophie Boureau, Jean-Claude Nunes, Diana Mateus</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-09-10 13:30:39</h6>
+<p class='card-text'>The objective of this paper is to significantly reduce the manual workload
+required from medical professionals in complex 3D segmentation tasks that
+cannot be yet fully automated. For instance, in radiotherapy planning, organs
+at risk must be accurately identified in computed tomography (CT) or magnetic
+resonance imaging (MRI) scans to ensure they are spared from harmful radiation.
+Similarly, diagnosing age-related degenerative diseases such as sarcopenia,
+which involve progressive muscle volume loss and strength, is commonly based on
+muscular mass measurements often obtained from manual segmentation of medical
+volumes. To alleviate the manual-segmentation burden, this paper introduces an
+implicit shape prior to segment volumes from sparse slice manual annotations
+generalized to the multi-organ case, along with a simple framework for
+automatically selecting the most informative slices to guide and minimize the
+next interactions. The experimental validation shows the method's effectiveness
+on two medical use cases: assisted segmentation in the context of at risks
+organs for brain cancer patients, and acceleration of the creation of a new
+database with unseen muscle shapes for patients with sarcopenia.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2509.08521v1' target='_blank'>FMT$^{x}$: An Efficient and Asymptotically Optimal Extension of the Fast
+  Marching Tree for Dynamic Replanning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Soheil Espahbodini Nia</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-09-10 11:57:56</h6>
+<p class='card-text'>Path planning in dynamic environments remains a core challenge in robotics,
+especially as autonomous systems are deployed in unpredictable spaces such as
+warehouses and public roads. While algorithms like Fast Marching Tree
+(FMT$^{*}$) offer asymptotically optimal solutions in static settings, their
+single-pass design prevents path revisions which are essential for real-time
+adaptation. On the other hand, full replanning is often too computationally
+expensive. This paper introduces FMT$^{x}$, an extension of the Fast Marching
+Tree algorithm that enables efficient and consistent replanning in dynamic
+environments. We revisit the neighbor selection rule of FMT$^{*}$ and
+demonstrate that a minimal change overcomes its single-pass limitation,
+enabling the algorithm to update cost-to-come values upon discovering better
+connections without sacrificing asymptotic optimality or computational
+efficiency. By maintaining a cost-ordered priority queue and applying a
+selective update condition that uses an expanding neighbor to identify and
+trigger the re-evaluation of any node with a potentially suboptimal path,
+FMT$^{x}$ ensures that suboptimal routes are efficiently repaired as the
+environment evolves. This targeted strategy preserves the inherent efficiency
+of FMT$^{*}$ while enabling robust adaptation to changes in obstacle
+configuration. FMT$^{x}$ is proven to recover an asymptotically optimal
+solution after environmental changes. Experimental results demonstrate that
+FMT$^{x}$ outperforms the influential replanner RRT$^{x}$, reacting more
+swiftly to dynamic events with lower computational overhead and thus offering a
+more effective solution for real-time robotic navigation in unpredictable
+worlds.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2509.08495v1' target='_blank'>CLAP: Clustering to Localize Across n Possibilities, A Simple, Robust
+  Geometric Approach in the Presence of Symmetries</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Gabriel I. Fernandez, Ruochen Hou, Alex Xu, Colin Togashi, Dennis W. Hong</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-09-10 11:11:12</h6>
+<p class='card-text'>In this paper, we present our localization method called CLAP, Clustering to
+Localize Across $n$ Possibilities, which helped us win the RoboCup 2024
+adult-sized autonomous humanoid soccer competition. Competition rules limited
+our sensor suite to stereo vision and an inertial sensor, similar to humans. In
+addition, our robot had to deal with varying lighting conditions, dynamic
+feature occlusions, noise from high-impact stepping, and mistaken features from
+bystanders and neighboring fields. Therefore, we needed an accurate, and most
+importantly robust localization algorithm that would be the foundation for our
+path-planning and game-strategy algorithms. CLAP achieves these requirements by
+clustering estimated states of our robot from pairs of field features to
+localize its global position and orientation. Correct state estimates naturally
+cluster together, while incorrect estimates spread apart, making CLAP resilient
+to noise and incorrect inputs. CLAP is paired with a particle filter and an
+extended Kalman filter to improve consistency and smoothness. Tests of CLAP
+with other landmark-based localization methods showed similar accuracy.
+However, tests with increased false positive feature detection showed that CLAP
+outperformed other methods in terms of robustness with very little divergence
+and velocity jumps. Our localization performed well in competition, allowing
+our robot to shoot faraway goals and narrowly defend our goal.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2509.08460v1' target='_blank'>Dual-Stage Safe Herding Framework for Adversarial Attacker in Dynamic
+  Environment</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Wenqing Wang, Ye Zhang, Haoyu Li, Jingyu Wang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-09-10 10:05:00</h6>
+<p class='card-text'>Recent advances in robotics have enabled the widespread deployment of
+autonomous robotic systems in complex operational environments, presenting both
+unprecedented opportunities and significant security problems. Traditional
+shepherding approaches based on fixed formations are often ineffective or risky
+in urban and obstacle-rich scenarios, especially when facing adversarial agents
+with unknown and adaptive behaviors. This paper addresses this challenge as an
+extended herding problem, where defensive robotic systems must safely guide
+adversarial agents with unknown strategies away from protected areas and into
+predetermined safe regions, while maintaining collision-free navigation in
+dynamic environments. We propose a hierarchical hybrid framework based on
+reach-avoid game theory and local motion planning, incorporating a virtual
+containment boundary and event-triggered pursuit mechanisms to enable scalable
+and robust multi-agent coordination. Simulation results demonstrate that the
+proposed approach achieves safe and efficient guidance of adversarial agents to
+designated regions.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2509.08435v1' target='_blank'>PegasusFlow: Parallel Rolling-Denoising Score Sampling for Robot
+  Diffusion Planner Flow Matching</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Lei Ye, Haibo Gao, Peng Xu, Zhelin Zhang, Junqi Shan, Ao Zhang, Wei Zhang, Ruyi Zhou, Zongquan Deng, Liang Ding</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-09-10 09:31:17</h6>
+<p class='card-text'>Diffusion models offer powerful generative capabilities for robot trajectory
+planning, yet their practical deployment on robots is hindered by a critical
+bottleneck: a reliance on imitation learning from expert demonstrations. This
+paradigm is often impractical for specialized robots where data is scarce and
+creates an inefficient, theoretically suboptimal training pipeline. To overcome
+this, we introduce PegasusFlow, a hierarchical rolling-denoising framework that
+enables direct and parallel sampling of trajectory score gradients from
+environmental interaction, completely bypassing the need for expert data. Our
+core innovation is a novel sampling algorithm, Weighted Basis Function
+Optimization (WBFO), which leverages spline basis representations to achieve
+superior sample efficiency and faster convergence compared to traditional
+methods like MPPI. The framework is embedded within a scalable, asynchronous
+parallel simulation architecture that supports massively parallel rollouts for
+efficient data collection. Extensive experiments on trajectory optimization and
+robotic navigation tasks demonstrate that our approach, particularly
+Action-Value WBFO (AVWBFO) combined with a reinforcement learning warm-start,
+significantly outperforms baselines. In a challenging barrier-crossing task,
+our method achieved a 100% success rate and was 18% faster than the next-best
+method, validating its effectiveness for complex terrain locomotion planning.
+https://masteryip.github.io/pegasusflow.github.io/</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2509.08378v1' target='_blank'>A Planning Strategy for Building a Heterogeneous Smart EM Environment</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Arianna Benoni, Marco Salucci, Baozhu Li, Andrea Massa</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-09-10 08:15:44</h6>
+<p class='card-text'>This paper presents a planning strategy for the deployment of smart
+electromagnetic entities (SEEs) to enhance the wireless coverage and the
+Quality-of-Service (QoS) in large urban areas. The integration of different
+technological solutions such as integrated access-and-backhaul nodes (IABs),
+smart repeaters (SRs), and electromagnetic skins (EMSs) is here addressed to
+enable an effective and efficient implementation of the concept of Smart
+Electromagnetic Environment (SEME). By combining the features of such
+heterogeneous SEEs and optimizing their number, positions, orientations, and
+configuration, the electromagnetic (EM) coverage in a set of
+Regions-of-Interest (RoIs) of outdoor scenarios is recovered and/or enhanced
+subject to installation costs and energy consumption requirements. Numerical
+validations from real-world scenarios are reported to assess the effectiveness
+of the proposed planning scheme as well as to show the potentialities of an
+heterogeneous deployment of SEMEs.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js'></script>
+</body>
+</html>
