@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>planning - 2025-09-22</title>
+<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap' rel='stylesheet'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css'>
+<style>
+body {
+font-family: 'Roboto', sans-serif;
+background-color: #f5f7fa;
+padding: 20px;
+}
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.card-title {
+    font-weight: 700;
+}
+.card:hover {
+    transform: scale(1.02);
+    transition: 0.3s ease-in-out;
+}
+</style>
+</head>
+<body>
+<div class='container'>
+<h1 class='text-center my-4'><i class='fas fa-book'></i>planning - 2025-09-22</h1>
+<div class='row'>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2509.16079v1' target='_blank'>Real-Time Planning and Control with a Vortex Particle Model for
+  Fixed-Wing UAVs in Unsteady Flows</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Ashwin Gupta, Kevin Wolfe, Gino Perrotta, Joseph Moore</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-09-19 15:25:47</h6>
+<p class='card-text'>Unsteady aerodynamic effects can have a profound impact on aerial vehicle
+flight performance, especially during agile maneuvers and in complex
+aerodynamic environments. In this paper, we present a real-time planning and
+control approach capable of reasoning about unsteady aerodynamics. Our approach
+relies on a lightweight vortex particle model, parallelized to allow GPU
+acceleration, and a sampling-based policy optimization strategy capable of
+leveraging the vortex particle model for predictive reasoning. We demonstrate,
+through both simulation and hardware experiments, that by replanning with our
+unsteady aerodynamics model, we can improve the performance of aggressive
+post-stall maneuvers in the presence of unsteady environmental flow
+disturbances.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2509.16072v1' target='_blank'>I-FailSense: Towards General Robotic Failure Detection with
+  Vision-Language Models</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Clemence Grislain, Hamed Rahimi, Olivier Sigaud, Mohamed Chetouani</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-09-19 15:19:38</h6>
+<p class='card-text'>Language-conditioned robotic manipulation in open-world settings requires not
+only accurate task execution but also the ability to detect failures for robust
+deployment in real-world environments. Although recent advances in
+vision-language models (VLMs) have significantly improved the spatial reasoning
+and task-planning capabilities of robots, they remain limited in their ability
+to recognize their own failures. In particular, a critical yet underexplored
+challenge lies in detecting semantic misalignment errors, where the robot
+executes a task that is semantically meaningful but inconsistent with the given
+instruction. To address this, we propose a method for building datasets
+targeting Semantic Misalignment Failures detection, from existing
+language-conditioned manipulation datasets. We also present I-FailSense, an
+open-source VLM framework with grounded arbitration designed specifically for
+failure detection. Our approach relies on post-training a base VLM, followed by
+training lightweight classification heads, called FS blocks, attached to
+different internal layers of the VLM and whose predictions are aggregated using
+an ensembling mechanism. Experiments show that I-FailSense outperforms
+state-of-the-art VLMs, both comparable in size and larger, in detecting
+semantic misalignment errors. Notably, despite being trained only on semantic
+misalignment detection, I-FailSense generalizes to broader robotic failure
+categories and effectively transfers to other simulation environments and
+real-world with zero-shot or minimal post-training. The datasets and models are
+publicly released on HuggingFace (Webpage:
+https://clemgris.github.io/I-FailSense/).</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2509.15965v1' target='_blank'>RLinf: Flexible and Efficient Large-scale Reinforcement Learning via
+  Macro-to-Micro Flow Transformation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Chao Yu, Yuanqing Wang, Zhen Guo, Hao Lin, Si Xu, Hongzhi Zang, Quanlu Zhang, Yongji Wu, Chunyang Zhu, Junhao Hu, Zixiao Huang, Mingjie Wei, Yuqing Xie, Ke Yang, Bo Dai, Zhexuan Xu, Xiangyuan Wang, Xu Fu, Zhihao Liu, Kang Chen, Weilin Liu, Gang Liu, Boxun Li, Jianlei Yang, Zhi Yang, Guohao Dai, Yu Wang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-09-19 13:24:17</h6>
+<p class='card-text'>Reinforcement learning (RL) has demonstrated immense potential in advancing
+artificial general intelligence, agentic intelligence, and embodied
+intelligence. However, the inherent heterogeneity and dynamicity of RL
+workflows often lead to low hardware utilization and slow training on existing
+systems. In this paper, we present RLinf, a high-performance RL training system
+based on our key observation that the major roadblock to efficient RL training
+lies in system flexibility. To maximize flexibility and efficiency, RLinf is
+built atop a novel RL system design paradigm called macro-to-micro flow
+transformation (M2Flow), which automatically breaks down high-level,
+easy-to-compose RL workflows at both the temporal and spatial dimensions, and
+recomposes them into optimized execution flows. Supported by RLinf worker's
+adaptive communication capability, we devise context switching and elastic
+pipelining to realize M2Flow transformation, and a profiling-guided scheduling
+policy to generate optimal execution plans. Extensive evaluations on both
+reasoning RL and embodied RL tasks demonstrate that RLinf consistently
+outperforms state-of-the-art systems, achieving 1.1x-2.13x speedup in
+end-to-end training throughput.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2509.15830v1' target='_blank'>Coordinated Multi-Drone Last-mile Delivery: Learning Strategies for
+  Energy-aware and Timely Operations</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Chuhao Qin, Arun Narayanan, Evangelos Pournaras</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-09-19 10:00:45</h6>
+<p class='card-text'>Drones have recently emerged as a faster, safer, and cost-efficient way for
+last-mile deliveries of parcels, particularly for urgent medical deliveries
+highlighted during the pandemic. This paper addresses a new challenge of
+multi-parcel delivery with a swarm of energy-aware drones, accounting for
+time-sensitive customer requirements. Each drone plans an optimal multi-parcel
+route within its battery-restricted flight range to minimize delivery delays
+and reduce energy consumption. The problem is tackled by decomposing it into
+three sub-problems: (1) optimizing depot locations and service areas using
+K-means clustering; (2) determining the optimal flight range for drones through
+reinforcement learning; and (3) planning and selecting multi-parcel delivery
+routes via a new optimized plan selection approach. To integrate these
+solutions and enhance long-term efficiency, we propose a novel algorithm
+leveraging actor-critic-based multi-agent deep reinforcement learning.
+Extensive experimentation using realistic delivery datasets demonstrate an
+exceptional performance of the proposed algorithm. We provide new insights into
+economic efficiency (minimize energy consumption), rapid operations (reduce
+delivery delays and overall execution time), and strategic guidance on depot
+deployment for practical logistics applications.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2509.15796v1' target='_blank'>Monte Carlo Tree Diffusion with Multiple Experts for Protein Design</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Xuefeng Liu, Mingxuan Cao, Songhao Jiang, Xiao Luo, Xiaotian Duan, Mengdi Wang, Tobin R. Sosnick, Jinbo Xu, Rick Stevens</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-09-19 09:24:42</h6>
+<p class='card-text'>The goal of protein design is to generate amino acid sequences that fold into
+functional structures with desired properties. Prior methods combining
+autoregressive language models with Monte Carlo Tree Search (MCTS) struggle
+with long-range dependencies and suffer from an impractically large search
+space. We propose MCTD-ME, Monte Carlo Tree Diffusion with Multiple Experts,
+which integrates masked diffusion models with tree search to enable multi-token
+planning and efficient exploration. Unlike autoregressive planners, MCTD-ME
+uses biophysical-fidelity-enhanced diffusion denoising as the rollout engine,
+jointly revising multiple positions and scaling to large sequence spaces. It
+further leverages experts of varying capacities to enrich exploration, guided
+by a pLDDT-based masking schedule that targets low-confidence regions while
+preserving reliable residues. We propose a novel multi-expert selection rule
+(PH-UCT-ME) extends predictive-entropy UCT to expert ensembles. On the inverse
+folding task (CAMEO and PDB benchmarks), MCTD-ME outperforms single-expert and
+unguided baselines in both sequence recovery (AAR) and structural similarity
+(scTM), with gains increasing for longer proteins and benefiting from
+multi-expert guidance. More generally, the framework is model-agnostic and
+applicable beyond inverse folding, including de novo protein engineering and
+multi-objective molecular generation.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2509.15767v1' target='_blank'>Learning to Optimize Capacity Planning in Semiconductor Manufacturing</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Philipp Andelfinger, Jieyi Bi, Qiuyu Zhu, Jianan Zhou, Bo Zhang, Fei Fei Zhang, Chew Wye Chan, Boon Ping Gan, Wentong Cai, Jie Zhang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-09-19 08:51:10</h6>
+<p class='card-text'>In manufacturing, capacity planning is the process of allocating production
+resources in accordance with variable demand. The current industry practice in
+semiconductor manufacturing typically applies heuristic rules to prioritize
+actions, such as future change lists that account for incoming machine and
+recipe dedications. However, while offering interpretability, heuristics cannot
+easily account for the complex interactions along the process flow that can
+gradually lead to the formation of bottlenecks. Here, we present a neural
+network-based model for capacity planning on the level of individual machines,
+trained using deep reinforcement learning. By representing the policy using a
+heterogeneous graph neural network, the model directly captures the diverse
+relationships among machines and processing steps, allowing for proactive
+decision-making. We describe several measures taken to achieve sufficient
+scalability to tackle the vast space of possible machine-level actions.
+  Our evaluation results cover Intel's small-scale Minifab model and
+preliminary experiments using the popular SMT2020 testbed. In the largest
+tested scenario, our trained policy increases throughput and decreases cycle
+time by about 1.8% each.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2509.15750v1' target='_blank'>FloorSAM: SAM-Guided Floorplan Reconstruction with Semantic-Geometric
+  Fusion</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Han Ye, Haofu Wang, Yunchi Zhang, Jiangjian Xiao, Yuqiang Jin, Jinyuan Liu, Wen-An Zhang, Uladzislau Sychou, Alexander Tuzikov, Vladislav Sobolevskii, Valerii Zakharov, Boris Sokolov, Minglei Fu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-09-19 08:27:10</h6>
+<p class='card-text'>Reconstructing building floor plans from point cloud data is key for indoor
+navigation, BIM, and precise measurements. Traditional methods like geometric
+algorithms and Mask R-CNN-based deep learning often face issues with noise,
+limited generalization, and loss of geometric details. We propose FloorSAM, a
+framework that integrates point cloud density maps with the Segment Anything
+Model (SAM) for accurate floor plan reconstruction from LiDAR data. Using
+grid-based filtering, adaptive resolution projection, and image enhancement, we
+create robust top-down density maps. FloorSAM uses SAM's zero-shot learning for
+precise room segmentation, improving reconstruction across diverse layouts.
+Room masks are generated via adaptive prompt points and multistage filtering,
+followed by joint mask and point cloud analysis for contour extraction and
+regularization. This produces accurate floor plans and recovers room
+topological relationships. Tests on Giblayout and ISPRS datasets show better
+accuracy, recall, and robustness than traditional methods, especially in noisy
+and complex settings. Code and materials: github.com/Silentbarber/FloorSAM.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2509.15737v1' target='_blank'>SMART: Scalable Multi-Agent Reasoning and Trajectory Planning in Dense
+  Environments</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Heye Huang, Yibin Yang, Wang Chen, Tiantian Chen, Xiaopeng Li, Sikai Chen</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-09-19 08:07:02</h6>
+<p class='card-text'>Multi-vehicle trajectory planning is a non-convex problem that becomes
+increasingly difficult in dense environments due to the rapid growth of
+collision constraints. Efficient exploration of feasible behaviors and
+resolution of tight interactions are essential for real-time, large-scale
+coordination. This paper introduces SMART, Scalable Multi-Agent Reasoning and
+Trajectory Planning, a hierarchical framework that combines priority-based
+search with distributed optimization to achieve efficient and feasible
+multi-vehicle planning. The upper layer explores diverse interaction modes
+using reinforcement learning-based priority estimation and large-step hybrid A*
+search, while the lower layer refines solutions via parallelizable convex
+optimization. By partitioning space among neighboring vehicles and constructing
+robust feasible corridors, the method decouples the joint non-convex problem
+into convex subproblems solved efficiently in parallel. This design alleviates
+the step-size trade-off while ensuring kinematic feasibility and collision
+avoidance. Experiments show that SMART consistently outperforms baselines. On
+50 m x 50 m maps, it sustains over 90% success within 1 s up to 25 vehicles,
+while baselines often drop below 50%. On 100 m x 100 m maps, SMART achieves
+above 95% success up to 50 vehicles and remains feasible up to 90 vehicles,
+with runtimes more than an order of magnitude faster than optimization-only
+approaches. Built on vehicle-to-everything communication, SMART incorporates
+vehicle-infrastructure cooperation through roadside sensing and agent
+coordination, improving scalability and safety. Real-world experiments further
+validate this design, achieving planning times as low as 0.014 s while
+preserving cooperative behaviors.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2509.15736v1' target='_blank'>Aircraft Fuel Flow Modelling with Ageing Effects: From Parametric
+  Corrections to Neural Networks</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Gabriel Jarry, Ramon Dalmau, Philippe Very, Junzi Sun</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-09-19 08:06:55</h6>
+<p class='card-text'>Accurate modelling of aircraft fuel-flow is crucial for both operational
+planning and environmental impact assessment, yet standard parametric models
+often neglect performance deterioration that occurs as aircraft age. This paper
+investigates multiple approaches to integrate engine ageing effects into
+fuel-flow prediction for the Airbus A320-214, using a comprehensive dataset of
+approximately nineteen thousand Quick Access Recorder flights from nine
+distinct airframes with varying years in service. We systematically evaluate
+classical physics-based models, empirical correction coefficients, and
+data-driven neural network architectures that incorporate age either as an
+input feature or as an explicit multiplicative bias. Results demonstrate that
+while baseline models consistently underestimate fuel consumption for older
+aircraft, the use of age-dependent correction factors and neural models
+substantially reduces bias and improves prediction accuracy. Nevertheless,
+limitations arise from the small number of airframes and the lack of detailed
+maintenance event records, which constrain the representativeness and
+generalization of age-based corrections. This study emphasizes the importance
+of accounting for the effects of ageing in parametric and machine learning
+frameworks to improve the reliability of operational and environmental
+assessments. The study also highlights the need for more diverse datasets that
+can capture the complexity of real-world engine deterioration.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2509.15734v1' target='_blank'>Strong uniform consistency of nonparametric estimation for
+  quantile-based entropy function under length-biased sampling</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Vaishnavi Pavithradas, Rajesh G</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-09-19 08:04:54</h6>
+<p class='card-text'>For studies in reliability, biometry, and survival analysis, the
+length-biased distribution is often well-suited for certain natural sampling
+plans. In this paper, we study the strong uniform consistency of two
+nonparametric estimators for the quantile-based Shannon entropy in the context
+of length-biased data. A simulation study is conducted to examine the behavior
+of the estimators in finite samples, followed by a comparative analysis with
+existing estimators. Furthermore, the usefulness of the proposed estimators is
+evaluated using a real dataset.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2509.15657v1' target='_blank'>How built environment shapes cycling experience: A multi-scale review in
+  historical urban contexts</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Haining Ding, Chenxi Wang, Michal Gath-Morad</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-09-19 06:30:32</h6>
+<p class='card-text'>Understanding how built environments shape human experience is central to
+designing sustainable cities. Cycling provides a critical case: it delivers
+health and environmental benefits, yet its uptake depends strongly on the
+experience of cycling rather than infrastructure alone. Research on this
+relationship has grown rapidly but remains fragmented across disciplines and
+scales, and has concentrated on network-level analyses of routes and
+connectivity. This bias is especially problematic in historical cities, where
+embedding new infrastructure is difficult, and where cycling experience is
+shaped not only by spatial form but also by how cyclists perceive, interpret,
+and physically respond to their environment - through psychological factors
+such as safety and comfort, physiological demands such as stress and fatigue,
+and perceptual cues in the streetscape. We systematically reviewed 68 studies
+across urban planning, transportation, behavioural science, neuroscience, and
+public health. Two scales of analysis were identified: a macro scale addressing
+the ability to cycle and a micro scale addressing the propensity to cycle.
+Methods were classified into objective and subjective approaches, with hybrid
+approaches beginning to emerge. We find a persistent reliance on objective
+proxies, limited integration of subjective accounts, and insufficient attention
+to the streetscape as a lived environment. Addressing these gaps is essential
+to explain why environments enable or deter cycling, and to inform the design
+of cities that support cycling as both mobility and lived experience.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2509.15600v1' target='_blank'>ORB: Operating Room Bot, Automating Operating Room Logistics through
+  Mobile Manipulation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jinkai Qiu, Yungjun Kim, Gaurav Sethia, Tanmay Agarwal, Siddharth Ghodasara, Zackory Erickson, Jeffrey Ichnowski</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-09-19 05:01:51</h6>
+<p class='card-text'>Efficiently delivering items to an ongoing surgery in a hospital operating
+room can be a matter of life or death. In modern hospital settings, delivery
+robots have successfully transported bulk items between rooms and floors.
+However, automating item-level operating room logistics presents unique
+challenges in perception, efficiency, and maintaining sterility. We propose the
+Operating Room Bot (ORB), a robot framework to automate logistics tasks in
+hospital operating rooms (OR). ORB leverages a robust, hierarchical behavior
+tree (BT) architecture to integrate diverse functionalities of object
+recognition, scene interpretation, and GPU-accelerated motion planning. The
+contributions of this paper include: (1) a modular software architecture
+facilitating robust mobile manipulation through behavior trees; (2) a novel
+real-time object recognition pipeline integrating YOLOv7, Segment Anything
+Model 2 (SAM2), and Grounded DINO; (3) the adaptation of the cuRobo
+parallelized trajectory optimization framework to real-time, collision-free
+mobile manipulation; and (4) empirical validation demonstrating an 80% success
+rate in OR supply retrieval and a 96% success rate in restocking operations.
+These contributions establish ORB as a reliable and adaptable system for
+autonomous OR logistics.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2509.15595v1' target='_blank'>Prostate Capsule Segmentation from Micro-Ultrasound Images using
+  Adaptive Focal Loss</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Kaniz Fatema, Vaibhav Thakur, Emad A. Mohammed</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-09-19 04:55:03</h6>
+<p class='card-text'>Micro-ultrasound (micro-US) is a promising imaging technique for cancer
+detection and computer-assisted visualization. This study investigates prostate
+capsule segmentation using deep learning techniques from micro-US images,
+addressing the challenges posed by the ambiguous boundaries of the prostate
+capsule. Existing methods often struggle in such cases, motivating the
+development of a tailored approach. This study introduces an adaptive focal
+loss function that dynamically emphasizes both hard and easy regions, taking
+into account their respective difficulty levels and annotation variability. The
+proposed methodology has two primary strategies: integrating a standard focal
+loss function as a baseline to design an adaptive focal loss function for
+proper prostate capsule segmentation. The focal loss baseline provides a robust
+foundation, incorporating class balancing and focusing on examples that are
+difficult to classify. The adaptive focal loss offers additional flexibility,
+addressing the fuzzy region of the prostate capsule and annotation variability
+by dilating the hard regions identified through discrepancies between expert
+and non-expert annotations. The proposed method dynamically adjusts the
+segmentation model's weights better to identify the fuzzy regions of the
+prostate capsule. The proposed adaptive focal loss function demonstrates
+superior performance, achieving a mean dice coefficient (DSC) of 0.940 and a
+mean Hausdorff distance (HD) of 1.949 mm in the testing dataset. These results
+highlight the effectiveness of integrating advanced loss functions and adaptive
+techniques into deep learning models. This enhances the accuracy of prostate
+capsule segmentation in micro-US images, offering the potential to improve
+clinical decision-making in prostate cancer diagnosis and treatment planning.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2509.15582v1' target='_blank'>Momentum-constrained Hybrid Heuristic Trajectory Optimization Framework
+  with Residual-enhanced DRL for Visually Impaired Scenarios</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yuting Zeng, Zhiwen Zheng, You Zhou, JiaLing Xiao, Yongbin Yu, Manping Fan, Bo Gong, Liyong Ren</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-09-19 04:33:39</h6>
+<p class='card-text'>This paper proposes a momentum-constrained hybrid heuristic trajectory
+optimization framework (MHHTOF) tailored for assistive navigation in visually
+impaired scenarios, integrating trajectory sampling generation, optimization
+and evaluation with residual-enhanced deep reinforcement learning (DRL). In the
+first stage, heuristic trajectory sampling cluster (HTSC) is generated in the
+Frenet coordinate system using third-order interpolation with fifth-order
+polynomials and momentum-constrained trajectory optimization (MTO) constraints
+to ensure smoothness and feasibility. After first stage cost evaluation, the
+second stage leverages a residual-enhanced actor-critic network with LSTM-based
+temporal feature modeling to adaptively refine trajectory selection in the
+Cartesian coordinate system. A dual-stage cost modeling mechanism (DCMM) with
+weight transfer aligns semantic priorities across stages, supporting
+human-centered optimization. Experimental results demonstrate that the proposed
+LSTM-ResB-PPO achieves significantly faster convergence, attaining stable
+policy performance in approximately half the training iterations required by
+the PPO baseline, while simultaneously enhancing both reward outcomes and
+training stability. Compared to baseline method, the selected model reduces
+average cost and cost variance by 30.3% and 53.3%, and lowers ego and obstacle
+risks by over 77%. These findings validate the framework's effectiveness in
+enhancing robustness, safety, and real-time feasibility in complex assistive
+planning tasks.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2509.15566v1' target='_blank'>BTL-UI: Blink-Think-Link Reasoning Model for GUI Agent</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Shaojie Zhang, Ruoceng Zhang, Pei Fu, Shaokang Wang, Jiahui Yang, Xin Du, Shiqi Cui, Bin Qin, Ying Huang, Zhenbo Luo, Jian Luan</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-09-19 04:03:44</h6>
+<p class='card-text'>In the field of AI-driven human-GUI interaction automation, while rapid
+advances in multimodal large language models and reinforcement fine-tuning
+techniques have yielded remarkable progress, a fundamental challenge persists:
+their interaction logic significantly deviates from natural human-GUI
+communication patterns. To fill this gap, we propose "Blink-Think-Link" (BTL),
+a brain-inspired framework for human-GUI interaction that mimics the human
+cognitive process between users and graphical interfaces. The system decomposes
+interactions into three biologically plausible phases: (1) Blink - rapid
+detection and attention to relevant screen areas, analogous to saccadic eye
+movements; (2) Think - higher-level reasoning and decision-making, mirroring
+cognitive planning; and (3) Link - generation of executable commands for
+precise motor control, emulating human action selection mechanisms.
+Additionally, we introduce two key technical innovations for the BTL framework:
+(1) Blink Data Generation - an automated annotation pipeline specifically
+optimized for blink data, and (2) BTL Reward -- the first rule-based reward
+mechanism that enables reinforcement learning driven by both process and
+outcome. Building upon this framework, we develop a GUI agent model named
+BTL-UI, which demonstrates consistent state-of-the-art performance across both
+static GUI understanding and dynamic interaction tasks in comprehensive
+benchmarks. These results provide conclusive empirical validation of the
+framework's efficacy in developing advanced GUI Agents.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2509.15536v1' target='_blank'>SAMPO:Scale-wise Autoregression with Motion PrOmpt for generative world
+  models</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Sen Wang, Jingyi Tian, Le Wang, Zhimin Liao, Jiayi Li, Huaiyi Dong, Kun Xia, Sanping Zhou, Wei Tang, Hua Gang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-09-19 02:41:37</h6>
+<p class='card-text'>World models allow agents to simulate the consequences of actions in imagined
+environments for planning, control, and long-horizon decision-making. However,
+existing autoregressive world models struggle with visually coherent
+predictions due to disrupted spatial structure, inefficient decoding, and
+inadequate motion modeling. In response, we propose \textbf{S}cale-wise
+\textbf{A}utoregression with \textbf{M}otion \textbf{P}r\textbf{O}mpt
+(\textbf{SAMPO}), a hybrid framework that combines visual autoregressive
+modeling for intra-frame generation with causal modeling for next-frame
+generation. Specifically, SAMPO integrates temporal causal decoding with
+bidirectional spatial attention, which preserves spatial locality and supports
+parallel decoding within each scale. This design significantly enhances both
+temporal consistency and rollout efficiency. To further improve dynamic scene
+understanding, we devise an asymmetric multi-scale tokenizer that preserves
+spatial details in observed frames and extracts compact dynamic representations
+for future frames, optimizing both memory usage and model performance.
+Additionally, we introduce a trajectory-aware motion prompt module that injects
+spatiotemporal cues about object and robot trajectories, focusing attention on
+dynamic regions and improving temporal consistency and physical realism.
+Extensive experiments show that SAMPO achieves competitive performance in
+action-conditioned video prediction and model-based control, improving
+generation quality with 4.4$\times$ faster inference. We also evaluate SAMPO's
+zero-shot generalization and scaling behavior, demonstrating its ability to
+generalize to unseen tasks and benefit from larger model sizes.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2509.15529v1' target='_blank'>Optimization techniques for SQL+ML queries: A performance analysis of
+  real-time feature computation in OpenMLDB</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Mashkhal A. Sidiq, Aras A. Salih, Samrand M. Hassan</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-09-19 02:27:01</h6>
+<p class='card-text'>In this study, we optimize SQL+ML queries on top of OpenMLDB, an open-source
+database that seamlessly integrates offline and online feature computations.
+The work used feature-rich synthetic dataset experiments in Docker, which acted
+like production environments that processed 100 to 500 records per batch and 6
+to 12 requests per batch in parallel. Efforts have been concentrated in the
+areas of better query plans, cached execution plans, parallel processing, and
+resource management. The experimental results show that OpenMLDB can support
+approximately 12,500 QPS with less than 1 ms latency, outperforming SparkSQL
+and ClickHouse by a factor of 23 and PostgreSQL and MySQL by 3.57 times. This
+study assessed the impact of optimization and showed that query plan
+optimization accounted for 35% of the performance gains, caching for 25%, and
+parallel processing for 20%. These results illustrate OpenMLDB's capability for
+time-sensitive ML use cases, such as fraud detection, personalized
+recommendation, and time series forecasting. The system's modular optimization
+framework, which combines batch and stream processing without interference,
+contributes to its significant performance gain over traditional database
+systems, particularly in applications that require real-time feature
+computation and serving. This study contributes to the understanding and design
+of high-performance SQL+ML systems and highlights the need for specialized SQL
+optimization for ML workloads.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2509.15469v1' target='_blank'>$ν$SpaceSim: A Comprehensive Simulation Package for Modeling the
+  Measurement of Cosmic Neutrinos using the Earth as the Neutrino Target and
+  Space-based Detectors</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Mary Hall Reno, John F. Krizmanic</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-09-18 22:34:42</h6>
+<p class='card-text'>$\nu$SpaceSim is a highly-efficient (e.g., fast) module-based, end-to-end
+simulation package that models the physical processes of cosmic neutrino
+interactions that leads to detectable signals for sub-orbital and space-based
+instruments. Starting with an input flux of neutrinos incident on a
+user-specified geometry in the Earth, the flux of Earth-emergent leptons are
+calculated followed by their subsequent extensive air showers (EAS). Next, the
+EAS optical Cherenkov and radio emission, signal attenuation to the detector,
+and the detector response are modeled to determine the sensitivity to both the
+diffuse cosmic neutrinos and transient neutrino sources. Using the Earth as a
+tau neutrino target and the atmosphere as the signal generator effectively
+forms a detector with a mega-gigaton mass. Furthermore, \taon decays and
+neutrino neutral-current interactions within the Earth (re)generates a flux of
+lower energy tau neutrinos that can also interact in the Earth thus enhancing
+the detection probability. $\nu$SpaceSim provides a tool to both understand the
+data from recent experiments such as EUSO-SPB2 as well as design/understand the
+performance the next generation of balloon- and space-based experiments,
+including POEMMA Balloon with Radio (PBR) and the Payload for Ultrahigh Energy
+Observations (PUEO). In this paper the $\nu$SpaceSim software, physics
+modeling, and the cosmic neutrino measurement capabilities of example
+sub-orbital and space-based experimental configurations are presented as well
+as status of planned modeling upgrades.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2509.15409v1' target='_blank'>FragmentRetro: A Quadratic Retrosynthetic Method Based on Fragmentation
+  Algorithms</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yu Shee, Anthony M. Smaldone, Anton Morgunov, Gregory W. Kyro, Victor S. Batista</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-09-18 20:36:22</h6>
+<p class='card-text'>Retrosynthesis, the process of deconstructing a target molecule into simpler
+precursors, is crucial for computer-aided synthesis planning (CASP). Widely
+adopted tree-search methods often suffer from exponential computational
+complexity. In this work, we introduce FragmentRetro, a novel retrosynthetic
+method that leverages fragmentation algorithms, specifically BRICS and r-BRICS,
+combined with stock-aware exploration and pattern fingerprint screening to
+achieve quadratic complexity. FragmentRetro recursively combines molecular
+fragments and verifies their presence in a building block set, providing sets
+of fragment combinations as retrosynthetic solutions. We present the first
+formal computational analysis of retrosynthetic methods, showing that tree
+search exhibits exponential complexity $O(b^h)$, DirectMultiStep scales as
+$O(h^6)$, and FragmentRetro achieves $O(h^2)$, where $h$ represents the number
+of heavy atoms in the target molecule and $b$ is the branching factor for tree
+search. Evaluations on PaRoutes, USPTO-190, and natural products demonstrate
+that FragmentRetro achieves high solved rates with competitive runtime,
+including cases where tree search fails. The method benefits from fingerprint
+screening, which significantly reduces substructure matching complexity. While
+FragmentRetro focuses on efficiently identifying fragment-based solutions
+rather than full reaction pathways, its computational advantages and ability to
+generate strategic starting candidates establish it as a powerful foundational
+component for scalable and automated synthesis planning.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2509.15383v1' target='_blank'>Integration and commissioning plan of Full Flow Purifier at Muon Campus</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:J. Subedi, T. Tope, B. Hansen, M. White, J. Tillman, V. Patel, W. Cyko, J. Dong</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-09-18 19:40:34</h6>
+<p class='card-text'>The Full Flow Purifier for Fermilab's Muon Campus uses a charcoal bed
+surrounded by a liquid nitrogen jacket to purify up to 240 g/s of helium gas.
+Fabrication by Ability Engineering Technology Inc. has been completed and the
+purifier delivered to Fermilab. It is the largest purifier to be used at
+Fermilab based on both capacity and size. A previous paper discussed the design
+of purifier for various operational conditions and horizontal shipping. The
+purifier is designed to withstand 5g force in vertical and 2g force in lateral
+and longitudinal directions. Transportation experience from vendor to Fermilab
+and within site is discussed. Integration of the purifier involved design and
+fabrication of a liquid nitrogen transfer line, regeneration system, and helium
+piping to connect it to Muon Campus cryogenic system. It also involved
+establishing electrical, instrumentation and controls connections to the
+system. Integration of the purifier is discussed in detail. The purifier is to
+be commissioned using up to 4 MYCOM helium compressors to supply helium and
+liquid nitrogen supplied by a 60,000-liter tank. Actual effectiveness of the
+3-stream heat exchanger is to be estimated based on measured temperatures and
+flow rate. Impurity levels will be monitored at inlet and outlet of the
+purifier. Theoretical adsorption capacity of the purifier is calculated based
+on the measured temperatures and flowrates and is compared to actual adsorption
+capacity over time.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2509.15381v1' target='_blank'>Dynamic Agent Grouping ECBS: Scaling Windowed Multi-Agent Path Finding
+  with Completeness Guarantees</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Tiannan Zhang, Rishi Veerapaneni, Shao-Hung Chan, Jiaoyang Li, Maxim Likhachev</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-09-18 19:35:54</h6>
+<p class='card-text'>Multi-Agent Path Finding (MAPF) is the problem of finding a set of
+collision-free paths for a team of agents. Although several MAPF methods which
+solve full-horizon MAPF have completeness guarantees, very few MAPF methods
+that plan partial paths have completeness guarantees. Recent work introduced
+the Windowed Complete MAPF (WinC-MAPF) framework, which shows how windowed
+optimal MAPF solvers (e.g., SS-CBS) can use heuristic updates and disjoint
+agent groups to maintain completeness even when planning partial paths
+(Veerapaneni et al. 2024). A core limitation of WinC-MAPF is that they required
+optimal MAPF solvers. Our main contribution is to extend WinC-MAPF by showing
+how we can use a bounded suboptimal solver while maintaining completeness. In
+particular, we design Dynamic Agent Grouping ECBS (DAG-ECBS) which dynamically
+creates and plans agent groups while maintaining that each agent group solution
+is bounded suboptimal. We prove how DAG-ECBS can maintain completeness in the
+WinC-MAPF framework. DAG-ECBS shows improved scalability compared to SS-CBS and
+can outperform windowed ECBS without completeness guarantees. More broadly, our
+work serves as a blueprint for designing more MAPF methods that can use the
+WinC-MAPF framework.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2509.15296v1' target='_blank'>Complete Sampling of the $uv$ Plane with Realistic Radio Arrays:
+  Introducing the RULES Algorithm, with Application to 21 cm Foreground Wedge
+  Removal</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Vincent MacKay, Zhilei Xu, Ruby Byrne, Jacqueline Hewitt</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-09-18 18:00:00</h6>
+<p class='card-text'>We introduce the Radio-array $uv$ Layout Engineering Strategy (RULES), an
+algorithm for designing radio arrays that achieve complete coverage of the $uv$
+plane, defined as, at minimum, regular sampling at half the observing
+wavelength ($\lambda$) along the $u$ and $v$ axes within a specified range of
+baseline lengths. Using RULES, we generate $uv$-complete layouts that cover the
+range $10\lambda\leq|(u,v)|\leq 100\lambda$ with fewer than 1000 antennas of
+diameter $5\lambda$, comparable to current and planned arrays. We demonstrate
+the effectiveness of such arrays for mitigating contamination from bright
+astrophysical foregrounds in 21 cm Epoch of Reionization
+observations,particularly in the region of Fourier space known as the
+foreground wedge,by simulating visibilities of foreground-like sky models over
+the 130-150 MHz band and processing them through an image-based power spectrum
+estimator. We find that with complete $uv$ coverage, the wedge power is
+suppressed by sixteen orders of magnitude compared to an array with a compact
+hexagonal layout (used as a reference for a sparse $uv$ coverage). In contrast,
+we show that an array with the same number of antennas but in a random
+configuration only suppresses the wedge by three orders of magnitude, despite
+sampling more distinct $uv$ points over the same range. We address real-world
+challenges and find that our results are sensitive to small antenna position
+errors and missing baselines, while still performing equally or significantly
+better than random arrays in any case. We propose ways to mitigate those
+challenges such as a minimum redundancy requirement or tighter $uv$ packing
+density.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2509.15180v1' target='_blank'>Parallel Simulation of Contact and Actuation for Soft Growing Robots</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yitian Gao, Lucas Chen, Priyanka Bhovad, Sicheng Wang, Zachary Kingston, Laura H. Blumenschein</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-09-18 17:38:17</h6>
+<p class='card-text'>Soft growing robots, commonly referred to as vine robots, have demonstrated
+remarkable ability to interact safely and robustly with unstructured and
+dynamic environments. It is therefore natural to exploit contact with the
+environment for planning and design optimization tasks. Previous research has
+focused on planning under contact for passively deforming robots with
+pre-formed bends. However, adding active steering to these soft growing robots
+is necessary for successful navigation in more complex environments. To this
+end, we develop a unified modeling framework that integrates vine robot growth,
+bending, actuation, and obstacle contact. We extend the beam moment model to
+include the effects of actuation on kinematics under growth and then use these
+models to develop a fast parallel simulation framework. We validate our model
+and simulator with real robot experiments. To showcase the capabilities of our
+framework, we apply our model in a design optimization task to find designs for
+vine robots navigating through cluttered environments, identifying designs that
+minimize the number of required actuators by exploiting environmental contacts.
+We show the robustness of the designs to environmental and manufacturing
+uncertainties. Finally, we fabricate an optimized design and successfully
+deploy it in an obstacle-rich environment.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2509.15137v1' target='_blank'>Balanced Spanning Tree Distributions Have Separation Fairness</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Harry Chen, Kamesh Munagala, Govind S. Sankar</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-09-18 16:48:43</h6>
+<p class='card-text'>Sampling-based methods such as ReCom are widely used to audit redistricting
+plans for fairness, with the balanced spanning tree distribution playing a
+central role since it favors compact, contiguous, and population-balanced
+districts. However, whether such samples are truly representative or exhibit
+hidden biases remains an open question. In this work, we introduce the notion
+of separation fairness, which asks whether adjacent geographic units are
+separated with at most a constant probability (bounded away from one) in
+sampled redistricting plans. Focusing on grid graphs and two-district
+partitions, we prove that a smooth variant of the balanced spanning tree
+distribution satisfies separation fairness. Our results also provide
+theoretical support for popular MCMC methods like ReCom, suggesting that they
+maintain fairness at a granular level in the sampling process. Along the way,
+we develop tools for analyzing loop-erased random walks and partitions that may
+be of independent interest.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2509.15128v1' target='_blank'>Hunting the elusive $X17$ in CE$ν$NS at the ESS</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Joakim Cederkäll, Yaşar Hiçyılmaz, Else Lytken, Stefano Moretti, Johan Rathsman</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-09-18 16:36:51</h6>
+<p class='card-text'>The so-called $X17$ particle has been proposed in order to explain a very
+significant resonant behaviour (in both the angular separation and invariant
+mass) of $e^+e^-$ pairs produced during a nuclear transition of excited $^8$Be,
+$^4$He and $^{12}$C nuclei. Fits to the corresponding data point, as most
+probable explanation, to a spin-1 object, which is protophobic and has a mass
+of approximately 16.7 MeV, which then makes the $X17$ potentially observable in
+Coherent Elastic neutrino ($\nu$) Nucleus Scattering (CE$\nu$NS) at the
+European Spallation Source (ESS). By adopting as theoretical framework a
+minimal extension of the Standard Model (SM) with a generic $U(1)'$ gauge group
+mixing with the hypercharge one of the latter, which can naturally accommodate
+the $X17$ state compliant with all available measurements from a variety of
+experiments, we predict that CE$\nu$NS at the ESS will constitute an effective
+means to probe this hypothesis, even after allowing for the inevitable
+systematics associated to the performance of the planned detectors therein.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2509.15083v1' target='_blank'>Transplant-Ready? Evaluating AI Lung Segmentation Models in Candidates
+  with Severe Lung Disease</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jisoo Lee, Michael R. Harowicz, Yuwen Chen, Hanxue Gu, Isaac S. Alderete, Lin Li, Maciej A. Mazurowski, Matthew G. Hartwig</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-09-18 15:42:43</h6>
+<p class='card-text'>This study evaluates publicly available deep-learning based lung segmentation
+models in transplant-eligible patients to determine their performance across
+disease severity levels, pathology categories, and lung sides, and to identify
+limitations impacting their use in preoperative planning in lung
+transplantation. This retrospective study included 32 patients who underwent
+chest CT scans at Duke University Health System between 2017 and 2019 (total of
+3,645 2D axial slices). Patients with standard axial CT scans were selected
+based on the presence of two or more lung pathologies of varying severity. Lung
+segmentation was performed using three previously developed deep learning
+models: Unet-R231, TotalSegmentator, MedSAM. Performance was assessed using
+quantitative metrics (volumetric similarity, Dice similarity coefficient,
+Hausdorff distance) and a qualitative measure (four-point clinical
+acceptability scale). Unet-R231 consistently outperformed TotalSegmentator and
+MedSAM in general, for different severity levels, and pathology categories
+(p<0.05). All models showed significant performance declines from mild to
+moderate-to-severe cases, particularly in volumetric similarity (p<0.05),
+without significant differences among lung sides or pathology types. Unet-R231
+provided the most accurate automated lung segmentation among evaluated models
+with TotalSegmentator being a close second, though their performance declined
+significantly in moderate-to-severe cases, emphasizing the need for specialized
+model fine-tuning in severe pathology contexts.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2509.15062v1' target='_blank'>Energy-Constrained Navigation for Planetary Rovers under Hybrid
+  RTG-Solar Power</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Tianxin Hu, Weixiang Guo, Ruimeng Liu, Xinhang Xu, Rui Qian, Jinyu Chen, Shenghai Yuan, Lihua Xie</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-09-18 15:25:56</h6>
+<p class='card-text'>Future planetary exploration rovers must operate for extended durations on
+hybrid power inputs that combine steady radioisotope thermoelectric generator
+(RTG) output with variable solar photovoltaic (PV) availability. While
+energy-aware planning has been studied for aerial and underwater robots under
+battery limits, few works for ground rovers explicitly model power flow or
+enforce instantaneous power constraints. Classical terrain-aware planners
+emphasize slope or traversability, and trajectory optimization methods
+typically focus on geometric smoothness and dynamic feasibility, neglecting
+energy feasibility. We present an energy-constrained trajectory planning
+framework that explicitly integrates physics-based models of translational,
+rotational, and resistive power with baseline subsystem loads, under hybrid
+RTG-solar input. By incorporating both cumulative energy budgets and
+instantaneous power constraints into SE(2)-based polynomial trajectory
+optimization, the method ensures trajectories that are simultaneously smooth,
+dynamically feasible, and power-compliant. Simulation results on lunar-like
+terrain show that our planner generates trajectories with peak power within
+0.55 percent of the prescribed limit, while existing methods exceed limits by
+over 17 percent. This demonstrates a principled and practical approach to
+energy-aware autonomy for long-duration planetary missions.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2509.15052v1' target='_blank'>Online Multi-Robot Coordination and Cooperation with Task Precedence
+  Relationships</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Walker Gosrich, Saurav Agarwal, Kashish Garg, Siddharth Mayya, Matthew Malencia, Mark Yim, Vijay Kumar</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-09-18 15:15:49</h6>
+<p class='card-text'>We propose a new formulation for the multi-robot task allocation problem that
+incorporates (a) complex precedence relationships between tasks, (b) efficient
+intra-task coordination, and (c) cooperation through the formation of robot
+coalitions. A task graph specifies the tasks and their relationships, and a set
+of reward functions models the effects of coalition size and preceding task
+performance. Maximizing task rewards is NP-hard; hence, we propose network
+flow-based algorithms to approximate solutions efficiently. A novel online
+algorithm performs iterative re-allocation, providing robustness to task
+failures and model inaccuracies to achieve higher performance than offline
+approaches. We comprehensively evaluate the algorithms in a testbed with random
+missions and reward functions and compare them to a mixed-integer solver and a
+greedy heuristic. Additionally, we validate the overall approach in an advanced
+simulator, modeling reward functions based on realistic physical phenomena and
+executing the tasks with realistic robot dynamics. Results establish efficacy
+in modeling complex missions and efficiency in generating high-fidelity task
+plans while leveraging task relationships.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2509.14941v1' target='_blank'>Multi-CAP: A Multi-Robot Connectivity-Aware Hierarchical Coverage Path
+  Planning Algorithm for Unknown Environments</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Zongyuan Shen, Burhanuddin Shirose, Prasanna Sriganesh, Bhaskar Vundurthy, Howie Choset, Matthew Travers</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-09-18 13:27:37</h6>
+<p class='card-text'>Efficient coordination of multiple robots for coverage of large, unknown
+environments is a significant challenge that involves minimizing the total
+coverage path length while reducing inter-robot conflicts. In this paper, we
+introduce a Multi-robot Connectivity-Aware Planner (Multi-CAP), a hierarchical
+coverage path planning algorithm that facilitates multi-robot coordination
+through a novel connectivity-aware approach. The algorithm constructs and
+dynamically maintains an adjacency graph that represents the environment as a
+set of connected subareas. Critically, we make the assumption that the
+environment, while unknown, is bounded. This allows for incremental refinement
+of the adjacency graph online to ensure its structure represents the physical
+layout of the space, both in observed and unobserved areas of the map as robots
+explore the environment. We frame the task of assigning subareas to robots as a
+Vehicle Routing Problem (VRP), a well-studied problem for finding optimal
+routes for a fleet of vehicles. This is used to compute disjoint tours that
+minimize redundant travel, assigning each robot a unique, non-conflicting set
+of subareas. Each robot then executes its assigned tour, independently adapting
+its coverage strategy within each subarea to minimize path length based on
+real-time sensor observations of the subarea. We demonstrate through
+simulations and multi-robot hardware experiments that Multi-CAP significantly
+outperforms state-of-the-art methods in key metrics, including coverage time,
+total path length, and path overlap ratio. Ablation studies further validate
+the critical role of our connectivity-aware graph and the global tour planner
+in achieving these performance gains.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2509.14904v1' target='_blank'>Robust Barycenters of Persistence Diagrams</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Keanu Sisouk, Eloi Tanguy, Julie Delon, Julien Tierny</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-09-18 12:29:10</h6>
+<p class='card-text'>This short paper presents a general approach for computing robust Wasserstein
+barycenters of persistence diagrams. The classical method consists in computing
+assignment arithmetic means after finding the optimal transport plans between
+the barycenter and the persistence diagrams. However, this procedure only works
+for the transportation cost related to the $q$-Wasserstein distance $W_q$ when
+$q=2$. We adapt an alternative fixed-point method to compute a barycenter
+diagram for generic transportation costs ($q > 1$), in particular those robust
+to outliers, $q \in (1,2)$. We show the utility of our work in two
+applications: \emph{(i)} the clustering of persistence diagrams on their metric
+space and \emph{(ii)} the dictionary encoding of persistence diagrams. In both
+scenarios, we demonstrate the added robustness to outliers provided by our
+generalized framework. Our Python implementation is available at this address:
+https://github.com/Keanu-Sisouk/RobustBarycenter .</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js'></script>
+</body>
+</html>
