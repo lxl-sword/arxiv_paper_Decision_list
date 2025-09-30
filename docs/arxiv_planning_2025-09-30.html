@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>planning - 2025-09-30</title>
+<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap' rel='stylesheet'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css'>
+<style>
+body {
+font-family: 'Roboto', sans-serif;
+background-color: #f5f7fa;
+padding: 20px;
+}
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.card-title {
+    font-weight: 700;
+}
+.card:hover {
+    transform: scale(1.02);
+    transition: 0.3s ease-in-out;
+}
+</style>
+</head>
+<body>
+<div class='container'>
+<h1 class='text-center my-4'><i class='fas fa-book'></i>planning - 2025-09-30</h1>
+<div class='row'>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2509.25124v1' target='_blank'>Safe Planning in Unknown Environments using Conformalized Semantic Maps</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:David Smith Sundarsingh, Yifei Li, Tianji Tang, George J. Pappas, Nikolay Atanasov, Yiannis Kantaros</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-09-29 17:44:40</h6>
+<p class='card-text'>This paper addresses semantic planning problems in unknown environments under
+perceptual uncertainty. The environment contains multiple unknown semantically
+labeled regions or objects, and the robot must reach desired locations while
+maintaining class-dependent distances from them. We aim to compute robot paths
+that complete such semantic reach-avoid tasks with user-defined probability
+despite uncertain perception. Existing planning algorithms either ignore
+perceptual uncertainty - thus lacking correctness guarantees - or assume known
+sensor models and noise characteristics. In contrast, we present the first
+planner for semantic reach-avoid tasks that achieves user-specified mission
+completion rates without requiring any knowledge of sensor models or noise.
+This is enabled by quantifying uncertainty in semantic maps - constructed
+on-the-fly from perceptual measurements - using conformal prediction in a
+model- and distribution-free manner. We validate our approach and the
+theoretical mission completion rates through extensive experiments, showing
+that it consistently outperforms baselines in mission success rates.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2509.25091v1' target='_blank'>Crop Spirals: Re-thinking the field layout for future robotic
+  agriculture</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Lakshan Lavan, Lanojithan Thiyagarasa, Udara Muthugala, Rajitha de Silva</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-09-29 17:26:54</h6>
+<p class='card-text'>Conventional linear crop layouts, optimised for tractors, hinder robotic
+navigation with tight turns, long travel distances, and perceptual aliasing. We
+propose a robot-centric square spiral layout with a central tramline, enabling
+simpler motion and more efficient coverage. To exploit this geometry, we
+develop a navigation stack combining DH-ResNet18 waypoint regression,
+pixel-to-odometry mapping, A* planning, and model predictive control (MPC). In
+simulations, the spiral layout yields up to 28% shorter paths and about 25%
+faster execution for waypoint-based tasks across 500 waypoints than linear
+layouts, while full-field coverage performance is comparable to an optimised
+linear U-turn strategy. Multi-robot studies demonstrate efficient coordination
+on the spirals rule-constrained graph, with a greedy allocator achieving 33-37%
+lower batch completion times than a Hungarian assignment under our setup. These
+results highlight the potential of redesigning field geometry to better suit
+autonomous agriculture.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2509.24995v1' target='_blank'>Path Diffuser: Diffusion Model for Data-Driven Traffic Simulator</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Da Saem Lee, Akash Karthikeyan, Yash Vardhan Pant, Sebastian Fischmeister</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-09-29 16:21:24</h6>
+<p class='card-text'>Simulating diverse and realistic traffic scenarios is critical for developing
+and testing autonomous planning. Traditional rule-based planners lack diversity
+and realism, while learning-based simulators often replay, forecast, or edit
+scenarios using historical agent trajectories. However, they struggle to
+generate new scenarios, limiting scalability and diversity due to their
+reliance on fully annotated logs and historical data. Thus, a key challenge for
+a learning-based simulator's performance is that it requires agents' past
+trajectories and pose information in addition to map data, which might not be
+available for all agents on the road.Without which, generated scenarios often
+produce unrealistic trajectories that deviate from drivable areas, particularly
+under out-of-distribution (OOD) map scenes (e.g., curved roads). To address
+this, we propose Path Diffuser (PD): a two-stage, diffusion model for
+generating agent pose initializations and their corresponding trajectories
+conditioned on the map, free of any historical context of agents' trajectories.
+Furthermore, PD incorporates a motion primitive-based prior, leveraging Frenet
+frame candidate trajectories to enhance diversity while ensuring road-compliant
+trajectory generation. We also explore various design choices for modeling
+complex multi-agent interactions. We demonstrate the effectiveness of our
+method through extensive experiments on the Argoverse2 Dataset and additionally
+evaluate the generalizability of the approach on OOD map variants. Notably,
+Path Diffuser outperforms the baseline methods by 1.92x on distribution
+metrics, 1.14x on common-sense metrics, and 1.62x on road compliance from
+adversarial benchmarks.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2509.24973v1' target='_blank'>On-the-Fly Data Augmentation for Brain Tumor Segmentation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Ishika Jain, Siri Willems, Steven Latre, Tom De Schepper</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-09-29 16:02:36</h6>
+<p class='card-text'>Robust segmentation across both pre-treatment and post-treatment glioma scans
+can be helpful for consistent tumor monitoring and treatment planning. BraTS
+2025 Task 1 addresses this by challenging models to generalize across varying
+tumor appearances throughout the treatment timeline. However, training such
+generalized models requires access to diverse, high-quality annotated data,
+which is often limited. While data augmentation can alleviate this, storing
+large volumes of augmented 3D data is computationally expensive. To address
+these challenges, we propose an on-the-fly augmentation strategy that
+dynamically inserts synthetic tumors using pretrained generative adversarial
+networks (GliGANs) during training. We evaluate three nnU-Net-based models and
+their ensembles: (1) a baseline without external augmentation, (2) a regular
+on-the-fly augmented model, and (3) a model with customized on-the-fly
+augmentation. Built upon the nnU-Net framework, our pipeline leverages
+pretrained GliGAN weights and tumor insertion methods from prior
+challenge-winning solutions. An ensemble of the three models achieves
+lesion-wise Dice scores of 0.79 (ET), 0.749 (NETC), 0.872 (RC), 0.825 (SNFH),
+0.79 (TC), and 0.88 (WT) on the online BraTS 2025 validation platform. This
+work ranked first in the BraTS Lighthouse Challenge 2025 Task 1- Adult Glioma
+Segmentation.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2509.24959v1' target='_blank'>Coordinated vs. Sequential Transmission Planning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Maya Domeshek, Christoph Graf, Burçin Ünel</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-09-29 15:53:03</h6>
+<p class='card-text'>Coordinated planning of generation, storage, and transmission more accurately
+captures the interactions among these three capacity types necessary to meet
+electricity demand, at least in theory. However, in practice, U.S. system
+operators typically follow a sequential planning approach: They first determine
+future generation and storage additions based on an assumed unconstrained
+(`copper plate') system. Next, they perform dispatch simulations of this
+projected generation and storage capacity mix on the existing transmission grid
+to identify transmission constraint violations. These violations indicate the
+need for transmission upgrades. We describe a multistage, multi-locational
+planning model that co-optimizes generation, storage, and transmission
+investments. The model respects reliability constraints as well as state energy
+and climate policies. We test the two planning approaches using a current
+stakeholder-informed 20-zone model of the PJM region, developed for the current
+FERC Order No. 1920 compliance filing process. In our most conservative model
+specification, we find that the co-optimized approach estimates 67% lower
+transmission upgrade needs than the sequential model, leading to total system
+costs that are .6% lower and similar reliability and climate outcomes. Our
+sensitivities show larger transmission and cost savings and reliability and
+climate benefits from co-optimized planning.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2509.24944v1' target='_blank'>Experimental Study of Magnetic Near-Field Microstrip Electronic Probe
+  for PCB EMC Emission Measurement</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Hongchuan Jia, Fayu Wan, Vladimir Mordachev, Jérôme Rossignol, Glauco Fontagalland, Nour Murad, Blaise Ravelo</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-09-29 15:43:56</h6>
+<p class='card-text'>An experimental study on magnetic near-field (NF) scanning of printed circuit
+board (PCB) emission radiation is developed in this paper. The design and
+installation of the electromagnetic (EM) NF scanner is introduced. The test bed
+of magnetic NF emission in the microwave frequency range is described. The
+methodology of the microstrip magnetic NF probe is discussed. The probe
+calibration process was performed following the IEC 61967-1 NF scanning
+standard. The NF scanner functioning is tested with passive microstrip circuit
+square loop probe and device under test (DUT) PCB radiation in the test plan
+positioned at 1-mm above the ground plane. Based on the standard test with
+I-shape 50-$\Omega$ transmission line (TL), the calibration process of radiated
+magnetic field was validated by comparison between HFSS__ simulation and
+experimentation in very wideband frequency from 0.1-GHz to 3-GHz. Then, a
+nonstandard TL based DUT was experimented. Accordingly, the cartographies of
+scanned magnetic NF at two different test frequencies, 2 GHz and 3 GHz, are
+discussed. The NF scanner is under development for targeting the EMC radiated
+emission of PCB dedicated to operate in 6G wireless communication.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2509.24921v1' target='_blank'>CineWild: Balancing Art and Robotics for Ethical Wildlife Documentary
+  Filmmaking</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Pablo Pueyo, Fernando Caballero, Ana Cristina Murillo, Eduardo Montijano</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-09-29 15:24:40</h6>
+<p class='card-text'>Drones, or unmanned aerial vehicles (UAVs), have become powerful tools across
+domains-from industry to the arts. In documentary filmmaking, they offer
+dynamic, otherwise unreachable perspectives, transforming how stories are told.
+Wildlife documentaries especially benefit, yet drones also raise ethical
+concerns: the risk of disturbing the animals they aim to capture. This paper
+introduces CineWild, an autonomous UAV framework that combines robotics,
+cinematography, and ethics. Built on model predictive control, CineWild
+dynamically adjusts flight paths and camera settings to balance cinematic
+quality with animal welfare. Key features include adaptive zoom for filming
+from acoustic and visual safe distances, path-planning that avoids an animal's
+field of view, and smooth, low-noise maneuvers. CineWild exemplifies
+interdisciplinary innovation-bridging engineering, visual storytelling, and
+environmental ethics. We validate the system through simulation studies and
+will release the code upon acceptance.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2509.24917v1' target='_blank'>From Code to Action: Hierarchical Learning of Diffusion-VLM Policies</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Markus Peschl, Pietro Mazzaglia, Daniel Dijkman</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-09-29 15:22:18</h6>
+<p class='card-text'>Imitation learning for robotic manipulation often suffers from limited
+generalization and data scarcity, especially in complex, long-horizon tasks. In
+this work, we introduce a hierarchical framework that leverages code-generating
+vision-language models (VLMs) in combination with low-level diffusion policies
+to effectively imitate and generalize robotic behavior. Our key insight is to
+treat open-source robotic APIs not only as execution interfaces but also as
+sources of structured supervision: the associated subtask functions - when
+exposed - can serve as modular, semantically meaningful labels. We train a VLM
+to decompose task descriptions into executable subroutines, which are then
+grounded through a diffusion policy trained to imitate the corresponding robot
+behavior. To handle the non-Markovian nature of both code execution and certain
+real-world tasks, such as object swapping, our architecture incorporates a
+memory mechanism that maintains subtask context across time. We find that this
+design enables interpretable policy decomposition, improves generalization when
+compared to flat policies and enables separate evaluation of high-level
+planning and low-level control.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2509.24898v1' target='_blank'>Accurate Cobb Angle Estimation via SVD-Based Curve Detection and
+  Vertebral Wedging Quantification</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Chang Shi, Nan Meng, Yipeng Zhuang, Moxin Zhao, Jason Pui Yin Cheung, Hua Huang, Xiuyuan Chen, Cong Nie, Wenting Zhong, Guiqiang Jiang, Yuxin Wei, Jacob Hong Man Yu, Si Chen, Xiaowen Ou, Teng Zhang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-09-29 15:07:55</h6>
+<p class='card-text'>Adolescent idiopathic scoliosis (AIS) is a common spinal deformity affecting
+approximately 2.2% of boys and 4.8% of girls worldwide. The Cobb angle serves
+as the gold standard for AIS severity assessment, yet traditional manual
+measurements suffer from significant observer variability, compromising
+diagnostic accuracy. Despite prior automation attempts, existing methods use
+simplified spinal models and predetermined curve patterns that fail to address
+clinical complexity. We present a novel deep learning framework for AIS
+assessment that simultaneously predicts both superior and inferior endplate
+angles with corresponding midpoint coordinates for each vertebra, preserving
+the anatomical reality of vertebral wedging in progressive AIS. Our approach
+combines an HRNet backbone with Swin-Transformer modules and biomechanically
+informed constraints for enhanced feature extraction. We employ Singular Value
+Decomposition (SVD) to analyze angle predictions directly from vertebral
+morphology, enabling flexible detection of diverse scoliosis patterns without
+predefined curve assumptions. Using 630 full-spine anteroposterior radiographs
+from patients aged 10-18 years with rigorous dual-rater annotation, our method
+achieved 83.45% diagnostic accuracy and 2.55{\deg} mean absolute error. The
+framework demonstrates exceptional generalization capability on
+out-of-distribution cases. Additionally, we introduce the Vertebral Wedging
+Index (VWI), a novel metric quantifying vertebral deformation. Longitudinal
+analysis revealed VWI's significant prognostic correlation with curve
+progression while traditional Cobb angles showed no correlation, providing
+robust support for early AIS detection, personalized treatment planning, and
+progression monitoring.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2509.24806v1' target='_blank'>A Bilevel Approach to Integrated Surgeon Scheduling and Surgery Planning
+  solved via Branch-and-Price</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Broos Maenhout, Přemysl Šůcha, Viktorie Valdmanová, Ondřej Tkadlec, Jana Thao Rozlivková</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-09-29 13:55:45</h6>
+<p class='card-text'>In this paper, we study a multi-agent scheduling problem for organising the
+operations within the operating room department. The head of the surgeon group
+and individual surgeons are together responsible for the surgeon schedule and
+surgical case planning. The surgeon head allocates time blocks to individual
+surgeons, whereas individual surgeons determine the planning of surgical cases
+independently, which might degrade the schedule quality envisaged by the
+surgeon head. The bilevel optimisation under study seeks an optimal Nash
+equilibrium solution -- a surgeon schedule and surgical case plan that optimise
+the objectives of the surgeon head, while ensuring that no individual surgeon
+can improve their own objective within the allocated time blocks. We propose a
+dedicated branch-and-price that adds lazy constraints to the formulation of
+surgeon-specific pricing problems to ensure an optimal bilevel feasible
+solution is retrieved. In this way, the surgeon head respects the objective
+requirements of the individual surgeons and the solution space can be searched
+efficiently. In the computational experiments, we validate the performance of
+the proposed algorithm and its dedicated components and provide insights into
+the benefits of attaining an equilibrium solution under different scenarios by
+calculating the price of stability and the price of decentralisation.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2509.24650v1' target='_blank'>VoxCPM: Tokenizer-Free TTS for Context-Aware Speech Generation and
+  True-to-Life Voice Cloning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yixuan Zhou, Guoyang Zeng, Xin Liu, Xiang Li, Renjie Yu, Ziyang Wang, Runchuan Ye, Weiyue Sun, Jiancheng Gui, Kehan Li, Zhiyong Wu, Zhiyuan Liu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-09-29 12:00:24</h6>
+<p class='card-text'>Generative models for speech synthesis face a fundamental trade-off: discrete
+tokens ensure stability but sacrifice expressivity, while continuous signals
+retain acoustic richness but suffer from error accumulation due to task
+entanglement. This challenge has driven the field towards multi-stage pipelines
+that rely on pre-trained speech tokenizers, but these create a
+semantic-acoustic divide, limiting holistic and expressive speech generation.
+We resolve these dilemma through hierarchical semantic-acoustic modeling with
+semi-discrete residual representations and present a novel tokenizer-free TTS
+model VoxCPM. Our framework introduces a differentiable quantization bottleneck
+that induces natural specialization: a Text-Semantic Language Model (TSLM)
+generates semantic-prosodic plans, while a Residual Acoustic Model (RALM)
+recovers fine-grained acoustic details. This hierarchical semantic-acoustic
+representation guides a local diffusion-based decoder to generate high-fidelity
+speech latents. Critically, the entire architecture is trained end-to-end under
+a simple diffusion objective, eliminating dependency on external speech
+tokenizers. Trained on a massive 1.8 million hours of bilingual corpus, our
+VoxCPM-0.5B model achieves state-of-the-art zero-shot TTS performance among
+open-source systems, demonstrating that our approach delivers expressive and
+stable synthesis. Besides, VoxCPM shows the capability to comprehend text to
+infer and generate appropriate prosody and style, delivering speech with
+context-aware expressiveness and natural flow. To facilitate community-driven
+research and development, VoxCPM is publicly accessible under Apache 2.0.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2509.24591v1' target='_blank'>PoseDiff: A Unified Diffusion Model Bridging Robot Pose Estimation and
+  Video-to-Action Control</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Haozhuo Zhang, Michele Caprio, Jing Shao, Qiang Zhang, Jian Tang, Shanghang Zhang, Wei Pan</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-09-29 10:55:48</h6>
+<p class='card-text'>We present PoseDiff, a conditional diffusion model that unifies robot state
+estimation and control within a single framework. At its core, PoseDiff maps
+raw visual observations into structured robot states-such as 3D keypoints or
+joint angles-from a single RGB image, eliminating the need for multi-stage
+pipelines or auxiliary modalities. Building upon this foundation, PoseDiff
+extends naturally to video-to-action inverse dynamics: by conditioning on
+sparse video keyframes generated by world models, it produces smooth and
+continuous long-horizon action sequences through an overlap-averaging strategy.
+This unified design enables scalable and efficient integration of perception
+and control. On the DREAM dataset, PoseDiff achieves state-of-the-art accuracy
+and real-time performance for pose estimation. On Libero-Object manipulation
+tasks, it substantially improves success rates over existing inverse dynamics
+modules, even under strict offline settings. Together, these results show that
+PoseDiff provides a scalable, accurate, and efficient bridge between
+perception, planning, and control in embodied AI. The video visualization
+results can be found on the project page:
+https://haozhuo-zhang.github.io/PoseDiff-project-page/.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2509.24577v1' target='_blank'>BFSM: 3D Bidirectional Face-Skull Morphable Model</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Zidu Wang, Meng Xu, Miao Xu, Hengyuan Ma, Jiankuo Zhao, Xutao Li, Xiangyu Zhu, Zhen Lei</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-09-29 10:34:13</h6>
+<p class='card-text'>Building a joint face-skull morphable model holds great potential for
+applications such as remote diagnostics, surgical planning, medical education,
+and physically based facial simulation. However, realizing this vision is
+constrained by the scarcity of paired face-skull data, insufficient
+registration accuracy, and limited exploration of reconstruction and clinical
+applications. Moreover, individuals with craniofacial deformities are often
+overlooked, resulting in underrepresentation and limited inclusivity. To
+address these challenges, we first construct a dataset comprising over 200
+samples, including both normal cases and rare craniofacial conditions. Each
+case contains a CT-based skull, a CT-based face, and a high-fidelity textured
+face scan. Secondly, we propose a novel dense ray matching registration method
+that ensures topological consistency across face, skull, and their tissue
+correspondences. Based on this, we introduce the 3D Bidirectional Face-Skull
+Morphable Model (BFSM), which enables shape inference between the face and
+skull through a shared coefficient space, while also modeling tissue thickness
+variation to support one-to-many facial reconstructions from the same skull,
+reflecting individual changes such as fat over time. Finally, we demonstrate
+the potential of BFSM in medical applications, including 3D face-skull
+reconstruction from a single image and surgical planning prediction. Extensive
+experiments confirm the robustness and accuracy of our method. BFSM is
+available at https://github.com/wang-zidu/BFSM</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2509.24524v1' target='_blank'>PhysiAgent: An Embodied Agent Framework in Physical World</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Zhihao Wang, Jianxiong Li, Jinliang Zheng, Wencong Zhang, Dongxiu Liu, Yinan Zheng, Haoyi Niu, Junzhi Yu, Xianyuan Zhan</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-09-29 09:39:32</h6>
+<p class='card-text'>Vision-Language-Action (VLA) models have achieved notable success but often
+struggle with limited generalizations. To address this, integrating generalized
+Vision-Language Models (VLMs) as assistants to VLAs has emerged as a popular
+solution. However, current approaches often combine these models in rigid,
+sequential structures: using VLMs primarily for high-level scene understanding
+and task planning, and VLAs merely as executors of lower-level actions, leading
+to ineffective collaboration and poor grounding challenges. In this paper, we
+propose an embodied agent framework, PhysiAgent, tailored to operate
+effectively in physical environments. By incorporating monitor, memory,
+self-reflection mechanisms, and lightweight off-the-shelf toolboxes, PhysiAgent
+offers an autonomous scaffolding framework to prompt VLMs to organize different
+components based on real-time proficiency feedback from VLAs to maximally
+exploit VLAs' capabilities. Experimental results demonstrate significant
+improvements in task-solving performance on complex real-world robotic tasks,
+showcasing effective self-regulation of VLMs, coherent tool collaboration, and
+adaptive evolution of the framework during execution. PhysiAgent makes
+practical and pioneering efforts to integrate VLMs and VLAs, effectively
+grounding embodied agent frameworks in real-world settings.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2509.24313v1' target='_blank'>Learning to Sample: Reinforcement Learning-Guided Sampling for
+  Autonomous Vehicle Motion Planning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Korbinian Moller, Roland Stroop, Mattia Piccinini, Alexander Langmann, Johannes Betz</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-09-29 05:51:14</h6>
+<p class='card-text'>Sampling-based motion planning is a well-established approach in autonomous
+driving, valued for its modularity and analytical tractability. In complex
+urban scenarios, however, uniform or heuristic sampling often produces many
+infeasible or irrelevant trajectories. We address this limitation with a hybrid
+framework that learns where to sample while keeping trajectory generation and
+evaluation fully analytical and verifiable. A reinforcement learning (RL) agent
+guides the sampling process toward regions of the action space likely to yield
+feasible trajectories, while evaluation and final selection remains governed by
+deterministic feasibility checks and cost functions. We couple the RL sampler
+with a world model (WM) based on a decodable deep set encoder, enabling both
+variable numbers of traffic participants and reconstructable latent
+representations. The approach is evaluated in the CommonRoad simulation
+environment, showing up to 99% fewer required samples and a runtime reduction
+of up to 84% while maintaining planning quality in terms of success and
+collision-free rates. These improvements lead to faster, more reliable
+decision-making for autonomous vehicles in urban environments, achieving safer
+and more responsive navigation under real-world constraints. Code and trained
+artifacts are publicly available at:
+https://github.com/TUM-AVS/Learning-to-Sample</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2509.24280v1' target='_blank'>An SoS Entropy Dichotomy via Windowed Hypercontractivity</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Marko Lela</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-09-29 04:48:26</h6>
+<p class='card-text'>We prove an entropy versus degree dichotomy for low-degree tests and the
+Sum-of-Squares (SoS) hierarchy on a calibrated window after a gadget layer. For
+a target distribution \(\mu\) and a product-like proxy \(u\), we study the
+low-degree discrepancy \(\Delta_k(\mu,u)\), defined as the optimal
+distinguishing advantage of degree \(\le k\) polynomial tests. Using a
+bias-orthonormal Walsh basis and a test-moment equivalence on the window, we
+relate \(\Delta_k\) (up to constants) to the squared \(\ell_2\) mass of signed
+low-degree moments. Calibrated pseudoexpectations match \(u\) on all moments of
+degree \(\le k\), hence test discrepancy equals SoS pseudoexpectation
+deviation. Under bias, product, and width assumptions along a switching path, a
+windowed Bonami--Beckner inequality yields hypercontractive tail bounds.
+Combining these with moment matching, we obtain a discrepancy-to-degree
+theorem: if \(\Delta_k(\mu,u) \ge n^{-\beta}\), then any polynomial-calculus or
+SoS refutation separating \(\mu\) from \(u\) requires degree \(\Omega(k)\).
+Instantiating \(k = c \log n\) gives an explicit \(\Omega(\log n)\) SoS degree
+lower bound whenever \(\Delta_k \ge n^{-\eta}\). All constants are explicit and
+depend only on calibrated window parameters. This work provides the
+SoS/low-degree core and complements a prior calibration blueprint; a companion
+paper lifts the windowed statements to full distribution families.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2509.24244v1' target='_blank'>Model Merging Scaling Laws in Large Language Models</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yuanyi Wang, Yanggan Gu, Yiming Zhang, Qi Zhou, Zhaoyi Yan, Congkai Xie, Xinyao Wang, Jianbo Yuan, Hongxia Yang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-09-29 03:36:55</h6>
+<p class='card-text'>We study empirical scaling laws for language model merging measured by
+cross-entropy. Despite its wide practical use, merging lacks a quantitative
+rule that predicts returns as we add experts or scale the model size. We
+identify a compact power law that links model size and expert number: the
+size-dependent floor decreases with model capacity, while the merging tail
+exhibits clear diminishing returns in the number of experts. The law holds
+in-domain and cross-domain, tightly fits measured curves across diverse
+architectures and methods (Average, TA, TIES, DARE), and explains two robust
+regularities: most gains arrive early, and variability shrinks as more experts
+are included. Building on this, we present a simple theory that explains why
+gains fall roughly as 1/k and links the floor and tail to properties of the
+base model and the diversity across domains. This law enables predictive
+planning: estimate how many experts are needed to reach a target loss, decide
+when to stop adding experts, and trade off scaling the base model versus adding
+experts under a fixed budget--turning merging from heuristic practice into a
+computationally efficient, planable alternative to multitask training. This
+suggests a scaling principle for distributed generative AI: predictable gains
+can be achieved by composing specialists, offering a complementary path toward
+AGI-level systems.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2509.24243v1' target='_blank'>SafeFlowMatcher: Safe and Fast Planning using Flow Matching with Control
+  Barrier Functions</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jeongyong Yang, Seunghwan Jang, Soojean Han</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-09-29 03:33:33</h6>
+<p class='card-text'>Generative planners based on flow matching (FM) can produce high-quality
+paths in one or a few ODE steps, but their sampling dynamics offer no formal
+safety guarantees and can yield incomplete paths near constraints. We present
+SafeFlowMatcher, a planning framework that couples FM with control barrier
+functions (CBFs) to achieve both real-time efficiency and certified safety.
+SafeFlowMatcher uses a two-phase prediction-correction (PC) integrator: (i) a
+prediction phase integrates the learned FM once (or a few steps) to obtain a
+candidate path without intervention; (ii) a correction phase refines this path
+with a vanishing time-scaled vector field and a CBF-based quadratic program
+that minimally perturbs the vector field. We prove a barrier certificate for
+the resulting flow system, establishing forward invariance of a robust safe set
+and finite-time convergence to the safe set. By enforcing safety only on the
+executed path (rather than on all intermediate latent paths), SafeFlowMatcher
+avoids distributional drift and mitigates local trap problems. Across maze
+navigation and locomotion benchmarks, SafeFlowMatcher attains faster, smoother,
+and safer paths than diffusion- and FM-based baselines. Extensive ablations
+corroborate the contributions of the PC integrator and the barrier certificate.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2509.24235v1' target='_blank'>Towards Tighter Convex Relaxation of Mixed-integer Programs: Leveraging
+  Logic Network Flow for Task and Motion Planning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Xuan Lin, Jiming Ren, Yandong Luo, Weijun Xie, Ye Zhao</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-09-29 03:20:05</h6>
+<p class='card-text'>This paper proposes an optimization-based task and motion planning framework,
+named "Logic Network Flow", that integrates temporal logic specifications into
+mixed-integer programs for efficient robot planning. Inspired by the
+Graph-of-Convex-Sets formulation, temporal predicates are encoded as polyhedron
+constraints on each edge of a network flow model, instead of as constraints
+between nodes in traditional Logic Tree formulations. We further propose a
+network-flow-based Fourier-Motzkin elimination procedure that removes
+continuous flow variables while preserving convex relaxation tightness, leading
+to provably tighter convex relaxations and fewer constraints than Logic Tree
+formulations. For temporal logic motion planning with piecewise-affine dynamic
+systems, comprehensive experiments across vehicle routing, multi-robot
+coordination, and temporal logic control on dynamical systems using point mass
+and linear inverted pendulum models demonstrate computational speedups of up to
+several orders of magnitude. Hardware demonstrations with quadrupedal robots
+validate real-time replanning capabilities under dynamically changing
+environmental conditions. The project website is at
+https://logicnetworkflow.github.io/.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2509.24185v1' target='_blank'>Simulating Post-Neoadjuvant Chemotherapy Breast Cancer MRI via Diffusion
+  Model with Prompt Tuning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jonghun Kim, Hyunjin Park</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-09-29 02:05:20</h6>
+<p class='card-text'>Neoadjuvant chemotherapy (NAC) is a common therapy option before the main
+surgery for breast cancer. Response to NAC is monitored using follow-up dynamic
+contrast-enhanced magnetic resonance imaging (DCE-MRI). Accurate prediction of
+NAC response helps with treatment planning. Here, we adopt maximum intensity
+projection images from DCE-MRI to generate post-treatment images (i.e., 3 or 12
+weeks after NAC) from pre-treatment images leveraging the emerging diffusion
+model. We introduce prompt tuning to account for the known clinical factors
+affecting response to NAC. Our model performed better than other generative
+models in image quality metrics. Our model was better at generating images that
+reflected changes in tumor size according to pCR compared to other models.
+Ablation study confirmed the design choices of our method. Our study has the
+potential to help with precision medicine.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2509.24182v1' target='_blank'>Tumor Synthesis conditioned on Radiomics</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jonghun Kim, Inye Na, Eun Sook Ko, Hyunjin Park</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-09-29 02:04:12</h6>
+<p class='card-text'>Due to privacy concerns, obtaining large datasets is challenging in medical
+image analysis, especially with 3D modalities like Computed Tomography (CT) and
+Magnetic Resonance Imaging (MRI). Existing generative models, developed to
+address this issue, often face limitations in output diversity and thus cannot
+accurately represent 3D medical images. We propose a tumor-generation model
+that utilizes radiomics features as generative conditions. Radiomics features
+are high-dimensional handcrafted semantic features that are biologically
+well-grounded and thus are good candidates for conditioning. Our model employs
+a GAN-based model to generate tumor masks and a diffusion-based approach to
+generate tumor texture conditioned on radiomics features. Our method allows the
+user to generate tumor images according to user-specified radiomics features
+such as size, shape, and texture at an arbitrary location. This enables the
+physicians to easily visualize tumor images to better understand tumors
+according to changing radiomics features. Our approach allows for the removal,
+manipulation, and repositioning of tumors, generating various tumor types in
+different scenarios. The model has been tested on tumors in four different
+organs (kidney, lung, breast, and brain) across CT and MRI. The synthesized
+images are shown to effectively aid in training for downstream tasks and their
+authenticity was also evaluated through expert evaluations. Our method has
+potential usage in treatment planning with diverse synthesized tumors.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2509.24143v1' target='_blank'>A Novel Model for 3D Motion Planning for a Generalized Dubins Vehicle
+  with Pitch and Yaw Rate Constraints</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Deepak Prakash Kumar, Swaroop Darbha, Satyanarayana Gupta Manyam, David Casbeer</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-09-29 00:39:23</h6>
+<p class='card-text'>In this paper, we propose a new modeling approach and a fast algorithm for 3D
+motion planning, applicable for fixed-wing unmanned aerial vehicles. The goal
+is to construct the shortest path connecting given initial and final
+configurations subject to motion constraints. Our work differs from existing
+literature in two ways. First, we consider full vehicle orientation using a
+body-attached frame, which includes roll, pitch, and yaw angles. However,
+existing work uses only pitch and/or heading angle, which is insufficient to
+uniquely determine orientation. Second, we use two control inputs to represent
+bounded pitch and yaw rates, reflecting control by two separate actuators. In
+contrast, most previous methods rely on a single input, such as path curvature,
+which is insufficient for accurately modeling the vehicle's kinematics in 3D.
+We use a rotation minimizing frame to describe the vehicle's configuration and
+its evolution, and construct paths by concatenating optimal Dubins paths on
+spherical, cylindrical, or planar surfaces. Numerical simulations show our
+approach generates feasible paths within 10 seconds on average and yields
+shorter paths than existing methods in most cases.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2509.24126v1' target='_blank'>BOSfM: A View Planning Framework for Optimal 3D Reconstruction of
+  Agricultural Scenes</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Athanasios Bacharis, Konstantinos D. Polyzos, Georgios B. Giannakis, Nikolaos Papanikolopoulos</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-09-28 23:50:36</h6>
+<p class='card-text'>Active vision (AV) has been in the spotlight of robotics research due to its
+emergence in numerous applications including agricultural tasks such as
+precision crop monitoring and autonomous harvesting to list a few. A major AV
+problem that gained popularity is the 3D reconstruction of targeted
+environments using 2D images from diverse viewpoints. While collecting and
+processing a large number of arbitrarily captured 2D images can be arduous in
+many practical scenarios, a more efficient solution involves optimizing the
+placement of available cameras in 3D space to capture fewer, yet more
+informative, images that provide sufficient visual information for effective
+reconstruction of the environment of interest. This process termed as view
+planning (VP), can be markedly challenged (i) by noise emerging in the location
+of the cameras and/or in the extracted images, and (ii) by the need to
+generalize well in other unknown similar agricultural environments without need
+for re-optimizing or re-training. To cope with these challenges, the present
+work presents a novel VP framework that considers a reconstruction
+quality-based optimization formulation that relies on the notion of
+`structure-from-motion' to reconstruct the 3D structure of the sought
+environment from the selected 2D images. With no analytic expression of the
+optimization function and with costly function evaluations, a Bayesian
+optimization approach is proposed to efficiently carry out the VP process using
+only a few function evaluations, while accounting for different noise cases.
+Numerical tests on both simulated and real agricultural settings signify the
+benefits of the advocated VP approach in efficiently estimating the optimal
+camera placement to accurately reconstruct 3D environments of interest, and
+generalize well on similar unknown environments.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2509.24083v1' target='_blank'>WireBend-kit: A Computational Design and Fabrication Toolkit for
+  Wirebending Custom 3D Wireframe Structures</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Faraz Faruqi, Josha Paonaskar, Riley Schuler, Aiden Prevey, Carson Taylor, Anika Tak, Anthony Guinto, Eeshani Shilamkar, Natarith Cheenaruenthong, Martin Nisser</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-09-28 21:39:51</h6>
+<p class='card-text'>This paper introduces WireBend-kit, a desktop wirebending machine and
+computational design tool for creating 3D wireframe structures. Combined, they
+allow users to rapidly and inexpensively create custom 3D wireframe structures
+from aluminum wire. Our design tool is implemented in freely available software
+and allows users to generate virtual wireframe designs and assess their
+fabricability. A path-planning procedure automatically converts the wireframe
+design into fabrication instructions for our machine while accounting for
+material elasticity and kinematic error sources. The custom machine costs $293
+in parts and can form aluminum wire into 3D wireframe structures through an
+ordered sequence of feed, bend, and rotate instructions. Our technical
+evaluation reveals our system's ability to overcome odometrically accumulating
+errors inherent to wirebending in order to produce accurate 3D structures from
+inexpensive hardware. Finally, we provide application examples demonstrating
+the design space enabled by Wirebend-kit.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2509.24073v1' target='_blank'>"Having Lunch Now": Understanding How Users Engage with a Proactive
+  Agent for Daily Planning and Self-Reflection</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Adnan Abbas, Caleb Wohn, Arnav Jagtap, Eugenia H Rho, Sang Won Lee</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-09-28 21:18:36</h6>
+<p class='card-text'>Conversational agents have been studied as tools to scaffold planning and
+self-reflection for productivity and well-being. While prior work has
+demonstrated positive outcomes, we still lack a clear understanding of what
+drives these results and how users behave and communicate with agents that act
+as coaches rather than assistants. Such understanding is critical for designing
+interactions in which agents foster meaningful behavioral change. We conducted
+a 14-day longitudinal study with 12 participants using a proactive agent that
+initiated regular check-ins to support daily planning and reflection. Our
+findings reveal diverse interaction patterns: participants accepted or
+negotiated suggestions, developed shared mental models, reported progress, and
+at times resisted or disengaged. We also identified problematic aspects of the
+agent's behavior, including rigidity, premature turn-taking, and overpromising.
+Our work contributes to understanding how people interact with a proactive,
+coach-like agent and offers design considerations for facilitating effective
+behavioral change.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2509.24038v1' target='_blank'>Beyond Redundancy: Toward Agile Resilience in Optical Networks to
+  Overcome Unpredictable Disasters</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Toru Mano, Hideki Nishizawa, Takeo Sasai, Soichiroh Usui, Dmitrii Briantcev, Devika Dass, Brandt Bashaw, Eoin Kenny, Marco Ruffini, Yoshiaki Sone, Koichi Takasugi, Daniel Kilper</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-09-28 19:16:28</h6>
+<p class='card-text'>Resilience in optical networks has traditionally relied on redundancy and
+pre-planned recovery strategies, both of which assume a certain level of
+disaster predictability. However, recent environmental changes such as climate
+shifts, the evolution of communication services, and rising geopolitical risks
+have increased the unpredictability of disasters, reducing the effectiveness of
+conventional resilience approaches. To address this unpredictability, this
+paper introduces the concept of agile resilience, which emphasizes dynamic
+adaptability across multiple operators and layers. We identify key requirements
+and challenges, and present enabling technologies for the realization of agile
+resilience. Using a field-deployed transmission system, we demonstrate rapid
+system characterization, optical path provisioning, and database migration
+within six hours. These results validate the effectiveness of the proposed
+enabling technologies and confirm the feasibility of agile resilience.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2509.23924v1' target='_blank'>Taming Masked Diffusion Language Models via Consistency Trajectory
+  Reinforcement Learning with Fewer Decoding Step</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jingyi Yang, Guanxu Chen, Xuhao Hu, Jing Shao</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-09-28 15:01:15</h6>
+<p class='card-text'>Masked diffusion language models (MDLMs) have recently emerged as a promising
+alternative to autoregressive (AR) language models, offering properties such as
+parallel decoding, flexible generation orders, and the potential for fewer
+inference steps. Despite these advantages, decoding strategies and
+reinforcement learning (RL) algorithms tailored for MDLMs remain underexplored.
+A naive approach is to directly transfer techniques well-established for AR
+models to MDLMs. However, this raises an immediate question: Is such a naive
+transfer truly optimal? For example, 1) Block-wise and semi-AR decoding
+strategies are not employed during the training of MDLMs, so why do they
+outperform full diffusion-style decoding during inference? 2) Applying RL
+algorithms designed for AR models directly to MDLMs exhibits a
+training-inference inconsistency, since MDLM decoding are non-causal
+(parallel). This results in inconsistencies between the rollout trajectory and
+the optimization trajectory. To address these challenges, we propose EOS Early
+Rejection (EOSER) and Ascending Step-Size (ASS) decoding scheduler, which
+unlock the potential of MDLMs to perform full diffusion-style decoding,
+achieving competitive performance with fewer decoding steps. Additionally, we
+introduce Consistency Trajectory Group Relative Policy Optimization (CJ-GRPO)
+for taming MDLMs, which emphasizes the consistency between rollout trajectory
+and optimization trajectory, and reduces the optimization errors caused by
+skip-step optimization. We conduct extensive experiments on reasoning tasks,
+such as mathematical and planning benchmarks, using LLaDA-8B-Instruct. The
+results demonstrate that the proposed EOSER and ASS mechanisms, together with
+CJ-GRPO, hold significant promise for effectively and efficiently taming MDLMs.
+Code: https://github.com/yjyddq/EOSER-ASS-RL.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2509.23804v1' target='_blank'>Controllable Generation of Large-Scale 3D Urban Layouts with Semantic
+  and Structural Guidance</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Mengyuan Niu, Xinxin Zhuo, Ruizhe Wang, Yuyue Huang, Junyan Yang, Qiao Wang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-09-28 11:08:17</h6>
+<p class='card-text'>Urban modeling is essential for city planning, scene synthesis, and gaming.
+Existing image-based methods generate diverse layouts but often lack geometric
+continuity and scalability, while graph-based methods capture structural
+relations yet overlook parcel semantics. We present a controllable framework
+for large-scale 3D vector urban layout generation, conditioned on both geometry
+and semantics. By fusing geometric and semantic attributes, introducing edge
+weights, and embedding building height in the graph, our method extends 2D
+layouts to realistic 3D structures. It also enables users to directly control
+the output by modifying semantic attributes. Experiments show that it produces
+valid, large-scale urban models, offering an effective tool for data-driven
+planning and design.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2509.23775v1' target='_blank'>NeuSO: Neural Optimizer for Subgraph Queries</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Linglin Yang, Lei Zou, Chunshan Zhao</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-09-28 09:41:46</h6>
+<p class='card-text'>Subgraph query is a critical task in graph analysis with a wide range of
+applications across various domains. Most existing methods rely on heuristic
+vertex matching orderings, which may significantly degrade enumeration
+performance for certain queries. While learning-based optimizers have recently
+gained attention in the context of relational databases, they cannot be
+directly applied to subgraph queries due to the heterogeneous and
+schema-flexible nature of graph data, as well as the large number of joins
+involved in subgraph queries. These complexities often leads to inefficient
+online performance, making such approaches impractical for real-world graph
+database systems. To address this challenge, we propose NeuSO, a novel
+learning-based optimizer for subgraph queries that achieves both high accuracy
+and efficiency. NeuSO features an efficient query graph encoder and an
+estimator which are trained using a multi-task framework to estimate both
+subquery cardinality and execution cost. Based on these estimates, NeuSO
+employs a top-down plan enumerator to generate high-quality execution plans for
+subgraph queries. Extensive experiments on multiple datasets demonstrate that
+NeuSO outperforms existing subgraph query ordering approaches in both
+performance and efficiency.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2509.23764v1' target='_blank'>Photonics-Aware Planning-Guided Automated Electrical Routing for
+  Large-Scale Active Photonic Integrated Circuits</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Hongjian Zhou, Haoyu Yang, Nicholas Gangi, Bowen Liu, Meng Zhang, Haoxing Ren, Xu Wang, Rena Huang, Jiaqi Gu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-09-28 09:20:55</h6>
+<p class='card-text'>The rising demand for AI training and inference, as well as scientific
+computing, combined with stringent latency and energy budgets, is driving the
+adoption of integrated photonics for computing, sensing, and communications. As
+active photonic integrated circuits (PICs) scale in device count and functional
+heterogeneity, physical implementation by manual scripting and ad-hoc edits is
+no longer tenable. This creates an immediate need for an electronic-photonic
+design automation (EPDA) stack in which physical design automation is a core
+capability. However, there is currently no end-to-end fully automated routing
+flow that coordinates photonic waveguides and on-chip metal interconnect.
+Critically, available digital VLSI and analog/custom routers are not directly
+applicable to PIC metal routing due to a lack of customization to handle
+constraints induced by photonic devices and waveguides. We present, to our
+knowledge, the first end-to-end routing framework for large-scale active PICs
+that jointly addresses waveguides and metal wires within a unified flow. We
+introduce a physically-aware global planner that generates congestion- and
+crossing-aware routing guides while explicitly accounting for the placement of
+photonic components and waveguides. We further propose a sequence-consistent
+track assignment and a soft guidance-assisted detailed routing to speed up the
+routing process with significantly optimized routability and via usage.
+Evaluated on various large PIC designs, our router delivers fast, high-quality
+active PIC routing solutions with fewer vias, lower congestion, and competitive
+runtime relative to manual and existing VLSI router baselines; on average it
+reduce via count by ~99%, user-specified design rule violation by ~98%, and
+runtime by 17x, establishing a practical foundation for EPDA at system scale.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js'></script>
+</body>
+</html>
