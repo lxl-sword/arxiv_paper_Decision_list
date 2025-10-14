@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>planning - 2025-10-14</title>
+<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap' rel='stylesheet'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css'>
+<style>
+body {
+font-family: 'Roboto', sans-serif;
+background-color: #f5f7fa;
+padding: 20px;
+}
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.card-title {
+    font-weight: 700;
+}
+.card:hover {
+    transform: scale(1.02);
+    transition: 0.3s ease-in-out;
+}
+</style>
+</head>
+<body>
+<div class='container'>
+<h1 class='text-center my-4'><i class='fas fa-book'></i>planning - 2025-10-14</h1>
+<div class='row'>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2510.11692v1' target='_blank'>Analysis of the Geometric Heat Flow Equation: Computing Geodesics in
+  Real-Time with Convergence Guarantees</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Samuel G. Gessow, Brett T. Lopez</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-10-13 17:52:52</h6>
+<p class='card-text'>We present an analysis on the convergence properties of the so-called
+geometric heat flow equation for computing geodesics (shortest-path~curves) on
+Riemannian manifolds. Computing geodesics numerically in real-time has become
+an important capability in several fields, including control and motion
+planning. The geometric heat flow equation involves solving a parabolic partial
+differential equation whose solution is a geodesic. In practice, solving this
+PDE numerically can be done efficiently, and tends to be more numerically
+stable and exhibit a better rate of convergence compared to numerical
+optimization. We prove that the geometric heat flow equation is globally
+exponentially stable in $L_2$ if the curvature of the Riemannian manifold is
+not too positive, and that asymptotic convergence in $L_2$ is always
+guaranteed. We also present a pseudospectral method that leverages Chebyshev
+polynomials to accurately compute geodesics in only a few milliseconds for
+non-contrived manifolds. Our analysis was verified with our custom
+pseudospectral method by computing geodesics on common non-Euclidean surfaces,
+and in feedback for a contraction-based controller with a non-flat metric for a
+nonlinear system.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2510.11683v1' target='_blank'>Boundary-Guided Policy Optimization for Memory-efficient RL of Diffusion
+  Large Language Models</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Nianyi Lin, Jiajie Zhang, Lei Hou, Juanzi Li</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-10-13 17:47:50</h6>
+<p class='card-text'>A key challenge in applying reinforcement learning (RL) to diffusion large
+language models (dLLMs) lies in the intractability of their likelihood
+functions, which are essential for the RL objective, necessitating
+corresponding approximation in each training step. While existing methods
+approximate the log-likelihoods by their evidence lower bounds (ELBOs) via
+customized Monte Carlo (MC) sampling, the forward computational graphs of all
+MC samples need to be retained for the gradient computation of non-linear terms
+in the RL objective, resulting in significant memory overhead. This constraint
+restricts feasible sample sizes, leading to imprecise likelihood approximations
+and ultimately distorting the RL objective. To overcome this limitation, we
+propose \emph{Boundary-Guided Policy Optimization} (BGPO), a memory-efficient
+RL algorithm that maximizes a specially constructed lower bound of the
+ELBO-based objective. This lower bound is carefully designed to satisfy two key
+properties: (1) Linearity: it is formulated in a linear sum where each term
+depends only on a single MC sample, thereby enabling gradient accumulation
+across samples and ensuring constant memory usage; (2) Equivalence: Both the
+value and gradient of this lower bound are equal to those of the ELBO-based
+objective in on-policy training, making it also an effective approximation for
+the original RL objective. These properties allow BGPO to adopt a large MC
+sample size, resulting in more accurate likelihood approximations and improved
+RL objective estimation, which in turn leads to enhanced performance.
+Experiments show that BGPO significantly outperforms previous RL algorithms for
+dLLMs in math problem solving, code generation, and planning tasks.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2510.11682v1' target='_blank'>Ego-Vision World Model for Humanoid Contact Planning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Hang Liu, Yuman Gao, Sangli Teng, Yufeng Chi, Yakun Sophia Shao, Zhongyu Li, Maani Ghaffari, Koushil Sreenath</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-10-13 17:47:39</h6>
+<p class='card-text'>Enabling humanoid robots to exploit physical contact, rather than simply
+avoid collisions, is crucial for autonomy in unstructured environments.
+Traditional optimization-based planners struggle with contact complexity, while
+on-policy reinforcement learning (RL) is sample-inefficient and has limited
+multi-task ability. We propose a framework combining a learned world model with
+sampling-based Model Predictive Control (MPC), trained on a demonstration-free
+offline dataset to predict future outcomes in a compressed latent space. To
+address sparse contact rewards and sensor noise, the MPC uses a learned
+surrogate value function for dense, robust planning. Our single, scalable model
+supports contact-aware tasks, including wall support after perturbation,
+blocking incoming objects, and traversing height-limited arches, with improved
+data efficiency and multi-task capability over on-policy RL. Deployed on a
+physical humanoid, our system achieves robust, real-time contact planning from
+proprioception and ego-centric depth images. Website:
+https://ego-vcp.github.io/</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2510.11660v1' target='_blank'>ManiAgent: An Agentic Framework for General Robotic Manipulation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yi Yang, Kefan Gu, Yuqing Wen, Hebei Li, Yucheng Zhao, Tiancai Wang, Xudong Liu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-10-13 17:34:48</h6>
+<p class='card-text'>While Vision-Language-Action (VLA) models have demonstrated impressive
+capabilities in robotic manipulation, their performance in complex reasoning
+and long-horizon task planning is limited by data scarcity and model capacity.
+To address this, we introduce ManiAgent, an agentic architecture for general
+manipulation tasks that achieves end-to-end output from task descriptions and
+environmental inputs to robotic manipulation actions. In this framework,
+multiple agents involve inter-agent communication to perform environmental
+perception, sub-task decomposition and action generation, enabling efficient
+handling of complex manipulation scenarios. Evaluations show ManiAgent achieves
+an 86.8% success rate on the SimplerEnv benchmark and 95.8% on real-world
+pick-and-place tasks, enabling efficient data collection that yields VLA models
+with performance comparable to those trained on human-annotated datasets.The
+project webpage is available at https://yi-yang929.github.io/ManiAgent/.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2510.11620v1' target='_blank'>Enhancing Long Chain-of-Thought Reasoning through Multi-Path Plan
+  Aggregation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Siheng Xiong, Ali Payani, Faramarz Fekri</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-10-13 17:02:41</h6>
+<p class='card-text'>Inference-time scaling enhances the reasoning ability of a language model
+(LM) by extending its chain-of-thought (CoT). However, existing approaches
+typically generate the entire reasoning chain in a single forward pass, which
+often leads to CoT derailment, i.e., the reasoning trajectory drifting off
+course due to compounding errors. This problem is particularly severe for
+smaller LMs with long CoTs due to their limited capacity. To address this, we
+analyze raw long CoTs and uncover a reasoning hierarchy consisting of planning
+and execution steps. Our analysis reveals that most reasoning errors stem from
+incorrect planning. Motivated by this observation, we propose Multi-Path Plan
+Aggregation (MPPA), a framework that augments single-pass reasoning with plan
+exploration and aggregation. Following a variable interval schedule based on
+the token position, MPPA generates multiple candidate plans and aggregates them
+into a refined planning step. To maintain efficiency, we adopt a minimal design
+in which the base LM serves as the primary policy, while a lightweight LoRA
+module implements the plan aggregation policy. We further observe that
+outcome-reward RL is inefficient for long trajectories (e.g., exceeding 4K
+tokens). To overcome this, we introduce online Step-DPO, a process-level
+preference optimization scheme that leverages Twisted Sequential Monte Carlo
+(TSMC) to provide scalable stepwise supervision using small LMs. This yields
+more efficient training, improved stability, and higher accuracy. Extensive
+experiments on challenging math, science, and logical reasoning benchmarks
+demonstrate that, with only 10% SFT data and 5% of preference pairs, our method
+outperforms both the DeepSeek-R1 distillation baseline and the outcome-reward
+RL baseline across multiple base models and tasks.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2510.11542v1' target='_blank'>NaviGait: Navigating Dynamically Feasible Gait Libraries using Deep
+  Reinforcement Learning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Neil C. Janwani, Varun Madabushi, Maegan Tucker</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-10-13 15:41:38</h6>
+<p class='card-text'>Reinforcement learning (RL) has emerged as a powerful method to learn robust
+control policies for bipedal locomotion. Yet, it can be difficult to tune
+desired robot behaviors due to unintuitive and complex reward design. In
+comparison, offline trajectory optimization methods, like Hybrid Zero Dynamics,
+offer more tuneable, interpretable, and mathematically grounded motion plans
+for high-dimensional legged systems. However, these methods often remain
+brittle to real-world disturbances like external perturbations.
+  In this work, we present NaviGait, a hierarchical framework that combines the
+structure of trajectory optimization with the adaptability of RL for robust and
+intuitive locomotion control. NaviGait leverages a library of offline-optimized
+gaits and smoothly interpolates between them to produce continuous reference
+motions in response to high-level commands. The policy provides both
+joint-level and velocity command residual corrections to modulate and stabilize
+the reference trajectories in the gait library. One notable advantage of
+NaviGait is that it dramatically simplifies reward design by encoding rich
+motion priors from trajectory optimization, reducing the need for finely tuned
+shaping terms and enabling more stable and interpretable learning. Our
+experimental results demonstrate that NaviGait enables faster training compared
+to conventional and imitation-based RL, and produces motions that remain
+closest to the original reference. Overall, by decoupling high-level motion
+generation from low-level correction, NaviGait offers a more scalable and
+generalizable approach for achieving dynamic and robust locomotion.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2510.11503v1' target='_blank'>People use fast, flat goal-directed simulation to reason about novel
+  problems</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Katherine M. Collins, Cedegao E. Zhang, Lionel Wong, Mauricio Barba da Costa, Graham Todd, Adrian Weller, Samuel J. Cheyette, Thomas L. Griffiths, Joshua B. Tenenbaum</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-10-13 15:12:08</h6>
+<p class='card-text'>Games have long been a microcosm for studying planning and reasoning in both
+natural and artificial intelligence, especially with a focus on expert-level or
+even super-human play. But real life also pushes human intelligence along a
+different frontier, requiring people to flexibly navigate decision-making
+problems that they have never thought about before. Here, we use novice
+gameplay to study how people make decisions and form judgments in new problem
+settings. We show that people are systematic and adaptively rational in how
+they play a game for the first time, or evaluate a game (e.g., how fair or how
+fun it is likely to be) before they have played it even once. We explain these
+capacities via a computational cognitive model that we call the "Intuitive
+Gamer". The model is based on mechanisms of fast and flat (depth-limited)
+goal-directed probabilistic simulation--analogous to those used in Monte Carlo
+tree-search models of expert game-play, but scaled down to use very few
+stochastic samples, simple goal heuristics for evaluating actions, and no deep
+search. In a series of large-scale behavioral studies with over 1000
+participants and 121 two-player strategic board games (almost all novel to our
+participants), our model quantitatively captures human judgments and decisions
+varying the amount and kind of experience people have with a game--from no
+experience at all ("just thinking"), to a single round of play, to indirect
+experience watching another person and predicting how they should play--and
+does so significantly better than much more compute-intensive expert-level
+models. More broadly, our work offers new insights into how people rapidly
+evaluate, act, and make suggestions when encountering novel problems, and could
+inform the design of more flexible and human-like AI systems that can determine
+not just how to solve new tasks, but whether a task is worth thinking about at
+all.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2510.11401v1' target='_blank'>Path and Motion Optimization for Efficient Multi-Location Inspection
+  with Humanoid Robots</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jiayang Wu, Jiongye Li, Shibowen Zhang, Zhicheng He, Zaijin Wang, Xiaokun Leng, Hangxin Liu, Jingwen Zhang, Jiayi Wang, Song-Chun Zhu, Yao Su</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-10-13 13:44:08</h6>
+<p class='card-text'>This paper proposes a novel framework for humanoid robots to execute
+inspection tasks with high efficiency and millimeter-level precision. The
+approach combines hierarchical planning, time-optimal standing position
+generation, and integrated \ac{mpc} to achieve high speed and precision. A
+hierarchical planning strategy, leveraging \ac{ik} and \ac{mip}, reduces
+computational complexity by decoupling the high-dimensional planning problem. A
+novel MIP formulation optimizes standing position selection and trajectory
+length, minimizing task completion time. Furthermore, an MPC system with
+simplified kinematics and single-step position correction ensures
+millimeter-level end-effector tracking accuracy. Validated through simulations
+and experiments on the Kuavo 4Pro humanoid platform, the framework demonstrates
+low time cost and a high success rate in multi-location tasks, enabling
+efficient and precise execution of complex industrial operations.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2510.11400v1' target='_blank'>FedHybrid: Breaking the Memory Wall of Federated Learning via Hybrid
+  Tensor Management</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Kahou Tam, Chunlin Tian, Li Li, Haikai Zhao, ChengZhong Xu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-10-13 13:43:55</h6>
+<p class='card-text'>Federated Learning (FL) emerges as a new learning paradigm that enables
+multiple devices to collaboratively train a shared model while preserving data
+privacy. However, one fundamental and prevailing challenge that hinders the
+deployment of FL on mobile devices is the memory limitation. This paper
+proposes \textit{FedHybrid}, a novel framework that effectively reduces the
+memory footprint during the training process while guaranteeing the model
+accuracy and the overall training progress. Specifically, \textit{FedHybrid}
+first selects the participating devices for each training round by jointly
+evaluating their memory budget, computing capability, and data diversity. After
+that, it judiciously analyzes the computational graph and generates an
+execution plan for each selected client in order to meet the corresponding
+memory budget while minimizing the training delay through employing a hybrid of
+recomputation and compression techniques according to the characteristic of
+each tensor. During the local training process, \textit{FedHybrid} carries out
+the execution plan with a well-designed activation compression technique to
+effectively achieve memory reduction with minimum accuracy loss. We conduct
+extensive experiments to evaluate \textit{FedHybrid} on both simulation and
+off-the-shelf mobile devices. The experiment results demonstrate that
+\textit{FedHybrid} achieves up to a 39.1\% increase in model accuracy and a
+15.5$\times$ reduction in wall clock time under various memory budgets compared
+with the baselines.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2510.11381v1' target='_blank'>Optimal Control of a Bioeconomic Crop-Energy System with Energy
+  Reinvestment</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Othman Cherkaoui Dekkaki</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-10-13 13:23:10</h6>
+<p class='card-text'>We develop an optimal control model for allocating agricultural crop residues
+between bioenergy production and soil fertility restoration. The system
+captures a novel circular feedback: a fraction of cumulative energy output is
+reinvested into soil productivity, linking energy use with ecological
+regeneration. The dynamics are governed by a nonlinear three-state system
+describing soil fertility, residue biomass, and accumulated energy, with a
+single control representing the proportion of biomass diverted to energy. The
+objective is to maximize a discounted net benefit that accounts for energy
+revenue, soil value, and operational costs. We apply the Pontryagin Maximum
+Principle in current-value form to derive necessary optimality conditions and
+characterize the structure of optimal controls. Numerical simulations based on
+direct optimization reveal interior and switching regimes, and show how
+planning horizon and reinvestment efficiency influence optimal strategies. The
+results highlight the strategic role of energy reinvestment in achieving
+sustainable residue management.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2510.11368v1' target='_blank'>An $O(n\log n)$ Algorithm for Single-Item Capacitated Lot Sizing with a
+  One-Breakpoint All-Units Discount and Non-Increasing Prices</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Kleitos Papadopoulos</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-10-13 13:10:23</h6>
+<p class='card-text'>This paper addresses the single-item capacitated lot sizing problem with a
+1-breakpoint all-units quantity discount in a monotonic setting where the
+purchase prices are non-increasing over the planning horizon. For this case, we
+establish several novel properties of the optimal solution and develop a hybrid
+dynamic programming approach that maintains a compact representation of the
+solution space by storing only essential information about the states and using
+linear equations for intermediate values. Our algorithm runs in \(O(n\log n)\)
+time, where \(n\) denotes the number of periods. Our result is an improvement
+over the previous state-of-the-art algorithm, which has an \(O(n^2)\) time
+complexity.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2510.11306v1' target='_blank'>Rotor-Failure-Aware Quadrotors Flight in Unknown Environments</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Xiaobin Zhou, Miao Wang, Chengao Li, Can Cui, Ruibin Zhang, Yongchao Wang, Chao Xu, Fei Gao</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-10-13 11:54:49</h6>
+<p class='card-text'>Rotor failures in quadrotors may result in high-speed rotation and vibration
+due to rotor imbalance, which introduces significant challenges for autonomous
+flight in unknown environments. The mainstream approaches against rotor
+failures rely on fault-tolerant control (FTC) and predefined trajectory
+tracking. To the best of our knowledge, online failure detection and diagnosis
+(FDD), trajectory planning, and FTC of the post-failure quadrotors in unknown
+and complex environments have not yet been achieved. This paper presents a
+rotor-failure-aware quadrotor navigation system designed to mitigate the
+impacts of rotor imbalance. First, a composite FDD-based nonlinear model
+predictive controller (NMPC), incorporating motor dynamics, is designed to
+ensure fast failure detection and flight stability. Second, a
+rotor-failure-aware planner is designed to leverage FDD results and
+spatial-temporal joint optimization, while a LiDAR-based quadrotor platform
+with four anti-torque plates is designed to enable reliable perception under
+high-speed rotation. Lastly, extensive benchmarks against state-of-the-art
+methods highlight the superior performance of the proposed approach in
+addressing rotor failures, including propeller unloading and motor stoppage.
+The experimental results demonstrate, for the first time, that our approach
+enables autonomous quadrotor flight with rotor failures in challenging
+environments, including cluttered rooms and unknown forests.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2510.11287v1' target='_blank'>EEMS: Edge-Prompt Enhanced Medical Image Segmentation Based on Learnable
+  Gating Mechanism</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Han Xia, Quanjun Li, Qian Li, Zimeng Li, Hongbin Ye, Yupeng Liu, Haolun Li, Xuhang Chen</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-10-13 11:21:57</h6>
+<p class='card-text'>Medical image segmentation is vital for diagnosis, treatment planning, and
+disease monitoring but is challenged by complex factors like ambiguous edges
+and background noise. We introduce EEMS, a new model for segmentation,
+combining an Edge-Aware Enhancement Unit (EAEU) and a Multi-scale Prompt
+Generation Unit (MSPGU). EAEU enhances edge perception via multi-frequency
+feature extraction, accurately defining boundaries. MSPGU integrates high-level
+semantic and low-level spatial features using a prompt-guided approach,
+ensuring precise target localization. The Dual-Source Adaptive Gated Fusion
+Unit (DAGFU) merges edge features from EAEU with semantic features from MSPGU,
+enhancing segmentation accuracy and robustness. Tests on datasets like ISIC2018
+confirm EEMS's superior performance and reliability as a clinical tool.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2510.11271v1' target='_blank'>An AI dose engine for fast carbon ion treatment planning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Anastasiia Quarz, Angelica De Gregorio, Gaia Franciosini, Angelo Schiavi, Zoltán Perkó, Lennart Volz, Vincenzo Patera, Marco Durante, Christian Graeff</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-10-13 11:05:30</h6>
+<p class='card-text'>Monte Carlo (MC) simulations provide gold-standard accuracy for carbon ion
+therapy dose calculations but are computationally intensive. Analytical pencil
+beam algorithms offer speed but reduced accuracy in heterogeneous tissues. We
+developed the first AI-based dose engine capable of predicting absorbed dose,
+the alpha and beta parameters for relative biological effectiveness (RBE)-
+weighted optimisation in carbon ion therapy, delivering MC-level accuracy with
+drastically reduced computation time. We extended the transformer-based DoTA
+model to predict absorbed dose (C-DoTA-d), alpha (C-DoTA-alpha), and beta
+(C-DoTA-beta), introducing a cross-attention mechanism for alpha and beta to
+combine dose and energy inputs. The training dataset consisted of ~70,000
+pencil beams from 187 head-and-neck patients, with ground-truth values obtained
+using the GPU-accelerated MC toolkit FRED. Performance was evaluated on an
+independent test set using gamma pass rate (1%/1 mm), depth-dose, and isodose
+contour Dice coefficients. MC dropout-based uncertainty analysis was performed.
+Median gamma pass rates exceeded 98% for all predictions (99.76% for dose,
+99.14% for alpha, and 98.74% for beta), with minima above 85% in the most
+heterogeneous anatomies. The Dice coefficient was 0.95 for 1% isodose contours,
+with slightly reduced agreement in high-gradient regions. Compared to MC FRED,
+inference was over 400x faster (0.032 s vs. 14 s per pencil beam) while
+maintaining accuracy. Uncertainty analysis showed high stability, with mean
+standard deviations below 0.5% for all models. C-DoTA achieves MC-quality
+predictions of absorbed dose and RBE model parameters in ~30 milliseconds per
+beam. Its speed and accuracy support online adaptive planning, paving the way
+for more effective carbon ion therapy workflows. Future work will expand to
+additional anatomical sites, beam geometries, and clinical beamlines.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2510.11242v1' target='_blank'>Analyzing Data Quality and Decay in Mega-Constellations: A
+  Physics-Informed Machine Learning Approach</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Katarina Dyreby, Francisco Caldas, Cláudia Soares</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-10-13 10:28:23</h6>
+<p class='card-text'>In the era of mega-constellations, the need for accurate and publicly
+available information has become fundamental for satellite operators to
+guarantee the safety of spacecrafts and the Low Earth Orbit (LEO) space
+environment. This study critically evaluates the accuracy and reliability of
+publicly available ephemeris data for a LEO mega-constellation - Starlink. The
+goal of this work is twofold: (i) compare and analyze the quality of the data
+against high-precision numerical propagation. (ii) Leverage Physics-Informed
+Machine Learning to extract relevant satellite quantities, such as
+non-conservative forces, during the decay process. By analyzing two months of
+real orbital data for approximately 1500 Starlink satellites, we identify
+discrepancies between high precision numerical algorithms and the published
+ephemerides, recognizing the use of simplified dynamics at fixed thresholds,
+planned maneuvers, and limitations in uncertainty propagations. Furthermore, we
+compare data obtained from multiple sources to track and analyze deorbiting
+satellites over the same period. Empirically, we extract the acceleration
+profile of satellites during deorbiting and provide insights relating to the
+effects of non-conservative forces during reentry. For non-deorbiting
+satellites, the position Root Mean Square Error (RMSE) was approximately 300 m,
+while for deorbiting satellites it increased to about 600 m. Through this
+in-depth analysis, we highlight potential limitations in publicly available
+data for accurate and robust Space Situational Awareness (SSA), and
+importantly, we propose a data-driven model of satellite decay in
+mega-constellations.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2510.11206v1' target='_blank'>Hadamard-Lévy theorems for maps taking values in a finite
+  dimensional space</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yacine Chitour, Zhengping Ji, Emmanuel Trélat</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-10-13 09:42:28</h6>
+<p class='card-text'>We propose global surjectivity theorems of differentiable maps based on
+second order conditions. Using the homotopy continuation method, we demonstrate
+that, for a $C^2$ differentiable map from a Hilbert space to a
+finite-dimensional Euclidean space, when its second-order differential has
+uniform upper and lower bounds, it has a global path-lifting property in the
+presence of singularities. This is then applied to the nonlinear motion
+planning problem, establishing in some cases the well-posedness of the
+continuation method despite critical values of the endpoint maps.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2510.11182v1' target='_blank'>Generalisation of automatic tumour segmentation in histopathological
+  whole-slide images across multiple cancer types</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Ole-Johan Skrede, Manohar Pradhan, Maria Xepapadakis Isaksen, Tarjei Sveinsgjerd Hveem, Ljiljana Vlatkovic, Arild Nesbakken, Kristina Lindemann, Gunnar B Kristensen, Jenneke Kasius, Alain G Zeimet, Odd Terje Brustugun, Lill-Tove Rasmussen Busund, Elin H Richardsen, Erik Skaaheim Haug, Bjørn Brennhovd, Emma Rewcastle, Melinda Lillesand, Vebjørn Kvikstad, Emiel Janssen, David J Kerr, Knut Liestøl, Fritz Albregtsen, Andreas Kleppe</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-10-13 09:18:15</h6>
+<p class='card-text'>Deep learning is expected to aid pathologists by automating tasks such as
+tumour segmentation. We aimed to develop one universal tumour segmentation
+model for histopathological images and examine its performance in different
+cancer types. The model was developed using over 20 000 whole-slide images from
+over 4 000 patients with colorectal, endometrial, lung, or prostate carcinoma.
+Performance was validated in pre-planned analyses on external cohorts with over
+3 000 patients across six cancer types. Exploratory analyses included over 1
+500 additional patients from The Cancer Genome Atlas. Average Dice coefficient
+was over 80% in all validation cohorts with en bloc resection specimens and in
+The Cancer Genome Atlas cohorts. No loss of performance was observed when
+comparing the universal model with models specialised on single cancer types.
+In conclusion, extensive and rigorous evaluations demonstrate that generic
+tumour segmentation by a single model is possible across cancer types, patient
+populations, sample preparations, and slide scanners.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2510.11092v1' target='_blank'>Future-Aware End-to-End Driving: Bidirectional Modeling of Trajectory
+  Planning and Scene Evolution</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Bozhou Zhang, Nan Song, Jingyu Li, Xiatian Zhu, Jiankang Deng, Li Zhang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-10-13 07:41:47</h6>
+<p class='card-text'>End-to-end autonomous driving methods aim to directly map raw sensor inputs
+to future driving actions such as planned trajectories, bypassing traditional
+modular pipelines. While these approaches have shown promise, they often
+operate under a one-shot paradigm that relies heavily on the current scene
+context, potentially underestimating the importance of scene dynamics and their
+temporal evolution. This limitation restricts the model's ability to make
+informed and adaptive decisions in complex driving scenarios. We propose a new
+perspective: the future trajectory of an autonomous vehicle is closely
+intertwined with the evolving dynamics of its environment, and conversely, the
+vehicle's own future states can influence how the surrounding scene unfolds.
+Motivated by this bidirectional relationship, we introduce SeerDrive, a novel
+end-to-end framework that jointly models future scene evolution and trajectory
+planning in a closed-loop manner. Our method first predicts future bird's-eye
+view (BEV) representations to anticipate the dynamics of the surrounding scene,
+then leverages this foresight to generate future-context-aware trajectories.
+Two key components enable this: (1) future-aware planning, which injects
+predicted BEV features into the trajectory planner, and (2) iterative scene
+modeling and vehicle planning, which refines both future scene prediction and
+trajectory generation through collaborative optimization. Extensive experiments
+on the NAVSIM and nuScenes benchmarks show that SeerDrive significantly
+outperforms existing state-of-the-art methods.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2510.11083v1' target='_blank'>Flow Matching-Based Autonomous Driving Planning with Advanced
+  Interactive Behavior Modeling</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Tianyi Tan, Yinan Zheng, Ruiming Liang, Zexu Wang, Kexin Zheng, Jinliang Zheng, Jianxiong Li, Xianyuan Zhan, Jingjing Liu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-10-13 07:25:13</h6>
+<p class='card-text'>Modeling interactive driving behaviors in complex scenarios remains a
+fundamental challenge for autonomous driving planning. Learning-based
+approaches attempt to address this challenge with advanced generative models,
+removing the dependency on over-engineered architectures for representation
+fusion. However, brute-force implementation by simply stacking transformer
+blocks lacks a dedicated mechanism for modeling interactive behaviors that are
+common in real driving scenarios. The scarcity of interactive driving data
+further exacerbates this problem, leaving conventional imitation learning
+methods ill-equipped to capture high-value interactive behaviors. We propose
+Flow Planner, which tackles these problems through coordinated innovations in
+data modeling, model architecture, and learning scheme. Specifically, we first
+introduce fine-grained trajectory tokenization, which decomposes the trajectory
+into overlapping segments to decrease the complexity of whole trajectory
+modeling. With a sophisticatedly designed architecture, we achieve efficient
+temporal and spatial fusion of planning and scene information, to better
+capture interactive behaviors. In addition, the framework incorporates flow
+matching with classifier-free guidance for multi-modal behavior generation,
+which dynamically reweights agent interactions during inference to maintain
+coherent response strategies, providing a critical boost for interactive
+scenario understanding. Experimental results on the large-scale nuPlan dataset
+and challenging interactive interPlan dataset demonstrate that Flow Planner
+achieves state-of-the-art performance among learning-based approaches while
+effectively modeling interactive behaviors in complex driving scenarios.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2510.11041v1' target='_blank'>Unveiling Uncertainty-Aware Autonomous Cooperative Learning Based
+  Planning Strategy</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Shiyao Zhang, Liwei Deng, Shuyu Zhang, Weijie Yuan, Hong Zhang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-10-13 06:19:15</h6>
+<p class='card-text'>In future intelligent transportation systems, autonomous cooperative planning
+(ACP), becomes a promising technique to increase the effectiveness and security
+of multi-vehicle interactions. However, multiple uncertainties cannot be fully
+addressed for existing ACP strategies, e.g. perception, planning, and
+communication uncertainties. To address these, a novel deep reinforcement
+learning-based autonomous cooperative planning (DRLACP) framework is proposed
+to tackle various uncertainties on cooperative motion planning schemes.
+Specifically, the soft actor-critic (SAC) with the implementation of gate
+recurrent units (GRUs) is adopted to learn the deterministic optimal
+time-varying actions with imperfect state information occurred by planning,
+communication, and perception uncertainties. In addition, the real-time actions
+of autonomous vehicles (AVs) are demonstrated via the Car Learning to Act
+(CARLA) simulation platform. Evaluation results show that the proposed DRLACP
+learns and performs cooperative planning effectively, which outperforms other
+baseline methods under different scenarios with imperfect AV state information.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2510.11027v1' target='_blank'>Vlaser: Vision-Language-Action Model with Synergistic Embodied Reasoning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Ganlin Yang, Tianyi Zhang, Haoran Hao, Weiyun Wang, Yibin Liu, Dehui Wang, Guanzhou Chen, Zijian Cai, Junting Chen, Weijie Su, Wengang Zhou, Yu Qiao, Jifeng Dai, Jiangmiao Pang, Gen Luo, Wenhai Wang, Yao Mu, Zhi Hou</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-10-13 05:51:22</h6>
+<p class='card-text'>While significant research has focused on developing embodied reasoning
+capabilities using Vision-Language Models (VLMs) or integrating advanced VLMs
+into Vision-Language-Action (VLA) models for end-to-end robot control, few
+studies directly address the critical gap between upstream VLM-based reasoning
+and downstream VLA policy learning. In this work, we take an initial step
+toward bridging embodied reasoning with VLA policy learning by introducing
+Vlaser - a Vision-Language-Action Model with synergistic embodied reasoning
+capability, which is a foundational vision-language model designed to integrate
+high-level reasoning with low-level control for embodied agents. Built upon the
+high-quality Vlaser-6M dataset, Vlaser achieves state-of-the-art performance
+across a range of embodied reasoning benchmarks - including spatial reasoning,
+embodied grounding, embodied QA, and task planning. Furthermore, we
+systematically examine how different VLM initializations affect supervised VLA
+fine-tuning, offering novel insights into mitigating the domain shift between
+internet-scale pre-training data and embodied-specific policy learning data.
+Based on these insights, our approach achieves state-of-the-art results on the
+WidowX benchmark and competitive performance on the Google Robot benchmark.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2510.11014v1' target='_blank'>Into the Unknown: Towards using Generative Models for Sampling Priors of
+  Environment Uncertainty for Planning in Configuration Spaces</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Subhransu S. Bhattacharjee, Hao Lu, Dylan Campbell, Rahul Shome</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-10-13 05:08:48</h6>
+<p class='card-text'>Priors are vital for planning under partial observability, yet difficult to
+obtain in practice. We present a sampling-based pipeline that leverages
+large-scale pretrained generative models to produce probabilistic priors
+capturing environmental uncertainty and spatio-semantic relationships in a
+zero-shot manner. Conditioned on partial observations, the pipeline recovers
+complete RGB-D point cloud samples with occupancy and target semantics,
+formulated to be directly useful in configuration-space planning. We establish
+a Matterport3D benchmark of rooms partially visible through doorways, where a
+robot must navigate to an unobserved target object. Effective priors for this
+setting must represent both occupancy and target-location uncertainty in
+unobserved regions. Experiments show that our approach recovers commonsense
+spatial semantics consistent with ground truth, yielding diverse, clean 3D
+point clouds usable in motion planning, highlight the promise of generative
+models as a rich source of priors for robotic planning.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2510.11005v1' target='_blank'>Frequency Domain Unlocks New Perspectives for Abdominal Medical Image
+  Segmentation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Kai Han, Siqi Ma, Chengxuan Qian, Jun Chen, Chongwen Lyu, Yuqing Song, Zhe Liu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-10-13 04:44:43</h6>
+<p class='card-text'>Accurate segmentation of tumors and adjacent normal tissues in medical images
+is essential for surgical planning and tumor staging. Although foundation
+models generally perform well in segmentation tasks, they often struggle to
+focus on foreground areas in complex, low-contrast backgrounds, where some
+malignant tumors closely resemble normal organs, complicating contextual
+differentiation. To address these challenges, we propose the Foreground-Aware
+Spectrum Segmentation (FASS) framework. First, we introduce a foreground-aware
+module to amplify the distinction between background and the entire volume
+space, allowing the model to concentrate more effectively on target areas.
+Next, a feature-level frequency enhancement module, based on wavelet transform,
+extracts discriminative high-frequency features to enhance boundary recognition
+and detail perception. Eventually, we introduce an edge constraint module to
+preserve geometric continuity in segmentation boundaries. Extensive experiments
+on multiple medical datasets demonstrate superior performance across all
+metrics, validating the effectiveness of our framework, particularly in
+robustness under complex conditions and fine structure recognition. Our
+framework significantly enhances segmentation of low-contrast images, paving
+the way for applications in more diverse and complex medical imaging scenarios.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2510.10991v1' target='_blank'>A Survey on Agentic Multimodal Large Language Models</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Huanjin Yao, Ruifei Zhang, Jiaxing Huang, Jingyi Zhang, Yibo Wang, Bo Fang, Ruolin Zhu, Yongcheng Jing, Shunyu Liu, Guanbin Li, Dacheng Tao</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-10-13 04:07:01</h6>
+<p class='card-text'>With the recent emergence of revolutionary autonomous agentic systems,
+research community is witnessing a significant shift from traditional static,
+passive, and domain-specific AI agents toward more dynamic, proactive, and
+generalizable agentic AI. Motivated by the growing interest in agentic AI and
+its potential trajectory toward AGI, we present a comprehensive survey on
+Agentic Multimodal Large Language Models (Agentic MLLMs). In this survey, we
+explore the emerging paradigm of agentic MLLMs, delineating their conceptual
+foundations and distinguishing characteristics from conventional MLLM-based
+agents. We establish a conceptual framework that organizes agentic MLLMs along
+three fundamental dimensions: (i) Agentic internal intelligence functions as
+the system's commander, enabling accurate long-horizon planning through
+reasoning, reflection, and memory; (ii) Agentic external tool invocation,
+whereby models proactively use various external tools to extend their
+problem-solving capabilities beyond their intrinsic knowledge; and (iii)
+Agentic environment interaction further situates models within virtual or
+physical environments, allowing them to take actions, adapt strategies, and
+sustain goal-directed behavior in dynamic real-world scenarios. To further
+accelerate research in this area for the community, we compile open-source
+training frameworks, training and evaluation datasets for developing agentic
+MLLMs. Finally, we review the downstream applications of agentic MLLMs and
+outline future research directions for this rapidly evolving field. To
+continuously track developments in this rapidly evolving field, we will also
+actively update a public repository at
+https://github.com/HJYao00/Awesome-Agentic-MLLMs.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2510.10989v1' target='_blank'>Crane Scheduling Problem with Energy Saving</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yixiong Gao, Florian Jaehn, Minming Li, Wenhao Ma, Xinbo Zhang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-10-13 03:58:59</h6>
+<p class='card-text'>During loading and unloading steps, energy is consumed when cranes lift
+containers, while energy is often wasted when cranes drop containers. By
+optimizing the scheduling of cranes, it is possible to reduce energy
+consumption, thereby lowering operational costs and environmental impacts. In
+this paper, we introduce a single-crane scheduling problem with energy savings,
+focusing on reusing the energy from containers that have already been lifted
+and reducing the total energy consumption of the entire scheduling plan. We
+establish a basic model considering a one-dimensional storage area and provide
+a systematic complexity analysis of the problem. First, we investigate the
+connection between our problem and the semi-Eulerization problem and propose an
+additive approximation algorithm. Then, we present a polynomial-time Dynamic
+Programming (DP) algorithm for the case of bounded energy buffer and processing
+lengths. Next, adopting a Hamiltonian perspective, we address the general case
+with arbitrary energy buffer and processing lengths. We propose an exact DP
+algorithm and show that the variation of the problem is polynomially solvable
+when it can be transformed into a path cover problem on acyclic interval
+digraphs. We introduce a paradigm that integrates both the Eulerian and
+Hamiltonian perspectives, providing a robust framework for addressing the
+problem.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2510.10904v1' target='_blank'>Age-period modeling of mortality gaps: the cases of cancer and
+  circulatory diseases</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Giacomo Lanfiuti Baldi, Andrea Nigri, Han Lin Shang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-10-13 02:01:17</h6>
+<p class='card-text'>Understanding and modeling mortality patterns, especially differences in
+mortality rates between populations, is vital for demographic analysis and
+public health planning. We compare three statistical models within the
+age-period framework to examine differences in death counts. The models are
+based on the double Poisson, bivariate Poisson, and Skellam distributions, each
+of which provides unique strengths in capturing underlying mortality trends.
+Focusing on mortality data from 1960 to 2015, we analyze the two leading causes
+of death in Italy, which exhibit significant temporal and age-related
+variations. Our results reveal that the Skellam distribution offers superior
+accuracy and simplicity in capturing mortality differentials. These findings
+highlight the potential of the Skellam distribution for analyzing mortality
+gaps effectively.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2510.10903v1' target='_blank'>Towards a Unified Understanding of Robot Manipulation: A Comprehensive
+  Survey</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Shuanghao Bai, Wenxuan Song, Jiayi Chen, Yuheng Ji, Zhide Zhong, Jin Yang, Han Zhao, Wanqi Zhou, Wei Zhao, Zhe Li, Pengxiang Ding, Cheng Chi, Haoang Li, Chang Xu, Xiaolong Zheng, Donglin Wang, Shanghang Zhang, Badong Chen</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-10-13 01:59:27</h6>
+<p class='card-text'>Embodied intelligence has witnessed remarkable progress in recent years,
+driven by advances in computer vision, natural language processing, and the
+rise of large-scale multimodal models. Among its core challenges, robot
+manipulation stands out as a fundamental yet intricate problem, requiring the
+seamless integration of perception, planning, and control to enable interaction
+within diverse and unstructured environments. This survey presents a
+comprehensive overview of robotic manipulation, encompassing foundational
+background, task-organized benchmarks and datasets, and a unified taxonomy of
+existing methods. We extend the classical division between high-level planning
+and low-level control by broadening high-level planning to include language,
+code, motion, affordance, and 3D representations, while introducing a new
+taxonomy of low-level learning-based control grounded in training paradigms
+such as input modeling, latent learning, and policy learning. Furthermore, we
+provide the first dedicated taxonomy of key bottlenecks, focusing on data
+collection, utilization, and generalization, and conclude with an extensive
+review of real-world applications. Compared with prior surveys, our work offers
+both a broader scope and deeper insight, serving as an accessible roadmap for
+newcomers and a structured reference for experienced researchers. All related
+resources, including research papers, open-source datasets, and projects, are
+curated for the community at
+https://github.com/BaiShuanghao/Awesome-Robotics-Manipulation.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2510.10886v1' target='_blank'>QuayPoints: A Reasoning Framework to Bridge the Information Gap Between
+  Global and Local Planning in Autonomous Racing</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yashom Dighe, Youngjin Kim, Karthik Dantu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-10-13 01:33:57</h6>
+<p class='card-text'>Autonomous racing requires tight integration between perception, planning and
+control to minimize latency as well as timely decision making. A standard
+autonomy pipeline comprising a global planner, local planner, and controller
+loses information as the higher-level racing context is sequentially propagated
+downstream into specific task-oriented context. In particular, the global
+planner's understanding of optimality is typically reduced to a sparse set of
+waypoints, leaving the local planner to make reactive decisions with limited
+context. This paper investigates whether additional global insights,
+specifically time-optimality information, can be meaningfully passed to the
+local planner to improve downstream decisions. We introduce a framework that
+preserves essential global knowledge and conveys it to the local planner
+through QuayPoints regions where deviations from the optimal raceline result in
+significant compromises to optimality. QuayPoints enable local planners to make
+more informed global decisions when deviating from the raceline, such as during
+strategic overtaking. To demonstrate this, we integrate QuayPoints into an
+existing planner and show that it consistently overtakes opponents traveling at
+up to 75% of the ego vehicle's speed across four distinct race tracks.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2510.10823v1' target='_blank'>The Irrational Machine: Neurosis and the Limits of Algorithmic Safety</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Daniel Howard</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-10-12 22:22:17</h6>
+<p class='card-text'>We present a framework for characterizing neurosis in embodied AI: behaviors
+that are internally coherent yet misaligned with reality, arising from
+interactions among planning, uncertainty handling, and aversive memory. In a
+grid navigation stack we catalogue recurrent modalities including flip-flop,
+plan churn, perseveration loops, paralysis and hypervigilance, futile search,
+belief incoherence, tie break thrashing, corridor thrashing, optimality
+compulsion, metric mismatch, policy oscillation, and limited-visibility
+variants. For each we give lightweight online detectors and reusable escape
+policies (short commitments, a margin to switch, smoothing, principled
+arbitration). We then show that durable phobic avoidance can persist even under
+full visibility when learned aversive costs dominate local choice, producing
+long detours despite globally safe routes. Using First/Second/Third Law as
+engineering shorthand for safety latency, command compliance, and resource
+efficiency, we argue that local fixes are insufficient; global failures can
+remain. To surface them, we propose genetic-programming based destructive
+testing that evolves worlds and perturbations to maximize law pressure and
+neurosis scores, yielding adversarial curricula and counterfactual traces that
+expose where architectural revision, not merely symptom-level patches, is
+required.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2510.10731v1' target='_blank'>Controllable Generative Trajectory Prediction via Weak Preference
+  Alignment</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yongxi Cao, Julian F. Schumann, Jens Kober, Joni Pajarinen, Arkady Zgonnikov</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-10-12 18:06:39</h6>
+<p class='card-text'>Deep generative models such as conditional variational autoencoders (CVAEs)
+have shown great promise for predicting trajectories of surrounding agents in
+autonomous vehicle planning. State-of-the-art models have achieved remarkable
+accuracy in such prediction tasks. Besides accuracy, diversity is also crucial
+for safe planning because human behaviors are inherently uncertain and
+multimodal. However, existing methods generally lack a scheme to generate
+controllably diverse trajectories, which is arguably more useful than randomly
+diversified trajectories, to the end of safe planning. To address this, we
+propose PrefCVAE, an augmented CVAE framework that uses weakly labeled
+preference pairs to imbue latent variables with semantic attributes. Using
+average velocity as an example attribute, we demonstrate that PrefCVAE enables
+controllable, semantically meaningful predictions without degrading baseline
+accuracy. Our results show the effectiveness of preference supervision as a
+cost-effective way to enhance sampling-based generative models.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js'></script>
+</body>
+</html>
