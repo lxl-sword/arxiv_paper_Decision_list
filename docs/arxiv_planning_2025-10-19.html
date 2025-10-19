@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>planning - 2025-10-19</title>
+<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap' rel='stylesheet'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css'>
+<style>
+body {
+font-family: 'Roboto', sans-serif;
+background-color: #f5f7fa;
+padding: 20px;
+}
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.card-title {
+    font-weight: 700;
+}
+.card:hover {
+    transform: scale(1.02);
+    transition: 0.3s ease-in-out;
+}
+</style>
+</head>
+<body>
+<div class='container'>
+<h1 class='text-center my-4'><i class='fas fa-book'></i>planning - 2025-10-19</h1>
+<div class='row'>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2510.14893v1' target='_blank'>STITCHER: Constrained Trajectory Planning in Known Environments with
+  Real-Time Motion Primitive Search</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Helene J. Levy, Brett T. Lopez</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-10-16 17:12:06</h6>
+<p class='card-text'>Autonomous high-speed navigation through large, complex environments requires
+real-time generation of agile trajectories that are dynamically feasible,
+collision-free, and satisfy state or actuator constraints. Modern trajectory
+planning techniques primarily use numerical optimization, as they enable the
+systematic computation of high-quality, expressive trajectories that satisfy
+various constraints. However, stringent requirements on computation time and
+the risk of numerical instability can limit the use of optimization-based
+planners in safety-critical scenarios. This work presents an optimization-free
+planning framework called STITCHER that stitches short trajectory segments
+together with graph search to compute long-range, expressive, and near-optimal
+trajectories in real-time. STITCHER outperforms modern optimization-based
+planners through our innovative planning architecture and several algorithmic
+developments that make real-time planning possible. Extensive simulation
+testing is performed to analyze the algorithmic components that make up
+STITCHER, along with a thorough comparison with two state-of-the-art
+optimization planners. Simulation tests show that safe trajectories can be
+created within a few milliseconds for paths that span the entirety of two 50 m
+x 50 m environments. Hardware tests with a custom quadrotor verify that
+STITCHER can produce trackable paths in real-time while respecting nonconvex
+constraints, such as limits on tilt angle and motor forces, which are otherwise
+hard to include in optimization-based planners.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2510.14828v1' target='_blank'>RoboGPT-R1: Enhancing Robot Planning with Reinforcement Learning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jinrui Liu, Bingyan Nie, Boyu Li, Yaran Chen, Yuze Wang, Shunsen He, Haoran Li</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-10-16 16:04:35</h6>
+<p class='card-text'>Improving the reasoning capabilities of embodied agents is crucial for robots
+to complete complex human instructions in long-view manipulation tasks
+successfully. Despite the success of large language models and vision language
+models based on Supervised Fine-Tuning (SFT) in planning tasks, they continue
+facing challenges in performing long-horizon manipulation tasks in complex
+real-world environments, owing to their restricted common sense and reasoning
+capabilities. Considering that aligning general-purpose vision language models
+to robotic planning tasks via supervised fine-tuning suffers from poor
+generalization and insufficient physical understanding, we propose RoboGPT-R1,
+a two-stage fine-tuning framework for embodied planning. In this framework,
+supervised training acquires foundational knowledge through expert sequences,
+followed by RL to address the model's shortcomings in visual-spatial
+understanding and reasoning. To achieve physical understanding and action
+sequence consistency in multi-step reasoning tasks, we design a rule-based
+reward function that simultaneously considers long-horizon performance and
+action constraint in the environment. The reasoning model, trained on
+Qwen2.5-VL-3B, significantly outperforms the larger-scale model, GPT-4o-mini,
+by 21.33% and surpasses other work trained on Qwen2.5-VL-7B by 20.33% on the
+EmbodiedBench benchmark.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2510.14803v1' target='_blank'>Scaling Artificial Intelligence for Multi-Tumor Early Detection with
+  More Reports, Fewer Masks</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Pedro R. A. S. Bassi, Xinze Zhou, Wenxuan Li, Szymon Płotka, Jieneng Chen, Qi Chen, Zheren Zhu, Jakub Prządo, Ibrahim E. Hamacı, Sezgin Er, Yuhan Wang, Ashwin Kumar, Bjoern Menze, Jarosław B. Ćwikła, Yuyin Zhou, Akshay S. Chaudhari, Curtis P. Langlotz, Sergio Decherchi, Andrea Cavalli, Kang Wang, Yang Yang, Alan L. Yuille, Zongwei Zhou</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-10-16 15:35:44</h6>
+<p class='card-text'>Early tumor detection save lives. Each year, more than 300 million computed
+tomography (CT) scans are performed worldwide, offering a vast opportunity for
+effective cancer screening. However, detecting small or early-stage tumors on
+these CT scans remains challenging, even for experts. Artificial intelligence
+(AI) models can assist by highlighting suspicious regions, but training such
+models typically requires extensive tumor masks--detailed, voxel-wise outlines
+of tumors manually drawn by radiologists. Drawing these masks is costly,
+requiring years of effort and millions of dollars. In contrast, nearly every CT
+scan in clinical practice is already accompanied by medical reports describing
+the tumor's size, number, appearance, and sometimes, pathology
+results--information that is rich, abundant, and often underutilized for AI
+training. We introduce R-Super, which trains AI to segment tumors that match
+their descriptions in medical reports. This approach scales AI training with
+large collections of readily available medical reports, substantially reducing
+the need for manually drawn tumor masks. When trained on 101,654 reports, AI
+models achieved performance comparable to those trained on 723 masks. Combining
+reports and masks further improved sensitivity by +13% and specificity by +8%,
+surpassing radiologists in detecting five of the seven tumor types. Notably,
+R-Super enabled segmentation of tumors in the spleen, gallbladder, prostate,
+bladder, uterus, and esophagus, for which no public masks or AI models
+previously existed. This study challenges the long-held belief that
+large-scale, labor-intensive tumor mask creation is indispensable, establishing
+a scalable and accessible path toward early detection across diverse tumor
+types.
+  We plan to release our trained models, code, and dataset at
+https://github.com/MrGiovanni/R-Super</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2510.14790v1' target='_blank'>Active Jammer Localization via Acquisition-Aware Path Planning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Luis González-Gudiño, Mariona Jaramillo-Civill, Pau Closas, Tales Imbiriba</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-10-16 15:22:24</h6>
+<p class='card-text'>We propose an active jammer localization framework that combines Bayesian
+optimization with acquisition-aware path planning. Unlike passive crowdsourced
+methods, our approach adaptively guides a mobile agent to collect high-utility
+Received Signal Strength measurements while accounting for urban obstacles and
+mobility constraints. For this, we modified the A* algorithm, A-UCB*, by
+incorporating acquisition values into trajectory costs, leading to
+high-acquisition planned paths. Simulations on realistic urban scenarios show
+that the proposed method achieves accurate localization with fewer measurements
+compared to uninformed baselines, demonstrating consistent performance under
+different environments.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2510.14765v1' target='_blank'>Inpainting the Red Planet: Diffusion Models for the Reconstruction of
+  Martian Environments in Virtual Reality</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Giuseppe Lorenzo Catalano, Agata Marta Soccini</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-10-16 15:02:05</h6>
+<p class='card-text'>Space exploration increasingly relies on Virtual Reality for several tasks,
+such as mission planning, multidisciplinary scientific analysis, and astronaut
+training. A key factor for the reliability of the simulations is having
+accurate 3D representations of planetary terrains. Extraterrestrial heightmaps
+derived from satellite imagery often contain missing values due to acquisition
+and transmission constraints. Mars is among the most studied planets beyond
+Earth, and its extensive terrain datasets make the Martian surface
+reconstruction a valuable task, although many areas remain unmapped. Deep
+learning algorithms can support void-filling tasks; however, whereas Earth's
+comprehensive datasets enables the use of conditional methods, such approaches
+cannot be applied to Mars. Current approaches rely on simpler interpolation
+techniques which, however, often fail to preserve geometric coherence. In this
+work, we propose a method for reconstructing the surface of Mars based on an
+unconditional diffusion model. Training was conducted on an augmented dataset
+of 12000 Martian heightmaps derived from NASA's HiRISE survey. A
+non-homogeneous rescaling strategy captures terrain features across multiple
+scales before resizing to a fixed 128x128 model resolution. We compared our
+method against established void-filling and inpainting techniques, including
+Inverse Distance Weighting, kriging, and Navier-Stokes algorithm, on an
+evaluation set of 1000 samples. Results show that our approach consistently
+outperforms these methods in terms of reconstruction accuracy (4-15% on RMSE)
+and perceptual similarity (29-81% on LPIPS) with the original data.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2510.14696v1' target='_blank'>High-Resolution PTDF-Based Planning of Storage and Transmission Under
+  High Renewables</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Kevin Wu, Rabab Haider, Pascal Van Hentenryck</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-10-16 14:02:03</h6>
+<p class='card-text'>Transmission Expansion Planning (TEP) optimizes power grid upgrades and
+investments to ensure reliable, efficient, and cost-effective electricity
+delivery while addressing grid constraints. To support growing demand and
+renewable energy integration, energy storage is emerging as a pivotal asset
+that provides temporal flexibility and alleviates congestion. This paper
+develops a multiperiod, two-stage PTDF formulation that co-optimizes
+transmission upgrades and storage siting/sizing. To ensure scalability, a
+trust-region, multicut Benders scheme warm-started from per-representative-day
+optima is proposed. Applied to a 2,000-bus synthetic Texas system under
+high-renewable projections, the method attains final optimality gaps below 1%
+and yields a plan with storage at about 180 nodes (32% of peak renewable
+capacity). These results demonstrate that the proposed PTDF-based methodology
+efficiently handles large distributed storage fleets, demonstrating scalability
+at high spatial resolution</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2510.14677v1' target='_blank'>When Planners Meet Reality: How Learned, Reactive Traffic Agents Shift
+  nuPlan Benchmarks</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Steffen Hagedorn, Luka Donkov, Aron Distelzweig, Alexandru P. Condurache</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-10-16 13:34:12</h6>
+<p class='card-text'>Planner evaluation in closed-loop simulation often uses rule-based traffic
+agents, whose simplistic and passive behavior can hide planner deficiencies and
+bias rankings. Widely used IDM agents simply follow a lead vehicle and cannot
+react to vehicles in adjacent lanes, hindering tests of complex interaction
+capabilities. We address this issue by integrating the state-of-the-art learned
+traffic agent model SMART into nuPlan. Thus, we are the first to evaluate
+planners under more realistic conditions and quantify how conclusions shift
+when narrowing the sim-to-real gap. Our analysis covers 14 recent planners and
+established baselines and shows that IDM-based simulation overestimates
+planning performance: nearly all scores deteriorate. In contrast, many planners
+interact better than previously assumed and even improve in multi-lane,
+interaction-heavy scenarios like lane changes or turns. Methods trained in
+closed-loop demonstrate the best and most stable driving performance. However,
+when reaching their limits in augmented edge-case scenarios, all learned
+planners degrade abruptly, whereas rule-based planners maintain reasonable
+basic behavior. Based on our results, we suggest SMART-reactive simulation as a
+new standard closed-loop benchmark in nuPlan and release the SMART agents as a
+drop-in alternative to IDM at https://github.com/shgd95/InteractiveClosedLoop.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2510.14643v1' target='_blank'>Generative Models From and For Sampling-Based MPC: A Bootstrapped
+  Approach For Adaptive Contact-Rich Manipulation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Lara Brudermüller, Brandon Hung, Xinghao Zhu, Jiuguang Wang, Nick Hawes, Preston Culbertson, Simon Le Cleac'h</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-10-16 12:55:28</h6>
+<p class='card-text'>We present a generative predictive control (GPC) framework that amortizes
+sampling-based Model Predictive Control (SPC) by bootstrapping it with
+conditional flow-matching models trained on SPC control sequences collected in
+simulation. Unlike prior work relying on iterative refinement or gradient-based
+solvers, we show that meaningful proposal distributions can be learned directly
+from noisy SPC data, enabling more efficient and informed sampling during
+online planning. We further demonstrate, for the first time, the application of
+this approach to real-world contact-rich loco-manipulation with a quadruped
+robot. Extensive experiments in simulation and on hardware show that our method
+improves sample efficiency, reduces planning horizon requirements, and
+generalizes robustly across task variations.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2510.14636v1' target='_blank'>Performance of the Prototype Station of the IceCube Surface Array
+  Enhancement</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:S. Shefali for the IceCube Collaboration</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-10-16 12:50:40</h6>
+<p class='card-text'>The prototype station of the Surface Array Enhancement at the IceCube
+Neutrino Observatory has been taking data in its final design since 2023. This
+station is part of the planned extension within the footprint of the existing
+surface array, IceTop. One station consists of 8 scintillator detectors, 3
+radio antennas, and a central DAQ. The final upgrade of the scintillation
+detectors and their firmware at the prototype station has extended the dynamic
+range and increased the data-taking up-time, thereby expanding the observation
+window for air showers. This contribution will discuss the performance of the
+upgraded prototype station after commissioning and its angular resolution
+capabilities when observing air showers with the scintillation detectors and in
+coincidence with IceTop. Furthermore, the integration of additional stations
+during the most recent deployment will be discussed.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2510.14627v1' target='_blank'>GOPLA: Generalizable Object Placement Learning via Synthetic
+  Augmentation of Human Arrangement</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yao Zhong, Hanzhi Chen, Simon Schaefer, Anran Zhang, Stefan Leutenegger</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-10-16 12:38:14</h6>
+<p class='card-text'>Robots are expected to serve as intelligent assistants, helping humans with
+everyday household organization. A central challenge in this setting is the
+task of object placement, which requires reasoning about both semantic
+preferences (e.g., common-sense object relations) and geometric feasibility
+(e.g., collision avoidance). We present GOPLA, a hierarchical framework that
+learns generalizable object placement from augmented human demonstrations. A
+multi-modal large language model translates human instructions and visual
+inputs into structured plans that specify pairwise object relationships. These
+plans are then converted into 3D affordance maps with geometric common sense by
+a spatial mapper, while a diffusion-based planner generates placement poses
+guided by test-time costs, considering multi-plan distributions and collision
+avoidance. To overcome data scarcity, we introduce a scalable pipeline that
+expands human placement demonstrations into diverse synthetic training data.
+Extensive experiments show that our approach improves placement success rates
+by 30.04 percentage points over the runner-up, evaluated on positioning
+accuracy and physical plausibility, demonstrating strong generalization across
+a wide range of real-world robotic placement scenarios.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2510.14615v1' target='_blank'>Accelerated Multi-Modal Motion Planning Using Context-Conditioned
+  Diffusion Models</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Edward Sandra, Lander Vanroye, Dries Dirckx, Ruben Cartuyvels, Jan Swevers, Wilm Decré</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-10-16 12:21:56</h6>
+<p class='card-text'>Classical methods in robot motion planning, such as sampling-based and
+optimization-based methods, often struggle with scalability towards
+higher-dimensional state spaces and complex environments. Diffusion models,
+known for their capability to learn complex, high-dimensional and multi-modal
+data distributions, provide a promising alternative when applied to motion
+planning problems and have already shown interesting results. However, most of
+the current approaches train their model for a single environment, limiting
+their generalization to environments not seen during training. The techniques
+that do train a model for multiple environments rely on a specific camera to
+provide the model with the necessary environmental information and therefore
+always require that sensor. To effectively adapt to diverse scenarios without
+the need for retraining, this research proposes Context-Aware Motion Planning
+Diffusion (CAMPD). CAMPD leverages a classifier-free denoising probabilistic
+diffusion model, conditioned on sensor-agnostic contextual information. An
+attention mechanism, integrated in the well-known U-Net architecture,
+conditions the model on an arbitrary number of contextual parameters. CAMPD is
+evaluated on a 7-DoF robot manipulator and benchmarked against state-of-the-art
+approaches on real-world tasks, showing its ability to generalize to unseen
+environments and generate high-quality, multi-modal trajectories, at a fraction
+of the time required by existing methods.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2510.14587v1' target='_blank'>Eclipsing Stellar Flare on the Demon Star Algol Binary System Observed
+  during the MAXI-NICER Follow-up Campaign in 2018</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Kazuya Nakayama, Wataru Buz Iwakiri, Teruaki Enoto, Shun Inoue, Yuta Notsu, Keith Gendreau, Zaven Arzoumanian, Kenji Hamaguchi, Tatehiro Mihara</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-10-16 11:45:30</h6>
+<p class='card-text'>Algol is a well-known eclipsing binary hosting an active and variable star
+that exhibits frequent stellar flares. Here, we report our pre-planned and
+coordinated rapid X-ray follow-up observations of an eclipsing flare on Algol.
+The Monitor of All-sky X-ray Image (MAXI) detected a flare on Algol at 05:52 UT
+on 2018 July 4. Subsequently, we carried out a prompt X-ray monitoring with the
+Neutron star Interior Composition Explorer (NICER) starting at 19:45 UT on the
+same day, and the observation ended at 06:02 UT on 2018 July 6. During the
+decaying phase of the flare, we successfully detected a 5.8-hour-long eclipse,
+corresponding to the secondary eclipse in which Algol A blocks the line of
+sight to Algol B. During the eclipse, the 2--10 keV X-ray flux is decreased to
+20\% level from $1.9\times10^{-10}~ \mathrm{erg~cm^{-2}~s^{-1} }$ to
+$4.5\times10^{-11}~ \mathrm{erg~cm^{-2}~s^{-1} }$. We found a configuration of
+the flare size and location to explain the X-ray observations; e.g., the flare
+occurred at the latitude 45{\deg}S of the Algol B surface with a flare height
+of $1.9\times10^{11}~\mathrm{cm}$, corresponding to 0.8 times the stellar
+radius of Algol B, giving 80% obscuration of the flare loop by Algol A. The
+apparent absorption increase before the eclipse might originate from coronal
+mass ejection (CME) in the line of sight ejected during the flare.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2510.14512v1' target='_blank'>Helmsman: Autonomous Synthesis of Federated Learning Systems via
+  Multi-Agent Collaboration</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Haoyuan Li, Mathias Funk, Aaqib Saeed</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-10-16 09:57:31</h6>
+<p class='card-text'>Federated Learning (FL) offers a powerful paradigm for training models on
+decentralized data, but its promise is often undermined by the immense
+complexity of designing and deploying robust systems. The need to select,
+combine, and tune strategies for multifaceted challenges like data
+heterogeneity and system constraints has become a critical bottleneck,
+resulting in brittle, bespoke solutions. To address this, we introduce
+Helmsman, a novel multi-agent system that automates the end-to-end synthesis of
+federated learning systems from high-level user specifications. It emulates a
+principled research and development workflow through three collaborative
+phases: (1) interactive human-in-the-loop planning to formulate a sound
+research plan, (2) modular code generation by supervised agent teams, and (3) a
+closed-loop of autonomous evaluation and refinement in a sandboxed simulation
+environment. To facilitate rigorous evaluation, we also introduce
+AgentFL-Bench, a new benchmark comprising 16 diverse tasks designed to assess
+the system-level generation capabilities of agentic systems in FL. Extensive
+experiments demonstrate that our approach generates solutions competitive with,
+and often superior to, established hand-crafted baselines. Our work represents
+a significant step towards the automated engineering of complex decentralized
+AI systems.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2510.14412v1' target='_blank'>Eliminating Negative Occurrences of Derived Predicates from PDDL Axioms</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Claudia Grundke, Gabriele Röger</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-10-16 08:18:09</h6>
+<p class='card-text'>Axioms are a feature of the Planning Domain Definition Language PDDL that can
+be considered as a generalization of database query languages such as Datalog.
+The PDDL standard restricts negative occurrences of predicates in axiom bodies
+to predicates that are directly set by actions and not derived by axioms. In
+the literature, authors often deviate from this limitation and only require
+that the set of axioms is stratifiable. Both variants can express exactly the
+same queries as least fixed-point logic, indicating that negative occurrences
+of derived predicates can be eliminated. We present the corresponding
+transformation.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2510.14388v1' target='_blank'>Hi-Agent: Hierarchical Vision-Language Agents for Mobile Device Control</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Zhe Wu, Hongjin Lu, Junliang Xing, Changhao Zhang, Yin Zhu, Yuhao Yang, Yuheng Jing, Kai Li, Kun Shao, Jianye Hao, Jun Wang, Yuanchun Shi</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-10-16 07:38:21</h6>
+<p class='card-text'>Building agents that autonomously operate mobile devices has attracted
+increasing attention. While Vision-Language Models (VLMs) show promise, most
+existing approaches rely on direct state-to-action mappings, which lack
+structured reasoning and planning, and thus generalize poorly to novel tasks or
+unseen UI layouts. We introduce Hi-Agent, a trainable hierarchical
+vision-language agent for mobile control, featuring a high-level reasoning
+model and a low-level action model that are jointly optimized. For efficient
+training, we reformulate multi-step decision-making as a sequence of
+single-step subgoals and propose a foresight advantage function, which
+leverages execution feedback from the low-level model to guide high-level
+optimization. This design alleviates the path explosion issue encountered by
+Group Relative Policy Optimization (GRPO) in long-horizon tasks and enables
+stable, critic-free joint training. Hi-Agent achieves a new State-Of-The-Art
+(SOTA) 87.9% task success rate on the Android-in-the-Wild (AitW) benchmark,
+significantly outperforming prior methods across three paradigms: prompt-based
+(AppAgent: 17.7%), supervised (Filtered BC: 54.5%), and reinforcement
+learning-based (DigiRL: 71.9%). It also demonstrates competitive zero-shot
+generalization on the ScreenSpot-v2 benchmark. On the more challenging
+AndroidWorld benchmark, Hi-Agent also scales effectively with larger backbones,
+showing strong adaptability in high-complexity mobile control scenarios.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2510.14293v1' target='_blank'>Learning Human-Humanoid Coordination for Collaborative Object Carrying</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yushi Du, Yixuan Li, Baoxiong Jia, Yutang Lin, Pei Zhou, Wei Liang, Yanchao Yang, Siyuan Huang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-10-16 04:36:25</h6>
+<p class='card-text'>Human-humanoid collaboration shows significant promise for applications in
+healthcare, domestic assistance, and manufacturing. While compliant robot-human
+collaboration has been extensively developed for robotic arms, enabling
+compliant human-humanoid collaboration remains largely unexplored due to
+humanoids' complex whole-body dynamics. In this paper, we propose a
+proprioception-only reinforcement learning approach, COLA, that combines leader
+and follower behaviors within a single policy. The model is trained in a
+closed-loop environment with dynamic object interactions to predict object
+motion patterns and human intentions implicitly, enabling compliant
+collaboration to maintain load balance through coordinated trajectory planning.
+We evaluate our approach through comprehensive simulator and real-world
+experiments on collaborative carrying tasks, demonstrating the effectiveness,
+generalization, and robustness of our model across various terrains and
+objects. Simulation experiments demonstrate that our model reduces human effort
+by 24.7%. compared to baseline approaches while maintaining object stability.
+Real-world experiments validate robust collaborative carrying across different
+object types (boxes, desks, stretchers, etc.) and movement patterns
+(straight-line, turning, slope climbing). Human user studies with 23
+participants confirm an average improvement of 27.4% compared to baseline
+models. Our method enables compliant human-humanoid collaborative carrying
+without requiring external sensors or complex interaction models, offering a
+practical solution for real-world deployment.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2510.14178v1' target='_blank'>Polarisation Performance of Offset Phase Antennas: A Study for FARSIDE</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Nivedita Mahesh, Judd D Bowman, Bharat Gehlot, Danny Jacobs</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-10-16 00:20:36</h6>
+<p class='card-text'>Several radio telescopes have been planned or proposed to be deployed on the
+Lunar farside in the coming years. These will observe the unexplored ultra-long
+wavelengths of the electromagnetic spectrum from the lunar farside's unique
+radio-quiet and ionosphere-free environment. One such lunar radio array is the
+NASA-funded concept - the Farside Array for Radio Science Investigations of the
+Dark Ages and Exoplanets (FARSIDE). FARSIDE will operate over 100~kHz to 40~MHz
+with 128 spatially non-co-located orthogonal pairs of antenna nodes distributed
+over a 12 X 12 km area in a four-arm spiral configuration. Being on the lunar
+farside, this radio interferometer will be deployed by tele-operated rovers.
+The rover deployment mode could lead to a phase offset between each of the two
+orthogonally polarised antenna elements in the array, which are typically
+co-located. In this paper, we quantify the effects of such antenna phase
+offsets on the polarisation response and imaging performance of the lunar radio
+array. Modelling and analysing the FARSIDE dipole beams with and without
+offset, we find the latter leads to additional leakages into Stokes U and V
+corresponding to Muller matrix terms of M2(0,1,2,3) and M3(0,1,2,3). Using a
+custom simulation pipeline to incorporate all four Stokes beams of spatially
+co-located and non-co-located dipoles, we produce visibilities and simulated
+images for the GLEAM (GaLactic and Extragalactic All-sky MWA) sky model through
+the FARSIDE array. We find that for a pure Stokes I input sky, the output image
+maximum Stokes V/I flux ratio for the offset case has increased to 2.5% versus
+0.05% for the co-located case. The additional Stokes V needs to be corrected
+since the detection of Electron Cyclotron Maser (ECM) emissions from exoplanets
+requires high-fidelity Stokes V measurements.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2510.14131v1' target='_blank'>Leveraging Electric School Buses for Disaster Recovery: Optimizing
+  Routing and Energy Scheduling via Branch-and-Price</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Sayed Hamid Hosseini Dolatabadi, Yuchen Dong, Tanveer Hossain Bhuiyan, Bo Zeng, Brian ONeill, Anthony Severson</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-10-15 21:58:52</h6>
+<p class='card-text'>Natural disasters threaten the resilience of power systems, causing
+widespread power outages that disrupt critical loads (e.g., hospitals) and
+endanger public safety. Compared to the conventional restoration methods that
+often have long response times, leveraging government-controlled electric
+school buses (ESBs) with large battery capacity and deployment readiness offers
+a promising solution for faster power restoration to critical loads during
+disasters while traditional maintenance is underway. Therefore, we study the
+problem of routing and scheduling a heterogeneous fleet of ESBs to satisfy the
+energy demand of critical isolated loads around disasters addressing the
+following practical aspects: combined transportation and energy scheduling of
+ESBs, multiple back-and-forth trips of ESBs between isolated loads and charging
+stations, and spatial-wise coupling among multiple ESB routes. We propose an
+efficient mixed-integer programming model for routing and scheduling ESBs,
+accounting for the practical aspects, to minimize the total restoration cost
+over a planning horizon. We develop an efficient exact branch-and-price (B&P)
+algorithm and a customized heuristic B&P algorithm integrating dynamic
+programming and labeling algorithms. Numerical results based on a real case
+study of San Antonio disaster shelters and critical facilities demonstrate that
+our proposed exact B&P and heuristic B&P algorithms are computationally 121 and
+335 times faster, respectively, than Gurobi. Using network sparsity to
+incorporate the limitation in shelter-ESB type compatibility in the model
+demonstrates that the total restoration cost increases, on average, by 207% as
+the network becomes fully sparse compared to fully connected. The capacity
+utilization metric reflects that the proposed practical ESB routing and
+scheduling enables an ESB to meet the energy demand 4.5 times its effective
+usable capacity.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2510.14065v1' target='_blank'>Optimistic Reinforcement Learning-Based Skill Insertions for Task and
+  Motion Planning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Gaoyuan Liu, Joris de Winter, Yuri Durodie, Denis Steckelmacher, Ann Nowe, Bram Vanderborght</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-10-15 20:11:19</h6>
+<p class='card-text'>Task and motion planning (TAMP) for robotics manipulation necessitates
+long-horizon reasoning involving versatile actions and skills. While
+deterministic actions can be crafted by sampling or optimizing with certain
+constraints, planning actions with uncertainty, i.e., probabilistic actions,
+remains a challenge for TAMP. On the contrary, Reinforcement Learning (RL)
+excels in acquiring versatile, yet short-horizon, manipulation skills that are
+robust with uncertainties. In this letter, we design a method that integrates
+RL skills into TAMP pipelines. Besides the policy, a RL skill is defined with
+data-driven logical components that enable the skill to be deployed by symbolic
+planning. A plan refinement sub-routine is designed to further tackle the
+inevitable effect uncertainties. In the experiments, we compare our method with
+baseline hierarchical planning from both TAMP and RL fields and illustrate the
+strength of the method. The results show that by embedding RL skills, we extend
+the capability of TAMP to domains with probabilistic skills, and improve the
+planning efficiency compared to the previous methods.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2510.14045v1' target='_blank'>Multi-Period Sparse Optimization for Proactive Grid Blackout Diagnosis</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Qinghua Ma, Reetam Sen Biswas, Denis Osipov, Guannan Qu, Soummya Kar, Shimiao Li</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-10-15 19:34:48</h6>
+<p class='card-text'>Existing or planned power grids need to evaluate survivability under extreme
+events, like a number of peak load overloading conditions, which could possibly
+cause system collapses (i.e. blackouts). For realistic extreme events that are
+correlated or share similar patterns, it is reasonable to expect that the
+dominant vulnerability or failure sources behind them share the same locations
+but with different severity. Early warning diagnosis that proactively
+identifies the key vulnerabilities responsible for a number of system collapses
+of interest can significantly enhance resilience. This paper proposes a
+multi-period sparse optimization method, enabling the discovery of {persistent
+failure sources} across a sequence of collapsed systems with increasing system
+stress, such as rising demand or worsening contingencies. This work defines
+persistency and efficiently integrates persistency constraints to capture the
+``hidden'' evolving vulnerabilities. Circuit-theory based power flow
+formulations and circuit-inspired optimization heuristics are used to
+facilitate the scalability of the method. Experiments on benchmark systems show
+that the method reliably tracks persistent vulnerability locations under
+increasing load stress, and solves with scalability to large systems ({on
+average} taking {around} 200 s per scenario on 2000+ bus systems).</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2510.14035v1' target='_blank'>GammaZero: Learning To Guide POMDP Belief Space Search With Graph
+  Representations</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Rajesh Mangannavar, Prasad Tadepalli</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-10-15 19:18:03</h6>
+<p class='card-text'>We introduce an action-centric graph representation framework for learning to
+guide planning in Partially Observable Markov Decision Processes (POMDPs).
+Unlike existing approaches that require domain-specific neural architectures
+and struggle with scalability, GammaZero leverages a unified graph-based belief
+representation that enables generalization across problem sizes within a
+domain. Our key insight is that belief states can be systematically transformed
+into action-centric graphs where structural patterns learned on small problems
+transfer to larger instances. We employ a graph neural network with a decoder
+architecture to learn value functions and policies from expert demonstrations
+on computationally tractable problems, then apply these learned heuristics to
+guide Monte Carlo tree search on larger problems. Experimental results on
+standard POMDP benchmarks demonstrate that GammaZero achieves comparable
+performance to BetaZero when trained and tested on the same-sized problems,
+while uniquely enabling zero-shot generalization to problems 2-4 times larger
+than those seen during training, maintaining solution quality with reduced
+search requirements.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2510.14000v1' target='_blank'>A Diffusion-Refined Planner with Reinforcement Learning Priors for
+  Confined-Space Parking</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Mingyang Jiang, Yueyuan Li, Jiaru Zhang, Songan Zhang, Ming Yang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-10-15 18:30:14</h6>
+<p class='card-text'>The growing demand for parking has increased the need for automated parking
+planning methods that can operate reliably in confined spaces. In restricted
+and complex environments, high-precision maneuvers are required to achieve a
+high success rate in planning, yet existing approaches often rely on explicit
+action modeling, which faces challenges when accurately modeling the optimal
+action distribution. In this paper, we propose DRIP, a diffusion-refined
+planner anchored in reinforcement learning (RL) prior action distribution, in
+which an RL-pretrained policy provides prior action distributions to regularize
+the diffusion training process. During the inference phase the denoising
+process refines these coarse priors into more precise action distributions. By
+steering the denoising trajectory through the reinforcement learning prior
+distribution during training, the diffusion model inherits a well-informed
+initialization, resulting in more accurate action modeling, a higher planning
+success rate, and reduced inference steps. We evaluate our approach across
+parking scenarios with varying degrees of spatial constraints. Experimental
+results demonstrate that our method significantly improves planning performance
+in confined-space parking environments while maintaining strong generalization
+in common scenarios.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2510.13993v1' target='_blank'>Efficient Few-Shot Learning in Remote Sensing: Fusing Vision and
+  Vision-Language Models</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jia Yun Chua, Argyrios Zolotas, Miguel Arana-Catania</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-10-15 18:19:48</h6>
+<p class='card-text'>Remote sensing has become a vital tool across sectors such as urban planning,
+environmental monitoring, and disaster response. While the volume of data
+generated has increased significantly, traditional vision models are often
+constrained by the requirement for extensive domain-specific labelled data and
+their limited ability to understand the context within complex environments.
+Vision Language Models offer a complementary approach by integrating visual and
+textual data; however, their application to remote sensing remains
+underexplored, particularly given their generalist nature. This work
+investigates the combination of vision models and VLMs to enhance image
+analysis in remote sensing, with a focus on aircraft detection and scene
+understanding. The integration of YOLO with VLMs such as LLaVA, ChatGPT, and
+Gemini aims to achieve more accurate and contextually aware image
+interpretation. Performance is evaluated on both labelled and unlabelled remote
+sensing data, as well as degraded image scenarios which are crucial for remote
+sensing. The findings show an average MAE improvement of 48.46% across models
+in the accuracy of aircraft detection and counting, especially in challenging
+conditions, in both raw and degraded scenarios. A 6.17% improvement in
+CLIPScore for comprehensive understanding of remote sensing images is obtained.
+The proposed approach combining traditional vision models and VLMs paves the
+way for more advanced and efficient remote sensing image analysis, especially
+in few-shot learning scenarios.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2510.13686v1' target='_blank'>Hierarchical Discrete Lattice Assembly: An Approach for the Digital
+  Fabrication of Scalable Macroscale Structures</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Miana Smith, Paul Arthur Richard, Alexander Htet Kyaw, Neil Gershenfeld</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-10-15 15:43:43</h6>
+<p class='card-text'>Although digital fabrication processes at the desktop scale have become
+proficient and prolific, systems aimed at producing larger-scale structures are
+still typically complex, expensive, and unreliable. In this work, we present an
+approach for the fabrication of scalable macroscale structures using simple
+robots and interlocking lattice building blocks. A target structure is first
+voxelized so that it can be populated with an architected lattice. These voxels
+are then grouped into larger interconnected blocks, which are produced using
+standard digital fabrication processes, leveraging their capability to produce
+highly complex geometries at a small scale. These blocks, on the size scale of
+tens of centimeters, are then fed to mobile relative robots that are able to
+traverse over the structure and place new blocks to form structures on the
+meter scale. To facilitate the assembly of large structures, we introduce a
+live digital twin simulation tool for controlling and coordinating assembly
+robots that enables both global planning for a target structure and live user
+design, interaction, or intervention. To improve assembly throughput, we
+introduce a new modular assembly robot, designed for hierarchical voxel
+handling. We validate this system by demonstrating the voxelization,
+hierarchical blocking, path planning, and robotic fabrication of a set of
+meter-scale objects.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2510.13638v1' target='_blank'>Challenges, Advances, and Evaluation Metrics in Medical Image
+  Enhancement: A Systematic Literature Review</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Chun Wai Chin, Haniza Yazid, Hoi Leong Lee</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-10-15 15:01:58</h6>
+<p class='card-text'>Medical image enhancement is crucial for improving the quality and
+interpretability of diagnostic images, ultimately supporting early detection,
+accurate diagnosis, and effective treatment planning. Despite advancements in
+imaging technologies such as X-ray, CT, MRI, and ultrasound, medical images
+often suffer from challenges like noise, artifacts, and low contrast, which
+limit their diagnostic potential. Addressing these challenges requires robust
+preprocessing, denoising algorithms, and advanced enhancement methods, with
+deep learning techniques playing an increasingly significant role. This
+systematic literature review, following the PRISMA approach, investigates the
+key challenges, recent advancements, and evaluation metrics in medical image
+enhancement. By analyzing findings from 39 peer-reviewed studies, this review
+provides insights into the effectiveness of various enhancement methods across
+different imaging modalities and the importance of evaluation metrics in
+assessing their impact. Key issues like low contrast and noise are identified
+as the most frequent, with MRI and multi-modal imaging receiving the most
+attention, while specialized modalities such as histopathology, endoscopy, and
+bone scintigraphy remain underexplored. Out of the 39 studies, 29 utilize
+conventional mathematical methods, 9 focus on deep learning techniques, and 1
+explores a hybrid approach. In terms of image quality assessment, 18 studies
+employ both reference-based and non-reference-based metrics, 9 rely solely on
+reference-based metrics, and 12 use only non-reference-based metrics, with a
+total of 65 IQA metrics introduced, predominantly non-reference-based. This
+review highlights current limitations, research gaps, and potential future
+directions for advancing medical image enhancement.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2510.13927v1' target='_blank'>Long-Term Spatio-Temporal Forecasting of Monthly Rainfall in West Bengal
+  Using Ensemble Learning Approaches</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jishu Adhikary, Raju Maiti</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-10-15 13:20:33</h6>
+<p class='card-text'>Rainfall forecasting plays a critical role in climate adaptation,
+agriculture, and water resource management. This study develops long-term
+forecasts of monthly rainfall across 19 districts of West Bengal using a
+century-scale dataset spanning 1900-2019. Daily rainfall records are aggregated
+into monthly series, resulting in 120 years of observations for each district.
+The forecasting task involves predicting the next 108 months (9 years,
+2011-2019) while accounting for temporal dependencies and spatial interactions
+among districts. To address the nonlinear and complex structure of rainfall
+dynamics, we propose a hierarchical modeling framework that combines
+regression-based forecasting of yearly features with multi-layer perceptrons
+(MLPs) for monthly prediction. Yearly features, such as annual totals,
+quarterly proportions, variability measures, skewness, and extremes, are first
+forecasted using regression models that incorporate both own lags and
+neighboring-district lags. These forecasts are then integrated as auxiliary
+inputs into an MLP model, which captures nonlinear temporal patterns and
+spatial dependencies in the monthly series. The results demonstrate that the
+hierarchical regression-MLP architecture provides robust long-term
+spatio-temporal forecasts, offering valuable insights for agriculture,
+irrigation planning, and water conservation strategies.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2510.13391v1' target='_blank'>Going with the Flow: Approximating Banzhaf Values via Graph Neural
+  Networks</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Benjamin Kempinski, Tal Kachman</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-10-15 10:40:33</h6>
+<p class='card-text'>Computing the Banzhaf value in network flow games is fundamental for
+quantifying agent influence in multi-agent systems, with applications ranging
+from cybersecurity to infrastructure planning. However, exact computation is
+intractable for systems with more than $\sim20$ agents due to exponential
+complexity $\mathcal{O}(2^m)$. While Monte Carlo sampling methods provide
+statistical estimates, they suffer from high sample complexity and cannot
+transfer knowledge across different network configurations, making them
+impractical for large-scale or dynamic systems. We present a novel
+learning-based approach using Graph Neural Networks (GNNs) to approximate
+Banzhaf values in cardinal network flow games. By framing the problem as a
+graph-level prediction task, our method learns generalisable patterns of agent
+influence directly from network topology and control structure. We conduct a
+comprehensive empirical study comparing three state-of-the-art GNN
+architectures-Graph Attention Networks (GAT), Graph Isomorphism Networks with
+Edge features (GINE), and EdgeConv-on a large-scale synthetic dataset of
+200,000 graphs per configuration, varying in size (20-100 nodes), agent count
+(5-20), and edge probability (0.5-1.0). Our results demonstrate that trained
+GNN models achieve high-fidelity Banzhaf value approximation with
+order-of-magnitude speedups compared to exact and sampling-based methods. Most
+significantly, we show strong zero-shot generalisation: models trained on
+graphs of a specific size and topology accurately predict Banzhaf values for
+entirely new networks with different structural properties, without requiring
+retraining. This work establishes GNNs as a practical tool for scalable
+cooperative game-theoretic analysis of complex networked systems.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2510.13300v1' target='_blank'>Five Years of Clinical Application of independent Monte Carlo-Based
+  Patient-Specific Quality Assurance at the Maastro Proton Therapy Center</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Ilaria Rinaldi, Giorgio Cartechini, Angelo Schiavi, Jan Gajewski, Nils Krah, Antoni Rucinski, Gloria Vilches Freixas, Vincenzo Patera, Sebastiaan Nijsten</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-10-15 08:40:04</h6>
+<p class='card-text'>At the Maastro Proton Therapy Center in Maastricht, patient-specific quality
+assurance (PSQA) using an independent GPU-accelerated Monte Carlo (MC)
+calculation has fully replaced conventional measurements, which are
+time-consuming and have limited sensitivity to clinically relevant errors.
+  A fully automated and robust pipeline was developed, integrating two clinical
+workflows based on the fast MC code Fred. The system is fully operational, and
+automatic verification reports are part of daily clinical practice.
+  The first workflow performs a pre-treatment dose recalculation in Fred using
+the planning CT and clinical plan. The second uses Fred with machine log files
+to verify the actually delivered dose. Both generate automatic reports for
+clinical review.
+  Over five years, this workflow has become part of routine clinical
+operations, providing robust 3D dosimetric verification in heterogeneous
+anatomies. So far, Fred has recalculated more than 6000 pre-treatment plans and
+3513 log file-based PSQA cases, saving an estimated 4090 hours of QA work. The
+pipeline identified true negatives and detected two planning-related failures
+that would have been missed by conventional measurements. No false positives or
+negatives were observed, confirming high accuracy and reliability.
+  The MC-based PSQA pipeline offers an efficient, sensitive, and clinically
+meaningful alternative to measurement-based QA in pencil beam scanning proton
+therapy. By eliminating routine measurements, it saves resources while
+improving patient safety and treatment quality. Five years of experience
+confirm that measurement-less MC-based PSQA is a viable and superior approach,
+providing full 3D verification and early error detection - a practical
+blueprint for other proton therapy centres.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2510.13265v1' target='_blank'>Unstable optimal transport maps</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Cyril Letrouit</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-10-15 08:10:09</h6>
+<p class='card-text'>The stability of optimal transport maps with respect to perturbations of the
+marginals is a question of interest for several reasons, ranging from the
+justification of the linearized optimal transport framework to numerical
+analysis and statistics. Under various assumptions on the source measure, it is
+known that optimal transport maps are stable with respect to variations of the
+target measure. In this note, we focus on the mechanisms that can, on the
+contrary, lead to instability. We identify two of them, which we illustrate
+through examples of absolutely continuous source measures $\rho$ in
+$\mathbb{R}^d$ for which optimal transport maps are less stable, or even very
+unstable. We first show that instability may arise from the unboundedness of
+the density: we exhibit a source density on the unit ball of $\mathbb{R}^d$
+which blows up superpolynomially at two points of the boundary and for which
+optimal transport maps are highly unstable. Then we prove that even for uniform
+densities on bounded open sets, optimal transport maps can be rather unstable
+close enough to configurations where uniqueness of optimal plans is lost.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2510.13250v1' target='_blank'>Real-Time Crowd Counting for Embedded Systems with Lightweight
+  Architecture</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Zhiyuan Zhao, Yubin Wen, Siyu Yang, Lichen Ning, Yuandong Liu, Junyu Gao</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-10-15 07:58:46</h6>
+<p class='card-text'>Crowd counting is a task of estimating the number of the crowd through
+images, which is extremely valuable in the fields of intelligent security,
+urban planning, public safety management, and so on. However, the existing
+counting methods have some problems in practical application on embedded
+systems for these fields, such as excessive model parameters, abundant complex
+calculations, etc. The practical application of embedded systems requires the
+model to be real-time, which means that the model is fast enough. Considering
+the aforementioned problems, we design a super real-time model with a
+stem-encoder-decoder structure for crowd counting tasks, which achieves the
+fastest inference compared with state-of-the-arts. Firstly, large convolution
+kernels in the stem network are used to enlarge the receptive field, which
+effectively extracts detailed head information. Then, in the encoder part, we
+use conditional channel weighting and multi-branch local fusion block to merge
+multi-scale features with low computational consumption. This part is crucial
+to the super real-time performance of the model. Finally, the feature pyramid
+networks are added to the top of the encoder to alleviate its incomplete fusion
+problems. Experiments on three benchmarks show that our network is suitable for
+super real-time crowd counting on embedded systems, ensuring competitive
+accuracy. At the same time, the proposed network reasoning speed is the
+fastest. Specifically, the proposed network achieves 381.7 FPS on NVIDIA GTX
+1080Ti and 71.9 FPS on NVIDIA Jetson TX1.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js'></script>
+</body>
+</html>
