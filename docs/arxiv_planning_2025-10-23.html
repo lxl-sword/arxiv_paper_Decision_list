@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>planning - 2025-10-23</title>
+<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap' rel='stylesheet'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css'>
+<style>
+body {
+font-family: 'Roboto', sans-serif;
+background-color: #f5f7fa;
+padding: 20px;
+}
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.card-title {
+    font-weight: 700;
+}
+.card:hover {
+    transform: scale(1.02);
+    transition: 0.3s ease-in-out;
+}
+</style>
+</head>
+<body>
+<div class='container'>
+<h1 class='text-center my-4'><i class='fas fa-book'></i>planning - 2025-10-23</h1>
+<div class='row'>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2510.19818v1' target='_blank'>Semantic World Models</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jacob Berg, Chuning Zhu, Yanda Bao, Ishan Durugkar, Abhishek Gupta</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-10-22 17:53:45</h6>
+<p class='card-text'>Planning with world models offers a powerful paradigm for robotic control.
+Conventional approaches train a model to predict future frames conditioned on
+current frames and actions, which can then be used for planning. However, the
+objective of predicting future pixels is often at odds with the actual planning
+objective; strong pixel reconstruction does not always correlate with good
+planning decisions. This paper posits that instead of reconstructing future
+frames as pixels, world models only need to predict task-relevant semantic
+information about the future. For such prediction the paper poses world
+modeling as a visual question answering problem about semantic information in
+future frames. This perspective allows world modeling to be approached with the
+same tools underlying vision language models. Thus vision language models can
+be trained as "semantic" world models through a supervised finetuning process
+on image-action-text data, enabling planning for decision-making while
+inheriting many of the generalization and robustness properties from the
+pretrained vision-language models. The paper demonstrates how such a semantic
+world model can be used for policy improvement on open-ended robotics tasks,
+leading to significant generalization improvements over typical paradigms of
+reconstruction-based action-conditional world modeling. Website available at
+https://weirdlabuw.github.io/swm.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2510.19808v1' target='_blank'>Pico-Banana-400K: A Large-Scale Dataset for Text-Guided Image Editing</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yusu Qian, Eli Bocek-Rivele, Liangchen Song, Jialing Tong, Yinfei Yang, Jiasen Lu, Wenze Hu, Zhe Gan</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-10-22 17:43:15</h6>
+<p class='card-text'>Recent advances in multimodal models have demonstrated remarkable text-guided
+image editing capabilities, with systems like GPT-4o and Nano-Banana setting
+new benchmarks. However, the research community's progress remains constrained
+by the absence of large-scale, high-quality, and openly accessible datasets
+built from real images. We introduce Pico-Banana-400K, a comprehensive
+400K-image dataset for instruction-based image editing. Our dataset is
+constructed by leveraging Nano-Banana to generate diverse edit pairs from real
+photographs in the OpenImages collection. What distinguishes Pico-Banana-400K
+from previous synthetic datasets is our systematic approach to quality and
+diversity. We employ a fine-grained image editing taxonomy to ensure
+comprehensive coverage of edit types while maintaining precise content
+preservation and instruction faithfulness through MLLM-based quality scoring
+and careful curation. Beyond single turn editing, Pico-Banana-400K enables
+research into complex editing scenarios. The dataset includes three specialized
+subsets: (1) a 72K-example multi-turn collection for studying sequential
+editing, reasoning, and planning across consecutive modifications; (2) a
+56K-example preference subset for alignment research and reward model training;
+and (3) paired long-short editing instructions for developing instruction
+rewriting and summarization capabilities. By providing this large-scale,
+high-quality, and task-rich resource, Pico-Banana-400K establishes a robust
+foundation for training and benchmarking the next generation of text-guided
+image editing models.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2510.19788v1' target='_blank'>Benchmarking World-Model Learning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Archana Warrier, Dat Nyugen, Michelangelo Naim, Moksh Jain, Yichao Liang, Karen Schroeder, Cambridge Yang, Joshua B. Tenenbaum, Sebastian Vollmer, Kevin Ellis, Zenna Tavares</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-10-22 17:23:18</h6>
+<p class='card-text'>Model-learning agents should gather information to learn world models that
+support many downstream tasks and inferences, such as predicting unobserved
+states, estimating near- and far-term consequences of actions, planning action
+sequences, and detecting changes in dynamics. Current methods for learning and
+evaluating world models diverge from this goal: training and evaluation are
+anchored to next-frame prediction, and success is scored by reward maximization
+in the same environment. We propose WorldTest, a protocol to evaluate
+model-learning agents that separates reward-free interaction from a scored test
+phase in a different but related environment. WorldTest is
+open-ended$\unicode{x2014}$models should support many different tasks unknown
+ahead of time$\unicode{x2014}$and agnostic to model representation, allowing
+comparison across approaches. We instantiated WorldTest with AutumnBench, a
+suite of 43 interactive grid-world environments and 129 tasks across three
+families: masked-frame prediction, planning, and predicting changes to the
+causal dynamics. We compared 517 human participants and three frontier models
+on AutumnBench. We found that humans outperform the models, and scaling compute
+improves performance only in some environments but not others. WorldTest
+provides a novel template$\unicode{x2014}$reward-free exploration, derived
+tests, and behavior-based scoring$\unicode{x2014}$to evaluate what agents learn
+about environment dynamics, and AutumnBench exposes significant headroom in
+world-model learning.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2510.19781v1' target='_blank'>Nodal Capacity Expansion Planning with Flexible Large-Scale Load Siting</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Tomas Valencia Zuluaga, Simon Pang, Jean-Paul Watson</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-10-22 17:14:37</h6>
+<p class='card-text'>We propose explicitly incorporating large-scale load siting into a stochastic
+nodal power system capacity expansion planning model that concurrently
+co-optimizes generation, transmission and storage expansion. The potential
+operational flexibility of some of these large loads is also taken into account
+by considering them as consisting of a set of tranches with different
+reliability requirements, which are modeled as a constraint on expected served
+energy across operational scenarios. We implement our model as a two-stage
+stochastic mixed-integer optimization problem with cross-scenario expectation
+constraints. To overcome the challenge of scalability, we build upon existing
+work to implement this model on a high performance computing platform and
+exploit scenario parallelization using an augmented Progressive Hedging
+Algorithm. The algorithm is implemented using the bounding features of mpisppy,
+which have shown to provide satisfactory provable optimality gaps despite the
+absence of theoretical guarantees of convergence. We test our approach to
+assess the value of this proactive planning framework on total system cost and
+reliability metrics using realistic testcases geographically assigned to San
+Diego and South Carolina, with datacenter and direct air capture facilities as
+large loads.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2510.19752v1' target='_blank'>Learning Affordances at Inference-Time for Vision-Language-Action Models</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Ameesh Shah, William Chen, Adwait Godbole, Federico Mora, Sanjit A. Seshia, Sergey Levine</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-10-22 16:43:29</h6>
+<p class='card-text'>Solving complex real-world control tasks often takes multiple tries: if we
+fail at first, we reflect on what went wrong, and change our strategy
+accordingly to avoid making the same mistake. In robotics,
+Vision-Language-Action models (VLAs) offer a promising path towards solving
+complex control tasks, but lack the ability to contextually and dynamically
+readjust behavior when they fail to accomplish a task. In this work, we
+introduce Learning from Inference-Time Execution (LITEN), which connects a VLA
+low-level policy to a high-level VLM that conditions on past experiences by
+including them in-context, allowing it to learn the affordances and
+capabilities of the low-level VLA. Our approach iterates between a reasoning
+phase that generates and executes plans for the low-level VLA, and an
+assessment phase that reflects on the resulting execution and draws useful
+conclusions to be included in future reasoning contexts. Unlike similar
+approaches to self-refinement in non-robotics domains, LITEN must reflect on
+unstructured real-world robot trajectories (e.g., raw videos), which requires
+structured guiderails during assessment. Our experimental results demonstrate
+LITEN is able to effectively learn from past experience to generate plans that
+use high-affordance instructions to accomplish long-horizon tasks.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2510.19655v1' target='_blank'>LaViRA: Language-Vision-Robot Actions Translation for Zero-Shot Vision
+  Language Navigation in Continuous Environments</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Hongyu Ding, Ziming Xu, Yudong Fang, You Wu, Zixuan Chen, Jieqi Shi, Jing Huo, Yifan Zhang, Yang Gao</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-10-22 14:58:16</h6>
+<p class='card-text'>Zero-shot Vision-and-Language Navigation in Continuous Environments (VLN-CE)
+requires an agent to navigate unseen environments based on natural language
+instructions without any prior training. Current methods face a critical
+trade-off: either rely on environment-specific waypoint predictors that limit
+scene generalization, or underutilize the reasoning capabilities of large
+models during navigation. We introduce LaViRA, a simple yet effective zero-shot
+framework that addresses this dilemma by decomposing action into a
+coarse-to-fine hierarchy: Language Action for high-level planning, Vision
+Action for perceptual grounding, and Robot Action for robust navigation. This
+modular decomposition allows us to leverage the distinct strengths of different
+scales of Multimodal Large Language Models (MLLMs) at each stage, creating a
+system that is powerful in its reasoning, grounding and practical control.
+LaViRA significantly outperforms existing state-of-the-art methods on the
+VLN-CE benchmark, demonstrating superior generalization capabilities in unseen
+environments, while maintaining transparency and efficiency for real-world
+deployment.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2510.19654v1' target='_blank'>From Forecasting to Planning: Policy World Model for Collaborative
+  State-Action Prediction</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Zhida Zhao, Talas Fu, Yifan Wang, Lijun Wang, Huchuan Lu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-10-22 14:57:51</h6>
+<p class='card-text'>Despite remarkable progress in driving world models, their potential for
+autonomous systems remains largely untapped: the world models are mostly
+learned for world simulation and decoupled from trajectory planning. While
+recent efforts aim to unify world modeling and planning in a single framework,
+the synergistic facilitation mechanism of world modeling for planning still
+requires further exploration. In this work, we introduce a new driving paradigm
+named Policy World Model (PWM), which not only integrates world modeling and
+trajectory planning within a unified architecture, but is also able to benefit
+planning using the learned world knowledge through the proposed action-free
+future state forecasting scheme. Through collaborative state-action prediction,
+PWM can mimic the human-like anticipatory perception, yielding more reliable
+planning performance. To facilitate the efficiency of video forecasting, we
+further introduce a dynamically enhanced parallel token generation mechanism,
+equipped with a context-guided tokenizer and an adaptive dynamic focal loss.
+Despite utilizing only front camera input, our method matches or exceeds
+state-of-the-art approaches that rely on multi-view and multi-modal inputs.
+Code and model weights will be released at
+https://github.com/6550Zhao/Policy-World-Model.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2510.19623v1' target='_blank'>Learning and Simulating Building Evacuation Patterns for Enhanced Safety
+  Design Using Generative Models</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jin Han, Zhe Zheng, Yi Gu, Jia-Rui Lin, Xin-Zheng Lu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-10-22 14:20:00</h6>
+<p class='card-text'>Evacuation simulation is essential for building safety design, ensuring
+properly planned evacuation routes. However, traditional evacuation simulation
+relies heavily on refined modeling with extensive parameters, making it
+challenging to adopt such methods in a rapid iteration process in early design
+stages. Thus, this study proposes DiffEvac, a novel method to learn building
+evacuation patterns based on Generative Models (GMs), for efficient evacuation
+simulation and enhanced safety design. Initially, a dataset of 399 diverse
+functional layouts and corresponding evacuation heatmaps of buildings was
+established. Then, a decoupled feature representation is proposed to embed
+physical features like layouts and occupant density for GMs. Finally, a
+diffusion model based on image prompts is proposed to learn evacuation patterns
+from simulated evacuation heatmaps. Compared to existing research using
+Conditional GANs with RGB representation, DiffEvac achieves up to a 37.6%
+improvement in SSIM, 142% in PSNR, and delivers results 16 times faster,
+thereby cutting simulation time to 2 minutes. Case studies further demonstrate
+that the proposed method not only significantly enhances the rapid design
+iteration and adjustment process with efficient evacuation simulation but also
+offers new insights and technical pathways for future safety optimization in
+intelligent building design. The research implication is that the approach
+lowers the modeling burden, enables large-scale what-if exploration, and
+facilitates coupling with multi-objective design tools.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2510.19600v1' target='_blank'>Human-Agent Collaborative Paper-to-Page Crafting for Under $0.1</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Qianli Ma, Siyu Wang, Yilin Chen, Yinhao Tang, Yixiang Yang, Chang Guo, Bingjie Gao, Zhening Xing, Yanan Sun, Zhipeng Zhang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-10-22 13:53:57</h6>
+<p class='card-text'>In the quest for scientific progress, communicating research is as vital as
+the discovery itself. Yet, researchers are often sidetracked by the manual,
+repetitive chore of building project webpages to make their dense papers
+accessible. While automation has tackled static slides and posters, the
+dynamic, interactive nature of webpages has remained an unaddressed challenge.
+To bridge this gap, we reframe the problem, arguing that the solution lies not
+in a single command, but in a collaborative, hierarchical process. We introduce
+$\textbf{AutoPage}$, a novel multi-agent system that embodies this philosophy.
+AutoPage deconstructs paper-to-page creation into a coarse-to-fine pipeline
+from narrative planning to multimodal content generation and interactive
+rendering. To combat AI hallucination, dedicated "Checker" agents verify each
+step against the source paper, while optional human checkpoints ensure the
+final product aligns perfectly with the author's vision, transforming the
+system from a mere tool into a powerful collaborative assistant. To rigorously
+validate our approach, we also construct $\textbf{PageBench}$, the first
+benchmark for this new task. Experiments show AutoPage not only generates
+high-quality, visually appealing pages but does so with remarkable efficiency
+in under 15 minutes for less than \$0.1. Code and dataset will be released at
+$\href{https://mqleet.github.io/AutoPage_ProjectPage/}{Webpage}$.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2510.19594v1' target='_blank'>Exploring Synergies between Twinkle and Ariel: a Pilot Study</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Andrea Bocchieri, Luke Booth, Lorenzo V. Mugnai</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-10-22 13:44:38</h6>
+<p class='card-text'>Launching in 2027 and 2029, respectively, Twinkle and Ariel will conduct the
+first large-scale homogeneous spectroscopic surveys of the atmospheres of
+hundreds of diverse exoplanets. This will fundamentally transition the field to
+an era of population-level characterisation. In this pilot study, we aim to
+explore possible synergies between Twinkle and Ariel to determine for instance
+whether prior Twinkle observations can substantially inform the target
+selection and observing strategy of Ariel. This study primarily aims to
+encourage further investigation by both consortium communities by showing what
+a potential scientific synergy would look like on a promising scientific case
+that requires further exploration. For this aim, we select a small subset of
+"cool" planets that are also particularly well-suited to be observed by Twinkle
+and therefore Ariel. By using representative noise estimates for both missions,
+we compute the number of visits required for an observation. Then, we simulate
+and retrieve transmission spectra of each target, assuming gaseous,
+H2/He-dominated atmospheres and various atmospheric models. For all candidates,
+we find that atmospheric parameters are generally retrieved well within 1-sigma
+to input values, with Ariel typically achieving tighter constraints. We
+demonstrate that for a small subset of cool gaseous planets, exploitable
+synergies exist between Twinkle and Ariel observations and Twinkle may very
+well provide a vantage point to plan Ariel observations. The true extent of the
+potential synergies, far beyond our considered sample, will be determined by
+the final target lists. Once Twinkle is operational and its performance is
+known, it could reliably inform Ariel's target prioritization and Ariel's
+capabilities which are already well-established can help define optimal targets
+and observational approaches for Twinkle.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2510.19429v1' target='_blank'>NeSyPr: Neurosymbolic Proceduralization For Efficient Embodied Reasoning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Wonje Choi, Jooyoung Kim, Honguk Woo</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-10-22 09:57:02</h6>
+<p class='card-text'>We address the challenge of adopting language models (LMs) for embodied tasks
+in dynamic environments, where online access to large-scale inference engines
+or symbolic planners is constrained due to latency, connectivity, and resource
+limitations. To this end, we present NeSyPr, a novel embodied reasoning
+framework that compiles knowledge via neurosymbolic proceduralization, thereby
+equipping LM-based agents with structured, adaptive, and timely reasoning
+capabilities. In NeSyPr, task-specific plans are first explicitly generated by
+a symbolic tool leveraging its declarative knowledge. These plans are then
+transformed into composable procedural representations that encode the plans'
+implicit production rules, enabling the resulting composed procedures to be
+seamlessly integrated into the LM's inference process. This neurosymbolic
+proceduralization abstracts and generalizes multi-step symbolic structured
+path-finding and reasoning into single-step LM inference, akin to human
+knowledge compilation. It supports efficient test-time inference without
+relying on external symbolic guidance, making it well suited for deployment in
+latency-sensitive and resource-constrained physical systems. We evaluate NeSyPr
+on the embodied benchmarks PDDLGym, VirtualHome, and ALFWorld, demonstrating
+its efficient reasoning capabilities over large-scale reasoning models and a
+symbolic planner, while using more compact LMs.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2510.19405v1' target='_blank'>Designing Knowledge Tools: How Students Transition from Using to
+  Creating Generative AI in STEAM classroom</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Qian Huang, Nachamma Sockalingam, Thijs Willems, King Wang Poon</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-10-22 09:23:19</h6>
+<p class='card-text'>This study explores how graduate students in an urban planning program
+transitioned from passive users of generative AI to active creators of custom
+GPT-based knowledge tools. Drawing on Self-Determination Theory (SDT), which
+emphasizes the psychological needs of autonomy, competence, and relatedness as
+foundations for intrinsic motivation, the research investigates how the act of
+designing AI tools influences students' learning experiences, identity
+formation, and engagement with knowledge. The study is situated within a
+two-term curriculum, where students first used instructor-created GPTs to
+support qualitative research tasks and later redesigned these tools to create
+their own custom applications, including the Interview Companion GPT. Using
+qualitative thematic analysis of student slide presentations and focus group
+interviews, the findings highlight a marked transformation in students' roles
+and mindsets. Students reported feeling more autonomous as they chose the
+functionality, design, and purpose of their tools, more competent through the
+acquisition of AI-related skills such as prompt engineering and iterative
+testing, and more connected to peers through team collaboration and a shared
+sense of purpose. The study contributes to a growing body of evidence that
+student agency can be powerfully activated when learners are invited to
+co-design the very technologies they use. The shift from AI tool users to AI
+tool designers reconfigures students' relationships with technology and
+knowledge, transforming them from consumers into co-creators in an evolving
+educational landscape.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2510.19372v1' target='_blank'>On the hardness of RL with Lookahead</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Corentin Pla, Hugo Richard, Marc Abeille, Nadav Merlis, Vianney Perchet</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-10-22 08:47:18</h6>
+<p class='card-text'>We study reinforcement learning (RL) with transition look-ahead, where the
+agent may observe which states would be visited upon playing any sequence of
+$\ell$ actions before deciding its course of action. While such predictive
+information can drastically improve the achievable performance, we show that
+using this information optimally comes at a potentially prohibitive
+computational cost. Specifically, we prove that optimal planning with one-step
+look-ahead ($\ell=1$) can be solved in polynomial time through a novel linear
+programming formulation. In contrast, for $\ell \geq 2$, the problem becomes
+NP-hard. Our results delineate a precise boundary between tractable and
+intractable cases for the problem of planning with transition look-ahead in
+reinforcement learning.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2510.19363v1' target='_blank'>LoongRL:Reinforcement Learning for Advanced Reasoning over Long Contexts</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Siyuan Wang, Gaokai Zhang, Li Lyna Zhang, Ning Shang, Fan Yang, Dongyao Chen, Mao Yang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-10-22 08:35:28</h6>
+<p class='card-text'>Reasoning over long contexts is essential for large language models. While
+reinforcement learning (RL) enhances short-context reasoning by inducing "Aha"
+moments in chain-of-thought, the advanced thinking patterns required for
+long-context reasoning remain largely unexplored, and high-difficulty RL data
+are scarce. In this paper, we introduce LoongRL, a data-driven RL method for
+advanced long-context reasoning. Central to LoongRL is KeyChain, a synthesis
+approach that transforms short multi-hop QA into high-difficulty long-context
+tasks by inserting UUID chains that hide the true question among large
+collections of distracting documents. Solving these tasks requires the model to
+trace the correct chain step-by-step, identify the true question, retrieve
+relevant facts and reason over them to answer correctly. RL training on
+KeyChain data induces an emergent plan-retrieve-reason-recheck reasoning
+pattern that generalizes far beyond training length. Models trained at 16K
+effectively solve 128K tasks without prohibitive full-length RL rollout costs.
+On Qwen2.5-7B and 14B, LoongRL substantially improves long-context multi-hop QA
+accuracy by +23.5% and +21.1% absolute gains. The resulting LoongRL-14B reaches
+a score of 74.2, rivaling much larger frontier models such as o3-mini (74.5)
+and DeepSeek-R1 (74.9). It also improves long-context retrieval, passes all
+128K needle-in-a-haystack stress tests, and preserves short-context reasoning
+capabilities.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2510.19268v1' target='_blank'>Hierarchical DLO Routing with Reinforcement Learning and In-Context
+  Vision-language Models</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Mingen Li, Houjian Yu, Yixuan Huang, Youngjin Hong, Changhyun Choi</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-10-22 05:57:23</h6>
+<p class='card-text'>Long-horizon routing tasks of deformable linear objects (DLOs), such as
+cables and ropes, are common in industrial assembly lines and everyday life.
+These tasks are particularly challenging because they require robots to
+manipulate DLO with long-horizon planning and reliable skill execution.
+Successfully completing such tasks demands adapting to their nonlinear
+dynamics, decomposing abstract routing goals, and generating multi-step plans
+composed of multiple skills, all of which require accurate high-level reasoning
+during execution. In this paper, we propose a fully autonomous hierarchical
+framework for solving challenging DLO routing tasks. Given an implicit or
+explicit routing goal expressed in language, our framework leverages
+vision-language models~(VLMs) for in-context high-level reasoning to synthesize
+feasible plans, which are then executed by low-level skills trained via
+reinforcement learning. To improve robustness in long horizons, we further
+introduce a failure recovery mechanism that reorients the DLO into
+insertion-feasible states. Our approach generalizes to diverse scenes involving
+object attributes, spatial descriptions, as well as implicit language commands.
+It outperforms the next best baseline method by nearly 50% and achieves an
+overall success rate of 92.5% across long-horizon routing scenarios.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2510.19213v1' target='_blank'>AI in Proton Therapy Treatment Planning: A Review</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yuzhen Ding, Hongying Feng, Martin Bues, Mirek Fatyga, Tianming Liu, Thomas J. Whitaker, Haibo Lin, Nancy Y. Lee, Charles B. Simone II, Samir H. Patel, Daniel J. Ma, Steven J. Frank, Sujay A. Vora, Jonathan A. Ashman, Wei Liu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-10-22 03:48:52</h6>
+<p class='card-text'>Purpose: Proton therapy provides superior dose conformity compared to photon
+therapy, but its treatment planning is challenged by sensitivity to anatomical
+changes, setup/range uncertainties, and computational complexity. This review
+evaluates the role of artificial intelligence (AI) in improving proton therapy
+treatment planning. Materials and methods: Recent studies on AI applications in
+image reconstruction, image registration, dose calculation, plan optimization,
+and quality assessment were reviewed and summarized by application domain and
+validation strategy. Results: AI has shown promise in automating contouring,
+enhancing imaging for dose calculation, predicting dose distributions, and
+accelerating robust optimization. These methods reduce manual workload, improve
+efficiency, and support more personalized planning and adaptive planning.
+Limitations include data scarcity, model generalizability, and clinical
+integration. Conclusion: AI is emerging as a key enabler of efficient,
+consistent, and patient-specific proton therapy treatment planning. Addressing
+challenges in validation and implementation will be essential for its
+translation into routine clinical practice.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2510.19128v1' target='_blank'>A Cross-Environment and Cross-Embodiment Path Planning Framework via a
+  Conditional Diffusion Model</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Mehran Ghafarian Tamizi, Homayoun Honari, Amir Mehdi Soufi Enayati, Aleksey Nozdryn-Plotnicki, Homayoun Najjaran</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-10-21 23:30:14</h6>
+<p class='card-text'>Path planning for a robotic system in high-dimensional cluttered environments
+needs to be efficient, safe, and adaptable for different environments and
+hardware. Conventional methods face high computation time and require extensive
+parameter tuning, while prior learning-based methods still fail to generalize
+effectively. The primary goal of this research is to develop a path planning
+framework capable of generalizing to unseen environments and new robotic
+manipulators without the need for retraining. We present GADGET (Generalizable
+and Adaptive Diffusion-Guided Environment-aware Trajectory generation), a
+diffusion-based planning model that generates joint-space trajectories
+conditioned on voxelized scene representations as well as start and goal
+configurations. A key innovation is GADGET's hybrid dual-conditioning mechanism
+that combines classifier-free guidance via learned scene encoding with
+classifier-guided Control Barrier Function (CBF) safety shaping, integrating
+environment awareness with real-time collision avoidance directly in the
+denoising process. This design supports zero-shot transfer to new environments
+and robotic embodiments without retraining. Experimental results show that
+GADGET achieves high success rates with low collision intensity in
+spherical-obstacle, bin-picking, and shelf environments, with CBF guidance
+further improving safety. Moreover, comparative evaluations indicate strong
+performance relative to both sampling-based and learning-based baselines.
+Furthermore, GADGET provides transferability across Franka Panda, Kinova Gen3
+(6/7-DoF), and UR5 robots, and physical execution on a Kinova Gen3 demonstrates
+its ability to generate safe, collision-free trajectories in real-world
+settings.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2510.19096v1' target='_blank'>High Contrast Transmission and Fabry-Pérot-type Resonances</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Long Li, Mourad Sini</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-10-21 21:42:25</h6>
+<p class='card-text'>It is well known, in the acoustic model, that highly contrasting transmission
+leads to the so-called Minnaert subwavelength resonance. In this work, we show
+that such highly contrasting transmissions create not only one resonance but a
+family of infinite resonances located near the real axis where the first one
+(i.e. the smallest) is indeed the Minnaert one. This family of resonances are
+the shifts (in the lower complex plan) of the Neumann eigenvalues of the
+Laplacian. The well known Minneart resonance is nothing but the shift of the
+trivial (zero) Neumann eigenvalue of the bubble. These resonances, other than
+the Minnaert ones, are Fabry-P\'erot-type resonances as the generated total
+fields, in the bubble, are dominated by a linear combination of the Neumann
+eigenfunctions which, in particular, might create interferences. In addition,
+we establish the following properties.
+  1. We derive the asymptotic expansions, at the second order, of this family
+of resonances in terms of the contrasting coefficient.
+  2. In the time-harmonic regime, we derive the resolvent estimates of the
+related Hamiltonian and the asymptotics of scattered fields that are uniform in
+the whole space, highlighting the contributions from this sequence of
+resonances.
+  3. In the time domain regime, we derive the time behavior of the acoustic
+microresonator at large time-scales inversely proportional to powers of
+microresonator's radius.
+  4. The analysis shows that near Fabry-P\'erot resonances, the mircoresonator
+exhibits pronounced anisotropy. We believe that such a feature may pave the way
+for designing anisotropic metamaterials from simple configurations of a single
+microresonator.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2510.19077v1' target='_blank'>Simulation-Guided Planning of a Target Trial Emulated Cluster Randomized
+  Trial for Mass Small-Quantity Lipid Nutrient Supplementation Combined with
+  Expanded Program on Immunization in Rural Niger</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Rebecca K. Metcalfe, Nathaniel Dyrkton, Yichen Yan, Shomoita Alam, Susan Shepherd, Ibrahim Sana, Kevin Phelan, Jay JH Park</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-10-21 21:05:48</h6>
+<p class='card-text'>While target trial emulation (TTE) is increasingly used to improve the
+analysis of non-randomized studies by applying trial design principles, TTE
+applications to emulate cluster randomized trials (RCTs) have been limited. We
+performed simulations to prospectively plan data collection of a non-randomized
+study intended to emulate a village-level cluster RCT when
+cluster-randomization was infeasible. The planned study will assess the impact
+of mass distribution of nutritional supplements embedded within an existing
+immunization program to improve pentavalent vaccination rates among children
+12-24 months old in Niger. The design included covariate-constrained random
+selection of villages for outcome ascertainment at follow-up. Simulations used
+baseline census data on pentavalent vaccination rates and cluster-level
+covariates to compare the type I error rate and power of four statistical
+methods: beta-regression; quasi-binomial regression; inverse probability of
+treatment weighting (IPTW); and na\"ive Wald test. Of these methods, only IPTW
+and beta-regression controlled the type I error rate at 0.05, but IPTW yielded
+poor statistical power. Beta-regression, which showed adequate statistical
+power, was chosen as our primary analysis. Adopting simulation-guided design
+principles within TTE can enable robust planning of a group-level
+non-randomized study emulating a cluster RCT. Lessons from this study also
+apply to TTE planning of individually-RCTs.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2510.19074v1' target='_blank'>Sample-Based Hybrid Mode Control: Asymptotically Optimal Switching of
+  Algorithmic and Non-Differentiable Control Modes</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yilang Liu, Haoxiang You, Ian Abraham</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-10-21 20:58:10</h6>
+<p class='card-text'>This paper investigates a sample-based solution to the hybrid mode control
+problem across non-differentiable and algorithmic hybrid modes. Our approach
+reasons about a set of hybrid control modes as an integer-based optimization
+problem where we select what mode to apply, when to switch to another mode, and
+the duration for which we are in a given control mode. A sample-based variation
+is derived to efficiently search the integer domain for optimal solutions. We
+find our formulation yields strong performance guarantees that can be applied
+to a number of robotics-related tasks. In addition, our approach is able to
+synthesize complex algorithms and policies to compound behaviors and achieve
+challenging tasks. Last, we demonstrate the effectiveness of our approach in
+real-world robotic examples that require reactive switching between long-term
+planning and high-frequency control.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2510.19058v1' target='_blank'>Convex Maneuver Planning for Spacecraft Collision Avoidance</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Fausto Vega, Jon Arrizabalaga, Ryan Watson, Zachary Manchester</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-10-21 20:18:55</h6>
+<p class='card-text'>Conjunction analysis and maneuver planning for spacecraft collision avoidance
+remains a manual and time-consuming process, typically involving repeated
+forward simulations of hand-designed maneuvers. With the growing density of
+satellites in low-Earth orbit (LEO), autonomy is becoming essential for
+efficiently evaluating and mitigating collisions. In this work, we present an
+algorithm to design low-thrust collision-avoidance maneuvers for short-term
+conjunction events. We first formulate the problem as a nonconvex
+quadratically-constrained quadratic program (QCQP), which we then relax into a
+convex semidefinite program (SDP) using Shor's relaxation. We demonstrate
+empirically that the relaxation is tight, which enables the recovery of
+globally optimal solutions to the original nonconvex problem. Our formulation
+produces a minimum-energy solution while ensuring a desired probability of
+collision at the time of closest approach. Finally, if the desired probability
+of collision cannot be satisfied, we relax this constraint into a penalty,
+yielding a minimum-risk solution. We validate our algorithm with a
+high-fidelity simulation of a satellite conjunction in low-Earth orbit with a
+simulated conjunction data message (CDM), demonstrating its effectiveness in
+reducing collision risk.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2510.19057v1' target='_blank'>Macroscopic EEG Reveals Discriminative Low-Frequency Oscillations in
+  Plan-to-Grasp Visuomotor Tasks</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Anna Cetera, Sima Ghafoori, Ali Rabiee, Mohammad Hassan Farhadi, Yalda Shahriari, Reza Abiri</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-10-21 20:17:33</h6>
+<p class='card-text'>The vision-based grasping brain network integrates visual perception with
+cognitive and motor processes for visuomotor tasks. While invasive recordings
+have successfully decoded localized neural activity related to grasp type
+planning and execution, macroscopic neural activation patterns captured by
+noninvasive electroencephalography (EEG) remain far less understood. We
+introduce a novel vision-based grasping platform to investigate
+grasp-type-specific (precision, power, no-grasp) neural activity across
+large-scale brain networks using EEG neuroimaging. The platform isolates
+grasp-specific planning from its associated execution phases in naturalistic
+visuomotor tasks, where the Filter-Bank Common Spatial Pattern (FBCSP)
+technique was designed to extract discriminative frequency-specific features
+within each phase. Support vector machine (SVM) classification discriminated
+binary (precision vs. power, grasp vs. no-grasp) and multiclass (precision vs.
+power vs. no-grasp) scenarios for each phase, and were compared against
+traditional Movement-Related Cortical Potential (MRCP) methods. Low-frequency
+oscillations (0.5-8 Hz) carry grasp-related information established during
+planning and maintained throughout execution, with consistent classification
+performance across both phases (75.3-77.8\%) for precision vs. power
+discrimination, compared to 61.1\% using MRCP. Higher-frequency activity (12-40
+Hz) showed phase-dependent results with 93.3\% accuracy for grasp vs. no-grasp
+classification but 61.2\% for precision vs. power discrimination. Feature
+importance using SVM coefficients identified discriminative features within
+frontoparietal networks during planning and motor networks during execution.
+This work demonstrated the role of low-frequency oscillations in decoding grasp
+type during planning using noninvasive EEG.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2510.19054v1' target='_blank'>Motion Planning and Control of an Overactuated 4-Wheel Drive with
+  Constrained Independent Steering</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Shiyu Liu, Ilija Hadzic, Akshay Gupta, Aliasghar Arab</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-10-21 20:12:42</h6>
+<p class='card-text'>This paper addresses motion planning and con- trol of an overactuated 4-wheel
+drive train with independent steering (4WIS) where mechanical constraints
+prevent the wheels from executing full 360-degree rotations (swerve). The
+configuration space of such a robot is constrained and contains discontinuities
+that affect the smoothness of the robot motion. We introduce a mathematical
+formulation of the steering constraints and derive discontinuity planes that
+partition the velocity space into regions of smooth and efficient motion. We
+further design the motion planner for path tracking and ob- stacle avoidance
+that explicitly accounts for swerve constraints and the velocity transition
+smoothness. The motion controller uses local feedback to generate actuation
+from the desired velocity, while properly handling the discontinuity crossing
+by temporarily stopping the motion and repositioning the wheels. We implement
+the proposed motion planner as an extension to ROS Navigation package and
+evaluate the system in simulation and on a physical robot.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2510.19048v1' target='_blank'>REPAIR Approach for Social-based City Reconstruction Planning in case of
+  natural disasters</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Ghulam Mudassir, Antinisca Di Marco, Giordano d'Aloisio</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-10-21 20:05:18</h6>
+<p class='card-text'>Natural disasters always have several effects on human lives. It is
+challenging for governments to tackle these incidents and to rebuild the
+economic, social and physical infrastructures and facilities with the available
+resources (mainly budget and time). Governments always define plans and
+policies according to the law and political strategies that should maximise
+social benefits. The severity of damage and the vast resources needed to bring
+life back to normality make such reconstruction a challenge. This article is
+the extension of our previously published work by conducting comprehensive
+comparative analysis by integrating additional deep learning models plus random
+agent which is used as a baseline. Our prior research introduced a decision
+support system by using the Deep Reinforcement Learning technique for the
+planning of post-disaster city reconstruction, maximizing the social benefit of
+the reconstruction process, considering available resources, meeting the needs
+of the broad community stakeholders (like citizens' social benefits and
+politicians' priorities) and keeping in consideration city's structural
+constraints (like dependencies among roads and buildings). The proposed
+approach, named post disaster REbuilding plAn ProvIdeR (REPAIR) is generic. It
+can determine a set of alternative plans for local administrators who select
+the ideal one to implement, and it can be applied to areas of any extension. We
+show the application of REPAIR in a real use case, i.e., to the L'Aquila
+reconstruction process, damaged in 2009 by a major earthquake.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2510.19035v1' target='_blank'>Extending Resource Constrained Project Scheduling to Mega-Projects with
+  Model-Based Systems Engineering & Hetero-functional Graph Theory</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Amirreza Hosseini, Amro M. Farid</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-10-21 19:26:00</h6>
+<p class='card-text'>Within the project management context, project scheduling serves as an
+indispensable component, functioning as a fundamental tool for planning,
+monitoring, controlling, and managing projects more broadly. Although the
+resource-constrained project scheduling problem (RCPSP) lies at the core of
+project management activities, it remains largely disconnected from the broader
+literature on model-based systems engineering (MBSE), thereby limiting its
+integration into the design and management of complex systems. The original
+contribution of this paper is twofold. First, the paper seeks to reconcile the
+RCPSP with the broader literature and vocabulary of model-based systems
+engineering and hetero-functional graph theory (HFGT). A concrete translation
+pipeline from an activity-on-node network to a SysML activity diagram, and then
+to an operand net is constructed. Using this representation, it specializes the
+hetero-functional network minimum-cost flow (HFNMCF) formulation to the RCPSP
+context as a systematic means of HFGT for quantitative analysis and proves that
+the RCPSP is recoverable as a special case of a broader model. Secondly, on an
+illustrative instance with renewable and non-renewable operands, the
+specialized HFNMCF, while producing similar schedules, yields explicit
+explanations of the project states that enable richer monitoring and control.
+Overall, the framework preserves the strengths of the classical RCPSP while
+accommodating real-world constraints and enterprise-level decision processes
+encountered in large, complex megaprojects.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2510.18999v1' target='_blank'>$\nabla$-SDF: Learning Euclidean Signed Distance Functions Online with
+  Gradient-Augmented Octree Interpolation and Neural Residual</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Zhirui Dai, Qihao Qian, Tianxing Fan, Nikolay Atanasov</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-10-21 18:24:45</h6>
+<p class='card-text'>Estimation of signed distance functions (SDFs) from point cloud data has been
+shown to benefit many robot autonomy capabilities, including localization,
+mapping, motion planning, and control. Methods that support online and
+large-scale SDF reconstruction tend to rely on discrete volumetric data
+structures, which affect the continuity and differentiability of the SDF
+estimates. Recently, using implicit features, neural network methods have
+demonstrated high-fidelity and differentiable SDF reconstruction but they tend
+to be less efficient, can experience catastrophic forgetting and memory
+limitations in large environments, and are often restricted to truncated SDFs.
+This work proposes $\nabla$-SDF, a hybrid method that combines an explicit
+prior obtained from gradient-augmented octree interpolation with an implicit
+neural residual. Our method achieves non-truncated (Euclidean) SDF
+reconstruction with computational and memory efficiency comparable to
+volumetric methods and differentiability and accuracy comparable to neural
+network methods. Extensive experiments demonstrate that \methodname{}
+outperforms the state of the art in terms of accuracy and efficiency, providing
+a scalable solution for downstream tasks in robotics and computer vision.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2510.18996v1' target='_blank'>SHRUMS: Sensor Hallucination for Real-time Underwater Motion Planning
+  with a Compact 3D Sonar</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Susheel Vadakkekuruppath, Herman B. Amundsen, Jason M. O'Kane, Marios Xanthidis</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-10-21 18:21:03</h6>
+<p class='card-text'>Autonomous navigation in 3D is a fundamental problem for autonomy. Despite
+major advancements in terrestrial and aerial settings due to improved range
+sensors including LiDAR, compact sensors with similar capabilities for
+underwater robots have only recently become available, in the form of 3D
+sonars. This paper introduces a novel underwater 3D navigation pipeline, called
+SHRUMS (Sensor Hallucination for Robust Underwater Motion planning with 3D
+Sonar). To the best of the authors' knowledge, SHRUMS is the first underwater
+autonomous navigation stack to integrate a 3D sonar. The proposed pipeline
+exhibits strong robustness while operating in complex 3D environments in spite
+of extremely poor visibility conditions. To accommodate the intricacies of the
+novel sensor data stream while achieving real-time locally optimal performance,
+SHRUMS introduces the concept of hallucinating sensor measurements from
+non-existent sensors with convenient arbitrary parameters, tailored to
+application specific requirements. The proposed concepts are validated with
+real 3D sonar sensor data, utilizing real inputs in challenging settings and
+local maps constructed in real-time. Field deployments validating the proposed
+approach in full are planned in the very near future.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2510.18935v1' target='_blank'>Dimensionality Reduction for Remote Sensing Data Analysis: A Systematic
+  Review of Methods and Applications</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Nathan Mankovich, Kai-Hendrik Cohrs, Homer Durand, Vasileios Sitokonstantinou, Tristan Williams, Gustau Camps-Valls</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-10-21 17:45:28</h6>
+<p class='card-text'>Earth observation involves collecting, analyzing, and processing an
+ever-growing mass of data. Automatically harvesting information is crucial for
+addressing significant societal, economic, and environmental challenges,
+ranging from environmental monitoring to urban planning and disaster
+management. However, the high dimensionality of these data poses challenges in
+terms of sparsity, inefficiency, and the curse of dimensionality, which limits
+the effectiveness of machine learning models. Dimensionality reduction (DR)
+techniques, specifically feature extraction, address these challenges by
+preserving essential data properties while reducing complexity and enhancing
+tasks such as data compression, cleaning, fusion, visualization, anomaly
+detection, and prediction. This review provides a handbook for leveraging DR
+across the RS data value chain and identifies opportunities for under-explored
+DR algorithms and their application in future research.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2510.18818v1' target='_blank'>Comparison of Simulation-Guided Design to Closed-Form Power Calculations
+  in Planning a Cluster Randomized Trial with Covariate-Constrained
+  Randomization: A Case Study in Rural Chad</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jay JH Park, Rebecca K. Metcalfe, Nathaniel Dyrkton, Yichen Yan, Shomoita Alam, Kevin Phelan, Ibrahim Sana, Susan Shepherd</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-10-21 17:18:35</h6>
+<p class='card-text'>Current practices for designing cluster-randomized trials (cRCTs) typically
+rely on closed-form formulas for power calculations. For cRCTs using
+covariate-constrained randomization, the utility of conventional calculations
+might be limited, particularly when data is nested. We compared
+simulation-based planning of a nested cRCT using covariate-constrained
+randomization to conventional power calculations using OptiMAx-Chad as a case
+study. OptiMAx-Chad will examine the impact of embedding mass distribution of
+small-quantity lipid-based nutrient supplements within an expanded programme on
+immunization on first-dose measles-containing vaccine (MCV1) coverage among
+children aged 12-24 months in rural villages in Ngouri. Within the 12 health
+areas to be randomized, a random subset of villages will be selected for
+outcome collection. 1,000,000 assignments of health areas with different
+possible village selections were generated using covariate-constrained
+randomization to balance baseline village characteristics. The empirically
+estimated intracluster correlation coefficient (ICC) and the World Health
+Organization (WHO) recommended values of 1/3 and 1/6 were considered. The
+desired operating characteristics were 80% power at 0.05 one-sided type I error
+rate. Using conventional calculations target power for a realistic treatment
+effect could not be achieved with the WHO recommended values. Conventional
+calculations also showed a plateau in power after a certain cluster size. Our
+simulations matched the design of OptiMAx-Chad with covariate adjustment and
+random selection, and showed that power did not plateau. Instead, power
+increased with increasing cluster size. Planning complex cRCTs with covariate
+constrained randomization and a multi-nested data structure with conventional
+closed-form formulas can be misleading. Simulations can improve the planning of
+cRCTs.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2510.18773v1' target='_blank'>Detection and Simulation of Urban Heat Islands Using a Fine-Tuned
+  Geospatial Foundation Model for Microclimate Impact Prediction</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jannis Fleckenstein, David Kreismann, Tamara Rosemary Govindasamy, Thomas Brunschwiler, Etienne Vos, Mattia Rigotti</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-10-21 16:21:15</h6>
+<p class='card-text'>As urbanization and climate change progress, urban heat island effects are
+becoming more frequent and severe. To formulate effective mitigation plans,
+cities require detailed air temperature data, yet conventional machine learning
+models with limited data often produce inaccurate predictions, particularly in
+underserved areas. Geospatial foundation models trained on global unstructured
+data offer a promising alternative by demonstrating strong generalization and
+requiring only minimal fine-tuning. In this study, an empirical ground truth of
+urban heat patterns is established by quantifying cooling effects from green
+spaces and benchmarking them against model predictions to evaluate the model's
+accuracy. The foundation model is subsequently fine-tuned to predict land
+surface temperatures under future climate scenarios, and its practical value is
+demonstrated through a simulated inpainting that highlights its role for
+mitigation support. The results indicate that foundation models offer a
+powerful way for evaluating urban heat island mitigation strategies in
+data-scarce regions to support more climate-resilient cities.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js'></script>
+</body>
+</html>
