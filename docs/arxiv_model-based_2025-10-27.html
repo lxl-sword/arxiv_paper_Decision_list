@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>model-based - 2025-10-27</title>
+<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap' rel='stylesheet'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css'>
+<style>
+body {
+font-family: 'Roboto', sans-serif;
+background-color: #f5f7fa;
+padding: 20px;
+}
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.card-title {
+    font-weight: 700;
+}
+.card:hover {
+    transform: scale(1.02);
+    transition: 0.3s ease-in-out;
+}
+</style>
+</head>
+<body>
+<div class='container'>
+<h1 class='text-center my-4'><i class='fas fa-book'></i>model-based - 2025-10-27</h1>
+<div class='row'>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2510.11501v1' target='_blank'>Context-Aware Model-Based Reinforcement Learning for Autonomous Racing</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Emran Yasser Moustafa, Ivana Dusparic</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-10-13 15:09:09</h6>
+<p class='card-text'>Autonomous vehicles have shown promising potential to be a groundbreaking
+technology for improving the safety of road users. For these vehicles, as well
+as many other safety-critical robotic technologies, to be deployed in
+real-world applications, we require algorithms that can generalize well to
+unseen scenarios and data. Model-based reinforcement learning algorithms (MBRL)
+have demonstrated state-of-the-art performance and data efficiency across a
+diverse set of domains. However, these algorithms have also shown
+susceptibility to changes in the environment and its transition dynamics.
+  In this work, we explore the performance and generalization capabilities of
+MBRL algorithms for autonomous driving, specifically in the simulated
+autonomous racing environment, Roboracer (formerly F1Tenth). We frame the
+head-to-head racing task as a learning problem using contextual Markov decision
+processes and parameterize the driving behavior of the adversaries using the
+context of the episode, thereby also parameterizing the transition and reward
+dynamics. We benchmark the behavior of MBRL algorithms in this environment and
+propose a novel context-aware extension of the existing literature, cMask. We
+demonstrate that context-aware MBRL algorithms generalize better to
+out-of-distribution adversary behaviors relative to context-free approaches. We
+also demonstrate that cMask displays strong generalization capabilities, as
+well as further performance improvement relative to other context-aware MBRL
+approaches when racing against adversaries with in-distribution behaviors.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2510.09036v1' target='_blank'>iMoWM: Taming Interactive Multi-Modal World Model for Robotic
+  Manipulation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Chuanrui Zhang, Zhengxian Wu, Guanxing Lu, Yansong Tang, Ziwei Wang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-10-10 06:15:42</h6>
+<p class='card-text'>Learned world models hold significant potential for robotic manipulation, as
+they can serve as simulator for real-world interactions. While extensive
+progress has been made in 2D video-based world models, these approaches often
+lack geometric and spatial reasoning, which is essential for capturing the
+physical structure of the 3D world. To address this limitation, we introduce
+iMoWM, a novel interactive world model designed to generate color images, depth
+maps, and robot arm masks in an autoregressive manner conditioned on actions.
+To overcome the high computational cost associated with three-dimensional
+information, we propose MMTokenizer, which unifies multi-modal inputs into a
+compact token representation. This design enables iMoWM to leverage large-scale
+pretrained VideoGPT models while maintaining high efficiency and incorporating
+richer physical information. With its multi-modal representation, iMoWM not
+only improves the visual quality of future predictions but also serves as an
+effective simulator for model-based reinforcement learning (MBRL) and
+facilitates real-world imitation learning. Extensive experiments demonstrate
+the superiority of iMoWM across these tasks, showcasing the advantages of
+multi-modal world modeling for robotic manipulation. Homepage:
+https://xingyoujun.github.io/imowm/</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2510.04280v1' target='_blank'>A KL-regularization framework for learning to plan with adaptive priors</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Álvaro Serra-Gomez, Daniel Jarne Ornia, Dhruva Tirumala, Thomas Moerland</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-10-05 16:45:38</h6>
+<p class='card-text'>Effective exploration remains a central challenge in model-based
+reinforcement learning (MBRL), particularly in high-dimensional continuous
+control tasks where sample efficiency is crucial. A prominent line of recent
+work leverages learned policies as proposal distributions for Model-Predictive
+Path Integral (MPPI) planning. Initial approaches update the sampling policy
+independently of the planner distribution, typically maximizing a learned value
+function with deterministic policy gradient and entropy regularization.
+However, because the states encountered during training depend on the MPPI
+planner, aligning the sampling policy with the planner improves the accuracy of
+value estimation and long-term performance. To this end, recent methods update
+the sampling policy by minimizing KL divergence to the planner distribution or
+by introducing planner-guided regularization into the policy update. In this
+work, we unify these MPPI-based reinforcement learning methods under a single
+framework by introducing Policy Optimization-Model Predictive Control (PO-MPC),
+a family of KL-regularized MBRL methods that integrate the planner's action
+distribution as a prior in policy optimization. By aligning the learned policy
+with the planner's behavior, PO-MPC allows more flexibility in the policy
+updates to trade off Return maximization and KL divergence minimization. We
+clarify how prior approaches emerge as special cases of this family, and we
+explore previously unstudied variations. Our experiments show that these
+extended configurations yield significant performance improvements, advancing
+the state of the art in MPPI-based RL.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2509.24804v1' target='_blank'>DyMoDreamer: World Modeling with Dynamic Modulation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Boxuan Zhang, Runqing Wang, Wei Xiao, Weipu Zhang, Jian Sun, Gao Huang, Jie Chen, Gang Wang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-09-29 13:54:42</h6>
+<p class='card-text'>A critical bottleneck in deep reinforcement learning (DRL) is sample
+inefficiency, as training high-performance agents often demands extensive
+environmental interactions. Model-based reinforcement learning (MBRL) mitigates
+this by building world models that simulate environmental dynamics and generate
+synthetic experience, improving sample efficiency. However, conventional world
+models process observations holistically, failing to decouple dynamic objects
+and temporal features from static backgrounds. This approach is computationally
+inefficient, especially for visual tasks where dynamic objects significantly
+influence rewards and decision-making performance. To address this, we
+introduce DyMoDreamer, a novel MBRL algorithm that incorporates a dynamic
+modulation mechanism to improve the extraction of dynamic features and enrich
+the temporal information. DyMoDreamer employs differential observations derived
+from a novel inter-frame differencing mask, explicitly encoding object-level
+motion cues and temporal dynamics. Dynamic modulation is modeled as stochastic
+categorical distributions and integrated into a recurrent state-space model
+(RSSM), enhancing the model's focus on reward-relevant dynamics. Experiments
+demonstrate that DyMoDreamer sets a new state-of-the-art on the Atari $100$k
+benchmark with a $156.6$\% mean human-normalized score, establishes a new
+record of $832$ on the DeepMind Visual Control Suite, and gains a $9.5$\%
+performance improvement after $1$M steps on the Crafter benchmark. Our code is
+released at https://github.com/Ultraman-Tiga1/DyMoDreamer.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2509.13095v2' target='_blank'>Empowering Multi-Robot Cooperation via Sequential World Models</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Zijie Zhao, Honglei Guo, Shengqian Chen, Kaixuan Xu, Bo Jiang, Yuanheng Zhu, Dongbin Zhao</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-09-16 13:52:30</h6>
+<p class='card-text'>Model-based reinforcement learning (MBRL) has shown significant potential in
+robotics due to its high sample efficiency and planning capability. However,
+extending MBRL to multi-robot cooperation remains challenging due to the
+complexity of joint dynamics and the reliance on synchronous communication.
+SeqWM employs independent, autoregressive agent-wise world models to represent
+joint dynamics, where each agent generates its future trajectory and plans its
+actions based on the predictions of its predecessors. This design lowers
+modeling complexity, alleviates the reliance on communication synchronization,
+and enables the emergence of advanced cooperative behaviors through explicit
+intention sharing. Experiments in challenging simulated environments
+(Bi-DexHands and Multi-Quad) demonstrate that SeqWM outperforms existing
+state-of-the-art model-based and model-free baselines in both overall
+performance and sample efficiency, while exhibiting advanced cooperative
+behaviors such as predictive adaptation, temporal alignment, and role division.
+Furthermore, SeqWM has been success fully deployed on physical quadruped
+robots, demonstrating its effectiveness in real-world multi-robot systems.
+Demos and code are available at: https://sites.google.com/view/seqwm-marl</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2509.12531v1' target='_blank'>Pre-trained Visual Representations Generalize Where it Matters in
+  Model-Based Reinforcement Learning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Scott Jones, Liyou Zhou, Sebastian W. Pattinson</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-09-16 00:13:14</h6>
+<p class='card-text'>In visuomotor policy learning, the control policy for the robotic agent is
+derived directly from visual inputs. The typical approach, where a policy and
+vision encoder are trained jointly from scratch, generalizes poorly to novel
+visual scene changes. Using pre-trained vision models (PVMs) to inform a policy
+network improves robustness in model-free reinforcement learning (MFRL). Recent
+developments in Model-based reinforcement learning (MBRL) suggest that MBRL is
+more sample-efficient than MFRL. However, counterintuitively, existing work has
+found PVMs to be ineffective in MBRL. Here, we investigate PVM's effectiveness
+in MBRL, specifically on generalization under visual domain shifts. We show
+that, in scenarios with severe shifts, PVMs perform much better than a baseline
+model trained from scratch. We further investigate the effects of varying
+levels of fine-tuning of PVMs. Our results show that partial fine-tuning can
+maintain the highest average task performance under the most extreme
+distribution shifts. Our results demonstrate that PVMs are highly successful in
+promoting robustness in visual policy learning, providing compelling evidence
+for their wider adoption in model-based robotic learning applications.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2509.06296v1' target='_blank'>Learning to Walk with Less: a Dyna-Style Approach to Quadrupedal
+  Locomotion</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Francisco Affonso, Felipe Andrade G. Tommaselli, Juliano Negri, Vivian S. Medeiros, Mateus V. Gasparino, Girish Chowdhary, Marcelo Becker</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-09-08 02:48:23</h6>
+<p class='card-text'>Traditional RL-based locomotion controllers often suffer from low data
+efficiency, requiring extensive interaction to achieve robust performance. We
+present a model-based reinforcement learning (MBRL) framework that improves
+sample efficiency for quadrupedal locomotion by appending synthetic data to the
+end of standard rollouts in PPO-based controllers, following the Dyna-Style
+paradigm. A predictive model, trained alongside the policy, generates
+short-horizon synthetic transitions that are gradually integrated using a
+scheduling strategy based on the policy update iterations. Through an ablation
+study, we identified a strong correlation between sample efficiency and rollout
+length, which guided the design of our experiments. We validated our approach
+in simulation on the Unitree Go1 robot and showed that replacing part of the
+simulated steps with synthetic ones not only mimics extended rollouts but also
+improves policy return and reduces variance. Finally, we demonstrate that this
+improvement transfers to the ability to track a wide range of locomotion
+commands using fewer simulated steps.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2509.00215v2' target='_blank'>First Order Model-Based RL through Decoupled Backpropagation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Joseph Amigo, Rooholla Khorrambakht, Elliot Chane-Sane, Nicolas Mansard, Ludovic Righetti</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-08-29 19:55:25</h6>
+<p class='card-text'>There is growing interest in reinforcement learning (RL) methods that
+leverage the simulator's derivatives to improve learning efficiency. While
+early gradient-based approaches have demonstrated superior performance compared
+to derivative-free methods, accessing simulator gradients is often impractical
+due to their implementation cost or unavailability. Model-based RL (MBRL) can
+approximate these gradients via learned dynamics models, but the solver
+efficiency suffers from compounding prediction errors during training rollouts,
+which can degrade policy performance. We propose an approach that decouples
+trajectory generation from gradient computation: trajectories are unrolled
+using a simulator, while gradients are computed via backpropagation through a
+learned differentiable model of the simulator. This hybrid design enables
+efficient and consistent first-order policy optimization, even when simulator
+gradients are unavailable, as well as learning a critic from simulation
+rollouts, which is more accurate. Our method achieves the sample efficiency and
+speed of specialized optimizers such as SHAC, while maintaining the generality
+of standard approaches like PPO and avoiding ill behaviors observed in other
+first-order MBRL methods. We empirically validate our algorithm on benchmark
+control tasks and demonstrate its effectiveness on a real Go2 quadruped robot,
+across both quadrupedal and bipedal locomotion tasks.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2508.06994v1' target='_blank'>Learning-Enabled Adaptive Power Capping Scheme for Cloud Data Centers</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yimeng Sun, Zhaohao Ding, Payman Dehghanian, Fei Teng</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-08-09 14:11:37</h6>
+<p class='card-text'>The rapid growth of the digital economy and artificial intelligence has
+transformed cloud data centers into essential infrastructure with substantial
+energy consumption and carbon emission, necessitating effective energy
+management. However, existing methods face challenges such as incomplete
+information, uncertain parameters, and dynamic environments, which hinder their
+real-world implementation. This paper proposes an adaptive power capping
+framework tailored to cloud data centers. By dynamically setting the energy
+consumption upper bound, the power load of data centers can be reshaped to
+align with the electricity price or other market signals. To this end, we
+formulate the power capping problem as a partially observable Markov decision
+process. Subsequently, we develop an uncertainty-aware model-based
+reinforcement learning (MBRL) method to perceive the cloud data center
+operational environment and optimize power-capping decisions. By incorporating
+a two-stage uncertainty-aware optimization algorithm into the MBRL, we improve
+its adaptability to the ever-changing environment. Additionally, we derive the
+optimality gap of the proposed scheme under finite iterations, ensuring
+effective decisions under complex and uncertain scenarios. The numerical
+experiments validate the effectiveness of the proposed method using a cloud
+data center operational environment simulator built on real-world production
+traces from Alibaba, which demonstrates its potential as an efficient energy
+management solution for cloud data centers.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2506.21782v1' target='_blank'>M3PO: Massively Multi-Task Model-Based Policy Optimization</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Aditya Narendra, Dmitry Makarov, Aleksandr Panov</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-06-26 21:39:01</h6>
+<p class='card-text'>We introduce Massively Multi-Task Model-Based Policy Optimization (M3PO), a
+scalable model-based reinforcement learning (MBRL) framework designed to
+address sample inefficiency in single-task settings and poor generalization in
+multi-task domains. Existing model-based approaches like DreamerV3 rely on
+pixel-level generative models that neglect control-centric representations,
+while model-free methods such as PPO suffer from high sample complexity and
+weak exploration. M3PO integrates an implicit world model, trained to predict
+task outcomes without observation reconstruction, with a hybrid exploration
+strategy that combines model-based planning and model-free uncertainty-driven
+bonuses. This eliminates the bias-variance trade-off in prior methods by using
+discrepancies between model-based and model-free value estimates to guide
+exploration, while maintaining stable policy updates through a trust-region
+optimizer. M3PO provides an efficient and robust alternative to existing
+model-based policy optimization approaches and achieves state-of-the-art
+performance across multiple benchmarks.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js'></script>
+</body>
+</html>
