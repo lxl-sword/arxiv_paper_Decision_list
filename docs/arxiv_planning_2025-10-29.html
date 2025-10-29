@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>planning - 2025-10-29</title>
+<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap' rel='stylesheet'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css'>
+<style>
+body {
+font-family: 'Roboto', sans-serif;
+background-color: #f5f7fa;
+padding: 20px;
+}
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.card-title {
+    font-weight: 700;
+}
+.card:hover {
+    transform: scale(1.02);
+    transition: 0.3s ease-in-out;
+}
+</style>
+</head>
+<body>
+<div class='container'>
+<h1 class='text-center my-4'><i class='fas fa-book'></i>planning - 2025-10-29</h1>
+<div class='row'>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2510.24718v1' target='_blank'>Generative View Stitching</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Chonghyuk Song, Michal Stary, Boyuan Chen, George Kopanas, Vincent Sitzmann</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-10-28 17:59:58</h6>
+<p class='card-text'>Autoregressive video diffusion models are capable of long rollouts that are
+stable and consistent with history, but they are unable to guide the current
+generation with conditioning from the future. In camera-guided video generation
+with a predefined camera trajectory, this limitation leads to collisions with
+the generated scene, after which autoregression quickly collapses. To address
+this, we propose Generative View Stitching (GVS), which samples the entire
+sequence in parallel such that the generated scene is faithful to every part of
+the predefined camera trajectory. Our main contribution is a sampling algorithm
+that extends prior work on diffusion stitching for robot planning to video
+generation. While such stitching methods usually require a specially trained
+model, GVS is compatible with any off-the-shelf video model trained with
+Diffusion Forcing, a prevalent sequence diffusion framework that we show
+already provides the affordances necessary for stitching. We then introduce
+Omni Guidance, a technique that enhances the temporal consistency in stitching
+by conditioning on both the past and future, and that enables our proposed
+loop-closing mechanism for delivering long-range coherence. Overall, GVS
+achieves camera-guided video generation that is stable, collision-free,
+frame-to-frame consistent, and closes loops for a variety of predefined camera
+paths, including Oscar Reutersv\"ard's Impossible Staircase. Results are best
+viewed as videos at https://andrewsonga.github.io/gvs.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2510.24690v1' target='_blank'>Bridging Tool Dependencies and Domain Knowledge: A Graph-Based Framework
+  for In-Context Planning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Shengjie Liu, Li Dong, Zhenyu Zhang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-10-28 17:50:15</h6>
+<p class='card-text'>We present a framework for uncovering and exploiting dependencies among tools
+and documents to enhance exemplar artifact generation. Our method begins by
+constructing a tool knowledge graph from tool schemas,including descriptions,
+arguments, and output payloads, using a DeepResearch-inspired analysis. In
+parallel, we derive a complementary knowledge graph from internal documents and
+SOPs, which is then fused with the tool graph. To generate exemplar plans, we
+adopt a deep-sparse integration strategy that aligns structural tool
+dependencies with procedural knowledge. Experiments demonstrate that this
+unified framework effectively models tool interactions and improves plan
+generation, underscoring the benefits of linking tool graphs with domain
+knowledge graphs for tool-augmented reasoning and planning.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2510.24663v1' target='_blank'>OrchDAG: Complex Tool Orchestration in Multi-Turn Interactions with Plan
+  DAGs</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yifu Lu, Shengjie Liu, Li Dong</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-10-28 17:28:01</h6>
+<p class='card-text'>Agentic tool use has gained traction with the rise of agentic tool calling,
+yet most existing work overlooks the complexity of multi-turn tool
+interactions. We introduce OrchDAG, a synthetic data generation pipeline that
+models tool execution as directed acyclic graphs (DAGs) with controllable
+complexity. Using this dataset, we benchmark model performance and propose a
+graph-based reward to enhance RLVR training. Experiments show that the dataset
+presents a challenging but solvable benchmark, and the proposed reward is
+effective when combined with GRPO-style algorithms, highlighting the importance
+of leveraging topological structure and data complexity in multi-turn tool use.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2510.24554v1' target='_blank'>An Adaptive Inspection Planning Approach Towards Routine Monitoring in
+  Uncertain Environments</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Vignesh Kottayam Viswanathan, Yifan Bai, Scott Fredriksson, Sumeet Satpute, Christoforos Kanellakis, George Nikolakopoulos</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-10-28 15:51:14</h6>
+<p class='card-text'>In this work, we present a hierarchical framework designed to support robotic
+inspection under environment uncertainty. By leveraging a known environment
+model, existing methods plan and safely track inspection routes to visit points
+of interest. However, discrepancies between the model and actual site
+conditions, caused by either natural or human activities, can alter the surface
+morphology or introduce path obstructions. To address this challenge, the
+proposed framework divides the inspection task into: (a) generating the initial
+global view-plan for region of interests based on a historical map and (b)
+local view replanning to adapt to the current morphology of the inspection
+scene. The proposed hierarchy preserves global coverage objectives while
+enabling reactive adaptation to the local surface morphology. This enables the
+local autonomy to remain robust against environment uncertainty and complete
+the inspection tasks. We validate the approach through deployments in
+real-world subterranean mines using quadrupedal robot.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2510.24546v1' target='_blank'>Dual-Mind World Models: A General Framework for Learning in Dynamic
+  Wireless Networks</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Lingyi Wang, Rashed Shelim, Walid Saad, Naren Ramakrishnan</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-10-28 15:45:15</h6>
+<p class='card-text'>Despite the popularity of reinforcement learning (RL) in wireless networks,
+existing approaches that rely on model-free RL (MFRL) and model-based RL (MBRL)
+are data inefficient and short-sighted. Such RL-based solutions cannot
+generalize to novel network states since they capture only statistical patterns
+rather than the underlying physics and logic from wireless data. These
+limitations become particularly challenging in complex wireless networks with
+high dynamics and long-term planning requirements. To address these
+limitations, in this paper, a novel dual-mind world model-based learning
+framework is proposed with the goal of optimizing completeness-weighted age of
+information (CAoI) in a challenging mmWave V2X scenario. Inspired by cognitive
+psychology, the proposed dual-mind world model encompasses a pattern-driven
+System 1 component and a logic-driven System 2 component to learn dynamics and
+logic of the wireless network, and to provide long-term link scheduling over
+reliable imagined trajectories. Link scheduling is learned through end-to-end
+differentiable imagined trajectories with logical consistency over an extended
+horizon rather than relying on wireless data obtained from environment
+interactions. Moreover, through imagination rollouts, the proposed world model
+can jointly reason network states and plan link scheduling. During intervals
+without observations, the proposed method remains capable of making efficient
+decisions. Extensive experiments are conducted on a realistic simulator based
+on Sionna with real-world physical channel, ray-tracing, and scene objects with
+material properties. Simulation results show that the proposed world model
+achieves a significant improvement in data efficiency and achieves strong
+generalization and adaptation to unseen environments, compared to the
+state-of-the-art RL baselines, and the world model approach with only System 1.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2510.24515v1' target='_blank'>Stochastic Prize-Collecting Games: Strategic Planning in Multi-Robot
+  Systems</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Malintha Fernando, Petter Ögren, Silun Zhang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-10-28 15:27:26</h6>
+<p class='card-text'>The Team Orienteering Problem (TOP) generalizes many real-world multi-robot
+scheduling and routing tasks that occur in autonomous mobility, aerial
+logistics, and surveillance applications. While many flavors of the TOP exist
+for planning in multi-robot systems, they assume that all the robots cooperate
+toward a single objective; thus, they do not extend to settings where the
+robots compete in reward-scarce environments. We propose Stochastic
+Prize-Collecting Games (SPCG) as an extension of the TOP to plan in the
+presence of self-interested robots operating on a graph, under energy
+constraints and stochastic transitions. A theoretical study on complete and
+star graphs establishes that there is a unique pure Nash equilibrium in SPCGs
+that coincides with the optimal routing solution of an equivalent TOP given a
+rank-based conflict resolution rule. This work proposes two algorithms: Ordinal
+Rank Search (ORS) to obtain the ''ordinal rank'' --one's effective rank in
+temporarily-formed local neighborhoods during the games' stages, and Fictitious
+Ordinal Response Learning (FORL) to obtain best-response policies against one's
+senior-rank opponents. Empirical evaluations conducted on road networks and
+synthetic graphs under both dynamic and stationary prize distributions show
+that 1) the state-aliasing induced by OR-conditioning enables learning policies
+that scale more efficiently to large team sizes than those trained with the
+global index, and 2) Policies trained with FORL generalize better to imbalanced
+prize distributions than those with other multi-agent training methods.
+Finally, the learned policies in the SPCG achieved between 87% and 95%
+optimality compared to an equivalent TOP solution obtained by mixed-integer
+linear programming.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2510.24514v1' target='_blank'>Latent Sketchpad: Sketching Visual Thoughts to Elicit Multimodal
+  Reasoning in MLLMs</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Huanyu Zhang, Wenshan Wu, Chengzu Li, Ning Shang, Yan Xia, Yangyu Huang, Yifan Zhang, Li Dong, Zhang Zhang, Liang Wang, Tieniu Tan, Furu Wei</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-10-28 15:26:20</h6>
+<p class='card-text'>While Multimodal Large Language Models (MLLMs) excel at visual understanding,
+they often struggle in complex scenarios that require visual planning and
+imagination. Inspired by how humans use sketching as a form of visual thinking
+to develop and communicate ideas, we introduce Latent Sketchpad, a framework
+that equips MLLMs with an internal visual scratchpad. The internal visual
+representations of MLLMs have traditionally been confined to perceptual
+understanding. We repurpose them to support generative visual thought without
+compromising reasoning ability. Building on frontier MLLMs, our approach
+integrates visual generation directly into their native autoregressive
+reasoning process. It allows the model to interleave textual reasoning with the
+generation of visual latents. These latents guide the internal thought process
+and can be translated into sketch images for interpretability. To realize this,
+we introduce two components: a Context-Aware Vision Head autoregressively
+produces visual representations, and a pretrained Sketch Decoder renders these
+into human-interpretable images. We evaluate the framework on our new dataset
+MazePlanning. Experiments across various MLLMs show that Latent Sketchpad
+delivers comparable or even superior reasoning performance to their backbone.
+It further generalizes across distinct frontier MLLMs, including Gemma3 and
+Qwen2.5-VL. By extending model's textual reasoning to visual thinking, our
+framework opens new opportunities for richer human-computer interaction and
+broader applications. More details and resources are available on our project
+page: https://latent-sketchpad.github.io/.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2510.24457v1' target='_blank'>Flatness-based trajectory planning for 3D overhead cranes with friction
+  compensation and collision avoidance</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jorge Vicente-Martinez, Edgar Ramirez-Laboreo</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-10-28 14:24:47</h6>
+<p class='card-text'>This paper presents an optimal trajectory generation method for 3D overhead
+cranes by leveraging differential flatness. This framework enables the direct
+inclusion of complex physical and dynamic constraints, such as nonlinear
+friction and collision avoidance for both payload and rope. Our approach allows
+for aggressive movements by constraining payload swing only at the final point.
+A comparative simulation study validates our approach, demonstrating that
+neglecting dry friction leads to actuator saturation and collisions. The
+results show that friction modeling is a fundamental requirement for fast and
+safe crane trajectories.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2510.24344v1' target='_blank'>Are They Willing to Participate? A Review on Behavioral Economics
+  Approach to Voters Turnout</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Mostafa Raeisi Sarkandiz</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-10-28 12:10:25</h6>
+<p class='card-text'>This article investigates the fundamental factors influencing the rate and
+manner of Electoral participation with an economic model-based approach. In
+this study, the structural parameters affecting people's decision making are
+divided into two categories. The first category includes general topics such as
+economic and livelihood status, cultural factors and, also, psychological
+variables. In this section, given that voters are analyzed within the context
+of consumer behavior theory, inflation and unemployment are considered as the
+most important economic factors. The second group of factors focuses more on
+the type of voting, with emphasis on government performance. Since the
+incumbent government and its supportive voters are in a game with two Nash
+equilibrium, and also because the voters in most cases are retrospect, the
+government seeks to keep its position by a deliberate change in economic
+factors, especially inflation and unemployment rates. Finally, to better
+understand the issue, a hypothetical example is presented and analyzed in a
+developing country in the form of a state-owned populist employment plan.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2510.24307v1' target='_blank'>Odyssey: An End-to-End System for Pareto-Optimal Serverless Query
+  Processing</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Shyam Jesalpura, Shengda Zhu, Amir Shaikhha, Antonio Barbalace, Boris Grot</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-10-28 11:16:01</h6>
+<p class='card-text'>Running data analytics queries on serverless (FaaS) workers has been shown to
+be cost- and performance-efficient for a variety of real-world scenarios,
+including intermittent query arrival patterns, sudden load spikes and
+management challenges that afflict managed VM clusters. Alas, existing
+serverless data analytics works focus primarily on the serverless execution
+engine and assume the existence of a "good" query execution plan or rely on
+user guidance to construct such a plan. Meanwhile, even simple analytics
+queries on serverless have a huge space of possible plans, with vast
+differences in both performance and cost among plans.
+  This paper introduces Odyssey, an end-to-end serverless-native data analytics
+pipeline that integrates a query planner, cost model and execution engine.
+Odyssey automatically generates and evaluates serverless query plans, utilizing
+state space pruning heuristics and a novel search algorithm to identify
+Pareto-optimal plans that balance cost and performance with low latency even
+for complex queries. Our evaluations demonstrate that Odyssey accurately
+predicts both monetary cost and latency, and consistently outperforms AWS
+Athena on cost and/or latency.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2510.24306v1' target='_blank'>Structural Vulnerability Assessment in Urban Transport Networks: A
+  Network-Wide Geometric Approach Using Gromov-Wasserstein</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Iman Seyedi, Antonio Candelieri, Enza Messina, Francesco Archetti</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-10-28 11:15:59</h6>
+<p class='card-text'>Urban transportation networks are inherently vulnerable to disruptions that
+affect connectivity and passenger mobility. Traditional graph_theoretic
+metrics, such as betweenness and degree centrality, offer insights into local
+network structure but often fail to capture global structural distortions
+resulting from link failures. On the other hand, global indices, such as those
+based on spectral analysis of the networks graph, fail in identifying critical
+elements. This study proposes to quantify the structural modifications implied
+by the disruption of single elements in a transportation network through the
+Gromov-Wasserstein distance. Specifically, we iteratively remove one single
+edge from the original network to simulate a disruptive event and then compute
+the Gromov-Wasserstein distance between the original network and the disrupted
+one. Finally, edges are ranked depending on the observed Gromov-Wasserstein
+distance: the higher the value of the distance, the more critical the edge is
+in terms. Two transportation networks from Berlin are considered in the
+experiments, namely Berlin Friedrichshain Center (BFC) and Berlin Tiergarten
+(BT). Results reveal that Gromov-Wasserstein is largely uncorrelated with edge
+betweenness (rho<0.1), proving its ability to capture vulnerability aspects
+overlooked by local network measures. Moreover, Gromov-Wasserstein exhibits an
+almost perfect correlation (rho=0.9999) against a proxy measure of the
+transportation service level, that is, the increase in the maximum shortest
+path. As a result, the Gromov-Wasserstein distance can be used to rank edges
+depending on their criticality with respect to their individual impact on the
+overall infrastructure and level, allowing for prioritizing maintenance,
+emergency planning, and enhancing the resilience of the urban transport
+network.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2510.24286v1' target='_blank'>A convex reformulation for speed planning of a vehicle under the travel
+  time and energy consumption objectives</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Luca Consolini, Mattia Laurini, Marco Locatelli</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-10-28 10:47:43</h6>
+<p class='card-text'>In this paper we address the speed planning problem for a vehicle along a
+predefined path. A weighted sum of two conflicting objectives, energy
+consumption and travel time, is minimized. After deriving a non-convex
+mathematical model of the problem, we prove that the feasible region of this
+problem is a lattice. Moreover, we introduce a feasibility-based
+bound-tightening technique which allows us to derive the minimum and maximum
+element of the lattice, or establish that the feasible region is empty. We
+prove the exactness of a convex relaxation of the non-convex problem, obtained
+by replacing all constraints with the lower and upper bounds for the variables
+corresponding to the minimum and maximum elements of the lattice, respectively.
+After proving some properties of optimal solutions of the convex relaxation, we
+exploit them to develop a dynamic programming approach returning an approximate
+solution to the convex relaxation, and with time complexity $O(n^2)$, where $n$
+is the number of points into which the continuous path is discretized.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2510.24249v1' target='_blank'>Feedback Enhancement of Time Series Aggregation for Power System
+  Expansion Planning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Ruiqi Zhang, Ensieh Sharifnia, Simon H. Tindemans</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-10-28 09:59:25</h6>
+<p class='card-text'>As a consequence of the high variability of load demand and renewable
+generation, long-term and high-resolution inputs are required for power system
+expansion planning, making the problem intractable in real-world applications.
+Time series aggregation (TSA), which captures representative patterns, reduces
+temporal complexity while providing similar planning outputs. However, purely
+statistical clustering, even when enhanced with predefined ``extremes'', can
+overlook system-specific critical operating conditions, making it unreliable
+across real-world systems. Therefore, this paper links TSA accuracy on specific
+system operation and final solution quality, which becomes a practical bound
+with mean-based TSA approaches. It is observed that the distribution of
+operational errors is highly imbalanced, such that a few representatives
+dominate the total error. This paper proposes an adaptive clustering strategy
+based on feedback enhancement of TSA that iteratively identifies
+poor-performing representatives with high operational error and re-clusters
+only their associated periods. A study shows that the feedback enhancement
+improves the decision error and tighten the bound significantly compared with
+the plain mean-based clustering method, offering a diagnostic for TSA quality,
+while balancing the computational effort with solution accuracy.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2510.24227v1' target='_blank'>Advancing Interdisciplinary Approaches to Online Safety Research</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Senuri Wijenayake, Joanne Gray, Asangi Jayatilaka, Louise La Sala, Nalin Arachchilage, Ryan M. Kelly, Sanchari Das</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-10-28 09:38:34</h6>
+<p class='card-text'>The growing prevalence of negative experiences in online spaces demands
+urgent attention from the human-computer interaction (HCI) community. However,
+research on online safety remains fragmented across different HCI subfields,
+with limited communication and collaboration between disciplines. This siloed
+approach risks creating ineffective responses, including design solutions that
+fail to meet the diverse needs of users, and policy efforts that overlook
+critical usability concerns. This workshop aims to foster interdisciplinary
+dialogue on online safety by bringing together researchers from within and
+beyond HCI - including but not limited to Social Computing, Digital Design,
+Internet Policy, Cybersecurity, Ethics, and Social Sciences. By uniting
+researchers, policymakers, industry practitioners, and community advocates we
+aim to identify shared challenges in online safety research, highlight gaps in
+current knowledge, and establish common research priorities. The workshop will
+support the development of interdisciplinary research plans and establish
+collaborative environments - both within and beyond Australia - to action them.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2510.24202v1' target='_blank'>CLFSeg: A Fuzzy-Logic based Solution for Boundary Clarity and
+  Uncertainty Reduction in Medical Image Segmentation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Anshul Kaushal, Kunal Jangid, Vinod K. Kurmi</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-10-28 09:06:27</h6>
+<p class='card-text'>Accurate polyp and cardiac segmentation for early detection and treatment is
+essential for the diagnosis and treatment planning of cancer-like diseases.
+Traditional convolutional neural network (CNN) based models have represented
+limited generalizability, robustness, and inability to handle uncertainty,
+which affects the segmentation performance. To solve these problems, this paper
+introduces CLFSeg, an encoder-decoder based framework that aggregates the
+Fuzzy-Convolutional (FC) module leveraging convolutional layers and fuzzy
+logic. This module enhances the segmentation performance by identifying local
+and global features while minimizing the uncertainty, noise, and ambiguity in
+boundary regions, ensuring computing efficiency. In order to handle class
+imbalance problem while focusing on the areas of interest with tiny and
+boundary regions, binary cross-entropy (BCE) with dice loss is incorporated.
+Our proposed model exhibits exceptional performance on four publicly available
+datasets, including CVC-ColonDB, CVC-ClinicDB, EtisLaribPolypDB, and ACDC.
+Extensive experiments and visual studies show CLFSeg surpasses the existing
+SOTA performance and focuses on relevant regions of interest in anatomical
+structures. The proposed CLFSeg improves performance while ensuring computing
+efficiency, which makes it a potential solution for real-world medical
+diagnostic scenarios. Project page is available at
+https://visdomlab.github.io/CLFSeg/</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2510.24166v1' target='_blank'>UniPlanner: A Unified Motion Planning Framework for Autonomous Vehicle
+  Decision-Making Systems via Multi-Dataset Integration</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Xin Yang, Yuhang Zhang, Wei Li, Xin Lin, Wenbin Zou, Chen Xu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-10-28 08:12:15</h6>
+<p class='card-text'>Motion planning is a critical component of autonomous vehicle decision-making
+systems, directly determining trajectory safety and driving efficiency. While
+deep learning approaches have advanced planning capabilities, existing methods
+remain confined to single-dataset training, limiting their robustness in
+planning.
+  Through systematic analysis, we discover that vehicular trajectory
+distributions and history-future correlations demonstrate remarkable
+consistency across different datasets. Based on these findings, we propose
+UniPlanner, the first planning framework designed for multi-dataset integration
+in autonomous vehicle decision-making. UniPlanner achieves unified
+cross-dataset learning through three synergistic innovations.
+  First, the History-Future Trajectory Dictionary Network (HFTDN) aggregates
+history-future trajectory pairs from multiple datasets, using historical
+trajectory similarity to retrieve relevant futures and generate cross-dataset
+planning guidance.
+  Second, the Gradient-Free Trajectory Mapper (GFTM) learns robust
+history-future correlations from multiple datasets, transforming historical
+trajectories into universal planning priors. Its gradient-free design ensures
+the introduction of valuable priors while preventing shortcut learning, making
+the planning knowledge safely transferable. Third, the Sparse-to-Dense (S2D)
+paradigm implements adaptive dropout to selectively suppress planning priors
+during training for robust learning, while enabling full prior utilization
+during inference to maximize planning performance.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2510.24152v1' target='_blank'>Enhancing Vision-Language Models for Autonomous Driving through
+  Task-Specific Prompting and Spatial Reasoning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Aodi Wu, Xubo Luo</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-10-28 07:43:30</h6>
+<p class='card-text'>This technical report presents our solution for the RoboSense Challenge at
+IROS 2025, which evaluates Vision-Language Models (VLMs) on autonomous driving
+scene understanding across perception, prediction, planning, and corruption
+detection tasks. We propose a systematic framework built on four core
+components. First, a Mixture-of-Prompts router classifies questions and
+dispatches them to task-specific expert prompts, eliminating interference
+across diverse question types. Second, task-specific prompts embed explicit
+coordinate systems, spatial reasoning rules, role-playing,
+Chain-of-Thought/Tree-of-Thought reasoning, and few-shot examples tailored to
+each task. Third, a visual assembly module composes multi-view images with
+object crops, magenta markers, and adaptive historical frames based on question
+requirements. Fourth, we configure model inference parameters (temperature,
+top-p, message roles) per task to optimize output quality. Implemented on
+Qwen2.5-VL-72B, our approach achieves 70.87% average accuracy on Phase-1 (clean
+data) and 72.85% on Phase-2 (corrupted data), demonstrating that structured
+prompting and spatial grounding substantially enhance VLM performance on
+safety-critical autonomous driving tasks. Code and prompt are available at
+https://github.com/wuaodi/UCAS-CSU-phase2.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2510.24129v1' target='_blank'>ETC: training-free diffusion models acceleration with Error-aware Trend
+  Consistency</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jiajian Xie, Hubery Yin, Chen Li, Zhou Zhao, Shengyu Zhang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-10-28 07:08:09</h6>
+<p class='card-text'>Diffusion models have achieved remarkable generative quality but remain
+bottlenecked by costly iterative sampling. Recent training-free methods
+accelerate diffusion process by reusing model outputs. However, these methods
+ignore denoising trends and lack error control for model-specific tolerance,
+leading to trajectory deviations under multi-step reuse and exacerbating
+inconsistencies in the generated results. To address these issues, we introduce
+Error-aware Trend Consistency (ETC), a framework that (1) introduces a
+consistent trend predictor that leverages the smooth continuity of diffusion
+trajectories, projecting historical denoising patterns into stable future
+directions and progressively distributing them across multiple approximation
+steps to achieve acceleration without deviating; (2) proposes a model-specific
+error tolerance search mechanism that derives corrective thresholds by
+identifying transition points from volatile semantic planning to stable quality
+refinement. Experiments show that ETC achieves a 2.65x acceleration over FLUX
+with negligible (-0.074 SSIM score) degradation of consistency.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2510.24108v1' target='_blank'>ZTRS: Zero-Imitation End-to-end Autonomous Driving with Trajectory
+  Scoring</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Zhenxin Li, Wenhao Yao, Zi Wang, Xinglong Sun, Jingde Chen, Nadine Chang, Maying Shen, Jingyu Song, Zuxuan Wu, Shiyi Lan, Jose M. Alvarez</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-10-28 06:26:36</h6>
+<p class='card-text'>End-to-end autonomous driving maps raw sensor inputs directly into
+ego-vehicle trajectories to avoid cascading errors from perception modules and
+to leverage rich semantic cues. Existing frameworks largely rely on Imitation
+Learning (IL), which can be limited by sub-optimal expert demonstrations and
+covariate shift during deployment. On the other hand, Reinforcement Learning
+(RL) has recently shown potential in scaling up with simulations, but is
+typically confined to low-dimensional symbolic inputs (e.g. 3D objects and
+maps), falling short of full end-to-end learning from raw sensor data. We
+introduce ZTRS (Zero-Imitation End-to-End Autonomous Driving with Trajectory
+Scoring), a framework that combines the strengths of both worlds: sensor inputs
+without losing information and RL training for robust planning. To the best of
+our knowledge, ZTRS is the first framework that eliminates IL entirely by only
+learning from rewards while operating directly on high-dimensional sensor data.
+ZTRS utilizes offline reinforcement learning with our proposed Exhaustive
+Policy Optimization (EPO), a variant of policy gradient tailored for enumerable
+actions and rewards. ZTRS demonstrates strong performance across three
+benchmarks: Navtest (generic real-world open-loop planning), Navhard (open-loop
+planning in challenging real-world and synthetic scenarios), and HUGSIM
+(simulated closed-loop driving). Specifically, ZTRS achieves the
+state-of-the-art result on Navhard and outperforms IL-based baselines on
+HUGSIM. Code will be available at https://github.com/woxihuanjiangguo/ZTRS.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2510.24094v1' target='_blank'>Factorisation de la cohomologie de systèmes locaux $p$-adiques sur le
+  demi-plan de Drinfeld</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Arnaud Vanhaecke</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-10-28 06:08:00</h6>
+<p class='card-text'>We compute the first cohomology group of the symmetric algebra of the
+universal \'etale $p$-adic local system on the tower of coverings of Drinfeld's
+$p$-adic half-plane. The result takes a factorized form, using the $p$-adic
+Langlands correspondence in families over Kisin rings. This work extends the
+corresponding results of Colmez, Dospinescu, and Niziol for trivial
+coefficients. It relies on the computation of automorphic multiplicities in the
+\'etale cohomology group of the local system, done in a previous paper, as well
+as on the determination of the Kisin rings for the special type as functions on
+an analytic open subset of the projective line.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2510.24084v1' target='_blank'>Lunar Navigation System Optimization for Targeted Coverage with
+  Semi-Analytical Station Keeping Model and Earth-GPS Integration</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Rameez A. Malik, Yang Yang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-10-28 05:54:23</h6>
+<p class='card-text'>The design of an indigenous Lunar Navigation Satellite System (LNSS) is
+receiving growing attention due to the surge in planned lunar missions and the
+limited accessibility of Earth-based Global Navigation Satellite Systems (GNSS)
+in the cislunar environment. Several studies have explored LNSS architecture
+using geometric analysis in both near and distant lunar orbits. The existing
+LNSS optimization efforts have primarily focused on global lunar coverage using
+analytical station-keeping models with low accuracy. Furthermore, current south
+pole-focused research is restricted to Elliptical Lunar Frozen Orbits (ELFOs)
+and lacks comprehensive optimization approach. Additionally, integration with
+Earth GNSS systems for ephemeris computation and time synchronization has not
+been adequately addressed in prior studies. In this work, we present a
+comprehensive LNSS mission design framework based on evolutionary
+multi-objective optimization integrated with a high-fidelity numerical lunar
+orbit propagation model. The optimization simultaneously considers navigation
+performance in the lunar south pole region, semi-analytical continuous
+station-keeping maneuver model for realistic dV estimate, and GPS-LNSS
+integration analysis parameters. The resulting Pareto front offers a diverse
+set of LNSS configurations that balance coverage, accuracy, and dV
+requirements. Notably, the optimization identifies diverse non-frozen
+elliptical orbit solutions that achieve over 90% south pole coverage with
+acceptable navigation accuracy using as few as six satellites and dV of less
+than 0.4 km/s per satellite per year. This represents a significant reduction
+in constellation size compared to previous studies, offering a cost-effective
+yet operationally efficient solution for future LNSS missions.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2510.24077v1' target='_blank'>Assessing the influence of social media feedback on traveler's future
+  trip-planning behavior: A multi-model machine learning approach</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Sayantan Mukherjee, Pritam Ranjan, Joysankar Bhattacharya</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-10-28 05:34:17</h6>
+<p class='card-text'>With the surge of domestic tourism in India and the influence of social media
+on young tourists, this paper aims to address the research question on how
+"social return" - responses received on social media sharing - of recent trip
+details can influence decision-making for short-term future travels. The paper
+develops a multi-model framework to build a predictive machine learning model
+that establishes a relationship between a traveler's social return, various
+social media usage, trip-related factors, and her future trip-planning
+behavior. The primary data was collected via a survey from Indian tourists.
+After data cleaning, the imbalance in the data was addressed using a robust
+oversampling method, and the reliability of the predictive model was ensured by
+applying a Monte Carlo cross-validation technique. The results suggest at least
+75% overall accuracy in predicting the influence of social return on changing
+the future trip plan. Moreover, the model fit results provide crucial practical
+implications for the domestic tourism sector in India with future research
+directions concerning social media, destination marketing, smart tourism,
+heritage tourism, etc.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2510.24067v1' target='_blank'>Balanced Collaborative Exploration via Distributed Topological Graph
+  Voronoi Partition</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Tianyi Ding, Ronghao Zheng, Senlin Zhang, Meiqin Liu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-10-28 05:01:04</h6>
+<p class='card-text'>This work addresses the collaborative multi-robot autonomous online
+exploration problem, particularly focusing on distributed exploration planning
+for dynamically balanced exploration area partition and task allocation among a
+team of mobile robots operating in obstacle-dense non-convex environments.
+  We present a novel topological map structure that simultaneously
+characterizes both spatial connectivity and global exploration completeness of
+the environment. The topological map is updated incrementally to utilize known
+spatial information for updating reachable spaces, while exploration targets
+are planned in a receding horizon fashion under global coverage guidance.
+  A distributed weighted topological graph Voronoi algorithm is introduced
+implementing balanced graph space partitions of the fused topological maps.
+Theoretical guarantees are provided for distributed consensus convergence and
+equitable graph space partitions with constant bounds.
+  A local planner optimizes the visitation sequence of exploration targets
+within the balanced partitioned graph space to minimize travel distance, while
+generating safe, smooth, and dynamically feasible motion trajectories.
+  Comprehensive benchmarking against state-of-the-art methods demonstrates
+significant improvements in exploration efficiency, completeness, and workload
+balance across the robot team.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2510.23997v1' target='_blank'>VOCALoco: Viability-Optimized Cost-aware Adaptive Locomotion</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Stanley Wu, Mohamad H. Danesh, Simon Li, Hanna Yurchyk, Amin Abyaneh, Anas El Houssaini, David Meger, Hsiu-Chin Lin</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-10-28 01:59:34</h6>
+<p class='card-text'>Recent advancements in legged robot locomotion have facilitated traversal
+over increasingly complex terrains. Despite this progress, many existing
+approaches rely on end-to-end deep reinforcement learning (DRL), which poses
+limitations in terms of safety and interpretability, especially when
+generalizing to novel terrains. To overcome these challenges, we introduce
+VOCALoco, a modular skill-selection framework that dynamically adapts
+locomotion strategies based on perceptual input. Given a set of pre-trained
+locomotion policies, VOCALoco evaluates their viability and energy-consumption
+by predicting both the safety of execution and the anticipated cost of
+transport over a fixed planning horizon. This joint assessment enables the
+selection of policies that are both safe and energy-efficient, given the
+observed local terrain. We evaluate our approach on staircase locomotion tasks,
+demonstrating its performance in both simulated and real-world scenarios using
+a quadrupedal robot. Empirical results show that VOCALoco achieves improved
+robustness and safety during stair ascent and descent compared to a
+conventional end-to-end DRL policy</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2510.23994v1' target='_blank'>Predicting Barge Tow Size on Inland Waterways Using Vessel Trajectory
+  Derived Features: Proof of Concept</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Geoffery Agorku, Sarah Hernandez, Hayley Hames, Cade Wagner</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-10-28 01:51:23</h6>
+<p class='card-text'>Accurate, real-time estimation of barge quantity on inland waterways remains
+a critical challenge due to the non-self-propelled nature of barges and the
+limitations of existing monitoring systems. This study introduces a novel
+method to use Automatic Identification System (AIS) vessel tracking data to
+predict the number of barges in tow using Machine Learning (ML). To train and
+test the model, barge instances were manually annotated from satellite scenes
+across the Lower Mississippi River. Labeled images were matched to AIS vessel
+tracks using a spatiotemporal matching procedure. A comprehensive set of 30
+AIS-derived features capturing vessel geometry, dynamic movement, and
+trajectory patterns were created and evaluated using Recursive Feature
+Elimination (RFE) to identify the most predictive variables. Six regression
+models, including ensemble, kernel-based, and generalized linear approaches,
+were trained and evaluated. The Poisson Regressor model yielded the best
+performance, achieving a Mean Absolute Error (MAE) of 1.92 barges using 12 of
+the 30 features. The feature importance analysis revealed that metrics
+capturing vessel maneuverability such as course entropy, speed variability and
+trip length were most predictive of barge count. The proposed approach provides
+a scalable, readily implementable method for enhancing Maritime Domain
+Awareness (MDA), with strong potential applications in lock scheduling, port
+management, and freight planning. Future work will expand the proof of concept
+presented here to explore model transferability to other inland rivers with
+differing operational and environmental conditions.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2510.23911v1' target='_blank'>The SAP Cloud Infrastructure Dataset: A Reality Check of Scheduling and
+  Placement of VMs in Cloud Computing</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Arno Uhlig, Iris Braun, Matthias Wählisch</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-10-27 22:36:24</h6>
+<p class='card-text'>Allocating resources in a distributed environment is a fundamental challenge.
+In this paper, we analyze the scheduling and placement of virtual machines
+(VMs) in the cloud platform of SAP, the world's largest enterprise resource
+planning software vendor. Based on data from roughly 1,800 hypervisors and
+48,000 VMs within a 30-day observation period, we highlight potential
+improvements for workload management. The data was measured through
+observability tooling that tracks resource usage and performance metrics across
+the entire infrastructure. In contrast to existing datasets, ours uniquely
+offers fine-grained time-series telemetry data of fully virtualized
+enterprise-level workloads from both long-running and memory-intensive SAP
+S/4HANA and diverse, general-purpose applications. Our key findings include
+several suboptimal scheduling situations, such as CPU resource contention
+exceeding 40%, CPU ready times of up to 220 seconds, significantly imbalanced
+compute hosts with a maximum CPU~utilization on intra-building block hosts of
+up to 99%, and overprovisioned CPU and memory resources resulting into over 80%
+of VMs using less than 70% of the provided resources. Bolstered by these
+findings, we derive requirements for the design and implementation of novel
+placement and scheduling algorithms and provide guidance to optimize resource
+allocations. We make the full dataset used in this study publicly available to
+enable data-driven evaluations of scheduling approaches for large-scale cloud
+infrastructures in future research.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2510.23899v1' target='_blank'>Coordinated Autonomous Drones for Human-Centered Fire Evacuation in
+  Partially Observable Urban Environments</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Maria G. Mendoza, Addison Kalanther, Daniel Bostwick, Emma Stephan, Chinmay Maheshwari, Shankar Sastry</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-10-27 22:12:21</h6>
+<p class='card-text'>Autonomous drone technology holds significant promise for enhancing search
+and rescue operations during evacuations by guiding humans toward safety and
+supporting broader emergency response efforts. However, their application in
+dynamic, real-time evacuation support remains limited. Existing models often
+overlook the psychological and emotional complexity of human behavior under
+extreme stress. In real-world fire scenarios, evacuees frequently deviate from
+designated safe routes due to panic and uncertainty. To address these
+challenges, this paper presents a multi-agent coordination framework in which
+autonomous Unmanned Aerial Vehicles (UAVs) assist human evacuees in real-time
+by locating, intercepting, and guiding them to safety under uncertain
+conditions. We model the problem as a Partially Observable Markov Decision
+Process (POMDP), where two heterogeneous UAV agents, a high-level rescuer (HLR)
+and a low-level rescuer (LLR), coordinate through shared observations and
+complementary capabilities. Human behavior is captured using an agent-based
+model grounded in empirical psychology, where panic dynamically affects
+decision-making and movement in response to environmental stimuli. The
+environment features stochastic fire spread, unknown evacuee locations, and
+limited visibility, requiring UAVs to plan over long horizons to search for
+humans and adapt in real-time. Our framework employs the Proximal Policy
+Optimization (PPO) algorithm with recurrent policies to enable robust
+decision-making in partially observable settings. Simulation results
+demonstrate that the UAV team can rapidly locate and intercept evacuees,
+significantly reducing the time required for them to reach safety compared to
+scenarios without UAV assistance.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2510.23887v1' target='_blank'>MORA: AI-Mediated Story-Based practice for Speech Sound Disorder from
+  Clinic to Home</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Sumin Hong, Xavier Briggs, Qingxiao Zheng, Yao Du, Jinjun Xiong, Toby Jia-jun Li</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-10-27 21:55:55</h6>
+<p class='card-text'>Speech sound disorder is among the most common communication challenges in
+preschool children. Home-based practice is essential for effective therapy and
+for acquiring generalization of target sounds, yet sustaining engaging and
+consistent practice remains difficult. Existing story-based activities, despite
+their potential for sound generalization and educational benefits, are often
+underutilized due to limited interactivity. Moreover, many practice tools fail
+to sufficiently integrate speech-language pathologists into the process,
+resulting in weak alignment with clinical treatment plans. To address these
+limitations, we present MORA, an interactive story-based practice system. MORA
+introduces three key innovations. First, it embeds target sounds and vocabulary
+into dynamic, character-driven conversational narratives, requiring children to
+actively produce speech to progress the story, thereby creating natural
+opportunities for exposure, repetition, and generalization. Second, it provides
+visual cues, explicit instruction, and feedback, allowing children to practice
+effectively either independently or with caregivers. Third, it supports an
+AI-in-the-loop workflow, enabling SLPs to configure target materials, review
+logged speech with phoneme-level scoring, and adapt therapy plans
+asynchronously -- bridging the gap between clinic and home practice while
+respecting professional expertise. A formative study with six licensed SLPs
+informed the system's design rationale, and an expert review with seven SLPs
+demonstrated strong alignment with established articulation-based treatments,
+as well as potential to enhance children's engagement and literacy.
+Furthermore, discussions highlight the design considerations for professional
+support and configurability, adaptive and multimodal child interaction, while
+highlighting MORA's broader applicability across speech and language disorders.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2510.23792v1' target='_blank'>The Dynamical Environment within the Habitable Zone of the Gaia-4 and
+  Gaia-5 Planetary Systems</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Stephen R. Kane</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-10-27 19:23:51</h6>
+<p class='card-text'>Exoplanetary systems exhibit a broad range of architectures which, in turn,
+enable a variety of dynamical environments. Many of the known planetary systems
+do not transit the host star, and so we measure the minimum masses of their
+planets, making it difficult to fully assess the dynamical environment within
+the system. Astrometry can resolve the mass ambiguity and thus allow a more
+complete dynamical analysis of systems to be conducted. Gaia-4 and Gaia-5 are
+two such systems, whose study with radial velocities and data from the Gaia
+mission revealed that each star harbors a massive planet on a highly eccentric
+orbit. In this work, we provide the results of a dynamical analysis of each
+system, including calculations of the Habitable Zone (HZ), from which we show
+that the presence of the known companions largely exclude the presence of
+planets within the HZ. We discuss the diagnostics of potential past
+planet-planet scattering events, and the occurrence of similar systems whereby
+a giant planet on an eccentric orbit can substantially disrupt orbital
+integrity of terrestrial planets. These "wrecking ball" systems have an impact
+on the target selection for planned direct imaging missions that seek to
+identify potentially habitable environments.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='http://arxiv.org/abs/2510.23737v1' target='_blank'>A Neural Network Framework for Discovering Closed-form Solutions to
+  Quadratic Programs with Linear Constraints</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Fuat Can Beylunioglu, P. Robert Duimering, Mehrdad Pirnia</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-10-27 18:11:44</h6>
+<p class='card-text'>Deep neural networks (DNNs) have been used to model complex optimization
+problems in many applications, yet have difficulty guaranteeing solution
+optimality and feasibility, despite training on large datasets. Training a NN
+as a surrogate optimization solver amounts to estimating a global solution
+function that maps varying problem input parameters to the corresponding
+optimal solutions. Work in multiparametric programming (mp) has shown that
+solutions to quadratic programs (QP) are piece-wise linear functions of the
+parameters, and researchers have suggested leveraging this property to model
+mp-QP using NN with ReLU activation functions, which also exhibit piecewise
+linear behaviour. This paper proposes a NN modeling approach and learning
+algorithm that discovers the exact closed-form solution to QP with linear
+constraints, by analytically deriving NN model parameters directly from the
+problem coefficients without training. Whereas generic DNN cannot guarantee
+accuracy outside the training distribution, the closed-form NN model produces
+exact solutions for every discovered critical region of the solution function.
+To evaluate the closed-form NN model, it was applied to DC optimal power flow
+problems in electricity management. In terms of Karush-Kuhn-Tucker (KKT)
+optimality and feasibility of solutions, it outperformed a classically trained
+DNN and was competitive with, or outperformed, a commercial analytic solver
+(Gurobi) at far less computational cost. For a long-range energy planning
+problem, it was able to produce optimal and feasible solutions for millions of
+input parameters within seconds.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js'></script>
+</body>
+</html>
