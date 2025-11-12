@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>model-based - 2025-11-12</title>
+<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap' rel='stylesheet'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css'>
+<style>
+body {
+font-family: 'Roboto', sans-serif;
+background-color: #f5f7fa;
+padding: 20px;
+}
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.card-title {
+    font-weight: 700;
+}
+.card:hover {
+    transform: scale(1.02);
+    transition: 0.3s ease-in-out;
+}
+</style>
+</head>
+<body>
+<div class='container'>
+<h1 class='text-center my-4'><i class='fas fa-book'></i>model-based - 2025-11-12</h1>
+<div class='row'>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/pdf/2505.15754v2' target='_blank'>Improving planning and MBRL with temporally-extended actions</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Palash Chatterjee, Roni Khardon</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-05-21 16:59:32</h6>
+<p class='card-text'>Continuous time systems are often modeled using discrete time dynamics but this requires a small simulation step to maintain accuracy. In turn, this requires a large planning horizon which leads to computationally demanding planning problems and reduced performance. Previous work in model-free reinforcement learning has partially addressed this issue using action repeats where a policy is learned to determine a discrete action duration. Instead we propose to control the continuous decision timescale directly by using temporally-extended actions and letting the planner treat the duration of the action as an additional optimization variable along with the standard action variables. This additional structure has multiple advantages. It speeds up simulation time of trajectories and, importantly, it allows for deep horizon search in terms of primitive actions while using a shallow search depth in the planner. In addition, in the model-based reinforcement learning (MBRL) setting, it reduces compounding errors from model learning and improves training time for models. We show that this idea is effective and that the range for action durations can be automatically selected using a multi-armed bandit formulation and integrated into the MBRL framework. An extensive experimental evaluation both in planning and in MBRL, shows that our approach yields faster planning, better solutions, and that it enables solutions to problems that are not solved in the standard formulation.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/pdf/2411.16019v1' target='_blank'>M3: Mamba-assisted Multi-Circuit Optimization via MBRL with Effective Scheduling</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Youngmin Oh, Jinje Park, Seunggeun Kim, Taejin Paik, David Pan, Bosun Hwang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2024-11-25 00:30:49</h6>
+<p class='card-text'>Recent advancements in reinforcement learning (RL) for analog circuit optimization have demonstrated significant potential for improving sample efficiency and generalization across diverse circuit topologies and target specifications. However, there are challenges such as high computational overhead, the need for bespoke models for each circuit. To address them, we propose M3, a novel Model-based RL (MBRL) method employing the Mamba architecture and effective scheduling. The Mamba architecture, known as a strong alternative to the transformer architecture, enables multi-circuit optimization with distinct parameters and target specifications. The effective scheduling strategy enhances sample efficiency by adjusting crucial MBRL training parameters. To the best of our knowledge, M3 is the first method for multi-circuit optimization by leveraging both the Mamba architecture and a MBRL with effective scheduling. As a result, it significantly improves sample efficiency compared to existing RL methods.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/pdf/2104.10159v1' target='_blank'>MBRL-Lib: A Modular Library for Model-based Reinforcement Learning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Luis Pineda, Brandon Amos, Amy Zhang, Nathan O. Lambert, Roberto Calandra</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2021-04-20 17:58:22</h6>
+<p class='card-text'>Model-based reinforcement learning is a compelling framework for data-efficient learning of agents that interact with the world. This family of algorithms has many subcomponents that need to be carefully selected and tuned. As a result the entry-bar for researchers to approach the field and to deploy it in real-world tasks can be daunting. In this paper, we present MBRL-Lib -- a machine learning library for model-based reinforcement learning in continuous state-action spaces based on PyTorch. MBRL-Lib is designed as a platform for both researchers, to easily develop, debug and compare new algorithms, and non-expert user, to lower the entry-bar of deploying state-of-the-art algorithms. MBRL-Lib is open-source at https://github.com/facebookresearch/mbrl-lib.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/pdf/1901.03737v2' target='_blank'>Low Level Control of a Quadrotor with Deep Model-Based Reinforcement Learning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Nathan O. Lambert, Daniel S. Drew, Joseph Yaconelli, Roberto Calandra, Sergey Levine, Kristofer S. J. Pister</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2019-01-11 20:30:42</h6>
+<p class='card-text'>Designing effective low-level robot controllers often entail platform-specific implementations that require manual heuristic parameter tuning, significant system knowledge, or long design times. With the rising number of robotic and mechatronic systems deployed across areas ranging from industrial automation to intelligent toys, the need for a general approach to generating low-level controllers is increasing. To address the challenge of rapidly generating low-level controllers, we argue for using model-based reinforcement learning (MBRL) trained on relatively small amounts of automatically generated (i.e., without system simulation) data. In this paper, we explore the capabilities of MBRL on a Crazyflie centimeter-scale quadrotor with rapid dynamics to predict and control at <50Hz. To our knowledge, this is the first use of MBRL for controlled hover of a quadrotor using only on-board sensors, direct motor input signals, and no initial dynamics knowledge. Our controller leverages rapid simulation of a neural network forward dynamics model on a GPU-enabled base station, which then transmits the best current action to the quadrotor firmware via radio. In our experiments, the quadrotor achieved hovering capability of up to 6 seconds with 3 minutes of experimental training data.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/pdf/1912.13007v1' target='_blank'>World Programs for Model-Based Learning and Planning in Compositional State and Action Spaces</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Marwin H. S. Segler</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2019-12-30 17:03:16</h6>
+<p class='card-text'>Some of the most important tasks take place in environments which lack cheap and perfect simulators, thus hampering the application of model-free reinforcement learning (RL). While model-based RL aims to learn a dynamics model, in a more general case the learner does not know a priori what the action space is. Here we propose a formalism where the learner induces a world program by learning a dynamics model and the actions in graph-based compositional environments by observing state-state transition examples. Then, the learner can perform RL with the world program as the simulator for complex planning tasks. We highlight a recent application, and propose a challenge for the community to assess world program-based planning.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/pdf/2403.14860v1' target='_blank'>Robust Model Based Reinforcement Learning Using $\mathcal{L}_1$ Adaptive Control</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Minjun Sung, Sambhu H. Karumanchi, Aditya Gahlawat, Naira Hovakimyan</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2024-03-21 22:15:09</h6>
+<p class='card-text'>We introduce $\mathcal{L}_1$-MBRL, a control-theoretic augmentation scheme for Model-Based Reinforcement Learning (MBRL) algorithms. Unlike model-free approaches, MBRL algorithms learn a model of the transition function using data and use it to design a control input. Our approach generates a series of approximate control-affine models of the learned transition function according to the proposed switching law. Using the approximate model, control input produced by the underlying MBRL is perturbed by the $\mathcal{L}_1$ adaptive control, which is designed to enhance the robustness of the system against uncertainties. Importantly, this approach is agnostic to the choice of MBRL algorithm, enabling the use of the scheme with various MBRL algorithms. MBRL algorithms with $\mathcal{L}_1$ augmentation exhibit enhanced performance and sample efficiency across multiple MuJoCo environments, outperforming the original MBRL algorithms, both with and without system noise.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/pdf/1907.02057v1' target='_blank'>Benchmarking Model-Based Reinforcement Learning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Tingwu Wang, Xuchan Bao, Ignasi Clavera, Jerrick Hoang, Yeming Wen, Eric Langlois, Shunshi Zhang, Guodong Zhang, Pieter Abbeel, Jimmy Ba</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2019-07-03 17:53:02</h6>
+<p class='card-text'>Model-based reinforcement learning (MBRL) is widely seen as having the potential to be significantly more sample efficient than model-free RL. However, research in model-based RL has not been very standardized. It is fairly common for authors to experiment with self-designed environments, and there are several separate lines of research, which are sometimes closed-sourced or not reproducible. Accordingly, it is an open question how these various existing MBRL algorithms perform relative to each other. To facilitate research in MBRL, in this paper we gather a wide collection of MBRL algorithms and propose over 18 benchmarking environments specially designed for MBRL. We benchmark these algorithms with unified problem settings, including noisy environments. Beyond cataloguing performance, we explore and unify the underlying algorithmic differences across MBRL algorithms. We characterize three key research challenges for future MBRL research: the dynamics bottleneck, the planning horizon dilemma, and the early-termination dilemma. Finally, to maximally facilitate future research on MBRL, we open-source our benchmark in http://www.cs.toronto.edu/~tingwuwang/mbrl.html.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/pdf/1904.10762v4' target='_blank'>Baconian: A Unified Open-source Framework for Model-Based Reinforcement Learning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Linsen Dong, Guanyu Gao, Xinyi Zhang, Liangyu Chen, Yonggang Wen</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2019-04-23 05:35:50</h6>
+<p class='card-text'>Model-Based Reinforcement Learning (MBRL) is one category of Reinforcement Learning (RL) algorithms which can improve sampling efficiency by modeling and approximating system dynamics. It has been widely adopted in the research of robotics, autonomous driving, etc. Despite its popularity, there still lacks some sophisticated and reusable open-source frameworks to facilitate MBRL research and experiments. To fill this gap, we develop a flexible and modularized framework, Baconian, which allows researchers to easily implement a MBRL testbed by customizing or building upon our provided modules and algorithms. Our framework can free users from re-implementing popular MBRL algorithms from scratch thus greatly save users' efforts on MBRL experiments.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/pdf/2004.07804v2' target='_blank'>A Game Theoretic Framework for Model Based Reinforcement Learning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Aravind Rajeswaran, Igor Mordatch, Vikash Kumar</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2020-04-16 17:51:45</h6>
+<p class='card-text'>Model-based reinforcement learning (MBRL) has recently gained immense interest due to its potential for sample efficiency and ability to incorporate off-policy data. However, designing stable and efficient MBRL algorithms using rich function approximators have remained challenging. To help expose the practical challenges in MBRL and simplify algorithm design from the lens of abstraction, we develop a new framework that casts MBRL as a game between: (1) a policy player, which attempts to maximize rewards under the learned model; (2) a model player, which attempts to fit the real-world data collected by the policy player. For algorithm development, we construct a Stackelberg game between the two players, and show that it can be solved with approximate bi-level optimization. This gives rise to two natural families of algorithms for MBRL based on which player is chosen as the leader in the Stackelberg game. Together, they encapsulate, unify, and generalize many previous MBRL algorithms. Furthermore, our framework is consistent with and provides a clear basis for heuristics known to be important in practice from prior works. Finally, through experiments we validate that our proposed algorithms are highly sample efficient, match the asymptotic performance of model-free policy gradient, and scale gracefully to high-dimensional tasks like dexterous hand manipulation. Additional details and code can be obtained from the project page at https://sites.google.com/view/mbrl-game</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/pdf/2206.09328v1' target='_blank'>A Survey on Model-based Reinforcement Learning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Fan-Ming Luo, Tian Xu, Hang Lai, Xiong-Hui Chen, Weinan Zhang, Yang Yu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2022-06-19 05:28:03</h6>
+<p class='card-text'>Reinforcement learning (RL) solves sequential decision-making problems via a trial-and-error process interacting with the environment. While RL achieves outstanding success in playing complex video games that allow huge trial-and-error, making errors is always undesired in the real world. To improve the sample efficiency and thus reduce the errors, model-based reinforcement learning (MBRL) is believed to be a promising direction, which builds environment models in which the trial-and-errors can take place without real costs. In this survey, we take a review of MBRL with a focus on the recent progress in deep RL. For non-tabular environments, there is always a generalization error between the learned environment model and the real environment. As such, it is of great importance to analyze the discrepancy between policy training in the environment model and that in the real environment, which in turn guides the algorithm design for better model learning, model usage, and policy training. Besides, we also discuss the recent advances of model-based techniques in other forms of RL, including offline RL, goal-conditioned RL, multi-agent RL, and meta-RL. Moreover, we discuss the applicability and advantages of MBRL in real-world tasks. Finally, we end this survey by discussing the promising prospects for the future development of MBRL. We think that MBRL has great potential and advantages in real-world applications that were overlooked, and we hope this survey could attract more research on MBRL.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/pdf/2310.15017v3' target='_blank'>Mind the Model, Not the Agent: The Primacy Bias in Model-based RL</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Zhongjian Qiao, Jiafei Lyu, Xiu Li</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2023-10-23 15:12:20</h6>
+<p class='card-text'>The primacy bias in model-free reinforcement learning (MFRL), which refers to the agent's tendency to overfit early data and lose the ability to learn from new data, can significantly decrease the performance of MFRL algorithms. Previous studies have shown that employing simple techniques, such as resetting the agent's parameters, can substantially alleviate the primacy bias in MFRL. However, the primacy bias in model-based reinforcement learning (MBRL) remains unexplored. In this work, we focus on investigating the primacy bias in MBRL. We begin by observing that resetting the agent's parameters harms its performance in the context of MBRL. We further find that the primacy bias in MBRL is more closely related to the primacy bias of the world model instead of the primacy bias of the agent. Based on this finding, we propose \textit{world model resetting}, a simple yet effective technique to alleviate the primacy bias in MBRL. We apply our method to two different MBRL algorithms, MBPO and DreamerV2. We validate the effectiveness of our method on multiple continuous control tasks on MuJoCo and DeepMind Control Suite, as well as discrete control tasks on Atari 100k benchmark. The experimental results show that \textit{world model resetting} can significantly alleviate the primacy bias in the model-based setting and improve the algorithm's performance. We also give a guide on how to perform \textit{world model resetting} effectively.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/pdf/2208.14407v3' target='_blank'>An Analysis of Model-Based Reinforcement Learning From Abstracted Observations</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Rolf A. N. Starre, Marco Loog, Elena Congeduti, Frans A. Oliehoek</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2022-08-30 17:19:26</h6>
+<p class='card-text'>Many methods for Model-based Reinforcement learning (MBRL) in Markov decision processes (MDPs) provide guarantees for both the accuracy of the model they can deliver and the learning efficiency. At the same time, state abstraction techniques allow for a reduction of the size of an MDP while maintaining a bounded loss with respect to the original problem. Therefore, it may come as a surprise that no such guarantees are available when combining both techniques, i.e., where MBRL merely observes abstract states. Our theoretical analysis shows that abstraction can introduce a dependence between samples collected online (e.g., in the real world). That means that, without taking this dependence into account, results for MBRL do not directly extend to this setting. Our result shows that we can use concentration inequalities for martingales to overcome this problem. This result makes it possible to extend the guarantees of existing MBRL algorithms to the setting with abstraction. We illustrate this by combining R-MAX, a prototypical MBRL algorithm, with abstraction, thus producing the first performance guarantees for model-based 'RL from Abstracted Observations': model-based reinforcement learning with an abstract model.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/pdf/1907.04202v2' target='_blank'>Variational Inference MPC for Bayesian Model-based Reinforcement Learning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Masashi Okada, Tadahiro Taniguchi</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2019-07-08 01:54:08</h6>
+<p class='card-text'>In recent studies on model-based reinforcement learning (MBRL), incorporating uncertainty in forward dynamics is a state-of-the-art strategy to enhance learning performance, making MBRLs competitive to cutting-edge model free methods, especially in simulated robotics tasks. Probabilistic ensembles with trajectory sampling (PETS) is a leading type of MBRL, which employs Bayesian inference to dynamics modeling and model predictive control (MPC) with stochastic optimization via the cross entropy method (CEM). In this paper, we propose a novel extension to the uncertainty-aware MBRL. Our main contributions are twofold: Firstly, we introduce a variational inference MPC, which reformulates various stochastic methods, including CEM, in a Bayesian fashion. Secondly, we propose a novel instance of the framework, called probabilistic action ensembles with trajectory sampling (PaETS). As a result, our Bayesian MBRL can involve multimodal uncertainties both in dynamics and optimal trajectories. In comparison to PETS, our method consistently improves asymptotic performance on several challenging locomotion tasks.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/pdf/1612.06018v2' target='_blank'>Self-Correcting Models for Model-Based Reinforcement Learning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Erik Talvitie</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2016-12-19 01:09:23</h6>
+<p class='card-text'>When an agent cannot represent a perfectly accurate model of its environment's dynamics, model-based reinforcement learning (MBRL) can fail catastrophically. Planning involves composing the predictions of the model; when flawed predictions are composed, even minor errors can compound and render the model useless for planning. Hallucinated Replay (Talvitie 2014) trains the model to "correct" itself when it produces errors, substantially improving MBRL with flawed models. This paper theoretically analyzes this approach, illuminates settings in which it is likely to be effective or ineffective, and presents a novel error bound, showing that a model's ability to self-correct is more tightly related to MBRL performance than one-step prediction error. These results inspire an MBRL algorithm for deterministic MDPs with performance guarantees that are robust to model class limitations.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/pdf/2310.06253v2' target='_blank'>A Unified View on Solving Objective Mismatch in Model-Based Reinforcement Learning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Ran Wei, Nathan Lambert, Anthony McDonald, Alfredo Garcia, Roberto Calandra</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2023-10-10 01:58:38</h6>
+<p class='card-text'>Model-based Reinforcement Learning (MBRL) aims to make agents more sample-efficient, adaptive, and explainable by learning an explicit model of the environment. While the capabilities of MBRL agents have significantly improved in recent years, how to best learn the model is still an unresolved question. The majority of MBRL algorithms aim at training the model to make accurate predictions about the environment and subsequently using the model to determine the most rewarding actions. However, recent research has shown that model predictive accuracy is often not correlated with action quality, tracing the root cause to the objective mismatch between accurate dynamics model learning and policy optimization of rewards. A number of interrelated solution categories to the objective mismatch problem have emerged as MBRL continues to mature as a research area. In this work, we provide an in-depth survey of these solution categories and propose a taxonomy to foster future research.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/pdf/2205.15056v1' target='_blank'>Stock Trading Optimization through Model-based Reinforcement Learning with Resistance Support Relative Strength</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Huifang Huang, Ting Gao, Yi Gui, Jin Guo, Peng Zhang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2022-05-30 12:36:48</h6>
+<p class='card-text'>Reinforcement learning (RL) is gaining attention by more and more researchers in quantitative finance as the agent-environment interaction framework is aligned with decision making process in many business problems. Most of the current financial applications using RL algorithms are based on model-free method, which still faces stability and adaptivity challenges. As lots of cutting-edge model-based reinforcement learning (MBRL) algorithms mature in applications such as video games or robotics, we design a new approach that leverages resistance and support (RS) level as regularization terms for action in MBRL, to improve the algorithm's efficiency and stability. From the experiment results, we can see RS level, as a market timing technique, enhances the performance of pure MBRL models in terms of various measurements and obtains better profit gain with less riskiness. Besides, our proposed method even resists big drop (less maximum drawdown) during COVID-19 pandemic period when the financial market got unpredictable crisis. Explanations on why control of resistance and support level can boost MBRL is also investigated through numerical experiments, such as loss of actor-critic network and prediction error of the transition dynamical model. It shows that RS indicators indeed help the MBRL algorithms to converge faster at early stage and obtain smaller critic loss as training episodes increase.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/pdf/2510.11501v1' target='_blank'>Context-Aware Model-Based Reinforcement Learning for Autonomous Racing</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Emran Yasser Moustafa, Ivana Dusparic</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-10-13 15:09:09</h6>
+<p class='card-text'>Autonomous vehicles have shown promising potential to be a groundbreaking technology for improving the safety of road users. For these vehicles, as well as many other safety-critical robotic technologies, to be deployed in real-world applications, we require algorithms that can generalize well to unseen scenarios and data. Model-based reinforcement learning algorithms (MBRL) have demonstrated state-of-the-art performance and data efficiency across a diverse set of domains. However, these algorithms have also shown susceptibility to changes in the environment and its transition dynamics.
+  In this work, we explore the performance and generalization capabilities of MBRL algorithms for autonomous driving, specifically in the simulated autonomous racing environment, Roboracer (formerly F1Tenth). We frame the head-to-head racing task as a learning problem using contextual Markov decision processes and parameterize the driving behavior of the adversaries using the context of the episode, thereby also parameterizing the transition and reward dynamics. We benchmark the behavior of MBRL algorithms in this environment and propose a novel context-aware extension of the existing literature, cMask. We demonstrate that context-aware MBRL algorithms generalize better to out-of-distribution adversary behaviors relative to context-free approaches. We also demonstrate that cMask displays strong generalization capabilities, as well as further performance improvement relative to other context-aware MBRL approaches when racing against adversaries with in-distribution behaviors.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/pdf/2210.05922v1' target='_blank'>A Unified Framework for Alternating Offline Model Training and Policy Learning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Shentao Yang, Shujian Zhang, Yihao Feng, Mingyuan Zhou</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2022-10-12 04:58:51</h6>
+<p class='card-text'>In offline model-based reinforcement learning (offline MBRL), we learn a dynamic model from historically collected data, and subsequently utilize the learned model and fixed datasets for policy learning, without further interacting with the environment. Offline MBRL algorithms can improve the efficiency and stability of policy learning over the model-free algorithms. However, in most of the existing offline MBRL algorithms, the learning objectives for the dynamic models and the policies are isolated from each other. Such an objective mismatch may lead to inferior performance of the learned agents. In this paper, we address this issue by developing an iterative offline MBRL framework, where we maximize a lower bound of the true expected return, by alternating between dynamic-model training and policy learning. With the proposed unified model-policy learning framework, we achieve competitive performance on a wide range of continuous-control offline reinforcement learning datasets. Source code is publicly released.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/pdf/2310.00344v3' target='_blank'>HarmonyDream: Task Harmonization Inside World Models</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Haoyu Ma, Jialong Wu, Ningya Feng, Chenjun Xiao, Dong Li, Jianye Hao, Jianmin Wang, Mingsheng Long</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2023-09-30 11:38:13</h6>
+<p class='card-text'>Model-based reinforcement learning (MBRL) holds the promise of sample-efficient learning by utilizing a world model, which models how the environment works and typically encompasses components for two tasks: observation modeling and reward modeling. In this paper, through a dedicated empirical investigation, we gain a deeper understanding of the role each task plays in world models and uncover the overlooked potential of sample-efficient MBRL by mitigating the domination of either observation or reward modeling. Our key insight is that while prevalent approaches of explicit MBRL attempt to restore abundant details of the environment via observation models, it is difficult due to the environment's complexity and limited model capacity. On the other hand, reward models, while dominating implicit MBRL and adept at learning compact task-centric dynamics, are inadequate for sample-efficient learning without richer learning signals. Motivated by these insights and discoveries, we propose a simple yet effective approach, HarmonyDream, which automatically adjusts loss coefficients to maintain task harmonization, i.e. a dynamic equilibrium between the two tasks in world model learning. Our experiments show that the base MBRL method equipped with HarmonyDream gains 10%-69% absolute performance boosts on visual robotic tasks and sets a new state-of-the-art result on the Atari 100K benchmark. Code is available at https://github.com/thuml/HarmonyDream.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/pdf/2502.11480v1' target='_blank'>Enhancing Offline Model-Based RL via Active Model Selection: A Bayesian Optimization Perspective</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yu-Wei Yang, Yun-Ming Chan, Wei Hung, Xi Liu, Ping-Chun Hsieh</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-02-17 06:34:58</h6>
+<p class='card-text'>Offline model-based reinforcement learning (MBRL) serves as a competitive framework that can learn well-performing policies solely from pre-collected data with the help of learned dynamics models. To fully unleash the power of offline MBRL, model selection plays a pivotal role in determining the dynamics model utilized for downstream policy learning. However, offline MBRL conventionally relies on validation or off-policy evaluation, which are rather inaccurate due to the inherent distribution shift in offline RL. To tackle this, we propose BOMS, an active model selection framework that enhances model selection in offline MBRL with only a small online interaction budget, through the lens of Bayesian optimization (BO). Specifically, we recast model selection as BO and enable probabilistic inference in BOMS by proposing a novel model-induced kernel, which is theoretically grounded and computationally efficient. Through extensive experiments, we show that BOMS improves over the baseline methods with a small amount of online interaction comparable to only $1\%$-$2.5\%$ of offline training data on various RL tasks.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/pdf/2505.13144v1' target='_blank'>Temporal Distance-aware Transition Augmentation for Offline Model-based Reinforcement Learning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Dongsu Lee, Minhae Kwon</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-05-19 14:11:14</h6>
+<p class='card-text'>The goal of offline reinforcement learning (RL) is to extract a high-performance policy from the fixed datasets, minimizing performance degradation due to out-of-distribution (OOD) samples. Offline model-based RL (MBRL) is a promising approach that ameliorates OOD issues by enriching state-action transitions with augmentations synthesized via a learned dynamics model. Unfortunately, seminal offline MBRL methods often struggle in sparse-reward, long-horizon tasks. In this work, we introduce a novel MBRL framework, dubbed Temporal Distance-Aware Transition Augmentation (TempDATA), that generates augmented transitions in a temporally structured latent space rather than in raw state space. To model long-horizon behavior, TempDATA learns a latent abstraction that captures a temporal distance from both trajectory and transition levels of state space. Our experiments confirm that TempDATA outperforms previous offline MBRL methods and achieves matching or surpassing the performance of diffusion-based trajectory augmentation and goal-conditioned RL on the D4RL AntMaze, FrankaKitchen, CALVIN, and pixel-based FrankaKitchen.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/pdf/2501.16443v1' target='_blank'>Objects matter: object-centric world models improve reinforcement learning in visually complex environments</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Weipu Zhang, Adam Jelley, Trevor McInroe, Amos Storkey</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-01-27 19:07:06</h6>
+<p class='card-text'>Deep reinforcement learning has achieved remarkable success in learning control policies from pixels across a wide range of tasks, yet its application remains hindered by low sample efficiency, requiring significantly more environment interactions than humans to reach comparable performance. Model-based reinforcement learning (MBRL) offers a solution by leveraging learnt world models to generate simulated experience, thereby improving sample efficiency. However, in visually complex environments, small or dynamic elements can be critical for decision-making. Yet, traditional MBRL methods in pixel-based environments typically rely on auto-encoding with an $L_2$ loss, which is dominated by large areas and often fails to capture decision-relevant details. To address these limitations, we propose an object-centric MBRL pipeline, which integrates recent advances in computer vision to allow agents to focus on key decision-related elements. Our approach consists of four main steps: (1) annotating key objects related to rewards and goals with segmentation masks, (2) extracting object features using a pre-trained, frozen foundation vision model, (3) incorporating these object features with the raw observations to predict environmental dynamics, and (4) training the policy using imagined trajectories generated by this object-centric world model. Building on the efficient MBRL algorithm STORM, we call this pipeline OC-STORM. We demonstrate OC-STORM's practical value in overcoming the limitations of conventional MBRL approaches on both Atari games and the visually complex game Hollow Knight.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/pdf/2002.04523v3' target='_blank'>Objective Mismatch in Model-based Reinforcement Learning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Nathan Lambert, Brandon Amos, Omry Yadan, Roberto Calandra</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2020-02-11 16:26:07</h6>
+<p class='card-text'>Model-based reinforcement learning (MBRL) has been shown to be a powerful framework for data-efficiently learning control of continuous tasks. Recent work in MBRL has mostly focused on using more advanced function approximators and planning schemes, with little development of the general framework. In this paper, we identify a fundamental issue of the standard MBRL framework -- what we call the objective mismatch issue. Objective mismatch arises when one objective is optimized in the hope that a second, often uncorrelated, metric will also be optimized. In the context of MBRL, we characterize the objective mismatch between training the forward dynamics model w.r.t.~the likelihood of the one-step ahead prediction, and the overall goal of improving performance on a downstream control task. For example, this issue can emerge with the realization that dynamics models effective for a specific task do not necessarily need to be globally accurate, and vice versa globally accurate models might not be sufficiently accurate locally to obtain good control performance on a specific task. In our experiments, we study this objective mismatch issue and demonstrate that the likelihood of one-step ahead predictions is not always correlated with control performance. This observation highlights a critical limitation in the MBRL framework which will require further research to be fully understood and addressed. We propose an initial method to mitigate the mismatch issue by re-weighting dynamics model training. Building on it, we conclude with a discussion about other potential directions of research for addressing this issue.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/pdf/2305.04750v1' target='_blank'>Sense, Imagine, Act: Multimodal Perception Improves Model-Based Reinforcement Learning for Head-to-Head Autonomous Racing</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Elena Shrestha, Chetan Reddy, Hanxi Wan, Yulun Zhuang, Ram Vasudevan</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2023-05-08 14:49:02</h6>
+<p class='card-text'>Model-based reinforcement learning (MBRL) techniques have recently yielded promising results for real-world autonomous racing using high-dimensional observations. MBRL agents, such as Dreamer, solve long-horizon tasks by building a world model and planning actions by latent imagination. This approach involves explicitly learning a model of the system dynamics and using it to learn the optimal policy for continuous control over multiple timesteps. As a result, MBRL agents may converge to sub-optimal policies if the world model is inaccurate. To improve state estimation for autonomous racing, this paper proposes a self-supervised sensor fusion technique that combines egocentric LiDAR and RGB camera observations collected from the F1TENTH Gym. The zero-shot performance of MBRL agents is empirically evaluated on unseen tracks and against a dynamic obstacle. This paper illustrates that multimodal perception improves robustness of the world model without requiring additional training data. The resulting multimodal Dreamer agent safely avoided collisions and won the most races compared to other tested baselines in zero-shot head-to-head autonomous racing.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/pdf/2504.04164v3' target='_blank'>MInCo: Mitigating Information Conflicts in Distracted Visual Model-based Reinforcement Learning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Shiguang Sun, Hanbo Zhang, Zeyang Liu, Xinrui Yang, Lipeng Wan, Xingyu Chen, Xuguang Lan</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-04-05 12:57:31</h6>
+<p class='card-text'>Existing visual model-based reinforcement learning (MBRL) algorithms with observation reconstruction often suffer from information conflicts, making it difficult to learn compact representations and hence result in less robust policies, especially in the presence of task-irrelevant visual distractions. In this paper, we first reveal that the information conflicts in current visual MBRL algorithms stem from visual representation learning and latent dynamics modeling with an information-theoretic perspective. Based on this finding, we present a new algorithm to resolve information conflicts for visual MBRL, named MInCo, which mitigates information conflicts by leveraging negative-free contrastive learning, aiding in learning invariant representation and robust policies despite noisy observations. To prevent the dominance of visual representation learning, we introduce time-varying reweighting to bias the learning towards dynamics modeling as training proceeds. We evaluate our method on several robotic control tasks with dynamic background distractions. Our experiments demonstrate that MInCo learns invariant representations against background noise and consistently outperforms current state-of-the-art visual MBRL methods. Code is available at https://github.com/ShiguangSun/minco.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/pdf/2102.13651v1' target='_blank'>On the Importance of Hyperparameter Optimization for Model-based Reinforcement Learning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Baohe Zhang, Raghu Rajan, Luis Pineda, Nathan Lambert, André Biedenkapp, Kurtland Chua, Frank Hutter, Roberto Calandra</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2021-02-26 18:57:47</h6>
+<p class='card-text'>Model-based Reinforcement Learning (MBRL) is a promising framework for learning control in a data-efficient manner. MBRL algorithms can be fairly complex due to the separate dynamics modeling and the subsequent planning algorithm, and as a result, they often possess tens of hyperparameters and architectural choices. For this reason, MBRL typically requires significant human expertise before it can be applied to new problems and domains. To alleviate this problem, we propose to use automatic hyperparameter optimization (HPO). We demonstrate that this problem can be tackled effectively with automated HPO, which we demonstrate to yield significantly improved performance compared to human experts. In addition, we show that tuning of several MBRL hyperparameters dynamically, i.e. during the training itself, further improves the performance compared to using static hyperparameters which are kept fixed for the whole training. Finally, our experiments provide valuable insights into the effects of several hyperparameters, such as plan horizon or learning rate and their influence on the stability of training and resulting rewards.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/pdf/2102.04764v3' target='_blank'>Continuous-Time Model-Based Reinforcement Learning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Çağatay Yıldız, Markus Heinonen, Harri Lähdesmäki</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2021-02-09 11:30:19</h6>
+<p class='card-text'>Model-based reinforcement learning (MBRL) approaches rely on discrete-time state transition models whereas physical systems and the vast majority of control tasks operate in continuous-time. To avoid time-discretization approximation of the underlying process, we propose a continuous-time MBRL framework based on a novel actor-critic method. Our approach also infers the unknown state evolution differentials with Bayesian neural ordinary differential equations (ODE) to account for epistemic uncertainty. We implement and test our method on a new ODE-RL suite that explicitly solves continuous-time control systems. Our experiments illustrate that the model is robust against irregular and noisy data, is sample-efficient, and can solve control problems which pose challenges to discrete-time MBRL methods.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/pdf/2108.00128v1' target='_blank'>Physics-informed Dyna-Style Model-Based Deep Reinforcement Learning for Dynamic Control</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Xin-Yang Liu, Jian-Xun Wang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2021-07-31 02:19:36</h6>
+<p class='card-text'>Model-based reinforcement learning (MBRL) is believed to have much higher sample efficiency compared to model-free algorithms by learning a predictive model of the environment. However, the performance of MBRL highly relies on the quality of the learned model, which is usually built in a black-box manner and may have poor predictive accuracy outside of the data distribution. The deficiencies of the learned model may prevent the policy from being fully optimized. Although some uncertainty analysis-based remedies have been proposed to alleviate this issue, model bias still poses a great challenge for MBRL. In this work, we propose to leverage the prior knowledge of underlying physics of the environment, where the governing laws are (partially) known. In particular, we developed a physics-informed MBRL framework, where governing equations and physical constraints are utilized to inform the model learning and policy search. By incorporating the prior information of the environment, the quality of the learned model can be notably improved, while the required interactions with the environment are significantly reduced, leading to better sample efficiency and learning performance. The effectiveness and merit have been demonstrated over a handful of classic control problems, where the environments are governed by canonical ordinary/partial differential equations.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/pdf/2112.02817v2' target='_blank'>ED2: Environment Dynamics Decomposition World Models for Continuous Control</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jianye Hao, Yifu Yuan, Cong Wang, Zhen Wang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2021-12-06 07:11:19</h6>
+<p class='card-text'>Model-based reinforcement learning (MBRL) achieves significant sample efficiency in practice in comparison to model-free RL, but its performance is often limited by the existence of model prediction error. To reduce the model error, standard MBRL approaches train a single well-designed network to fit the entire environment dynamics, but this wastes rich information on multiple sub-dynamics which can be modeled separately, allowing us to construct the world model more accurately. In this paper, we propose the Environment Dynamics Decomposition (ED2), a novel world model construction framework that models the environment in a decomposing manner. ED2 contains two key components: sub-dynamics discovery (SD2) and dynamics decomposition prediction (D2P). SD2 discovers the sub-dynamics in an environment automatically and then D2P constructs the decomposed world model following the sub-dynamics. ED2 can be easily combined with existing MBRL algorithms and empirical results show that ED2 significantly reduces the model error, increases the sample efficiency, and achieves higher asymptotic performance when combined with the state-of-the-art MBRL algorithms on various continuous control tasks. Our code is open source and available at https://github.com/ED2-source-code/ED2.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/pdf/2011.04021v2' target='_blank'>On the role of planning in model-based deep reinforcement learning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jessica B. Hamrick, Abram L. Friesen, Feryal Behbahani, Arthur Guez, Fabio Viola, Sims Witherspoon, Thomas Anthony, Lars Buesing, Petar Veličković, Théophane Weber</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2020-11-08 16:55:16</h6>
+<p class='card-text'>Model-based planning is often thought to be necessary for deep, careful reasoning and generalization in artificial agents. While recent successes of model-based reinforcement learning (MBRL) with deep function approximation have strengthened this hypothesis, the resulting diversity of model-based methods has also made it difficult to track which components drive success and why. In this paper, we seek to disentangle the contributions of recent methods by focusing on three questions: (1) How does planning benefit MBRL agents? (2) Within planning, what choices drive performance? (3) To what extent does planning improve generalization? To answer these questions, we study the performance of MuZero (Schrittwieser et al., 2019), a state-of-the-art MBRL algorithm with strong connections and overlapping components with many other MBRL algorithms. We perform a number of interventions and ablations of MuZero across a wide range of environments, including control tasks, Atari, and 9x9 Go. Our results suggest the following: (1) Planning is most useful in the learning process, both for policy updates and for providing a more useful data distribution. (2) Using shallow trees with simple Monte-Carlo rollouts is as performant as more complex methods, except in the most difficult reasoning tasks. (3) Planning alone is insufficient to drive strong generalization. These results indicate where and how to utilize planning in reinforcement learning settings, and highlight a number of open questions for future MBRL research.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js'></script>
+</body>
+</html>
