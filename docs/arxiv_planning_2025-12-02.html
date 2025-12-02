@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>planning - 2025-12-02</title>
+<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap' rel='stylesheet'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css'>
+<style>
+body {
+font-family: 'Roboto', sans-serif;
+background-color: #f5f7fa;
+padding: 20px;
+}
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.card-title {
+    font-weight: 700;
+}
+.card:hover {
+    transform: scale(1.02);
+    transition: 0.3s ease-in-out;
+}
+</style>
+</head>
+<body>
+<div class='container'>
+<h1 class='text-center my-4'><i class='fas fa-book'></i>planning - 2025-12-02</h1>
+<div class='row'>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2512.02013v1' target='_blank'>ManualVLA: A Unified VLA Model for Chain-of-Thought Manual Generation and Robotic Manipulation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Chenyang Gu, Jiaming Liu, Hao Chen, Runzhong Huang, Qingpo Wuwu, Zhuoyang Liu, Xiaoqi Li, Ying Li, Renrui Zhang, Peng Jia, Pheng-Ann Heng, Shanghang Zhang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-12-01 18:59:50</h6>
+<p class='card-text'>Vision-Language-Action (VLA) models have recently emerged, demonstrating strong generalization in robotic scene understanding and manipulation. However, when confronted with long-horizon tasks that require defined goal states, such as LEGO assembly or object rearrangement, existing VLA models still face challenges in coordinating high-level planning with precise manipulation. Therefore, we aim to endow a VLA model with the capability to infer the "how" process from the "what" outcomes, transforming goal states into executable procedures. In this paper, we introduce ManualVLA, a unified VLA framework built upon a Mixture-of-Transformers (MoT) architecture, enabling coherent collaboration between multimodal manual generation and action execution. Unlike prior VLA models that directly map sensory inputs to actions, we first equip ManualVLA with a planning expert that generates intermediate manuals consisting of images, position prompts, and textual instructions. Building upon these multimodal manuals, we design a Manual Chain-of-Thought (ManualCoT) reasoning process that feeds them into the action expert, where each manual step provides explicit control conditions, while its latent representation offers implicit guidance for accurate manipulation. To alleviate the burden of data collection, we develop a high-fidelity digital-twin toolkit based on 3D Gaussian Splatting, which automatically generates manual data for planning expert training. ManualVLA demonstrates strong real-world performance, achieving an average success rate 32% higher than the previous hierarchical SOTA baseline on LEGO assembly and object rearrangement tasks.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2512.01952v1' target='_blank'>GrndCtrl: Grounding World Models via Self-Supervised Reward Alignment</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Haoyang He, Jay Patrikar, Dong-Ki Kim, Max Smith, Daniel McGann, Ali-akbar Agha-mohammadi, Shayegan Omidshafiei, Sebastian Scherer</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-12-01 18:03:29</h6>
+<p class='card-text'>Recent advances in video world modeling have enabled large-scale generative models to simulate embodied environments with high visual fidelity, providing strong priors for prediction, planning, and control. Yet, despite their realism, these models often lack geometric grounding, limiting their use in navigation tasks that require spatial coherence and long-horizon stability. We introduce Reinforcement Learning with World Grounding (RLWG), a self-supervised post-training framework that aligns pretrained world models with a physically verifiable structure through geometric and perceptual rewards. Analogous to reinforcement learning from verifiable feedback (RLVR) in language models, RLWG can use multiple rewards that measure pose cycle-consistency, depth reprojection, and temporal coherence. We instantiate this framework with GrndCtrl, a reward-aligned adaptation method based on Group Relative Policy Optimization (GRPO), yielding world models that maintain stable trajectories, consistent geometry, and reliable rollouts for embodied navigation. Like post-training alignment in large language models, GrndCtrl leverages verifiable rewards to bridge generative pretraining and grounded behavior, achieving superior spatial coherence and navigation stability over supervised fine-tuning in outdoor environments.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2512.01946v1' target='_blank'>Guardian: Detecting Robotic Planning and Execution Errors with Vision-Language Models</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Paul Pacaud, Ricardo Garcia, Shizhe Chen, Cordelia Schmid</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-12-01 17:57:27</h6>
+<p class='card-text'>Robust robotic manipulation requires reliable failure detection and recovery. Although current Vision-Language Models (VLMs) show promise, their accuracy and generalization are limited by the scarcity of failure data. To address this data gap, we propose an automatic robot failure synthesis approach that procedurally perturbs successful trajectories to generate diverse planning and execution failures. This method produces not only binary classification labels but also fine-grained failure categories and step-by-step reasoning traces in both simulation and the real world. With it, we construct three new failure detection benchmarks: RLBench-Fail, BridgeDataV2-Fail, and UR5-Fail, substantially expanding the diversity and scale of existing failure datasets. We then train Guardian, a VLM with multi-view images for detailed failure reasoning and detection. Guardian achieves state-of-the-art performance on both existing and newly introduced benchmarks. It also effectively improves task success rates when integrated into a state-of-the-art manipulation system in simulation and real robots, demonstrating the impact of our generated failure data.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2512.01877v1' target='_blank'>Prejudiced Futures? Algorithmic Bias in Time Series Forecasting and Its Ethical Implications</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Bagattini Alexander, Chen Shao</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-12-01 16:59:15</h6>
+<p class='card-text'>Time series prediction algorithms are increasingly central to decision-making in high-stakes domains such as healthcare, energy management, and economic planning. Yet, these systems often inherit and amplify biases embedded in historical data, flawed problem specifications, and socio-technical design decisions. This paper critically examines the ethical foundations and mitigation strategies for algorithmic bias in time series prediction. We outline how predictive models, particularly in temporally dynamic domains, can reproduce structural inequalities and emergent discrimination through proxy variables and feedback loops. The paper advances a threefold contribution: First, it reframes algorithmic bias as a socio- technical phenomenon rooted in normative choices and institutional constraints. Second, it offers a structured diagnosis of bias sources across the pipeline, emphasizing the need for causal modeling, interpretable systems, and inclusive design practices. Third, it advocates for structural reforms that embed fairness through participatory governance, stakeholder engagement, and legally enforceable safeguards. Special attention is given to fairness validation in dynamic environments, proposing multi-metric, temporally-aware, and context- sensitive evaluation methods. Ultimately, we call for an integrated ethics-by-design approach that positions fairness not as a trade-off against performance, but as a co-requisite of responsible innovation. This framework is essential to developing predictive systems that are not only effective and adaptive but also aligned with democratic values and social equity.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2512.01795v1' target='_blank'>The Hidden Cost of Straight Lines: Quantifying Misallocation Risk in Voronoi-based Service Area Models</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:JA Torrecilla Pinero, JM Ceballos Martínez, A Cuartero Sáez, P Plaza Caballero, A Cruces López</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-12-01 15:30:58</h6>
+<p class='card-text'>Voronoi tessellations are standard in spatial planning for assigning service areas based on Euclidean proximity, underpinning regulatory frameworks like the proximity principle in waste management. However, in regions with complex topography, Euclidean distance poorly approximates functional accessibility, causing misallocations that undermine efficiency and equity. This paper develops a probabilistic framework to quantify misallocation risk by modeling travel distances as random scaling of Euclidean distances and deriving incorrect assignment probability as a function of local Voronoi geometry. Using plant-municipality observations (n=383) in Extremadura, Spain (41,635 km2), we demonstrate that the Log-Normal distribution provides best relative fit among alternatives (K-S statistic=0.110). Validation reveals 15.4% of municipalities are misallocated, consistent with the theoretical prediction interval (52-65 municipalities at 95% confidence). Our framework achieves 95% agreement with complex spatial models at O(n) complexity. Poor absolute fit of global distributions (p-values<0.01) reflects diverse topography (elevation 200-2,400m), motivating spatial stratification. Sensitivity analysis validates the fitted dispersion parameter (s=0.093) for predicting observed misallocation. We provide a calibration protocol requiring only 30-100 pilot samples per zone, enabling rapid risk assessment without full network analysis. This establishes the first probabilistic framework for Voronoi misallocation risk with practical guidelines emphasizing spatial heterogeneity and context-dependent calibration.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2512.01773v1' target='_blank'>IGen: Scalable Data Generation for Robot Learning from Open-World Images</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Chenghao Gu, Haolan Kang, Junchao Lin, Jinghe Wang, Duo Wu, Shuzhao Xie, Fanding Huang, Junchen Ge, Ziyang Gong, Letian Li, Hongying Zheng, Changwei Lv, Zhi Wang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-12-01 15:15:04</h6>
+<p class='card-text'>The rise of generalist robotic policies has created an exponential demand for large-scale training data. However, on-robot data collection is labor-intensive and often limited to specific environments. In contrast, open-world images capture a vast diversity of real-world scenes that naturally align with robotic manipulation tasks, offering a promising avenue for low-cost, large-scale robot data acquisition. Despite this potential, the lack of associated robot actions hinders the practical use of open-world images for robot learning, leaving this rich visual resource largely unexploited. To bridge this gap, we propose IGen, a framework that scalably generates realistic visual observations and executable actions from open-world images. IGen first converts unstructured 2D pixels into structured 3D scene representations suitable for scene understanding and manipulation. It then leverages the reasoning capabilities of vision-language models to transform scene-specific task instructions into high-level plans and generate low-level actions as SE(3) end-effector pose sequences. From these poses, it synthesizes dynamic scene evolution and renders temporally coherent visual observations. Experiments validate the high quality of visuomotor data generated by IGen, and show that policies trained solely on IGen-synthesized data achieve performance comparable to those trained on real-world data. This highlights the potential of IGen to support scalable data generation from open-world images for generalist robotic policy training.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2512.01771v1' target='_blank'>Robust Rigid and Non-Rigid Medical Image Registration Using Learnable Edge Kernels</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Ahsan Raza Siyal, Markus Haltmeier, Ruth Steiger, Malik Galijasevic, Elke Ruth Gizewski, Astrid Ellen Grams</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-12-01 15:13:33</h6>
+<p class='card-text'>Medical image registration is crucial for various clinical and research applications including disease diagnosis or treatment planning which require alignment of images from different modalities, time points, or subjects. Traditional registration techniques often struggle with challenges such as contrast differences, spatial distortions, and modality-specific variations. To address these limitations, we propose a method that integrates learnable edge kernels with learning-based rigid and non-rigid registration techniques. Unlike conventional layers that learn all features without specific bias, our approach begins with a predefined edge detection kernel, which is then perturbed with random noise. These kernels are learned during training to extract optimal edge features tailored to the task. This adaptive edge detection enhances the registration process by capturing diverse structural features critical in medical imaging. To provide clearer insight into the contribution of each component in our design, we introduce four variant models for rigid registration and four variant models for non-rigid registration. We evaluated our approach using a dataset provided by the Medical University across three setups: rigid registration without skull removal, with skull removal, and non-rigid registration. Additionally, we assessed performance on two publicly available datasets. Across all experiments, our method consistently outperformed state-of-the-art techniques, demonstrating its potential to improve multi-modal image alignment and anatomical structure analysis.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2512.01692v1' target='_blank'>Forced Migration and Information-Seeking Behavior on Wikipedia: Insights from the Ukrainian Refugee Crisis</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Carolina Coimbra Vieira, Ebru Sanliturk, Emilio Zagheni</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-12-01 13:58:29</h6>
+<p class='card-text'>Gathering information about where to migrate is an important part of the migration process, especially during forced migration, when people must make rapid decisions under uncertainty. This study examines how forced migration relates to online information-seeking on Wikipedia. Focusing on the 2022 Russian invasion of Ukraine, we analyze how the resulting refugee crisis, which led to over six million Ukrainians fleeing across Europe, shaped views of Wikipedia articles about European cities. We compare changes in views of Ukrainian-language Wikipedia articles, used as a proxy for information-seeking by Ukrainians, with those in four other language editions. Our findings show that views of Ukrainian-language articles about European cities correlate more strongly with the number of Ukrainian refugees applying for temporary protection in European countries than views in other languages. Because Poland and Germany became the main destinations for refugees, we examine these countries more closely and find that applications for temporary protection in Polish and German cities are also more strongly correlated with views of their Ukrainian-language Wikipedia articles. We further analyze the timing between refugee flows to Poland and online information-seeking. Refugee border crossings occurred before increases in Ukrainian-language views of Polish city articles, indicating that information-seeking surged after displacement. This reactive pattern contrasts with the pre-departure planning typical of regular labor migration. Moreover, while official protection applications often lagged behind border crossings by weeks, Wikipedia activity rose almost immediately. Overall, Wikipedia usage offers a near real-time indicator of emerging migration patterns during crises.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2512.01681v1' target='_blank'>Cross-Domain Validation of a Resection-Trained Self-Supervised Model on Multicentre Mesothelioma Biopsies</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Farzaneh Seyedshahi, Francesca Damiola, Sylvie Lantuejoul, Ke Yuan, John Le Quesne</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-12-01 13:46:43</h6>
+<p class='card-text'>Accurate subtype classification and outcome prediction in mesothelioma are essential for guiding therapy and patient care. Most computational pathology models are trained on large tissue images from resection specimens, limiting their use in real-world settings where small biopsies are common. We show that a self-supervised encoder trained on resection tissue can be applied to biopsy material, capturing meaningful morphological patterns. Using these patterns, the model can predict patient survival and classify tumor subtypes. This approach demonstrates the potential of AI-driven tools to support diagnosis and treatment planning in mesothelioma.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2512.01589v1' target='_blank'>Toward Content-based Indexing and Retrieval of Head and Neck CT with Abscess Segmentation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Thao Thi Phuong Dao, Tan-Cong Nguyen, Trong-Le Do, Truong Hoang Viet, Nguyen Chi Thanh, Huynh Nguyen Thuan, Do Vo Cong Nguyen, Minh-Khoi Pham, Mai-Khiem Tran, Viet-Tham Huynh, Trong-Thuan Nguyen, Trung-Nghia Le, Vo Thanh Toan, Tam V. Nguyen, Minh-Triet Tran, Thanh Dinh Le</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-12-01 12:04:24</h6>
+<p class='card-text'>Abscesses in the head and neck represent an acute infectious process that can potentially lead to sepsis or mortality if not diagnosed and managed promptly. Accurate detection and delineation of these lesions on imaging are essential for diagnosis, treatment planning, and surgical intervention. In this study, we introduce AbscessHeNe, a curated and comprehensively annotated dataset comprising 4,926 contrast-enhanced CT slices with clinically confirmed head and neck abscesses. The dataset is designed to facilitate the development of robust semantic segmentation models that can accurately delineate abscess boundaries and evaluate deep neck space involvement, thereby supporting informed clinical decision-making. To establish performance baselines, we evaluate several state-of-the-art segmentation architectures, including CNN, Transformer, and Mamba-based models. The highest-performing model achieved a Dice Similarity Coefficient of 0.39, Intersection-over-Union of 0.27, and Normalized Surface Distance of 0.67, indicating the challenges of this task and the need for further research. Beyond segmentation, AbscessHeNe is structured for future applications in content-based multimedia indexing and case-based retrieval. Each CT scan is linked with pixel-level annotations and clinical metadata, providing a foundation for building intelligent retrieval systems and supporting knowledge-driven clinical workflows. The dataset will be made publicly available at https://github.com/drthaodao3101/AbscessHeNe.git.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2512.01550v1' target='_blank'>NavForesee: A Unified Vision-Language World Model for Hierarchical Planning and Dual-Horizon Navigation Prediction</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Fei Liu, Shichao Xie, Minghua Luo, Zedong Chu, Junjun Hu, Xiaolong Wu, Mu Xu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-12-01 11:24:16</h6>
+<p class='card-text'>Embodied navigation for long-horizon tasks, guided by complex natural language instructions, remains a formidable challenge in artificial intelligence. Existing agents often struggle with robust long-term planning about unseen environments, leading to high failure rates. To address these limitations, we introduce NavForesee, a novel Vision-Language Model (VLM) that unifies high-level language planning and predictive world model imagination within a single, unified framework. Our approach empowers a single VLM to concurrently perform planning and predictive foresight. Conditioned on the full instruction and historical observations, the model is trained to understand the navigation instructions by decomposing the task, tracking its progress, and formulating the subsequent sub-goal. Simultaneously, it functions as a generative world model, providing crucial foresight by predicting short-term environmental dynamics and long-term navigation milestones. The VLM's structured plan guides its targeted prediction, while the imagined future provides rich context to inform the navigation actions, creating a powerful internal feedback loop of perception-planning/prediction-action. We demonstrate through extensive experiments on the R2R-CE and RxR-CE benchmark that NavForesee achieves highly competitive performance in complex scenarios. Our work highlights the immense potential of fusing explicit language planning with implicit spatiotemporal prediction, paving the way for more intelligent and capable embodied agents.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2512.01477v1' target='_blank'>Modeling and Simulation of Data Protection Systems for Business Continuity and Disaster Recovery</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Saso Nikolovski, Pece Mitrevski</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-12-01 09:58:09</h6>
+<p class='card-text'>In today's corporate landscape, particularly where operations rely heavily on information technologies, establishing a robust business continuity plan, including a disaster recovery strategy, is essential for ensuring swift recuperation following outages. This study presents a comparative analysis of recovery solutions, focusing on systems that operate partially or entirely within cloud environments and assessing their reliability in fulfilling organizational roles securely and dependably. Two such systems were deployed and evaluated in a real-world production setting. Key performance and reliability metrics were identified using simulation software to enhance these systems, alongside a System Dynamics analysis conducted for each. This work proposes a comprehensive framework for selecting and maintaining data protection and recovery solutions within organizational structures, outlining criteria for aligning chosen approaches with operational needs while adhering to predetermined timelines specified in business continuity and disaster recovery plans. The resulting analysis and findings offer actionable insights to guide decision-making when selecting appropriate recovery concepts.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2512.01406v1' target='_blank'>Personalized optimization of pediatric HD-tDCS for dose consistency and target engagement</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Zeming Liu, Mo Wang, Xuanye Pan, Yuan Yang, Wilson Truccolo, Quanying Liu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-12-01 08:27:22</h6>
+<p class='card-text'>High-definition transcranial direct current stimulation (HD-tDCS) dosing in children remains largely empirical, relying on one-size-fits-all protocols despite rapid developmental changes in head anatomy and tissue properties that strongly modulate how currents reach the developing brain. Using 70 pediatric head models and commonly used cortical targets, our forward simulations find that standard montages produce marked age-dependent reductions in target electric-field intensity and systematic sex differences linked to tissue-volume covariation, underscoring the profound limitations of conventional uniform montages. To overcome these limitations, we introduce a developmentally informed, dual-objective optimization framework designed to generate personalized Pareto fronts summarizing the trade-off between electric-field intensity and focality. From these optimized solutions, we derive two practical dosing prescriptions: a dose-consistency strategy that, for the first time, enforces fixed target intensity across individuals to implicitly mitigate demographic effects, and a target-engagement strategy that maximizes target intensity under safety limits. Both strategies remain robust to large conductivity variations, and we further show that dense HD-tDCS solutions admit sparse equivalents without performance loss under the target-engagement strategy. We also find that tissue conductivity sensitivity is depth-dependent, with Pareto-front distributions for superficial cortical targets most influenced by gray matter, scalp, and bone conductivities, and those for a deep target predominantly shaped by gray and white matter conductivities. Together, these results establish a principled framework for pediatric HD-tDCS planning that explicitly accounts for developmental anatomy and physiological uncertainty, enabling reliable and individualized neuromodulation dosing in pediatric populations.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2512.01358v1' target='_blank'>Modality-Augmented Fine-Tuning of Foundation Robot Policies for Cross-Embodiment Manipulation on GR1 and G1</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Junsung Park, Hogun Kee, Songhwai Oh</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-12-01 07:13:38</h6>
+<p class='card-text'>This paper presents a modality-augmented fine-tuning framework designed to adapt foundation robot policies to diverse humanoid embodiments. We validate our approach across two distinct settings: (i) the GR1 embodiment, utilizing public datasets where we introduce post-processed modalities, including binary contact signals and ZoeDepth-generated metric depth; and (ii) the Unitree G1 embodiment, for which we contribute a novel multi-modal dataset incorporating cuRobo motion planning, inverse kinematics, and ground-truth contact-force measurements. Our experiments demonstrate that modality augmentation consistently enhances policy performance across different embodiments. Specifically, for the GR1, integrating contact-state cues and RGB-D fusion improves online success rates from 51% to 63%. Furthermore, in the G1 "Pick Apple to Bowl" task, our contact-augmented model achieves a success rate of 94%, significantly outperforming the 48% achieved by standard fine-tuning and the 0% baseline of zero-shot transfer. These results highlight that lightweight post-processing effectively strengthens policies for GR1, while high-quality multi-modal data is crucial for reliable transfer to the Unitree G1. Consequently, this work establishes a unified, data-centric pathway for extending foundation robot policies through targeted modality design and multi-modal fine-tuning.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2512.01331v1' target='_blank'>A Fast Heuristic Search Approach for Energy-Optimal Profile Routing for Electric Vehicles</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Saman Ahmadi, Mahdi Jalili</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-12-01 06:45:34</h6>
+<p class='card-text'>We study the energy-optimal shortest path problem for electric vehicles (EVs) in large-scale road networks, where recuperated energy along downhill segments introduces negative energy costs. While traditional point-to-point pathfinding algorithms for EVs assume a known initial energy level, many real-world scenarios involving uncertainty in available energy require planning optimal paths for all possible initial energy levels, a task known as energy-optimal profile search. Existing solutions typically rely on specialized profile-merging procedures within a label-correcting framework that results in searching over complex profiles. In this paper, we propose a simple yet effective label-setting approach based on multi-objective A* search, which employs a novel profile dominance rule to avoid generating and handling complex profiles. We develop four variants of our method and evaluate them on real-world road networks enriched with realistic energy consumption data. Experimental results demonstrate that our energy profile A* search achieves performance comparable to energy-optimal A* with a known initial energy level.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2512.01292v1' target='_blank'>Diffusion Model in Latent Space for Medical Image Segmentation Task</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Huynh Trinh Ngoc, Toan Nguyen Hai, Ba Luong Son, Long Tran Quoc</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-12-01 05:26:43</h6>
+<p class='card-text'>Medical image segmentation is crucial for clinical diagnosis and treatment planning. Traditional methods typically produce a single segmentation mask, failing to capture inherent uncertainty. Recent generative models enable the creation of multiple plausible masks per image, mimicking the collaborative interpretation of several clinicians. However, these approaches remain computationally heavy. We propose MedSegLatDiff, a diffusion based framework that combines a variational autoencoder (VAE) with a latent diffusion model for efficient medical image segmentation. The VAE compresses the input into a low dimensional latent space, reducing noise and accelerating training, while the diffusion process operates directly in this compact representation. We further replace the conventional MSE loss with weighted cross entropy in the VAE mask reconstruction path to better preserve tiny structures such as small nodules. MedSegLatDiff is evaluated on ISIC-2018 (skin lesions), CVC-Clinic (polyps), and LIDC-IDRI (lung nodules). It achieves state of the art or highly competitive Dice and IoU scores while simultaneously generating diverse segmentation hypotheses and confidence maps. This provides enhanced interpretability and reliability compared to deterministic baselines, making the model particularly suitable for clinical deployment.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2512.01280v1' target='_blank'>Visibility-aware Cooperative Aerial Tracking with Decentralized LiDAR-based Swarms</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Longji Yin, Yunfan Ren, Fangcheng Zhu, Liuyu Shi, Fanze Kong, Benxu Tang, Wenyi Liu, Ximin Lyu, Fu Zhang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-12-01 04:52:50</h6>
+<p class='card-text'>Autonomous aerial tracking with drones offers vast potential for surveillance, cinematography, and industrial inspection applications. While single-drone tracking systems have been extensively studied, swarm-based target tracking remains underexplored, despite its unique advantages of distributed perception, fault-tolerant redundancy, and multidirectional target coverage. To bridge this gap, we propose a novel decentralized LiDAR-based swarm tracking framework that enables visibility-aware, cooperative target tracking in complex environments, while fully harnessing the unique capabilities of swarm systems. To address visibility, we introduce a novel Spherical Signed Distance Field (SSDF)-based metric for 3-D environmental occlusion representation, coupled with an efficient algorithm that enables real-time onboard SSDF updating. A general Field-of-View (FOV) alignment cost supporting heterogeneous LiDAR configurations is proposed for consistent target observation. Swarm coordination is enhanced through cooperative costs that enforce inter-robot safe clearance, prevent mutual occlusions, and notably facilitate 3-D multidirectional target encirclement via a novel electrostatic-potential-inspired distribution metric. These innovations are integrated into a hierarchical planner, combining a kinodynamic front-end searcher with a spatiotemporal $SE(3)$ back-end optimizer to generate collision-free, visibility-optimized trajectories.Deployed on heterogeneous LiDAR swarms, our fully decentralized implementation features collaborative perception, distributed planning, and dynamic swarm reconfigurability. Validated through rigorous real-world experiments in cluttered outdoor environments, the proposed system demonstrates robust cooperative tracking of agile targets (drones, humans) while achieving superior visibility maintenance.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2512.01242v1' target='_blank'>Generative Adversarial Gumbel MCTS for Abstract Visual Composition Generation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Zirui Zhao, Boye Niu, David Hsu, Wee Sun Lee</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-12-01 03:38:44</h6>
+<p class='card-text'>We study abstract visual composition, in which identity is primarily determined by the spatial configuration and relations among a small set of geometric primitives (e.g., parts, symmetry, topology). They are invariant primarily to texture and photorealistic detail. Composing such structures from fixed components under geometric constraints and vague goal specification (such as text) is non-trivial due to combinatorial placement choices, limited data, and discrete feasibility (overlap-free, allowable orientations), which create a sparse solution manifold ill-suited to purely statistical pixel-space generators. We propose a constraint-guided framework that combines explicit geometric reasoning with neural semantics. An AlphaGo-style search enforces feasibility, while a fine-tuned vision-language model scores semantic alignment as reward signals. Our algorithm uses a policy network as a heuristic in Monte-Carlo Tree Search and fine-tunes the network via search-generated plans. Inspired by the Generative Adversarial Network, we use the generated instances for adversarial reward refinement. Over time, the generation should approach the actual data more closely when the reward model cannot distinguish between generated instances and ground-truth. In the Tangram Assembly task, our approach yields higher validity and semantic fidelity than diffusion and auto-regressive baselines, especially as constraints tighten.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2512.01219v1' target='_blank'>Neural Network Optimal Power Flow via Energy Gradient Flow and Unified Dynamics</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Xuezhi Liu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-12-01 02:59:47</h6>
+<p class='card-text'>Optimal Power Flow (OPF) is a core optimization problem in power system operation and planning, aiming to minimize generation costs while satisfying physical constraints such as power flow equations, generator limits, and voltage limits. Traditional OPF solving methods typically employ iterative optimization algorithms (such as interior point methods, sequential quadratic programming, etc.), with limitations including low computational efficiency, initial value sensitivity, and low batch computation efficiency. Most existing deep learning-based OPF methods rely on supervised learning, requiring pre-solving large numbers of cases, and have difficulty guaranteeing physical consistency. This paper proposes an Optimal Power Flow solving method based on neural network dynamics and energy gradient flow, transforming OPF problems into energy minimization problems. By constructing an energy function to measure the degree of deviation from the constraint manifold, and guiding networks to learn optimal solutions that simultaneously satisfy power flow constraints and minimize costs through gradient flow. Neural networks are trained unsupervised by directly minimizing physical residuals, requiring no labeled data, achieving true "end-to-end" physics-constrained learning.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2512.01207v1' target='_blank'>Physics-Constrained Neural Dynamics: A Unified Manifold Framework for Large-Scale Power Flow Computation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Xuezhi Liu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-12-01 02:45:23</h6>
+<p class='card-text'>Power flow analysis is a fundamental tool for power system analysis, planning, and operational control. Traditional Newton-Raphson methods suffer from limitations such as initial value sensitivity and low efficiency in batch computation, while existing deep learning-based power flow solvers mostly rely on supervised learning, requiring pre-solving of numerous cases and struggling to guarantee physical consistency. This paper proposes a neural physics power flow solving method based on manifold geometry and gradient flow, by describing the power flow equations as a constraint manifold, and constructing an energy function \(V(\mathbf{x}) = \frac{1}{2}\|\mathbf{F}(\mathbf{x})\|^2\) and gradient flow \(\frac{d\mathbf{x}}{dt} = -\nabla V(\mathbf{x})\), transforming power flow solving into an equilibrium point finding problem for dynamical systems. Neural networks are trained in an unsupervised manner by directly minimizing physical residuals, requiring no labeled data, achieving true "end-to-end" physics-constrained learning.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2512.01108v1' target='_blank'>Think Fast: Real-Time Kinodynamic Belief-Space Planning for Projectile Interception</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Gabriel Olin, Lu Chen, Nayesha Gandotra, Maxim Likhachev, Howie Choset</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-11-30 22:12:11</h6>
+<p class='card-text'>Intercepting fast moving objects, by its very nature, is challenging because of its tight time constraints. This problem becomes further complicated in the presence of sensor noise because noisy sensors provide, at best, incomplete information, which results in a distribution over target states to be intercepted. Since time is of the essence, to hit the target, the planner must begin directing the interceptor, in this case a robot arm, while still receiving information. We introduce an tree-like structure, which is grown using kinodynamic motion primitives in state-time space. This tree-like structure encodes reachability to multiple goals from a single origin, while enabling real-time value updates as the target belief evolves and seamless transitions between goals. We evaluate our framework on an interception task on a 6 DOF industrial arm (ABB IRB-1600) with an onboard stereo camera (ZED 2i). A robust Innovation-based Adaptive Estimation Adaptive Kalman Filter (RIAE-AKF) is used to track the target and perform belief updates.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2512.01076v1' target='_blank'>Routing-Method Effects on Distance, Time, Fuel, and Emissions in Europe-Asia Trade: A Comparison of the Suez, Cape, and Northern Sea Route Corridors</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Abdella Mohameda, Christian Hendricksb, Xiangyu Hua</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-11-30 20:50:42</h6>
+<p class='card-text'>Growing interest in decarbonization and Arctic accessibility has renewed attention on Europe-Asia shipping corridors. The Northern Sea Route (NSR) is often portrayed as a 30-40% shortcut relative to Suez, with savings propagated to time, fuel, and CO2. The effect of enforcing sea-only feasibility on these baselines, and its downstream impact on time, fuel, and CO2, remains under-examined.
+  We compare great-circle baselines with sea-only routes computed via A-star search (A*) on a 0.5-degree grid between Northern Europe and Northeast Asia across the Suez, Cape of Good Hope, and NSR corridors under three waypoint philosophies. Distances are mapped to voyage time using corridor-typical speeds and to fuel/CO2 using main- and auxiliary-engine accounting.
+  Sea-only routing preserves the ranking NSR < Suez < Cape but compresses NSR's advantage once realistic speeds are applied. NSR remains shortest (about 8000-10000 nm versus 11000-12000 nm for Suez), yet typical durations differ modestly and fuel/CO2 savings over Suez are small and variant-dependent. Equal-speed tests restore geometric ordering, and endpoint sensitivity shows larger NSR gains for more northern East Asian ports.
+  The framework provides a reproducible, corridor-agnostic benchmark for later integration of sea ice, weather, regulatory overlays, and AIS data in dynamic Arctic voyage planning.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2512.01009v1' target='_blank'>FOM-Nav: Frontier-Object Maps for Object Goal Navigation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Thomas Chabal, Shizhe Chen, Jean Ponce, Cordelia Schmid</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-11-30 18:16:09</h6>
+<p class='card-text'>This paper addresses the Object Goal Navigation problem, where a robot must efficiently find a target object in an unknown environment. Existing implicit memory-based methods struggle with long-term memory retention and planning, while explicit map-based approaches lack rich semantic information. To address these challenges, we propose FOM-Nav, a modular framework that enhances exploration efficiency through Frontier-Object Maps and vision-language models. Our Frontier-Object Maps are built online and jointly encode spatial frontiers and fine-grained object information. Using this representation, a vision-language model performs multimodal scene understanding and high-level goal prediction, which is executed by a low-level planner for efficient trajectory generation. To train FOM-Nav, we automatically construct large-scale navigation datasets from real-world scanned environments. Extensive experiments validate the effectiveness of our model design and constructed dataset. FOM-Nav achieves state-of-the-art performance on the MP3D and HM3D benchmarks, particularly in navigation efficiency metric SPL, and yields promising results on a real robot.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2512.00975v1' target='_blank'>MM-ACT: Learn from Multimodal Parallel Generation to Act</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Haotian Liang, Xinyi Chen, Bin Wang, Mingkang Chen, Yitian Liu, Yuhao Zhang, Zanxin Chen, Tianshuo Yang, Yilun Chen, Jiangmiao Pang, Dong Liu, Xiaokang Yang, Yao Mu, Wenqi Shao, Ping Luo</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-11-30 16:46:35</h6>
+<p class='card-text'>A generalist robotic policy needs both semantic understanding for task planning and the ability to interact with the environment through predictive capabilities. To tackle this, we present MM-ACT, a unified Vision-Language-Action (VLA) model that integrates text, image, and action in shared token space and performs generation across all three modalities. MM-ACT adopts a re-mask parallel decoding strategy for text and image generation, and employs a one-step parallel decoding strategy for action generation to improve efficiency. We introduce Context-Shared Multimodal Learning, a unified training paradigm that supervises generation in all three modalities from a shared context, enhancing action generation through cross-modal learning. Experiments were conducted on the LIBERO simulation and Franka real-robot setups as well as RoboTwin2.0 to assess in-domain and out-of-domain performances respectively. Our approach achieves a success rate of 96.3% on LIBERO, 72.0% across three tasks of real Franka, and 52.38% across eight bimanual tasks of RoboTwin2.0 with an additional gain of 9.25% from cross-modal learning. We release our codes, models and data at https://github.com/HHYHRHY/MM-ACT.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2512.00939v1' target='_blank'>Constant-Time Motion Planning with Manipulation Behaviors</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Nayesha Gandotra, Itamar Mishani, Maxim Likhachev</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-11-30 15:42:35</h6>
+<p class='card-text'>Recent progress in contact-rich robotic manipulation has been striking, yet most deployed systems remain confined to simple, scripted routines. One of the key barriers is the lack of motion planning algorithms that can provide verifiable guarantees for safety, efficiency and reliability. To address this, a family of algorithms called Constant-Time Motion Planning (CTMP) was introduced, which leverages a preprocessing phase to enable collision-free motion queries in a fixed, user-specified time budget (e.g., 10 milliseconds). However, existing CTMP methods do not explicitly incorporate the manipulation behaviors essential for object handling. To bridge this gap, we introduce the \textit{Behavioral Constant-Time Motion Planner} (B-CTMP), an algorithm that extends CTMP to solve a broad class of two-step manipulation tasks: (1) a collision-free motion to a behavior initiation state, followed by (2) execution of a manipulation behavior (such as grasping or insertion) to reach the goal. By precomputing compact data structures, B-CTMP guarantees constant-time query in mere milliseconds while ensuring completeness and successful task execution over a specified set of states. We evaluate B-CTMP on two canonical manipulation tasks in simulation, shelf picking and plug insertion,and demonstrate its effectiveness on a real robot. Our results show that B-CTMP unifies collision-free planning and object manipulation within a single constant-time framework, providing provable guarantees of speed and success for manipulation in semi-structured environments.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2512.00883v1' target='_blank'>Audio-Visual World Models: Towards Multisensory Imagination in Sight and Sound</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jiahua Wang, Shannan Yan, Leqi Zheng, Jialong Wu, Yaoxin Mao</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-11-30 13:11:56</h6>
+<p class='card-text'>World models simulate environmental dynamics to enable agents to plan and reason about future states. While existing approaches have primarily focused on visual observations, real-world perception inherently involves multiple sensory modalities. Audio provides crucial spatial and temporal cues such as sound source localization and acoustic scene properties, yet its integration into world models remains largely unexplored. No prior work has formally defined what constitutes an audio-visual world model or how to jointly capture binaural spatial audio and visual dynamics under precise action control with task reward prediction. This work presents the first formal framework for Audio-Visual World Models (AVWM), formulating multimodal environment simulation as a partially observable Markov decision process with synchronized audio-visual observations, fine-grained actions, and task rewards. To address the lack of suitable training data, we construct AVW-4k, a dataset comprising 30 hours of binaural audio-visual trajectories with action annotations and reward signals across 76 indoor environments. We propose AV-CDiT, an Audio-Visual Conditional Diffusion Transformer with a novel modality expert architecture that balances visual and auditory learning, optimized through a three-stage training strategy for effective multimodal integration. Extensive experiments demonstrate that AV-CDiT achieves high-fidelity multimodal prediction across visual and auditory modalities with reward. Furthermore, we validate its practical utility in continuous audio-visual navigation tasks, where AVWM significantly enhances the agent's performance.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2512.00850v1' target='_blank'>Smol-GS: Compact Representations for Abstract 3D Gaussian Splatting</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Haishan Wang, Mohammad Hassan Vali, Arno Solin</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-11-30 11:42:00</h6>
+<p class='card-text'>We present Smol-GS, a novel method for learning compact representations for 3D Gaussian Splatting (3DGS). Our approach learns highly efficient encodings in 3D space that integrate both spatial and semantic information. The model captures the coordinates of the splats through a recursive voxel hierarchy, while splat-wise features store abstracted cues, including color, opacity, transformation, and material properties. This design allows the model to compress 3D scenes by orders of magnitude without loss of flexibility. Smol-GS achieves state-of-the-art compression on standard benchmarks while maintaining high rendering quality. Beyond visual fidelity, the discrete representations could potentially serve as a foundation for downstream tasks such as navigation, planning, and broader 3D scene understanding.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2512.00838v1' target='_blank'>A Novel MDP Decomposition Framework for Scalable UAV Mission Planning in Complex and Uncertain Environments</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Md Muzakkir Quamar, Ali Nasir, Sami ELFerik</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-11-30 11:14:21</h6>
+<p class='card-text'>This paper presents a scalable and fault-tolerant framework for unmanned aerial vehicle (UAV) mission management in complex and uncertain environments. The proposed approach addresses the computational bottleneck inherent in solving large-scale Markov Decision Processes (MDPs) by introducing a two-stage decomposition strategy. In the first stage, a factor-based algorithm partitions the global MDP into smaller, goal-specific sub-MDPs by leveraging domain-specific features such as goal priority, fault states, spatial layout, and energy constraints. In the second stage, a priority-based recombination algorithm solves each sub-MDP independently and integrates the results into a unified global policy using a meta-policy for conflict resolution. Importantly, we present a theoretical analysis showing that, under mild probabilistic independence assumptions, the combined policy is provably equivalent to the optimal global MDP policy. Our work advances artificial intelligence (AI) decision scalability by decomposing large MDPs into tractable subproblems with provable global equivalence. The proposed decomposition framework enhances the scalability of Markov Decision Processes, a cornerstone of sequential decision-making in artificial intelligence, enabling real-time policy updates for complex mission environments. Extensive simulations validate the effectiveness of our method, demonstrating orders-of-magnitude reduction in computation time without sacrificing mission reliability or policy optimality. The proposed framework establishes a practical and robust foundation for scalable decision-making in real-time UAV mission execution.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2512.00836v1' target='_blank'>Assessing model error in counterfactual worlds</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Emily Howerton, Justin Lessler</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-11-30 11:08:43</h6>
+<p class='card-text'>Counterfactual scenario modeling exercises that ask "what would happen if?" are one of the most common ways we plan for the future. Despite their ubiquity in planning and decision making, scenario projections are rarely evaluated retrospectively. Differences between projections and observations come from two sources: scenario deviation and model miscalibration. We argue the latter is most important for assessing the value of models in decision making, but requires estimating model error in counterfactual worlds. Here we present and contrast three approaches for estimating this error, and demonstrate the benefits and limitations of each in a simulation experiment. We provide recommendations for the estimation of counterfactual error and discuss the components of scenario design that are required to make scenario projections evaluable.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2512.00775v1' target='_blank'>SAGAS: Semantic-Aware Graph-Assisted Stitching for Offline Temporal Logic Planning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Ruijia Liu, Ancheng Hou, Shaoyuan Li, Xiang Yin</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-11-30 08:13:35</h6>
+<p class='card-text'>Linear Temporal Logic (LTL) provides a rigorous framework for complex robotic tasks, yet existing methods often rely on accurate dynamics models or expensive online interactions. In this work, we address LTL-constrained control in a challenging offline, model-free setting, utilizing only fixed, task-agnostic datasets of fragmented trajectories. We propose SAGAS, a novel framework combining graph-assisted trajectory stitching with automata-guided planning. First, we construct a latent reachability graph from a learned temporal-distance representation. To bridge the semantic gap, we augment this graph with certified anchor nodes and probabilistic soft labels. We then translate the specification into a Büchi automaton and search the implicit product space to derive a cost-minimal prefix-suffix plan. Finally, a subgoal-conditioned low-level policy is deployed to execute these latent waypoints. Experiments on OGBench locomotion domains demonstrate that SAGAS successfully synthesizes efficient trajectories for diverse LTL tasks, effectively bridging the gap between fragmented offline data and complex logical constraints.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js'></script>
+</body>
+</html>
