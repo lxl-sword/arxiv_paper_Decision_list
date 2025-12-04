@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>planning - 2025-12-04</title>
+<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap' rel='stylesheet'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css'>
+<style>
+body {
+font-family: 'Roboto', sans-serif;
+background-color: #f5f7fa;
+padding: 20px;
+}
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.card-title {
+    font-weight: 700;
+}
+.card:hover {
+    transform: scale(1.02);
+    transition: 0.3s ease-in-out;
+}
+</style>
+</head>
+<body>
+<div class='container'>
+<h1 class='text-center my-4'><i class='fas fa-book'></i>planning - 2025-12-04</h1>
+<div class='row'>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2512.03936v1' target='_blank'>Driving is a Game: Combining Planning and Prediction with Bayesian Iterative Best Response</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Aron Distelzweig, Yiwei Wang, Faris Janjoš, Marcel Hallgarten, Mihai Dobre, Alexander Langmann, Joschka Boedecker, Johannes Betz</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-12-03 16:33:25</h6>
+<p class='card-text'>Autonomous driving planning systems perform nearly perfectly in routine scenarios using lightweight, rule-based methods but still struggle in dense urban traffic, where lane changes and merges require anticipating and influencing other agents. Modern motion predictors offer highly accurate forecasts, yet their integration into planning is mostly rudimental: discarding unsafe plans. Similarly, end-to-end models offer a one-way integration that avoids the challenges of joint prediction and planning modeling under uncertainty. In contrast, game-theoretic formulations offer a principled alternative but have seen limited adoption in autonomous driving. We present Bayesian Iterative Best Response (BIBeR), a framework that unifies motion prediction and game-theoretic planning into a single interaction-aware process. BIBeR is the first to integrate a state-of-the-art predictor into an Iterative Best Response (IBR) loop, repeatedly refining the strategies of the ego vehicle and surrounding agents. This repeated best-response process approximates a Nash equilibrium, enabling bidirectional adaptation where the ego both reacts to and shapes the behavior of others. In addition, our proposed Bayesian confidence estimation quantifies prediction reliability and modulates update strength, more conservative under low confidence and more decisive under high confidence. BIBeR is compatible with modern predictors and planners, combining the transparency of structured planning with the flexibility of learned models. Experiments show that BIBeR achieves an 11% improvement over state-of-the-art planners on highly interactive interPlan lane-change scenarios, while also outperforming existing approaches on standard nuPlan benchmarks.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2512.03931v1' target='_blank'>Autonomous Agents and Policy Compliance: A Framework for Reasoning About Penalties</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Vineel Tummala, Daniela Inclezan</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-12-03 16:29:09</h6>
+<p class='card-text'>This paper presents a logic programming-based framework for policy-aware autonomous agents that can reason about potential penalties for non-compliance and act accordingly. While prior work has primarily focused on ensuring compliance, our approach considers scenarios where deviating from policies may be necessary to achieve high-stakes goals. Additionally, modeling non-compliant behavior can assist policymakers by simulating realistic human decision-making. Our framework extends Gelfond and Lobo's Authorization and Obligation Policy Language (AOPL) to incorporate penalties and integrates Answer Set Programming (ASP) for reasoning. Compared to previous approaches, our method ensures well-formed policies, accounts for policy priorities, and enhances explainability by explicitly identifying rule violations and their consequences. Building on the work of Harders and Inclezan, we introduce penalty-based reasoning to distinguish between non-compliant plans, prioritizing those with minimal repercussions. To support this, we develop an automated translation from the extended AOPL into ASP and refine ASP-based planning algorithms to account for incurred penalties. Experiments in two domains demonstrate that our framework generates higher-quality plans that avoid harmful actions while, in some cases, also improving computational efficiency. These findings underscore its potential for enhancing autonomous decision-making and informing policy refinement. Under consideration in Theory and Practice of Logic Programming (TPLP).</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2512.03913v1' target='_blank'>Hierarchical Vision Language Action Model Using Success and Failure Demonstrations</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jeongeun Park, Jihwan Yoon, Byungwoo Jeon, Juhan Park, Jinwoo Shin, Namhoon Cho, Kyungjae Lee, Sangdoo Yun, Sungjoon Choi</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-12-03 15:58:38</h6>
+<p class='card-text'>Prior Vision-Language-Action (VLA) models are typically trained on teleoperated successful demonstrations, while discarding numerous failed attempts that occur naturally during data collection. However, these failures encode where and how policies can be fragile, information that can be exploited to improve robustness. We address this problem by leveraging mixed-quality datasets to learn failure-aware reasoning at planning time. We introduce VINE, a hierarchical vision-language-action model that separates high-level reasoning (System 2) from low-level control (System 1) under a hierarchical reinforcement learning formalism, making failures usable as a structured learning signal rather than noisy supervision. System 2 performs feasibility-guided tree search over a 2D scene-graph abstraction: it proposes subgoal transitions, predicts success probabilities from both successes and failures, and prunes brittle branches before execution, effectively casting plan evaluation as feasibility scoring. The selected subgoal sequence is then passed to System 1, which executes low-level actions without modifying the agent's core skills. Trained entirely from offline teleoperation data, VINE integrates negative experience directly into the decision loop. Across challenging manipulation tasks, this approach consistently improves success rates and robustness, demonstrating that failure data is an essential resource for converting the broad competence of VLAs into robust execution.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2512.03886v1' target='_blank'>A Modular Architecture Design for Autonomous Driving Racing in Controlled Environments</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Brais Fontan-Costas, M. Diaz-Cacho, Ruben Fernandez-Boullon, Manuel Alonso-Carracedo, Javier Perez-Robles</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-12-03 15:36:46</h6>
+<p class='card-text'>This paper presents an Autonomous System (AS) architecture for vehicles in a closed circuit. The AS performs precision tasks including computer vision for environment perception, positioning and mapping for accurate localization, path planning for optimal trajectory generation, and control for precise vehicle actuation. Each subsystem operates independently while connecting data through a cohesive pipeline architecture. The system implements a modular design that combines state-of-the-art technologies for real-time autonomous navigation in controlled environments.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2512.03805v1' target='_blank'>Deep Reinforcement Learning for Dynamic Algorithm Configuration: A Case Study on Optimizing OneMax with the (1+($λ$,$λ$))-GA</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Tai Nguyen, Phong Le, André Biedenkapp, Carola Doerr, Nguyen Dang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-12-03 13:54:41</h6>
+<p class='card-text'>Dynamic Algorithm Configuration (DAC) studies the efficient identification of control policies for parameterized optimization algorithms. Numerous studies have leveraged the robustness of decision-making in Reinforcement Learning (RL) to address the optimization challenges in algorithm configuration. However, applying RL to DAC is challenging and often requires extensive domain expertise. We conduct a comprehensive study of deep-RL algorithms in DAC through a systematic analysis of controlling the population size parameter of the (1+($λ$,$λ$))-GA on OneMax instances. Our investigation of DDQN and PPO reveals two fundamental challenges that limit their effectiveness in DAC: scalability degradation and learning instability. We trace these issues to two primary causes: under-exploration and planning horizon coverage, each of which can be effectively addressed through targeted solutions. To address under-exploration, we introduce an adaptive reward shifting mechanism that leverages reward distribution statistics to enhance DDQN agent exploration, eliminating the need for instance-specific hyperparameter tuning and ensuring consistent effectiveness across different problem scales. In dealing with the planning horizon coverage problem, we demonstrate that undiscounted learning effectively resolves it in DDQN, while PPO faces fundamental variance issues that necessitate alternative algorithmic designs. We further analyze the hyperparameter dependencies of PPO, showing that while hyperparameter optimization enhances learning stability, it consistently falls short in identifying effective policies across various configurations. Finally, we demonstrate that DDQN equipped with our adaptive reward shifting strategy achieves performance comparable to theoretically derived policies with vastly improved sample efficiency, outperforming prior DAC approaches by several orders of magnitude.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2512.03795v1' target='_blank'>MPCFormer: A physics-informed data-driven approach for explainable socially-aware autonomous driving</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jia Hu, Zhexi Lian, Xuerun Yan, Ruiang Bi, Dou Shen, Yu Ruan, Haoran Wang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-12-03 13:43:33</h6>
+<p class='card-text'>Autonomous Driving (AD) vehicles still struggle to exhibit human-like behavior in highly dynamic and interactive traffic scenarios. The key challenge lies in AD's limited ability to interact with surrounding vehicles, largely due to a lack of understanding the underlying mechanisms of social interaction. To address this issue, we introduce MPCFormer, an explainable socially-aware autonomous driving approach with physics-informed and data-driven coupled social interaction dynamics. In this model, the dynamics are formulated into a discrete space-state representation, which embeds physics priors to enhance modeling explainability. The dynamics coefficients are learned from naturalistic driving data via a Transformer-based encoder-decoder architecture. To the best of our knowledge, MPCFormer is the first approach to explicitly model the dynamics of multi-vehicle social interactions. The learned social interaction dynamics enable the planner to generate manifold, human-like behaviors when interacting with surrounding traffic. By leveraging the MPC framework, the approach mitigates the potential safety risks typically associated with purely learning-based methods. Open-looped evaluation on NGSIM dataset demonstrates that MPCFormer achieves superior social interaction awareness, yielding the lowest trajectory prediction errors compared with other state-of-the-art approach. The prediction achieves an ADE as low as 0.86 m over a long prediction horizon of 5 seconds. Close-looped experiments in highly intense interaction scenarios, where consecutive lane changes are required to exit an off-ramp, further validate the effectiveness of MPCFormer. Results show that MPCFormer achieves the highest planning success rate of 94.67%, improves driving efficiency by 15.75%, and reduces the collision rate from 21.25% to 0.5%, outperforming a frontier Reinforcement Learning (RL) based planner.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2512.03787v1' target='_blank'>Adaptive Identification and Modeling of Clinical Pathways with Process Mining</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Francesco Vitale, Nicola Mazzocca</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-12-03 13:37:37</h6>
+<p class='card-text'>Clinical pathways are specialized healthcare plans that model patient treatment procedures. They are developed to provide criteria-based progression and standardize patient treatment, thereby improving care, reducing resource use, and accelerating patient recovery. However, manual modeling of these pathways based on clinical guidelines and domain expertise is difficult and may not reflect the actual best practices for different variations or combinations of diseases. We propose a two-phase modeling method using process mining, which extends the knowledge base of clinical pathways by leveraging conformance checking diagnostics. In the first phase, historical data of a given disease is collected to capture treatment in the form of a process model. In the second phase, new data is compared against the reference model to verify conformance. Based on the conformance checking results, the knowledge base can be expanded with more specific models tailored to new variants or disease combinations. We demonstrate our approach using Synthea, a benchmark dataset simulating patient treatments for SARS-CoV-2 infections with varying COVID-19 complications. The results show that our method enables expanding the knowledge base of clinical pathways with sufficient precision, peaking to 95.62% AUC while maintaining an arc-degree simplicity of 67.11%.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2512.03774v1' target='_blank'>Safety Reinforced Model Predictive Control (SRMPC): Improving MPC with Reinforcement Learning for Motion Planning in Autonomous Driving</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Johannes Fischer, Marlon Steiner, Ömer Sahin Tas, Christoph Stiller</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-12-03 13:22:52</h6>
+<p class='card-text'>Model predictive control (MPC) is widely used for motion planning, particularly in autonomous driving. Real-time capability of the planner requires utilizing convex approximation of optimal control problems (OCPs) for the planner. However, such approximations confine the solution to a subspace, which might not contain the global optimum. To address this, we propose using safe reinforcement learning (SRL) to obtain a new and safe reference trajectory within MPC. By employing a learning-based approach, the MPC can explore solutions beyond the close neighborhood of the previous one, potentially finding global optima. We incorporate constrained reinforcement learning (CRL) to ensure safety in automated driving, using a handcrafted energy function-based safety index as the constraint objective to model safe and unsafe regions. Our approach utilizes a state-dependent Lagrangian multiplier, learned concurrently with the safe policy, to solve the CRL problem. Through experimentation in a highway scenario, we demonstrate the superiority of our approach over both MPC and SRL in terms of safety and performance measures.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2512.03756v1' target='_blank'>Prediction-Driven Motion Planning: Route Integration Strategies in Attention-Based Prediction Models</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Marlon Steiner, Royden Wagner, Ömer Sahin Tas, Christoph Stiller</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-12-03 12:57:03</h6>
+<p class='card-text'>Combining motion prediction and motion planning offers a promising framework for enhancing interactions between automated vehicles and other traffic participants. However, this introduces challenges in conditioning predictions on navigation goals and ensuring stable, kinematically feasible trajectories. Addressing the former challenge, this paper investigates the extension of attention-based motion prediction models with navigation information. By integrating the ego vehicle's intended route and goal pose into the model architecture, we bridge the gap between multi-agent motion prediction and goal-based motion planning. We propose and evaluate several architectural navigation integration strategies to our model on the nuPlan dataset. Our results demonstrate the potential of prediction-driven motion planning, highlighting how navigation information can enhance both prediction and planning tasks. Our implementation is at: https://github.com/KIT-MRT/future-motion.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2512.03739v1' target='_blank'>Penalty-Free SDDP: Feasibility Cuts for Robust Multi-Stage Stochastic Optimization in Energy Planning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Guilherme Freitas, Luiz Carlos da Costa Junior, Tiago Andrade, Alexandre Street</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-12-03 12:35:37</h6>
+<p class='card-text'>Multi-stage decision problems under uncertainty can be efficiently solved with the Stochastic Dual Dynamic Programming (SDDP) algorithm. However, traditional implementations require all stage problems to be feasible. Feasibility is usually enforced by adding slack variables and penalizing them in the objective function, a process that depends on case-specific calibration and often distorts the economic interpretation of results. This paper proposes the Penalty-Free SDDP, an extension that introduces a Future Feasibility Function alongside the traditional Future Cost Function. The new recursion handles infeasibilities automatically, distinguishing between temporary and truly infeasible cases, and propagates feasibility information across stages through dedicated feasibility cuts. The approach was validated in a large-scale deterministic case inspired by the Brazilian hydrothermal system, achieving equivalent feasibility to the benchmark solution while eliminating miscalibrated artificial penalties. Results confirm its robustness and practicality as a foundation for future stochastic, multi-stage applications.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2512.03729v1' target='_blank'>Autonomous Planning In-space Assembly Reinforcement-learning free-flYer (APIARY) International Space Station Astrobee Testing</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Samantha Chapin, Kenneth Stewart, Roxana Leontie, Carl Glen Henshaw</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-12-03 12:16:52</h6>
+<p class='card-text'>The US Naval Research Laboratory's (NRL's) Autonomous Planning In-space Assembly Reinforcement-learning free-flYer (APIARY) experiment pioneers the use of reinforcement learning (RL) for control of free-flying robots in the zero-gravity (zero-G) environment of space. On Tuesday, May 27th 2025 the APIARY team conducted the first ever, to our knowledge, RL control of a free-flyer in space using the NASA Astrobee robot on-board the International Space Station (ISS). A robust 6-degrees of freedom (DOF) control policy was trained using an actor-critic Proximal Policy Optimization (PPO) network within the NVIDIA Isaac Lab simulation environment, randomizing over goal poses and mass distributions to enhance robustness. This paper details the simulation testing, ground testing, and flight validation of this experiment. This on-orbit demonstration validates the transformative potential of RL for improving robotic autonomy, enabling rapid development and deployment (in minutes to hours) of tailored behaviors for space exploration, logistics, and real-time mission needs.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2512.03726v1' target='_blank'>Variational Analysis in the Wasserstein Hierarchy</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Christophe Vauthier</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-12-03 12:14:49</h6>
+<p class='card-text'>Let $M$ be a complete connected Riemannian manifold. For $n \geq 0$, we endow the Wasserstein space $P^{(n)}_2(M) = P_2(\ldots P_2(M)\ldots)$, equipped with the Wasserstein distance $W_2$, with a variational structure that generalizes the standard variational structure on $P_2(M)$ provided by optimal transport theory. Our approach makes use of tools from category theory to lift the geometric structure of the manifold $M$ to the spaces $P^{(n)}_2(M)$, in order to establish in a principled way a rigorous theoretical framework for variational analysis on the space $P^{(n)}_2(M)$. In particular, we obtain a precise characterization of the constant speed geodesics of the space $P^{(n)}_2(M)$ in terms of optimal velocity plans. Moreover, we introduce a notion of gradient for functionals defined on $P^{(n)}_2(M)$, which allows us to study the differentiability and the convexity of various types of such functionals.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2512.03707v1' target='_blank'>ContactRL: Safe Reinforcement Learning based Motion Planning for Contact based Human Robot Collaboration</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Sundas Rafat Mulkana, Ronyu Yu, Tanaya Guha, Emma Li</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-12-03 11:57:53</h6>
+<p class='card-text'>In collaborative human-robot tasks, safety requires not only avoiding collisions but also ensuring safe, intentional physical contact. We present ContactRL, a reinforcement learning (RL) based framework that directly incorporates contact safety into the reward function through force feedback. This enables a robot to learn adaptive motion profiles that minimize human-robot contact forces while maintaining task efficiency. In simulation, ContactRL achieves a low safety violation rate of 0.2\% with a high task success rate of 87.7\%, outperforming state-of-the-art constrained RL baselines. In order to guarantee deployment safety, we augment the learned policy with a kinetic energy based Control Barrier Function (eCBF) shield. Real-world experiments on an UR3e robotic platform performing small object handovers from a human hand across 360 trials confirm safe contact, with measured normal forces consistently below 10N. These results demonstrate that ContactRL enables safe and efficient physical collaboration, thereby advancing the deployment of collaborative robots in contact-rich tasks.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2512.03684v1' target='_blank'>A Novel Approach to Tomato Harvesting Using a Hybrid Gripper with Semantic Segmentation and Keypoint Detection</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Shahid Ansari, Mahendra Kumar Gohil, Yusuke Maeda, Bishakh Bhattacharya</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-12-03 11:24:44</h6>
+<p class='card-text'>This paper presents an autonomous tomato-harvesting system built around a hybrid robotic gripper that combines six soft auxetic fingers with a rigid exoskeleton and a latex basket to achieve gentle, cage-like grasping. The gripper is driven by a servo-actuated Scotch--yoke mechanism, and includes separator leaves that form a conical frustum for fruit isolation, with an integrated micro-servo cutter for pedicel cutting. For perception, an RGB--D camera and a Detectron2-based pipeline perform semantic segmentation of ripe/unripe tomatoes and keypoint localization of the pedicel and fruit center under occlusion and variable illumination. An analytical model derived using the principle of virtual work relates servo torque to grasp force, enabling design-level reasoning about actuation requirements. During execution, closed-loop grasp-force regulation is achieved using a proportional--integral--derivative controller with feedback from force-sensitive resistors mounted on selected fingers to prevent slip and bruising. Motion execution is supported by Particle Swarm Optimization (PSO)--based trajectory planning for a 5-DOF manipulator. Experiments demonstrate complete picking cycles (approach, separation, cutting, grasping, transport, release) with an average cycle time of 24.34~s and an overall success rate of approximately 80\%, while maintaining low grasp forces (0.20--0.50~N). These results validate the proposed hybrid gripper and integrated vision--control pipeline for reliable harvesting in cluttered environments.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2512.03630v1' target='_blank'>Multimodal Control of Manipulators: Coupling Kinematics and Vision for Self-Driving Laboratory Operations</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Shifa Sulaiman, Amarnath H, Simon Bogh, Naresh Marturi</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-12-03 10:11:02</h6>
+<p class='card-text'>Motion planning schemes are used for planning motions of a manipulator from an initial pose to a final pose during a task execution. A motion planning scheme generally comprises of a trajectory planning method and an inverse kinematic solver to determine trajectories and joints solutions respectively. In this paper, 3 motion planning schemes developed based on Jacobian methods are implemented to traverse a redundant manipulator with a coupled finger gripper through given trajectories. RRT* algorithm is used for planning trajectories and screw theory based forward kinematic equations are solved for determining joint solutions of the manipulator and gripper. Inverse solutions are computed separately using 3 Jacobian based methods such as Jacobian Transpose (JT), Pseudo Inverse (PI), and Damped Least Square (DLS) methods. Space Jacobian and manipulability measurements of the manipulator and gripper are obtained using screw theory formulations. Smoothness and RMSE error of generated trajectories and velocity continuity, acceleration profile, jerk, and snap values of joint motions are analysed for determining an efficient motion planning method for a given task. Advantages and disadvantages of the proposed motion planning schemes mentioned above are analysed using simulation studies to determine a suitable inverse solution technique for the tasks.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2512.03611v1' target='_blank'>The first out-of-ecliptic observations of the polar magnetic field of the Sun</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:D. Calchetti, S. K. Solanki, J. Hirzberger, G. Valori, L. P. Chitta, J. Blanco Blanco Rodríguez, A. Giunta, T. Grundy, K. Albert, T. Appourchaux, F. J. Bailén, L. R. Bellot Rubio, A. Feller, A. Gandorfer, L. Gizon, A. Korpi-Lagg, X. Li, A. Moreno Vacas, T. Oba, D. Orozco Suárez, J. Schou, U. Schühle, J. Sinjan, H. Strecker, J. C. del Toro Iniesta, A. Ulyanov, R. Volkmer, J. Woch</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-12-03 09:43:00</h6>
+<p class='card-text'>Direct remote-sensing observations of the solar poles have been hindered by the restricted view obtained from the ecliptic plane. For the first time ever, Solar Orbiter with its remote-sensing instruments observed the poles of the Sun from out of the ecliptic in the Spring of 2025. Here we report the first measurements of the magnetic field of the solar poles taken when Solar Orbiter was at heliographic latitudes ranging between 14.9$^\circ$ and 16.7$^\circ$. The data-sets were collected by the High Resolution Telescope of the Polarimetric and Helioseismic Imager (SO/PHI-HRT) on board Solar Orbiter. Two sets of observations, approximately one month apart, for the south and north pole are considered in this work. The magnetic flux and flux density measured during these campaigns are reported as a function of the heliographic latitude observed by SO/PHI-HRT. The net fluxes show a different latitudinal distribution for the two polar caps. We also discuss the observed dependence of the measured fluxes on the viewing angle. These first results highlight the importance of high-resolution direct measurements of the polar field, paving the way to the high-latitude observations planned for SO/PHI-HRT in the coming years.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2512.03570v1' target='_blank'>Machine Learning to Predict Slot Usage in TSCH Wireless Sensor Networks</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Stefano Scanzio, Gabriele Formis, Tullio Facchinetti, Gianluca Cena</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-12-03 08:50:02</h6>
+<p class='card-text'>Wireless sensor networks (WSNs) are employed across a wide range of industrial applications where ultra-low power consumption is a critical prerequisite. At the same time, these systems must maintain a certain level of determinism to ensure reliable and predictable operation. In this view, time slotted channel hopping (TSCH) is a communication technology that meets both conditions, making it an attractive option for its usage in industrial WSNs. This work proposes the use of machine learning to learn the traffic pattern generated in networks based on the TSCH protocol, in order to turn nodes into a deep sleep state when no transmission is planned and thus to improve the energy efficiency of the WSN. The ability of machine learning models to make good predictions at different network levels in a typical tree network topology was analyzed in depth, showing how their capabilities degrade while approaching the root of the tree. The application of these models on simulated data based on an accurate modeling of wireless sensor nodes indicates that the investigated algorithms can be suitably used to further and substantially reduce the power consumption of a TSCH network.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2512.03560v1' target='_blank'>Reason-Plan-ReAct: A Reasoner-Planner Supervising a ReAct Executor for Complex Enterprise Tasks</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Gianni Molinari, Fabio Ciravegna</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-12-03 08:28:40</h6>
+<p class='card-text'>Despite recent advances, autonomous agents often struggle to solve complex tasks in enterprise domains that require coordinating multiple tools and processing diverse data sources. This struggle is driven by two main limitations. First, single-agent architectures enforce a monolithic plan-execute loop, which directly causes trajectory instability. Second, the requirement to use local open-weight models for data privacy introduces smaller context windows leading to the rapid consumption of context from large tool outputs. To solve this problem we introduce RP-ReAct (Reasoner Planner-ReAct), a novel multi-agent approach that fundamentally decouples strategic planning from low-level execution to achieve superior reliability and efficiency. RP-ReAct consists of a Reasoner Planner Agent (RPA), responsible for planning each sub-step, continuously analysing the execution results using the strong reasoning capabilities of a Large Reasoning Model, and one or multiple Proxy-Execution Agent (PEA) that translates sub-steps into concrete tool interactions using a ReAct approach. Crucially, we incorporate a context-saving strategy within the PEA to mitigate context window overflow by managing large tool outputs via external storage and on-demand access. We evaluate RP-ReAct, on the challenging, multi-domain ToolQA benchmark using a diverse set of six open-weight reasoning models. Our empirical results show that RP-ReAct achieves superior performance and improved generalization ability over state-of-the-art baselines when addressing diverse complex tasks across the evaluated domains. Furthermore we establish the enhanced robustness and stability of our approach across different model scales, paving the way for effective and deployable agentic solutions for enterprises.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2512.03558v1' target='_blank'>CartoMapQA: A Fundamental Benchmark Dataset Evaluating Vision-Language Models on Cartographic Map Understanding</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Huy Quang Ung, Guillaume Habault, Yasutaka Nishimura, Hao Niu, Roberto Legaspi, Tomoki Oya, Ryoichi Kojima, Masato Taya, Chihiro Ono, Atsunori Minamikawa, Yan Liu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-12-03 08:25:22</h6>
+<p class='card-text'>The rise of Visual-Language Models (LVLMs) has unlocked new possibilities for seamlessly integrating visual and textual information. However, their ability to interpret cartographic maps remains largely unexplored. In this paper, we introduce CartoMapQA, a benchmark specifically designed to evaluate LVLMs' understanding of cartographic maps through question-answering tasks. The dataset includes over 2000 samples, each composed of a cartographic map, a question (with open-ended or multiple-choice answers), and a ground-truth answer. These tasks span key low-, mid- and high-level map interpretation skills, including symbol recognition, embedded information extraction, scale interpretation, and route-based reasoning. Our evaluation of both open-source and proprietary LVLMs reveals persistent challenges: models frequently struggle with map-specific semantics, exhibit limited geospatial reasoning, and are prone to Optical Character Recognition (OCR)-related errors. By isolating these weaknesses, CartoMapQA offers a valuable tool for guiding future improvements in LVLM architectures. Ultimately, it supports the development of models better equipped for real-world applications that depend on robust and reliable map understanding, such as navigation, geographic search, and urban planning. Our source code and data are openly available to the research community at: https://github.com/ungquanghuy-kddi/CartoMapQA.git</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2512.03557v1' target='_blank'>Parameters Optimization in Trajectory Planning Using Diffrentiable Convex Programing</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Ziqi Xu, Lin Cheng, Shengping Gong</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-12-03 08:24:46</h6>
+<p class='card-text'>Sequential convex programming has been established as an effective framework for solving nonconvex trajectory planning problems. However, its performance is highly sensitive to problem parameters, including trajectory variables, algorithmic hyperparameters, and physical vehicle parameters. This paper introduces a differentiable sequential convex programming framework that integrates differentiable convex optimization with sequential convex programming to enable end-to-end parameter optimization. By deriving first-order sensitivity relations of second-order cone programming solutions with respect to problem data, exact gradients of trajectory performance metrics with respect to arbitrary parameters are obtained and propagated through iterations. The effectiveness of the proposed framework is validated through three representative applications: optimal terminal-time prediction for powered landing, trust-region penalty optimization in subproblems, and surface-to-mass ratio optimization for hypersonic gliding vehicles. Simulation results show that the proposed framework enables reliable gradient-based parameter learning and significantly improves numerical performance, convergence behavior, and design efficiency. These results indicate that differentiable sequential convex programming framework provides a powerful and general tool for vehicle design, mission optimization, and hyperparameter selection in aerospace trajectory planning.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2512.03549v1' target='_blank'>PARC: An Autonomous Self-Reflective Coding Agent for Robust Execution of Long-Horizon Tasks</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yuki Orimo, Iori Kurata, Hodaka Mori, Ryuhei Okuno, Ryohto Sawada, Daisuke Okanohara</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-12-03 08:15:10</h6>
+<p class='card-text'>We introduce PARC, a coding agent for the autonomous and robust execution of long-horizon computational tasks. PARC is built on a hierarchical multi-agent architecture incorporating task planning, execution, and a mechanism that evaluates its own actions and their outcomes from an independent context and provides feedback, namely self-assessment and self-feedback. This design enables PARC to detect and correct high-level strategic errors and sustain progress without human intervention. We evaluate PARC across computational science and data science tasks. In materials science, it autonomously reproduces key results from studies on lithium-ion conduction and alloy segregation. In particular, it coordinates dozens of parallel simulation tasks, each requiring roughly 43 hours of computation, managing orchestration, monitoring, and error correction end-to-end. In Kaggle-based experiments, starting from minimal natural-language instructions, PARC conducts data analysis and implements search strategies, producing solutions competitive with human-engineered baselines. These results highlight the potential of integrating a hierarchical multi-agent system with self-assessment and self-feedback to enable AI systems capable of independent, large-scale scientific and analytical work.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2512.03519v1' target='_blank'>Left shifting analysis of Human-Autonomous Team interactions to analyse risks of autonomy in high-stakes AI systems</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Ben Larwood, Oliver J. Sutton, Callum Cockburn</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-12-03 07:21:55</h6>
+<p class='card-text'>Developing high-stakes autonomous systems that include Artificial Intelligence (AI) components is complex; the consequences of errors can be catastrophic, yet it is challenging to plan for all operational cases. In stressful scenarios for the human operator, such as short decision-making timescales, the risk of failures is exacerbated. A lack of understanding of AI failure modes obstructs this and so blocks the robust implementation of applications of AI in smart systems. This prevents early risk identification, leading to increased time, risk and cost of projects.
+  A key tenet of Systems Engineering and acquisition engineering is centred around a "left-shift" in test and evaluation activities to earlier in the system lifecycle, to allow for "accelerated delivery of [systems] that work". We argue it is therefore essential that this shift includes the analysis of AI failure cases as part of the design stages of the system life cycle. Our proposed framework enables the early characterisation of risks emerging from human-autonomy teaming (HAT) in operational contexts. The cornerstone of this is a new analysis of AI failure modes, built on the seminal modelling of human-autonomy teams laid out by LaMonica et al., 2022. Using the analysis of the interactions between human and autonomous systems and exploring the failure modes within each aspect, our approach provides a way to systematically identify human-AI interactions risks across the operational domain of the system of interest. The understanding of the emergent behaviour enables increased robustness of the system, for which the analysis should be undertaken over the whole scope of its operational design domain. This approach is illustrated through an example use case for an AI assistant supporting a Command & Control (C2) System.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2512.03479v1' target='_blank'>Towards Object-centric Understanding for Instructional Videos</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Wenliang Guo, Yu Kong</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-12-03 06:14:26</h6>
+<p class='card-text'>Understanding procedural activities is crucial for developing future assistive AI that can reason about complex real-world tasks. Existing action-centric methods struggle with the flexibility of real procedures, where step order varies depending on object states. In this work, we propose to shift the focus to an object-centric paradigm by regarding actions as mechanisms that drive state transitions. To advance this direction, we introduce Object-IVQA, a long-form instructional video benchmark with 107 videos and 514 open-ended question-answer pairs annotated with temporally grounded evidence. The benchmark evaluates four dimensions of object-centric reasoning, including state evolution, precondition verification, counterfactual reasoning and mistake recognition. We further propose an agent framework that orchestrates object-centric planning, perception, analysis and generation tools, enabling explicit evidence retrieval and multi-hop reasoning across disjoint segments. Experiments show that existing large vision-language models struggle in object-level recognition and reasoning, whereas our framework achieves substantially improvement.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2512.03400v1' target='_blank'>Better World Models Can Lead to Better Post-Training Performance</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Prakhar Gupta, Henry Conklin, Sarah-Jane Leslie, Andrew Lee</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-12-03 03:13:20</h6>
+<p class='card-text'>In this work we study how explicit world-modeling objectives affect the internal representations and downstream capability of Transformers across different training stages. We use a controlled 2x2x2 Rubik's Cube and ask: (1) how does explicitly pretraining a world model affect the model's latent representations, and (2) how does world-model quality affect the model's performance after reinforcement learning post-training? We compare standard next-token prediction to two explicit world-modeling strategies -- (i) state-prediction pretraining and (ii) a joint state-prediction + next-token objective -- and assess task performance after Group Relative Policy Optimization (GRPO) is applied as post-training. We evaluate the representation quality with linear probes and causal interventions. We find that explicit world-modeling yields more linearly decodable and causally steerable state representations. More importantly, we find that improved state representations lead to higher gains for GRPO, especially on harder cube states. Our results indicate that sharpening state representations can improve the effectiveness of post-training for sequence-planning tasks.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2512.03370v1' target='_blank'>ShelfGaussian: Shelf-Supervised Open-Vocabulary Gaussian-based 3D Scene Understanding</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Lingjun Zhao, Yandong Luo, James Hay, Lu Gan</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-12-03 02:06:09</h6>
+<p class='card-text'>We introduce ShelfGaussian, an open-vocabulary multi-modal Gaussian-based 3D scene understanding framework supervised by off-the-shelf vision foundation models (VFMs). Gaussian-based methods have demonstrated superior performance and computational efficiency across a wide range of scene understanding tasks. However, existing methods either model objects as closed-set semantic Gaussians supervised by annotated 3D labels, neglecting their rendering ability, or learn open-set Gaussian representations via purely 2D self-supervision, leading to degraded geometry and limited to camera-only settings. To fully exploit the potential of Gaussians, we propose a Multi-Modal Gaussian Transformer that enables Gaussians to query features from diverse sensor modalities, and a Shelf-Supervised Learning Paradigm that efficiently optimizes Gaussians with VFM features jointly at 2D image and 3D scene levels. We evaluate ShelfGaussian on various perception and planning tasks. Experiments on Occ3D-nuScenes demonstrate its state-of-the-art zero-shot semantic occupancy prediction performance. ShelfGaussian is further evaluated on an unmanned ground vehicle (UGV) to assess its in the-wild performance across diverse urban scenarios. Project website: https://lunarlab-gatech.github.io/ShelfGaussian/.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2512.03329v1' target='_blank'>Push-broom Mapping of Galaxies and Supernova Remnants with the SPRITE CubeSat</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Elena Carlson, Brian Fleming, Yi Hang Valerie Wong, Briana Indahl, Dmitry Vorobiev, Maitland Bowen, Donal O'Sullivan, Kevin France, Anne Jaskot, Jason Tumlinson, Sanchayeeta Borthakur, Michael Rutkowski, Stephan McCandliss, Ravi Sankrit, John M. O'Meara</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-12-03 00:44:56</h6>
+<p class='card-text'>Supernovae (SNe) enrich and energize the surrounding interstellar medium (ISM) and are a key mechanism in the galaxy feedback cycle. The heating of the ISM by supernova shocks, and its subsequent cooling is critical to future star formation. The cooling of the diffuse shock-heated ISM is dominated by ultraviolet (UV) emission lines. These cooling regions and interfaces have complex spatial structure on sub-parsec scales. Mapping this cooling process is essential to understanding the feedback cycle of galaxies, a major goal of the 2020 Astrophysics Decadal Survey. The Supernova remnants and Proxies for ReIonization Testbed Experiment (SPRITE) CubeSat Mission will house the first long-slit orbital spectrograph with sub-arcminute angular resolution covering far ultraviolet wavelengths (FUV; 1000 - 1750 angstroms) and access to the Lyman UV (lambda < 1216 angstroms). SPRITE aims to provide new insights into the stellar feedback that drives galaxy evolution by mapping key FUV emission lines at the interaction lines between supernova remnants (SNRs) and the ambient interstellar medium (ISM). SPRITE will also measure the ionizing escape from approximately 50 low-redshift (0.16 < z < 0.4) star-forming galaxies. Current models predict SPRITE capable of detecting strong O VI, O IV], and C IV emission lines with angular resolution from 10 - 20 arcseconds. The SPRITE SNR survey will use push-broom mapping of its long-slit on extended sources to produce the first large sample of sub-arcminute 3D data cubes of extended sources in the FUV. In this paper, we present simulated SPRITE observations of Large Magellanic Cloud (LMC) SNRs to demonstrate the efficacy of the SPRITE instrument ahead of launch and instrument commissioning. These models serve as critical planning tools and incorporate the final pre-flight predicted performance of the instrument and the early extended source data reduction pipeline.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2512.03293v1' target='_blank'>Prior preferences in active inference agents: soft, hard, and goal shaping</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Filippo Torresan, Ryota Kanai, Manuel Baltieri</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-12-02 23:07:24</h6>
+<p class='card-text'>Active inference proposes expected free energy as an objective for planning and decision-making to adequately balance exploitative and explorative drives in learning agents. The exploitative drive, or what an agent wants to achieve, is formalised as the Kullback-Leibler divergence between a variational probability distribution, updated at each inference step, and a preference probability distribution that indicates what states or observations are more likely for the agent, hence determining the agent's goal in a certain environment. In the literature, the questions of how the preference distribution should be specified and of how a certain specification impacts inference and learning in an active inference agent have been given hardly any attention. In this work, we consider four possible ways of defining the preference distribution, either providing the agents with hard or soft goals and either involving or not goal shaping (i.e., intermediate goals). We compare the performances of four agents, each given one of the possible preference distributions, in a grid world navigation task. Our results show that goal shaping enables the best performance overall (i.e., it promotes exploitation) while sacrificing learning about the environment's transition dynamics (i.e., it hampers exploration).</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2512.03232v1' target='_blank'>The DESI DR1 Peculiar Velocity Survey: global zero-point and $H_0$ constraints</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:A. Carr, C. Howlett, A. J. Amsellem, Tamara M. Davis, K. Said, D. Parkinson, A. Palmese, J. Aguilar, S. Ahlen, J. Bautista, S. BenZvi, D. Bianchi, C. Blake, D. Brooks, T. Claybaugh, A. Cuceu, A. de la Macorra, P. Doel, K. Douglass, S. Ferraro, J. E. Forero-Romero, E. Gaztañaga, S. Gontcho A Gontcho, G. Gutierrez, H. K. Herrera-Alcantar, K. Honscheid, D. Huterer, M. Ishak, R. Joyce, A. G. Kim, D. Kirkby, A. Kremin, O. Lahav, C. Lamman, M. Landriau, L. Le Guillou, M. E. Levi, M. Manera, A. Meisner, R. Miquel, J. Moustakas, S. Nadathur, W. J. Percival, F. Prada, I. Pérez-Ràfols, F. Qin, C. Ross, G. Rossi, E. Sanchez, D. Schlegel, H. Seo, D. Sprayberry, G. Tarlé, R. J. Turner, B. A. Weaver, P. Zarrouk, R. Zhou, H. Zou</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-12-02 21:06:23</h6>
+<p class='card-text'>The Dark Energy Spectroscopic Instrument (DESI) in its first Data Release (DR1) already provides more than 100,000 galaxies with relative distance measurements. The primary purpose of this paper is to perform the calibration of the zero-point for the DESI Fundamental Plane and Tully-Fisher relations, which allows us to measure the Hubble constant, $H_0$. This sample has a lower statistical uncertainty than any previously used to measure $H_0$, and we investigate the systematic uncertainties in absolute calibration that could limit the accuracy of that measurement. We improve upon the DESI Early Data Release Fundamental Plane $H_0$ measurement by a) using a group catalog to increase the number of calibrator galaxies and b) investigating alternative calibrators in the nearby universe. Our baseline measurement calibrates to the SH0ES/Pantheon+ type Ia supernovae, and finds $H_0=73.7\pm 0.06\;(\text{stat.})\pm 1.1\;(\text{syst.})$ km s$^{-1}$ Mpc$^{-1}$. Calibrating to surface brightness fluctuation (SBF) distances yields a similar $H_0$. We explore measurements using other calibrators, but these are currently less precise since the overlap with DESI peculiar velocity tracers is much smaller. In future data releases with an even larger peculiar velocity sample, we plan to calibrate directly to Cepheids and the tip of the red giant branch, which will enable the uncertainty to decrease towards a percent-level measurement of $H_0$. This will provide an alternative to supernovae as the Hubble flow sample for $H_0$ measurements.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2512.03176v1' target='_blank'>Plantain: Plan-Answer Interleaved Reasoning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Anthony Liang, Jonathan Berant, Adam Fisch, Abhimanyu Goyal, Kalpesh Krishna, Jacob Eisenstein</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-12-02 19:22:12</h6>
+<p class='card-text'>Reasoning models often spend a significant amount of time thinking before they generate a visible response. In the meantime, they do not give the user any hints as to whether their reasoning is on the right track, and do not give the user any recourse to stop and correct them if their reasoning is flawed. This creates a frustrating, but unfortunately common, experience: the user's time is wasted while the model reasons from a false premise that could have easily been corrected. In contrast, human speakers typically perform lightweight, incremental grounding acts to ensure that participants in the conversation are on the same page; here we ask if language models can learn to leverage a similar type of behavior? With this motivation, we propose interleaved reasoning (IR), in which the model alternates between thinking and surfacing intermediate responses, as an alternative to the standard "think-then-answer" approach. By providing useful information to the user earlier, IR reduces perceived latency, the time a user waits for an initial output, without compromising the quality of the final response. We further introduce a specialization of interleaved reasoning, Plantain (Plan-Thought-Answer Interleaving), where the first intermediate response is an explicit, step-by-step plan for executing the task. This plan-first strategy allows for user intervention and early feedback for subsequent reasoning steps. We demonstrate that Plantain yields an ~6% improvement in pass@1 across several challenging math reasoning and coding benchmarks, while reducing time-to-first-response by over 60% relative to think-then-answer baselines.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2512.03166v1' target='_blank'>Multi-Agent Reinforcement Learning and Real-Time Decision-Making in Robotic Soccer for Virtual Environments</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Aya Taourirte, Md Sohag Mia</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-12-02 19:11:44</h6>
+<p class='card-text'>The deployment of multi-agent systems in dynamic, adversarial environments like robotic soccer necessitates real-time decision-making, sophisticated cooperation, and scalable algorithms to avoid the curse of dimensionality. While Reinforcement Learning (RL) offers a promising framework, existing methods often struggle with the multi-granularity of tasks (long-term strategy vs. instant actions) and the complexity of large-scale agent interactions. This paper presents a unified Multi-Agent Reinforcement Learning (MARL) framework that addresses these challenges. First, we establish a baseline using Proximal Policy Optimization (PPO) within a client-server architecture for real-time action scheduling, with PPO demonstrating superior performance (4.32 avg. goals, 82.9% ball control). Second, we introduce a Hierarchical RL (HRL) structure based on the options framework to decompose the problem into a high-level trajectory planning layer (modeled as a Semi-Markov Decision Process) and a low-level action execution layer, improving global strategy (avg. goals increased to 5.26). Finally, to ensure scalability, we integrate mean-field theory into the HRL framework, simplifying many-agent interactions into a single agent vs. the population average. Our mean-field actor-critic method achieves a significant performance boost (5.93 avg. goals, 89.1% ball control, 92.3% passing accuracy) and enhanced training stability. Extensive simulations of 4v4 matches in the Webots environment validate our approach, demonstrating its potential for robust, scalable, and cooperative behavior in complex multi-agent domains.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js'></script>
+</body>
+</html>
