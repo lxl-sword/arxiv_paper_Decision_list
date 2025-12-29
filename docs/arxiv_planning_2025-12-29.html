@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>planning - 2025-12-29</title>
+<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap' rel='stylesheet'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css'>
+<style>
+body {
+font-family: 'Roboto', sans-serif;
+background-color: #f5f7fa;
+padding: 20px;
+}
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.card-title {
+    font-weight: 700;
+}
+.card:hover {
+    transform: scale(1.02);
+    transition: 0.3s ease-in-out;
+}
+</style>
+</head>
+<body>
+<div class='container'>
+<h1 class='text-center my-4'><i class='fas fa-book'></i>planning - 2025-12-29</h1>
+<div class='row'>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2512.22036v1' target='_blank'>FUSCO: High-Performance Distributed Data Shuffling via Transformation-Communication Fusion</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Zhuoran Zhu, Chunyang Zhu, Hao Lin, Xu Fu, Yiming Zhou, Quanlu Zhang, Zhenhua Li, Feng Qian, Chao Yu, Boxun Li, Guohao Dai, Yu Wang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-12-26 14:16:11</h6>
+<p class='card-text'>Large-scale Mixture-of-Experts (MoE) models rely on \emph{expert parallelism} for efficient training and inference, which splits experts across devices and necessitates distributed data shuffling to route each token to its assigned experts. However, existing communication libraries handle this shuffling poorly; its overhead can account for over half of end-to-end runtime. We present FUSCO, an MoE-friendly communication library that achieves efficient and lightweight data shuffling through fused data transformation and communication, based on the key observation that MoE's expert-major data layout conflicts with the device-major layout expected by communication operations. FUSCO captures the fine-grained data layout, which is then interpreted by a pipelined communication engine that performs the required shuffling efficiently along the communication path. Lightweight planning and load-balancing mechanisms complement the engine by eliminating redundant communication and dispersing traffic. Evaluations on representative benchmarks illustrate that FUSCO achieves up to 3.84$\times$ and 2.01$\times$ speedups over NCCL and DeepEP (the state-of-the-art MoE communication library), respectively. In end-to-end MoE tasks, compared to NCCL and DeepEP, FUSCO reduces the training latency by 1.17-1.39$\times$ and 1.10-1.19$\times$, and lowers the first-token generation latency in inference by 1.09-1.25$\times$ and 1.06-1.16$\times$.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2512.22026v1' target='_blank'>Proton therapy range uncertainty reduction using vendor-agnostic tissue characterization on a virtual photon-counting CT head scan</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:S. Vrbaški, G. Stanić, S. Mollineli, M. Bhattarai, E. Abadi, M. Ciocca, E. Samei</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-12-26 13:14:47</h6>
+<p class='card-text'>In this work, we proposed virtual imaging simulators as an alternative approach to experimental validation of beam range uncertainty in complex patient geometry using a computational model of a human head and a photon-counting CT scanner. We validate the accuracy of stopping power ratio (SPR) calculations using a conventional stoichiometric calibration approach and a prototype software, TissueXplorer. A validated CT simulator (DukeSim) was used to generate photon-counting CT projections of a computational head model, which were reconstructed with an open-source toolbox (ASTRA). The dose of 2 Gy was delivered through protons in a single fraction to target two different cases of nasal and brain tumors with a single lateral beam angle. Ground truth treatment plan was made directly on the computational head model using clinical treatment planning software (RayStation). This plan was then recalculated on the corresponding CT images for which SPR values were estimated using both the conventional method and the prototype software TissueXplorer. The mean percentage difference in estimating the stopping power ratio with TissueXplorer in all head tissues inside the scanned volume was 0.28%. Stopping power ratios obtained with this method showed smaller dose distribution differences from the ground truth plan than the conventional stoichiometric calibration method on the computational head model. Virtual imaging offers an alternative approach to validation of the SPR prediction from CT imaging, as well as its effect on the dose distribution and thus downstream clinical outcomes. According to this simulation study, software solutions that utilize spectral information, such as TissueXplorer, hold promise for more accurate prediction of the stopping power ratio than the conventional stoichiometric approach.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2512.22010v1' target='_blank'>LongFly: Long-Horizon UAV Vision-and-Language Navigation with Spatiotemporal Context Integration</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Wen Jiang, Li Wang, Kangyao Huang, Wei Fan, Jinyuan Liu, Shaoyu Liu, Hongwei Duan, Bin Xu, Xiangyang Ji</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-12-26 12:09:40</h6>
+<p class='card-text'>Unmanned aerial vehicles (UAVs) are crucial tools for post-disaster search and rescue, facing challenges such as high information density, rapid changes in viewpoint, and dynamic structures, especially in long-horizon navigation. However, current UAV vision-and-language navigation(VLN) methods struggle to model long-horizon spatiotemporal context in complex environments, resulting in inaccurate semantic alignment and unstable path planning. To this end, we propose LongFly, a spatiotemporal context modeling framework for long-horizon UAV VLN. LongFly proposes a history-aware spatiotemporal modeling strategy that transforms fragmented and redundant historical data into structured, compact, and expressive representations. First, we propose the slot-based historical image compression module, which dynamically distills multi-view historical observations into fixed-length contextual representations. Then, the spatiotemporal trajectory encoding module is introduced to capture the temporal dynamics and spatial structure of UAV trajectories. Finally, to integrate existing spatiotemporal context with current observations, we design the prompt-guided multimodal integration module to support time-based reasoning and robust waypoint prediction. Experimental results demonstrate that LongFly outperforms state-of-the-art UAV VLN baselines by 7.89\% in success rate and 6.33\% in success weighted by path length, consistently across both seen and unseen environments.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2512.21949v1' target='_blank'>WST spectroscopic variability alerts: discovery space, data flow system requirements</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Valenitn D. Ivanov</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-12-26 09:54:33</h6>
+<p class='card-text'>The enormous multiplexity of the WST opens up the possibility to trigger alerts for variable objects - an option that has been reserved so far only for imaging surveys. WST can go further by detecting spectroscopic line profile and line strength variations. I review previous alert-issuing surveys that are limited to imaging, and describe some of the new research possibilities that this feature of the data flow system (DFS) would open up. The latter range from variability of emission line stars, such as Bes, WRs and LBVs to variability of active galaxies and quasars, including the so-called changing look objects that shift between Type 1 and Type 2. Furthermore, I describe the requirements that the WST DFS must meet to make this feasible. The most critical aspect is the rapid data processing for timely follow-up. Next, the alert system is tightly connected with the data reduction and archive, because it will need an extensive and continuously updated spectral reference database. The new spectra will have to be compared against these reference spectra to identify variations. The reference spectra can either be "native" from the WST itself or they can originate from other spectroscopic surveys. Two options for the DFS are considered: one is to conduct an automated search of the WST's own archive, and potentially of other spectroscopic archives and a second option is to allow the users to submit reference spectra on their own. The spectroscopic alert system will open up a completely new discovery space that is not accessible to the existing or planned near-future surveys. Finally, I discuss the advantages of moving the variability detection to physical parameters by modeling the observed and reference spectra and comparing the derived fitting parameters. This strategy offers a robust method for alert ranking.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2512.21887v1' target='_blank'>Aerial World Model for Long-horizon Visual Generation and Navigation in 3D Space</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Weichen Zhang, Peizhi Tang, Xin Zeng, Fanhang Man, Shiquan Yu, Zichao Dai, Baining Zhao, Hongjin Chen, Yu Shang, Wei Wu, Chen Gao, Xinlei Chen, Xin Wang, Yong Li, Wenwu Zhu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-12-26 06:22:39</h6>
+<p class='card-text'>Unmanned aerial vehicles (UAVs) have emerged as powerful embodied agents. One of the core abilities is autonomous navigation in large-scale three-dimensional environments. Existing navigation policies, however, are typically optimized for low-level objectives such as obstacle avoidance and trajectory smoothness, lacking the ability to incorporate high-level semantics into planning. To bridge this gap, we propose ANWM, an aerial navigation world model that predicts future visual observations conditioned on past frames and actions, thereby enabling agents to rank candidate trajectories by their semantic plausibility and navigational utility. ANWM is trained on 4-DoF UAV trajectories and introduces a physics-inspired module: Future Frame Projection (FFP), which projects past frames into future viewpoints to provide coarse geometric priors. This module mitigates representational uncertainty in long-distance visual generation and captures the mapping between 3D trajectories and egocentric observations. Empirical results demonstrate that ANWM significantly outperforms existing world models in long-distance visual forecasting and improves UAV navigation success rates in large-scale environments.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2512.21882v1' target='_blank'>Optimal Trajectory Planning for Orbital Robot Rendezvous and Docking</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Kenta Iizuka, Akiyoshi Uchida, Kentaro Uno, Kazuya Yoshida</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-12-26 06:11:54</h6>
+<p class='card-text'>Approaching a tumbling target safely is a critical challenge in space debris removal missions utilizing robotic manipulators onboard servicing satellites. In this work, we propose a trajectory planning method based on nonlinear optimization for a close-range rendezvous to bring a free-floating, rotating debris object in a two-dimensional plane into the manipulator's workspace, as a preliminary step for its capture. The proposed method introduces a dynamic keep-out sphere that adapts depending on the approach conditions, allowing for closer and safer access to the target. Furthermore, a control strategy is developed to reproduce the optimized trajectory using discrete ON/OFF thrusters, considering practical implementation constraints.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2512.21766v1' target='_blank'>UniLabOS: An AI-Native Operating System for Autonomous Laboratories</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jing Gao, Junhan Chang, Haohui Que, Yanfei Xiong, Shixiang Zhang, Xianwei Qi, Zhen Liu, Jun-Jie Wang, Qianjun Ding, Xinyu Li, Ziwei Pan, Qiming Xie, Zhuang Yan, Junchi Yan, Linfeng Zhang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-12-25 19:24:05</h6>
+<p class='card-text'>Autonomous laboratories promise to accelerate discovery by coupling learning algorithms with robotic experimentation, yet adoption remains limited by fragmented software that separates high-level planning from low-level execution. Here we present UniLabOS, an AI-native operating system for autonomous laboratories that bridges digital decision-making and embodied experimentation through typed, stateful abstractions and transactional safeguards. UniLabOS unifies laboratory elements via an Action/Resource/Action&Resource (A/R/A&R) model, represents laboratory structure with a dual-topology of logical ownership and physical connectivity, and reconciles digital state with material motion using a transactional CRUTD protocol. Built on a distributed edge-cloud architecture with decentralized discovery, UniLabOS enables protocol mobility across reconfigurable topologies while supporting human-in-the-loop governance. We demonstrate the system in four real-world settings -- a liquid-handling workstation, a modular organic synthesis platform, a distributed electrolyte foundry, and a decentralized computation-intensive closed-loop system -- showing robust orchestration across heterogeneous instruments and multi-node coordination. UniLabOS establishes a scalable foundation for agent-ready, reproducible, and provenance-aware autonomous experimentation.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2512.21714v1' target='_blank'>AstraNav-World: World Model for Foresight Control and Consistency</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Junjun Hu, Jintao Chen, Haochen Bai, Minghua Luo, Shichao Xie, Ziyi Chen, Fei Liu, Zedong Chu, Xinda Xue, Botao Ren, Xiaolong Wu, Mu Xu, Shanghang Zhang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-12-25 15:31:24</h6>
+<p class='card-text'>Embodied navigation in open, dynamic environments demands accurate foresight of how the world will evolve and how actions will unfold over time. We propose AstraNav-World, an end-to-end world model that jointly reasons about future visual states and action sequences within a unified probabilistic framework. Our framework integrates a diffusion-based video generator with a vision-language policy, enabling synchronized rollouts where predicted scenes and planned actions are updated simultaneously. Training optimizes two complementary objectives: generating action-conditioned multi-step visual predictions and deriving trajectories conditioned on those predicted visuals. This bidirectional constraint makes visual predictions executable and keeps decisions grounded in physically consistent, task-relevant futures, mitigating cumulative errors common in decoupled "envision-then-plan" pipelines. Experiments across diverse embodied navigation benchmarks show improved trajectory accuracy and higher success rates. Ablations confirm the necessity of tight vision-action coupling and unified training, with either branch removal degrading both prediction quality and policy reliability. In real-world testing, AstraNav-World demonstrated exceptional zero-shot capabilities, adapting to previously unseen scenarios without any real-world fine-tuning. These results suggest that AstraNav-World captures transferable spatial understanding and planning-relevant navigation dynamics, rather than merely overfitting to simulation-specific data distribution. Overall, by unifying foresight vision and control within a single generative model, we move closer to reliable, interpretable, and general-purpose embodied agents that operate robustly in open-ended real-world settings.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2512.21667v1' target='_blank'>Numerical simulation of lunar response to gravitational waves and its 3D topographic effect using the spectral-element method</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Lei Zhang, Han Yan, Jinhai Zhang, Xian Chen</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-12-25 13:18:33</h6>
+<p class='card-text'>The Moon has been regarded as a natural Weber bar capable of amplifying gravitational waves (GWs) for detecting events across a wide range of frequencies. However, accurately determining the amplification effects remains challenging due to the absence of 3D numerical simulation methods. In this study, we develop a high-order 3D finite element method (spectral-element method, SEM) to numerically simulate the lunar response to GWs below 20 mHz. We verify the accuracy of our method by comparing the resonant peaks of our results with those from semi-analytical solutions and find that the frequency deviation is less than 3% for the first peak at about 1 mHz and less than 0.8% for the subsequent peaks up to 10 mHz. Using this method, we evaluate the amplification of GW signals due to 3D topographic effects of the Moon, and we find enhancements at a series of specific frequency components. These results highlight the non-negligible effect of surface topography on the lunar response to GWs, as a fundamental factor that holds significant implications across both global and regional analyses. Our work paves the way for a comprehensive evaluation of the Moon's resonant response to GWs, helpful for the strategic planning of lunar GW detections.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2512.21654v1' target='_blank'>Structural Induced Exploration for Balanced and Scalable Multi-Robot Path Planning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Zikun Guo, Adeyinka P. Adedigba, Rammohan Mallipeddi, Heoncheol Lee</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-12-25 12:53:24</h6>
+<p class='card-text'>Multi-robot path planning is a fundamental yet challenging problem due to its combinatorial complexity and the need to balance global efficiency with fair task allocation among robots. Traditional swarm intelligence methods, although effective on small instances, often converge prematurely and struggle to scale to complex environments. In this work, we present a structure-induced exploration framework that integrates structural priors into the search process of the ant colony optimization (ACO). The approach leverages the spatial distribution of the task to induce a structural prior at initialization, thereby constraining the search space. The pheromone update rule is then designed to emphasize structurally meaningful connections and incorporates a load-aware objective to reconcile the total travel distance with individual robot workload. An explicit overlap suppression strategy further ensures that tasks remain distinct and balanced across the team. The proposed framework was validated on diverse benchmark scenarios covering a wide range of instance sizes and robot team configurations. The results demonstrate consistent improvements in route compactness, stability, and workload distribution compared to representative metaheuristic baselines. Beyond performance gains, the method also provides a scalable and interpretable framework that can be readily applied to logistics, surveillance, and search-and-rescue applications where reliable large-scale coordination is essential.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2512.21648v1' target='_blank'>Variance-Aware Prior-Based Tree Policies for Monte Carlo Tree Search</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Maximilian Weichart</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-12-25 12:25:26</h6>
+<p class='card-text'>Monte Carlo Tree Search (MCTS) has profoundly influenced reinforcement learning (RL) by integrating planning and learning in tasks requiring long-horizon reasoning, exemplified by the AlphaZero family of algorithms. Central to MCTS is the search strategy, governed by a tree policy based on an upper confidence bound (UCB) applied to trees (UCT). A key factor in the success of AlphaZero is the introduction of a prior term in the UCB1-based tree policy PUCT, which improves exploration efficiency and thus accelerates training. While many alternative UCBs with stronger theoretical guarantees than UCB1 exist, extending them to prior-based UCTs has been challenging, since PUCT was derived empirically rather than from first principles. Recent work retrospectively justified PUCT by framing MCTS as a regularized policy optimization (RPO) problem. Building on this perspective, we introduce Inverse-RPO, a general methodology that systematically derives prior-based UCTs from any prior-free UCB. Applying this method to the variance-aware UCB-V, we obtain two new prior-based tree policies that incorporate variance estimates into the search. Experiments indicate that these variance-aware prior-based UCTs outperform PUCT across multiple benchmarks without incurring additional computational cost. We also provide an extension of the mctx library supporting variance-aware UCTs, showing that the required code changes are minimal and intended to facilitate further research on principled prior-based UCTs. Code: github.com/Max-We/inverse-rpo.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2512.21577v1' target='_blank'>A Unified Definition of Hallucination, Or: It's the World Model, Stupid</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Emmy Liu, Varun Gangal, Chelsea Zou, Xiaoqi Huang, Michael Yu, Alex Chang, Zhuofu Tao, Sachin Kumar, Steven Y. Feng</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-12-25 08:42:18</h6>
+<p class='card-text'>Despite numerous attempts to solve the issue of hallucination since the inception of neural language models, it remains a problem in even frontier large language models today. Why is this the case? We walk through definitions of hallucination used in the literature from a historical perspective up to the current day, and fold them into a single definition of hallucination, wherein different prior definitions focus on different aspects of our definition. At its core, we argue that hallucination is simply inaccurate (internal) world modeling, in a form where it is observable to the user (e.g., stating a fact which contradicts a knowledge base, or producing a summary which contradicts a known source). By varying the reference world model as well as the knowledge conflict policy (e.g., knowledge base vs. in-context), we arrive at the different existing definitions of hallucination present in the literature.
+  We argue that this unified view is useful because it forces evaluations to make clear their assumed "world" or source of truth, clarifies what should and should not be called hallucination (as opposed to planning or reward/incentive-related errors), and provides a common language to compare benchmarks and mitigation techniques. Building on this definition, we outline plans for a family of benchmarks in which hallucinations are defined as mismatches with synthetic but fully specified world models in different environments, and sketch out how these benchmarks can use such settings to stress-test and improve the world modeling components of language models.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2512.21527v1' target='_blank'>Generative Actor Critic</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Aoyang Qin, Deqian Kong, Wei Wang, Ying Nian Wu, Song-Chun Zhu, Sirui Xie</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-12-25 06:31:11</h6>
+<p class='card-text'>Conventional Reinforcement Learning (RL) algorithms, typically focused on estimating or maximizing expected returns, face challenges when refining offline pretrained models with online experiences. This paper introduces Generative Actor Critic (GAC), a novel framework that decouples sequential decision-making by reframing \textit{policy evaluation} as learning a generative model of the joint distribution over trajectories and returns, $p(τ, y)$, and \textit{policy improvement} as performing versatile inference on this learned model. To operationalize GAC, we introduce a specific instantiation based on a latent variable model that features continuous latent plan vectors. We develop novel inference strategies for both \textit{exploitation}, by optimizing latent plans to maximize expected returns, and \textit{exploration}, by sampling latent plans conditioned on dynamically adjusted target returns. Experiments on Gym-MuJoCo and Maze2D benchmarks demonstrate GAC's strong offline performance and significantly enhanced offline-to-online improvement compared to state-of-the-art methods, even in absence of step-wise rewards.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2512.21456v1' target='_blank'>Statistical vs. Deep Learning Models for Estimating Substance Overdose Excess Mortality in the US</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Sukanya Krishna, Marie-Laure Charpignon, Maimuna Majumder</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-12-25 00:49:59</h6>
+<p class='card-text'>Substance overdose mortality in the United States claimed over 80,000 lives in 2023, with the COVID-19 pandemic exacerbating existing trends through healthcare disruptions and behavioral changes. Estimating excess mortality, defined as deaths beyond expected levels based on pre-pandemic patterns, is essential for understanding pandemic impacts and informing intervention strategies. However, traditional statistical methods like SARIMA assume linearity, stationarity, and fixed seasonality, which may not hold under structural disruptions. We present a systematic comparison of SARIMA against three deep learning (DL) architectures (LSTM, Seq2Seq, and Transformer) for counterfactual mortality estimation using national CDC data (2015-2019 for training/validation, 2020-2023 for projection). We contribute empirical evidence that LSTM achieves superior point estimation (17.08% MAPE vs. 23.88% for SARIMA) and better-calibrated uncertainty (68.8% vs. 47.9% prediction interval coverage) when projecting under regime change. We also demonstrate that attention-based models (Seq2Seq, Transformer) underperform due to overfitting to historical means rather than capturing emergent trends. Ourreproducible pipeline incorporates conformal prediction intervals and convergence analysis across 60+ trials per configuration, and we provide an open-source framework deployable with 15 state health departments. Our findings establish that carefully validated DL models can provide more reliable counterfactual estimates than traditional methods for public health planning, while highlighting the need for calibration techniques when deploying neural forecasting in high-stakes domains.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2512.21438v1' target='_blank'>Planetary Terrain Datasets and Benchmarks for Rover Path Planning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Marvin Chancán, Avijit Banerjee, George Nikolakopoulos</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-12-24 22:15:12</h6>
+<p class='card-text'>Planetary rover exploration is attracting renewed interest with several upcoming space missions to the Moon and Mars. However, a substantial amount of data from prior missions remain underutilized for path planning and autonomous navigation research. As a result, there is a lack of space mission-based planetary datasets, standardized benchmarks, and evaluation protocols. In this paper, we take a step towards coordinating these three research directions in the context of planetary rover path planning. We propose the first two large planar benchmark datasets, MarsPlanBench and MoonPlanBench, derived from high-resolution digital terrain images of Mars and the Moon. In addition, we set up classical and learned path planning algorithms, in a unified framework, and evaluate them on our proposed datasets and on a popular planning benchmark. Through comprehensive experiments, we report new insights on the performance of representative path planning algorithms on planetary terrains, for the first time to the best of our knowledge. Our results show that classical algorithms can achieve up to 100% global path planning success rates on average across challenging terrains such as Moon's north and south poles. This suggests, for instance, why these algorithms are used in practice by NASA. Conversely, learning-based models, although showing promising results in less complex environments, still struggle to generalize to planetary domains. To serve as a starting point for fundamental path planning research, our code and datasets will be released at: https://github.com/mchancan/PlanetaryPathBench.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2512.21432v1' target='_blank'>A Modal Approach to Constrain Inflation through Numerical Bispectra</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Bowei Zhang, E. P. S. Shellard, James R. Fergusson</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-12-24 21:44:58</h6>
+<p class='card-text'>Constraining inflationary models with high precision bispectra across broad parameter ranges is a challenging task, requiring intensive computations at all stages, first, predicting the primordial inflation bispectrum from quantum field theory, secondly, projecting this forward with transfer functions to the late universe and, finally, comparing with the bispectrum extracted from the observational data and matching mock catalogues. Here, the longstanding separable \texttt{Modal} pipeline for constraining primordial bispectrum templates using WMAP and Planck CMB data has been supplemented by the more recently developed \texttt{Primodal} code to accurately calculate bispectra numerically from inflation models, showing great potential for enhanced computational efficiency; \texttt{Primodal} exploits the in-in separability of the tree-level in-in formalism, together with a separable mode-expansion technique to bypass the need for point-by-point bispectrum calculations. Building upon this progress, we propose a bispectrum pipeline that systematically explores the parameter space of inflationary Lagrangians, numerically computing the tree-level bispectrum (and power spectrum) for each scenario and comparing with the \texttt{Modal} bispectrum decompositions obtained from the Planck 2018 data. Our pipeline identifies and excludes disfavored scenarios through this analysis, providing direct constraints on the parameter space, the sound speed and other quantities from the surviving observationally viable scenarios. This is preparatory work for a planned analysis using much higher-resolution CMB data from the Simons Observatory. To validate our pipeline, we perform a proof-of-concept analysis of the IR DBI inflation model, obtaining constraints of $c_s \geq 0.073$ for the sound speed and $β\leq 0.39$ for the parameter space, demonstrating the pipeline's accuracy and effectiveness.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2512.21420v1' target='_blank'>Feasible strategies in three-way conflict analysis with three-valued ratings</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jing Liu, Mengjun Hu, Guangming Lang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-12-24 20:52:15</h6>
+<p class='card-text'>Most existing work on three-way conflict analysis has focused on trisecting agent pairs, agents, or issues, which contributes to understanding the nature of conflicts but falls short in addressing their resolution. Specifically, the formulation of feasible strategies, as an essential component of conflict resolution and mitigation, has received insufficient scholarly attention. Therefore, this paper aims to investigate feasible strategies from two perspectives of consistency and non-consistency. Particularly, we begin with computing the overall rating of a clique of agents based on positive and negative similarity degrees. Afterwards, considering the weights of both agents and issues, we propose weighted consistency and non-consistency measures, which are respectively used to identify the feasible strategies for a clique of agents. Algorithms are developed to identify feasible strategies, $L$-order feasible strategies, and the corresponding optimal ones. Finally, to demonstrate the practicality, effectiveness, and superiority of the proposed models, we apply them to two commonly used case studies on NBA labor negotiations and development plans for Gansu Province and conduct a sensitivity analysis on parameters and a comparative analysis with existing state-of-the-art conflict analysis approaches. The comparison results demonstrate that our conflict resolution models outperform the conventional approaches by unifying weighted agent-issue evaluation with consistency and non-consistency measures to enable the systematic identification of not only feasible strategies but also optimal solutions.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2512.21412v1' target='_blank'>A Survey of Freshness-Aware Wireless Networking with Reinforcement Learning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Alimu Alibotaiken, Suyang Wang, Oluwaseun T. Ajayi, Yu Cheng</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-12-24 20:24:16</h6>
+<p class='card-text'>The age of information (AoI) has become a central measure of data freshness in modern wireless systems, yet existing surveys either focus on classical AoI formulations or provide broad discussions of reinforcement learning (RL) in wireless networks without addressing freshness as a unified learning problem. Motivated by this gap, this survey examines RL specifically through the lens of AoI and generalized freshness optimization. We organize AoI and its variants into native, function-based, and application-oriented families, providing a clearer view of how freshness should be modeled in B5G and 6G systems. Building on this foundation, we introduce a policy-centric taxonomy that reflects the decisions most relevant to freshness, consisting of update-control RL, medium-access RL, risk-sensitive RL, and multi-agent RL. This structure provides a coherent framework for understanding how learning can support sampling, scheduling, trajectory planning, medium access, and distributed coordination. We further synthesize recent progress in RL-driven freshness control and highlight open challenges related to delayed decision processes, stochastic variability, and cross-layer design. The goal is to establish a unified foundation for learning-based freshness optimization in next-generation wireless networks.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2512.21398v1' target='_blank'>Fast Navigation Through Occluded Spaces via Language-Conditioned Map Prediction</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Rahul Moorthy Mahesh, Oguzhan Goktug Poyrazoglu, Yukang Cao, Volkan Isler</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-12-24 19:34:08</h6>
+<p class='card-text'>In cluttered environments, motion planners often face a trade-off between safety and speed due to uncertainty caused by occlusions and limited sensor range. In this work, we investigate whether co-pilot instructions can help robots plan more decisively while remaining safe. We introduce PaceForecaster, as an approach that incorporates such co-pilot instructions into local planners. PaceForecaster takes the robot's local sensor footprint (Level-1) and the provided co-pilot instructions as input and predicts (i) a forecasted map with all regions visible from Level-1 (Level-2) and (ii) an instruction-conditioned subgoal within Level-2. The subgoal provides the planner with explicit guidance to exploit the forecasted environment in a goal-directed manner. We integrate PaceForecaster with a Log-MPPI controller and demonstrate that using language-conditioned forecasts and goals improves navigation performance by 36% over a local-map-only baseline while in polygonal environments.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2512.21336v1' target='_blank'>Optimizing Decoding Paths in Masked Diffusion Models by Quantifying Uncertainty</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Ziyu Chen, Xinbei Jiang, Peng Sun, Tao Lin</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-12-24 18:59:51</h6>
+<p class='card-text'>Masked Diffusion Models (MDMs) offer flexible, non-autoregressive generation, but this freedom introduces a challenge: final output quality is highly sensitive to the decoding order. We are the first to formalize this issue, attributing the variability in output quality to the cumulative predictive uncertainty along a generative path. To quantify this uncertainty, we introduce Denoising Entropy, a computable metric that serves as an internal signal for evaluating generative process. Leveraging this metric, we propose two algorithms designed to optimize the decoding path: a post-hoc selection method and a real-time guidance strategy. Experiments demonstrate that our entropy-guided methods significantly improve generation quality, consistently boosting accuracy on challenging reasoning, planning, and code benchmarks. Our work establishes Denoising Entropy as a principled tool for understanding and controlling generation, effectively turning the uncertainty in MDMs from a liability into a key advantage for discovering high-quality solutions.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2512.21375v1' target='_blank'>Safe Path Planning and Observation Quality Enhancement Strategy for Unmanned Aerial Vehicles in Water Quality Monitoring Tasks</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yuanshuang Fu, Qianyao Wang, Qihao Wang, Bonan Zhang, Jiaxin Zhao, Yiming Cao, Zhijun Li</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-12-24 14:26:20</h6>
+<p class='card-text'>Unmanned Aerial Vehicle (UAV) spectral remote sensing technology is widely used in water quality monitoring. However, in dynamic environments, varying illumination conditions, such as shadows and specular reflection (sun glint), can cause severe spectral distortion, thereby reducing data availability. To maximize the acquisition of high-quality data while ensuring flight safety, this paper proposes an active path planning method for dynamic light and shadow disturbance avoidance. First, a dynamic prediction model is constructed to transform the time-varying light and shadow disturbance areas into three-dimensional virtual obstacles. Second, an improved Interfered Fluid Dynamical System (IFDS) algorithm is introduced, which generates a smooth initial obstacle avoidance path by building a repulsive force field. Subsequently, a Model Predictive Control (MPC) framework is employed for rolling-horizon path optimization to handle flight dynamics constraints and achieve real-time trajectory tracking. Furthermore, a Dynamic Flight Altitude Adjustment (DFAA) mechanism is designed to actively reduce the flight altitude when the observable area is narrow, thereby enhancing spatial resolution. Simulation results show that, compared with traditional PID and single obstacle avoidance algorithms, the proposed method achieves an obstacle avoidance success rate of 98% in densely disturbed scenarios, significantly improves path smoothness, and increases the volume of effective observation data by approximately 27%. This research provides an effective engineering solution for precise UAV water quality monitoring in complex illumination environments.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2512.21180v1' target='_blank'>Equivariant Multiscale Learned Invertible Reconstruction for Cone Beam CT: From Simulated to Real Data</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Nikita Moriakov, Efstratios Gavves, Jonathan H. Mason, Carmen Seller-Oria, Jonas Teuwen, Jan-Jakob Sonke</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-12-24 13:59:43</h6>
+<p class='card-text'>Cone Beam CT (CBCT) is an important imaging modality nowadays, however lower image quality of CBCT compared to more conventional Computed Tomography (CT) remains a limiting factor in CBCT applications. Deep learning reconstruction methods are a promising alternative to classical analytical and iterative reconstruction methods, but applying such methods to CBCT is often difficult due to the lack of ground truth data, memory limitations and the need for fast inference at clinically-relevant resolutions. In this work we propose LIRE++, an end-to-end rotationally-equivariant multiscale learned invertible primal-dual scheme for fast and memory-efficient CBCT reconstruction. Memory optimizations and multiscale reconstruction allow for fast training and inference, while rotational equivariance improves parameter efficiency. LIRE++ was trained on simulated projection data from a fast quasi-Monte Carlo CBCT projection simulator that we developed as well. Evaluated on synthetic data, LIRE++ gave an average improvement of 1 dB in Peak Signal-to-Noise Ratio over alternative deep learning baselines. On real clinical data, LIRE++ improved the average Mean Absolute Error between the reconstruction and the corresponding planning CT by 10 Hounsfield Units with respect to current proprietary state-of-the-art hybrid deep-learning/iterative method.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2512.21092v1' target='_blank'>Portfolio Optimization for Index Tracking with Constraints on Downside Risk and Carbon Footprint</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Suparna Biswas, Rituparna Sen</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-12-24 10:16:05</h6>
+<p class='card-text'>Historically, financial risk management has mostly addressed risk factors that arise from the financial environment. Climate risks present a novel and significant challenge for companies and financial markets. Investors aiming for avoidance of firms with high carbon footprints require suitable risk measures and portfolio management strategies. This paper presents the construction of decarbonized indices for tracking the S \& P-500 index of the U.S. stock market, as well as the Indian index NIFTY-50, employing two distinct methodologies and study their performances. These decarbonized indices optimize the portfolio weights by minimizing the mean-VaR and mean-ES and seek to reduce the risk of significant financial losses while still pursuing decarbonization goals. Investors can thereby find a balance between financial performance and environmental responsibilities. Ensuring transparency in the development of these indices will encourage the excluded and under-weighted asset companies to lower their carbon footprints through appropriate action plans. For long-term passive investors, these indices may present a more favourable option than green stocks.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2512.21079v1' target='_blank'>Co-Existence of Private 5G Network and Wireless Hospital Systems</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Mohsin Khan, Matti Hämäläinen, Timo J. Mäkelä, Erkki Harjula, Jani Katisko</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-12-24 09:55:51</h6>
+<p class='card-text'>This paper investigates the feasibility of deploying private 5G networks in hospital environments, with a focus on the operating room at the brand new Oulu University Hospital, Finland. The study aims to evaluate the interference risk with other wireless systems, and electromagnetic safety of a private 5G network in the 3.9-4.1 GHz band, while ensuring compatibility with legacy wireless systems, such as LTE and Wi-Fi. We conducted a measurement campaign, employing state-of-the-art instrumentation and a methodology that combined high resolution and long-duration spectrum scans. The results demonstrate no measurable interference between the hospital's private 5G network with adjacent LTE (4G) or Wi-Fi bands, confirming the spectral isolation of the 5G transmissions, and vise versa. Additionally, RF exposure levels in the operating room were found to be well below ICNIRP, WHO, and IEEE safety thresholds, ensuring that the network poses negligible biological risk to patients and hospital staff. The study also proposes spectrum management strategies for private 5G networks in hospitals, focusing on adaptive sensing and guardband planning. These findings provide a solid foundation for the integration of private 5G infrastructure in hospitals environments, supporting digital transformation in patient care without compromising electromagnetic compatibility or patient safety. The results also contribute to ongoing discussions around private 5G network deployments in sensitive sectors and provide actionable guidelines for future hospitals' wireless systems planning.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2512.21048v1' target='_blank'>zkFL-Health: Blockchain-Enabled Zero-Knowledge Federated Learning for Medical AI Privacy</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Savvy Sharma, George Petrovic, Sarthak Kaushik</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-12-24 08:29:28</h6>
+<p class='card-text'>Healthcare AI needs large, diverse datasets, yet strict privacy and governance constraints prevent raw data sharing across institutions. Federated learning (FL) mitigates this by training where data reside and exchanging only model updates, but practical deployments still face two core risks: (1) privacy leakage via gradients or updates (membership inference, gradient inversion) and (2) trust in the aggregator, a single point of failure that can drop, alter, or inject contributions undetected. We present zkFL-Health, an architecture that combines FL with zero-knowledge proofs (ZKPs) and Trusted Execution Environments (TEEs) to deliver privacy-preserving, verifiably correct collaborative training for medical AI. Clients locally train and commit their updates; the aggregator operates within a TEE to compute the global update and produces a succinct ZK proof (via Halo2/Nova) that it used exactly the committed inputs and the correct aggregation rule, without revealing any client update to the host. Verifier nodes validate the proof and record cryptographic commitments on-chain, providing an immutable audit trail and removing the need to trust any single party. We outline system and threat models tailored to healthcare, the zkFL-Health protocol, security/privacy guarantees, and a performance evaluation plan spanning accuracy, privacy risk, latency, and cost. This framework enables multi-institutional medical AI with strong confidentiality, integrity, and auditability, key properties for clinical adoption and regulatory compliance.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2512.21043v1' target='_blank'>Tracing Energy Flow: Learning Tactile-based Grasping Force Control to Prevent Slippage in Dynamic Object Interaction</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Cheng-Yu Kuo, Hirofumi Shin, Takamitsu Matsubara</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-12-24 08:19:25</h6>
+<p class='card-text'>Regulating grasping force to reduce slippage during dynamic object interaction remains a fundamental challenge in robotic manipulation, especially when objects are manipulated by multiple rolling contacts, have unknown properties (such as mass or surface conditions), and when external sensing is unreliable. In contrast, humans can quickly regulate grasping force by touch, even without visual cues. Inspired by this ability, we aim to enable robotic hands to rapidly explore objects and learn tactile-driven grasping force control under motion and limited sensing. We propose a physics-informed energy abstraction that models the object as a virtual energy container. The inconsistency between the fingers' applied power and the object's retained energy provides a physically grounded signal for inferring slip-aware stability. Building on this abstraction, we employ model-based learning and planning to efficiently model energy dynamics from tactile sensing and perform real-time grasping force optimization. Experiments in both simulation and hardware demonstrate that our method can learn grasping force control from scratch within minutes, effectively reduce slippage, and extend grasp duration across diverse motion-object pairs, all without relying on external sensing or prior object knowledge.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2512.20991v1' target='_blank'>FinAgent: An Agentic AI Framework Integrating Personal Finance and Nutrition Planning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Toqeer Ali Syed, Abdulaziz Alshahrani, Ali Ullah, Ali Akarma, Sohail Khan, Muhammad Nauman, Salman Jan</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-12-24 06:33:17</h6>
+<p class='card-text'>The issue of limited household budgets and nutritional demands continues to be a challenge especially in the middle-income environment where food prices fluctuate. This paper introduces a price aware agentic AI system, which combines personal finance management with diet optimization. With household income and fixed expenditures, medical and well-being status, as well as real-time food costs, the system creates nutritionally sufficient meals plans at comparatively reasonable prices that automatically adjust to market changes. The framework is implemented in a modular multi-agent architecture, which has specific agents (budgeting, nutrition, price monitoring, and health personalization). These agents share the knowledge base and use the substitution graph to ensure that the nutritional quality is maintained at a minimum cost. Simulations with a representative Saudi household case study show a steady 12-18\% reduction in costs relative to a static weekly menu, nutrient adequacy of over 95\% and high performance with price changes of 20-30%. The findings indicate that the framework can locally combine affordability with nutritional adequacy and provide a viable avenue of capacity-building towards sustainable and fair diet planning in line with Sustainable Development Goals on Zero Hunger and Good Health.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2512.20954v1' target='_blank'>Reflection Pretraining Enables Token-Level Self-Correction in Biological Sequence Models</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Xiang Zhang, Jiaqi Wei, Yuejin Yang, Zijie Qiu, Yuhan Chen, Zhiqiang Gao, Muhammad Abdul-Mageed, Laks V. S. Lakshmanan, Wanli Ouyang, Chenyu You, Siqi Sun</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-12-24 05:25:17</h6>
+<p class='card-text'>Chain-of-Thought (CoT) prompting has significantly advanced task-solving capabilities in natural language processing with large language models. Unlike standard prompting, CoT encourages the model to generate intermediate reasoning steps, non-answer tokens, that help guide the model toward more accurate final outputs. These intermediate steps enable more complex reasoning processes such as error correction, memory management, future planning, and self-reflection. However, applying CoT to non-natural language domains, such as protein and RNA language models, is not yet possible, primarily due to the limited expressiveness of their token spaces (e.g., amino acid tokens). In this work, we propose and define the concept of language expressiveness: the ability of a given language, using its tokens and grammar, to encode information. We show that the limited expressiveness of protein language severely restricts the applicability of CoT-style reasoning. To overcome this, we introduce reflection pretraining, for the first time in a biological sequence model, which enables the model to engage in intermediate reasoning through the generation of auxiliary "thinking tokens" beyond simple answer tokens. Theoretically, we demonstrate that our augmented token set significantly enhances biological language expressiveness, thereby improving the overall reasoning capacity of the model. Experimentally, our pretraining approach teaches protein models to self-correct and leads to substantial performance gains compared to standard pretraining.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2512.20940v1' target='_blank'>ETP-R1: Evolving Topological Planning with Reinforcement Fine-tuning for Vision-Language Navigation in Continuous Environments</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Shuhao Ye, Sitong Mao, Yuxiang Cui, Xuan Yu, Shichao Zhai, Wen Chen, Shunbo Zhou, Rong Xiong, Yue Wang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-12-24 04:53:03</h6>
+<p class='card-text'>Vision-Language Navigation in Continuous Environments (VLN-CE) requires an embodied agent to navigate towards target in continuous environments, following natural language instructions. While current graph-based methods offer an efficient, structured approach by abstracting the environment into a topological map and simplifying the action space to waypoint selection, they lag behind methods based on Large Vision-Language Models (LVLMs) in leveraging large-scale data and advanced training paradigms. In this paper, we try to bridge this gap by introducing ETP-R1, a framework that applies the paradigm of scaling up data and Reinforcement Fine-Tuning (RFT) to a graph-based VLN-CE model. To build a strong foundation, we first construct a high-quality, large-scale pretraining dataset using the Gemini API. This dataset consists of diverse, low-hallucination instructions for topological trajectories, providing rich supervision for our graph-based policy to map language to topological paths. This foundation is further strengthened by unifying data from both R2R and RxR tasks for joint pretraining. Building on this, we introduce a three-stage training paradigm, which culminates in the first application of closed-loop, online RFT to a graph-based VLN-CE model, powered by the Group Relative Policy Optimization (GRPO) algorithm. Extensive experiments demonstrate that our approach is highly effective, establishing new state-of-the-art performance across all major metrics on both the R2R-CE and RxR-CE benchmarks. Our code is available at https://github.com/Cepillar/ETP-R1.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2512.20936v1' target='_blank'>Reasoning-Driven Amodal Completion: Collaborative Agents and Perceptual Evaluation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Hongxing Fan, Shuyu Zhao, Jiayang Ao, Lu Sheng</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2025-12-24 04:39:45</h6>
+<p class='card-text'>Amodal completion, the task of inferring invisible object parts, faces significant challenges in maintaining semantic consistency and structural integrity. Prior progressive approaches are inherently limited by inference instability and error accumulation. To tackle these limitations, we present a Collaborative Multi-Agent Reasoning Framework that explicitly decouples Semantic Planning from Visual Synthesis. By employing specialized agents for upfront reasoning, our method generates a structured, explicit plan before pixel generation, enabling visually and semantically coherent single-pass synthesis. We integrate this framework with two critical mechanisms: (1) a self-correcting Verification Agent that employs Chain-of-Thought reasoning to rectify visible region segmentation and identify residual occluders strictly within the Semantic Planning phase, and (2) a Diverse Hypothesis Generator that addresses the ambiguity of invisible regions by offering diverse, plausible semantic interpretations, surpassing the limited pixel-level variations of standard random seed sampling. Furthermore, addressing the limitations of traditional metrics in assessing inferred invisible content, we introduce the MAC-Score (MLLM Amodal Completion Score), a novel human-aligned evaluation metric. Validated against human judgment and ground truth, these metrics establish a robust standard for assessing structural completeness and semantic consistency with visible context. Extensive experiments demonstrate that our framework significantly outperforms state-of-the-art methods across multiple datasets. Our project is available at: https://fanhongxing.github.io/remac-page.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js'></script>
+</body>
+</html>
