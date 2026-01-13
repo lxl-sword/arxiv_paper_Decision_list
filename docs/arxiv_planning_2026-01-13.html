@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>planning - 2026-01-13</title>
+<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap' rel='stylesheet'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css'>
+<style>
+body {
+font-family: 'Roboto', sans-serif;
+background-color: #f5f7fa;
+padding: 20px;
+}
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.card-title {
+    font-weight: 700;
+}
+.card:hover {
+    transform: scale(1.02);
+    transition: 0.3s ease-in-out;
+}
+</style>
+</head>
+<body>
+<div class='container'>
+<h1 class='text-center my-4'><i class='fas fa-book'></i>planning - 2026-01-13</h1>
+<div class='row'>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2601.07823v1' target='_blank'>Video Generation Models in Robotics - Applications, Research Challenges, Future Directions</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Zhiting Mei, Tenny Yin, Ola Shorinwa, Apurva Badithela, Zhonghe Zheng, Joseph Bruno, Madison Bland, Lihan Zha, Asher Hancock, Jaime Fernández Fisac, Philip Dames, Anirudha Majumdar</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-01-12 18:57:34</h6>
+<p class='card-text'>Video generation models have emerged as high-fidelity models of the physical world, capable of synthesizing high-quality videos capturing fine-grained interactions between agents and their environments conditioned on multi-modal user inputs. Their impressive capabilities address many of the long-standing challenges faced by physics-based simulators, driving broad adoption in many problem domains, e.g., robotics. For example, video models enable photorealistic, physically consistent deformable-body simulation without making prohibitive simplifying assumptions, which is a major bottleneck in physics-based simulation. Moreover, video models can serve as foundation world models that capture the dynamics of the world in a fine-grained and expressive way. They thus overcome the limited expressiveness of language-only abstractions in describing intricate physical interactions. In this survey, we provide a review of video models and their applications as embodied world models in robotics, encompassing cost-effective data generation and action prediction in imitation learning, dynamics and rewards modeling in reinforcement learning, visual planning, and policy evaluation. Further, we highlight important challenges hindering the trustworthy integration of video models in robotics, which include poor instruction following, hallucinations such as violations of physics, and unsafe content generation, in addition to fundamental limitations such as significant data curation, training, and inference costs. We present potential future directions to address these open research challenges to motivate research and ultimately facilitate broader applications, especially in safety-critical settings.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2601.07795v1' target='_blank'>Vision-Language Model for Accurate Crater Detection</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Patrick Bauer, Marius Schwinning, Florian Renk, Andreas Weinmann, Hichem Snoussi</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-01-12 18:08:17</h6>
+<p class='card-text'>The European Space Agency (ESA), driven by its ambitions on planned lunar missions with the Argonaut lander, has a profound interest in reliable crater detection, since craters pose a risk to safe lunar landings. This task is usually addressed with automated crater detection algorithms (CDA) based on deep learning techniques. It is non-trivial due to the vast amount of craters of various sizes and shapes, as well as challenging conditions such as varying illumination and rugged terrain. Therefore, we propose a deep-learning CDA based on the OWLv2 model, which is built on a Vision Transformer, that has proven highly effective in various computer vision tasks. For fine-tuning, we utilize a manually labeled dataset fom the IMPACT project, that provides crater annotations on high-resolution Lunar Reconnaissance Orbiter Camera Calibrated Data Record images. We insert trainable parameters using a parameter-efficient fine-tuning strategy with Low-Rank Adaptation, and optimize a combined loss function consisting of Complete Intersection over Union (CIoU) for localization and a contrastive loss for classification. We achieve satisfactory visual results, along with a maximum recall of 94.0% and a maximum precision of 73.1% on a test dataset from IMPACT. Our method achieves reliable crater detection across challenging lunar imaging conditions, paving the way for robust crater analysis in future lunar exploration.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2601.07763v1' target='_blank'>Structural Approach to Guiding a Present-Biased Agent</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Tatiana Belova, Yuriy Dementiev, Artur Ignatiev, Danil Sagunov</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-01-12 17:47:38</h6>
+<p class='card-text'>Time-inconsistent behavior, such as procrastination or abandonment of long-term goals, arises when agents evaluate immediate outcomes disproportionately higher than future ones. This leads to globally suboptimal behavior, where plans are frequently revised or abandoned entirely. In the influential model of Kleinberg and Oren (2014) such behavior is modeled by a present-biased agent navigating a task graph toward a goal, making locally optimal decisions at each step based on discounted future costs. As a result, the agent may repeatedly deviate from initial plans. Recent work by Belova et al. (2024) introduced a two-agent extension of this model, where a fully-aware principal attempts to guide the present-biased agent through a specific set of critical tasks without causing abandonment. This captures a rich class of principal-agent dynamics in behavioral settings.
+  In this paper, we provide a comprehensive algorithmic characterization of this problem. We analyze its computational complexity through the framework of parameterized algorithms, focusing on graph parameters that naturally emerge in this setting, such as treewidth, vertex cover, and feedback vertex set. Our main result is a fixed-parameter tractable algorithm when parameterized by the treewidth of the task graph and the number of distinct (v,t)-path costs. Our algorithm encaptures several input settings, such as bounded edge costs and restricted task graph structure. We demonstrate that our main result yields efficient algorithms for a number of such configurations.
+  We complement this with tight hardness results, that highlight the extreme difficulty of the problem even on simplest graphs with bounded number of nodes and constant parameter values, and motivate our choice of parameters. We delineate tractable and intractable regions of the problem landscape, which include answers to open questions of Belova et al. (2024).</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2601.07690v1' target='_blank'>On Angels and Demons: Strategic (De)Construction of Dynamic Models</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Davide Catta, Rustam Galimullin, Munyque Mittelmann</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-01-12 16:19:22</h6>
+<p class='card-text'>In recent years, there has been growing interest in logics that formalise strategic reasoning about agents capable of modifying the structure of a given model. This line of research has been motivated by applications where a modelled system evolves over time, such as communication networks, security protocols, and multi-agent planning. In this paper, we introduce three logics for reasoning about strategies that modify the topology of weighted graphs. In Strategic Deconstruction Logic, a destructive agent (the demon) removes edges up to a certain cost. In Strategic Construction Logic, a constructive agent (the angel) adds edges within a cost bound. Finally, Strategic Update Logic combines both agents, who may cooperate or compete. We study the expressive power of these logics and the complexity of their model checking problems.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2601.07616v1' target='_blank'>A note on thermodynamics of the production processes</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Vladimir Pokrovskii</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-01-12 15:02:56</h6>
+<p class='card-text'>The process of creating goods and services, measured by their value, is considered as a process of creating complexity. This makes it possible to consider the production system as an open thermodynamic system, and to develop a simple heuristic model for the production process. The model includes three production factors: the index of complexity of production equipment (physical capital $K$), human activity (labour $L$), and the substitutive capacity of equipment (substitutive work $P$). The latter is a contribution to economic theory from the thermodynamic approach, which also requires the introduction of technological characteristics of production equipment, such as labor requirement ($\overlineλ$) and energy requirement ($\overline{\varepsilon}$), which indicate the amounts of labor and energy required to operate production equipment. By applying thermodynamic principles to the theory of production, we can understand how labour can be replaced by capital, and derive the production function in four equivalent but different formulations. Two of them are known and used by economists for interpretation the production phenomena; the thermodynamic approach gives some foundation for economic theory. The production function allows an unambiguously decompose of the growth rate of output according to the growth rates of production factors and technological level. The introduction of substitute work as a factor of production and technological features of capital expands planning and analyse of production processes.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2601.07597v1' target='_blank'>Pheromone-Focused Ant Colony Optimization algorithm for path planning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yi Liu, Hongda Zhang, Zhongxue Gan, Yuning Chen, Ziqing Zhou, Chunlei Meng, Chun Ouyang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-01-12 14:44:45</h6>
+<p class='card-text'>Ant Colony Optimization (ACO) is a prominent swarm intelligence algorithm extensively applied to path planning. However, traditional ACO methods often exhibit shortcomings, such as blind search behavior and slow convergence within complex environments. To address these challenges, this paper proposes the Pheromone-Focused Ant Colony Optimization (PFACO) algorithm, which introduces three key strategies to enhance the problem-solving ability of the ant colony. First, the initial pheromone distribution is concentrated in more promising regions based on the Euclidean distances of nodes to the start and end points, balancing the trade-off between exploration and exploitation. Second, promising solutions are reinforced during colony iterations to intensify pheromone deposition along high-quality paths, accelerating convergence while maintaining solution diversity. Third, a forward-looking mechanism is implemented to penalize redundant path turns, promoting smoother and more efficient solutions. These strategies collectively produce the focused pheromones to guide the ant colony's search, which enhances the global optimization capabilities of the PFACO algorithm, significantly improving convergence speed and solution quality across diverse optimization problems. The experimental results demonstrate that PFACO consistently outperforms comparative ACO algorithms in terms of convergence speed and solution quality.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2601.07558v1' target='_blank'>FlyCo: Foundation Model-Empowered Drones for Autonomous 3D Structure Scanning in Open-World Environments</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Chen Feng, Guiyong Zheng, Tengkai Zhuang, Yongqian Wu, Fangzhan He, Haojia Li, Juepeng Zheng, Shaojie Shen, Boyu Zhou</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-01-12 14:14:39</h6>
+<p class='card-text'>Autonomous 3D scanning of open-world target structures via drones remains challenging despite broad applications. Existing paradigms rely on restrictive assumptions or effortful human priors, limiting practicality, efficiency, and adaptability. Recent foundation models (FMs) offer great potential to bridge this gap. This paper investigates a critical research problem: What system architecture can effectively integrate FM knowledge for this task? We answer it with FlyCo, a principled FM-empowered perception-prediction-planning loop enabling fully autonomous, prompt-driven 3D target scanning in diverse unknown open-world environments. FlyCo directly translates low-effort human prompts (text, visual annotations) into precise adaptive scanning flights via three coordinated stages: (1) perception fuses streaming sensor data with vision-language FMs for robust target grounding and tracking; (2) prediction distills FM knowledge and combines multi-modal cues to infer the partially observed target's complete geometry; (3) planning leverages predictive foresight to generate efficient and safe paths with comprehensive target coverage. Building on this, we further design key components to boost open-world target grounding efficiency and robustness, enhance prediction quality in terms of shape accuracy, zero-shot generalization, and temporal stability, and balance long-horizon flight efficiency with real-time computability and online collision avoidance. Extensive challenging real-world and simulation experiments show FlyCo delivers precise scene understanding, high efficiency, and real-time safety, outperforming existing paradigms with lower human effort and verifying the proposed architecture's practicality. Comprehensive ablations validate each component's contribution. FlyCo also serves as a flexible, extensible blueprint, readily leveraging future FM and robotics advances. Code will be released.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2601.07540v1' target='_blank'>ViewMorpher3D: A 3D-aware Diffusion Framework for Multi-Camera Novel View Synthesis in Autonomous Driving</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Farhad G. Zanjani, Hong Cai, Amirhossein Habibian</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-01-12 13:44:14</h6>
+<p class='card-text'>Autonomous driving systems rely heavily on multi-view images to ensure accurate perception and robust decision-making. To effectively develop and evaluate perception stacks and planning algorithms, realistic closed-loop simulators are indispensable. While 3D reconstruction techniques such as Gaussian Splatting offer promising avenues for simulator construction, the rendered novel views often exhibit artifacts, particularly in extrapolated perspectives or when available observations are sparse.
+  We introduce ViewMorpher3D, a multi-view image enhancement framework based on image diffusion models, designed to elevate photorealism and multi-view coherence in driving scenes. Unlike single-view approaches, ViewMorpher3D jointly processes a set of rendered views conditioned on camera poses, 3D geometric priors, and temporally adjacent or spatially overlapping reference views. This enables the model to infer missing details, suppress rendering artifacts, and enforce cross-view consistency.
+  Our framework accommodates variable numbers of cameras and flexible reference/target view configurations, making it adaptable to diverse sensor setups. Experiments on real-world driving datasets demonstrate substantial improvements in image quality metrics, effectively reducing artifacts while preserving geometric fidelity.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2601.07514v1' target='_blank'>Data-Driven Stochastic VRP: Integration of Forecast Duration into Optimization for Utility Workforce Management</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Matteo Garbelli</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-01-12 13:12:46</h6>
+<p class='card-text'>This paper investigates the integration of machine learning forecasts of intervention durations into a stochastic variant of the Capacitated Vehicle Routing Problem with Time Windows (CVRPTW). In particular, we exploit tree-based gradient boosting (XGBoost) trained on eight years of gas meter maintenance data to produce point predictions and uncertainty estimates, which then drive a multi-objective evolutionary optimization routine. The methodology addresses uncertainty through sub-Gaussian concentration bounds for route-level risk buffers and explicitly accounts for competing operational KPIs through a multi-objective formulation. Empirical analysis of prediction residuals validates the sub-Gaussian assumption underlying the risk model. From an empirical point of view, our results report improvements around 20-25\% in operator utilization and completion rates compared with plans computed using default durations. The integration of uncertainty quantification and risk-aware optimization provides a practical framework for handling stochastic service durations in real-world routing applications.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2601.07499v1' target='_blank'>Anatomy Aware Cascade Network: Bridging Epistemic Uncertainty and Geometric Manifold for 3D Tooth Segmentation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Bing Yu, Liu Shi, Haitao Wang, Deran Qi, Xiang Cai, Wei Zhong, Qiegen Liu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-01-12 12:53:27</h6>
+<p class='card-text'>Accurate three-dimensional (3D) tooth segmentation from Cone-Beam Computed Tomography (CBCT) is a prerequisite for digital dental workflows. However, achieving high-fidelity segmentation remains challenging due to adhesion artifacts in naturally occluded scans, which are caused by low contrast and indistinct inter-arch boundaries. To address these limitations, we propose the Anatomy Aware Cascade Network (AACNet), a coarse-to-fine framework designed to resolve boundary ambiguity while maintaining global structural consistency. Specifically, we introduce two mechanisms: the Ambiguity Gated Boundary Refiner (AGBR) and the Signed Distance Map guided Anatomical Attention (SDMAA). The AGBR employs an entropy based gating mechanism to perform targeted feature rectification in high uncertainty transition zones. Meanwhile, the SDMAA integrates implicit geometric constraints via signed distance map to enforce topological consistency, preventing the loss of spatial details associated with standard pooling. Experimental results on a dataset of 125 CBCT volumes demonstrate that AACNet achieves a Dice Similarity Coefficient of 90.17 \% and a 95\% Hausdorff Distance of 3.63 mm, significantly outperforming state-of-the-art methods. Furthermore, the model exhibits strong generalization on an external dataset with an HD95 of 2.19 mm, validating its reliability for downstream clinical applications such as surgical planning. Code for AACNet is available at https://github.com/shiliu0114/AACNet.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2601.07484v1' target='_blank'>R3-RECON: Radiance-Field-Free Active Reconstruction via Renderability</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Xiaofeng Jin, Matteo Frosi, Yiran Guo, Matteo Matteucci</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-01-12 12:37:26</h6>
+<p class='card-text'>In active reconstruction, an embodied agent must decide where to look next to efficiently acquire views that support high-quality novel-view rendering. Recent work on active view planning for neural rendering largely derives next-best-view (NBV) criteria by backpropagating through radiance fields or estimating information entropy over 3D Gaussian primitives. While effective, these strategies tightly couple view selection to heavy, representation-specific mechanisms and fail to account for the computational and resource constraints required for lightweight online deployment. In this paper, we revisit active reconstruction from a renderability-centric perspective. We propose $\mathbb{R}^{3}$-RECON, a radiance-fields-free active reconstruction framework that induces an implicit, pose-conditioned renderability field over SE(3) from a lightweight voxel map. Our formulation aggregates per-voxel online observation statistics into a unified scalar renderability score that is cheap to update and can be queried in closed form at arbitrary candidate viewpoints in milliseconds, without requiring gradients or radiance-field training. This renderability field is strongly correlated with image-space reconstruction error, naturally guiding NBV selection. We further introduce a panoramic extension that estimates omnidirectional (360$^\circ$) view utility to accelerate candidate evaluation. In the standard indoor Replica dataset, $\mathbb{R}^{3}$-RECON achieves more uniform novel-view quality and higher 3D Gaussian splatting (3DGS) reconstruction accuracy than recent active GS baselines with matched view and time budgets.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2601.07434v1' target='_blank'>LOONG: Online Time-Optimal Autonomous Flight for MAVs in Cluttered Environments</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Xin Guan, Fangguo Zhao, Qianyi Wang, Chengcheng Zhao, Jiming Chen, Shuo Li</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-01-12 11:24:54</h6>
+<p class='card-text'>Autonomous flight of micro air vehicles (MAVs) in unknown, cluttered environments remains challenging for time-critical missions due to conservative maneuvering strategies. This article presents an integrated planning and control framework for high-speed, time-optimal autonomous flight of MAVs in cluttered environments. In each replanning cycle (100 Hz), a time-optimal trajectory under polynomial presentation is generated as a reference, with the time-allocation process accelerated by imitation learning. Subsequently, a time-optimal model predictive contouring control (MPCC) incorporates safe flight corridor (SFC) constraints at variable horizon steps to enable aggressive yet safe maneuvering, while fully exploiting the MAV's dynamics. We validate the proposed framework extensively on a custom-built LiDAR-based MAV platform. Simulation results demonstrate superior aggressiveness compared to the state of the art, while real-world experiments achieve a peak speed of 18 m/s in a cluttered environment and succeed in 10 consecutive trials from diverse start points. The video is available at the following link: https://youtu.be/vexXXhv99oQ.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2601.07364v1' target='_blank'>On the universal definition of intelligence</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Joseph Chen</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-01-12 09:39:24</h6>
+<p class='card-text'>This paper aims to propose a universal definition of intelligence that enables fair and consistent comparison of human and artificial intelligence (AI). With the rapid development of AI technology in recent years, how to compare and evaluate human and AI intelligence has become an important theoretical issue. However, existing definitions of intelligence are anthropocentric and unsuitable for empirical comparison, resulting in a lack of consensus in the research field.
+  This paper first introduces four criteria for evaluating intelligence definitions based on R. Carnap's methodology of conceptual clarification: similarity to explicandum, exactness, fruitfulness, and simplicity. We then examine six representative definitions: IQ testing, complex problem-solving ability, reward optimization, environmental adaptation, learning efficiency, and predictive ability, and clarify their theoretical strengths and limitations.
+  The results show that while definitions based on predictive ability have high explanatory power and empirical feasibility, they suffer from an inability to adequately explain the relationship between predictions and behavior/benefits. This paper proposes the Extended Predictive Hypothesis (EPH), which views intelligence as a combination of the ability to accurately predict the future and the ability to benefit from those predictions. Furthermore, by distinguishing predictive ability into spontaneous and reactive predictions and adding the concept of gainability, we present a unified framework for explaining various aspects of intelligence, such as creativity, learning, and future planning. In conclusion, this paper argues that the EPH is the most satisfactory and universal definition for comparing human and AI intelligence.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2601.07362v1' target='_blank'>Large-Scale Autonomous Gas Monitoring for Volcanic Environments: A Legged Robot on Mount Etna</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Julia Richter, Turcan Tuna, Manthan Patel, Takahiro Miki, Devon Higgins, James Fox, Cesar Cadena, Andres Diaz, Marco Hutter</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-01-12 09:37:07</h6>
+<p class='card-text'>Volcanic gas emissions are key precursors of eruptive activity. Yet, obtaining accurate near-surface measurements remains hazardous and logistically challenging, motivating the need for autonomous solutions. Limited mobility in rough volcanic terrain has prevented wheeled systems from performing reliable in situ gas measurements, reducing their usefulness as sensing platforms. We present a legged robotic system for autonomous volcanic gas analysis, utilizing the quadruped ANYmal, equipped with a quadrupole mass spectrometer system. Our modular autonomy stack integrates a mission planning interface, global planner, localization framework, and terrain-aware local navigation. We evaluated the system on Mount Etna across three autonomous missions in varied terrain, achieving successful gas-source detections with autonomy rates of 93-100%. In addition, we conducted a teleoperated mission in which the robot measured natural fumaroles, detecting sulfur dioxide and carbon dioxide. We discuss lessons learned from the gas-analysis and autonomy perspectives, emphasizing the need for adaptive sensing strategies, tighter integration of global and local planning, and improved hardware design.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2601.07304v1' target='_blank'>Heterogeneous Multi-Expert Reinforcement Learning for Long-Horizon Multi-Goal Tasks in Autonomous Forklifts</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yun Chen, Bowei Huang, Fan Guo, Kang Song</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-01-12 08:27:24</h6>
+<p class='card-text'>Autonomous mobile manipulation in unstructured warehouses requires a balance between efficient large-scale navigation and high-precision object interaction. Traditional end-to-end learning approaches often struggle to handle the conflicting demands of these distinct phases. Navigation relies on robust decision-making over large spaces, while manipulation needs high sensitivity to fine local details. Forcing a single network to learn these different objectives simultaneously often causes optimization interference, where improving one task degrades the other. To address these limitations, we propose a Heterogeneous Multi-Expert Reinforcement Learning (HMER) framework tailored for autonomous forklifts. HMER decomposes long-horizon tasks into specialized sub-policies controlled by a Semantic Task Planner. This structure separates macro-level navigation from micro-level manipulation, allowing each expert to focus on its specific action space without interference. The planner coordinates the sequential execution of these experts, bridging the gap between task planning and continuous control. Furthermore, to solve the problem of sparse exploration, we introduce a Hybrid Imitation-Reinforcement Training Strategy. This method uses expert demonstrations to initialize the policy and Reinforcement Learning for fine-tuning. Experiments in Gazebo simulations show that HMER significantly outperforms sequential and end-to-end baselines. Our method achieves a task success rate of 94.2\% (compared to 62.5\% for baselines), reduces operation time by 21.4\%, and maintains placement error within 1.5 cm, validating its efficacy for precise material handling.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2601.07303v1' target='_blank'>ESDD2: Environment-Aware Speech and Sound Deepfake Detection Challenge Evaluation Plan</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Xueping Zhang, Han Yin, Yang Xiao, Lin Zhang, Ting Dang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-01-12 08:27:06</h6>
+<p class='card-text'>Audio recorded in real-world environments often contains a mixture of foreground speech and background environmental sounds. With rapid advances in text-to-speech, voice conversion, and other generation models, either component can now be modified independently. Such component-level manipulations are harder to detect, as the remaining unaltered component can mislead the systems designed for whole deepfake audio, and they often sound more natural to human listeners. To address this gap, we have proposed CompSpoofV2 dataset and a separation-enhanced joint learning framework. CompSpoofV2 is a large-scale curated dataset designed for component-level audio anti-spoofing, which contains over 250k audio samples, with a total duration of approximately 283 hours. Based on the CompSpoofV2 and the separation-enhanced joint learning framework, we launch the Environment-Aware Speech and Sound Deepfake Detection Challenge (ESDD2), focusing on component-level spoofing, where both speech and environmental sounds may be manipulated or synthesized, creating a more challenging and realistic detection scenario. The challenge will be held in conjunction with the IEEE International Conference on Multimedia and Expo 2026 (ICME 2026).</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2601.07242v1' target='_blank'>HERE: Hierarchical Active Exploration of Radiance Field with Epistemic Uncertainty Minimization</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Taekbeom Lee, Dabin Kim, Youngseok Jang, H. Jin Kim</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-01-12 06:23:29</h6>
+<p class='card-text'>We present HERE, an active 3D scene reconstruction framework based on neural radiance fields, enabling high-fidelity implicit mapping. Our approach centers around an active learning strategy for camera trajectory generation, driven by accurate identification of unseen regions, which supports efficient data acquisition and precise scene reconstruction. The key to our approach is epistemic uncertainty quantification based on evidential deep learning, which directly captures data insufficiency and exhibits a strong correlation with reconstruction errors. This allows our framework to more reliably identify unexplored or poorly reconstructed regions compared to existing methods, leading to more informed and targeted exploration. Additionally, we design a hierarchical exploration strategy that leverages learned epistemic uncertainty, where local planning extracts target viewpoints from high-uncertainty voxels based on visibility for trajectory generation, and global planning uses uncertainty to guide large-scale coverage for efficient and comprehensive reconstruction. The effectiveness of the proposed method in active 3D reconstruction is demonstrated by achieving higher reconstruction completeness compared to previous approaches on photorealistic simulated scenes across varying scales, while a hardware demonstration further validates its real-world applicability.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2601.07181v1' target='_blank'>ShowUI-Aloha: Human-Taught GUI Agent</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yichun Zhang, Xiangwu Guo, Yauhong Goh, Jessica Hu, Zhiheng Chen, Xin Wang, Difei Gao, Mike Zheng Shou</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-01-12 04:04:20</h6>
+<p class='card-text'>Graphical User Interfaces (GUIs) are central to human-computer interaction, yet automating complex GUI tasks remains a major challenge for autonomous agents, largely due to a lack of scalable, high-quality training data. While recordings of human demonstrations offer a rich data source, they are typically long, unstructured, and lack annotations, making them difficult for agents to learn from.To address this, we introduce ShowUI-Aloha, a comprehensive pipeline that transforms unstructured, in-the-wild human screen recordings from desktop environments into structured, actionable tasks. Our framework includes four key components: A recorder that captures screen video along with precise user interactions like mouse clicks, keystrokes, and scrolls. A learner that semantically interprets these raw interactions and the surrounding visual context, translating them into descriptive natural language captions. A planner that reads the parsed demonstrations, maintains task states, and dynamically formulates the next high-level action plan based on contextual reasoning. An executor that faithfully carries out these action plans at the OS level, performing precise clicks, drags, text inputs, and window operations with safety checks and real-time feedback. Together, these components provide a scalable solution for collecting and parsing real-world human data, demonstrating a viable path toward building general-purpose GUI agents that can learn effectively from simply observing humans.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2601.07144v1' target='_blank'>Optimal Transport under Group Fairness Constraints</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Linus Bleistein, Mathieu Dagréou, Francisco Andrade, Thomas Boudou, Aurélien Bellet</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-01-12 02:26:32</h6>
+<p class='card-text'>Ensuring fairness in matching algorithms is a key challenge in allocating scarce resources and positions. Focusing on Optimal Transport (OT), we introduce a novel notion of group fairness requiring that the probability of matching two individuals from any two given groups in the OT plan satisfies a predefined target. We first propose \texttt{FairSinkhorn}, a modified Sinkhorn algorithm to compute perfectly fair transport plans efficiently. Since exact fairness can significantly degrade matching quality in practice, we then develop two relaxation strategies. The first one involves solving a penalised OT problem, for which we derive novel finite-sample complexity guarantees. This result is of independent interest as it can be generalized to arbitrary convex penalties. Our second strategy leverages bilevel optimization to learn a ground cost that induces a fair OT solution, and we establish a bound guaranteeing that the learned cost yields fair matchings on unseen data. Finally, we present empirical results that illustrate the trade-offs between fairness and performance.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2601.07143v1' target='_blank'>EZBlender: Efficient 3D Editing with Plan-and-ReAct Agent</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Hao Wang, Wenhui Zhu, Shao Tang, Zhipeng Wang, Xuanzhao Dong, Xin Li, Xiwen Chen, Ashish Bastola, Xinhao Huang, Yalin Wang, Abolfazl Razi</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-01-12 02:19:34</h6>
+<p class='card-text'>As a cornerstone of the modern digital economy, 3D modeling and rendering demand substantial resources and manual effort when scene editing is performed in the traditional manner. Despite recent progress in VLM-based agents for 3D editing, the fundamental trade-off between editing precision and agent responsiveness remains unresolved. To overcome these limitations, we present EZBlender, a Blender agent with a hybrid framework that combines planning-based task decomposition and reactive local autonomy for efficient human AI collaboration and semantically faithful 3D editing. Specifically, this unexplored Plan-and-ReAct design not only preserves editing quality but also significantly reduces latency and computational cost. To further validate the efficiency and effectiveness of the proposed edge-autonomy architecture, we construct a dedicated multi-tasking benchmark that has not been systematically investigated in prior research. In addition, we provide a comprehensive analysis of language model preference, system responsiveness, and economic efficiency.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2601.07133v1' target='_blank'>Geometry-Aware LoRaWAN Gateway Placement in Dense Urban Cities Using Digital Twins</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Abdikarim Mohamed Ibrahim, Rosdiadee Nordin</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-01-12 01:56:03</h6>
+<p class='card-text'>LoRaWAN deployments rely on rough range estimates or simplified propagation models to decide where to place/mount gateways. As a result, operators have limited visibility into how rooftop choice, streets, and building shadowing jointly affect coverage and reliability. This paper addresses the problem of gateway placement in dense urban environments by combining a geometry accurate Digital Twin (DT) with a GPU accelerated ray tracing engine. Existing studies optimize placement on abstract grids or tune models with sparse measurements; few works evaluate LoRaWAN gateways on a full 3D city model using a realistic link budget. In this paper, we develop a DT with ITU radio materials and evaluate eight candidate rooftops for RAK7289 WisGate Edge Pro gateways under a sub-GHz link budget derived from the data sheet. For each rooftop, we obtain Signal-to-Noise Ratios (SNR) on a 5 meter grid, derive robust and edge coverage indicators, and apply a greedy maximum coverage algorithm to rank sites and quantify the benefit of incremental densification. Results show that a single rooftop gateway covers one fifth of the full Sunway twin (i.e., the DT) at a robust SNR threshold, and that six sites still leave large areas of single gateway or out of coverage cells in surrounding residential streets. The findings from this paper shows that DT and ray tracing tools enable network operators to bridge the gap of expensive real-world trials and planning to identify if the planned LoRaWAN gateway is sufficient or additional sites are required.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2601.07132v1' target='_blank'>Digital Twin for Ultra-Reliable & Low-Latency 6G Wireless Communications in Dense Urban City</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Abdikarim Mohamed Ibrahim, Rosdiadee Nordin</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-01-12 01:50:14</h6>
+<p class='card-text'>High-frequency deployments in dense cities are difficult to plan because coverage, interference, and service reliability depend sensitively on local morphology. This paper develops a geometric Digital Twin (DT) of the Sunway City and uses it to study the service implications of a multi-site mmWave deployment. The DT is constructed from geo-referenced three-dimensional meshes of buildings, roads, and open areas, assembled in Blender and exported as a mesh scene. A seven-transmitter downlink at 10 GHz is then embedded into this geometry and evaluated using a GPU accelerated ray tracing engine that returns path-gain and Signal-to-Interference-plus-Noise Ratio (SINR) fields over a dense grid of user locations. These fields are mapped to achievable throughput and compared against representative target rates for immersive extended reality (XR), vehicle-to-everything (V2X) services, and ultra-reliable low-latency communication (URLLC). The resulting maps show that favourable streets and courtyards form narrow high rate corridors surrounded by deep shadows, even within a dense area. In the baseline deployment, one fifth of the simulated area can maintain 100 Mbps URLLC rates, and less than 10% of cells can reach 1.7 Gbps for XR, despite the presence of several rooftop sites. By exploiting the DT, we further quantify the macro-diversity margin between the best and second best serving sites and show that most URLLC-feasible cells have several decibels of SINR headroom that could be harvested through dual connectivity. The study shows how a city DT can translate ray tracing output into service centric metrics and planning insights, complementing both analytical models and expensive measurement campaigns.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2601.06997v1' target='_blank'>ObjSplat: Geometry-Aware Gaussian Surfels for Active Object Reconstruction</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yuetao Li, Zhizhou Jia, Yu Zhang, Qun Hao, Shaohui Zhang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-01-11 17:14:33</h6>
+<p class='card-text'>Autonomous high-fidelity object reconstruction is fundamental for creating digital assets and bridging the simulation-to-reality gap in robotics. We present ObjSplat, an active reconstruction framework that leverages Gaussian surfels as a unified representation to progressively reconstruct unknown objects with both photorealistic appearance and accurate geometry. Addressing the limitations of conventional opacity or depth-based cues, we introduce a geometry-aware viewpoint evaluation pipeline that explicitly models back-face visibility and occlusion-aware multi-view covisibility, reliably identifying under-reconstructed regions even on geometrically complex objects. Furthermore, to overcome the limitations of greedy planning strategies, ObjSplat employs a next-best-path (NBP) planner that performs multi-step lookahead on a dynamically constructed spatial graph. By jointly optimizing information gain and movement cost, this planner generates globally efficient trajectories. Extensive experiments in simulation and on real-world cultural artifacts demonstrate that ObjSplat produces physically consistent models within minutes, achieving superior reconstruction fidelity and surface completeness while significantly reducing scan time and path length compared to state-of-the-art approaches. Project page: https://li-yuetao.github.io/ObjSplat-page/ .</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2601.06771v1' target='_blank'>Heterogeneous Interaction Network Analysis (HINA): A New Learning Analytics Approach for Modelling, Analyzing, and Visualizing Complex Interactions in Learning Processes</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Shihui Feng, Baiyue He, Dragan Gasevic, Alec Kirkley</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-01-11 04:07:56</h6>
+<p class='card-text'>Existing learning analytics approaches, which often model learning processes as sequences of learner actions or homogeneous relationships, are limited in capturing the distributed, multi-faceted nature of interactions in contemporary learning environments. To address this, we propose Heterogeneous Interaction Network Analysis (HINA), a novel multi-level learning analytics framework for modeling complex learning processes across diverse entities (e.g., learners, behaviours, AI agents, and task designs). HINA integrates a set of original methods, including summative measures and a new non-parametric clustering technique, with established practices for statistical testing and interactive visualization to provide a flexible and powerful analytical toolkit. In this paper, we first detail the theoretical and mathematical foundations of HINA for individual, dyadic, and meso-level analysis. We then demonstrate HINA's utility through a case study on AI-mediated small-group collaborative learning, revealing students' interaction profiles with peers versus AI; distinct engagement patterns that emerge from these interactions; and specific types of learning behaviors (e.g., asking questions, planning) directed to AI versus peers. By transforming process data into Heterogeneous Interaction Networks (HINs), HINA introduces a new paradigm for modeling learning processes and provides the dedicated, multi-level analytical methods required to extract meaning from them. It thereby moves beyond a single process data type to quantify and visualize how different elements in a learning environment interact and co-influence each other, opening new avenues for understanding complex educational dynamics.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2601.06765v1' target='_blank'>Massively Parallel Reductions in Multivariate Polynomial Systems: Bridging the Symbolic Preprocessing Gap on GPGPU Architectures</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Chandrasekhar Gokavarapu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-01-11 03:46:34</h6>
+<p class='card-text'>Gröbner basis computation over multivariate polynomial rings remains one of the most powerful yet computationally hostile primitives in symbolic computation. While modern algorithms (Faugère-type F4 and signature-based F5) reduce many instances to large sparse linear algebra over finite fields, their dominant cost is not merely elimination but the symbolic preprocessing that constructs Macaulay-style matrices whose rows encode shifted reducers. This phase is characterized by dynamic combinatorics (monomial discovery, sparse row assembly, and deduplication) and is typically memory-latency bound, resisting naive parallelization.
+  This article develops a rigorous synthesis that reframes S-polynomial reduction as syzygy discovery: row construction is a structured map from module relations to the kernel of a massive, sparse, highly non-random Macaulay matrix A over Fp. Building on this viewpoint, we propose a GPU-targeted architecture that (i) converts dynamic symbolic data structures into static, two-pass allocations via prefix-sum planning; (ii) enforces coalesced memory access through structure-of-arrays polynomial layouts and sorted monomial dictionaries; and (iii) integrates finite-field arithmetic kernels (Montgomery/Barrett-style reduction) at register granularity. On the linear-algebra side, we explore the transition from classical Gaussian elimination to parallel structured Gaussian elimination (PSGE) and to Krylov-type kernel solvers (Block Wiedemann/Lanczos) that better match GPU throughput while controlling fill-in.
+  The result is a principled bridge between algebraic syzygy theory and SIMT hardware constraints, isolating the true bottleneck and providing a pathway to massively parallel reductions for multivariate polynomial systems.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2601.06755v1' target='_blank'>Water Demand Maximization: Quick Recovery of Nonlinear Physics Solutions</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Sai Krishna Kanth Hari, Russell Bent</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-01-11 03:06:11</h6>
+<p class='card-text'>Determining the maximum demand a water distribution network can satisfy is crucial for ensuring reliable supply and planning network expansion. This problem, typically formulated as a mixed-integer nonlinear program (MINLP), is computationally challenging. A common strategy to address this challenge is to solve mixed-integer linear program (MILP) relaxations derived by partitioning variable domains and constructing linear over- and under-estimators to nonlinear constraints over each partition. While MILP relaxations are easier to solve up to a modest level of partitioning, their solutions often violate nonlinear water flow physics. Thus, recovering feasible MINLP solutions from the MILP relaxations is crucial for enhancing MILP-based approaches. In this paper, we propose a robust solution recovery method that efficiently computes feasible MINLP solutions from MILP relaxations, regardless of partition granularity. Combined with iterative partition refinement, our method generates a sequence of feasible solutions that progressively approach the optimum. Through extensive numerical experiments, we demonstrate that our method outperforms baseline methods and direct MINLP solves by consistently recovering high-quality feasible solutions with significantly reduced computation times.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2601.06604v1' target='_blank'>Object-Centric World Models Meet Monte Carlo Tree Search</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Rodion Vakhitov, Leonid Ugadiarov, Aleksandr Panov</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-01-10 15:59:17</h6>
+<p class='card-text'>In this paper, we introduce ObjectZero, a novel reinforcement learning (RL) algorithm that leverages the power of object-level representations to model dynamic environments more effectively. Unlike traditional approaches that process the world as a single undifferentiated input, our method employs Graph Neural Networks (GNNs) to capture intricate interactions among multiple objects. These objects, which can be manipulated and interact with each other, serve as the foundation for our model's understanding of the environment. We trained the algorithm in a complex setting teeming with diverse, interactive objects, demonstrating its ability to effectively learn and predict object dynamics. Our results highlight that a structured world model operating on object-centric representations can be successfully integrated into a model-based RL algorithm utilizing Monte Carlo Tree Search as a planning module.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2601.06602v1' target='_blank'>UMLoc: Uncertainty-Aware Map-Constrained Inertial Localization with Quantified Bounds</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Mohammed S. Alharbi, Shinkyu Park</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-01-10 15:49:55</h6>
+<p class='card-text'>Inertial localization is particularly valuable in GPS-denied environments such as indoors. However, localization using only Inertial Measurement Units (IMUs) suffers from drift caused by motion-process noise and sensor biases. This paper introduces Uncertainty-aware Map-constrained Inertial Localization (UMLoc), an end-to-end framework that jointly models IMU uncertainty and map constraints to achieve drift-resilient positioning. UMLoc integrates two coupled modules: (1) a Long Short-Term Memory (LSTM) quantile regressor, which estimates the specific quantiles needed to define 68%, 90%, and 95% prediction intervals serving as a measure of localization uncertainty and (2) a Conditioned Generative Adversarial Network (CGAN) with cross-attention that fuses IMU dynamic data with distance-based floor-plan maps to generate geometrically feasible trajectories. The modules are trained jointly, allowing uncertainty estimates to propagate through the CGAN during trajectory generation. UMLoc was evaluated on three datasets, including a newly collected 2-hour indoor benchmark with time-aligned IMU data, ground-truth poses and floor-plan maps. Results show that the method achieves a mean drift ratio of 5.9% over a 70 m travel distance and an average Absolute Trajectory Error (ATE) of 1.36 m, while maintaining calibrated prediction bounds.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2601.06505v1' target='_blank'>Neural Nonmyopic Bayesian Optimization in Dynamic Cost Settings</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Sang T. Truong, Duc Q. Nguyen, Willie Neiswanger, Ryan-Rhys Griffiths, Stefano Ermon, Nick Haber, Sanmi Koyejo</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-01-10 09:49:45</h6>
+<p class='card-text'>Bayesian optimization (BO) is a common framework for optimizing black-box functions, yet most existing methods assume static query costs and rely on myopic acquisition strategies. We introduce LookaHES, a nonmyopic BO framework designed for dynamic, history-dependent cost environments, where evaluation costs vary with prior actions, such as travel distance in spatial tasks or edit distance in sequence design. LookaHES combines a multi-step variant of $H$-Entropy Search with pathwise sampling and neural policy optimization, enabling long-horizon planning beyond twenty steps without the exponential complexity of existing nonmyopic methods. The key innovation is the integration of neural policies, including large language models, to effectively navigate structured, combinatorial action spaces such as protein sequences. These policies amortize lookahead planning and can be integrated with domain-specific constraints during rollout. Empirically, LookaHES outperforms strong myopic and nonmyopic baselines across nine synthetic benchmarks from two to eight dimensions and two real-world tasks: geospatial optimization using NASA night-light imagery and protein sequence design with constrained token-level edits. In short, LookaHES provides a general, scalable, and cost-aware solution for robust long-horizon optimization in complex decision spaces, which makes it a useful tool for researchers in machine learning, statistics, and applied domains. Our implementation is available at https://github.com/sangttruong/nonmyopia.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2601.06452v1' target='_blank'>Brahe: A Modern Astrodynamics Library for Research and Engineering Applications</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Duncan Eddy, Mykel J. Kochenderfer</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-01-10 06:37:33</h6>
+<p class='card-text'>Brahe is a modern satellite dynamics library for research and engineering applications. The representation and prediction of satellite motion is the fundamental problem of astrodynamics. Current research and applications in space situational awareness, satellite task planning, and space mission operations require accurate and efficient numerical tools to perform coordinate transformations, model perturbations, and propagate orbits. While the core algorithms for predicting and modeling satellite motion have been known for decades, there is a lack of modern, open-source software that implements these algorithms in a way that is accessible to researchers and engineers. brahe is designed to address these challenges by providing a modern, open-source astrodynamics library that is quick-to-deploy, composable, extensible, and easy-to-learn.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js'></script>
+</body>
+</html>
