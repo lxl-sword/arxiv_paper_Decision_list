@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>planning - 2026-01-25</title>
+<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap' rel='stylesheet'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css'>
+<style>
+body {
+font-family: 'Roboto', sans-serif;
+background-color: #f5f7fa;
+padding: 20px;
+}
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.card-title {
+    font-weight: 700;
+}
+.card:hover {
+    transform: scale(1.02);
+    transition: 0.3s ease-in-out;
+}
+</style>
+</head>
+<body>
+<div class='container'>
+<h1 class='text-center my-4'><i class='fas fa-book'></i>planning - 2026-01-25</h1>
+<div class='row'>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2601.16163v1' target='_blank'>Cosmos Policy: Fine-Tuning Video Models for Visuomotor Control and Planning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Moo Jin Kim, Yihuai Gao, Tsung-Yi Lin, Yen-Chen Lin, Yunhao Ge, Grace Lam, Percy Liang, Shuran Song, Ming-Yu Liu, Chelsea Finn, Jinwei Gu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-01-22 18:09:30</h6>
+<p class='card-text'>Recent video generation models demonstrate remarkable ability to capture complex physical interactions and scene evolution over time. To leverage their spatiotemporal priors, robotics works have adapted video models for policy learning but introduce complexity by requiring multiple stages of post-training and new architectural components for action generation. In this work, we introduce Cosmos Policy, a simple approach for adapting a large pretrained video model (Cosmos-Predict2) into an effective robot policy through a single stage of post-training on the robot demonstration data collected on the target platform, with no architectural modifications. Cosmos Policy learns to directly generate robot actions encoded as latent frames within the video model's latent diffusion process, harnessing the model's pretrained priors and core learning algorithm to capture complex action distributions. Additionally, Cosmos Policy generates future state images and values (expected cumulative rewards), which are similarly encoded as latent frames, enabling test-time planning of action trajectories with higher likelihood of success. In our evaluations, Cosmos Policy achieves state-of-the-art performance on the LIBERO and RoboCasa simulation benchmarks (98.5% and 67.1% average success rates, respectively) and the highest average score in challenging real-world bimanual manipulation tasks, outperforming strong diffusion policies trained from scratch, video model-based policies, and state-of-the-art vision-language-action models fine-tuned on the same robot demonstrations. Furthermore, given policy rollout data, Cosmos Policy can learn from experience to refine its world model and value function and leverage model-based planning to achieve even higher success rates in challenging tasks. We release code, models, and training data at https://research.nvidia.com/labs/dir/cosmos-policy/</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2601.16059v1' target='_blank'>Bivariate topological complexity: a framework for coordinated motion planning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jose Manuel Garcia Calcines, Jose Antonio Vilches Alarcon</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-01-22 15:51:39</h6>
+<p class='card-text'>We introduce a bivariate version of topological complexity, $\mathrm{TC}(f,g)$, associated with two continuous maps $f\colon X\to Z$ and $g\colon Y\to Z$. This invariant measures the minimal number of continuous motion planning rules required to coordinate trajectories in $X$ and $Y$ through a shared target space $Z$. It recovers Farber's classical topological complexity when $f=g=\mathrm{id}_X$ and Pavešić's map-based invariant when one of the maps is the identity.
+  We develop a structural theory for $\mathrm{TC}(f,g)$, including symmetry, product inequalities, stability properties, and a collaboration principle showing that, when one of the maps is a fibration, the complexity of synchronization is controlled by the other. We also introduce a homotopy-invariant bivariate complexity $\mathrm{TC}_H(f,g)$ of Scott type, defined via homotopic distance, and study its relationship with the strict invariant.
+  Concrete examples reveal rigidity phenomena with no analogue in the classical case, including strict gaps between $\mathrm{TC}(f,g)$ and $\mathrm{TC}_H(f,g)$ and situations where synchronization becomes impossible. Cohomological estimates provide computable obstructions in both the strict and homotopy-invariant settings.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2601.16045v1' target='_blank'>AgriPINN: A Process-Informed Neural Network for Interpretable and Scalable Crop Biomass Prediction Under Water Stress</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yue Shi, Liangxiu Han, Xin Zhang, Tam Sobeih, Thomas Gaiser, Nguyen Huu Thuy, Dominik Behrend, Amit Kumar Srivastava, Krishnagopal Halder, Frank Ewert</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-01-22 15:20:00</h6>
+<p class='card-text'>Accurate prediction of crop above-ground biomass (AGB) under water stress is critical for monitoring crop productivity, guiding irrigation, and supporting climate-resilient agriculture. Data-driven models scale well but often lack interpretability and degrade under distribution shift, whereas process-based crop models (e.g. DSSAT, APSIM, LINTUL5) require extensive calibration and are difficult to deploy over large spatial domains. To address these limitations, we propose AgriPINN, a process-informed neural network that integrates a biophysical crop-growth differential equation as a differentiable constraint within a deep learning backbone. This design encourages physiologically consistent biomass dynamics under water-stress conditions while preserving model scalability for spatially distributed AGB prediction. AgriPINN recovers latent physiological variables, including leaf area index (LAI), absorbed photosynthetically active radiation (PAR), radiation use efficiency (RUE), and water-stress factors, without requiring direct supervision. We pretrain AgriPINN on 60 years of historical data across 397 regions in Germany and fine-tune it on three years of field experiments under controlled water treatments. Results show that AgriPINN consistently outperforms state-of-the-art deep-learning baselines (ConvLSTM-ViT, SLTF, CNN-Transformer) and the process-based LINTUL5 model in terms of accuracy (RMSE reductions up to $43\%$) and computational efficiency. By combining the scalability of deep learning with the biophysical rigor of process-based modeling, AgriPINN provides a robust and interpretable framework for spatio-temporal AGB prediction, offering practical value for planning of irrigation infrastructure, yield forecasting, and climate-adaptation planning.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2601.16003v1' target='_blank'>Time-Optimal Switching Surfaces for Triple Integrator under Full Box Constraints</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yunan Wang, Chuxiong Hu, Zhao Jin</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-01-22 14:28:37</h6>
+<p class='card-text'>Time-optimal control for triple integrator under full box constraints is a fundamental problem in the field of optimal control, which has been widely applied in the industry. However, scenarios involving asymmetric constraints, non-stationary boundary conditions, and active position constraints pose significant challenges. This paper provides a complete characterization of time-optimal switching surfaces for the problem, leading to novel insights into the geometric and algebraic structure of the optimal control. The active condition of position constraints is derived, which is absent from the literature. An efficient algorithm is proposed, capable of planning time-optimal trajectories under asymmetric full constraints and arbitrary boundary states, with a 100% success rate. Computational time for each trajectory is within approximately 10μs, achieving a 5-order-of-magnitude reduction compared to optimization-based baselines.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2601.15758v1' target='_blank'>NL4ST: A Natural Language Query Tool for Spatio-Temporal Databases</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Xieyang Wang, Mengyi Liu, Weijia Yi, Jianqiu Xu, Raymond Chi-Wing Wong</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-01-22 08:48:32</h6>
+<p class='card-text'>The advancement of mobile computing devices and positioning technologies has led to an explosive growth of spatio-temporal data managed in databases. Representative queries over such data include range queries, nearest neighbor queries, and join queries. However, formulating those queries usually requires domain-specific expertise and familiarity with executable query languages, which would be a challenging task for non-expert users. It leads to a great demand for well-supported natural language queries (NLQs) in spatio-temporal databases. To bridge the gap between non-experts and query plans in databases, we present NL4ST, an interactive tool that allows users to query spatio-temporal databases in natural language. NL4ST features a three-layer architecture: (i) knowledge base and corpus for knowledge preparation, (ii) natural language understanding for entity linking, and (iii) generating physical plans. Our demonstration will showcase how NL4ST provides effective spatio-temporal physical plans, verified by using four real and synthetic datasets. We make NL4ST online and provide the demo video at https://youtu.be/-J1R7R5WoqQ.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2601.15743v1' target='_blank'>Materealize: a multi-agent deliberation system for end-to-end material design and synthesis</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Seongmin Kim, Jaehwan Choi, Kunik Jang, Junkil Park, Varinia Bernales, Alán Aspuru-Guzik, Yousung Jung</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-01-22 08:13:19</h6>
+<p class='card-text'>We propose Materealize, a multi-agent system for end-to-end inorganic materials design and synthesis that orchestrates core domain tools spanning structure generation, property prediction, synthesizability prediction, and synthesis planning within a single unified framework. Through a natural-language interface, Materealize enables non-experts to access computational materials workflows and obtain experimentally actionable outputs for material realization. Materealize provides two complementary modes. In instant mode, the system rapidly composes connected tools to solve diverse inorganic tasks-including property-conditioned synthesizable candidate design with synthesis recipes, diagnosis, and redesign of unsynthesizable structures, and synthesizable data augmentation-within a few minutes. In thinking mode, Materealize applies multi-agent debate to deliver more refined and information-rich synthesis recommendations, including reasoning- and model-driven synthesis routes and mechanistic hypotheses. The mechanistic hypotheses are validated by direct comparison with the literature for known mechanisms and further supported by physics-grounded simulations for novel synthesis pathways. By combining tool-level accuracy with reasoning-level integration, Materealize can bridge the gap between computational discovery and practical experimental realization.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2601.15729v1' target='_blank'>DualShield: Safe Model Predictive Diffusion via Reachability Analysis for Interactive Autonomous Driving</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Rui Yang, Lei Zheng, Ruoyu Yao, Jun Ma</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-01-22 07:56:36</h6>
+<p class='card-text'>Diffusion models have emerged as a powerful approach for multimodal motion planning in autonomous driving. However, their practical deployment is typically hindered by the inherent difficulty in enforcing vehicle dynamics and a critical reliance on accurate predictions of other agents, making them prone to safety issues under uncertain interactions. To address these limitations, we introduce DualShield, a planning and control framework that leverages Hamilton-Jacobi (HJ) reachability value functions in a dual capacity. First, the value functions act as proactive guidance, steering the diffusion denoising process towards safe and dynamically feasible regions. Second, they form a reactive safety shield using control barrier-value functions (CBVFs) to modify the executed actions and ensure safety. This dual mechanism preserves the rich exploration capabilities of diffusion models while providing principled safety assurance under uncertain and even adversarial interactions. Simulations in challenging unprotected U-turn scenarios demonstrate that DualShield significantly improves both safety and task efficiency compared to leading methods from different planning paradigms under uncertainty.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2601.15715v1' target='_blank'>Dancing in Chains: Strategic Persuasion in Academic Rebuttal via Theory of Mind</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Zhitao He, Zongwei Lyu, Yi R Fung</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-01-22 07:36:48</h6>
+<p class='card-text'>Although artificial intelligence (AI) has become deeply integrated into various stages of the research workflow and achieved remarkable advancements, academic rebuttal remains a significant and underexplored challenge. This is because rebuttal is a complex process of strategic communication under severe information asymmetry rather than a simple technical debate. Consequently, current approaches struggle as they largely imitate surface-level linguistics, missing the essential element of perspective-taking required for effective persuasion. In this paper, we introduce RebuttalAgent, the first framework to ground academic rebuttal in Theory of Mind (ToM), operationalized through a ToM-Strategy-Response (TSR) pipeline that models reviewer mental state, formulates persuasion strategy, and generates strategy-grounded response. To train our agent, we construct RebuttalBench, a large-scale dataset synthesized via a novel critique-and-refine approach. Our training process consists of two stages, beginning with a supervised fine-tuning phase to equip the agent with ToM-based analysis and strategic planning capabilities, followed by a reinforcement learning phase leveraging the self-reward mechanism for scalable self-improvement. For reliable and efficient automated evaluation, we further develop Rebuttal-RM, a specialized evaluator trained on over 100K samples of multi-source rebuttal data, which achieves scoring consistency with human preferences surpassing powerful judge GPT-4.1. Extensive experiments show RebuttalAgent significantly outperforms the base model by an average of 18.3% on automated metrics, while also outperforming advanced proprietary models across both automated and human evaluations. Disclaimer: the generated rebuttal content is for reference only to inspire authors and assist in drafting. It is not intended to replace the author's own critical analysis and response.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2601.15678v1' target='_blank'>Connect the Dots: Knowledge Graph-Guided Crawler Attack on Retrieval-Augmented Generation Systems</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Mengyu Yao, Ziqi Zhang, Ning Luo, Shaofei Li, Yifeng Cai, Xiangqun Chen, Yao Guo, Ding Li</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-01-22 05:59:42</h6>
+<p class='card-text'>Retrieval-augmented generation (RAG) systems integrate document retrieval with large language models and have been widely adopted. However, in privacy-related scenarios, RAG introduces a new privacy risk: adversaries can issue carefully crafted queries to exfiltrate sensitive content from the underlying corpus gradually. Although recent studies have demonstrated multi-turn extraction attacks, they rely on heuristics and fail to perform long-term extraction planning. To address these limitations, we formulate the RAG extraction attack as an adaptive stochastic coverage problem (ASCP). In ASCP, each query is treated as a probabilistic action that aims to maximize conditional marginal gain (CMG), enabling principled long-term planning under uncertainty. However, integrating ASCP with practical RAG attack faces three key challenges: unobservable CMG, intractability in the action space, and feasibility constraints. To overcome these challenges, we maintain a global attacker-side state to guide the attack. Building on this idea, we introduce RAGCRAWLER, which builds a knowledge graph to represent revealed information, uses this global state to estimate CMG, and plans queries in semantic space that target unretrieved regions. In comprehensive experiments across diverse RAG architectures and datasets, our proposed method, RAGCRAWLER, consistently outperforms all baselines. It achieves up to 84.4% corpus coverage within a fixed query budget and deliver an average improvement of 20.7% over the top-performing baseline. It also maintains high semantic fidelity and strong content reconstruction accuracy with low attack cost. Crucially, RAGCRAWLER proves its robustness by maintaining effectiveness against advanced RAG systems employing query rewriting and multi-query retrieval strategies. Our work reveals significant security gaps and highlights the pressing need for stronger safeguards for RAG.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2601.15533v1' target='_blank'>From Generative Engines to Actionable Simulators: The Imperative of Physical Grounding in World Models</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Zhikang Chen, Tingting Zhu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-01-21 23:35:33</h6>
+<p class='card-text'>A world model is an AI system that simulates how an environment evolves under actions, enabling planning through imagined futures rather than reactive perception. Current world models, however, suffer from visual conflation: the mistaken assumption that high-fidelity video generation implies an understanding of physical and causal dynamics. We show that while modern models excel at predicting pixels, they frequently violate invariant constraints, fail under intervention, and break down in safety-critical decision-making. This survey argues that visual realism is an unreliable proxy for world understanding. Instead, effective world models must encode causal structure, respect domain-specific constraints, and remain stable over long horizons. We propose a reframing of world models as actionable simulators rather than visual engines, emphasizing structured 4D interfaces, constraint-aware dynamics, and closed-loop evaluation. Using medical decision-making as an epistemic stress test, where trial-and-error is impossible and errors are irreversible, we demonstrate that a world model's value is determined not by how realistic its rollouts appear, but by its ability to support counterfactual reasoning, intervention planning, and robust long-horizon foresight.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2601.15521v1' target='_blank'>NWQWorkflow: The Northwest Quantum Workflow</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Ang Li</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-01-21 23:15:27</h6>
+<p class='card-text'>This whitepaper presents NWQWorkflow, an end-to-end workflow for quantum application development, compilation, error correction, benchmarking, numerical simulation, control, and execution on a prototype superconducting testbed. NWQWorkflow integrates NWQStudio (programming GUI environment), NWQASM (intermediate representation), QASMTrans (compiler), NWQEC (quantum error correction), QASMBench (benchmarking and characterization), NWQSim (HPC simulation), NWQLib (algorithm library), NWQData (data sets), NWQControl (quantum control), and NWQSC (superconducting testbed). The system enables closed-loop software-hardware co-design and reflects the past eight years of quantum computing research the author has led at PNNL (2018-2026). By releasing most software components as open source or planning their open-source availability, we aim to cultivate a collaborative quantum information science (QIS) ecosystem and support the transition toward a scalable quantum supercomputing era.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2601.15178v1' target='_blank'>Complexity analysis and practical resolution of the data classification problem with private characteristics</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:David Pantoja, Ismael Rodriguez, Fernando Rubio, Clara Segura</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-01-21 16:55:32</h6>
+<p class='card-text'>In this work we analyze the problem of, given the probability distribution of a population, questioning an unknown individual that is representative of the distribution so that our uncertainty about certain characteristics is significantly reduced -but the uncertainty about others, deemed private or sensitive, is not. Thus, the goal of the problem is extracting information being relevant to a legitimate purpose while preserving the privacy of individuals, which is crucial to enable non-intrusive selection processes in several areas. For instance, it is essential in the design of non-discriminatory personnel selection, promotion, and layoff processes in companies and institutions; in the retrieval of customer information being relevant to the service provided by a company (and no more); in certifications not revealing sensitive industrial information being irrelevant for the certification itself; etc. Interactive questioning processes are constructed for this purpose, which requires generalizing the notion of decision trees to account the amount of desired and undesired information retrieved for each branch of the plan. Our findings about this problem are both theoretical and practical: on the one hand, we prove its NP-completeness by a reduction from the Set Cover problem; and on the other hand, given this intractability, we provide heuristic solutions to find reasonable solutions in affordable time. In particular, a greedy algorithm and two genetic algorithms are presented. Our experiments indicate that the best results are obtained using a genetic algorithm reinforced with a greedy strategy.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2601.15164v1' target='_blank'>V-CAGE: Context-Aware Generation and Verification for Scalable Long-Horizon Embodied Tasks</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yaru Liu, Ao-bo Wang, Nanyang Ye</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-01-21 16:41:51</h6>
+<p class='card-text'>Learning long-horizon embodied behaviors from synthetic data remains challenging because generated scenes are often physically implausible, language-driven programs frequently "succeed" without satisfying task semantics, and high-level instructions require grounding into executable action sequences. To address these limitations, we introduce V-CAGE, a closed-loop framework for generating robust, semantically aligned manipulation datasets at scale. First, we propose a context-aware instantiation mechanism that enforces geometric consistency during scene synthesis. By dynamically maintaining a map of prohibited spatial areas as objects are placed, our system prevents interpenetration and ensures reachable, conflict-free configurations in cluttered environments. Second, to bridge the gap between abstract intent and low-level control, we employ a hierarchical instruction decomposition module. This decomposes high-level goals (e.g., "get ready for work") into compositional action primitives, facilitating coherent long-horizon planning. Crucially, we enforce semantic correctness through a VLM-based verification loop. Acting as a visual critic, the VLM performs rigorous rejection sampling after each subtask, filtering out "silent failures" where code executes but fails to achieve the visual goal. Experiments demonstrate that V-CAGE yields datasets with superior physical and semantic fidelity, significantly boosting the success rate and generalization of downstream policies compared to non-verified baselines.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2601.15135v1' target='_blank'>Stochastic EMS for Optimal 24/7 Carbon-Free Energy Operations</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Natanon Tongamrak, Kannapha Amaruchkul, Wijarn Wangdee, Jitkomut Songsiri</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-01-21 16:10:10</h6>
+<p class='card-text'>This paper proposes a two-stage stochastic optimization formulation to determine optimal operation and procurement plans for achieving a 24/7 carbon-free energy (CFE) compliance at minimized cost. The system in consideration follows primary energy technologies in Thailand including solar power, battery storage, and a diverse portfolio of renewable and carbon-based energy procurement sources. Unlike existing literature focused on long-term planning, this study addresses near real-time operations using a 15-minute resolution. A novel feature of the formulation is the explicit treatment of CFE compliance as a model parameter, enabling flexible targets such as a minimum percentage of hourly matching or a required number of carbon-free days within a multi-day horizon. The mixed-integer linear programming formulation accounts for uncertainties in load and solar generation by integrating deep learning-based forecasting within a receding horizon framework. By optimizing battery profiles and multi-source procurement simultaneously, the proposed system provides a feasible pathway for transitioning to carbon-free operations in emerging energy markets.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2601.15131v1' target='_blank'>Vehicle Routing with Finite Time Horizon using Deep Reinforcement Learning with Improved Network Embedding</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Ayan Maity, Sudeshna Sarkar</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-01-21 16:05:04</h6>
+<p class='card-text'>In this paper, we study the vehicle routing problem with a finite time horizon. In this routing problem, the objective is to maximize the number of customer requests served within a finite time horizon. We present a novel routing network embedding module which creates local node embedding vectors and a context-aware global graph representation. The proposed Markov decision process for the vehicle routing problem incorporates the node features, the network adjacency matrix and the edge features as components of the state space. We incorporate the remaining finite time horizon into the network embedding module to provide a proper routing context to the embedding module. We integrate our embedding module with a policy gradient-based deep Reinforcement Learning framework to solve the vehicle routing problem with finite time horizon. We trained and validated our proposed routing method on real-world routing networks, as well as synthetically generated Euclidean networks. Our experimental results show that our method achieves a higher customer service rate than the existing routing methods. Additionally, the solution time of our method is significantly lower than that of the existing methods.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2601.15090v2' target='_blank'>From carbon management strategies to implementation: Modeling and physical simulation of CO2 pipeline infrastructure -- a case study for Germany</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Mehrnaz Anvari, Marius Neuwirth, Okan Akca, Luna Lütz, Simon Lukas Bussmann, Tobias Fleiter, Bernhard Klaassen</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-01-21 15:30:25</h6>
+<p class='card-text'>Carbon capture and storage or utilization (CCUS) will play an important role to achieve climate neutrality in many economies. Pipelines are widely regarded as the most efficient means of CO2 transport; however, they are currently non-existent. Policy-makers and companies need to develop large-scale infrastructure under substantial uncertainty. Methods and analyses are needed to support pipeline planning and strategy development. This paper presents an integrated method for designing CO2 pipeline networks by combining energy system scenarios with physical network simulation. Using Germany as a case study, we derive spatially highly resolved CO2 balances to develop a dense-phase CO2 pipeline topology that follows existing gas pipeline corridors. The analyzed system includes existing sites for cement and lime production, waste incineration, carbon users, four coastal CO2 hubs, and border crossing points. We then apply the multiphysical network simulator MYNTS to assess the technical feasibility of this network. We determine pipeline diameters, pump locations, and operating conditions that ensure stable dense-phase transport. The method explicitly accounts for elevation and possible impurities. The results indicate that a system of about 7000 km pipeline length and a mixed normed diameter of DN700 on main corridors and of DN500/DN400 on branches presents a feasible solution to connect most sites. Investment costs for the optimized pipeline system are calculated to be about 17 billion Euros. The method provides a reproducible framework and is transferable to other countries and to European scope.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2601.15025v1' target='_blank'>ExPrIS: Knowledge-Level Expectations as Priors for Object Interpretation from Sensor Data</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Marian Renz, Martin Günther, Felix Igelbrink, Oscar Lima, Martin Atzmueller</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-01-21 14:27:38</h6>
+<p class='card-text'>While deep learning has significantly advanced robotic object recognition, purely data-driven approaches often lack semantic consistency and fail to leverage valuable, pre-existing knowledge about the environment. This report presents the ExPrIS project, which addresses this challenge by investigating how knowledge-level expectations can serve as to improve object interpretation from sensor data. Our approach is based on the incremental construction of a 3D Semantic Scene Graph (3DSSG). We integrate expectations from two sources: contextual priors from past observations and semantic knowledge from external graphs like ConceptNet. These are embedded into a heterogeneous Graph Neural Network (GNN) to create an expectation-biased inference process. This method moves beyond static, frame-by-frame analysis to enhance the robustness and consistency of scene understanding over time. The report details this architecture, its evaluation, and outlines its planned integration on a mobile robotic platform.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2601.15018v1' target='_blank'>Risk Estimation for Automated Driving</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Leon Tolksdorf, Arturo Tejada, Jonas Bauernfeind, Christian Birkner, Nathan van de Wouw</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-01-21 14:14:50</h6>
+<p class='card-text'>Safety is a central requirement for automated vehicles. As such, the assessment of risk in automated driving is key in supporting both motion planning technologies and safety evaluation. In automated driving, risk is characterized by two aspects. The first aspect is the uncertainty on the state estimates of other road participants by an automated vehicle. The second aspect is the severity of a collision event with said traffic participants. Here, the uncertainty aspect typically causes the risk to be non-zero for near-collision events. This makes risk particularly useful for automated vehicle motion planning. Namely, constraining or minimizing risk naturally navigates the automated vehicle around traffic participants while keeping a safety distance based on the level of uncertainty and the potential severity of the impending collision. Existing approaches to calculate the risk either resort to empirical modeling or severe approximations, and, hence, lack generalizability and accuracy. In this paper, we combine recent advances in collision probability estimation with the concept of collision severity to develop a general method for accurate risk estimation. The proposed method allows us to assign individual severity functions for different collision constellations, such as, e.g., frontal or side collisions. Furthermore, we show that the proposed approach is computationally efficient, which is beneficial, e.g., in real-time motion planning applications. The programming code for an exemplary implementation of Gaussian uncertainties is also provided.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2601.14998v1' target='_blank'>Graph-Based Adaptive Planning for Coordinated Dual-Arm Robotic Disassembly of Electronic Devices (eGRAP)</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Adip Ranjan Das, Maria Koskinopoulou</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-01-21 13:57:03</h6>
+<p class='card-text'>E-waste is growing rapidly while recycling rates remain low. We propose an electronic-device Graph-based Adaptive Planning (eGRAP) that integrates vision, dynamic planning, and dual-arm execution for autonomous disassembly. A camera-equipped arm identifies parts and estimates their poses, and a directed graph encodes which parts must be removed first. A scheduler uses topological ordering of this graph to select valid next steps and assign them to two robot arms, allowing independent tasks to run in parallel. One arm carries a screwdriver (with an eye-in-hand depth camera) and the other holds or handles components. We demonstrate eGRAP on 3.5in hard drives: as parts are unscrewed and removed, the system updates its graph and plan online. Experiments show consistent full disassembly of each HDD, with high success rates and efficient cycle times, illustrating the method's ability to adaptively coordinate dual-arm tasks in real time.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2601.14973v1' target='_blank'>HumanDiffusion: A Vision-Based Diffusion Trajectory Planner with Human-Conditioned Goals for Search and Rescue UAV</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Faryal Batool, Iana Zhura, Valerii Serpiva, Roohan Ahmed Khan, Ivan Valuev, Issatay Tokmurziyev, Dzmitry Tsetserukou</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-01-21 13:22:22</h6>
+<p class='card-text'>Reliable human--robot collaboration in emergency scenarios requires autonomous systems that can detect humans, infer navigation goals, and operate safely in dynamic environments. This paper presents HumanDiffusion, a lightweight image-conditioned diffusion planner that generates human-aware navigation trajectories directly from RGB imagery. The system combines YOLO-11--based human detection with diffusion-driven trajectory generation, enabling a quadrotor to approach a target person and deliver medical assistance without relying on prior maps or computationally intensive planning pipelines. Trajectories are predicted in pixel space, ensuring smooth motion and a consistent safety margin around humans. We evaluate HumanDiffusion in simulation and real-world indoor mock-disaster scenarios. On a 300-sample test set, the model achieves a mean squared error of 0.02 in pixel-space trajectory reconstruction. Real-world experiments demonstrate an overall mission success rate of 80% across accident-response and search-and-locate tasks with partial occlusions. These results indicate that human-conditioned diffusion planning offers a practical and robust solution for human-aware UAV navigation in time-critical assistance settings.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2601.14880v1' target='_blank'>Contingency Planning for Safety-Critical Autonomous Vehicles: A Review and Perspectives</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Lei Zheng, Luyao Zhang, Peiqi Yu, Yifan Sun, Sergio Grammatico, Jun Ma, Changliu Liu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-01-21 11:10:23</h6>
+<p class='card-text'>Contingency planning is the architectural capability that enables autonomous vehicles (AVs) to anticipate and mitigate discrete, high-impact hazards, such as sensor outages and adversarial interactions. This paper presents a comprehensive survey of the field, synthesizing fragmented literature into a unified logic-conditioned hybrid control framework. Within this formalism, we categorize approaches into two distinct paradigms: Reactive Safety, which responds to realized hazards by enforcing safety constraints or executing fail-safe maneuvers; and Proactive Safety, which optimizes for future recourse by branching over potential modal transitions. In addition, we propose a fine-grained taxonomy that partitions the landscape into external contingencies (environmental and interactive hazards) and internal contingencies (system faults). Through a critical comparative analysis, we reveal a fundamental structural divergence: internal faults are predominantly addressed via reactive fail-safe mechanisms, whereas external interaction uncertainties increasingly require proactive branching strategies. Furthermore, we identify a critical methodological divergence: whereas physical hazards are typically managed with formal guarantees, semantic and out-of-distribution anomalies currently rely heavily on empirical validation. We conclude by identifying the open challenges in bridging the gap between theoretical guarantees and practical validation, advocating for hybrid architectures and standardized benchmarking to transition contingency planning from formulation to certifiable real-world deployment.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2601.14790v1' target='_blank'>CI4A: Semantic Component Interfaces for Agents Empowering Web Automation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Zhi Qiu, Jiazheng Sun, Chenxiao Xia, Jun Zheng, Xin Peng</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-01-21 09:14:04</h6>
+<p class='card-text'>While Large Language Models demonstrate remarkable proficiency in high-level semantic planning, they remain limited in handling fine-grained, low-level web component manipulations. To address this limitation, extensive research has focused on enhancing model grounding capabilities through techniques such as Reinforcement Learning. However, rather than compelling agents to adapt to human-centric interfaces, we propose constructing interaction interfaces specifically optimized for agents. This paper introduces Component Interface for Agent (CI4A), a semantic encapsulation mechanism that abstracts the complex interaction logic of UI components into a set of unified tool primitives accessible to agents. We implemented CI4A within Ant Design, an industrial-grade front-end framework, covering 23 categories of commonly used UI components. Furthermore, we developed a hybrid agent featuring an action space that dynamically updates according to the page state, enabling flexible invocation of available CI4A tools. Leveraging the CI4A-integrated Ant Design, we refactored and upgraded the WebArena benchmark to evaluate existing SoTA methods. Experimental results demonstrate that the CI4A-based agent significantly outperforms existing approaches, achieving a new SoTA task success rate of 86.3%, alongside substantial improvements in execution efficiency.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2601.14758v2' target='_blank'>Mechanism Shift During Post-training from Autoregressive to Masked Diffusion Language Models</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Injin Kong, Hyoungjoon Lee, Yohan Jo</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-01-21 08:26:51</h6>
+<p class='card-text'>Post-training pretrained Autoregressive models (ARMs) into Masked Diffusion models (MDMs) has emerged as a cost-effective strategy to overcome the limitations of sequential generation. However, the internal algorithmic transformations induced by this paradigm shift remain unexplored, leaving it unclear whether post-trained MDMs acquire genuine bidirectional reasoning capabilities or merely repackage autoregressive heuristics. In this work, we address this question by conducting a comparative circuit analysis of ARMs and their MDM counterparts. Our analysis reveals a systematic "mechanism shift" dependent on the structural nature of the task. Structurally, we observe a distinct divergence: while MDMs largely retain autoregressive circuitry for tasks dominated by local causal dependencies, they abandon initialized pathways for global planning tasks, exhibiting distinct rewiring characterized by increased early-layer processing. Semantically, we identify a transition from sharp, localized specialization in ARMs to distributed integration in MDMs. Through these findings, we conclude that diffusion post-training does not merely adapt model parameters but fundamentally reorganizes internal computation to support non-sequential global planning.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2601.14713v1' target='_blank'>Adaptive Fidelity Estimation for Quantum Programs with Graph-Guided Noise Awareness</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Tingting Li, Ziming Zhao, Jianwei Yin</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-01-21 07:04:05</h6>
+<p class='card-text'>Fidelity estimation is a critical yet resource-intensive step in testing quantum programs on noisy intermediate-scale quantum (NISQ) devices, where the required number of measurements is difficult to predefine due to hardware noise, device heterogeneity, and transpilation-induced circuit transformations. We present QuFid, an adaptive and noise-aware framework that determines measurement budgets online by leveraging circuit structure and runtime statistical feedback. QuFid models a quantum program as a directed acyclic graph (DAG) and employs a control-flow-aware random walk to characterize noise propagation along gate dependencies. Backend-specific effects are captured via transpilation-induced structural deformation metrics, which are integrated into the random-walk formulation to induce a noise-propagation operator. Circuit complexity is then quantified through the spectral characteristics of this operator, providing a principled and lightweight basis for adaptive measurement planning. Experiments on 18 quantum benchmarks executed on IBM Quantum backends show that QuFid significantly reduces measurement cost compared to fixed-shot and learning-based baselines, while consistently maintaining acceptable fidelity bias.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2601.14710v1' target='_blank'>Case-Guided Sequential Assay Planning in Drug Discovery</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Tianchi Chen, Jan Bima, Sean L. Wu, Otto Ritter, Bingjia Yang, Xiang Yu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-01-21 06:58:01</h6>
+<p class='card-text'>Optimally sequencing experimental assays in drug discovery is a high-stakes planning problem under severe uncertainty and resource constraints. A primary obstacle for standard reinforcement learning (RL) is the absence of an explicit environment simulator or transition data $(s, a, s')$; planning must rely solely on a static database of historical outcomes. We introduce the Implicit Bayesian Markov Decision Process (IBMDP), a model-based RL framework designed for such simulator-free settings. IBMDP constructs a case-guided implicit model of transition dynamics by forming a nonparametric belief distribution using similar historical outcomes. This mechanism enables Bayesian belief updating as evidence accumulates and employs ensemble MCTS planning to generate stable policies that balance information gain toward desired outcomes with resource efficiency. We validate IBMDP through comprehensive experiments. On a real-world central nervous system (CNS) drug discovery task, IBMDP reduced resource consumption by up to 92\% compared to established heuristics while maintaining decision confidence. To rigorously assess decision quality, we also benchmarked IBMDP in a synthetic environment with a computable optimal policy. Our framework achieves significantly higher alignment with this optimal policy than a deterministic value iteration alternative that uses the same similarity-based model, demonstrating the superiority of our ensemble planner. IBMDP offers a practical solution for sequential experimental design in data-rich but simulator-poor domains.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2601.14703v1' target='_blank'>RegFreeNet: A Registration-Free Network for CBCT-based 3D Dental Implant Planning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Xinquan Yang, Xuguang Li, Mianjie Zheng, Xuefen Liu, Kun Tang, Kian Ming Lim, He Meng, Jianfeng Ren, Linlin Shen</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-01-21 06:30:18</h6>
+<p class='card-text'>As the commercial surgical guide design software usually does not support the export of implant position for pre-implantation data, existing methods have to scan the post-implantation data and map the implant to pre-implantation space to get the label of implant position for training. Such a process is time-consuming and heavily relies on the accuracy of registration algorithm. Moreover, not all hospitals have paired CBCT data, limitting the construction of multi-center dataset. Inspired by the way dentists determine the implant position based on the neighboring tooth texture, we found that even if the implant area is masked, it will not affect the determination of the implant position. Therefore, we propose to mask the implants in the post-implantation data so that any CBCT containing the implants can be used as training data. This paradigm enables us to discard the registration process and makes it possible to construct a large-scale multi-center implant dataset. On this basis, we proposes ImplantFairy, a comprehensive, publicly accessible dental implant dataset with voxel-level 3D annotations of 1622 CBCT data. Furthermore, according to the area variation characteristics of the tooth's spatial structure and the slope information of the implant, we designed a slope-aware implant position prediction network. Specifically, a neighboring distance perception (NDP) module is designed to adaptively extract tooth area variation features, and an implant slope prediction branch assists the network in learning more robust features through additional implant supervision information. Extensive experiments conducted on ImplantFairy and two public dataset demonstrate that the proposed RegFreeNet achieves the state-of-the-art performance.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2601.14701v1' target='_blank'>Regulatory Expectations for Bayesian Methods in Drug and Biologic Clinical Trials: A Practical Perspective on FDA's 2026 Draft Guidance</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yuan Ji, Ph. D</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-01-21 06:27:17</h6>
+<p class='card-text'>The U.S. Food and Drug Administration (FDA) released a landmark draft guidance in January 2026 on the use of Bayesian methodology to support primary inference in clinical trials of drugs and biological products. For sponsors, the central message is not merely that ``Bayes is allowed,'' but that Bayesian designs should be justified through explicit success criteria, thoughtful priors (especially when borrowing external information), prospective operating-characteristic evaluation (often via simulation when simulation is used), and computational transparency suitable for regulatory review. This paper provides a practical, regulatory-oriented synthesis of the draft guidance, highlighting where Bayesian designs can be calibrated to traditional frequentist error-rate targets and where, with sponsor--FDA agreement, alternative Bayesian operating metrics may be appropriate. We illustrate expectations through examples discussed in the guidance (e.g., platform trials, external/nonconcurrent controls, pediatric extrapolation) and conclude with an actionable checklist for planning documents and submission packages.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2601.14665v1' target='_blank'>A Two-Stage Risk-Averse DRO-MILP Methodological Framework for Managing AI/Data Center Demand Shocks</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Sharaf K. Magableh, Caisheng Wang, Oraib Dawaghreh</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-01-21 05:22:41</h6>
+<p class='card-text'>The rapid growth of artificial intelligence (AI)-driven data centers is reshaping electricity demand patterns. This is achieved by introducing fast, multi-gigawatt load ramps that challenge the stability and resilience of modern power systems. Traditional resilience frameworks focus mainly on physical outages and largely overlook these emerging digital-era disturbances. This paper proposes a unified two-stage, risk-aware distributionally robust optimization (DRO)-MILP framework that coordinates the pre-allocation and post-event dispatch of Flexible Capacity Modules (FCMs), including BESS, fast-ramping generation, demand response, and potential long-duration storage. Stage-I optimally positions FCMs using DRO with CVaR to hedge against uncertain AI load surges. Stage-II models real-time stabilization following stochastic demand-shock scenarios, minimizing imbalance, unserved energy, and restoration penalties. The framework is designed to be applied on IEEE 33-bus system or expanded for scalability to larger IEEE test feeders capable of representing AI-scale loads. This contributes a scalable planning tool for resilient, AI-integrated distribution grids.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2601.14654v1' target='_blank'>Dosimetry for Proton Therapy Using a β-Ga$_2$O$_3$ Metal-Semiconductor-Metal Detector with Low-Noise Amplification</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Hunter D. Ellis, Ajayvarman Mallapillai, Jared Miller, Imteaz Rahaman, Botong Li, Vikren Sarkar, Kai Fu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-01-21 05:00:05</h6>
+<p class='card-text'>Intensity-modulated proton therapy (IMPT) employs proton radiation rather than conventional X-rays to treat cancerous tumors. This approach offers significant advantages by minimizing the radiation exposure of surrounding healthy tissue, leading to improved patient outcomes and reduced side effects compared to traditional X-ray therapy. To ensure patient safety, each treatment plan must be experimentally validated before clinical implementation. However, current dosimetry devices face limitations in performing angled beam measurements and obtaining multi-depth assessments, both of which are essential for verifying IMPT treatment plans. In this study, the performance of a β-Ga$_2$O$_3$-based metal-semiconductor-metal (MSM) detector with a low-noise amplifier is studied and evaluated under various proton radiation doses and energy levels delivered by a MEVION S250i proton accelerator. The detector performance is also compared with that of an ionization chamber. The β-Ga$_2$O$_3$ detector exhibits a linear response with proton dose for single-spot irradiations, and its response to varying proton energies closely matches both the ion chamber data and simulated dose distributions. These findings highlight the potential of β-Ga$_2$O$_3$-based detectors as robust dosimetry devices for IMPT applications.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2601.14649v1' target='_blank'>Spatially Generalizable Mobile Manipulation via Adaptive Experience Selection and Dynamic Imagination</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Ping Zhong, Liangbai Liu, Bolei Chen, Tao Wu, Jiazhi Xia, Chaoxu Mu, Jianxin Wang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-01-21 04:43:49</h6>
+<p class='card-text'>Mobile Manipulation (MM) involves long-horizon decision-making over multi-stage compositions of heterogeneous skills, such as navigation and picking up objects. Despite recent progress, existing MM methods still face two key limitations: (i) low sample efficiency, due to ineffective use of redundant data generated during long-term MM interactions; and (ii) poor spatial generalization, as policies trained on specific tasks struggle to transfer to new spatial layouts without additional training. In this paper, we address these challenges through Adaptive Experience Selection (AES) and model-based dynamic imagination. In particular, AES makes MM agents pay more attention to critical experience fragments in long trajectories that affect task success, improving skill chain learning and mitigating skill forgetting. Based on AES, a Recurrent State-Space Model (RSSM) is introduced for Model-Predictive Forward Planning (MPFP) by capturing the coupled dynamics between the mobile base and the manipulator and imagining the dynamics of future manipulations. RSSM-based MPFP can reinforce MM skill learning on the current task while enabling effective generalization to new spatial layouts. Comparative studies across different experimental configurations demonstrate that our method significantly outperforms existing MM policies. Real-world experiments further validate the feasibility and practicality of our method.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js'></script>
+</body>
+</html>
