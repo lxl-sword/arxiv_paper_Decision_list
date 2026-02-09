@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>planning - 2026-02-09</title>
+<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap' rel='stylesheet'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css'>
+<style>
+body {
+font-family: 'Roboto', sans-serif;
+background-color: #f5f7fa;
+padding: 20px;
+}
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.card-title {
+    font-weight: 700;
+}
+.card:hover {
+    transform: scale(1.02);
+    transition: 0.3s ease-in-out;
+}
+</style>
+</head>
+<body>
+<div class='container'>
+<h1 class='text-center my-4'><i class='fas fa-book'></i>planning - 2026-02-09</h1>
+<div class='row'>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2602.06949v1' target='_blank'>DreamDojo: A Generalist Robot World Model from Large-Scale Human Videos</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Shenyuan Gao, William Liang, Kaiyuan Zheng, Ayaan Malik, Seonghyeon Ye, Sihyun Yu, Wei-Cheng Tseng, Yuzhu Dong, Kaichun Mo, Chen-Hsuan Lin, Qianli Ma, Seungjun Nah, Loic Magne, Jiannan Xiang, Yuqi Xie, Ruijie Zheng, Dantong Niu, You Liang Tan, K. R. Zentner, George Kurian, Suneel Indupuru, Pooya Jannaty, Jinwei Gu, Jun Zhang, Jitendra Malik, Pieter Abbeel, Ming-Yu Liu, Yuke Zhu, Joel Jang, Linxi "Jim" Fan</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-02-06 18:49:43</h6>
+<p class='card-text'>Being able to simulate the outcomes of actions in varied environments will revolutionize the development of generalist agents at scale. However, modeling these world dynamics, especially for dexterous robotics tasks, poses significant challenges due to limited data coverage and scarce action labels. As an endeavor towards this end, we introduce DreamDojo, a foundation world model that learns diverse interactions and dexterous controls from 44k hours of egocentric human videos. Our data mixture represents the largest video dataset to date for world model pretraining, spanning a wide range of daily scenarios with diverse objects and skills. To address the scarcity of action labels, we introduce continuous latent actions as unified proxy actions, enhancing interaction knowledge transfer from unlabeled videos. After post-training on small-scale target robot data, DreamDojo demonstrates a strong understanding of physics and precise action controllability. We also devise a distillation pipeline that accelerates DreamDojo to a real-time speed of 10.81 FPS and further improves context consistency. Our work enables several important applications based on generative world models, including live teleoperation, policy evaluation, and model-based planning. Systematic evaluation on multiple challenging out-of-distribution (OOD) benchmarks verifies the significance of our method for simulating open-world, contact-rich tasks, paving the way for general-purpose robot world models.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2602.06925v1' target='_blank'>Strategizing at Speed: A Learned Model Predictive Game for Multi-Agent Drone Racing</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Andrei-Carlo Papuc, Lasse Peters, Sihao Sun, Laura Ferranti, Javier Alonso-Mora</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-02-06 18:20:13</h6>
+<p class='card-text'>Autonomous drone racing pushes the boundaries of high-speed motion planning and multi-agent strategic decision-making. Success in this domain requires drones not only to navigate at their limits but also to anticipate and counteract competitors' actions. In this paper, we study a fundamental question that arises in this domain: how deeply should an agent strategize before taking an action? To this end, we compare two planning paradigms: the Model Predictive Game (MPG), which finds interaction-aware strategies at the expense of longer computation times, and contouring Model Predictive Control (MPC), which computes strategies rapidly but does not reason about interactions. We perform extensive experiments to study this trade-off, revealing that MPG outperforms MPC at moderate velocities but loses its advantage at higher speeds due to latency. To address this shortcoming, we propose a Learned Model Predictive Game (LMPG) approach that amortizes model predictive gameplay to reduce latency. In both simulation and hardware experiments, we benchmark our approach against MPG and MPC in head-to-head races, finding that LMPG outperforms both baselines.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2602.06884v1' target='_blank'>A Cycle-Consistent Graph Surrogate for Full-Cycle Left Ventricular Myocardial Biomechanics</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Siyu Mu, Wei Xuan Chan, Choon Hwai Yap</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-02-06 17:14:38</h6>
+<p class='card-text'>Image-based patient-specific simulation of left ventricular (LV) mechanics is valuable for understanding cardiac function and supporting clinical intervention planning, but conventional finite-element analysis (FEA) is computationally intensive. Current graph-based surrogates do not have full-cycle prediction capabilities, and physics-informed neural networks often struggle to converge on complex cardiac geometries. We present CardioGraphFENet (CGFENet), a unified graph-based surrogate for rapid full-cycle estimation of LV myocardial biomechanics, supervised by a large FEA simulation dataset. The proposed model integrates (i) a global--local graph encoder to capture mesh features with weak-form-inspired global coupling, (ii) a gated recurrent unit-based temporal encoder conditioned on the target volume-time signal to model cycle-coherent dynamics, and (iii) a cycle-consistent bidirectional formulation for both loading and inverse unloading within a single framework. These strategies enable high fidelity with respect to traditional FEA ground truths and produce physiologically plausible pressure-volume loops that match FEA results when coupled with a lumped-parameter model. In particular, the cycle-consistency strategy enables a significant reduction in FEA supervision with only minimal loss in accuracy.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2602.06866v1' target='_blank'>T-STAR: A Context-Aware Transformer Framework for Short-Term Probabilistic Demand Forecasting in Dock-Based Shared Micro-Mobility</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jingyi Cheng, Gonçalo Homem de Almeida Correia, Oded Cats, Shadi Sharif Azadeh</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-02-06 16:53:02</h6>
+<p class='card-text'>Reliable short-term demand forecasting is essential for managing shared micro-mobility services and ensuring responsive, user-centered operations. This study introduces T-STAR (Two-stage Spatial and Temporal Adaptive contextual Representation), a novel transformer-based probabilistic framework designed to forecast station-level bike-sharing demand at a 15-minute resolution. T-STAR addresses key challenges in high-resolution forecasting by disentangling consistent demand patterns from short-term fluctuations through a hierarchical two-stage structure. The first stage captures coarse-grained hourly demand patterns, while the second stage improves prediction accuracy by incorporating high-frequency, localized inputs, including recent fluctuations and real-time demand variations in connected metro services, to account for temporal shifts in short-term demand. Time series transformer models are employed in both stages to generate probabilistic predictions. Extensive experiments using Washington D.C.'s Capital Bikeshare data demonstrate that T-STAR outperforms existing methods in both deterministic and probabilistic accuracy. The model exhibits strong spatial and temporal robustness across stations and time periods. A zero-shot forecasting experiment further highlights T-STAR's ability to transfer to previously unseen service areas without retraining. These results underscore the framework's potential to deliver granular, reliable, and uncertainty-aware short-term demand forecasts, which enable seamless integration to support multimodal trip planning for travelers and enhance real-time operations in shared micro-mobility services.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2602.06807v1' target='_blank'>SuReNav: Superpixel Graph-based Constraint Relaxation for Navigation in Over-constrained Environments</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Keonyoung Koh, Moonkyeong Jung, Samuel Seungsup Lee, Daehyung Park</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-02-06 15:55:38</h6>
+<p class='card-text'>We address the over-constrained planning problem in semi-static environments. The planning objective is to find a best-effort solution that avoids all hard constraint regions while minimally traversing the least risky areas. Conventional methods often rely on pre-defined area costs, limiting generalizations. Further, the spatial continuity of navigation spaces makes it difficult to identify regions that are passable without overestimation. To overcome these challenges, we propose SuReNav, a superpixel graph-based constraint relaxation and navigation method that imitates human-like safe and efficient navigation. Our framework consists of three components: 1) superpixel graph map generation with regional constraints, 2) regional-constraint relaxation using graph neural network trained on human demonstrations for safe and efficient navigation, and 3) interleaving relaxation, planning, and execution for complete navigation. We evaluate our method against state-of-the-art baselines on 2D semantic maps and 3D maps from OpenStreetMap, achieving the highest human-likeness score of complete navigation while maintaining a balanced trade-off between efficiency and safety. We finally demonstrate its scalability and generalization performance in real-world urban navigation with a quadruped robot, Spot.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2602.06761v1' target='_blank'>Orientation-Robust Latent Motion Trajectory Learning for Annotation-free Cardiac Phase Detection in Fetal Echocardiography</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yingyu Yang, Qianye Yang, Can Peng, Elena D'Alberti, Olga Patey, Aris T. Papageorghiou, J. Alison Noble</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-02-06 15:13:53</h6>
+<p class='card-text'>Fetal echocardiography is essential for detecting congenital heart disease (CHD), facilitating pregnancy management, optimized delivery planning, and timely postnatal interventions. Among standard imaging planes, the four-chamber (4CH) view provides comprehensive information for CHD diagnosis, where clinicians carefully inspect the end-diastolic (ED) and end-systolic (ES) phases to evaluate cardiac structure and motion. Automated detection of these cardiac phases is thus a critical component toward fully automated CHD analysis. Yet, in the absence of fetal electrocardiography (ECG), manual identification of ED and ES frames remains a labor-intensive bottleneck. We present ORBIT (Orientation-Robust Beat Inference from Trajectories), a self-supervised framework that identifies cardiac phases without manual annotations under various fetal heart orientation. ORBIT employs registration as self-supervision task and learns a latent motion trajectory of cardiac deformation, whose turning points capture transitions between cardiac relaxation and contraction, enabling accurate and orientation-robust localization of ED and ES frames across diverse fetal positions. Trained exclusively on normal fetal echocardiography videos, ORBIT achieves consistent performance on both normal (MAE = 1.9 frames for ED and 1.6 for ES) and CHD cases (MAE = 2.4 frames for ED and 2.1 for ES), outperforming existing annotation-free approaches constrained by fixed orientation assumptions. These results highlight the potential of ORBIT to facilitate robust cardiac phase detection directly from 4CH fetal echocardiography.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2602.06724v1' target='_blank'>Table-as-Search: Formulate Long-Horizon Agentic Information Seeking as Table Completion</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Tian Lan, Felix Henry, Bin Zhu, Qianghuai Jia, Junyang Ren, Qihang Pu, Haijun Li, Longyue Wang, Zhao Xu, Weihua Luo</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-02-06 14:18:26</h6>
+<p class='card-text'>Current Information Seeking (InfoSeeking) agents struggle to maintain focus and coherence during long-horizon exploration, as tracking search states, including planning procedure and massive search results, within one plain-text context is inherently fragile. To address this, we introduce \textbf{Table-as-Search (TaS)}, a structured planning framework that reformulates the InfoSeeking task as a Table Completion task. TaS maps each query into a structured table schema maintained in an external database, where rows represent search candidates and columns denote constraints or required information. This table precisely manages the search states: filled cells strictly record the history and search results, while empty cells serve as an explicit search plan. Crucially, TaS unifies three distinct InfoSeeking tasks: Deep Search, Wide Search, and the challenging DeepWide Search. Extensive experiments demonstrate that TaS significantly outperforms numerous state-of-the-art baselines across three kinds of benchmarks, including multi-agent framework and commercial systems. Furthermore, our analysis validates the TaS's superior robustness in long-horizon InfoSeeking, alongside its efficiency, scalability and flexibility. Code and datasets are publicly released at https://github.com/AIDC-AI/Marco-Search-Agent.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2602.06698v1' target='_blank'>Crowd-FM: Learned Optimal Selection of Conditional Flow Matching-generated Trajectories for Crowd Navigation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Antareep Singha, Laksh Nanwani, Mathai Mathew P., Samkit Jain, Phani Teja Singamaneni, Arun Kumar Singh, K. Madhava Krishna</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-02-06 13:36:46</h6>
+<p class='card-text'>Safe and computationally efficient local planning for mobile robots in dense, unstructured human crowds remains a fundamental challenge. Moreover, ensuring that robot trajectories are similar to how a human moves will increase the acceptance of the robot in human environments. In this paper, we present Crowd-FM, a learning-based approach to address both safety and human-likeness challenges. Our approach has two novel components. First, we train a Conditional Flow-Matching (CFM) policy over a dataset of optimally controlled trajectories to learn a set of collision-free primitives that a robot can choose at any given scenario. The chosen optimal control solver can generate multi-modal collision-free trajectories, allowing the CFM policy to learn a diverse set of maneuvers. Secondly, we learn a score function over a dataset of human demonstration trajectories that provides a human-likeness score for the flow primitives. At inference time, computing the optimal trajectory requires selecting the one with the highest score. Our approach improves the state-of-the-art by showing that our CFM policy alone can produce collision-free navigation with a higher success rate than existing learning-based baselines. Furthermore, when augmented with inference-time refinement, our approach can outperform even expensive optimisation-based planning approaches. Finally, we validate that our scoring network can select trajectories closer to the expert data than a manually designed cost function.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2602.06663v1' target='_blank'>PlanViz: Evaluating Planning-Oriented Image Generation and Editing for Computer-Use Tasks</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Junxian Li, Kai Liu, Leyang Chen, Weida Wang, Zhixin Wang, Jiaqi Xu, Fan Li, Renjing Pei, Linghe Kong, Yulun Zhang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-02-06 12:47:16</h6>
+<p class='card-text'>Unified multimodal models (UMMs) have shown impressive capabilities in generating natural images and supporting multimodal reasoning. However, their potential in supporting computer-use planning tasks, which are closely related to our lives, remain underexplored. Image generation and editing in computer-use tasks require capabilities like spatial reasoning and procedural understanding, and it is still unknown whether UMMs have these capabilities to finish these tasks or not. Therefore, we propose PlanViz, a new benchmark designed to evaluate image generation and editing for computer-use tasks. To achieve the goal of our evaluation, we focus on sub-tasks which frequently involve in daily life and require planning steps. Specifically, three new sub-tasks are designed: route planning, work diagramming, and web&UI displaying. We address challenges in data quality ensuring by curating human-annotated questions and reference images, and a quality control process. For challenges of comprehensive and exact evaluation, a task-adaptive score, PlanScore, is proposed. The score helps understanding the correctness, visual quality and efficiency of generated images. Through experiments, we highlight key limitations and opportunities for future research on this topic.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2602.06541v1' target='_blank'>Primary Experimental Feedback on a Co-manipulated Robotic System for Assisted Cervical Surgery</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Seifeddine Sellemi, Abdelbadia Chaker, Tanguy Vendeuvre, Terence Essomba, Med Amine Laribi</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-02-06 09:47:28</h6>
+<p class='card-text'>Robotic-assisted surgery has emerged as a promising approach to improve surgical ergonomics, precision, and workflow efficiency, particularly in complex procedures such as cervical spine surgery. In this study, we evaluate the performance of a collaborative robotic system designed to assist surgeons in drilling tasks by assessing its accuracy in executing predefined trajectories. A total of 14 drillings were performed by eight experienced cervical surgeons, utilizing a robotic-assisted setup aimed at ensuring stability and alignment. The primary objective of this study is to quantify the deviations in the position and orientation of the drilling tool relative to the planned trajectory, providing insights into the system's reliability and potential impact on clinical outcomes. While the primary function of robotic assistance in surgery is to enhance surgeon comfort and procedural guidance rather than solely optimizing precision, understanding the system's accuracy remains crucial for its effective integration into surgical practices part of this primary experimental feedback, the study offers an in-depth analysis of the co-manipulated robotic system's performance, focusing on the experimental setup and error evaluation methods. The findings of this study will contribute to the ongoing development of robotic-assisted cervical surgery, highlighting both its advantages and areas for improvement in achieving safer and more efficient surgical workflows</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2602.06540v1' target='_blank'>AgentCPM-Report: Interleaving Drafting and Deepening for Open-Ended Deep Research</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yishan Li, Wentong Chen, Yukun Yan, Mingwei Li, Sen Mei, Xiaorong Wang, Kunpeng Liu, Xin Cong, Shuo Wang, Zhong Zhang, Yaxi Lu, Zhenghao Liu, Yankai Lin, Zhiyuan Liu, Maosong Sun</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-02-06 09:45:04</h6>
+<p class='card-text'>Generating deep research reports requires large-scale information acquisition and the synthesis of insight-driven analysis, posing a significant challenge for current language models. Most existing approaches follow a plan-then-write paradigm, whose performance heavily depends on the quality of the initial outline. However, constructing a comprehensive outline itself demands strong reasoning ability, causing current deep research systems to rely almost exclusively on closed-source or online large models. This reliance raises practical barriers to deployment and introduces safety and privacy concerns for user-authored data. In this work, we present AgentCPM-Report, a lightweight yet high-performing local solution composed of a framework that mirrors the human writing process and an 8B-parameter deep research agent. Our framework uses a Writing As Reasoning Policy (WARP), which enables models to dynamically revise outlines during report generation. Under this policy, the agent alternates between Evidence-Based Drafting and Reasoning-Driven Deepening, jointly supporting information acquisition, knowledge refinement, and iterative outline evolution. To effectively equip small models with this capability, we introduce a Multi-Stage Agentic Training strategy, consisting of cold-start, atomic skill RL, and holistic pipeline RL. Experiments on DeepResearch Bench, DeepConsult, and DeepResearch Gym demonstrate that AgentCPM-Report outperforms leading closed-source systems, with substantial gains in Insight.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2602.06529v1' target='_blank'>AdaptOVCD: Training-Free Open-Vocabulary Remote Sensing Change Detection via Adaptive Information Fusion</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Mingyu Dou, Shi Qiu, Ming Hu, Yifan Chen, Huping Ye, Xiaohan Liao, Zhe Sun</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-02-06 09:30:23</h6>
+<p class='card-text'>Remote sensing change detection plays a pivotal role in domains such as environmental monitoring, urban planning, and disaster assessment. However, existing methods typically rely on predefined categories and large-scale pixel-level annotations, which limit their generalization and applicability in open-world scenarios. To address these limitations, this paper proposes AdaptOVCD, a training-free Open-Vocabulary Change Detection (OVCD) architecture based on dual-dimensional multi-level information fusion. The framework integrates multi-level information fusion across data, feature, and decision levels vertically while incorporating targeted adaptive designs horizontally, achieving deep synergy among heterogeneous pre-trained models to effectively mitigate error propagation. Specifically, (1) at the data level, Adaptive Radiometric Alignment (ARA) fuses radiometric statistics with original texture features and synergizes with SAM-HQ to achieve radiometrically consistent segmentation; (2) at the feature level, Adaptive Change Thresholding (ACT) combines global difference distributions with edge structure priors and leverages DINOv3 to achieve robust change detection; (3) at the decision level, Adaptive Confidence Filtering (ACF) integrates semantic confidence with spatial constraints and collaborates with DGTRS-CLIP to achieve high-confidence semantic identification. Comprehensive evaluations across nine scenarios demonstrate that AdaptOVCD detects arbitrary category changes in a zero-shot manner, significantly outperforming existing training-free methods. Meanwhile, it achieves 84.89\% of the fully-supervised performance upper bound in cross-dataset evaluations and exhibits superior generalization capabilities. The code is available at https://github.com/Dmygithub/AdaptOVCD.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2602.06528v1' target='_blank'>Ab initio calculations of the electronic structure of Ac+</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Genevieve Geehan, Marten Luit Reitsma, Johan David Polet, Mustapha Laatiaoui, Julian Berengut, Anastasia Borschevsky</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-02-06 09:29:21</h6>
+<p class='card-text'>Accurate spectroscopic investigations of the heaviest elements are inherently challenging, due to their short lifetimes and low production yields. Success of such measurements requires both dedicated experimental techniques and strong theoretical support. Laser resonance chromatography (LRC) is a promising approach for heavy ion spectroscopy, in particularly for metals with low vapour pressure, such as actinium. We have employed the state-of-the-art relativistic Fock space coupled cluster approach as well as the configuration interaction with many-body perturbation theory method to calculate the energy levels, the transition amplitudes, the branching ratios, and the hyperfine structure parameters of the lowest excited states in Ac+. Knowledge of these properties is required for the design of experiments. Our calculations are in close agreement with experimental transition energies, leading us to expect a similar level of accuracy for the calculated hyperfine structure parameters. Based on these predictions, two possible experimental schemes are proposed for the planned LRC measurements.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2602.06521v1' target='_blank'>DriveWorld-VLA: Unified Latent-Space World Modeling with Vision-Language-Action for Autonomous Driving</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Feiyang jia, Lin Liu, Ziying Song, Caiyan Jia, Hangjun Ye, Xiaoshuai Hao, Long Chen</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-02-06 09:25:48</h6>
+<p class='card-text'>End-to-end (E2E) autonomous driving has recently attracted increasing interest in unifying Vision-Language-Action (VLA) with World Models to enhance decision-making and forward-looking imagination. However, existing methods fail to effectively unify future scene evolution and action planning within a single architecture due to inadequate sharing of latent states, limiting the impact of visual imagination on action decisions. To address this limitation, we propose DriveWorld-VLA, a novel framework that unifies world modeling and planning within a latent space by tightly integrating VLA and world models at the representation level, which enables the VLA planner to benefit directly from holistic scene-evolution modeling and reducing reliance on dense annotated supervision. Additionally, DriveWorld-VLA incorporates the latent states of the world model as core decision-making states for the VLA planner, facilitating the planner to assess how candidate actions impact future scene evolution. By conducting world modeling entirely in the latent space, DriveWorld-VLA supports controllable, action-conditioned imagination at the feature level, avoiding expensive pixel-level rollouts. Extensive open-loop and closed-loop evaluations demonstrate the effectiveness of DriveWorld-VLA, which achieves state-of-the-art performance with 91.3 PDMS on NAVSIMv1, 86.8 EPDMS on NAVSIMv2, and 0.16 3-second average collision rate on nuScenes. Code and models will be released in https://github.com/liulin815/DriveWorld-VLA.git.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2602.06463v1' target='_blank'>ELUCID-DESI I: A Parallel MPI Implementation of the Initial Condition Solver for Large-Scale Reconstruction Simulations</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Wensheng Hong, Xiaohu Yang, Junde Li, Huiyuan Wang, Zhao Chen, Hong-Ming Zhu, Qingyang Li, Yizhou Gu, Youcai Zhang, Feng Shi, Jiaxin Han, Yu Yu, Zhongxu Zhai</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-02-06 07:47:45</h6>
+<p class='card-text'>We present a highly scalable, MPI-parallelized framework for reconstructing the initial cosmic density field, designed to meet the computational demands of next-generation cosmological simulations, particularly the upcoming ELUCID-DESI simulation based on DESI BGS data. Building upon the Hamiltonian Monte Carlo approach and the FastPM solver, our code employs domain decomposition to efficiently distribute memory between nodes. Although communication overhead increases the per-step runtime of the MPI version by roughly a factor of eight relative to the shared-memory implementation, our scaling tests-spanning different particle numbers, core counts, and node layouts-show nearly linear scaling with respect to both the number of particles and the number of CPU cores. Furthermore, to significantly reduce computational costs during the initial burn-in phase, we introduce a novel ``guess'' module that rapidly generates a high-quality initial density field. The results of the simulation test confirm substantial efficiency gains: for $256^3$ particles, 53 steps ($\sim$54 CPU hours) are saved; for $1024^3$, 106 steps ($\sim$7500 CPU hours). The relative gain grows with the number of particles, rendering large-volume reconstructions computationally practical for upcoming surveys, including our planned ELUCID-DESI reconstruction simulation with $8192^3$ particles, with a rough estimation of 720 steps ($\sim$37,000,000 CPU hours).</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2602.06462v1' target='_blank'>Diffusion-State Policy Optimization for Masked Diffusion Language Models</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Daisuke Oba, Hiroki Furuta, Naoaki Okazaki</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-02-06 07:47:22</h6>
+<p class='card-text'>Masked diffusion language models generate by iteratively filling masked tokens over multiple denoising steps, so learning only from a terminal reward on the final completion yields coarse credit assignment over intermediate decisions. We propose DiSPO (Diffusion-State Policy Optimization), a plug-in credit-assignment layer that directly optimizes intermediate filling decisions. At selected intermediate masked states, DiSPO branches by resampling fillings for the currently masked positions from rollout-cached logits, scores the resulting completions, and updates only the newly filled tokens -- without additional multi-step diffusion rollouts. We formalize a fixed-state objective for branched completions and derive a policy-gradient estimator that can be combined with terminal-feedback policy optimization using the same rollouts. On LLaDA-8B-Instruct, DiSPO consistently improves over the terminal-feedback diffu-GRPO baseline on math and planning benchmarks under matched rollout compute and optimizer steps. Our code will be available at https://daioba.github.io/dispo .</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2602.06396v1' target='_blank'>InterFlow: Designing Unobtrusive AI to Empower Interviewers in Semi-Structured Interviews</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yi Wen, Yu Zhang, Sriram Suresh, Zhicong Lu, Can Liu, Meng Xia</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-02-06 05:33:14</h6>
+<p class='card-text'>Semi-structured interviews are a common method in qualitative research. However, conducting high-quality interviews is challenging, as it requires interviewers to actively listen to participants, adapt their plans as the conversation unfolds, and probe effectively. We propose InterFlow, an AI-powered visual scaffold that helps interviewers manage the interview flow and facilitates real-time data sensemaking. The system dynamically adapts the interview script to the ongoing conversation and provides a visual timer to track interview progress and conversational balance. It further supports information capture with three levels of automation: manual entry, AI-assisted summary with user-specified focus, and a co-interview agent that proactively surfaces potential follow-up points. A within-subject user study (N = 12) indicates that InterFlow reduces interviewers' cognitive load and facilitates the interview process. Based on the user study findings, we provide design implications for unobtrusive and agency-preserving AI assistance under time-sensitive and cognitively demanding situations.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2602.06339v1' target='_blank'>Action Hallucination in Generative Visual-Language-Action Models</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Harold Soh, Eugene Lim</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-02-06 03:05:30</h6>
+<p class='card-text'>Robot Foundation Models such as Vision-Language-Action models are rapidly reshaping how robot policies are trained and deployed, replacing hand-designed planners with end-to-end generative action models. While these systems demonstrate impressive generalization, it remains unclear whether they fundamentally resolve the long-standing challenges of robotics. We address this question by analyzing action hallucinations that violate physical constraints and their extension to plan-level failures. Focusing on latent-variable generative policies, we show that hallucinations often arise from structural mismatches between feasible robot behavior and common model architectures. We study three such barriers -- topological, precision, and horizon -- and show how they impose unavoidable tradeoffs. Our analysis provides mechanistic explanations for reported empirical failures of generative robot policies and suggests principled directions for improving reliability and trustworthiness, without abandoning their expressive power.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2602.06327v1' target='_blank'>How Do Human Creators Embrace Human-AI Co-Creation? A Perspective on Human Agency of Screenwriters</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yuying Tang, Jiayi Zhou, Haotian Li, Xing Xie, Xiaojuan Ma, Huamin Qu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-02-06 02:51:12</h6>
+<p class='card-text'>Generative AI has greatly transformed creative work in various domains, such as screenwriting. To understand this transformation, prior research often focused on capturing a snapshot of human-AI co-creation practice at a specific moment, with less attention to how humans mobilize, regulate, and reflect to form the practice gradually. Motivated by Bandura's theory of human agency, we conducted a two-week study with 19 professional screenwriters to investigate how they embraced AI in their creation process. Our findings revealed that screenwriters not only mindfully planned, foresaw, and responded to AI usage, but, more importantly, through reflections on practice, they developed themselves and human-AI co-creation paradigms, such as cognition, strategies, and workflows. They also expressed various expectations for how future AI should better support their agency. Based on our findings, we conclude this paper with extensive discussion and actionable suggestions to screenwriters, tool developers, and researchers for sustainable human-AI co-creation.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2602.06212v1' target='_blank'>Age-Dependent Causal Effects of Mandibular Dose on Osteoradionecrosis Risk After Head and Neck Radiotherapy</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jingyuan Chen, Yunze Yang, Olivia M. Muller, Lei Zeng, Zhengliang Liu, Tianming Liu, Robert L, Foote, Daniel J, Ma, Samir H, Patel, Zhong Liu, Wei Liu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-02-05 21:42:09</h6>
+<p class='card-text'>Distinguishing causal relationships from statistical correlations remains a fundamental challenge in clinical research, limiting the translation of observational findings into interventional treatment guidelines. Here we apply causal machine learning to establish causal effects of radiation dose parameters on mandibular osteoradionecrosis (ORN) in 931 head and neck cancer patients treated with volumetric-modulated arc therapy. Using generalized random forests, we demonstrate that all examined dosimetric factors exhibit significant positive causal effects on ORN development (average treatment effects: 0.092-0.141). Integration with explainable machine learning reveals substantial treatment effect heterogeneity, with patients aged 50-60 years showing the strongest causal dose-response relationships (conditional average treatment effects up to 0.229), while patients over 70 years demonstrate minimal effects. These results suggest that age-stratified treatment optimization and personalized treatment planning for the dosimetric factors could reduce ORN risk. Our findings demonstrate that causal inference methods can transform clinical retrospective radiotherapy data into personalized treatment recommendations, providing a methodological framework applicable to toxicity prediction across oncology and other clinical domains where treatment decisions depend on complex dose-response relationships.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2602.06142v1' target='_blank'>Protean Compiler: An Agile Framework to Drive Fine-grain Phase Ordering</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Amir H. Ashouri, Shayan Shirahmad Gale Bagi, Kavin Satheeskumar, Tejas Srikanth, Jonathan Zhao, Ibrahim Saidoun, Ziwen Wang, Bryan Chan, Tomasz S. Czajkowski</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-02-05 19:24:05</h6>
+<p class='card-text'>The phase ordering problem has been a long-standing challenge since the late 1970s, yet it remains an open problem due to having a vast optimization space and an unbounded nature, making it an open-ended problem without a finite solution, one can limit the scope by reducing the number and the length of optimizations. Traditionally, such locally optimized decisions are made by hand-coded algorithms tuned for a small number of benchmarks, often requiring significant effort to be retuned when the benchmark suite changes. In the past 20 years, Machine Learning has been employed to construct performance models to improve the selection and ordering of compiler optimizations, however, the approaches are not baked into the compiler seamlessly and never materialized to be leveraged at a fine-grained scope of code segments. This paper presents Protean Compiler: An agile framework to enable LLVM with built-in phase-ordering capabilities at a fine-grained scope. The framework also comprises a complete library of more than 140 handcrafted static feature collection methods at varying scopes, and the experimental results showcase speedup gains of up to 4.1% on average and up to 15.7% on select Cbench applications wrt LLVM's O3 by just incurring a few extra seconds of build time on Cbench. Additionally, Protean compiler allows for an easy integration with third-party ML frameworks and other Large Language Models, and this two-step optimization shows a gain of 10.1% and 8.5% speedup wrt O3 on Cbench's Susan and Jpeg applications. Protean compiler is seamlessly integrated into LLVM and can be used as a new, enhanced, full-fledged compiler. We plan to release the project to the open-source community in the near future.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2602.06035v1' target='_blank'>InterPrior: Scaling Generative Control for Physics-Based Human-Object Interactions</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Sirui Xu, Samuel Schulter, Morteza Ziyadi, Xialin He, Xiaohan Fei, Yu-Xiong Wang, Liangyan Gui</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-02-05 18:59:27</h6>
+<p class='card-text'>Humans rarely plan whole-body interactions with objects at the level of explicit whole-body movements. High-level intentions, such as affordance, define the goal, while coordinated balance, contact, and manipulation can emerge naturally from underlying physical and motor priors. Scaling such priors is key to enabling humanoids to compose and generalize loco-manipulation skills across diverse contexts while maintaining physically coherent whole-body coordination. To this end, we introduce InterPrior, a scalable framework that learns a unified generative controller through large-scale imitation pretraining and post-training by reinforcement learning. InterPrior first distills a full-reference imitation expert into a versatile, goal-conditioned variational policy that reconstructs motion from multimodal observations and high-level intent. While the distilled policy reconstructs training behaviors, it does not generalize reliably due to the vast configuration space of large-scale human-object interactions. To address this, we apply data augmentation with physical perturbations, and then perform reinforcement learning finetuning to improve competence on unseen goals and initializations. Together, these steps consolidate the reconstructed latent skills into a valid manifold, yielding a motion prior that generalizes beyond the training data, e.g., it can incorporate new behaviors such as interactions with unseen objects. We further demonstrate its effectiveness for user-interactive control and its potential for real robot deployment.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2602.06001v1' target='_blank'>Visuo-Tactile World Models</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Carolina Higuera, Sergio Arnaud, Byron Boots, Mustafa Mukadam, Francois Robert Hogan, Franziska Meier</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-02-05 18:46:33</h6>
+<p class='card-text'>We introduce multi-task Visuo-Tactile World Models (VT-WM), which capture the physics of contact through touch reasoning. By complementing vision with tactile sensing, VT-WM better understands robot-object interactions in contact-rich tasks, avoiding common failure modes of vision-only models under occlusion or ambiguous contact states, such as objects disappearing, teleporting, or moving in ways that violate basic physics. Trained across a set of contact-rich manipulation tasks, VT-WM improves physical fidelity in imagination, achieving 33% better performance at maintaining object permanence and 29% better compliance with the laws of motion in autoregressive rollouts. Moreover, experiments show that grounding in contact dynamics also translates to planning. In zero-shot real-robot experiments, VT-WM achieves up to 35% higher success rates, with the largest gains in multi-step, contact-rich tasks. Finally, VT-WM demonstrates significant downstream versatility, effectively adapting its learned contact dynamics to a novel task and achieving reliable planning success with only a limited set of demonstrations.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2602.05999v1' target='_blank'>On Computation and Reinforcement Learning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Raj Ghugare, Michał Bortkiewicz, Alicja Ziarko, Benjamin Eysenbach</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-02-05 18:45:57</h6>
+<p class='card-text'>How does the amount of compute available to a reinforcement learning (RL) policy affect its learning? Can policies using a fixed amount of parameters, still benefit from additional compute? The standard RL framework does not provide a language to answer these questions formally. Empirically, deep RL policies are often parameterized as neural networks with static architectures, conflating the amount of compute and the number of parameters. In this paper, we formalize compute bounded policies and prove that policies which use more compute can solve problems and generalize to longer-horizon tasks that are outside the scope of policies with less compute. Building on prior work in algorithmic learning and model-free planning, we propose a minimal architecture that can use a variable amount of compute. Our experiments complement our theory. On a set 31 different tasks spanning online and offline RL, we show that $(1)$ this architecture achieves stronger performance simply by using more compute, and $(2)$ stronger generalization on longer-horizon test tasks compared to standard feedforward networks or deep residual network using up to 5 times more parameters.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2602.05875v1' target='_blank'>Beyond Manual Planning: Seating Allocation for Large Organizations</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Anton Ipsen, Michael Cashmore, Kirsty Fielding, Nicolas Marchesotti, Parisa Zehtabi, Daniele Magazzeni, Manuela Veloso</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-02-05 16:52:44</h6>
+<p class='card-text'>We introduce the Hierarchical Seating Allocation Problem (HSAP) which addresses the optimal assignment of hierarchically structured organizational teams to physical seating arrangements on a floor plan. This problem is driven by the necessity for large organizations with large hierarchies to ensure that teams with close hierarchical relationships are seated in proximity to one another, such as ensuring a research group occupies a contiguous area. Currently, this problem is managed manually leading to infrequent and suboptimal replanning efforts. To alleviate this manual process, we propose an end-to-end framework to solve the HSAP. A scalable approach to calculate the distance between any pair of seats using a probabilistic road map (PRM) and rapidly-exploring random trees (RRT) which is combined with heuristic search and dynamic programming approach to solve the HSAP using integer programming. We demonstrate our approach under different sized instances by evaluating the PRM framework and subsequent allocations both quantitatively and qualitatively.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2602.05730v1' target='_blank'>Depth as Prior Knowledge for Object Detection</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Moussa Kassem Sbeyti, Nadja Klein</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-02-05 14:52:39</h6>
+<p class='card-text'>Detecting small and distant objects remains challenging for object detectors due to scale variation, low resolution, and background clutter. Safety-critical applications require reliable detection of these objects for safe planning. Depth information can improve detection, but existing approaches require complex, model-specific architectural modifications. We provide a theoretical analysis followed by an empirical investigation of the depth-detection relationship. Together, they explain how depth causes systematic performance degradation and why depth-informed supervision mitigates it. We introduce DepthPrior, a framework that uses depth as prior knowledge rather than as a fused feature, providing comparable benefits without modifying detector architectures. DepthPrior consists of Depth-Based Loss Weighting (DLW) and Depth-Based Loss Stratification (DLS) during training, and Depth-Aware Confidence Thresholding (DCT) during inference. The only overhead is the initial cost of depth estimation. Experiments across four benchmarks (KITTI, MS COCO, VisDrone, SUN RGB-D) and two detectors (YOLOv11, EfficientDet) demonstrate the effectiveness of DepthPrior, achieving up to +9% mAP$_S$ and +7% mAR$_S$ for small objects, with inference recovery rates as high as 95:1 (true vs. false detections). DepthPrior offers these benefits without additional sensors, architectural changes, or performance costs. Code is available at https://github.com/mos-ks/DepthPrior.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2602.05679v1' target='_blank'>Perception-Based Beliefs for POMDPs with Visual Observations</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Miriam Schäfers, Merlijn Krale, Thiago D. Simão, Nils Jansen, Maximilian Weininger</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-02-05 14:01:39</h6>
+<p class='card-text'>Partially observable Markov decision processes (POMDPs) are a principled planning model for sequential decision-making under uncertainty. Yet, real-world problems with high-dimensional observations, such as camera images, remain intractable for traditional belief- and filtering-based solvers. To tackle this problem, we introduce the Perception-based Beliefs for POMDPs framework (PBP), which complements such solvers with a perception model. This model takes the form of an image classifier which maps visual observations to probability distributions over states. PBP incorporates these distributions directly into belief updates, so the underlying solver does not need to reason explicitly over high-dimensional observation spaces. We show that the belief update of PBP coincides with the standard belief update if the image classifier is exact. Moreover, to handle classifier imprecision, we incorporate uncertainty quantification and introduce two methods to adjust the belief update accordingly. We implement PBP using two traditional POMDP solvers and empirically show that (1) it outperforms existing end-to-end deep RL methods and (2) uncertainty quantification improves robustness of PBP against visual corruption.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2602.05651v1' target='_blank'>One Size Does NOT Fit All: On the Importance of Physical Representations for Datalog Evaluation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Nick Rassau, Felix Schuhknecht</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-02-05 13:35:25</h6>
+<p class='card-text'>Datalog is an increasingly popular recursive query language that is declarative by design, meaning its programs must be translated by an engine into the actual physical execution plan. When generating this plan, a central decision is how to physically represent all involved relations, an aspect in which existing Datalog engines are surprisingly restrictive and often resort to one-size-fits-all solutions. The reason for this is that the typical execution plan of a Datalog program not only performs a single type of operation against the physical representations, but a mixture of operations, such as insertions, lookups, and containment-checks. Further, the relevance of each operation type highly depends on the workload characteristics, which range from familiar properties such as the size, multiplicity, and arity of the individual relations to very specific Datalog properties, such as the "interweaving" of rules when relations occur multiple times, and in particular the recursiveness of the query which might generate new tuples on the fly during evaluation. This indicates that a variety of physical representations, each with its own strengths and weaknesses, is required to meet the specific needs of different workload situations. To evaluate this, we conduct an in-depth experimental study of the interplay between potentially suitable physical representations and seven dimensions of workload characteristics that vary across actual Datalog programs, revealing which properties actually matter. Based on these insights, we design an automatic selection mechanism that utilizes a set of decision trees to identify suitable physical representations for a given workload.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2602.05608v1' target='_blank'>HiCrowd: Hierarchical Crowd Flow Alignment for Dense Human Environments</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yufei Zhu, Shih-Min Yang, Martin Magnusson, Allan Wang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-02-05 12:46:37</h6>
+<p class='card-text'>Navigating through dense human crowds remains a significant challenge for mobile robots. A key issue is the freezing robot problem, where the robot struggles to find safe motions and becomes stuck within the crowd. To address this, we propose HiCrowd, a hierarchical framework that integrates reinforcement learning (RL) with model predictive control (MPC). HiCrowd leverages surrounding pedestrian motion as guidance, enabling the robot to align with compatible crowd flows. A high-level RL policy generates a follow point to align the robot with a suitable pedestrian group, while a low-level MPC safely tracks this guidance with short horizon planning. The method combines long-term crowd aware decision making with safe short-term execution. We evaluate HiCrowd against reactive and learning-based baselines in offline setting (replaying recorded human trajectories) and online setting (human trajectories are updated to react to the robot in simulation). Experiments on a real-world dataset and a synthetic crowd dataset show that our method outperforms in navigation efficiency and safety, while reducing freezing behaviors. Our results suggest that leveraging human motion as guidance, rather than treating humans solely as dynamic obstacles, provides a powerful principle for safe and efficient robot navigation in crowds.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2602.05552v1' target='_blank'>VLN-Pilot: Large Vision-Language Model as an Autonomous Indoor Drone Operator</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Bessie Dominguez-Dager, Sergio Suescun-Ferrandiz, Felix Escalona, Francisco Gomez-Donoso, Miguel Cazorla</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-02-05 11:23:11</h6>
+<p class='card-text'>This paper introduces VLN-Pilot, a novel framework in which a large Vision-and-Language Model (VLLM) assumes the role of a human pilot for indoor drone navigation. By leveraging the multimodal reasoning abilities of VLLMs, VLN-Pilot interprets free-form natural language instructions and grounds them in visual observations to plan and execute drone trajectories in GPS-denied indoor environments. Unlike traditional rule-based or geometric path-planning approaches, our framework integrates language-driven semantic understanding with visual perception, enabling context-aware, high-level flight behaviors with minimal task-specific engineering. VLN-Pilot supports fully autonomous instruction-following for drones by reasoning about spatial relationships, obstacle avoidance, and dynamic reactivity to unforeseen events. We validate our framework on a custom photorealistic indoor simulation benchmark and demonstrate the ability of the VLLM-driven agent to achieve high success rates on complex instruction-following tasks, including long-horizon navigation with multiple semantic targets. Experimental results highlight the promise of replacing remote drone pilots with a language-guided autonomous agent, opening avenues for scalable, human-friendly control of indoor UAVs in tasks such as inspection, search-and-rescue, and facility monitoring. Our results suggest that VLLM-based pilots may dramatically reduce operator workload while improving safety and mission flexibility in constrained indoor environments.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js'></script>
+</body>
+</html>
