@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>planning - 2026-02-18</title>
+<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap' rel='stylesheet'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css'>
+<style>
+body {
+font-family: 'Roboto', sans-serif;
+background-color: #f5f7fa;
+padding: 20px;
+}
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.card-title {
+    font-weight: 700;
+}
+.card:hover {
+    transform: scale(1.02);
+    transition: 0.3s ease-in-out;
+}
+</style>
+</head>
+<body>
+<div class='container'>
+<h1 class='text-center my-4'><i class='fas fa-book'></i>planning - 2026-02-18</h1>
+<div class='row'>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2602.15775v1' target='_blank'>NeRFscopy: Neural Radiance Fields for in-vivo Time-Varying Tissues from Endoscopy</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Laura Salort-Benejam, Antonio Agudo</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-02-17 18:05:23</h6>
+<p class='card-text'>Endoscopy is essential in medical imaging, used for diagnosis, prognosis and treatment. Developing a robust dynamic 3D reconstruction pipeline for endoscopic videos could enhance visualization, improve diagnostic accuracy, aid in treatment planning, and guide surgery procedures. However, challenges arise due to the deformable nature of the tissues, the use of monocular cameras, illumination changes, occlusions and unknown camera trajectories. Inspired by neural rendering, we introduce NeRFscopy, a self-supervised pipeline for novel view synthesis and 3D reconstruction of deformable endoscopic tissues from a monocular video. NeRFscopy includes a deformable model with a canonical radiance field and a time-dependent deformation field parameterized by SE(3) transformations. In addition, the color images are efficiently exploited by introducing sophisticated terms to learn a 3D implicit model without assuming any template or pre-trained model, solely from data. NeRFscopy achieves accurate results in terms of novel view synthesis, outperforming competing methods across various challenging endoscopy scenes.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2602.15751v1' target='_blank'>Enabling Low-Latency Machine learning on Radiation-Hard FPGAs with hls4ml</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Katya Govorkova, Julian Garcia Pardinas, Vladimir Loncar, Victoria Nguyen, Sebastian Schmitt, Marco Pizzichemi, Loris Martinazzoli, Eluned Anne Smith</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-02-17 17:30:28</h6>
+<p class='card-text'>This paper presents the first demonstration of a viable, ultra-fast, radiation-hard machine learning (ML) application on FPGAs, which could be used in future high-energy physics experiments. We present a three-fold contribution, with the PicoCal calorimeter, planned for the LHCb Upgrade II experiment, used as a test case. First, we develop a lightweight autoencoder to compress a 32-sample timing readout, representative of that of the PicoCal, into a two-dimensional latent space. Second, we introduce a systematic, hardware-aware quantization strategy and show that the model can be reduced to 10-bit weights with minimal performance loss. Third, as a barrier to the adoption of on-detector ML is the lack of support for radiation-hard FPGAs in the High-Energy Physics community's standard ML synthesis tool, hls4ml, we develop a new backend for this library. This new back-end enables the automatic translation of ML models into High-Level Synthesis (HLS) projects for the Microchip PolarFire family of FPGAs, one of the few commercially available and radiation hard FPGAs. We present the synthesis of the autoencoder on a target PolarFire FPGA, which indicates that a latency of 25 ns can be achieved. We show that the resources utilized are low enough that the model can be placed within the inherently protected logic of the FPGA. Our extension to hls4ml is a significant contribution, paving the way for broader adoption of ML on FPGAs in high-radiation environments.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2602.15721v1' target='_blank'>Lifelong Scalable Multi-Agent Realistic Testbed and A Comprehensive Study on Design Choices in Lifelong AGV Fleet Management Systems</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jingtian Yan, Yulun Zhang, Zhenting Liu, Han Zhang, He Jiang, Jingkai Chen, Stephen F. Smith, Jiaoyang Li</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-02-17 16:53:20</h6>
+<p class='card-text'>We present Lifelong Scalable Multi-Agent Realistic Testbed (LSMART), an open-source simulator to evaluate any Multi-Agent Path Finding (MAPF) algorithm in a Fleet Management System (FMS) with Automated Guided Vehicles (AGVs). MAPF aims to move a group of agents from their corresponding starting locations to their goals. Lifelong MAPF (LMAPF) is a variant of MAPF that continuously assigns new goals for agents to reach. LMAPF applications, such as autonomous warehouses, often require a centralized, lifelong system to coordinate the movement of a fleet of robots, typically AGVs. However, existing works on MAPF and LMAPF often assume simplified kinodynamic models, such as pebble motion, as well as perfect execution and communication for AGVs. Prior work has presented SMART, a software capable of evaluating any MAPF algorithms while considering agent kinodynamics, communication delays, and execution uncertainties. However, SMART is designed for MAPF, not LMAPF. Generalizing SMART to an FMS requires many more design choices. First, an FMS parallelizes planning and execution, raising the question of when to plan. Second, given planners with varying optimality and differing agent-model assumptions, one must decide how to plan. Third, when the planner fails to return valid solutions, the system must determine how to recover. In this paper, we first present LSMART, an open-source simulator that incorporates all these considerations to evaluate any MAPF algorithms in an FMS. We then provide experiment results based on state-of-the-art methods for each design choice, offering guidance on how to effectively design centralized lifelong AGV Fleet Management Systems. LSMART is available at https://smart-mapf.github.io/lifelong-smart.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2602.15686v1' target='_blank'>Minimizing Volatility: Optimal Adjustment with Evolving Feasibility Constraints</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Simon Jantschgi, Heinrich H. Nax, Bary S. R. Pradelski, Marek Pycia</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-02-17 16:10:48</h6>
+<p class='card-text'>Minimizing volatility and adjustment costs is of central importance in many economic environments, yet it is often complicated by evolving feasibility constraints. We study a decision maker who repeatedly selects an action from a stochastically evolving interval of feasible actions in order to minimize either average adjustment costs or variance. We show that for strictly convex adjustment costs (such as quadratic variation), the optimal decision rule is a reference rule in which the decision maker minimizes the distance to a target action. In general, the optimal target depends both on the previous action and the expectation of future constraints; but for the special case where the constraints follow a random walk, the optimal mechanism is to simply target the previous action. If the decision maker minimizes variance, the optimal policy is also a reference rule, but the target is a constant, which is not necessarily equal to the long-term average action. Compared to mid-point heuristics, these optimal rules may substantially reduce quadratic variation and variance, in natural environments by $50\%$ or more. Applied to stock market auctions, our results provide an explanation for the wide-spread use of reference price rules. We also apply our results to bilateral trade in over-the-counter markets, capacity planning in supply chains, and positioning in political agenda setting.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2602.15672v1' target='_blank'>Dosimetric Study of Lung Modulation and Motion Effects in Carbon ion Therapy for Lung Cancer</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Maria Chiara Martire, Lennart Volz, Marco Durante, Christian Graeff</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-02-17 15:55:04</h6>
+<p class='card-text'>Carbon-ion radiotherapy provides high dose conformity for lung cancer, but its benefit is limited by two sources of uncertainties: interplay between scanned beam delivery and tumor motion, and dose modulation from heterogeneous lung tissue. This study quantifies the separate and combined dosimetric impact of these effects using the GSI TRiP4D treatment planning system. Eighteen lung cancer 4DCT datasets from TCIA were analyzed. A modulation power ($P_{\mathrm{mod}}$) was assigned to lung voxels. Three values were sampled from a Gaussian distribution ($200μ\mathrm{m} \pm 67μ\mathrm{m}$), and an extreme value of $750μ\mathrm{m}$ was tested. Interplay doses were computed by combining scanned-beam delivery with patient-specific respiratory motion. Four scenarios were studied: static, static with modulation, interplay, and interplay with modulation. Metrics included $D95\%$, $V95\%$, homogeneity index (HI), lung $V16\mathrm{Gy}$, and heart $V20\mathrm{Gy}$. Interplay reduced target coverage by $5.2 \pm 1.5$ pp ($D95\%$), $12.1 \pm 5.9$ pp ($V95\%$), and $8.3 \pm 2.4$ pp (HI). Extreme $P_{\mathrm{mod}}$ alone caused small degradations. When combined with interplay, it partially compensated the loss. This effect decreased with 4D optimization. Fractionation mitigated interplay, leaving lung modulation as the main residual effect.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2602.15633v1' target='_blank'>SpecFuse: A Spectral-Temporal Fusion Predictive Control Framework for UAV Landing on Oscillating Marine Platforms</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Haichao Liu, Yufeng Hu, Shuang Wang, Kangjun Guo, Jun Ma, Jinni Zhou</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-02-17 15:03:05</h6>
+<p class='card-text'>Autonomous landing of Uncrewed Aerial Vehicles (UAVs) on oscillating marine platforms is severely constrained by wave-induced multi-frequency oscillations, wind disturbances, and prediction phase lags in motion prediction. Existing methods either treat platform motion as a general random process or lack explicit modeling of wave spectral characteristics, leading to suboptimal performance under dynamic sea conditions. To address these limitations, we propose SpecFuse: a novel spectral-temporal fusion predictive control framework that integrates frequency-domain wave decomposition with time-domain recursive state estimation for high-precision 6-DoF motion forecasting of Uncrewed Surface Vehicles (USVs). The framework explicitly models dominant wave harmonics to mitigate phase lags, refining predictions in real time via IMU data without relying on complex calibration. Additionally, we design a hierarchical control architecture featuring a sampling-based HPO-RRT* algorithm for dynamic trajectory planning under non-convex constraints and a learning-augmented predictive controller that fuses data-driven disturbance compensation with optimization-based execution. Extensive validations (2,000 simulations + 8 lake experiments) show our approach achieves a 3.2 cm prediction error, 4.46 cm landing deviation, 98.7% / 87.5% success rates (simulation / real-world), and 82 ms latency on embedded hardware, outperforming state-of-the-art methods by 44%-48% in accuracy. Its robustness to wave-wind coupling disturbances supports critical maritime missions such as search and rescue and environmental monitoring. All code, experimental configurations, and datasets will be released as open-source to facilitate reproducibility.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2602.15607v1' target='_blank'>Agent-based macroeconomics for the UK's Seventh Carbon Budget</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Tom Youngman, Tim Lennox, M. Lopes Alves, Pirta Palola, Brendon Tankwa, Emma Bailey, Emilien Ravigne, Thijs Ter Horst, Benjamin Wagenvoort, Harry Lightfoot Brown, Jose Moran, Doyne Farmer</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-02-17 14:28:27</h6>
+<p class='card-text'>In June 2026, the UK government will set its carbon budget for the period 2038 to 2042, the seventh such carbon budget (CB7) since the Climate Change Act became law in 2008. For the first time, this carbon budget will be accompanied by a macroeconomic assessment of its impact on growth, employment, inflation and inequality. Researchers from the Institute of New Economic Thinking (INET) Oxford are working in partnership with the Department for Energy Security and Net Zero to deliver this assessment using our data-driven macroeconomic agent-based model (ABM). This extended abstract presents the work in progress towards this pioneering policymaking using our data-driven macroeconomic ABM. We are conducting our work in three work packages. By the time of the workshop, we hope to be able to present preliminary findings from the first two work packages. In WP1, we adapt an existing macro-ABM prototype and build a UK macroeconomic baseline. The main task for this is initialising the model with suitable UK household microdata. We present the options considered and the approach settled upon. In WP2, we conduct preliminary modelling that represents UK decarbonisation as an external shock to financial flows and technical coefficients. In order to present results in time to influence the June 2026 policy decision, this second work package exogenously forces the ABM to follow the CB7 green investment and associated technological change projections provided by the Climate Change Committee. Finally, we will implement more sophisticated social and technological learning packages in WP3, building our own projections of likely decarbonisation pathways that may diverge from UK government plans. For the workshop, we will present the progress of WP1 and WP2.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2602.15549v1' target='_blank'>VLM-DEWM: Dynamic External World Model for Verifiable and Resilient Vision-Language Planning in Manufacturing</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Guoqin Tang, Qingxuan Jia, Gang Chen, Tong Li, Zeyuan Huang, Zihang Lv, Ning Ji</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-02-17 12:54:18</h6>
+<p class='card-text'>Vision-language model (VLM) shows promise for high-level planning in smart manufacturing, yet their deployment in dynamic workcells faces two critical challenges: (1) stateless operation, they cannot persistently track out-of-view states, causing world-state drift; and (2) opaque reasoning, failures are difficult to diagnose, leading to costly blind retries. This paper presents VLM-DEWM, a cognitive architecture that decouples VLM reasoning from world-state management through a persistent, queryable Dynamic External World Model (DEWM). Each VLM decision is structured into an Externalizable Reasoning Trace (ERT), comprising action proposal, world belief, and causal assumption, which is validated against DEWM before execution. When failures occur, discrepancy analysis between predicted and observed states enables targeted recovery instead of global replanning. We evaluate VLM-DEWM on multi-station assembly, large-scale facility exploration, and real-robot recovery under induced failures. Compared to baseline memory-augmented VLM systems, VLM DEWM improves state-tracking accuracy from 56% to 93%, increases recovery success rate from below 5% to 95%, and significantly reduces computational overhead through structured memory. These results establish VLM-DEWM as a verifiable and resilient solution for long-horizon robotic operations in dynamic manufacturing environments.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2602.15500v1' target='_blank'>From Coils to Surface Recession: Fully Coupled Simulation of Ablation in ICP Wind Tunnels</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Sanjeev Kumar, Alessandro Munafo, Blaine Vollmer, Daniel J. Bodony, Gregory S. Elliott, Kelly A. Stephani, Sean Kearney, Marco Panesi</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-02-17 11:13:00</h6>
+<p class='card-text'>This work presents a fully coupled, multiphysics computational framework for predicting the thermo-chemical material response of thermal protection systems in inductively coupled plasma (ICP) wind tunnels. The framework integrates a high-fidelity Navier-Stokes plasma solver, an electromagnetic field solver, and a discontinuous-Galerkin material response solver using a partitioned coupling strategy. This enables an ab initio, end-to-end simulation of the 350 kW Plasmatron X facility at the University of Illinois Urbana-Champaign (UIUC), including plasma generation, electromagnetic heating, near-wall thermochemistry, and time-accurate material ablation. The model captures key ICP physics such as vortex-mode recirculation, Joule-heating-driven plasma formation, and Lorentz-force-induced flow confinement, and accurately predicts the transition from subsonic to supersonic jet behavior at low pressures. Validation against cold-wall calorimetry and graphite ablation experiments shows that predicted stagnation-point heat fluxes fall well within experimental uncertainty, while fully coupled simulations accurately reproduce measured stagnation temperature histories and recession rates with errors below 12% and 10%, respectively. Remaining discrepancies during early transient heating are attributed to uncertainties in power-coupling efficiency, equilibrium ablation modeling, and material property datasets. Overall, the framework demonstrates strong predictive capability for ICP wind tunnel environments and provides a foundation for improved design, interpretation, and planning of hypersonic material testing campaigns.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2602.15400v1' target='_blank'>One Agent to Guide Them All: Empowering MLLMs for Vision-and-Language Navigation via Explicit World Representation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Zerui Li, Hongpei Zheng, Fangguo Zhao, Aidan Chan, Jian Zhou, Sihao Lin, Shijie Li, Qi Wu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-02-17 07:13:48</h6>
+<p class='card-text'>A navigable agent needs to understand both high-level semantic instructions and precise spatial perceptions. Building navigation agents centered on Multimodal Large Language Models (MLLMs) demonstrates a promising solution due to their powerful generalization ability. However, the current tightly coupled design dramatically limits system performance. In this work, we propose a decoupled design that separates low-level spatial state estimation from high-level semantic planning. Unlike previous methods that rely on predefined, oversimplified textual maps, we introduce an interactive metric world representation that maintains rich and consistent information, allowing MLLMs to interact with and reason on it for decision-making. Furthermore, counterfactual reasoning is introduced to further elicit MLLMs' capacity, while the metric world representation ensures the physical validity of the produced actions. We conduct comprehensive experiments in both simulated and real-world environments. Our method establishes a new zero-shot state-of-the-art, achieving 48.8\% Success Rate (SR) in R2R-CE and 42.2\% in RxR-CE benchmarks. Furthermore, to validate the versatility of our metric representation, we demonstrate zero-shot sim-to-real transfer across diverse embodiments, including a wheeled TurtleBot 4 and a custom-built aerial drone. These real-world deployments verify that our decoupled framework serves as a robust, domain-invariant interface for embodied Vision-and-Language navigation.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2602.15274v1' target='_blank'>When Remembering and Planning are Worth it: Navigating under Change</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Omid Madani, J. Brian Burns, Reza Eghbali, Thomas L. Dean</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-02-17 00:15:47</h6>
+<p class='card-text'>We explore how different types and uses of memory can aid spatial navigation in changing uncertain environments. In the simple foraging task we study, every day, our agent has to find its way from its home, through barriers, to food. Moreover, the world is non-stationary: from day to day, the location of the barriers and food may change, and the agent's sensing such as its location information is uncertain and very limited. Any model construction, such as a map, and use, such as planning, needs to be robust against these challenges, and if any learning is to be useful, it needs to be adequately fast. We look at a range of strategies, from simple to sophisticated, with various uses of memory and learning. We find that an architecture that can incorporate multiple strategies is required to handle (sub)tasks of a different nature, in particular for exploration and search, when food location is not known, and for planning a good path to a remembered (likely) food location. An agent that utilizes non-stationary probability learning techniques to keep updating its (episodic) memories and that uses those memories to build maps and plan on the fly (imperfect maps, i.e. noisy and limited to the agent's experience) can be increasingly and substantially more efficient than the simpler (minimal-memory) agents, as the task difficulties such as distance to goal are raised, as long as the uncertainty, from localization and change, is not too large.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2602.15270v1' target='_blank'>Enhancing Diversity and Feasibility: Joint Population Synthesis from Multi-source Data Using Generative Models</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Farbod Abbasi, Zachary Patterson, Bilal Farooq</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-02-17 00:02:30</h6>
+<p class='card-text'>Generating realistic synthetic populations is essential for agent-based models (ABM) in transportation and urban planning. Current methods face two major limitations. First, many rely on a single dataset or follow a sequential data fusion and generation process, which means they fail to capture the complex interplay between features. Second, these approaches struggle with sampling zeros (valid but unobserved attribute combinations) and structural zeros (infeasible combinations due to logical constraints), which reduce the diversity and feasibility of the generated data. This study proposes a novel method to simultaneously integrate and synthesize multi-source datasets using a Wasserstein Generative Adversarial Network (WGAN) with gradient penalty. This joint learning method improves both the diversity and feasibility of synthetic data by defining a regularization term (inverse gradient penalty) for the generator loss function. For the evaluation, we implement a unified evaluation metric for similarity, and place special emphasis on measuring diversity and feasibility through recall, precision, and the F1 score. Results show that the proposed joint approach outperforms the sequential baseline, with recall increasing by 7\% and precision by 15\%. Additionally, the regularization term further improves diversity and feasibility, reflected in a 10\% increase in recall and 1\% in precision. We assess similarity distributions using a five-metric score. The joint approach performs better overall, and reaches a score of 88.1 compared to 84.6 for the sequential method. Since synthetic populations serve as a key input for ABM, this multi-source generative approach has the potential to significantly enhance the accuracy and reliability of ABM.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2602.15269v1' target='_blank'>Operating room planning with pooling downstream beds among specialties: A stochastic programming approach</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Arian Andam, Hossein Hashemi Doulabi</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-02-16 23:54:07</h6>
+<p class='card-text'>In this paper, we study pooling downstream beds across specialties in a stochastic operating room planning problem. The main sources of uncertainty are stochastic surgical durations and patients' lengths of stay. We developed a two-stage stochastic programming model where in the first stage we decide on 1) the number of non-shared ICU and ward beds to be allocated to each specialty, and 2) the allocation of surgeries to operating rooms during the planning horizon. In the second stage, we decide on 1) the number of shared beds in ICU and wards to be allocated to different specialties on each day during the planning horizon, 2) the surge capacity required to satisfy downstream service to patients, and 3) the overtime incurred in operating rooms. The proposed model aims at minimizing the total cost including the patients' waiting cost, postponement cost, overtime and fixed cost of operating rooms, and the cost of downstream surge capacity. We have implemented the proposed stochastic programming model in a sample average approximation framework. To enhance the efficiency of sample average approximation, we have developed a specialized algorithm that quickly solves the second-stage model for any given first-stage solution for a large number of scenarios. We have carried out extensive computational experiments to evaluate the effectiveness of several pooling policies for downstream beds and also the efficiency of the proposed sample average approximation algorithm. Moreover, we have performed an extensive sensitivity analysis of cost and stochastic parameters. Our results demonstrated that a full-sharing policy among different specialties in the downstream units enhance the functionality of the system by up to 19.53%. Moreover, the results indicated that the solutions obtained by the proposed stochastic model outperform those from the corresponding deterministic problem by 17.43% on average.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2602.15162v1' target='_blank'>A ROS2 Benchmarking Framework for Hierarchical Control Strategies in Mobile Robots for Mediterranean Greenhouses</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Fernando Cañadas-Aránega, Francisco J. Mañas-Álvarez, José L- Guzmán, José C. Moreno, José L. Blanco-Claraco</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-02-16 20:04:50</h6>
+<p class='card-text'>Mobile robots operating in agroindustrial environments, such as Mediterranean greenhouses, are subject to challenging conditions, including uneven terrain, variable friction, payload changes, and terrain slopes, all of which significantly affect control performance and stability. Despite the increasing adoption of robotic platforms in agriculture, the lack of standardized, reproducible benchmarks impedes fair comparisons and systematic evaluations of control strategies under realistic operating conditions. This paper presents a comprehensive benchmarking framework for evaluating mobile robot controllers in greenhouse environments. The proposed framework integrates an accurate three dimensional model of the environment, a physics based simulator, and a hierarchical control architecture comprising low, mid, and high level control layers. Three benchmark categories are defined to enable modular assessment, ranging from actuator level control to full autonomous navigation. Additionally, three disturbance scenarios payload variation, terrain type, and slope are explicitly modeled to replicate real world agricultural conditions. To ensure objective and reproducible evaluation, standardized performance metrics are introduced, including the Squared Absolute Error (SAE), the Squared Control Input (SCI), and composite performance indices. Statistical analysis based on repeated trials is employed to mitigate the influence of sensor noise and environmental variability. The framework is further enhanced by a plugin based architecture that facilitates seamless integration of user defined controllers and planners. The proposed benchmark provides a robust and extensible tool for the quantitative comparison of classical, predictive, and planning based control strategies in realistic conditions, bridging the gap between simulation based analysis and real world agroindustrial applications.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2602.15133v1' target='_blank'>The underwater Brachistochrone</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Mohammad-Reza Alam</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-02-16 19:25:16</h6>
+<p class='card-text'>The brachistochrone, the curve of fastest descent under gravity, is a cycloid when friction is absent. Underwater, however, buoyancy, viscous drag, and the added mass of entrained fluid fundamentally alter the problem. We formulate and solve the brachistochrone for a body moving through a dense fluid, incorporating all three effects together with a Reynolds-number-dependent drag coefficient. The classical cycloid becomes increasingly suboptimal as the body density approaches the fluid density, and below a critical density ratio it fails to reach the endpoint altogether. Near the critical Reynolds number for the drag crisis, the optimal trajectory is acutely sensitive to the density ratio and object size; constant-drag approximations can yield qualitatively incorrect paths. A decomposition of physical effects shows that neglecting drag and added mass together yields a predicted transit time roughly half the realised minimum, and that omitting added mass alone underestimates the transit time by approximately 20%. We extend the formulation to a three-point brachistochrone in which the trajectory must pass through an intermediate waypoint, revealing a finite reachable domain that is absent in the classical problem. The underwater brachistochrone as presented here provides a simple planning tool for short-range trajectories of buoyancy-driven underwater vehicles.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2602.15092v1' target='_blank'>Augmenting Human Balance with Generic Supernumerary Robotic Limbs</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Xuanyun Qiu, Dorian Verdel, Hector Cervantes-Culebro, Alexis Devillard, Etienne Burdet</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-02-16 17:29:34</h6>
+<p class='card-text'>Supernumerary robotic limbs (SLs) have the potential to transform a wide range of human activities, yet their usability remains limited by key technical challenges, particularly in ensuring safety and achieving versatile control. Here, we address the critical problem of maintaining balance in the human-SLs system, a prerequisite for safe and comfortable augmentation tasks. Unlike previous approaches that developed SLs specifically for stability support, we propose a general framework for preserving balance with SLs designed for generic use. Our hierarchical three-layer architecture consists of: (i) a prediction layer that estimates human trunk and center of mass (CoM) dynamics, (ii) a planning layer that generates optimal CoM trajectories to counteract trunk movements and computes the corresponding SL control inputs, and (iii) a control layer that executes these inputs on the SL hardware. We evaluated the framework with ten participants performing forward and lateral bending tasks. The results show a clear reduction in stance instability, demonstrating the framework's effectiveness in enhancing balance. This work paves the path towards safe and versatile human-SLs interactions. [This paper has been submitted for publication to IEEE.]</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2602.14948v1' target='_blank'>Kalman Filtering Based Flight Management System Modeling for AAM Aircraft</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Balram Kandoria, Aryaman Singh Samyal</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-02-16 17:29:05</h6>
+<p class='card-text'>Advanced Aerial Mobility (AAM) operations require strategic flight planning services that predict both spatial and temporal uncertainties to safely validate flight plans against hazards such as weather cells, restricted airspaces, and CNS disruption areas. Current uncertainty estimation methods for AAM vehicles rely on conservative linear models due to limited real-world performance data. This paper presents a novel Kalman Filter-based uncertainty propagation method that models AAM Flight Management System (FMS) architectures through sigmoid-blended measurement noise covariance. Unlike existing approaches with fixed uncertainty thresholds, our method continuously adapts the filter's measurement trust based on progress toward waypoints, enabling FMS correction behavior to emerge naturally. The approach scales proportionally with control inputs and is tunable to match specific aircraft characteristics or route conditions. We validate the method using real ADS-B data from general aviation aircraft divided into training and verification sets. Uncertainty propagation parameters were tuned on the training set, achieving 76% accuracy in predicting arrival times when compared against the verification dataset, demonstrating the method's effectiveness for strategic flight plan validation in AAM operations.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2602.14866v1' target='_blank'>Gauge-independent gravitational waves from a minimal dark $U(1)$ sector with viable dark matter candidates</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Wan-Zhe Feng, Zi-Hui Zhang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-02-16 16:00:00</h6>
+<p class='card-text'>Searches for stochastic gravitational wave backgrounds from first-order phase transitions offer a powerful probe of hidden sectors, but quantitative predictions in gauge theories are obstructed by the gauge dependence of the finite-temperature effective potential and the associated tunneling action. We study a minimal gauged $U(1)$ dark sector containing a dark Higgs and a dark photon, optionally supplemented by a vectorlike dark fermion, coupled to the Standard Model through Higgs portal or kinetic mixing. Using the Nielsen identity together with a controlled derivative expansion and power counting, we construct a gauge-independent effective action in the high- and low-temperature limits, enabling model-intrinsic nucleation dynamics and robust gravitational wave predictions. We perform dedicated Monte Carlo scans in both limits and map viable microscopic parameters to detector-facing peak frequencies and amplitudes, spanning bands relevant to pulsar timing arrays and planned space-based interferometers. In our scans, supercooled transitions typically produce the strongest signals, whereas parametrically high-temperature transitions are comparatively rare and tend to be weak. We further connect the phase transition phenomenology to viable dark matter candidates within the same minimal field content, providing benchmark targets for dark photon dark matter and dark fermion dark matter, and highlighting their complementarity with gravitational wave observables. Overall, our results provide an end-to-end, gauge-independent pipeline from a minimal hidden sector Lagrangian to gravitational wave spectra and cosmologically viable dark matter benchmarks, yielding the most reliable and concrete predictions to date for a minimal gauged $U(1)$ dark sector.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2602.14843v1' target='_blank'>Evolutionarily Primitive Social Entities</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Angelica Kaufmann</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-02-16 15:40:03</h6>
+<p class='card-text'>Social entities only exist in virtue of collective acceptance or recognition, or acknowledgement by two or more individuals in the context of joint activities. Joint activities are made possible by the coordination of plans for action, and the coordination of plans for action is made possible by the capacity for collective intentionality. This paper investigates how primitive is the capacity that nonhuman animals have to create social entities, by individuating how primitive is the capacity for collective intentionality. I present a novel argument for the evolutionary primitiveness of social entities, by showing that the collective intentions upon which these social entities are created and shared are metaphysically reducible to the relevant individual intentions.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2602.14810v1' target='_blank'>Excavation of a 69-m diameter and 94-m high cavern for the Hyper-Kamiokande detector</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Y. Asaoka, H. Tanaka, S. Nakayama, K. Abe, K. Ishita, S. Moriyama, M. Shiozawa, K. Horinokuchi, C. Miura, Y. Suzuki, H. Morioka, D. Inagaki, H. Kurose, T. Suido, T. Kobuchi, M. Tobita, M. Utsuno</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-02-16 15:02:11</h6>
+<p class='card-text'>The excavation of the Hyper-Kamiokande cavern, 600 m underground, is complete. Measuring 69 m in diameter and 94 m in height, it is among the world's largest rock caverns. A vertically oriented, dome-capped cylindrical design was chosen to optimize cost and performance. Combined with substantial overburden, the geometry posed major engineering challenges. This paper outlines the underground works, main cavern design, excavation plan, and the evolution of support design and construction methods during excavation, namely the information-based (observational) design and construction approach.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2602.14799v1' target='_blank'>Scalable Multi-Robot Path Planning via Quadratic Unconstrained Binary Optimization</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Javier González Villasmil</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-02-16 14:50:04</h6>
+<p class='card-text'>Multi-Agent Path Finding (MAPF) remains a fundamental challenge in robotics, where classical centralized approaches exhibit exponential growth in joint-state complexity as the number of agents increases. This paper investigates Quadratic Unconstrained Binary Optimization (QUBO) as a structurally scalable alternative for simultaneous multi-robot path planning. This approach is a robotics-oriented QUBO formulation incorporating BFS-based logical pre-processing (achieving over 95% variable reduction), adaptive penalty design for collision and constraint enforcement, and a time-windowed decomposition strategy that enables execution within current hardware limitations. An experimental evaluation in grid environments with up to four robots demonstrated near-optimal solutions in dense scenarios and favorable scaling behavior compared to sequential classical planning. These results establish a practical and reproducible baseline for future quantum and quantum-inspired multi-robot coordinations.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2602.14699v1' target='_blank'>Qute: Towards Quantum-Native Database</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Muzhi Chen, Xuanhe Zhou, Wei Zhou, Bangrui Xu, Surui Tang, Guoliang Li, Bingsheng He, Yeye He, Yitong Song, Fan Wu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-02-16 12:39:46</h6>
+<p class='card-text'>This paper envisions a quantum database (Qute) that treats quantum computation as a first-class execution option. Unlike prior simulation-based methods that either run quantum algorithms on classical machines or adapt existing databases for quantum simulation, Qute instead (i) compiles an extended form of SQL into gate-efficient quantum circuits, (ii) employs a hybrid optimizer to dynamically select between quantum and classical execution plans, (iii) introduces selective quantum indexing, and (iv) designs fidelity-preserving storage to mitigate current qubit constraints. We also present a three-stage evolution roadmap toward quantum-native database. Finally, by deploying Qute on a real quantum processor (origin_wukong), we show that it outperforms a classical baseline at scale, and we release an open-source prototype at https://github.com/weAIDB/Qute.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2602.14691v1' target='_blank'>Removing Planner Bias in Goal Recognition Through Multi-Plan Dataset Generation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Mustafa F. Abdelwahed, Felipe Meneguzzi Kin Max Piamolini Gusmao, Joan Espasa</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-02-16 12:25:35</h6>
+<p class='card-text'>Autonomous agents require some form of goal and plan recognition to interact in multiagent settings. Unfortunately, all existing goal recognition datasets suffer from a systematical bias induced by the planning systems that generated them, namely heuristic-based forward search. This means that existing datasets lack enough challenge for more realistic scenarios (e.g., agents using different planners), which impacts the evaluation of goal recognisers with respect to using different planners for the same goal. In this paper, we propose a new method that uses top-k planning to generate multiple, different, plans for the same goal hypothesis, yielding benchmarks that mitigate the bias found in the current dataset. This allows us to introduce a new metric called Version Coverage Score (VCS) to measure the resilience of the goal recogniser when inferring a goal based on different sets of plans. Our results show that the resilience of the current state-of-the-art goal recogniser degrades substantially under low observability settings.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2602.14676v1' target='_blank'>GREAT-EER: Graph Edge Attention Network for Emergency Evacuation Responses</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Attila Lischka, Balázs Kulcsár</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-02-16 12:04:14</h6>
+<p class='card-text'>Emergency situations that require the evacuation of urban areas can arise from man-made causes (e.g., terrorist attacks or industrial accidents) or natural disasters, the latter becoming more frequent due to climate change. As a result, effective and fast methods to develop evacuation plans are of great importance. In this work, we identify and propose the Bus Evacuation Orienteering Problem (BEOP), an NP-hard combinatorial optimization problem with the goal of evacuating as many people from an affected area by bus in a short, predefined amount of time. The purpose of bus-based evacuation is to reduce congestion and disorder that arises in purely car-focused evacuation scenarios. To solve the BEOP, we propose a deep reinforcement learning-based method utilizing graph learning, which, once trained, achieves fast inference speed and is able to create evacuation routes in fractions of seconds. We can bound the gap of our evacuation plans using an MILP formulation. To validate our method, we create evacuation scenarios for San Francisco using real-world road networks and travel times. We show that we achieve near-optimal solution quality and are further able to investigate how many evacuation vehicles are necessary to achieve certain bus-based evacuation quotas given a predefined evacuation time while keeping run time adequate.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2602.14598v1' target='_blank'>Before the Vicious Cycle Starts: Preventing Burnout Across SOC Roles Through Flow-Aligned Design</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Kashyap Thimmaraju, Duc Anh Hoang, Souradip Nath, Jaron Mink, Gail-Joon Ahn</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-02-16 10:00:06</h6>
+<p class='card-text'>The sustainability of Security Operations Centers depends on their people, yet 71% of practitioners report burnout and 24% plan to exit cybersecurity entirely. Flow theory suggests that when job demands misalign with practitioner capabilities, work becomes overwhelming or tedious rather than engaging. Achieving challenge-skill balance begins at hiring: if job descriptions inaccurately portray requirements, organizations risk recruiting underskilled practitioners who face anxiety or overskilled ones who experience boredom. Yet we lack empirical understanding of what current SOC job descriptions actually specify. We analyzed 106 public SOC job postings from November to December 2024 across 35 organizations in 11 countries, covering Analysts (n=17), Incident Responders (n=38), Threat Hunters (n=39), and SOC Managers (n=12). Using Inductive Content Analysis, we coded certifications, technical skills, soft skills, tasks, and experience requirements. Three patterns emerged: (1) Communication skills dominate (50.9% of postings), exceeding SIEM tools (18.9%) or programming (30.2%), suggesting organizations prioritize collaboration over technical capabilities. (2) Certification expectations vary widely: CISSP leads (22.6%), but 43 distinct credentials appear with no universal standard. (3) Technical requirements show consensus: Python dominates programming (27.4%), Splunk leads SIEM platforms (14.2%), and ISO 27001 (13.2%) and NIST (10.4%) are most cited standards. These findings enable organizations to audit job descriptions against empirical baselines, help practitioners identify valued certifications and skills, and allow researchers to validate whether stated requirements align with actual demands. This establishes the foundation for flow-aligned interview protocols and investigation of how AI reshapes requirements. Dataset and codebook: https://git.tu-berlin.de/wosoc-2026/soc-jd-analysis.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2602.14589v1' target='_blank'>MATEO: A Multimodal Benchmark for Temporal Reasoning and Planning in LVLMs</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Gabriel Roccabruna, Olha Khomyn, Giuseppe Riccardi</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-02-16 09:41:50</h6>
+<p class='card-text'>AI agents need to plan to achieve complex goals that involve orchestrating perception, sub-goal decomposition, and execution. These plans consist of ordered steps structured according to a Temporal Execution Order (TEO, a directed acyclic graph that ensures each step executes only after its preconditions are satisfied. Existing research on foundational models' understanding of temporal execution is limited to automatically derived annotations, approximations of the TEO as a linear chain, or text-only inputs. To address this gap, we introduce MATEO (MultimodAl Temporal Execution Order), a benchmark designed to assess and improve the temporal reasoning abilities of Large Vision Language Models (LVLMs) required for real-world planning. We acquire a high-quality professional multimodal recipe corpus, authored through a standardized editorial process that decomposes instructions into discrete steps, each paired with corresponding images. We collect TEO annotations as graphs by designing and using a scalable crowdsourcing pipeline. Using MATEO, we evaluate six state-of-the-art LVLMs across model scales, varying language context, multimodal input structure, and fine-tuning strategies.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2602.14551v1' target='_blank'>Replanning Human-Robot Collaborative Tasks with Vision-Language Models via Semantic and Physical Dual-Correction</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Taichi Kato, Takuya Kiyokawa, Namiko Saito, Kensuke Harada</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-02-16 08:24:19</h6>
+<p class='card-text'>Human-Robot Collaboration (HRC) plays an important role in assembly tasks by enabling robots to plan and adjust their motions based on interactive, real-time human instructions. However, such instructions are often linguistically ambiguous and underspecified, making it difficult to generate physically feasible and cooperative robot behaviors. To address this challenge, many studies have applied Vision-Language Models (VLMs) to interpret high-level instructions and generate corresponding actions. Nevertheless, VLM-based approaches still suffer from hallucinated reasoning and an inability to anticipate physical execution failures. To address these challenges, we propose an HRC framework that augments a VLM-based reasoning with a dual-correction mechanism: an internal correction model that verifies logical consistency and task feasibility prior to action execution, and an external correction model that detects and rectifies physical failures through post-execution feedback. Simulation ablation studies demonstrate that the proposed method improves the success rate compared to baselines without correction models. Our real-world experiments in collaborative assembly tasks supported by object fixation or tool preparation by an upper body humanoid robot further confirm the framewor's effectiveness in enabling interactive replanning across different collaborative tasks in response to human instructions, validating its practical feasibility.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2602.14540v1' target='_blank'>Multimodal Covariance Steering in Belief Space with Active Probing and Influence for Autonomous Driving</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Devodita Chakravarty, John Dolan, Yiwei Lyu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-02-16 08:04:16</h6>
+<p class='card-text'>Autonomous driving in complex traffic requires reasoning under uncertainty. Common approaches rely on prediction-based planning or risk-aware control, but these are typically treated in isolation, limiting their ability to capture the coupled nature of action and inference in interactive settings. This gap becomes especially critical in uncertain scenarios, where simply reacting to predictions can lead to unsafe maneuvers or overly conservative behavior. Our central insight is that safe interaction requires not only estimating human behavior but also shaping it when ambiguity poses risks. To this end, we introduce a hierarchical belief model that structures human behavior across coarse discrete intents and fine motion modes, updated via Bayesian inference for interpretable multi-resolution reasoning. On top of this, we develop an active probing strategy that identifies when multimodal ambiguity in human predictions may compromise safety and plans disambiguating actions that both reveal intent and gently steer human decisions toward safer outcomes. Finally, a runtime risk-evaluation layer based on Conditional Value-at-Risk (CVaR) ensures that all probing actions remain within human risk tolerance during influence. Our simulations in lane-merging and unsignaled intersection scenarios demonstrate that our approach achieves higher success rates and shorter completion times compared to existing methods. These results highlight the benefit of coupling belief inference, probing, and risk monitoring, yielding a principled and interpretable framework for planning under uncertainty.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2602.14539v1' target='_blank'>When Security Meets Usability: An Empirical Investigation of Post-Quantum Cryptography APIs</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Marthin Toruan, R. D. N. Shakya, Samuel Tseitkin, Raymond K. Zhao, Nalin Arachchilage</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-02-16 07:59:46</h6>
+<p class='card-text'>Advances in quantum computing increasingly threaten the security and privacy of data protected by current cryptosystems, particularly those relying on public-key cryptography. In response, the international cybersecurity community has prioritized the implementation of Post-Quantum Cryptography (PQC), a new cryptographic standard designed to resist quantum attacks while operating on classical computers. The National Institute of Standards and Technology (NIST) has already standardized several PQC algorithms and plans to deprecate classical asymmetric schemes, such as RSA and ECDSA, by 2035. Despite this urgency, PQC adoption remains slow, often due to limited developer expertise. Application Programming Interfaces (APIs) are intended to bridge this gap, yet prior research on classical security APIs demonstrates that poor usability of cryptographic APIs can lead developers to introduce vulnerabilities during implementation of the applications, a risk amplified by the novelty and complexity of PQC. To date, the usability of PQC APIs has not been systematically studied. This research presents an empirical evaluation of the usability of the PQC APIs, observing how developers interact with APIs and documentation during software development tasks. The study identifies cognitive factors that influence the developer's performance when working with PQC primitives with minimal onboarding. The findings highlight opportunities across the PQC ecosystem to improve developer-facing guidance, terminology alignment, and workflow examples to better support non-specialists.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2602.14534v1' target='_blank'>MoRL: Reinforced Reasoning for Unified Motion Understanding and Generation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Hongpeng Wang, Zeyu Zhang, Wenhao Li, Hao Tang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-02-16 07:42:45</h6>
+<p class='card-text'>Human motion understanding and generation are crucial for vision and robotics but remain limited in reasoning capability and test-time planning. We propose MoRL, a unified multimodal motion model trained with supervised fine-tuning and reinforcement learning with verifiable rewards. Our task-specific reward design combines semantic alignment and reasoning coherence for understanding with physical plausibility and text-motion consistency for generation, improving both logical reasoning and perceptual realism. To further enhance inference, we introduce Chain-of-Motion (CoM), a test-time reasoning method that enables step-by-step planning and reflection. We also construct two large-scale CoT datasets, MoUnd-CoT-140K and MoGen-CoT-140K, to align motion sequences with reasoning traces and action descriptions. Experiments on HumanML3D and KIT-ML show that MoRL achieves significant gains over state-of-the-art baselines. Code: https://github.com/AIGeeksGroup/MoRL. Website: https://aigeeksgroup.github.io/MoRL.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js'></script>
+</body>
+</html>
