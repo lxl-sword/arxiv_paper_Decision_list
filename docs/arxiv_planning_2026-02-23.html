@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>planning - 2026-02-23</title>
+<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap' rel='stylesheet'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css'>
+<style>
+body {
+font-family: 'Roboto', sans-serif;
+background-color: #f5f7fa;
+padding: 20px;
+}
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.card-title {
+    font-weight: 700;
+}
+.card:hover {
+    transform: scale(1.02);
+    transition: 0.3s ease-in-out;
+}
+</style>
+</head>
+<body>
+<div class='container'>
+<h1 class='text-center my-4'><i class='fas fa-book'></i>planning - 2026-02-23</h1>
+<div class='row'>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2602.18431v1' target='_blank'>SMaRT: Online Reusable Resource Assignment and an Application to Mediation in the Kenyan Judiciary</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Shafkat Farabi, Didac Marti Pinto, Wei Lu, Manuel Ramos-Maqueda, Sanmay Das, Antoine Deeb, Anja Sautmann</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-02-20 18:58:05</h6>
+<p class='card-text'>Motivated by the problem of assigning mediators to cases in the Kenyan judicial, we study an online resource allocation problem where incoming tasks (cases) must be immediately assigned to available, capacity-constrained resources (mediators). The resources differ in their quality, which may need to be learned. In addition, resources can only be assigned to a subset of tasks that overlaps to varying degrees with the subset of tasks other resources can be assigned to. The objective is to maximize task completion while satisfying soft capacity constraints across all the resources. The scale of the real-world problem poses substantial challenges, since there are over 2000 mediators and a multitude of combinations of geographic locations (87) and case types (12) that each mediator is qualified to work on. Together, these features, unknown quality of new resources, soft capacity constraints, and a high-dimensional state space, make existing scheduling and resource allocation algorithms either inapplicable or inefficient. We formalize the problem in a tractable manner using a quadratic program formulation for assignment and a multi-agent bandit-style framework for learning. We demonstrate the key properties and advantages of our new algorithm, SMaRT (Selecting Mediators that are Right for the Task), compared with baselines on stylized instances of the mediator allocation problem. We then consider its application to real-world data on cases and mediators from the Kenyan judiciary. SMaRT outperforms baselines and allows control over the tradeoff between the strictness of capacity constraints and overall case resolution rates, both in settings where mediator quality is known beforehand and in bandit-like settings where learning is part of the problem definition. On the strength of these results, we plan to run a randomized controlled trial with SMaRT in the judiciary in the near future.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2602.18403v1' target='_blank'>Scientific Knowledge-Guided Machine Learning for Vessel Power Prediction: A Comparative Study</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Orfeas Bourchas, George Papalambrou</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-02-20 18:12:14</h6>
+<p class='card-text'>Accurate prediction of main engine power is essential for vessel performance optimization, fuel efficiency, and compliance with emission regulations. Conventional machine learning approaches, such as Support Vector Machines, variants of Artificial Neural Networks (ANNs), and tree-based methods like Random Forests, Extra Tree Regressors, and XGBoost, can capture nonlinearities but often struggle to respect the fundamental propeller law relationship between power and speed, resulting in poor extrapolation outside the training envelope. This study introduces a hybrid modeling framework that integrates physics-based knowledge from sea trials with data-driven residual learning. The baseline component, derived from calm-water power curves of the form $P = cV^n$, captures the dominant power-speed dependence, while another, nonlinear, regressor is then trained to predict the residual power, representing deviations caused by environmental and operational conditions. By constraining the machine learning task to residual corrections, the hybrid model simplifies learning, improves generalization, and ensures consistency with the underlying physics. In this study, an XGBoost, a simple Neural Network, and a Physics-Informed Neural Network (PINN) coupled with the baseline component were compared to identical models without the baseline component. Validation on in-service data demonstrates that the hybrid model consistently outperformed a pure data-driven baseline in sparse data regions while maintaining similar performance in populated ones. The proposed framework provides a practical and computationally efficient tool for vessel performance monitoring, with applications in weather routing, trim optimization, and energy efficiency planning.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2602.18374v1' target='_blank'>Zero-shot Interactive Perception</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Venkatesh Sripada, Frank Guerin, Amir Ghalamzan</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-02-20 17:30:25</h6>
+<p class='card-text'>Interactive perception (IP) enables robots to extract hidden information in their workspace and execute manipulation plans by physically interacting with objects and altering the state of the environment -- crucial for resolving occlusions and ambiguity in complex, partially observable scenarios. We present Zero-Shot IP (ZS-IP), a novel framework that couples multi-strategy manipulation (pushing and grasping) with a memory-driven Vision Language Model (VLM) to guide robotic interactions and resolve semantic queries. ZS-IP integrates three key components: (1) an Enhanced Observation (EO) module that augments the VLM's visual perception with both conventional keypoints and our proposed pushlines -- a novel 2D visual augmentation tailored to pushing actions, (2) a memory-guided action module that reinforces semantic reasoning through context lookup, and (3) a robotic controller that executes pushing, pulling, or grasping based on VLM output. Unlike grid-based augmentations optimized for pick-and-place, pushlines capture affordances for contact-rich actions, substantially improving pushing performance. We evaluate ZS-IP on a 7-DOF Franka Panda arm across diverse scenes with varying occlusions and task complexities. Our experiments demonstrate that ZS-IP outperforms passive and viewpoint-based perception techniques such as Mark-Based Visual Prompting (MOKA), particularly in pushing tasks, while preserving the integrity of non-target elements.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2602.18358v1' target='_blank'>Forecasting the Evolving Composition of Inbound Tourism Demand: A Bayesian Compositional Time Series Approach Using Platform Booking Data</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Harrison Katz</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-02-20 17:09:05</h6>
+<p class='card-text'>Understanding how the composition of guest origin markets evolves over time is critical for destination marketing organizations, hospitality businesses, and tourism planners. We develop and apply Bayesian Dirichlet autoregressive moving average (BDARMA) models to forecast the compositional dynamics of guest origin market shares using proprietary Airbnb booking data spanning 2017--2024 across four major destination regions. Our analysis reveals substantial pandemic-induced structural breaks in origin composition, with heterogeneous recovery patterns across markets. The BDARMA framework achieves the lowest average forecast error across all destination regions, outperforming standard benchmarks including naïve forecasts, exponential smoothing, and SARIMA on log-ratio transformed data. For EMEA destinations, BDARMA achieves 23% lower forecast error than naive methods, with statistically significant improvements. By modeling compositions directly on the simplex with a Dirichlet likelihood and incorporating seasonal variation in both mean and precision parameters, our approach produces coherent forecasts that respect the unit-sum constraint while capturing complex temporal dependencies. The methodology provides destination stakeholders with probabilistic forecasts of source market shares, enabling more informed strategic planning for marketing resource allocation, infrastructure investment, and crisis response.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2602.18287v1' target='_blank'>Green by Design: Constraint-Based Adaptive Deployment in the Cloud Continuum</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Andrea D'Iapico, Monica Vitali</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-02-20 15:33:37</h6>
+<p class='card-text'>The environmental sustainability of Information Technology (IT) has emerged as a critical concern, driven by the need to reduce both energy consumption and greenhouse gas (GHG) emissions. In the context of cloud-native applications deployed across the cloud-edge continuum, this challenge translates into identifying energy-efficient deployment strategies that consider not only the computational demands of application components but also the environmental impact of the nodes on which they are executed. Generating deployment plans that account for these dynamic factors is non-trivial, due to fluctuations in application behaviour and variations in the carbon intensity of infrastructure nodes. In this paper, we present an approach for the automatic generation of deployment plans guided by green constraints. These constraints are derived from a continuous analysis of energy consumption patterns, inter-component communication, and the environmental characteristics of the underlying infrastructure. This paper introduces a methodology and architecture for the generation of a set of green-aware constraints that inform the scheduler to produce environmentally friendly deployment plans. We demonstrate how these constraints can be automatically learned and updated over time using monitoring data, enabling adaptive, energy-aware orchestration. The proposed approach is validated through realistic deployment scenarios of a cloud-native application, showcasing its effectiveness in reducing energy usage and associated emissions.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2602.18260v1' target='_blank'>Role-Adaptive Collaborative Formation Planning for Team of Quadruped Robots in Cluttered Environments</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Magnus Norén, Marios-Nektarios Stamatopoulos, Avijit Banerjee, George Nikolakopoulos</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-02-20 14:44:16</h6>
+<p class='card-text'>This paper presents a role-adaptive Leader-Follower-based formation planning and control framework for teams of quadruped robots operating in cluttered environments. Unlike conventional methods with fixed leaders or rigid formation roles, the proposed approach integrates dynamic role assignment and partial goal planning, enabling flexible, collision-free navigation in complex scenarios. Formation stability and inter-robot safety are ensured through a virtual spring-damper system coupled with a novel obstacle avoidance layer that adaptively adjusts each agent's velocity. A dynamic look-ahead reference generator further enhances flexibility, allowing temporary formation deformation to maneuver around obstacles while maintaining goal-directed motion. The Fast Marching Square (FM2) algorithm provides the global path for the leader and local paths for the followers as the planning backbone. The framework is validated through extensive simulations and real-world experiments with teams of quadruped robots. Results demonstrate smooth coordination, adaptive role switching, and robust formation maintenance in complex, unstructured environments. A video featuring the simulation and physical experiments along with their associated visualizations can be found at https://youtu.be/scq37Tua9W4.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2602.18176v1' target='_blank'>Improving Sampling for Masked Diffusion Models via Information Gain</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Kaisen Yang, Jayden Teoh, Kaicheng Yang, Yitong Zhang, Alex Lamb</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-02-20 12:26:03</h6>
+<p class='card-text'>Masked Diffusion Models (MDMs) offer greater flexibility in decoding order than autoregressive models but require careful planning to achieve high-quality generation. Existing samplers typically adopt greedy heuristics, prioritizing positions with the highest local certainty to decode at each step. Through failure case analysis, we identify a fundamental limitation of this approach: it neglects the downstream impact of current decoding choices on subsequent steps and fails to minimize cumulative uncertainty. In particular, these methods do not fully exploit the non-causal nature of MDMs, which enables evaluating how a decoding decision reshapes token probabilities/uncertainty across all remaining masked positions. To bridge this gap, we propose the Info-Gain Sampler, a principled decoding framework that balances immediate uncertainty with information gain over future masked tokens. Extensive evaluations across diverse architectures and tasks (reasoning, coding, creative writing, and image generation) demonstrate that Info-Gain Sampler consistently outperforms existing samplers for MDMs. For instance, it achieves a 3.6% improvement in average accuracy on reasoning tasks and a 63.1% win-rate in creative writing. Notably, on reasoning tasks it reduces cumulative uncertainty from 78.4 to 48.6, outperforming the best baseline by a large margin. The code will be available at https://github.com/yks23/Information-Gain-Sampler.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2602.18150v1' target='_blank'>Inclusive Ranking of Indian States via Bayesian Bradley-Terry Model</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Arshi Rizvi, Rahul Singh</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-02-20 11:28:50</h6>
+<p class='card-text'>Evaluating the performance of different administrative regions within a country is crucial for its development and policy formulation. The performance evaluators are mostly based on health, education, per capita income, awareness, family planning and so on. Not only evaluating regions, but also ranking them is a crucial step, and various methods have been proposed to date. We aim to provide a ranking system for Indian states that uses a Bayesian approach via the famous Bradley-Terry model for paired comparisons. The ranking method uses indicators from the NFHS-5 dataset with the prior information of per-capita incomes of the states/UTs, thus leading to a holistic ranking, which not only includes human development factors but also take account the economic background of the states. We also carried out various Markov chain Monte Carlo diagnostics required for the reliability of the estimates of merits for these states. These merits thus provide a ranking for the states/UTs and can further be utilised to make informed policy decisions.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2602.18047v1' target='_blank'>CityGuard: Graph-Aware Private Descriptors for Bias-Resilient Identity Search Across Urban Cameras</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Rong Fu, Wenxin Zhang, Yibo Meng, Jia Yee Tan, Jiaxuan Lu, Rui Lu, Jiekai Wu, Zhaolu Kang, Simon Fong</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-02-20 08:00:17</h6>
+<p class='card-text'>City-scale person re-identification across distributed cameras must handle severe appearance changes from viewpoint, occlusion, and domain shift while complying with data protection rules that prevent sharing raw imagery. We introduce CityGuard, a topology-aware transformer for privacy-preserving identity retrieval in decentralized surveillance. The framework integrates three components. A dispersion-adaptive metric learner adjusts instance-level margins according to feature spread, increasing intra-class compactness. Spatially conditioned attention injects coarse geometry, such as GPS or deployment floor plans, into graph-based self-attention to enable projectively consistent cross-view alignment using only coarse geometric priors without requiring survey-grade calibration. Differentially private embedding maps are coupled with compact approximate indexes to support secure and cost-efficient deployment. Together these designs produce descriptors robust to viewpoint variation, occlusion, and domain shifts, and they enable a tunable balance between privacy and utility under rigorous differential-privacy accounting. Experiments on Market-1501 and additional public benchmarks, complemented by database-scale retrieval studies, show consistent gains in retrieval precision and query throughput over strong baselines, confirming the practicality of the framework for privacy-critical urban identity matching.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2602.18045v1' target='_blank'>Conformal Tradeoffs: Guarantees Beyond Coverage</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Petrus H. Zwart</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-02-20 07:58:25</h6>
+<p class='card-text'>Deployed conformal predictors are long-lived decision infrastructure operating over finite operational windows. The real-world question is not only ``Does the true label lie in the prediction set at the target rate?'' (marginal coverage), but ``How often does the system commit versus defer? What error exposure does it induce when it acts? How do these rates trade off?'' Marginal coverage does not determine these deployment-facing quantities: the same calibrated thresholds can yield different operational profiles depending on score geometry. We provide a framework for operational certification and planning beyond coverage with three contributions. (1) Small-Sample Beta Correction (SSBC): we invert the exact finite-sample Beta/rank law for split conformal to map a user request $(α^\star,δ)$ to a calibrated grid point with PAC-style semantics, yielding explicit finite-window coverage guarantees. (2) Calibrate-and-Audit: since no distribution-free pivot exists for rates beyond coverage, we introduce a two-stage design in which an independent audit set produces a reusable region -- label table and certified finite-window envelopes (Binomial/Beta-Binomial) for operational quantities -- commitment frequency, deferral, decisive error exposure, and commit purity -- via linear projection. (3) Geometric characterization: we describe feasibility constraints, regime boundaries (hedging vs.\ rejection), and cost-coherence conditions induced by a fixed conformal partition, explaining why operational rates are coupled and how calibration navigates their trade-offs. The output is an auditable operational menu: for a fixed scoring model, we trace attainable operational profiles across calibration settings and attach finite-window uncertainty envelopes. We demonstrate the approach on Tox21 toxicity prediction (12 endpoints) and aqueous solubility screening using AquaSolDB.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2602.17926v1' target='_blank'>Homotopic information gain for sparse active target tracking</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jennifer Wakulicz, Ki Myung Brian Lee, Teresa Vidal-Calleja, Robert Fitch</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-02-20 01:23:58</h6>
+<p class='card-text'>The problem of planning sensing trajectories for a mobile robot to collect observations of a target and predict its future trajectory is known as active target tracking. Enabled by probabilistic motion models, one may solve this problem by exploring the belief space of all trajectory predictions given future sensing actions to maximise information gain. However, for multi-modal motion models the notion of information gain is often ill-defined. This paper proposes a planning approach designed around maximising information regarding the target's homotopy class, or high-level motion. We introduce homotopic information gain, a measure of the expected high-level trajectory information given by a measurement. We show that homotopic information gain is a lower bound for metric or low-level information gain, and is as sparsely distributed in the environment as obstacles are. Planning sensing trajectories to maximise homotopic information results in highly accurate trajectory estimates with fewer measurements than a metric information approach, as supported by our empirical evaluation on real and simulated pedestrian data.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2602.17914v1' target='_blank'>Efficient Filtered-ANN via Learning-based Query Planning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Zhuocheng Gan, Yifan Wang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-02-20 00:22:43</h6>
+<p class='card-text'>Filtered ANN search is an increasingly important problem in vector retrieval, yet systems face a difficult trade-off due to the execution order: Pre-filtering (filtering first, then ANN over the passing subset) requires expensive per-predicate index construction, while post-filtering (ANN first, then filtering candidates) may waste computation and lose recall under low selectivity due to insufficient candidates after filtering. We introduce a learning-based query planning framework that dynamically selects the most effective execution plan for each query, using lightweight predictions derived from dataset and query statistics (e.g., dimensionality, corpus size, distribution features, and predicate statistics). The framework supports diverse filter types, including categorical/keyword and range predicates, and is generic to use any backend ANN index. Experiments show that our method achieves up to 4x acceleration with >= 90% recall comparing to the strong baselines.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2602.17894v1' target='_blank'>Learning from Biased and Costly Data Sources: Minimax-optimal Data Collection under a Budget</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Michael O. Harding, Vikas Singh, Kirthevasan Kandasamy</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-02-19 23:17:59</h6>
+<p class='card-text'>Data collection is a critical component of modern statistical and machine learning pipelines, particularly when data must be gathered from multiple heterogeneous sources to study a target population of interest. In many use cases, such as medical studies or political polling, different sources incur different sampling costs. Observations often have associated group identities (for example, health markers, demographics, or political affiliations) and the relative composition of these groups may differ substantially, both among the source populations and between sources and target population.
+  In this work, we study multi-source data collection under a fixed budget, focusing on the estimation of population means and group-conditional means. We show that naive data collection strategies (e.g. attempting to "match" the target distribution) or relying on standard estimators (e.g. sample mean) can be highly suboptimal. Instead, we develop a sampling plan which maximizes the effective sample size: the total sample size divided by $D_{χ^2}(q\mid\mid\overline{p}) + 1$, where $q$ is the target distribution, $\overline{p}$ is the aggregated source distribution, and $D_{χ^2}$ is the $χ^2$-divergence. We pair this sampling plan with a classical post-stratification estimator and upper bound its risk. We provide matching lower bounds, establishing that our approach achieves the budgeted minimax optimal risk. Our techniques also extend to prediction problems when minimizing the excess risk, providing a principled approach to multi-source learning with costly and heterogeneous data sources.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2602.17885v1' target='_blank'>Multi-agent path-planning in a moving medium via Wasserstein Hamiltonian Flow</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Christina Frederick, Haomin Zhou</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-02-19 22:44:35</h6>
+<p class='card-text'>We present a finite dimensional variational model for multi-agent path-planning in which a group of agents traverses from initial positions to a target distribution in a moving medium. The model is derived using the agent-based formulation of the Wasserstein Hamiltonian flows that transport between probability distributions while optimizing a running cost. The objective is the mismatch between their final positions and the target distribution. The constraints are a system of Hamiltonian equations that provide the trajectories of the agents. The free variables on which the optimization is defined form a finite vector of the initial velocities for the agents. The model is solved numerically by the L-BFGS method in conjunction with a shooting strategy. Several simulation examples, including a time-dependent moving medium, are presented to illustrate the performance of the model.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2602.17813v1' target='_blank'>Promptable segmentation with region exploration enables minimal-effort expert-level prostate cancer delineation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Junqing Yang, Natasha Thorley, Ahmed Nadeem Abbasi, Shonit Punwani, Zion Tse, Yipeng Hu, Shaheer U. Saeed</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-02-19 20:29:41</h6>
+<p class='card-text'>Purpose: Accurate segmentation of prostate cancer on magnetic resonance (MR) images is crucial for planning image-guided interventions such as targeted biopsies, cryoablation, and radiotherapy. However, subtle and variable tumour appearances, differences in imaging protocols, and limited expert availability make consistent interpretation difficult. While automated methods aim to address this, they rely on large expertly-annotated datasets that are often inconsistent, whereas manual delineation remains labour-intensive. This work aims to bridge the gap between automated and manual segmentation through a framework driven by user-provided point prompts, enabling accurate segmentation with minimal annotation effort.
+  Methods: The framework combines reinforcement learning (RL) with a region-growing segmentation process guided by user prompts. Starting from an initial point prompt, region-growing generates a preliminary segmentation, which is iteratively refined through RL. At each step, the RL agent observes the image and current segmentation to predict a new point, from which region growing updates the mask. A reward, balancing segmentation accuracy and voxel-wise uncertainty, encourages exploration of ambiguous regions, allowing the agent to escape local optima and perform sample-specific optimisation. Despite requiring fully supervised training, the framework bridges manual and fully automated segmentation at inference by substantially reducing user effort while outperforming current fully automated methods.
+  Results: The framework was evaluated on two public prostate MR datasets (PROMIS and PICAI, with 566 and 1090 cases). It outperformed the previous best automated methods by 9.9% and 8.9%, respectively, with performance comparable to manual radiologist segmentation, reducing annotation time tenfold.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2602.17640v1' target='_blank'>huff: A Python package for Market Area Analysis</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Thomas Wieland</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-02-19 18:52:46</h6>
+<p class='card-text'>Market area models, such as the Huff model and its extensions, are widely used to estimate regional market shares and customer flows of retail and service locations. Another, now very common, area of application is the analysis of catchment areas, supply structures and the accessibility of healthcare locations. The huff Python package provides a complete workflow for market area analysis, including data import, construction of origin-destination interaction matrices, basic model analysis, parameter estimation from empirical data, calculation of distance or travel time indicators, and map visualization. Additionally, the package provides several methods of spatial accessibility analysis. The package is modular and object-oriented. It is intended for researchers in economic geography, regional economics, spatial planning, marketing, geoinformation science, and health geography. The software is openly available via the [Python Package Index (PyPI)](https://pypi.org/project/huff/); its development and version history are managed in a public [GitHub Repository](https://github.com/geowieland/huff_official) and archived at [Zenodo](https://doi.org/10.5281/zenodo.18639559).</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2602.17582v1' target='_blank'>Building an AI-native Research Ecosystem for Experimental Particle Physics: A Community Vision</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Thea Klaeboe Aarrestad, Alaa Abdelhamid, Haider Abidi, Jahred Adelman, Jennifer Adelman-McCarthy, Shuchin Aeron, Garvita Agarwal, Usman Ali, Cristiano Alpigiani, Omar Alterkait, Mohamed Aly, Oz Amram, Saeed Ansari Fard, Aram Apyan, John Arrington, Marvin Ascencio-Sosa, Mohammad Atif, Aneesha Avasthi, Muhammad Bilal Azam, Bhim Bam, Joshua Barrow, Rainer Bartoldus, Amit Bashyal, Aashwin Basnet, Ayse Bat, Lothar A. T. Bauerdick, John Beacom, Chris Bee, Michael Begel, Matthew Bellis, Rene Bellwied, Rakitha Beminiwattha, Gabriele Benelli, Douglas Benjamin, Catrin Bernius, Binod Bhandari, Avinay Bhat, Meghna Bhattacharya, Saptaparna Bhattacharya, Prajita Bhattarai, Sudip Bhattarai, Wahid Bhimji, Jianming Bian, Burak Bilki, Mary Bishai, Kevin Black, Kenneth Bloom, Brian Bockelman, Johan Sebastian Bonilla Castro, Tulika Bose, Nilay Bostan, Othmane Bouhali, Dimitri Bourilkov, Dominic Brailsford, Gustaaf Brooijmans, Elizabeth Brost, Maria Brigida Brunetti, Quentin Buat, Brendon Bullard, Jackson Burzynski, Paolo Calafiura, Rodolfo Capdevilla, Fabian Andres Castaño Usuga, Raquel Castillo Fernandez, Fabio Catalano, Viviana Cavaliere, Flavio Cavanna, Giuseppe Cerati, Aidan Chambers, Maria Chamizo-Llatas, Philip Chang, Andrew Chappell, Arghya Chattopadhyay, Sergei Chekanov, Jian-ping Chen, Yi Chen, Zhengyang Chen, J. Taylor Childers, Hector Chinchay, Yuan-Tang Chou, Tasnuva Chowdhury, Neil Christensen, Wonyong Chung, Rafael Coelho Lopes de Sa, Simon Corrodi, Kyle Cranmer, Matteo Cremonesi, Roy Cruz, Mate Csanad, Mariarosaria D'Alfonso, Carlo Dallapiccola, Daine Danielson, Sridhara Dasu, Gavin Davies, Kaushik De, Patrick de Perio, Klaus Dehmelt, Marco Del Tutto, Carlos Ruben Dell'Aquila, Sarah Demers, Paolo Desiati, Bhesha Devkota, Sparshita Dey, Ranjan Dharmapalan, Karri Folan Di Petrillo, Markus Diefenthaler, Jeff Dillon, Zelimir Djurcic, Caterina Doglioni, Francois Drielsma, Edmond Dukes, Irene Dutta, Peter Elmer, Johannes Elmsheuser, Victor Daniel Elvira, Harold Evans, Peter Fackeldey, Cristiano Fanelli, Hao Fang, Mattia Fani, Muhammad Farooq, Matthew Feickert, Ian Fisk, Sam Foreman, Alexander Friedland, Nuwan Chaminda G. W., Louis-Guillaume Gagnon, Massimiliano Galli, Abhijith Gandrakota, Sudeshna Ganguly, Arianna Garcia Caffaro, Rob Gardner, Rocky Bala Garg, Lino Gerlach, Aishik Ghosh, Romulus Godang, Julia Gonski, Loukas Gouskos, Richard Gran, Heather Gray, Andrei Gritsan, Gaia Grosso, Craig Group, Jiawei Guo, Shubham Gupta, Gajendra Gurung, Phillip Gutierrez, Oliver Gutsche, Tyler Hague, Joseph Haley, Eva Halkiadakis, Francis Halzen, Michael Hance, Philip Harris, Harry Hausner, Karsten Heeger, Lukas Heinrich, Alexander Held, Matthew Herndon, Ken Herner, Max Herrmann, David Hertzog, Christian Herwig, Aaron Higuera, Alexander Himmel, Timothy Hobbs, Stefan Hoeche, Tova Holmes, Tae Min Hong, Ben Hooberman, Walter Hopkins, Jessica N. Howard, Shih-Chieh Hsu, Fengping Hu, Patrick Huber, Dirk Hufnagel, Daniel Humphreys, Ia Iashvili, Joseph Incandela, Josh Isaacson, Wasikul Islam, Kirill Ivanov, Wooyoung Jang, Naomi Jarvis, Brij Kishor Jashal, Pratik Jawahar, Dulitha Jayakodige, Torri Jeske, Sergo Jindariani, Jay Hyun Jo, Bhishm Shankar Joshi, Xiangyang Ju, Andreas Jung, Thomas Junk, Michael Kagan, Daisy Kalra, Matthias Kaminski, Edward Karavakis, Stefan Katsarov, Stergios Kazakos, Paul King, Michael Kirby, Max Knobbe, Young Ju Ko, Dmitry Kondratyev, Rostislav Konoplich, Charis Koraka, Scott Kravitz, Lukas Kretschmann, Brandon Kriesten, Georgios K Krintiras, Iason Krommydas, Michelle Kuchera, Audrey Kvam, Martin Kwok, Theodota Lagouri, Sabine Lammers, Eric Lancon, Greg Landsberg, David Lange, Kevin Lannon, Joseph Lau, Luca Lavezzo, Benjamin Lawrence-Sanderson, Duc-Truyen Le, Matt LeBlanc, Sung-Won Lee, Trevin Lee, Charles Leggett, Kayla Leonard DeHolton, James Letts, Hao Li, Haoyang Li, Aklima Khanam Lima, Guilherme Lima, Mia Liu, Qibin Liu, Yinrui Liu, Zhen Liu, Shivani Lomte, Guillermo Loustau de Linares, Lu Lu, Pietro Lugato, Adam Lyon, Yang Ma, Christopher Madrid, Akhtar Mahmood, Kendall Mahn, Devin Mahon, Akshay Malige, Sudhir Malik, Abhishikth Mallampalli, Yurii Maravin, Ralph Marinaro, Pete Markowitz, Matthew Maroun, Kyla Martinez, Verena Ingrid Martinez Outschoorn, Sanjit Masanam, Mario Masciovecchio, Konstantin Matchev, Malek Mazouz, Simone Mazza, Thomas McCauley, Shawn McKee, Karim Mehrabi, Poonam Mehta, Andrew Melo, Mark Messier, Elias Mettner, Christopher Meyer, Jessie Micallef, Sophie Middleton, David W. Miller, Hamlet Mkrtchyan, Abdollah Mohammadi, Abhinav Mohan, Ajit Mohapatra, Farouk Mokhtar, Peter Monaghan, Claudio Silverio Montanari, Michael Mooney, Casey Morean, Eric Moreno, Alexander Moreno Briceño, Stephen Mrenna, Justin Mueller, Daniel Murnane, Benjamin Nachman, Emilio Nanni, Nitish Nayak, Miquel Nebot-Guinot, Orgho Neogi, Chris Neu, Mark Neubauer, Norbert Neumeister, Harvey Newman, Duong Nguyen, Gavin Niendorf, Paul Nilsson, Scarlet Norberg, Andrzej Novak, Sungbin Oh, Isabel Ojalvo, Olaiya Olokunboyo, Yasar Onel, Joseph Osborn, Ianna Osborne, Arantza Oyanguren, Nurcan Ozturk, Paul Padley, Simone Pagan Griso, Pritam Palit, Bishnu Pandey, Vishvas Pandey, Zisis Papandreou, Ganesh Parida, Ki Ryeong Park, Ajib Paudel, Manfred Paulini, Christoph Paus, Gregory Pawloski, Kevin Pedro, Gabriel Perdue, Troels Christian Petersen, Alexey Petrov, Deborah Pinna, Marc-André Pleier, Andrea Pocar, Prafull Purohit, Nived Puthumana Meleppattu, Mateusz Płoskoń, Sitian Qian, Xin Qian, Geting Qin, Aleena Rafique, Srini Rajagopalan, Dylan Rankin, Rebecca Rapp, Salvatore Rappoccio, Rohit Raut, Sagar Regmi, Benedikt Riedel, Andres Rios-Tascon, Stephen Roche, Jenna Roderick, Rimsky Rojas, Dmitry Romanov, Subhojit Roy, Rita Sadek, Dikshant Sagar, Nihar Ranjan Sahoo, Tai Sakuma, Juan Pablo Salas, Mayly Sanchez, Jay Sandesara, Alexander Savin, Ryan Schmitz, Kate Scholberg, Henry Schreiner, Reinhard Schwienhorst, Gabriella Sciolla, Saba Sehrish, Seon-Hee, Seo, Elizabeth Sexton-Kennedy, Oksana Shadura, Bijaya Sharma, Varun Sharma, Suyog Shrestha, Ryan Simeon, Jack Simoni, Siddharth Singh, Kim Siyeon, Louise Skinnari, Jinseop Song, Simone Sottocornola, Alexandre Sousa, Sairam Sri Vatsavai, Giordon Stark, Justin Stevens, Tyler Stokes, Nadja Strobbe, Indara Suarez, Manjukrishna Suresh, Andrew Sutton, Holly Szumila-Vance, Vardan Tadevosyan, Anyes Taffard, Buddhiman Tamang, Hirohisa Tanaka, Erdinch Tatar, Abdel Nasser Tawfik, Vikas Teotia, Kazuhiro Terao, Mitanshu Thakore, Jesse Thaler, Ameya Thete, Inar Timiryasov, Anthony Timmins, Andrew Toler, Dat Tran, Nhan Tran, Patrick Tsang, Ho Fung Tsoi, Vakho Tsulaia, Pham Tuan, Christopher Tully, Shengquan Tuo, Richard Tyson, Darren Upton, Hilary Utaegbulam, Zoya Vallari, Peter van Gemmeren, Vassil Vassilev, Nikhilesh Venkatasubramanian, Renzo Vizarreta, Emmanouil Vourliotis, Ilija Vukotic, Carl Vuosalo, Liv Våge, Tammy Walton, Linyan Wan, Biao Wang, Gensheng Wang, Michael Wang, Yuxuan Wang, Gordon Watts, Yingjie Wei, Derek Weitzel, Shawn Westerdale, Andrew White, Leigh Whitehead, Michael Wilking, Mike Williams, Stephane Willocq, Jeffery Winkler, Frank Winklmeier, Holger Witte, Peter Wittich, Douglas Wright, Yongcheng Wu, Yujun Wu, Wei Xie, Fang Xu, Barbara Yaeggy, Zhen Yan, Liang Yang, Wei Yang, Alejandro Yankelevich, Yiheng Ye, Oguzhan Yer, Efe Yigitbasi, Shin-Shan Yu, Jon Zarling, Chao Zhang, Licheng Zhang, Larry Zhao, Junjie Zhu, Jure Zupan</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-02-19 18:06:13</h6>
+<p class='card-text'>Experimental particle physics seeks to understand the universe by probing its fundamental particles and forces and exploring how they govern the large-scale processes that shape cosmic evolution. This whitepaper presents a vision for how Artificial Intelligence (AI) can accelerate discovery in this field. We outline grand challenges that must be addressed to enable transformative breakthroughs and describe how current and planned experimental facilities can implement this vision to advance our understanding of the vast and complex physical world from the smallest to the largest scales. We show how facilities currently under construction, such as the HL-LHC, DUNE and soon EIC, can both benefit from and serve as proving grounds for this vision, while also enabling a longer-term goal for how future experiments -- like FCC-ee at CERN, IceCube-Gen2, a Muon Collider in the U.S., and smaller to mid-scale projects -- can be fully AI-native. We describe how a truly national-scale collaboration, jointly managed across large funding partners, and involving both DOE laboratories and universities, can make this happen.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2602.17574v1' target='_blank'>Hybrid System Planning using a Mixed-Integer ADMM Heuristic and Hybrid Zonotopes</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Joshua A. Robbins, Andrew F. Thompson, Jonah J. Glunt, Herschel C. Pangborn</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-02-19 17:32:37</h6>
+<p class='card-text'>Embedded optimization-based planning for hybrid systems is challenging due to the use of mixed-integer programming, which is computationally intensive and often sensitive to the specific numerical formulation. To address that challenge, this article proposes a framework for motion planning of hybrid systems that pairs hybrid zonotopes - an advanced set representation - with a new alternating direction method of multipliers (ADMM) mixed-integer programming heuristic. A general treatment of piecewise affine (PWA) system reachability analysis using hybrid zonotopes is presented and extended to formulate optimal planning problems. Sets produced using the proposed identities have lower memory complexity and tighter convex relaxations than equivalent sets produced from preexisting techniques. The proposed ADMM heuristic makes efficient use of the hybrid zonotope structure. For planning problems formulated as hybrid zonotopes, the proposed heuristic achieves improved convergence rates as compared to state-of-the-art mixed-integer programming heuristics. The proposed methods for hybrid system planning on embedded hardware are experimentally applied in a combined behavior and motion planning scenario for autonomous driving.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2602.17558v1' target='_blank'>RetouchIQ: MLLM Agents for Instruction-Based Image Retouching with Generalist Reward</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Qiucheng Wu, Jing Shi, Simon Jenni, Kushal Kafle, Tianyu Wang, Shiyu Chang, Handong Zhao</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-02-19 17:11:59</h6>
+<p class='card-text'>Recent advances in multimodal large language models (MLLMs) have shown great potential for extending vision-language reasoning to professional tool-based image editing, enabling intuitive and creative editing. A promising direction is to use reinforcement learning (RL) to enable MLLMs to reason about and execute optimal tool-use plans within professional image-editing software. However, training remains challenging due to the lack of reliable, verifiable reward signals that can reflect the inherently subjective nature of creative editing. In this work, we introduce RetouchIQ, a framework that performs instruction-based executable image editing through MLLM agents guided by a generalist reward model. RetouchIQ interprets user-specified editing intentions and generates corresponding, executable image adjustments, bridging high-level aesthetic goals with precise parameter control. To move beyond conventional, rule-based rewards that compute similarity against a fixed reference image using handcrafted metrics, we propose a generalist reward model, an RL fine-tuned MLLM that evaluates edited results through a set of generated metrics on a case-by-case basis. Then, the reward model provides scalar feedback through multimodal reasoning, enabling reinforcement learning with high-quality, instruction-consistent gradients. We curate an extended dataset with 190k instruction-reasoning pairs and establish a new benchmark for instruction-based image editing. Experiments show that RetouchIQ substantially improves both semantic consistency and perceptual quality over previous MLLM-based and diffusion-based editing systems. Our findings demonstrate the potential of generalist reward-driven MLLM agents as flexible, explainable, and executable assistants for professional image editing.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2602.17515v1' target='_blank'>RA-Nav: A Risk-Aware Navigation System Based on Semantic Segmentation for Aerial Robots in Unpredictable Environments</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Ziyi Zong, Xin Dong, Jinwu Xiang, Daochun Li, Zhan Tu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-02-19 16:26:43</h6>
+<p class='card-text'>Existing aerial robot navigation systems typically plan paths around static and dynamic obstacles, but fail to adapt when a static obstacle suddenly moves. Integrating environmental semantic awareness enables estimation of potential risks posed by suddenly moving obstacles. In this paper, we propose RA- Nav, a risk-aware navigation framework based on semantic segmentation. A lightweight multi-scale semantic segmentation network identifies obstacle categories in real time. These obstacles are further classified into three types: stationary, temporarily static, and dynamic. For each type, corresponding risk estimation functions are designed to enable real-time risk prediction, based on which a complete local risk map is constructed. Based on this map, the risk-informed path search algorithm is designed to guarantee planning that balances path efficiency and safety. Trajectory optimization is then applied to generate trajectories that are safe, smooth, and dynamically feasible. Comparative simulations demonstrate that RA-Nav achieves higher success rates than baselines in sudden obstacle state transition scenarios. Its effectiveness is further validated in simulations using real- world data.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2602.17512v1' target='_blank'>Dodging the Moose: Experimental Insights in Real-Life Automated Collision Avoidance</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Leila Gharavi, Simone Baldi, Yuki Hosomi, Tona Sato, Bart De Schutter, Binh-Minh Nguyen, Hiroshi Fujimoto</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-02-19 16:24:40</h6>
+<p class='card-text'>The sudden appearance of a static obstacle on the road, i.e. the moose test, is a well-known emergency scenario in collision avoidance for automated driving. Model Predictive Control (MPC) has long been employed for planning and control of automated vehicles in the state of the art. However, real-time implementation of automated collision avoidance in emergency scenarios such as the moose test remains unaddressed due to the high computational demand of MPC for evasive action in such hazardous scenarios. This paper offers new insights into real-time collision avoidance via the experimental imple- mentation of MPC for motion planning after a sudden and unexpected appearance of a static obstacle. As the state-of-the-art nonlinear MPC shows limited capability to provide an acceptable solution in real-time, we propose a human-like feed-forward planner to assist when the MPC optimization problem is either infeasible or unable to find a suitable solution due to the poor quality of its initial guess. We introduce the concept of maximum steering maneuver to design the feed-forward planner and mimic a human-like reaction after detecting the static obstacle on the road. Real-life experiments are conducted across various speeds and level of emergency using FPEV2-Kanon electric vehicle. Moreover, we demonstrate the effectiveness of our planning strategy via comparison with the state-of- the-art MPC motion planner.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2602.17434v1' target='_blank'>Multi-Agent Temporal Logic Planning via Penalty Functions and Block-Coordinate Optimization</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Eleftherios E. Vlahakis, Arash Bahari Kordabad, Lars Lindemann, Pantelis Sopasakis, Sadegh Soudjani, Dimos V. Dimarogonas</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-02-19 15:05:16</h6>
+<p class='card-text'>Multi-agent planning under Signal Temporal Logic (STL) is often hindered by collaborative tasks that lead to computational challenges due to the inherent high-dimensionality of the problem, preventing scalable synthesis with satisfaction guarantees. To address this, we formulate STL planning as an optimization program under arbitrary multi-agent constraints and introduce a penalty-based unconstrained relaxation that can be efficiently solved via a Block-Coordinate Gradient Descent (BCGD) method, where each block corresponds to a single agent's decision variables, thereby mitigating complexity. By utilizing a quadratic penalty function defined via smooth STL semantics, we show that BCGD iterations converge to a stationary point of the penalized problem under standard regularity assumptions. To enforce feasibility, the BCGD solver is embedded within a two-layer optimization scheme: inner BCGD updates are performed for a fixed penalty parameter, which is then increased in an outer loop to progressively improve multi-agent STL robustness. The proposed framework enables scalable computations and is validated through various complex multi-robot planning scenarios.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2602.17415v1' target='_blank'>Distributed Virtual Model Control for Scalable Human-Robot Collaboration in Shared Workspace</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yi Zhang, Omar Faris, Chapa Sirithunge, Kai-Fung Chu, Fumiya Iida, Fulvio Forni</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-02-19 14:45:10</h6>
+<p class='card-text'>We present a decentralized, agent agnostic, and safety-aware control framework for human-robot collaboration based on Virtual Model Control (VMC). In our approach, both humans and robots are embedded in the same virtual-component-shaped workspace, where motion is the result of the interaction with virtual springs and dampers rather than explicit trajectory planning. A decentralized, force-based stall detector identifies deadlocks, which are resolved through negotiation. This reduces the probability of robots getting stuck in the block placement task from up to 61.2% to zero in our experiments. The framework scales without structural changes thanks to the distributed implementation: in experiments we demonstrate safe collaboration with up to two robots and two humans, and in simulation up to four robots, maintaining inter-agent separation at around 20 cm. Results show that the method shapes robot behavior intuitively by adjusting control parameters and achieves deadlock-free operation across team sizes in all tested scenarios.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2602.17392v1' target='_blank'>Stackelberg Dynamic Location Planning under Cumulative Demand</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Warley Almeida Silva, Margarida Carvalho, Sanjay Dominik Jena</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-02-19 14:17:26</h6>
+<p class='card-text'>Dynamic facility location problems predominantly suppose a monopoly over the service or product provided. Nonetheless, this premise can be a severe oversimplification in the presence of market competitors, as customers may prefer facilities installed by one of them. The monopolistic assumption can particularly worsen planning performance when demand depends on prior location decisions of the market participants, namely, when unmet demand from one period carries over to the next. Such a demand behaviour creates an intrinsic relationship between customer demand and location decisions of all market participants, and requires the decision-maker to anticipate the competitor's response. This work studies a novel competitive facility location problem that combines cumulative demand and market competition to devise high-quality solutions. We propose bilevel mixed-integer programming formulations for two variants of our problem, prove that the optimistic variant is $Σ^{p}_{2}$-hard, and develop branch-and-cut algorithms with tightened value-function cuts that significantly outperform general-purpose bilevel solvers. Our results quantify the severe cost of planning under a monopolistic assumption (profit drops by half on average) and the gains from cooperation over competition (6% more joint profit), while drawing managerial guidelines on how instance attributes and duopolistic modelling choices shape robust location schedules.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2602.17375v1' target='_blank'>MDP Planning as Policy Inference</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:David Tolpin</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-02-19 13:56:31</h6>
+<p class='card-text'>We cast episodic Markov decision process (MDP) planning as Bayesian inference over _policies_. A policy is treated as the latent variable and is assigned an unnormalized probability of optimality that is monotone in its expected return, yielding a posterior distribution whose modes coincide with return-maximizing solutions while posterior dispersion represents uncertainty over optimal behavior. To approximate this posterior in discrete domains, we adapt variational sequential Monte Carlo (VSMC) to inference over deterministic policies under stochastic dynamics, introducing a sweep that enforces policy consistency across revisited states and couples transition randomness across particles to avoid confounding from simulator noise. Acting is performed by posterior predictive sampling, which induces a stochastic control policy through a Thompson-sampling interpretation rather than entropy regularization. Across grid worlds, Blackjack, Triangle Tireworld, and Academic Advising, we analyze the structure of inferred policy distributions and compare the resulting behavior to discrete Soft Actor-Critic, highlighting qualitative and statistical differences that arise from policy-level uncertainty.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2602.17365v1' target='_blank'>Computer-Using World Model</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yiming Guan, Rui Yu, John Zhang, Lu Wang, Chaoyun Zhang, Liqun Li, Bo Qiao, Si Qin, He Huang, Fangkai Yang, Pu Zhao, Lukas Wutschitz, Samuel Kessler, Huseyin A Inan, Robert Sim, Saravan Rajmohan, Qingwei Lin, Dongmei Zhang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-02-19 13:48:29</h6>
+<p class='card-text'>Agents operating in complex software environments benefit from reasoning about the consequences of their actions, as even a single incorrect user interface (UI) operation can derail long, artifact-preserving workflows. This challenge is particularly acute for computer-using scenarios, where real execution does not support counterfactual exploration, making large-scale trial-and-error learning and planning impractical despite the environment being fully digital and deterministic. We introduce the Computer-Using World Model (CUWM), a world model for desktop software that predicts the next UI state given the current state and a candidate action. CUWM adopts a two-stage factorization of UI dynamics: it first predicts a textual description of agent-relevant state changes, and then realizes these changes visually to synthesize the next screenshot. CUWM is trained on offline UI transitions collected from agents interacting with real Microsoft Office applications, and further refined with a lightweight reinforcement learning stage that aligns textual transition predictions with the structural requirements of computer-using environments. We evaluate CUWM via test-time action search, where a frozen agent uses the world model to simulate and compare candidate actions before execution. Across a range of Office tasks, world-model-guided test-time scaling improves decision quality and execution robustness.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2602.17199v1' target='_blank'>Nonlinear Predictive Control of the Continuum and Hybrid Dynamics of a Suspended Deformable Cable for Aerial Pick and Place</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Antonio Rapuano, Yaolei Shen, Federico Califano, Chiara Gabellieri, Antonio Franchi</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-02-19 09:38:32</h6>
+<p class='card-text'>This paper presents a framework for aerial manipulation of an extensible cable that combines a high-fidelity model based on partial differential equations (PDEs) with a reduced-order representation suitable for real-time control. The PDEs are discretised using a finite-difference method, and proper orthogonal decomposition is employed to extract a reduced-order model (ROM) that retains the dominant deformation modes while significantly reducing computational complexity. Based on this ROM, a nonlinear model predictive control scheme is formulated, capable of stabilizing cable oscillations and handling hybrid transitions such as payload attachment and detachment. Simulation results confirm the stability, efficiency, and robustness of the ROM, as well as the effectiveness of the controller in regulating cable dynamics under a range of operating conditions. Additional simulations illustrate the application of the ROM for trajectory planning in constrained environments, demonstrating the versatility of the proposed approach. Overall, the framework enables real-time, dynamics-aware control of unmanned aerial vehicles (UAVs) carrying suspended flexible cables.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2602.17112v1' target='_blank'>Multi-Ecosystem Modeling of OSS Project Sustainability</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Arjun Ashok, Nafiz Imtiaz Khan, Swati Singhvi, Stefan Stanciulescu, Zhouhao Wang, Vladimir Filkov</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-02-19 06:17:54</h6>
+<p class='card-text'>Many OSS projects join foundations such as Apache, Eclipse, and OSGeo, to aid their immediate plans and improve long-term prospects by getting governance advice, incubation support, and community-building mechanisms. But foundations differ in their policies, funding models, and support strategies. Moreover, since projects joining these foundations are diverse, coming at different lifecycle stages and having different needs, it can be challenging to decide on the appropriate project-foundation match and on the project-specific plan for sustainability.
+  Here, we present an empirical study and quantitative analysis of the sustainability of incubator projects in the Apache, Eclipse, and OSGeo foundations, and, additionally, of OSS projects from GitHub outside of foundations. We develop foundation-specific sustainability models and a project triage, based on projects' sociotechnical trace profiles, and demonstrate their effectiveness across the foundations. Our results show that our models with triage can effectively forecast sustainability outcomes not only within but across foundations. In addition, the generalizability of the framework allows us to apply the approach to GitHub projects outside the foundations. We complement our findings with actionable recovery strategies from previous work and apply them to case studies of failed incubator projects. Our study highlights the value of sociotechnical frameworks in characterizing and addressing software project sustainability issues.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2602.17098v1' target='_blank'>Deep Reinforcement Learning for Optimal Portfolio Allocation: A Comparative Study with Mean-Variance Optimization</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Srijan Sood, Kassiani Papasotiriou, Marius Vaiciulis, Tucker Balch</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-02-19 05:47:23</h6>
+<p class='card-text'>Portfolio Management is the process of overseeing a group of investments, referred to as a portfolio, with the objective of achieving predetermined investment goals. Portfolio optimization is a key component that involves allocating the portfolio assets so as to maximize returns while minimizing risk taken. It is typically carried out by financial professionals who use a combination of quantitative techniques and investment expertise to make decisions about the portfolio allocation.
+  Recent applications of Deep Reinforcement Learning (DRL) have shown promising results when used to optimize portfolio allocation by training model-free agents on historical market data. Many of these methods compare their results against basic benchmarks or other state-of-the-art DRL agents but often fail to compare their performance against traditional methods used by financial professionals in practical settings. One of the most commonly used methods for this task is Mean-Variance Portfolio Optimization (MVO), which uses historical time series information to estimate expected asset returns and covariances, which are then used to optimize for an investment objective.
+  Our work is a thorough comparison between model-free DRL and MVO for optimal portfolio allocation. We detail the specifics of how to make DRL for portfolio optimization work in practice, also noting the adjustments needed for MVO. Backtest results demonstrate strong performance of the DRL agent across many metrics, including Sharpe ratio, maximum drawdowns, and absolute returns.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2602.17049v1' target='_blank'>IntentCUA: Learning Intent-level Representations for Skill Abstraction and Multi-Agent Planning in Computer-Use Agents</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Seoyoung Lee, Seobin Yoon, Seongbeen Lee, Yoojung Chun, Dayoung Park, Doyeon Kim, Joo Yong Sim</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-02-19 03:42:15</h6>
+<p class='card-text'>Computer-use agents operate over long horizons under noisy perception, multi-window contexts, evolving environment states. Existing approaches, from RL-based planners to trajectory retrieval, often drift from user intent and repeatedly solve routine subproblems, leading to error accumulation and inefficiency. We present IntentCUA, a multi-agent computer-use framework designed to stabilize long-horizon execution through intent-aligned plan memory. A Planner, Plan-Optimizer, and Critic coordinate over shared memory that abstracts raw interaction traces into multi-view intent representations and reusable skills. At runtime, intent prototypes retrieve subgroup-aligned skills and inject them into partial plans, reducing redundant re-planning and mitigating error propagation across desktop applications. In end-to-end evaluations, IntentCUA achieved a 74.83% task success rate with a Step Efficiency Ratio of 0.91, outperforming RL-based and trajectory-centric baselines. Ablations show that multi-view intent abstraction and shared plan memory jointly improve execution stability, with the cooperative multi-agent loop providing the largest gains on long-horizon tasks. These results highlight that system-level intent abstraction and memory-grounded coordination are key to reliable and efficient desktop automation in large, dynamic environments.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js'></script>
+</body>
+</html>
