@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>planning - 2026-03-05</title>
+<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap' rel='stylesheet'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css'>
+<style>
+body {
+font-family: 'Roboto', sans-serif;
+background-color: #f5f7fa;
+padding: 20px;
+}
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.card-title {
+    font-weight: 700;
+}
+.card:hover {
+    transform: scale(1.02);
+    transition: 0.3s ease-in-out;
+}
+</style>
+</head>
+<body>
+<div class='container'>
+<h1 class='text-center my-4'><i class='fas fa-book'></i>planning - 2026-03-05</h1>
+<div class='row'>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2603.04379v1' target='_blank'>Helios: Real Real-Time Long Video Generation Model</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Shenghai Yuan, Yuanyang Yin, Zongjian Li, Xinwei Huang, Xiao Yang, Li Yuan</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-03-04 18:45:21</h6>
+<p class='card-text'>We introduce Helios, the first 14B video generation model that runs at 19.5 FPS on a single NVIDIA H100 GPU and supports minute-scale generation while matching the quality of a strong baseline. We make breakthroughs along three key dimensions: (1) robustness to long-video drifting without commonly used anti-drifting heuristics such as self-forcing, error-banks, or keyframe sampling; (2) real-time generation without standard acceleration techniques such as KV-cache, sparse/linear attention, or quantization; and (3) training without parallelism or sharding frameworks, enabling image-diffusion-scale batch sizes while fitting up to four 14B models within 80 GB of GPU memory. Specifically, Helios is a 14B autoregressive diffusion model with a unified input representation that natively supports T2V, I2V, and V2V tasks. To mitigate drifting in long-video generation, we characterize typical failure modes and propose simple yet effective training strategies that explicitly simulate drifting during training, while eliminating repetitive motion at its source. For efficiency, we heavily compress the historical and noisy context and reduce the number of sampling steps, yielding computational costs comparable to -- or lower than -- those of 1.3B video generative models. Moreover, we introduce infrastructure-level optimizations that accelerate both inference and training while reducing memory consumption. Extensive experiments demonstrate that Helios consistently outperforms prior methods on both short- and long-video generation. We plan to release the code, base model, and distilled model to support further development by the community.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2603.04329v1' target='_blank'>Gaussian Mixture-Based Inverse Perception Contract for Uncertainty-Aware Robot Navigation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Bingyao Du, Joonkyung Kim, Yiwei Lyu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-03-04 17:48:18</h6>
+<p class='card-text'>Reliable navigation in cluttered environments requires perception outputs that are not only accurate but also equipped with uncertainty sets suitable for safe control. An inverse perception contract (IPC) provides such a connection by mapping perceptual estimates to sets that contain the ground truth with high confidence. Existing IPC formulations, however, instantiate uncertainty as a single ellipsoidal set and rely on deterministic trust scores to guide robot motion. Such a representation cannot capture the multi-modal and irregular structure of fine-grained perception errors, often resulting in over-conservative sets and degraded navigation performance. In this work, we introduce Gaussian Mixture-based Inverse Perception Contract (GM-IPC), which extends IPC to represent uncertainty with unions of ellipsoidal confidence sets derived from Gaussian mixture models. This design moves beyond deterministic single-set abstractions, enabling fine-grained, multi-modal, and non-convex error structures to be captured with formal guarantees. A learning framework is presented that trains GM-IPC to account for probabilistic inclusion, distribution matching, and empty-space penalties, ensuring both validity and compactness of the predicted sets. We further show that the resulting uncertainty characterizations can be leveraged in downstream planning frameworks for real-time safe navigation, enabling less conservative and more adaptive robot motion while preserving safety in a probabilistic manner.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2603.04305v1' target='_blank'>Perception-Aware Time-Optimal Planning for Quadrotor Waypoint Flight</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Chao Qin, Jiaxu Xing, Rudolf Reiter, Angel Romero, Yifan Lin, Hugh H. -T. Liu, Davide Scaramuzza</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-03-04 17:22:16</h6>
+<p class='card-text'>Agile quadrotor flight pushes the limits of control, actuation, and onboard perception. While time-optimal trajectory planning has been extensively studied, existing approaches typically neglect the tight coupling between vehicle dynamics, environmental geometry, and the visual requirements of onboard state estimation. As a result, trajectories that are dynamically feasible may fail in closed-loop execution due to degraded visual quality. This paper introduces a unified time-optimal trajectory optimization framework for vision-based quadrotors that explicitly incorporates perception constraints alongside full nonlinear dynamics, rotor actuation limits, aerodynamic effects, camera field-of-view constraints, and convex geometric gate representations.
+  The proposed formulation solves minimum-time lap trajectories for arbitrary racetracks with diverse gate shapes and orientations, while remaining numerically robust and computationally efficient. We derive an information-theoretic position uncertainty metric to quantify visual state-estimation quality and integrate it into the planner through three perception objectives: position uncertainty minimization, sequential field-of-view constraints, and look-ahead alignment. This enables systematic exploration of the trade-offs between speed and perceptual reliability.
+  To accurately track the resulting perception-aware trajectories, we develop a model predictive contouring tracking controller that separates lateral and progress errors. Experiments demonstrate real-world flight speeds up to 9.8 m/s with 0.07 m average tracking error, and closed-loop success rates improved from 55% to 100% on a challenging Split-S course. The proposed system provides a scalable benchmark for studying the fundamental limits of perception-aware, time-optimal autonomous flight.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2603.04291v1' target='_blank'>CubeComposer: Spatio-Temporal Autoregressive 4K 360° Video Generation from Perspective Video</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Lingen Li, Guangzhi Wang, Xiaoyu Li, Zhaoyang Zhang, Qi Dou, Jinwei Gu, Tianfan Xue, Ying Shan</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-03-04 17:06:56</h6>
+<p class='card-text'>Generating high-quality 360° panoramic videos from perspective input is one of the crucial applications for virtual reality (VR), whereby high-resolution videos are especially important for immersive experience. Existing methods are constrained by computational limitations of vanilla diffusion models, only supporting $\leq$ 1K resolution native generation and relying on suboptimal post super-resolution to increase resolution. We introduce CubeComposer, a novel spatio-temporal autoregressive diffusion model that natively generates 4K-resolution 360° videos. By decomposing videos into cubemap representations with six faces, CubeComposer autoregressively synthesizes content in a well-planned spatio-temporal order, reducing memory demands while enabling high-resolution output. Specifically, to address challenges in multi-dimensional autoregression, we propose: (1) a spatio-temporal autoregressive strategy that orchestrates 360° video generation across cube faces and time windows for coherent synthesis; (2) a cube face context management mechanism, equipped with a sparse context attention design to improve efficiency; and (3) continuity-aware techniques, including cube-aware positional encoding, padding, and blending to eliminate boundary seams. Extensive experiments on benchmark datasets demonstrate that CubeComposer outperforms state-of-the-art methods in native resolution and visual quality, supporting practical VR application scenarios. Project page: https://lg-li.github.io/project/cubecomposer</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2603.04289v1' target='_blank'>IPD: Boosting Sequential Policy with Imaginary Planning Distillation in Offline Reinforcement Learning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yihao Qin, Yuanfei Wang, Hang Zhou, Peiran Liu, Hao Dong, Yiding Ji</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-03-04 17:05:39</h6>
+<p class='card-text'>Decision transformer based sequential policies have emerged as a powerful paradigm in offline reinforcement learning (RL), yet their efficacy remains constrained by the quality of static datasets and inherent architectural limitations. Specifically, these models often struggle to effectively integrate suboptimal experiences and fail to explicitly plan for an optimal policy. To bridge this gap, we propose \textbf{Imaginary Planning Distillation (IPD)}, a novel framework that seamlessly incorporates offline planning into data generation, supervised training, and online inference. Our framework first learns a world model equipped with uncertainty measures and a quasi-optimal value function from the offline data. These components are utilized to identify suboptimal trajectories and augment them with reliable, imagined optimal rollouts generated via Model Predictive Control (MPC). A Transformer-based sequential policy is then trained on this enriched dataset, complemented by a value-guided objective that promotes the distillation of the optimal policy. By replacing the conventional, manually-tuned return-to-go with the learned quasi-optimal value function, IPD improves both decision-making stability and performance during inference. Empirical evaluations on the D4RL benchmark demonstrate that IPD significantly outperforms several state-of-the-art value-based and transformer-based offline RL methods across diverse tasks.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2603.04284v1' target='_blank'>OmniPlanner: Universal Exploration and Inspection Path Planning across Robot Morphologies</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Angelos Zacharia, Mihir Dharmadhikari, Mohit Singh, Kostas Alexis</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-03-04 17:02:26</h6>
+<p class='card-text'>Autonomous robotic systems are increasingly deployed for mapping, monitoring, and inspection in complex and unstructured environments. However, most existing path planning approaches remain domain-specific (i.e., either on air, land, or sea), limiting their scalability and cross-platform applicability. This article presents OmniPlanner, a unified planning framework for autonomous exploration and inspection across aerial, ground, and underwater robots. The method integrates volumetric exploration and viewpoint-based inspection, alongside target reach behaviors within a single modular architecture, complemented by a platform abstraction layer that captures morphology-specific sensing, traversability and motion constraints. This enables the same planning strategy to generalize across distinct mobility domains with minimal retuning. The framework is validated through extensive simulation studies and field deployments in underground mines, industrial facilities, forests, submarine bunkers, and structured outdoor environments. Across these diverse scenarios, OmniPlanner demonstrates robust performance, consistent cross-domain generalization, and improved exploration and inspection efficiency compared to representative state-of-the-art baselines.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2603.04189v1' target='_blank'>Enhancing Power Systems Transmission Adequacy via Optimal BESS Siting and Sizing using Benders Decomposition with Feasibility Cuts</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Ginevra Larroux, Matthieu Jacobs, Keyu Jia, Fabrizio Sossan, Mario Paolone</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-03-04 15:41:15</h6>
+<p class='card-text'>This work presents a general framework for the operationally driven optimal siting and sizing of battery energy storage systems in power transmission networks, aimed at enhancing their resource adequacy. The approach considers multi-period planning horizons, enforces network constraints at high temporal resolution, and targets large-scale meshed systems. The resulting computationally complex mixed-integer non-linear programming problem is reformulated as a mixed-integer second-order cone programming problem and solved via Generalized Benders Decomposition, with feasibility cuts enabling congestion management and voltage regulation under binding network limits. A tailored heuristic recovers an alternating-current power-flow-feasible operating point from the relaxed solution. The proposed formulation is parallelizable, yielding excellent computational performance, while featuring rigorous guarantees of convergence.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2603.04169v1' target='_blank'>Efficient Query Rewrite Rule Discovery via Standardized Enumeration and Learning-to-Rank</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yuan Zhang, Yuxing Chen, Yuekun Yu, Jinbin Huang, Rui Mao, Anqun Pan, Lixiong Zheng, Jianbin Qin</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-03-04 15:25:20</h6>
+<p class='card-text'>Query rewriting is essential for database performance optimization, but existing automated rule enumeration methods suffer from exponential search spaces, severe redundancy, and poor scalability, especially when handling complex query plans with five or more nodes, where a node represents an operator in the plan tree. We present SLER, a scalable system that enables efficient and effective rewrite rule discovery by combining standardized template enumeration with a learning to rank approach. SLER uses standardized templates, abstractions of query plans with operator structures preserved but data specific details removed, to eliminate structural redundancies and drastically reduce the search space. A learn to rank model guides enumeration by pre filtering the most promising template pairs, enabling scalable rule generation for large node templates. Evaluated on over 11000 real world SQL queries from both open source and commercial workloads, SLER has automatically constructed a rewrite rule repository exceeding 1 million rules - the largest empirically validated rewrite rule library to date. Notably, at the scale of one million rules, SLER supports query plan templates with complexity up to channel level depth. This unprecedented scale opens the door to discovering highly intricate transformations across diverse query patterns. Critically, SLER's template driven design and learned ranking mechanism are inherently extensible, allowing seamless integration of new and complex operators, paving the way for next generation optimizers powered by comprehensive, adaptive rule spaces.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2603.04158v1' target='_blank'>GarmentPile++: Affordance-Driven Cluttered Garments Retrieval with Vision-Language Reasoning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Mingleyang Li, Yuran Wang, Yue Chen, Tianxing Chen, Jiaqi Liang, Zishun Shen, Haoran Lu, Ruihai Wu, Hao Dong</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-03-04 15:13:40</h6>
+<p class='card-text'>Garment manipulation has attracted increasing attention due to its critical role in home-assistant robotics. However, the majority of existing garment manipulation works assume an initial state consisting of only one garment, while piled garments are far more common in real-world settings. To bridge this gap, we propose a novel garment retrieval pipeline that can not only follow language instruction to execute safe and clean retrieval but also guarantee exactly one garment is retrieved per attempt, establishing a robust foundation for the execution of downstream tasks (e.g., folding, hanging, wearing). Our pipeline seamlessly integrates vision-language reasoning with visual affordance perception, fully leveraging the high-level reasoning and planning capabilities of VLMs alongside the generalization power of visual affordance for low-level actions. To enhance the VLM's comprehensive awareness of each garment's state within a garment pile, we employ visual segmentation model (SAM2) to execute object segmentation on the garment pile for aiding VLM-based reasoning with sufficient visual cues. A mask fine-tuning mechanism is further integrated to address scenarios where the initial segmentation results are suboptimal. In addition, a dual-arm cooperation framework is deployed to address cases involving large or long garments, as well as excessive garment sagging caused by incorrect grasping point determination, both of which are strenuous for a single arm to handle. The effectiveness of our pipeline are consistently demonstrated across diverse tasks and varying scenarios in both real-world and simulation environments. Project page: https://garmentpile2.github.io/.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2603.04151v1' target='_blank'>New Robotic Telescope: The big eye to observe the transient Universe</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:C. M. Gutiérrez, J. Barrera, J. Bento, D. Copley, C. M. Copperwheat, F. J. De Cos, M. Escriche, J. J. Fernández-Valdivia, A. P. Garner, J. Gracia, D. G. Heffernan-Clarke, H. E. Jermak, J. León Gil, A. M. McGrath, C. Miossec, A. Oria, A. Ranjbar, R. Rebolo, C. Rodríguez-Pereira, F. Sánchez-Lasheras, R. J. Smith, I. A. Steele, M. Torres</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-03-04 15:05:37</h6>
+<p class='card-text'>NRT is an international project to build and operate the world's largest robotic telescope. The telescope will have a segmented primary mirror with an equivalent diameter of 4 m, a set of simultaneously mounted optical and near-infrared instruments, and a response time of less than 30 seconds. The project builds on the experience gained with the successful twenty-year operation of the Liverpool telescope, and with the GTC optics and control system. All of the above together with the excellent conditions for astronomical observation of La Palma, represents a solid base and guarantees that NRT will be one of the leading facilities in the field of time domain astronomy. This contribution will analyze the current status of the project with special emphasis on the development of its optics, and the plans for its construction and operation.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2603.04088v1' target='_blank'>Wasserstein Gradient Flows of semi-discret energies: evolution of urban areas anduniform quantization</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Joao Miguel Machado</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-03-04 13:58:54</h6>
+<p class='card-text'>We study the Wasserstein gradient flow of semi-discrete energies in the space of probability measures, that is functionals depending on two measures-one being an absolutely continuous density and the other an atomic measure. These energies appear naturally in the field of urban planning. This is done via the celebrated JKO scheme, for which we prove convergence to a limiting system composed of a parabolic PDE with singular advection coupled with an ODE, also presenting singular dynamics. This is first done under more general assumptions using classical tools, and in a second moment convergence is proven to hold in $L^2_tH^1_x$ for the cases of linear and Porous-Medium type diffusions. We then pass to the study of some qualitative properties of this system, such as the convergence of the atoms towards the baricenters of their corresponding Laguerre cells. We finish this work with extensive numerical simulations that aid in formulating conjectures for the qualitative behavior of this system; in the case of linear diffusion, for instance, we observe a dynamic crystallization phenomenon.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2603.04058v1' target='_blank'>TumorFlow: Physics-Guided Longitudinal MRI Synthesis of Glioblastoma Growth</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Valentin Biller, Niklas Bubeck, Lucas Zimmer, Ayhan Can Erdur, Sandeep Nagar, Anke Meyer-Baese, Daniel Rückert, Benedikt Wiestler, Jonas Weidner</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-03-04 13:38:24</h6>
+<p class='card-text'>Glioblastoma exhibits diverse, infiltrative, and patient-specific growth patterns that are only partially visible on routine MRI, making it difficult to reliably assess true tumor extent and personalize treatment planning and follow-up. We present a biophysically-conditioned generative framework that synthesizes biologically realistic 3D brain MRI volumes from estimated, spatially continuous tumor-concentration fields. Our approach combines a generative model with tumor-infiltration maps that can be propagated through time using a biophysical growth model, enabling fine-grained control over tumor shape and growth while preserving patient anatomy. This enables us to synthesize consistent tumor growth trajectories directly in the space of real patients, providing interpretable, controllable estimation of tumor infiltration and progression beyond what is explicitly observed in imaging. We evaluate the framework on longitudinal glioblastoma cases and demonstrate that it can generate temporally coherent sequences with realistic changes in tumor appearance and surrounding tissue response. These results suggest that integrating mechanistic tumor growth priors with modern generative modeling can provide a practical tool for patient-specific progression visualization and for generating controlled synthetic data to support downstream neuro-oncology workflows. In longitudinal extrapolation, we achieve a consistent 75% Dice overlap with the biophysical model while maintaining a constant PSNR of 25 in the surrounding tissue. Our code is available at: https://github.com/valentin-biller/lgm.git</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2603.04042v1' target='_blank'>Low-Altitude Agentic Networks for Optical Wireless Communication and Sensing: An Oceanic Scenario</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Tianqi Mao, Jiayue Liu, Zeping Sui, Leyu Cao, Xiao Liang, Dezhi Zheng, Zhaocheng Wang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-03-04 13:23:33</h6>
+<p class='card-text'>The cross-domain oceanic connectivity ranging from underwater to the sky has become increasingly indispensable for a plethora of data-consuming maritime applications, such as maritime meteorological monitoring and offshore exploration. However, broadband implementations can be severely hindered by the isolation from terrestrial networks, limited satellite resources, and the fundamental inability of radio waves to bridge the water-air interface at high rates. To this end, this paper introduces an optical network bridging underwater, air and near space, which features a number of cooperative low-altitude platforms (LAPs), serving as compute-capable, sensing-aware, and mission-adaptive agents. The network architecture consists of three scenario-specific segments, i.e., water-air direct link, low-altitude mesh network, and the near-space access network. With coordinate sensing and intelligent control, the system tightly couples beam tracking and resource optimization, enabling resilient networking under high mobility and harsh maritime dynamics. Furthermore, we review enabling technologies spanning from water-air channel modeling, adaptive beam alignment under sea-surface perturbations, to swarm-intelligence networking for decentralized control, integrated pose-topology planning, and optical Integrated sensing and communication (ISAC) for near-space target detection and beam alignment. Finally, open issues are also highlighted, constituting a clear roadmap toward scalable, secure, and ultra-broadband oceanic optical networks.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2603.04024v1' target='_blank'>Volumetric Directional Diffusion: Anchoring Uncertainty Quantification in Anatomical Consensus for Ambiguous Medical Image Segmentation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Chao Wu, Kangxian Xie, Mingchen Gao</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-03-04 12:58:43</h6>
+<p class='card-text'>Equivocal 3D lesion segmentation exhibits high inter-observer variability. Conventional deterministic models ignore this aleatoric uncertainty, producing over-confident masks that obscure clinical risks. Conversely, while generative methods (e.g., standard diffusion) capture sample diversity, recovering complex topology from pure noise frequently leads to severe structural fractures and out-of-distribution anatomical hallucinations. To resolve this fidelity-diversity trade-off, we propose Volumetric Directional Diffusion (VDD). Unlike standard diffusion models that denoise isotropic Gaussian noise, VDD mathematically anchors the generative trajectory to a deterministic consensus prior. By restricting the generative search space to iteratively predict a 3D boundary residual field, VDD accurately explores the fine-grained geometric variations inherent in expert disagreements without risking topological collapse. Extensive validation on three multi-rater datasets (LIDC-IDRI, KiTS21, and ISBI 2015) demonstrates that VDD achieves state-of-the-art uncertainty quantification (significantly improving GED and CI) while remaining highly competitive in segmentation accuracy against deterministic upper bounds. Ultimately, VDD provides clinicians with anatomically coherent uncertainty maps, enabling safer decision-making and mitigating risks in downstream tasks (e.g., radiotherapy planning or surgical margin assessment).</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2603.03957v1' target='_blank'>ArthroCut: Autonomous Policy Learning for Robotic Bone Resection in Knee Arthroplasty</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Xu Lu, Yiling Zhang, Wenquan Cheng, Longfei Ma, Fang Chen, Hongen Liao</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-03-04 11:36:21</h6>
+<p class='card-text'>Despite rapid commercialization of surgical robots, their autonomy and real-time decision-making remain limited in practice. To address this gap, we propose ArthroCut, an autonomous policy learning framework that upgrades knee arthroplasty robots from assistive execution to context-aware action generation. ArthroCut fine-tunes a Qwen--VL backbone on a self-built, time-synchronized multimodal dataset from 21 complete cases (23,205 RGB--D pairs), integrating preoperative CT/MR, intraoperative NDI tracking of bones and end effector, RGB--D surgical video, robot state, and textual intent. The method operates on two complementary token families -- Preoperative Imaging Tokens (PIT) to encode patient-specific anatomy and planned resection planes, and Time-Aligned Surgical Tokens (TAST) to fuse real-time visual, geometric, and kinematic evidence -- and emits an interpretable action grammar under grammar/safety-constrained decoding. In bench-top experiments on a knee prosthesis across seven trials, ArthroCut achieves an average success rate of 86% over the six standard resections, significantly outperforming strong baselines trained under the same protocol. Ablations show that TAST is the principal driver of reliability while PIT provides essential anatomical grounding, and their combination yields the most stable multi-plane execution. These results indicate that aligning preoperative geometry with time-aligned intraoperative perception and translating that alignment into tokenized, constrained actions is an effective path toward robust, interpretable autonomy in orthopedic robotic surgery.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2603.03753v1' target='_blank'>Agentic Peer-to-Peer Networks: From Content Distribution to Capability and Action Sharing</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Taotao Wang, Lizhao You, Jingwen Tong, Chonghe Zhao, Shengli Zhang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-03-04 05:58:44</h6>
+<p class='card-text'>The ongoing shift of AI models from centralized cloud APIs to local AI agents on edge devices is enabling \textit{Client-Side Autonomous Agents (CSAAs)} -- persistent personal agents that can plan, access local context, and invoke tools on behalf of users. As these agents begin to collaborate by delegating subtasks directly between clients, they naturally form \emph{Agentic Peer-to-Peer (P2P) Networks}. Unlike classic file-sharing overlays where the exchanged object is static, hash-indexed content (e.g., files in BitTorrent), agentic overlays exchange \emph{capabilities and actions} that are heterogeneous, state-dependent, and potentially unsafe if delegated to untrusted peers. This article outlines the networking foundations needed to make such collaboration practical. We propose a plane-based reference architecture that decouples connectivity/identity, semantic discovery, and execution. Besides, we introduce signed, soft-state capability descriptors to support intent- and constraint-aware discovery. To cope with adversarial settings, we further present a \textit{tiered verification} spectrum: Tier~1 relies on reputation signals, Tier~2 applies lightweight canary challenge-response with fallback selection, and Tier~3 requires evidence packages such as signed tool receipts/traces (and, when applicable, attestation). Using a discrete-event simulator that models registry-based discovery, Sybil-style index poisoning, and capability drift, we show that tiered verification substantially improves end-to-end workflow success while keeping discovery latency near-constant and control-plane overhead modest.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2603.03745v1' target='_blank'>RAGNav: A Retrieval-Augmented Topological Reasoning Framework for Multi-Goal Visual-Language Navigation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Ling Luo, Qiangian Bai</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-03-04 05:31:33</h6>
+<p class='card-text'>Vision-Language Navigation (VLN) is evolving from single-point pathfinding toward the more challenging Multi-Goal VLN. This task requires agents to accurately identify multiple entities while collaboratively reasoning over their spatial-physical constraints and sequential execution order. However, generic Retrieval-Augmented Generation (RAG) paradigms often suffer from spatial hallucinations and planning drift when handling multi-object associations due to the lack of explicit spatial modeling.To address these challenges, we propose RAGNav, a framework that bridges the gap between semantic reasoning and physical structure. The core of RAGNav is a Dual-Basis Memory system, which integrates a low-level topological map for maintaining physical connectivity with a high-level semantic forest for hierarchical environment abstraction. Building on this representation, the framework introduces an anchor-guided conditional retrieval and a topological neighbor score propagation mechanism. This approach facilitates the rapid screening of candidate targets and the elimination of semantic noise, while performing semantic calibration by leveraging the physical associations inherent in the topological neighborhood.This mechanism significantly enhances the capability of inter-target reachability reasoning and the efficiency of sequential planning. Experimental results demonstrate that RAGNav achieves state-of-the-art (SOTA) performance in complex multi-goal navigation tasks.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2603.03701v1' target='_blank'>UrbanHuRo: A Two-Layer Human-Robot Collaboration Framework for the Joint Optimization of Heterogeneous Urban Services</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Tonmoy Dey, Lin Jiang, Zheng Dong, Guang Wang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-03-04 04:02:28</h6>
+<p class='card-text'>In the vision of smart cities, technologies are being developed to enhance the efficiency of urban services and improve residents' quality of life. However, most existing research focuses on optimizing individual services in isolation, without adequately considering reciprocal interactions among heterogeneous urban services that could yield higher efficiency and improved resource utilization. For example, human couriers could collect traffic and air quality data along their delivery routes, while sensing robots could assist with on-demand delivery during peak hours, enhancing both sensing coverage and delivery efficiency. However, the joint optimization of different urban services is challenging due to potentially conflicting objectives and the need for real-time coordination in dynamic environments. In this paper, we propose UrbanHuRo, a two-layer human-robot collaboration framework for joint optimization of heterogeneous urban services, demonstrated through crowdsourced delivery and urban sensing. UrbanHuRo includes two key designs: (i) a scalable distributed MapReduce-based K-submodular maximization module for efficient order dispatch, and (ii) a deep submodular reward reinforcement learning algorithm for sensing route planning. Experimental evaluations on real-world datasets from a food delivery platform demonstrate that UrbanHuRo improves sensing coverage by 29.7% and courier income by 39.2% on average in most settings, while also significantly reducing the number of overdue orders.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2603.03664v1' target='_blank'>Principled Learning-to-Communicate with Quasi-Classical Information Structures</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Xiangyu Liu, Haoyi You, Kaiqing Zhang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-03-04 02:36:18</h6>
+<p class='card-text'>Learning-to-communicate (LTC) in partially observable environments has received increasing attention in deep multi-agent reinforcement learning, where the control and communication strategies are jointly learned. Meanwhile, the impact of communication on decision-making has been extensively studied in control theory. In this paper, we seek to formalize and better understand LTC by bridging these two lines of work, through the lens of information structures (ISs). To this end, we formalize LTC in decentralized partially observable Markov decision processes (Dec-POMDPs) under the common-information-based framework from decentralized stochastic control, and classify LTC problems based on the ISs before (additional) information sharing. We first show that non-classical LTCs are computationally intractable in general, and thus focus on quasi-classical (QC) LTCs. We then propose a series of conditions for QC LTCs, under which LTCs preserve the QC IS after information sharing, whereas violating which can cause computational hardness in general. Further, we develop provable planning and learning algorithms for QC LTCs, and establish quasi-polynomial time and sample complexities for several QC LTC examples that satisfy the above conditions. Along the way, we also establish results on the relationship between (strictly) QC IS and the condition of having strategy-independent common-information-based beliefs (SI-CIBs), as well as on solving Dec-POMDPs without computationally intractable oracles but beyond those with SI-CIBs, which may be of independent interest.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2603.03641v1' target='_blank'>The Evolution of Eco-routing under Population Growth: Evidence from Six U.S. Cities</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Zhiheng Shi, Xiaohan Xu, Wei Ma, Kairui Feng, Bin He</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-03-04 02:05:02</h6>
+<p class='card-text'>Rapid urban population growth drives car travel demand, increasing transport carbon emissions and posing a critical challenge to sustainable development. Although existing studies have demonstrated that eco-routing can reduce individual emissions, research gaps remain. On the one hand, such personal reductions have a negligible impact on overall emissions, and cannot be simply aggregated to capture the complex effects of large-scale eco-routing. On the other hand, under population growth, the long-term effectiveness of eco-routing, as well as the evolution of its efficiency and traveler route choice, remain underexplored. To address these limitations, this study proposes Time-Only and Time-Carbon user equilibrium (UE) models, integrates them with a demand forecasting method for simulating future network traffic, and designs multi-dimensional metrics to characterize urban dynamics. Using real-world road networks, commuting origin-destination (OD) demand, and population projections under various shared socioeconomic pathways (SSPs) for six representative U.S. cities as a case study, we conduct a comprehensive analysis of urban dynamics across different routing strategies and population sizes. The results reveal that while eco-routing mitigates total emissions, emissions in most cities scale superlinearly with population, a scaling order that remains invariant regardless of routing and construction strategies. Moreover, under population growth, travelers using eco-routing tend to increasingly select shorter routes, giving rise to carbon bottlenecks. A strategy of targeted capacity expansion on these critical bottlenecks (0.46% of links) significantly reduces both emissions (3%) and travel time (28%) without compromising eco-routing efficiency. This study provides a foundation for formulating low-carbon urban transport planning and emission reduction policies.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2603.03595v1' target='_blank'>Hybrid Belief Reinforcement Learning for Efficient Coordinated Spatial Exploration</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Danish Rizvi, David Boyle</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-03-04 00:00:34</h6>
+<p class='card-text'>Coordinating multiple autonomous agents to explore and serve spatially heterogeneous demand requires jointly learning unknown spatial patterns and planning trajectories that maximize task performance. Pure model-based approaches provide structured uncertainty estimates but lack adaptive policy learning, while deep reinforcement learning often suffers from poor sample efficiency when spatial priors are absent. This paper presents a hybrid belief-reinforcement learning (HBRL) framework to address this gap. In the first phase, agents construct spatial beliefs using a Log-Gaussian Cox Process (LGCP) and execute information-driven trajectories guided by a Pathwise Mutual Information (PathMI) planner with multi-step lookahead. In the second phase, trajectory control is transferred to a Soft Actor-Critic (SAC) agent, warm-started through dual-channel knowledge transfer: belief state initialization supplies spatial uncertainty, and replay buffer seeding provides demonstration trajectories generated during LGCP exploration. A variance-normalized overlap penalty enables coordinated coverage through shared belief state, permitting cooperative sensing in high-uncertainty regions while discouraging redundant coverage in well-explored areas. The framework is evaluated on a multi-UAV wireless service provisioning task. Results show 10.8% higher cumulative reward and 38% faster convergence over baselines, with ablation studies confirming that dual-channel transfer outperforms either channel alone.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2603.03578v1' target='_blank'>Transport Clustering: Solving Low-Rank Optimal Transport via Clustering</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Henri Schmidt, Peter Halmos, Ben Raphael</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-03-03 23:12:14</h6>
+<p class='card-text'>Optimal transport (OT) finds a least cost transport plan between two probability distributions using a cost matrix defined on pairs of points. Unlike standard OT, which infers unstructured pointwise mappings, low-rank optimal transport explicitly constrains the rank of the transport plan to infer latent structure. This improves statistical stability and robustness, yields sharper parametric rates for estimating Wasserstein distances adaptive to the intrinsic rank, and generalizes $K$-means to co-clustering. These advantages, however, come at the cost of a non-convex and NP-hard optimization problem. We introduce transport clustering, an algorithm to compute a low-rank OT plan that reduces low-rank OT to a clustering problem on correspondences obtained from a full-rank $\textit{transport registration}$ step. We prove that this reduction yields polynomial-time, constant-factor approximation algorithms for low-rank OT: specifically, a $(1+γ)$ approximation for negative-type metrics and a $(1+γ+\sqrt{2γ}\,)$ approximation for kernel costs, where $γ\in [0,1]$ denotes the approximation ratio of the optimal full-rank solution relative to the low-rank optimal. Empirically, transport clustering outperforms existing low-rank OT solvers on synthetic benchmarks and large-scale, high-dimensional datasets.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2603.03515v1' target='_blank'>The Controllability Trap: A Governance Framework for Military AI Agents</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Subramanyam Sahoo</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-03-03 20:48:01</h6>
+<p class='card-text'>Agentic AI systems - capable of goal interpretation, world modeling, planning, tool use, long-horizon operation, and autonomous coordination - introduce distinct control failures not addressed by existing safety frameworks. We identify six agentic governance failures tied to these capabilities and show how they erode meaningful human control in military settings. We propose the Agentic Military AI Governance Framework (AMAGF), a measurable architecture structured around three pillars: Preventive Governance (reducing failure likelihood), Detective Governance (real-time detection of control degradation), and Corrective Governance (restoring or safely degrading operations). Its core mechanism, the Control Quality Score (CQS), is a composite real-time metric quantifying human control and enabling graduated responses as control weakens. For each failure type, we define concrete mechanisms, assign responsibilities across five institutional actors, and formalize evaluation metrics. A worked operational scenario illustrates implementation, and we situate the framework within established agent safety literature. We argue that governance must move from a binary conception of control to a continuous model in which control quality is actively measured and managed throughout the operational lifecycle.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2603.03514v1' target='_blank'>Sampling-Based Motion Planning with Scene Graphs Under Perception Constraints</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Qingxi Meng, Emiliano Flores, Thai Duong, Vaibhav Unhelkar, Lydia E. Kavraki</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-03-03 20:46:00</h6>
+<p class='card-text'>It will be increasingly common for robots to operate in cluttered human-centered environments such as homes, workplaces, and hospitals, where the robot is often tasked to maintain perception constraints, such as monitoring people or multiple objects, for safety and reliability while executing its task. However, existing perception-aware approaches typically focus on low-degree-of-freedom (DoF) systems or only consider a single object in the context of high-DoF robots. This motivates us to consider the problem of perception-aware motion planning for high-DoF robots that accounts for multi-object monitoring constraints. We employ a scene graph representation of the environment, offering a great potential for incorporating long-horizon task and motion planning thanks to its rich semantic and spatial information. However, it does not capture perception-constrained information, such as the viewpoints the user prefers. To address these challenges, we propose MOPS-PRM, a roadmap-based motion planner, that integrates the perception cost of observing multiple objects or humans directly into motion planning for high-DoF robots. The perception cost is embedded to each object as part of a scene graph, and used to selectively sample configurations for roadmap construction, implicitly enforcing the perception constraints. Our method is extensively validated in both simulated and real-world experiments, achieving more than ~36% improvement in the average number of detected objects and ~17% better track rate against other perception-constrained baselines, with comparable planning times and path lengths.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2603.03512v1' target='_blank'>Baseline Performance of AI Tools in Classifying Cognitive Demand of Mathematical Tasks</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Danielle S. Fox, Brenda L. Robles, Elizabeth DiPietro Brovey, Christian D. Schunn</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-03-03 20:39:55</h6>
+<p class='card-text'>Teachers face increasing demands on their time, particularly in adapting mathematics curricula to meet individual student needs while maintaining cognitive rigor. This study evaluates whether AI tools can accurately classify the cognitive demand of mathematical tasks, which is important for creating or adapting tasks that support student learning. We tested eleven AI tools: six general-purpose (ChatGPT, Claude, DeepSeek, Gemini, Grok, Perplexity) and five education-specific (Brisk, Coteach AI, Khanmigo, Magic School, School.AI), on their ability to categorize mathematics tasks across four levels of cognitive demand using a research-based framework. The goal was to approximate the performance teachers will achieve with straightforward prompts. On average, AI tools accurately classified cognitive demand in only 63% of cases. Education-specific tools were not more accurate than general-purpose tools, and no tool exceeded 83% accuracy. All tools struggled with tasks at the extremes of cognitive demand (Memorization and Doing Mathematics), exhibiting a systematic bias toward middle-category levels (Procedures with/without Connections). The tools often gave plausible-sounding explanations likely to be persuasive to novice teachers. Error analysis of AI tools' misclassification of the broad level of cognitive demand (high vs. low) revealed that tools consistently overweighted surface textual features over underlying cognitive processes. Further, AI tools showed weaknesses in reasoning about factors that make tasks higher vs. lower cognitive demand. Errors stemmed not from ignoring relevant dimensions, but from incorrectly reasoning about multiple task aspects. These findings carry implications for AI integration into teacher planning workflows and highlight the need for improved prompt engineering and tool development for educational applications.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2603.03457v1' target='_blank'>Funders open access mandates: uneven uptake and challenging models</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Lucía Céspedes, Madelaine Hare, Simon van Bellen, Philippe Mongeon, Vincent Larivière</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-03-03 19:15:02</h6>
+<p class='card-text'>Over the last two decades, research funders have adopted Open Access (OA) mandates, with various forms and success. While some funders emphasize gold OA through article processing charges, others favour green OA and repositories, leading to a fragmented policy landscape. Compliance with these mandates depends on several factors, including disciplinary field, monitoring, and availability of repository infrastructure. Based on 5 million papers supported by 36 funders from 20 countries, 11 million papers funded by other organisations, and 10 million papers without any funding reported, this study explores how different policies influence the adoption of OA. Findings indicate a sustained growth in OA overall, especially hybrid and gold OA, and that funded papers are more likely to be OA than unfunded papers. Those results suggest that policies such as Plan S, as well as read-and-publish agreements, have had a strong influence on OA adoption, especially among European funders. However, the global low uptake of Diamond OA and limited indexing of OA outputs in Latin American countries highlight ongoing disparities, influenced by funding constraints, journal visibility, and regional infrastructure challenges.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2603.03205v1' target='_blank'>Learning When to Act or Refuse: Guarding Agentic Reasoning Models for Safe Multi-Step Tool Use</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Aradhye Agarwal, Gurdit Siyan, Yash Pandya, Joykirat Singh, Akshay Nambi, Ahmed Awadallah</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-03-03 17:59:35</h6>
+<p class='card-text'>Agentic language models operate in a fundamentally different safety regime than chat models: they must plan, call tools, and execute long-horizon actions where a single misstep, such as accessing files or entering credentials, can cause irreversible harm. Existing alignment methods, largely optimized for static generation and task completion, break down in these settings due to sequential decision-making, adversarial tool feedback, and overconfident intermediate reasoning. We introduce MOSAIC, a post-training framework that aligns agents for safe multi-step tool use by making safety decisions explicit and learnable. MOSAIC structures inference as a plan, check, then act or refuse loop, with explicit safety reasoning and refusal as first-class actions. To train without trajectory-level labels, we use preference-based reinforcement learning with pairwise trajectory comparisons, which captures safety distinctions often missed by scalar rewards. We evaluate MOSAIC zero-shot across three model families, Qwen2.5-7B, Qwen3-4B-Thinking, and Phi-4, and across out-of-distribution benchmarks spanning harmful tasks, prompt injection, benign tool use, and cross-domain privacy leakage. MOSAIC reduces harmful behavior by up to 50%, increases harmful-task refusal by over 20% on injection attacks, cuts privacy leakage, and preserves or improves benign task performance, demonstrating robust generalization across models, domains, and agentic settings.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2603.03406v1' target='_blank'>Review Beats Planning: Dual-Model Interaction Patterns for Code Synthesis</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jan Miller</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-03-03 16:57:14</h6>
+<p class='card-text'>How should two language models interact to produce better code than either can alone? The conventional approach -- a reasoning model plans, a code specialist implements -- seems natural but fails: on HumanEval+, plan-then-code degrades performance by 2.4 percentage points versus the code specialist alone. We show that reversing the interaction changes everything. When the code specialist generates freely and the reasoning model reviews instead of plans, the same two models on the same hardware achieve 90.2% pass@1 -- exceeding GPT-4o (87.2%) and O1 Preview (89.0%) -- on ~$2/hr of commodity GPU. Cross-benchmark validation across 542 problems (HumanEval+ and MBPP+) reveals a moderating variable: review effectiveness scales with specification richness, yielding 4x more improvement on richly-specified problems (+9.8pp) than on lean ones (+2.3pp), while remaining net-positive in both cases. The practical implication is twofold: compose models by their cognitive strengths (reviewers review, coders code), and invest in specification quality to amplify the returns.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2603.03137v1' target='_blank'>RL-Based Coverage Path Planning for Deformable Objects on 3D Surfaces</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yuhang Zhang, Jinming Ma, Feng Wu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-03-03 16:16:06</h6>
+<p class='card-text'>Currently, manipulation tasks for deformable objects often focus on activities like folding clothes, handling ropes, and manipulating bags. However, research on contact-rich tasks involving deformable objects remains relatively underdeveloped. When humans use cloth or sponges to wipe surfaces, they rely on both vision and tactile feedback. Yet, current algorithms still face challenges with issues like occlusion, while research on tactile perception for manipulation is still evolving. Tasks such as covering surfaces with deformable objects demand not only perception but also precise robotic manipulation. To address this, we propose a method that leverages efficient and accessible simulators for task execution. Specifically, we train a reinforcement learning agent in a simulator to manipulate deformable objects for surface wiping tasks. We simplify the state representation of object surfaces using harmonic UV mapping, process contact feedback from the simulator on 2D feature maps, and use scaled grouped convolutions (SGCNN) to extract features efficiently. The agent then outputs actions in a reduced-dimensional action space to generate coverage paths. Experiments demonstrate that our method outperforms previous approaches in key metrics, including total path length and coverage area. We deploy these paths on a Kinova Gen3 manipulator to perform wiping experiments on the back of a torso model, validating the feasibility of our approach.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2603.03085v1' target='_blank'>A Practical Guide for Establishing a Technical Debt Management Process (Preprint)</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Marion Wiese, Kamila Serwa, Eva Bittner</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-03-03 15:28:50</h6>
+<p class='card-text'>Context. Technical Debt (TD) refers to short-term beneficial software solutions that impede future changes, making TD management essential. However, establishing a TD management (TDM) process is one of the most pressing concerns in practice. Goal. We plan to identify which previously researched TDM approaches are feasible in practice and what typical challenges emerge to create a guideline for establishing a TDM process. Method. We replicated our previously published action research study by conducting five workshops introducing TDM with two teams from different companies. To determine the feasibility of TDM approaches, we presented the teams with approaches for various TD activities and let them decide which to adopt. Overall, we conducted 19 workshops and retrospectives, analyzing 108 meetings (96 hours) over a 30-month period. Results. The adopted TD prevention strategies and documentation were similar in all teams. The teams utilized their respective backlogs and created a new backlog item type for TD, incorporating similar attributes such as interest, contagiousness, a resubmission date, and reminders to discuss drawbacks and risks. However, they used different prioritization approaches and deviating repayment methods. The teams had to overcome similar challenges during the establishment, which we list in this paper. Conclusions. We identified the TDM approaches used by all teams as a starting point for best practices. For challenges, we provided solutions or identified them as research gaps. Issue tracking system vendors should implement TD issue types employing the identified attributes. Finally, we created a white paper for practitioners to establish a TDM process based on our results.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js'></script>
+</body>
+</html>
