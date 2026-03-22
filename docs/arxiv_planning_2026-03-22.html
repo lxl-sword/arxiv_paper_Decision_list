@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>planning - 2026-03-22</title>
+<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap' rel='stylesheet'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css'>
+<style>
+body {
+font-family: 'Roboto', sans-serif;
+background-color: #f5f7fa;
+padding: 20px;
+}
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.card-title {
+    font-weight: 700;
+}
+.card:hover {
+    transform: scale(1.02);
+    transition: 0.3s ease-in-out;
+}
+</style>
+</head>
+<body>
+<div class='container'>
+<h1 class='text-center my-4'><i class='fas fa-book'></i>planning - 2026-03-22</h1>
+<div class='row'>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2603.19227v1' target='_blank'>Bridging Semantic and Kinematic Conditions with Diffusion-based Discrete Motion Tokenizer</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Chenyang Gu, Mingyuan Zhang, Haozhe Xie, Zhongang Cai, Lei Yang, Ziwei Liu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-03-19 17:59:51</h6>
+<p class='card-text'>Prior motion generation largely follows two paradigms: continuous diffusion models that excel at kinematic control, and discrete token-based generators that are effective for semantic conditioning. To combine their strengths, we propose a three-stage framework comprising condition feature extraction (Perception), discrete token generation (Planning), and diffusion-based motion synthesis (Control). Central to this framework is MoTok, a diffusion-based discrete motion tokenizer that decouples semantic abstraction from fine-grained reconstruction by delegating motion recovery to a diffusion decoder, enabling compact single-layer tokens while preserving motion fidelity. For kinematic conditions, coarse constraints guide token generation during planning, while fine-grained constraints are enforced during control through diffusion-based optimization. This design prevents kinematic details from disrupting semantic token planning. On HumanML3D, our method significantly improves controllability and fidelity over MaskControl while using only one-sixth of the tokens, reducing trajectory error from 0.72 cm to 0.08 cm and FID from 0.083 to 0.029. Unlike prior methods that degrade under stronger kinematic constraints, ours improves fidelity, reducing FID from 0.033 to 0.014.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2603.19228v1' target='_blank'>SAMA: Factorized Semantic Anchoring and Motion Alignment for Instruction-Guided Video Editing</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Xinyao Zhang, Wenkai Dong, Yuxin Song, Bo Fang, Qi Zhang, Jing Wang, Fan Chen, Hui Zhang, Haocheng Feng, Yu Lu, Hang Zhou, Chun Yuan, Jingdong Wang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-03-19 17:59:51</h6>
+<p class='card-text'>Current instruction-guided video editing models struggle to simultaneously balance precise semantic modifications with faithful motion preservation. While existing approaches rely on injecting explicit external priors (e.g., VLM features or structural conditions) to mitigate these issues, this reliance severely bottlenecks model robustness and generalization. To overcome this limitation, we present SAMA (factorized Semantic Anchoring and Motion Alignment), a framework that factorizes video editing into semantic anchoring and motion modeling. First, we introduce Semantic Anchoring, which establishes a reliable visual anchor by jointly predicting semantic tokens and video latents at sparse anchor frames, enabling purely instruction-aware structural planning. Second, Motion Alignment pre-trains the same backbone on motion-centric video restoration pretext tasks (cube inpainting, speed perturbation, and tube shuffle), enabling the model to internalize temporal dynamics directly from raw videos. SAMA is optimized with a two-stage pipeline: a factorized pre-training stage that learns inherent semantic-motion representations without paired video-instruction editing data, followed by supervised fine-tuning on paired editing data. Remarkably, the factorized pre-training alone already yields strong zero-shot video editing ability, validating the proposed factorization. SAMA achieves state-of-the-art performance among open-source models and is competitive with leading commercial systems (e.g., Kling-Omni). Code, models, and datasets will be released.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2603.19170v1' target='_blank'>ADMM-Based Distributed MPC with Control Barrier Functions for Safe Multi-Robot Quadrupedal Locomotion</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yicheng Zeng, Ruturaj S. Sambhus, Basit Muhammad Imran, Jeeseop Kim, Vittorio Pastore, Kaveh Akbari Hamed</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-03-19 17:25:33</h6>
+<p class='card-text'>This paper proposes a fully decentralized model predictive control (MPC) framework with control barrier function (CBF) constraints for safety-critical trajectory planning in multi-robot legged systems. The incorporation of CBF constraints introduces explicit inter-agent coupling, which prevents direct decomposition of the resulting optimal control problems. To address this challenge, we reformulate the centralized safety-critical MPC problem using a structured distributed optimization framework based on the alternating direction method of multipliers (ADMM). By introducing a novel node-edge splitting formulation with consensus constraints, the proposed approach decomposes the global problem into independent node-local and edge-local quadratic programs that can be solved in parallel using only neighbor-to-neighbor communication. This enables fully decentralized trajectory optimization with symmetric computational load across agents while preserving safety and dynamic feasibility. The proposed framework is integrated into a hierarchical locomotion control architecture for quadrupedal robots, combining high-level distributed trajectory planning, mid-level nonlinear MPC enforcing single rigid body dynamics, and low-level whole-body control enforcing full-order robot dynamics. The effectiveness of the proposed approach is demonstrated through hardware experiments on two Unitree Go2 quadrupedal robots and numerical simulations involving up to four robots navigating uncertain environments with rough terrain and external disturbances. The results show that the proposed distributed formulation achieves performance comparable to centralized MPC while reducing the average per-cycle planning time by up to 51% in the four-agent case, enabling efficient real-time decentralized implementation.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2603.19154v1' target='_blank'>Half-wave-plate non idealities propagated to component separated CMB $B$-modes</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Ema Tsang-King-Sang, Josquin Errard, Simon Biquard, Pierre Chanial, Wassim Kabalan, Wuhyun Sohn, Radek Stompor</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-03-19 17:10:39</h6>
+<p class='card-text'>We assess the impact of non-ideal, continuously rotating half-wave plates (HWPs) on cosmic microwave background (CMB) polarization measurements targeting large angular scale signal. Such hardware solutions are used in or planned for multiple modern CMB efforts, both ground-based, for instance, small aperture telescopes of Simons Observatory or satellite borne, such as LiteBIRD. Using a frequency-dependent parametric model based on the Mueller matrix formalism, we characterize the induced mixing of Stokes parameters. Through end-to-end simulations, we propagate these effects from time-ordered data to cosmology via map-making and component-separation stages, quantifying their impact on the $B$-modes power spectrum and the tensor-to-scalar ratio, $r$. Our analysis shows that neglecting the frequency dependence of a three-layer HWP gives rise to significant polarization leakage, biases foreground spectral parameters, and leads to residual contamination in the recovered CMB maps. To mitigate these effects, we investigate multiple analysis strategies progressively incorporating a more complete description of the instrumental response. At the map-making level, this requires generalizing the standard pointing matrix to account for the full time- and frequency-dependent instrumental response. We find that standard HWP models, reduce the biases only down to $r \sim 10^{-2}$, while a more advanced approach based on a generalization of both map-making and component separation, implemented using JAX, can suppress it down to $r \sim 7 \times 10^{-4}$. Finally, we extend this approach to a time-domain component-separation, enabling a statistically consistent treatment of instrumental response in the presence of time-domain features. We demonstrate its feasibility and validate it by performing a full end-to-end analysis, recovering results in good agreement with the map-based ones.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2603.18994v1' target='_blank'>Evaluating Game Difficulty in Tetris Block Puzzle</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Chun-Jui Wang, Jian-Ting Guo, Hung Guei, Chung-Chin Shih, Ti-Rong Wu, I-Chen Wu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-03-19 15:00:28</h6>
+<p class='card-text'>Tetris Block Puzzle is a single player stochastic puzzle in which a player places blocks on an 8 x 8 grid to complete lines; its popular variants have amassed tens of millions of downloads. Despite this reach, there is little principled assessment of which rule sets are more difficult. Inspired by prior work that uses AlphaZero as a strong evaluator for chess variants, we study difficulty in this domain using Stochastic Gumbel AlphaZero (SGAZ), a budget-aware planning agent for stochastic environments. We evaluate rule changes including holding block h, preview holding block p, and additional Tetris block variants using metrics such as training reward and convergence iterations. Empirically, increasing h and p reduces difficulty (higher reward and faster convergence), while adding more Tetris block variants increases difficulty, with the T-pentomino producing the largest slowdown. Through analysis, SGAZ delivers strong play under small simulation budgets, enabling efficient, reproducible comparisons across rule sets and providing a reference for future design in stochastic puzzle games.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2603.18958v1' target='_blank'>Optimal Path Planning in Hostile Environments</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Andrzej Kaczmarczyk, Šimon Schierreich, Nicholas Axel Tanujaya, Haifeng Xu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-03-19 14:25:30</h6>
+<p class='card-text'>Coordinating agents through hazardous environments, such as aid-delivering drones navigating conflict zones or field robots traversing deployment areas filled with obstacles, poses fundamental planning challenges. We introduce and analyze the computational complexity of a new multi-agent path planning problem that captures this setting. A group of identical agents begins at a common start location and must navigate a graph-based environment to reach a common target. The graph contains hazards that eliminate agents upon contact but then enter a known cooldown period before reactivating. In this discrete-time, fully-observable, deterministic setting, the planning task is to compute a movement schedule that maximizes the number of agents reaching the target. We first prove that, despite the exponentially large space of feasible plans, optimal plans require only polynomially-many steps, establishing membership in NP. We then show that the problem is NP-hard even when the environment graph is a tree. On the positive side, we present a polynomial-time algorithm for graphs consisting of vertex-disjoint paths from start to target. Our results establish a rich computational landscape for this problem, identifying both intractable and tractable fragments.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2603.18865v1' target='_blank'>RadioDiff-FS: Physics-Informed Manifold Alignment in Few-Shot Diffusion Models for High-Fidelity Radio Map Construction</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Xiucheng Wang, Zixuan Guo, Nan Cheng</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-03-19 13:12:09</h6>
+<p class='card-text'>Radio maps (RMs) provide spatially continuous propagation characterizations essential for 6G network planning, but high-fidelity RM construction remains challenging. Rigorous electromagnetic solvers incur prohibitive computational latency, while data-driven models demand massive labeled datasets and generalize poorly from simplified simulations to complex multipath environments. This paper proposes RadioDiff-FS, a few-shot diffusion framework that adapts a pre-trained main-path generator to multipath-rich target domains with only a small number of high-fidelity samples. The adaptation is grounded in a theoretical decomposition of the multipath RM into a dominant main-path component and a directionally sparse residual. This decomposition shows that the cross-domain shift corresponds to a bounded and geometrically structured feature translation rather than an arbitrary distribution change. A Direction-Consistency Loss (DCL) is then introduced to constrain diffusion score updates along physically plausible propagation directions, suppressing phase-inconsistent artifacts that arise in the low-data regime. Experiments show that RadioDiff-FS reduces NMSE by 59.5% on static RMs and by 74.0% on dynamic RMs relative to the vanilla diffusion baseline, achieving an SSIM of 0.9752 and a PSNR of 36.37 dB under severely limited supervision.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2603.18862v1' target='_blank'>Matter radii from interaction cross sections using microscopic nuclear densities</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:A. J. Smith, K. Godbey, C. Hebborn, W. Nazarewicz, F. M. Nunes, P. -G. Reinhard</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-03-19 13:10:37</h6>
+<p class='card-text'>Understanding how nuclear size evolves with the number of protons and neutrons tests our models of strongly interacting matter. The nuclear charge (and proton) radii accessible through electromagnetic probes carry fundamental information on the saturation density and nuclear correlations. The radii of the neutron distribution are more difficult to measure, but they are important for our understanding of the isovector properties of nuclei that depend on the proton-to-neutron asymmetry, and on extended nucleonic matter in neutron stars. Interaction cross sections offer one of the few direct experimental windows into the neutron radii of nuclei far from stability, but translating these measurements into reliable structural information requires an integrated theoretical framework that links structure and reactions with a rigorous treatment of uncertainty. In this work, we compute interaction cross sections by using uncertainty-quantified proton and neutron distributions obtained in the self-consistent nuclear Density Functional Theory (DFT) with the Fayans energy density functional. The resulting densities are used in a modernized Glauber reaction framework, which features the refit of nucleon-nucleon profile functions. Applying this pipeline to the existing data on the calcium isotopic chain, we find no evidence for the dramatic neutron swelling reported earlier. While focusing here on the Ca chain, the methodology proposed in this work is applicable to interaction cross section measurements across the nuclear chart and is well-suited for new experiments currently planned at leading rare isotope facilities.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2603.18853v1' target='_blank'>Learn for Variation: Variationally Guided AAV Trajectory Learning in Differentiable Environments</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Xiucheng Wang, Zhenye Chen, Nan Cheng</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-03-19 12:57:42</h6>
+<p class='card-text'>Autonomous aerial vehicles (AAVs) empower sixth-generation (6G) Internet-of-Things (IoT) networks through mobility-driven data collection. However, conventional reward-driven reinforcement learning for AAV trajectory planning suffers from severe credit assignment issues and training instability, because sparse scalar rewards fail to capture the long-term and nonlinear effects of sequential movements. To address these challenges, this paper proposes Learn for Variation (L4V), a gradient-informed trajectory learning framework that replaces high-variance scalar reward signals with dense and analytically grounded policy gradients. Particularly, the coupled evolution of AAV kinematics, distance-dependent channel gains, and per-user data-collection progress is first unrolled into an end-to-end differentiable computational graph. Backpropagation through time then serves as a discrete adjoint solver, which propagates exact sensitivities from the cumulative mission objective to every control action and policy parameter. These structured gradients are used to train a deterministic neural policy with temporal smoothness regularization and gradient clipping. Extensive simulations demonstrate that L4V consistently outperforms representative baselines, including a genetic algorithm, DQN, A2C, and DDPG, in mission completion time, average transmission rate, and training cost</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2603.18844v1' target='_blank'>The multi-objective portfolio model for oil and gas exploration drilling projects selection and its operator-enhanced NSGA-II based solution</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Chao Min, Junyi Cui, Stanisław Migórski, Yonglan Xie, Qingxia Zhang, Jun Peng</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-03-19 12:44:30</h6>
+<p class='card-text'>Drilling investment is pivotal to operational planning in oil and gas (O\&G) exploration. Conventional deployment relies heavily on fragmented expert assessments of geological and economic factors, with limited integration ability of information. As the tool of portfolio show strong potential for mitigating uncertainty and selecting superior drilling plans, this study develops a multi-objective mean-variance portfolio model that accounts for geological-parameter uncertainty, enabling an effective risk-return trade-off and optimal selection. First, the probabilistic distribution of geological-parameters for prospect-list projects is obtained through expert-elicited priors. And considering the selection of the drilling projects as a portfolio, an optimization model is formulated jointly to describe the return and risk of short-term plan, under different constraints. Second, an improved OE-NSGA-II algorithm is proposed specifically for this model, in which (1) a directional crossover operator is designed to embed improving directions in objective space-derived from dominance and objective differences-into recombination, and (2) a structure-aware mutation operator is designed to prioritize high-utility bit flips via probabilistic sampling with feasibility repair, thus improving the search ability for superior Pareto solutions. Finally, using the case of 2023 exploration drilling deployment for verification, and then apply the validated method to the 2024 deployment to support decision-making. The results indicate that the proposed approach offers a reusable solution for drilling portfolio optimization in O\&G exploration.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2603.18730v1' target='_blank'>Scheduling Ground-Based Telescope Observations with Uncertain Nights</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Thomas Rahab Lacroix, Pierre Lemaire, Anne-Marie Lagrange, Julien Milli, Nadia Brauner</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-03-19 10:25:04</h6>
+<p class='card-text'>The observation of celestial objects is a fundamental activity in astronomy. Ground-based and space telescopes are used to gather electromagnetic radiation from space, allowing astronomers to study a wide range of celestial objects and phenomena, such as stars, planets, galaxies, and black holes. The European Southern Observatory (ESO) charges each night 83 kEUR (Milli et al. 2019), so the schedules of the telescopes are really important in order to optimize every second. Ground-based telescopes are affected by meteorological conditions, such as clouds, wind, and atmospheric turbulence. Accurate scheduling of observations in the presence of such uncertainties can significantly improve the efficiency of telescopes use and support from automated tools is highly desirable. In this paper, we study a mathematical approach for scheduling ground-based telescope observations under an uncertain number of clear nights due to uncertain weather and atmospheric conditions. The model considers multiple targets, uncertain number of nights, and various observing constraints. We demonstrate the viability and effectiveness of an approach based on stochastic optimization and reactive strategy comparing it against other methods.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2603.18723v1' target='_blank'>A Hybrid Physical--Digital Framework for Annotated Fracture Reduction Data Evaluated using Clinically Relevant 3D metrics</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Basile Longo, Paul-Emmanuel Edeline, Hoel Letissier, Marc-Olivier Gauci, Aziliz Guezou-Philippe, Valérie Burdin, Guillaume Dardenne</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-03-19 10:17:27</h6>
+<p class='card-text'>A major bottleneck in Computer-Assisted Preoperative Planning (CAPP) for fracture reduction is the limited availability of annotated data. While annotated datasets are now available for evaluating bone fracture segmentation algorithms, there is a notable lack of annotated data for the evaluation of automatic fracture reduction methods. Obtaining precise annotations, which are essential for training and evaluating automatic CAPP algorithm, of the reduced bone therefore remains a critical and underexplored challenge. Existing approaches to assess reduction methods rely either on synthetic fracture simulation which often lacks realism, or on manual virtual reductions, which are complex, time-consuming, operator-dependant and error-prone. To address these limitations, we propose a hybrid physical-digital framework for generating annotated fracture reduction data. Based on fracture CTs, fragments are first 3D printed, physically reduced, fixed and CT scanned to accurately recover transformation matrix applied to each fragment. To quantitatively assess reduction quality, we introduce a reproducible formulation of clinically relevant 3D fracture metrics, including 3D gap, 3D step-off, and total gap area. The framework was evaluated on 11 clinical acetabular fracture cases reduced by two independent operators. Compared to preoperative measurements, the proposed approach achieved mean improvements of 168.85 mm 2 in total gap area, 1.82 mm in 3D gap, and 0.81 mm in 3D step-off. This hybrid physical--digital framework enables the efficient generation of realistic, clinically relevant annotated fracture reduction data that can be used for the development and evaluation of automatic fracture reduction algorithms.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2603.18719v1' target='_blank'>Ontology-Guided Diffusion for Zero-Shot Visual Sim2Real Transfer</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Mohamed Youssef, Mayar Elfares, Anna-Maria Meer, Matteo Bortoletto, Andreas Bulling</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-03-19 10:16:15</h6>
+<p class='card-text'>Bridging the simulation-to-reality (sim2real) gap remains challenging as labelled real-world data is scarce. Existing diffusion-based approaches rely on unstructured prompts or statistical alignment, which do not capture the structured factors that make images look real. We introduce Ontology- Guided Diffusion (OGD), a neuro-symbolic zero-shot sim2real image translation framework that represents realism as structured knowledge. OGD decomposes realism into an ontology of interpretable traits -- such as lighting and material properties -- and encodes their relationships in a knowledge graph. From a synthetic image, OGD infers trait activations and uses a graph neural network to produce a global embedding. In parallel, a symbolic planner uses the ontology traits to compute a consistent sequence of visual edits needed to narrow the realism gap. The graph embedding conditions a pretrained instruction-guided diffusion model via cross-attention, while the planned edits are converted into a structured instruction prompt. Across benchmarks, our graph-based embeddings better distinguish real from synthetic imagery than baselines, and OGD outperforms state-of-the-art diffusion methods in sim2real image translations. Overall, OGD shows that explicitly encoding realism structure enables interpretable, data-efficient, and generalisable zero-shot sim2real transfer.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2603.18712v1' target='_blank'>Accurate and Efficient Multi-Channel Time Series Forecasting via Sparse Attention Mechanism</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Lei Gao, Hengda Bao, Jingfei Fang, Guangzheng Wu, Weihua Zhou, Yun Zhou</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-03-19 10:11:23</h6>
+<p class='card-text'>The task of multi-channel time series forecasting is ubiquitous in numerous fields such as finance, supply chain management, and energy planning. It is critical to effectively capture complex dynamic dependencies within and between channels for accurate predictions. However, traditional method paid few attentions on learning the interaction among channels. This paper proposes Linear-Network (Li-Net), a novel architecture designed for multi-channel time series forecasting that captures the linear and non-linear dependencies among channels. Li-Net dynamically compresses representations across sequence and channel dimensions, processes the information through a configurable non-linear module and subsequently reconstructs the forecasts. Moreover, Li-Net integrates a sparse Top-K Softmax attention mechanism within a multi-scale projection framework to address these challenges. A core innovation is its ability to seamlessly incorporate and fuse multi-modal embeddings, guiding the sparse attention process to focus on the most informative time steps and feature channels. Through the experiment results on multiple real-world benchmark datasets demonstrate that Li-Net achieves competitive performance compared to state-of-the-art baseline methods. Furthermore, Li-Net provides a superior balance between prediction accuracy and computational burden, exhibiting significantly lower memory usage and faster inference times. Detailed ablation studies and parameter sensitivity analyses validate the effectiveness of each key component in our proposed architecture.
+  Keywords: Multivariate Time Series Forecasting, Sparse Attention Mechanism, Multimodal Information Fusion, Non-linear relationship</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2603.18689v1' target='_blank'>ATT12: The Antarctic 12-m Terahertz Telescope for Studies of Dusty Galaxies. I. Instrument Sensitivity and Science Forecasts</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Koki Wakasugi, Takuya Hashimoto, Nario Kuno, Yu Nagai, Naomasa Nakai, Ken Mawatari, Masumichi Seta, Shun Ishii, Shunsuke Honda, Mana Ito, Hiroshi Matsuo, Makoto Nagai, Yuri Nishimura, Dragan Salak, Kazuo Sorai, Hidenobu Yajima</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-03-19 09:47:57</h6>
+<p class='card-text'>We present a feasibility study of the Antarctic 12m Terahertz Telescope (ATT12), a next-generation facility to be constructed at New Dome Fuji in Antarctica, designed to open up the FIR and THz windows for extragalactic astronomy. While ATT12 will enable a wide range of Galactic and extragalactic science, this paper focuses on its potential for studies of dusty star-forming galaxies (DSFGs) across cosmic time. Using realistic atmospheric transmission models and the planned instrumental specifications of heterodyne spectrometers and wide-field multi-color continuum cameras, we assess the expected sensitivity and scientific capabilities. We show that spectroscopic observations will enable detections of [CII]158um from galaxies with log(LIR/Lsun)>12 out to z~7, while [OIII]88um will remain observable for HyLIRG-class systems up to z~10. Line ratios including [OIII]52/88um, [NII]122/205um, and [OIII]/[NIII] will provide unique diagnostics of electron density and O/N abundance at z~4-8. Wide-field continuum surveys with the continuum cameras (KIDS-1/2; 300-850 GHz) will reach confusion-limited depths of ~1-2 mJy over ~10,000 deg$^2$, detecting of order $10^{6}$-$10^{7}$ DSFGs with log(LIR/Lsun)>12 at z<5 and $\lesssim10^{3}$--$10^{4}$ HyLIRGs up to z~7 or higher. Higher-frequency cameras (KIDS-3/4; >850 GHz) are designed for targeted follow-up observations and to extend coverage toward the THz regime. Taken together, ATT12 will provide the first statistically representative samples of DSFGs across cosmic time and, through synergy with ALMA, JWST, and the proposed FIR Probe PRIMA, will establish a multi-wavelength framework in which ATT12 discovers large samples through wide-area surveys, ALMA provides high-resolution follow-up of gas and ISM structure, JWST probes stellar populations and metallicity in the rest-frame optical/NIR, and PRIMA delivers ultra-sensitive FIR spectroscopy.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2603.18670v1' target='_blank'>Masking Intent, Sustaining Equilibrium: Risk-Aware Potential Game-empowered Two-Stage Mobile Crowdsensing</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Houyi Qi, Minghui Liwang, Kaiwen Tan, Wenyong Wang, Sai Zou, Yiguang Hong, Xianbin Wang, Wei Ni</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-03-19 09:31:59</h6>
+<p class='card-text'>Beyond data collection, future mobile crowdsensing (MCS) in complex applications must satisfy diverse requirements, including reliable task completion, budget and quality constraints, and fluctuating worker availability. Besides raw-data and location privacy, workers' intent/preference traces can be exploited by an honest-but-curious platform, enabling intent inference from repeated observations and frequency profiling. Meanwhile, worker dropouts and execution uncertainty may cause coverage instability and redundant sensing, while repeated global online re-optimization incurs high interaction overhead and enlarges the observable attack surface. To address these issues, we propose iParts, an intent-preserving and risk-controllable two-stage service provisioning framework for dynamic MCS. In the offline stage, workers report perturbed intent vectors via personalized local differential privacy with memorization/permanent randomization, suppressing frequency-based inference while preserving decision utility. Using only perturbed intents, the platform builds a redundancy-aware quality model and performs risk-aware pre-planning under budget, individual rationality, quality-failure risk, and intent-mismatch risk constraints. We formulate offline pre-planning as an exact potential game with expected social welfare as the potential function, ensuring a constrained pure-strategy Nash equilibrium and finite-step convergence under asynchronous feasible improvements. In the online stage, when runtime dynamics cause quality deficits, a temporary-recruitment potential game over idle/standby workers enables lightweight remediation with bounded interaction rounds and low observability. Experiments show that iParts achieves a favorable privacy-utility-efficiency trade-off, improving welfare and task completion while reducing redundancy and communication overhead compared with representative baselines.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2603.18669v1' target='_blank'>CSSDF-Net: Safe Motion Planning Based on Neural Implicit Representations of Configuration Space Distance Field</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Haohua Chen, Yixuan Zhou, Yifan Zhou, Hesheng Wang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-03-19 09:31:41</h6>
+<p class='card-text'>High-dimensional manipulator operation in unstructured environments requires a differentiable, scene-agnostic distance query mechanism to guide safe motion generation. Existing geometric collision checkers are typically non-differentiable, while workspace-based implicit distance models are hindered by the highly nonlinear workspace--configuration mapping and often suffer from poor convergence; moreover, self-collision and environment collision are commonly handled as separate constraints. We propose Configuration-Space Signed Distance Field-Net (CSSDF-Net), which learns a continuous signed distance field directly in configuration space to provide joint-space distance and gradient queries under a unified geometric notion of safety. To enable zero-shot generalization without environment-specific retraining, we introduce a spatial-hashing-based data generation pipeline that encodes robot-centric geometric priors and supports efficient retrieval of risk configurations for arbitrary obstacle point sets. The learned distance field is integrated into safety-constrained trajectory optimization and receding-horizon MPC, enabling both offline planning and online reactive avoidance. Experiments on a planar arm and a 7-DoF manipulator demonstrate stable gradients, effective collision avoidance in static and dynamic scenes, and practical inference latency for large-scale point-cloud queries, supporting deployment in previously unseen environments.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2603.18634v1' target='_blank'>SwiftGS: Episodic Priors for Immediate Satellite Surface Recovery</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Rong Fu, Jiekai Wu, Haiyun Wei, Xiaowen Ma, Shiyin Lin, Kangan Qian, Chuang Liu, Jianyuan Ni, Simon James Fong</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-03-19 08:59:07</h6>
+<p class='card-text'>Rapid, large-scale 3D reconstruction from multi-date satellite imagery is vital for environmental monitoring, urban planning, and disaster response, yet remains difficult due to illumination changes, sensor heterogeneity, and the cost of per-scene optimization. We introduce SwiftGS, a meta-learned system that reconstructs 3D surfaces in a single forward pass by predicting geometry-radiation-decoupled Gaussian primitives together with a lightweight SDF, replacing expensive per-scene fitting with episodic training that captures transferable priors. The model couples a differentiable physics graph for projection, illumination, and sensor response with spatial gating that blends sparse Gaussian detail and global SDF structure, and incorporates semantic-geometric fusion, conditional lightweight task heads, and multi-view supervision from a frozen geometric teacher under an uncertainty-aware multi-task loss. At inference, SwiftGS operates zero-shot with optional compact calibration and achieves accurate DSM reconstruction and view-consistent rendering at significantly reduced computational cost, with ablations highlighting the benefits of the hybrid representation, physics-aware rendering, and episodic meta-training.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2603.18561v1' target='_blank'>CausalVAD: De-confounding End-to-End Autonomous Driving via Causal Intervention</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jiacheng Tang, Zhiyuan Zhou, Zhuolin He, Jia Zhang, Kai Zhang, Jian Pu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-03-19 07:21:01</h6>
+<p class='card-text'>Planning-oriented end-to-end driving models show great promise, yet they fundamentally learn statistical correlations instead of true causal relationships. This vulnerability leads to causal confusion, where models exploit dataset biases as shortcuts, critically harming their reliability and safety in complex scenarios. To address this, we introduce CausalVAD, a de-confounding training framework that leverages causal intervention. At its core, we design the sparse causal intervention scheme (SCIS), a lightweight, plug-and-play module to instantiate the backdoor adjustment theory in neural networks. SCIS constructs a dictionary of prototypes representing latent driving contexts. It then uses this dictionary to intervene on the model's sparse vectorized queries. This step actively eliminates spurious associations induced by confounders, thereby eliminating spurious factors from the representations for downstream tasks. Extensive experiments on benchmarks like nuScenes show CausalVAD achieves state-of-the-art planning accuracy and safety. Furthermore, our method demonstrates superior robustness against both data bias and noisy scenarios configured to induce causal confusion.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2603.18443v1' target='_blank'>SR-Nav: Spatial Relationships Matter for Zero-shot Object Goal Navigation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Leyuan Fang, Zan Mao, Zijing Wang, Yinlong Yan</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-03-19 03:09:32</h6>
+<p class='card-text'>Zero-shot object-goal navigation aims to find target objects in unseen environments using only egocentric observation. Recent methods leverage foundation models' comprehension and reasoning capabilities to enhance navigation performance. However, when faced with poor viewpoints or weak semantic cues, foundation models often fail to support reliable reasoning in both perception and planning, resulting in inefficient or failed navigation. We observe that inherent relationships among objects and regions encode structured scene priors, which help agents infer plausible target locations even under partial observations. Motivated by this insight, we propose Spatial Relation-aware Navigation (SR-Nav), a framework that models both observed and experience-based spatial relationships to enhance both perception and planning. Specifically, SR-Nav first constructs a Dynamic Spatial Relationship Graph (DSRG) that encodes the target-centered spatial relationships through the foundation models and updates dynamically with real-time observations. We then introduce a Relation-aware Matching Module. It utilizes relationship matching instead of naive detection, leveraging diverse relationships in the DSRG to verify and correct errors, enhancing visual perception robustness. Finally, we design a Dynamic Relationship Planning Module to reduce the planning search space by dynamically computing the optimal paths based on the DSRG from the current position, thereby guiding planning and reducing exploration redundancy. Experiments on HM3D show that our method achieves state-of-the-art performance in both success rate and navigation efficiency. The code will be publicly available at https://github.com/Mzyw-1314/SR-Nav</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2603.18437v1' target='_blank'>The influence of hypothetical exomoons on planetary thermal phase curves</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Xinyi Song, Jun Yang, Yueyun Ouyang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-03-19 02:52:07</h6>
+<p class='card-text'>More than 200 moons exist in our Solar System, yet no exomoon has been confirmed to date. While the innermost two planets of the Solar System lack natural satellites and most studies favour the existence of exomoons around long-period planets, some theoretical studies that take tidal dissipation, orbital decay, and migration processes into account suggest that exomoons may survive around short-period exoplanets. We investigated the impact of exomoons on planetary thermal phase curves and assessed their detectability within a theoretical framework. We simulated the thermal phase curves of exomoon-exoplanet systems, including mutual transits and occultations, and explored their dependence on planetary orbital periods across a wide range of systems. Close-in airless exomoons maintain large day-night temperature contrasts, amplifying the thermal phase-curve signal of the system. When the exomoon transits or is occulted by the exoplanet, the transit depth varies with the planetary phase, and the occultation depth varies with the exomoon's phase. The maximum occultation depth can reach $\sim$ 20 ppm for long-period systems. For short-period planets, the signal can reach up to $\sim$100 ppm, although such configurations may not be dynamically stable over long timescales. If exomoons are not accounted for, the planetary temperature distribution retrieved from observed thermal phase curves may overestimate the planetary day-night temperature contrast and underestimate the planetary horizontal heat transport. In principle, the periodic exomoon-exoplanet mutual occultation signal could be extracted using methods such as box-fitting least squares, providing a framework for future observational studies and instrument planning.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2603.18400v1' target='_blank'>Graph-of-Constraints Model Predictive Control for Reactive Multi-agent Task and Motion Planning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Anastasios Manganaris, Jeremy Lu, Ahmed H. Qureshi, Suresh Jagannathan</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-03-19 01:45:14</h6>
+<p class='card-text'>Sequences of interdependent geometric constraints are central to many multi-agent Task and Motion Planning (TAMP) problems. However, existing methods for handling such constraint sequences struggle with partially ordered tasks and dynamic agent assignments. They typically assume static assignments and cannot adapt when disturbances alter task allocations. To overcome these limitations, we introduce Graph-of-Constraints Model Predictive Control (GoC-MPC), a generalized sequence-of-constraints framework integrated with MPC. GoC-MPC naturally supports partially ordered tasks, dynamic agent coordination, and disturbance recovery. By defining constraints over tracked 3D keypoints, our method robustly solves diverse multi-agent manipulation tasks-coordinating agents and adapting online from visual observations alone, without relying on training data or environment models. Experiments demonstrate that GoC-MPC achieves higher success rates, significantly faster TAMP computation, and shorter overall paths compared to recent baselines, establishing it as an efficient and robust solution for multi-agent manipulation under real-world disturbances. Our supplementary video and code can be found at https://sites.google.com/view/goc-mpc/home .</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2603.18347v1' target='_blank'>Bonsai: A class of effective methods for independent sampling of graph partitions</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jeanne Clelland, Kristopher Tapp</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-03-18 23:13:05</h6>
+<p class='card-text'>We develop effective methods for constructing an ensemble of district plans via independent sampling from a reasonable probability distribution on the space of graph partitions. We compare the performance of our algorithms to that of standard Markov Chain based algorithms in the context of grid graphs and state congressional and legislative maps. For the case of perfect population balance between districts, we provide an explicit description of the distribution from which our method samples.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2603.18336v1' target='_blank'>ManiDreams: An Open-Source Library for Robust Object Manipulation via Uncertainty-aware Task-specific Intuitive Physics</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Gaotian Wang, Kejia Ren, Andrew S. Morgan, Kaiyu Hang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-03-18 22:46:46</h6>
+<p class='card-text'>Dynamics models, whether simulators or learned world models, have long been central to robotic manipulation, but most focus on minimizing prediction error rather than confronting a more fundamental challenge: real-world manipulation is inherently uncertain. We argue that robust manipulation under uncertainty is fundamentally an integration problem: uncertainties must be represented, propagated, and constrained within the planning loop, not merely suppressed during training. We present and open-source ManiDreams, a modular framework for uncertainty-aware manipulation planning over intuitive physics models. It realizes this integration through composable abstractions for distributional state representation, backend-agnostic dynamics prediction, and declarative constraint specification for action optimization. The framework explicitly addresses three sources of uncertainty: perceptual, parametric, and structural. It wraps any base policy with a sample-predict-constrain loop that evaluates candidate actions against distributional outcomes, adding robustness without retraining. Experiments on ManiSkill tasks show that ManiDreams maintains robust performance under various perturbations where the RL baseline degrades significantly. Runnable examples on pushing, picking, catching, and real-world deployment demonstrate flexibility across different policies, optimizers, physics backends, and executors. The framework is publicly available at https://github.com/Rice-RobotPI-Lab/ManiDreams</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2603.18327v1' target='_blank'>Consumer-to-Clinical Language Shifts in Ambient AI Draft Notes and Clinician-Finalized Documentation: A Multi-level Analysis</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Ha Na Cho, Yawen Guo, Sairam Sutari, Emilie Chow, Steven Tam, Danielle Perret, Deepti Pandita, Kai Zheng</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-03-18 22:20:06</h6>
+<p class='card-text'>Ambient AI generates draft clinical notes from patient-clinician conversations, often using lay or consumer-oriented phrasing to support patient understanding instead of standardized clinical terminology. How clinicians revise these drafts for professional documentation conventions remains unclear. We quantified clinician editing for consumer-to- clinical normalization using a dictionary-confirmed transformation framework. We analyzed 71,173 AI-draft and finalized-note section pairs from 34,726 encounters. Confirmed transformations were defined as replacing a consumer expression with its dictionary-mapped clinical equivalent in the same section. Editing significantly reduced terminology density across all sections (p < 0.001). The Assessment and Plan accounted for the largest transformation volume (59.3%). Our analysis identified 7,576 transformation events across 4,114 note sections (5.8%), representing 1.2% consumer-term deletions. Transformation intensity varied across individual clinicians (p < 0.001). Overall, clinician post-editing demonstrates consistent shifts from conversational phrasing toward standardized, section- appropriate clinical terminology, supporting section-aware ambient AI design.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2603.18238v1' target='_blank'>ReDAG-RT: Global Rate-Priority Scheduling for Real-Time Multi-DAG Execution in ROS 2</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Md. Mehedi Hasan, Rafid Mostafiz, Bikash Kumar Paul, Md. Abir Hossain, Ziaur Rahman</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-03-18 19:45:58</h6>
+<p class='card-text'>ROS 2 has become a dominant middleware for robotic systems, where perception, estimation, planning, and control pipelines are structured as directed acyclic graphs of callbacks executed under a shared executor. However, default ROS 2 executors use best-effort dispatch without cross-DAG priority enforcement, leading to callback contention, structural priority inversion, and deadline instability under concurrent workloads. These limitations restrict deployment in time-critical and safety-sensitive cyber-physical systems. This paper presents ReDAGRT, a user-space global scheduling framework for deterministic multi-DAG execution in unmodified ROS 2. The framework introduces a Rate-Priority driven global ready queue that orders callbacks by activation rate, enforces per-DAG concurrency bounds, and mitigates cross-graph priority inversion without modifying the ROS 2 API, executor interface, or underlying operating system scheduler. We formalize a multi-DAG task model for ROS 2 callback pipelines and analyze cross-DAG interference under Rate-Priority scheduling. Response-time recurrences and schedulability conditions are derived within classical Rate-Monotonic theory. Experiments in a ROS 2 Humble environment compare ReDAGRT against SingleThreadedExecutor and MultiThreadedExecutor using synthetic multi-DAG workloads. Results show up to 29.7 percent reduction in deadline miss rate, 42.9 percent reduction in 99th percentile response time, and 13.7 percent improvement over MultiThreadedExecutor under comparable utilization. Asymmetric per-DAG concurrency bounds further reduce interference by 40.8 percent. These results demonstrate that deterministic and analyzable multi-DAG scheduling can be achieved entirely in the ROS 2 user-space execution layer, providing a practical foundation for real-time robotic middleware in safety-critical systems.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2603.18192v1' target='_blank'>MicroVision: An Open Dataset and Benchmark Models for Detecting Vulnerable Road Users and Micromobility Vehicles</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Alexander Rasch, Rahul Rajendra Pai</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-03-18 18:40:08</h6>
+<p class='card-text'>Micromobility is a growing mode of transportation, raising new challenges for traffic safety and planning due to increased interactions in areas where vulnerable road users (VRUs) share the infrastructure with micromobility, including parked micromobility vehicles (MMVs). Approaches to support traffic safety and planning increasingly rely on detecting road users in images -- a computer-vision task relying heavily on the quality of the images to train on. However, existing open image datasets for training such models lack focus and diversity in VRUs and MMVs, for instance, by categorizing both pedestrians and MMV riders as "person", or by not including new MMVs like e-scooters. Furthermore, datasets are often captured from a car perspective and lack data from areas where only VRUs travel (sidewalks, cycle paths). To help close this gap, we introduce the MicroVision dataset: an open image dataset and annotations for training and evaluating models for detecting the most common VRUs (pedestrians, cyclists, e-scooterists) and stationary MMVs (bicycles, e-scooters), from a VRU perspective. The dataset, recorded in Gothenburg (Sweden), consists of more than 8,000 anonymized, full-HD images with more than 30,000 carefully annotated VRUs and MMVs, captured over an entire year and part of almost 2,000 unique interaction scenes. Along with the dataset, we provide first benchmark object-detection models based on state-of-the-art architectures, which achieved a mean average precision of up to 0.723 on an unseen test set. The dataset and model can support traffic safety to distinguish between different VRUs and MMVs, or help monitoring systems identify the use of micromobility. The dataset and model weights can be accessed at https://doi.org/10.71870/eepz-jd52.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2603.17993v1' target='_blank'>GMT: Goal-Conditioned Multimodal Transformer for 6-DOF Object Trajectory Synthesis in 3D Scenes</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Huajian Zeng, Abhishek Saroha, Daniel Cremers, Xi Wang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-03-18 17:54:35</h6>
+<p class='card-text'>Synthesizing controllable 6-DOF object manipulation trajectories in 3D environments is essential for enabling robots to interact with complex scenes, yet remains challenging due to the need for accurate spatial reasoning, physical feasibility, and multimodal scene understanding. Existing approaches often rely on 2D or partial 3D representations, limiting their ability to capture full scene geometry and constraining trajectory precision. We present GMT, a multimodal transformer framework that generates realistic and goal-directed object trajectories by jointly leveraging 3D bounding box geometry, point cloud context, semantic object categories, and target end poses. The model represents trajectories as continuous 6-DOF pose sequences and employs a tailored conditioning strategy that fuses geometric, semantic, contextual, and goaloriented information. Extensive experiments on synthetic and real-world benchmarks demonstrate that GMT outperforms state-of-the-art human motion and human-object interaction baselines, such as CHOIS and GIMO, achieving substantial gains in spatial accuracy and orientation control. Our method establishes a new benchmark for learningbased manipulation planning and shows strong generalization to diverse objects and cluttered 3D environments. Project page: https://huajian- zeng.github. io/projects/gmt/.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2603.17714v1' target='_blank'>From Virtual Environments to Real-World Trials: Emerging Trends in Autonomous Driving</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:A. Humnabadkar, A. Sikdar, B. Cave, H. Zhang, N. Bessis, A. Behera</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-03-18 13:32:26</h6>
+<p class='card-text'>Autonomous driving technologies have achieved significant advances in recent years, yet their real-world deployment remains constrained by data scarcity, safety requirements, and the need for generalization across diverse environments. In response, synthetic data and virtual environments have emerged as powerful enablers, offering scalable, controllable, and richly annotated scenarios for training and evaluation. This survey presents a comprehensive review of recent developments at the intersection of autonomous driving, simulation technologies, and synthetic datasets. We organize the landscape across three core dimensions: (i) the use of synthetic data for perception and planning, (ii) digital twin-based simulation for system validation, and (iii) domain adaptation strategies bridging synthetic and real-world data. We also highlight the role of vision-language models and simulation realism in enhancing scene understanding and generalization. A detailed taxonomy of datasets, tools, and simulation platforms is provided, alongside an analysis of trends in benchmark design. Finally, we discuss critical challenges and open research directions, including Sim2Real transfer, scalable safety validation, cooperative autonomy, and simulation-driven policy learning, that must be addressed to accelerate the path toward safe, generalizable, and globally deployable autonomous driving systems.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2603.17670v1' target='_blank'>AgentVLN: Towards Agentic Vision-and-Language Navigation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Zihao Xin, Wentong Li, Yixuan Jiang, Ziyuan Huang, Bin Wang, Piji Li, Jianke Zhu, Jie Qin, Shengjun Huang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-03-18 12:43:47</h6>
+<p class='card-text'>Vision-and-Language Navigation (VLN) requires an embodied agent to ground complex natural-language instructions into long-horizon navigation in unseen environments. While Vision-Language Models (VLMs) offer strong 2D semantic understanding, current VLN systems remain constrained by limited spatial perception, 2D-3D representation mismatch, and monocular scale ambiguity. In this paper, we propose AgentVLN, a novel and efficient embodied navigation framework that can be deployed on edge computing platforms. We formulate VLN as a Partially Observable Semi-Markov Decision Process (POSMDP) and introduce a VLM-as-Brain paradigm that decouples high-level semantic reasoning from perception and planning via a plug-and-play skill library. To resolve multi-level representation inconsistency, we design a cross-space representation mapping that projects perception-layer 3D topological waypoints into the image plane, yielding pixel-aligned visual prompts for the VLM. Building on this bridge, we integrate a context-aware self-correction and active exploration strategy to recover from occlusions and suppress error accumulation over long trajectories. To further address the spatial ambiguity of instructions in unstructured environments, we propose a Query-Driven Perceptual Chain-of-Thought (QD-PCoT) scheme, enabling the agent with the metacognitive ability to actively seek geometric depth information. Finally, we construct AgentVLN-Instruct, a large-scale instruction-tuning dataset with dynamic stage routing conditioned on target visibility. Extensive experiments show that AgentVLN consistently outperforms prior state-of-the-art methods (SOTA) on long-horizon VLN benchmarks, offering a practical paradigm for lightweight deployment of next-generation embodied navigation models. Code: https://github.com/Allenxinn/AgentVLN.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js'></script>
+</body>
+</html>
