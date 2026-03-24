@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>planning - 2026-03-24</title>
+<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap' rel='stylesheet'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css'>
+<style>
+body {
+font-family: 'Roboto', sans-serif;
+background-color: #f5f7fa;
+padding: 20px;
+}
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.card-title {
+    font-weight: 700;
+}
+.card:hover {
+    transform: scale(1.02);
+    transition: 0.3s ease-in-out;
+}
+</style>
+</head>
+<body>
+<div class='container'>
+<h1 class='text-center my-4'><i class='fas fa-book'></i>planning - 2026-03-24</h1>
+<div class='row'>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2603.22280v1' target='_blank'>DualCoT-VLA: Visual-Linguistic Chain of Thought via Parallel Reasoning for Vision-Language-Action Models</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Zhide Zhong, Junfeng Li, Junjie He, Haodong Yan, Xin Gong, Guanyi Zhao, Yingjie Cai, Jiantao Gao, Xu Yan, Bingbing Liu, Yingcong Chen, Liuqing Yang, Haoang Li</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-03-23 17:59:25</h6>
+<p class='card-text'>Vision-Language-Action (VLA) models map visual observations and language instructions directly to robotic actions. While effective for simple tasks, standard VLA models often struggle with complex, multi-step tasks requiring logical planning, as well as precise manipulations demanding fine-grained spatial perception. Recent efforts have incorporated Chain-of-Thought (CoT) reasoning to endow VLA models with a ``thinking before acting'' capability. However, current CoT-based VLA models face two critical limitations: 1) an inability to simultaneously capture low-level visual details and high-level logical planning due to their reliance on isolated, single-modal CoT; 2) high inference latency with compounding errors caused by step-by-step autoregressive decoding. To address these limitations, we propose DualCoT-VLA, a visual-linguistic CoT method for VLA models with a parallel reasoning mechanism. To achieve comprehensive multi-modal reasoning, our method integrates a visual CoT for low-level spatial understanding and a linguistic CoT for high-level task planning. Furthermore, to overcome the latency bottleneck, we introduce a parallel CoT mechanism that incorporates two sets of learnable query tokens, shifting autoregressive reasoning to single-step forward reasoning. Extensive experiments demonstrate that our DualCoT-VLA achieves state-of-the-art performance on the LIBERO and RoboCasa GR1 benchmarks, as well as in real-world platforms.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2603.22263v1' target='_blank'>DexDrummer: In-Hand, Contact-Rich, and Long-Horizon Dexterous Robot Drumming</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Hung-Chieh Fang, Amber Xie, Jennifer Grannen, Kenneth Llontop, Dorsa Sadigh</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-03-23 17:49:06</h6>
+<p class='card-text'>Performing in-hand, contact-rich, and long-horizon dexterous manipulation remains an unsolved challenge in robotics. Prior hand dexterity works have considered each of these three challenges in isolation, yet do not combine these skills into a single, complex task. To further test the capabilities of dexterity, we propose drumming as a testbed for dexterous manipulation. Drumming naturally integrates all three challenges: it involves in-hand control for stabilizing and adjusting the drumstick with the fingers, contact-rich interaction through repeated striking of the drum surface, and long-horizon coordination when switching between drums and sustaining rhythmic play. We present DexDrummer, a hierarchical object-centric bimanual drumming policy trained in simulation with sim-to-real transfer. The framework reduces the exploration difficulty of pure reinforcement learning by combining trajectory planning with residual RL corrections for fast transitions between drums. A dexterous manipulation policy handles contact-rich dynamics, guided by rewards that explicitly model both finger-stick and stick-drum interactions. In simulation, we show our policy can play two styles of music: multi-drum, bimanual songs and challenging, technical exercises that require increased dexterity. Across simulated bimanual tasks, our dexterous, reactive policy outperforms a fixed grasp policy by 1.87x across easy songs and 1.22x across hard songs F1 scores. In real-world tasks, we show song performance across a multi-drum setup. DexDrummer is able to play our training song and its extended version with an F1 score of 1.0.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2603.22210v1' target='_blank'>Route-Phasing-Split-Encoded Genetic Algorithm for Multi-Satellite On-Orbit Servicing Mission Planning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Shridhar Velhal, Avijit Banerjee, George Nikolakopoulos</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-03-23 17:08:19</h6>
+<p class='card-text'>This article addresses multi-servicer on-orbit servicing mission planning in geosynchronous Earth orbit, where routing decisions are tightly coupled with time-dependent orbital phasing and strict propellant and mission-duration constraints. We propose a Route-Phasing-Split Genetic Algorithm (RPS-GA) that simultaneously optimizes target sequencing, discrete phasing rotation decisions (i.e., the number of phasing revolutions/waiting cycles), and route partitioning across multiple servicing spacecrafts (SSCs). An RPS triplet chromosome encodes route order, phasing rotations, and route splits in a unified structure, enabling split-aware recombination without disrupting feasible multi-servicer route blocks. Feasibility is enforced through a constraint-aware fitness function that ranks feasible solutions based on total $ΔV$, while penalizing propellant and mission duration violations, using aggregate and imbalance penalties. This formulation discourages the concentration of violations on a single servicing spacecraft (SSC). Once a feasible best solution is identified, it is preserved as feasible in subsequent generations, thereby enhancing convergence stability. The framework incorporates split-aware crossover, mutation and a regret-based Large Neighborhood Search for local intensification. Experiments on representative GEO servicing scenarios demonstrate that RPS-GA produces feasible multi-servicer plans with substantially improved fuel efficiency, reducing total $ΔV$ by $24.5\%$, (from $1956.36 \ m/s$ to $ 1476.32\ m/s $) compared with a state-of-the-art LNS-AGA baseline.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2603.22188v1' target='_blank'>Generalized Sequential Monte Carlo Sampling for Redistricting Simulation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Philip O'Sullivan, Kosuke Imai, Cory McCartan</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-03-23 16:48:43</h6>
+<p class='card-text'>Simulation methods have become important tools for quantifying partisan and racial bias in redistricting plans. We generalize the Sequential Monte Carlo (SMC) algorithm of McCartan and Imai (2023), one of the commonly used approaches. First, our generalized SMC (gSMC) algorithm can split off regions of arbitrary size, rather than a single district as in the original SMC framework, enabling the sampling of multi-member districts. Second, the gSMC algorithm can operate over various sampling spaces, providing additional computational flexibility. Third, we derive optimal-variance incremental weights and show how to compute them efficiently for each sampling space. Finally, we incorporate Markov chain Monte Carlo (MCMC) steps, creating a hybrid gSMC-MCMC algorithm that can be used for large-scale redistricting applications. We demonstrate the effectiveness of the proposed methodology through analyses of the Irish Parliament, which uses multi-member districts, and the Pennsylvania House of Representatives, which has more than 200 single-member districts.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2603.22174v1' target='_blank'>Feasibility of Augmented Reality-Guided Robotic Ultrasound with Cone-Beam CT Integration for Spine Procedures</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Tianyu Song, Felix Pabst, Feng Li, Yordanka Velikova, Miruna-Alexandra Gafencu, Yuan Bi, Ulrich Eck, Nassir Navab</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-03-23 16:35:17</h6>
+<p class='card-text'>Accurate needle placement in spine interventions is critical for effective pain management, yet it depends on reliable identification of anatomical landmarks and careful trajectory planning. Conventional imaging guidance often relies both on CT and X-ray fluoroscopy, exposing patients and staff to high dose of radiation while providing limited real-time 3D feedback. We present an optical see-through augmented reality (OST-AR)-guided robotic system for spine procedures that provides in situ visualization of spinal structures to support needle trajectory planning. We integrate a cone-beam CT (CBCT)-derived 3D spine model which is co-registered with live ultrasound, enabling users to combine global anatomical context with local, real-time imaging. We evaluated the system in a phantom user study involving two representative spine procedures: facet joint injection and lumbar puncture. Sixteen participants performed insertions under two visualization conditions: conventional screen vs. AR. Results show that AR significantly reduces execution time and across-task placement error, while also improving usability, trust, and spatial understanding and lowering cognitive workload. These findings demonstrate the feasibility of AR-guided robotic ultrasound for spine interventions, highlighting its potential to enhance accuracy, efficiency, and user experience in image-guided procedures.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2603.22170v1' target='_blank'>Human-Inspired Pavlovian and Instrumental Learning for Autonomous Agent Navigation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jingfeng Shan, Francesco Guidi, Mehrdad Saeidi, Enrico Testi, Elia Favarelli, Andrea Giorgetti, Davide Dardari, Alberto Zanella, Giorgio Li Pira, Francesca Starita, Anna Guerra</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-03-23 16:29:43</h6>
+<p class='card-text'>Autonomous agents operating in uncertain environments must balance fast responses with goal-directed planning. Classical MF RL often converges slowly and may induce unsafe exploration, whereas MB methods are computationally expensive and sensitive to model mismatch. This paper presents a human-inspired hybrid RL architecture integrating Pavlovian, Instrumental MF, and Instrumental MB components. Inspired by Pavlovian and Instrumental learning from neuroscience, the framework considers contextual radio cues, here intended as georeferenced environmental features acting as CS, to shape intrinsic value signals and bias decision-making. Learning is further modulated by internal motivational drives through a dedicated motivational signal. A Bayesian arbitration mechanism adaptively blends MF and MB estimates based on predicted reliability. Simulation results show that the hybrid approach accelerates learning, improves operational safety, and reduces navigation in high-uncertainty regions compared to standard RL baselines. Pavlovian conditioning promotes safer exploration and faster convergence, while arbitration enables a smooth transition from exploration to efficient, plan-driven exploitation. Overall, the results highlight the benefits of biologically inspired modularity for robust and adaptive autonomous systems under uncertainty.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2603.22169v1' target='_blank'>Closed-Loop Verbal Reinforcement Learning for Task-Level Robotic Planning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Dmitrii Plotnikov, Iaroslav Kolomiets, Dmitrii Maliukov, Dmitrij Kosenkov, Daniia Zinniatullina, Artem Trandofilov, Georgii Gazaryan, Kirill Bogatikov, Timofei Kozlov, Igor Duchinskii, Mikhail Konenkov, Miguel Altamirano Cabrera, Dzmitry Tsetserukou</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-03-23 16:28:36</h6>
+<p class='card-text'>We propose a new Verbal Reinforcement Learning (VRL) framework for interpretable task-level planning in mobile robotic systems operating under execution uncertainty. The framework follows a closed-loop architecture that enables iterative policy improvement through interaction with the physical environment. In our framework, executable Behavior Trees are repeatedly refined by a Large Language Model actor using structured natural-language feedback produced by a Vision-Language Model critic that observes the physical robot and execution traces. Unlike conventional reinforcement learning, policy updates in VRL occur directly at the symbolic planning level, without gradient-based optimization. This enables transparent reasoning, explicit causal feedback, and human-interpretable policy evolution. We validate the proposed framework on a real mobile robot performing a multi-stage manipulation and navigation task under execution uncertainty. Experimental results show that the framework supports explainable policy improvements, closed-loop adaptation to execution failures, and reliable deployment on physical robotic systems.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2603.22166v1' target='_blank'>J-PAS: unprecedented precision in stellar populations of diffuse tidal features</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Sepideh Eskandarlou, Mohammad Akhlaghi, Francisco Arizo-Borillo, Johan H. Knapen, Helena Domínguez Sánchez, Juan Antonio Fernández-Ontiveros, Carlos López-Sanjuan, Rosa María González Delgado, Yolanda Jiménez Teja, Renato Dupke, Yves Revaz, Pascale Jablonka, Santi Roca-Fábrega, Juan Miró-Carretero, David Martínez-Delgado, Alejandro Lumbreras-Calle, Antonio Hernán-Caballero, Héctor Vázquez Ramió, Raúl Infante-Sainz, Ana L. Chies-Santos, Alessandro Ederoclite, Julio Esteban Rodríguez Martín, Raul Abramo, Jailson Alcaniz, Narciso Benitez, Silvia Bonoli, Javier Zaragoza, Saulo Carneiro, Javier Cenarro, David Cristóbal-Hornillos, Simone Daflon, Carlos Hernández-Monteagudo, Jifeng Liu, Antonio Marín Franch, Claudia Mendes de Oliveira, Mariano Moles, Fernando Roig, Laerte Sodré, Keith Taylor, Jesús Varela, José Manuel Vilchez</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-03-23 16:27:31</h6>
+<p class='card-text'>Galaxies frequently interact with nearby systems, a process that can significantly alter their morphology and star formation activity. However, spectroscopic studies of their faint and diffuse remnants require very long exposure times and often exceed the limited field of view of integral field units (IFUs). On the other hand, broad-band imaging can have a much wider field of view, but lacks the spectral resolution to identify key spectral features, restricting accurate constraints on stellar population properties. With its 54 narrow-band filters in the optical and wide coverage (planned 8000 square degrees), J-PAS fills this gap. In this case study, we examine PGC 3087775, a massive galaxy at z = 0.046179 (~ 201 Mpc) in the later stages of a major merger in the J-PAS early data release. Photometry was validated with MaNGA IFU data (for the central part). Stellar population properties was derived using both J-PAS and SDSS photometry. SDSS indicates a metal-rich population with an extended star formation history (SFH) and elevated star formation rates. J-PAS instead points to a less metal-rich population with moderate extinction and a more rapid SFH, consistent with a quenched stellar population. The average Dn(4000) index of the tidal features is 1.24, suggesting that it was a non-dry merger and a fourfold improvement in the precision of stellar mass and Dn (4000) was found with J-PAS. We also assessed two heuristic methods for estimating the mass-to-light ratio from SDSS filters and found that they overestimate the stellar mass in this galaxy by 0.5 dex and 0.4 dex relative to SED fitting results from J-PAS and SDSS, respectively. Future work will extend this analysis to a larger sample of merging galaxies and evolution of the stellar populations of such structures across the nearby Universe to unprecedented detail. This project is fully reproducible, through Maneage (commit 0f0d7e2).</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2603.22148v1' target='_blank'>OpenEarth-Agent: From Tool Calling to Tool Creation for Open-Environment Earth Observation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Sijie Zhao, Feng Liu, Xueliang Zhang, Hao Chen, Xinyu Gu, Zhe Jiang, Fenghua Ling, Ben Fei, Wenlong Zhang, Junjue Wang, Weihao Xuan, Pengfeng Xiao, Naoto Yokoya, Lei Bai</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-03-23 16:14:15</h6>
+<p class='card-text'>Earth Observation (EO) is essential for perceiving dynamic land surface changes, yet deploying autonomous EO in open environments is hindered by the immense diversity of multi-source data and heterogeneous tasks. While remote sensing agents have emerged to streamline EO workflows, existing tool-calling agents are confined to closed environments. They rely on pre-defined tools and are restricted to narrow scope, limiting their generalization to the diverse data and tasks. To overcome these limitations, we introduce OpenEarth-Agent, the first tool-creation agent framework tailored for open-environment EO. Rather than calling predefined tools, OpenEarth-Agent employs adaptive workflow planning and tool creation to generalize to unseen data and tasks. This adaptability is bolstered by an open-ended integration of multi-stage tools and cross-domain knowledge bases, enabling robust execution in the entire EO pipeline across multiple application domains. To comprehensively evaluate EO agents in open environments, we propose OpenEarth-Bench, a novel benchmark comprising 596 real-world, full-pipeline cases across seven application domains, explicitly designed to assess agents' adaptive planning and tool creation capabilities. Only essential pre-trained model tools are provided in this benchmark, devoid of any other predefined task-specific tools. Extensive experiments demonstrate that OpenEarth-Agent successfully masters full-pipeline EO across multiple domains in the open environment. Notably, on the cross-benchmark Earth-Bench, our tool-creating agent equipped with 6 essential pre-trained models achieves performance comparable to tool-calling agents relying on 104 specialized tools, and significantly outperforms them when provided with the complete toolset. In several cases, the created tools exhibit superior robustness to data anomalies compared to human-engineered counterparts.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2603.22127v1' target='_blank'>DQN Based Joint UAV Trajectory and Association Planning in NTN Assisted Networks</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Afsoon Alidadi Shamsabadi, Cosmas Mwaba, Thomas Nugent, Jie Gao, Pablo Madoery, Halim Yanikomeroglu, Subhadeep Pal</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-03-23 15:54:25</h6>
+<p class='card-text'>Advanced Air Mobility (AAM) has emerged as a key pillar of next-generation transportation systems, encompassing a wide range of uncrewed aerial vehicle (UAV) applications. To enable AAM, maintaining reliable and efficient communication links between UAVs and control centers is essential. At the same time, the highly dynamic nature of wireless networks, combined with the limited onboard energy of UAVs, makes efficient trajectory planning and network association crucial. Existing terrestrial networks often fail to provide ubiquitous coverage due to frequent handovers and coverage gaps. To address these challenges, geostationary Earth orbit (GEO) satellites offer a promising complementary solution for extending UAV connectivity beyond terrestrial boundaries. This work proposes an integrated GEO terrestrial network architecture to ensure seamless UAV connectivity. Leveraging artificial intelligence (AI), a deep Q network (DQN) based algorithm is developed for joint UAV trajectory and association planning (JUTAP), aiming to minimize energy consumption, handover frequency, and disconnectivity. Simulation results validate the effectiveness of the proposed algorithm within the integrated GEO terrestrial framework.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2603.22113v1' target='_blank'>Optimization-based strategic planning for geographical healthcare accessibility in developing countries: a literature review</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Laura Davila-Pena, Maria Paola Scaparra, Dick den Hertog</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-03-23 15:41:30</h6>
+<p class='card-text'>Access to healthcare facilities is a critical issue in developing countries, where limited resources and significant challenges hinder progress toward universal health coverage, one of the targets pursued by the United Nations. As a result, the Operations Research (OR) community has become increasingly active in addressing this issue, employing various techniques, particularly optimization. However, making long-term strategic decisions remains challenging, as these often require substantial investments and directly affect large populations. Moreover, much of the existing literature is predominantly theoretical. This paper reviews studies published over the past two decades that use optimization techniques to inform strategic planning decisions aimed at improving health accessibility and specifically contain a case study conducted in a developing country. The review explores the nature of the problems tackled, considering factors such as the level of care, service delivery channels, objectives, criteria, or potential hierarchy, uncertainty, and multi-period settings. Additionally, we discuss the modeling approaches, solution methodologies, and the extent of practical implementation. The goal of this survey is not only to summarize existing work but also to provide a roadmap for future research, offering valuable insights for OR practitioners in the field.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2603.22078v1' target='_blank'>Do World Action Models Generalize Better than VLAs? A Robustness Study</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Zhanguang Zhang, Zhiyuan Li, Behnam Rahmati, Rui Heng Yang, Yintao Ma, Amir Rasouli, Sajjad Pakdamansavoji, Yangzheng Wu, Lingfeng Zhang, Tongtong Cao, Feng Wen, Xingyue Quan, Yingxue Zhang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-03-23 15:13:15</h6>
+<p class='card-text'>Robot action planning in the real world is challenging as it requires not only understanding the current state of the environment but also predicting how it will evolve in response to actions. Vision-language-action (VLA), which repurpose large-scale vision-language models for robot action generation using action experts, have achieved notable success across a variety of robotic tasks. Nevertheless, their performance remains constrained by the scope of their training data, exhibiting limited generalization to unseen scenarios and vulnerability to diverse contextual perturbations. More recently, world models have been revisited as an alternative to VLAs. These models, referred to as world action models (WAMs), are built upon world models that are trained on large corpora of video data to predict future states. With minor adaptations, their latent representation can be decoded into robot actions. It has been suggested that their explicit dynamic prediction capacity, combined with spatiotemporal priors acquired from web-scale video pretraining, enables WAMs to generalize more effectively than VLAs. In this paper, we conduct a comparative study of prominent state-of-the-art VLA policies and recently released WAMs. We evaluate their performance on the LIBERO-Plus and RoboTwin 2.0-Plus benchmarks under various visual and language perturbations. Our results show that WAMs achieve strong robustness, with LingBot-VA reaching 74.2% success rate on RoboTwin 2.0-Plus and Cosmos-Policy achieving 82.2% on LIBERO-Plus. While VLAs such as $π_{0.5}$ can achieve comparable robustness on certain tasks, they typically require extensive training with diverse robotic datasets and varied learning objectives. Hybrid approaches that partially incorporate video-based dynamic learning exhibit intermediate robustness, highlighting the importance of how video priors are integrated.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2603.22055v1' target='_blank'>MineRobot: A Unified Framework for Kinematics Modeling and Solving of Underground Mining Robots in Virtual Environments</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Shengzhe Hou, Xinming Lu, Tianyu Zhang, Changqing Yan, Xingli Zhang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-03-23 14:53:26</h6>
+<p class='card-text'>Underground mining robots are increasingly operated in virtual environments (VEs) for training, planning, and digital-twin applications, where reliable kinematics is essential for avoiding hazardous in-situ trials. Unlike typical open-chain industrial manipulators, mining robots are often closed-chain mechanisms driven by linear actuators and involving planar four-bar linkages, which makes both kinematics modeling and real-time solving challenging. We present \emph{MineRobot}, a unified framework for modeling and solving the kinematics of underground mining robots in VEs. First, we introduce the Mining Robot Description Format (MRDF), a domain-specific representation that parameterizes kinematics for mining robots with native semantics for actuators and loop closures. Second, we develop a topology-processing pipeline that contracts four-bar substructures into generalized joints and, for each actuator, extracts an Independent Topologically Equivalent Path (ITEP), which is classified into one of four canonical types. Third, leveraging ITEP independence, we compose per-type solvers into an actuator-centered sequential forward-kinematics (FK) pipeline. Building on the same decomposition, we formulate inverse kinematics (IK) as a bound-constrained optimization problem and solve it with a Gauss--Seidel-style procedure that alternates actuator-length updates. By converting coupled closed-loop kinematics into a sequence of small topology-aware solves, the framework avoids robot-specific hand derivations and supports efficient computation. Experiments demonstrate that MineRobot provides the real-time performance and robustness required by VE applications.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2603.21958v1' target='_blank'>Interaction-Aware Predictive Environmental Control Barrier Function for Emergency Lane Change</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Ying Shuai Quan, Paolo Falcone, Jonas Sjöberg</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-03-23 13:15:41</h6>
+<p class='card-text'>Safety-critical motion planning in mixed traffic remains challenging for autonomous vehicles, especially when it involves interactions between the ego vehicle (EV) and surrounding vehicles (SVs). In dense traffic, the feasibility of a lane change depends strongly on how SVs respond to the EV motion. This paper presents an interaction-aware safety framework that incorporates such interactions into a control barrier function (CBF)-based safety assessment. The proposed method predicts near-future vehicle positions over a finite horizon, thereby capturing reactive SV behavior and embedding it into the CBF-based safety constraint. To address uncertainty in the SV response model, a robust extension is developed by treating the model mismatch as a bounded disturbance and incorporating an online uncertainty estimate into the barrier condition. Compared with classical environmental CBF methods that neglect SV reactions, the proposed approach provides a less conservative and more informative safety representation for interactive traffic scenarios, while improving robustness to uncertainty in the modeled SV behavior.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2603.21926v1' target='_blank'>Disengagement Analysis and Field Tests of a Prototypical Open-Source Level 4 Autonomous Driving System</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Marvin Seegert, Christian Oefinger, Korbinian Moller, Christoph Bank, Johannes Betz</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-03-23 12:47:47</h6>
+<p class='card-text'>Proprietary Autonomous Driving Systems are typically evaluated through disengagements, unplanned manual interventions to alter vehicle behavior, as annually reported by the California Department of Motor Vehicles. However, the real-world capabilities of prototypical open-source Level 4 vehicles over substantial distances remain largely unexplored. This study evaluates a research vehicle running an Autoware-based software stack across 236 km of mixed traffic. By classifying 30 disengagements across 26 rides with a novel five-level criticality framework, we observed a spatial disengagement rate of 0.127 1/km. Interventions predominantly occurred at lower speeds near static objects and traffic lights. Perception and Planning failures accounted for 40% and 26.7% of disengagements, respectively, largely due to object-tracking losses and operational deadlocks caused by parked vehicles. Frequent, unnecessary interventions highlighted a lack of trust on the part of the safety driver. These results show that while open-source software enables extensive operations, disengagement analysis is vital for uncovering robustness issues missed by standard metrics.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2603.21887v1' target='_blank'>IGV-RRT: Prior-Real-Time Observation Fusion for Active Object Search in Changing Environments</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Wei Zhang, Ping Gong, Yujie Wang, Minghui Bai, Rongfeng Ye, Yinchuan Wang, Yachao Wang, Leilei Yao, Teng Chen, Chen Sun, Chaoqun Wang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-03-23 12:14:26</h6>
+<p class='card-text'>Object Goal Navigation (ObjectNav) in temporally changing indoor environments is challenging because object relocation can invalidate historical scene knowledge. To address this issue, we propose a probabilistic planning framework that combines uncertainty-aware scene priors with online target relevance estimates derived from a Vision Language Model (VLM). The framework contains a dual-layer semantic mapping module and a real-time planner. The mapping module includes an Information Gain Map (IGM) built from a 3D scene graph (3DSG) during prior exploration to model object co-occurrence relations and provide global guidance on likely target regions. It also maintains a VLM score map (VLM-SM) that fuses confidence-weighted semantic observations into the map for local validation of the current scene. Based on these two cues, we develop a planner that jointly exploits information gain and semantic evidence for online decision making. The planner biases tree expansion toward semantically salient regions with high prior likelihood and strong online relevance (IGV-RRT), while preserving kinematic feasibility through gradient-based analysis. Simulation and real-world experiments demonstrate that the proposed method effectively mitigates the impact of object rearrangement, achieving higher search efficiency and success rates than representative baselines in complex indoor environments.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2603.21880v1' target='_blank'>Optimal Solutions for the Moving Target Vehicle Routing Problem with Obstacles via Lazy Branch and Price</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Anoop Bhat, Geordan Gutow, Surya Singh, Zhongqiang Ren, Sivakumar Rathinam, Howie Choset</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-03-23 12:10:12</h6>
+<p class='card-text'>The Moving Target Vehicle Routing Problem with Obstacles (MT-VRP-O) seeks trajectories for several agents that collectively intercept a set of moving targets. Each target has one or more time windows where it must be visited, and the agents must avoid static obstacles and satisfy speed and capacity constraints. We introduce Lazy Branch-and-Price with Relaxed Continuity (Lazy BPRC), which finds optimal solutions for the MT-VRP-O. Lazy BPRC applies the branch-and-price framework for VRPs, which alternates between a restricted master problem (RMP) and a pricing problem. The RMP aims to select a sequence of target-time window pairings (called a tour) for each agent to follow, from a limited subset of tours. The pricing problem adds tours to the limited subset. Conventionally, solving the RMP requires computing the cost for an agent to follow each tour in the limited subset. Computing these costs in the MT-VRP-O is computationally intensive, since it requires collision-free motion planning between moving targets. Lazy BPRC defers cost computations by solving the RMP using lower bounds on the costs of each tour, computed via motion planning with relaxed continuity constraints. We lazily evaluate the true costs of tours as-needed. We compute a tour's cost by searching for a shortest path on a Graph of Convex Sets (GCS), and we accelerate this search using our continuity relaxation method. We demonstrate that Lazy BPRC runs up to an order of magnitude faster than two ablations.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2603.21878v1' target='_blank'>Study of the Run-3 muon flux at the SND@LHC experiment</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:The SND@LHC Collaboration</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-03-23 12:09:34</h6>
+<p class='card-text'>Long-range muons produced in proton-proton collisions at the ATLAS interaction point constitute the primary background for neutrino interaction searches at the SND@LHC experiment. This work presents a comprehensive characterization of the muon flux throughout LHC Run-3, benchmarking Monte Carlo simulations against experimental measurements. Measured and simulated muon rates agree within 10-15% across all Run-3 configurations. Following the substantial background increase in 2024 as a result of a beam optics change, the reversion to nominal optics in 2025 did not restore the 2022-2023 levels due to the unprecedented adoption of horizontal crossing in ATLAS. As enlightened by simulation results, the latter enhanced the contribution of high-angle muons originating from diffractive proton losses in the LHC Dispersion Suppressor region. Their identification enabled the design of mitigation strategies that were experimentally validated. The simulation framework was also applied to the future High-Luminosity LHC configuration, resulting in a considerable muon rate rise, driven by both the planned luminosity increase and the enlarged magnet aperture. Nevertheless, the upgrade from emulsion films to silicon vertex detectors will preserve the efficiency of the experiment even in such a high-rate environment.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2603.21831v1' target='_blank'>Directional Mollification for Controlled Smooth Path Generation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Alfredo González-Calvin, Juan F. Jiménez, Héctor García de Marina</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-03-23 11:18:43</h6>
+<p class='card-text'>Path generation, the problem of producing smooth, executable paths from discrete planning outputs, such as waypoint sequences, is a fundamental step in the control of autonomous robots, industrial robots, and CNC machines, as path following and trajectory tracking controllers impose strict differentiability requirements on their reference inputs to guarantee stability and convergence, particularly for nonholonomic systems. Mollification has been recently proposed as a computationally efficient and analytically tractable tool for path generation, offering formal smoothness and curvature guarantees with advantages over spline interpolation and optimization-based methods. However, this mollification is subject to a fundamental geometric constraint: the smoothed path is confined within the convex hull of the original path, precluding exact waypoint interpolation, even when explicitly required by mission specifications or upstream planners. We introduce directional mollification, a novel operator that resolves this limitation while retaining the analytical tractability of classical mollification. The proposed operator generates infinitely differentiable paths that strictly interpolate prescribed waypoints, converge to the original non-differentiable input with arbitrary precision, and satisfy explicit curvature bounds given by a closed-form expression, addressing the core requirements of path generation for controlled autonomous systems. We further establish a parametric family of path generation operators that contains both classical and directional mollification as special cases, providing a unifying theoretical framework for the systematic generation of smooth, feasible paths from non-differentiable planning outputs.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2603.21829v1' target='_blank'>Multi-View Deformable Convolution Meets Visual Mamba for Coronary Artery Segmentation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Xiaochan Yuan, Pai Zeng</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-03-23 11:15:53</h6>
+<p class='card-text'>Accurate segmentation of coronary arteries from computed tomography angiography (CTA) images is of paramount clinical importance for the diagnosis and treatment planning of cardiovascular diseases. However, coronary artery segmentation remains challenging due to the inherent multi-branching and slender tubular morphology of the vasculature, compounded by severe class imbalance between foreground vessels and background tissue. Conventional convolutional neural network (CNN)-based approaches struggle to capture long-range dependencies among spatially distant vascular structures, while Vision Transformer (ViT)-based methods incur prohibitive computational overhead that hinders deployment in resource-constrained clinical settings. Motivated by the recent success of state space models (SSMs) in efficiently modeling long-range sequential dependencies with linear complexity, we propose MDSVM-UNet, a novel two-stage coronary artery segmentation framework that synergistically integrates multidirectional snake convolution (MDSConv) with residual visual Mamba (RVM). In the encoding stage, we introduce MDSConv, a deformable convolution module that learns adaptive offsets along three orthogonal anatomical planes -- sagittal, coronal, and axial -- thereby enabling comprehensive multi-view feature fusion that faithfully captures the elongated and tortuous geometry of coronary vessels. In the decoding stage, we design an RVM-based upsampling decoder block that leverages selective state space mechanisms to model inter-slice long-range dependencies while preserving linear computational complexity. Furthermore, we propose a progressive two-stage segmentation strategy: the first stage performs coarse whole-image segmentation to guide intelligent block extraction, while the second stage conducts fine-grained block-level segmentation to recover vascular details and suppress false positives..</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2603.21804v1' target='_blank'>Privacy-Preserving Formation Control for Networked Underactuated USVs: A Passivity-Based Approach</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jingyi Zhao, Wenxuan Wang, Weijun Zhou, Yongxin Wu, Yuhu Wu, Yann Le Gorrec</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-03-23 10:47:52</h6>
+<p class='card-text'>This paper studies coordinated trajectory planning and tracking control for multiple unmanned surface vessels (USVs) under strict privacy requirements. To avoid the privacy risks associated with direct position sharing in conventional cooperative methods, the proposed approach adopts an estimated fleet centroid as the only shared variable, preventing individual trajectory disclosure while enabling coordination. Based on this interaction mechanism, a formation-oriented trajectory is generated for the fleet. The collective dynamics are modeled using Port-Hamiltonian systems, and a passivity-based tracking controller is designed for each USV to accurately follow the planned trajectories. The stability of the closed-loop system is rigorously proven, and experiments on a real USV platform confirm effective formation tracking and privacy preservation. The proposed result extends and validates through experimental results the approach in [26] that was limited to idealized pointmass models and lacked a feedback control.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2603.21789v1' target='_blank'>Safe and wind-aware synchronous path planning for a fleet of fixed-wing constant speed aircraft</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Maël Feurgard, Gautier Hattenberger, Nicolas Durand, Simon Lacroix</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-03-23 10:29:59</h6>
+<p class='card-text'>Path planning for multiple unmanned aerial vehicles is a difficult task, and even more for a fleet of fixed-wing aircraft. One specific case is the transition to, or between, formation flight patterns, which requires synchronous arrivals while ensuring minimal separation, and ideally maintaining cruise speed. We present a centralized method to solve this problem based on enumerating different Dubins paths. Given a travel time for the fleet, it builds a set of possible paths for each aircraft. Then, it checks in parallel separation between each path pair. This yields coefficients for an Integer Linear Programming problem determining if a fleet-wide conflict-free solution exists. This process is repeated for different travel times sampled with increasing resolution until the user-defined accuracy is met. The method is benchmarked with Monte-Carlo simulations considering up to 20 aircraft simultaneously, achieving an 95% success rate for an average 8 seconds computation time.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2603.21726v1' target='_blank'>LSAI: A Large Small AI Model Codesign Framework for Agentic Robot Scenarios</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Longyu Zhou, Supeng Leng, Tianhao Liang, Jianping Yao</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-03-23 09:14:39</h6>
+<p class='card-text'>The development of Artificial Intelligence (AI) has enabled agentic robots an appealing paradigm for various applications, such as research and rescue in complex environment. In this context, the next wireless communication technology facilitates robot cooperation for efficient environment sensing and exploration. However, traditional AI solutions cannot always provide reasonable resource utilization decisions, which makes it challenging to achieve both accurate and low-latency research and rescue. To address this issue, we propose a, LSAI, a large small AI model codesign framework to achieve highly accurate and real-time robot cooperation with deep interaction between large AI model and small AI model. We first propose an attention-based model aggregation for LAI construction. It can assist agentic robots in accurately sensing physical environments. Next, we design an adaptive model splitting and update algorithm to enable the robots to perform accurate path planning for high-efficiency environment sensing with low energy consumption. Finally, we demonstrate the effectiveness of our proposed LSAI framework. The simulation results indicate that our solution achieves sensing accuracy of up to 20.4% while reducing sensing cooperation latency by an average of 17.9% compared to traditional AI solutions.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2603.21723v1' target='_blank'>Can a Robot Walk the Robotic Dog: Triple-Zero Collaborative Navigation for Heterogeneous Multi-Agent Systems</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yaxuan Wang, Yifan Xiang, Ke Li, Xun Zhang, BoWen Ye, Zhuochen Fan, Fei Wei, Tong Yang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-03-23 09:12:45</h6>
+<p class='card-text'>We present Triple Zero Path Planning (TZPP), a collaborative framework for heterogeneous multi-robot systems that requires zero training, zero prior knowledge, and zero simulation. TZPP employs a coordinator--explorer architecture: a humanoid robot handles task coordination, while a quadruped robot explores and identifies feasible paths using guidance from a multimodal large language model. We implement TZPP on Unitree G1 and Go2 robots and evaluate it across diverse indoor and outdoor environments, including obstacle-rich and landmark-sparse settings. Experiments show that TZPP achieves robust, human-comparable efficiency and strong adaptability to unseen scenarios. By eliminating reliance on training and simulation, TZPP offers a practical path toward real-world deployment of heterogeneous robot cooperation. Our code and video are provided at: https://github.com/triple-zeropp/Triple-zero-robot-agent</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2603.21715v1' target='_blank'>A Game-Theoretic Framework for Intelligent EV Charging Network Optimisation in Smart Cities</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Niloofar Aminikalibar, Farzaneh Farhadi, Maria Chli</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-03-23 08:57:57</h6>
+<p class='card-text'>The transition to Electric Vehicles (EVs) demands intelligent, congestion-aware infrastructure planning to balance user convenience, economic viability, and traffic efficiency. We present a joint optimisation framework for EV Charging Station (CS) placement and pricing, explicitly capturing strategic driver behaviour through coupled non-atomic congestion games over road networks and charging facilities. From a Public Authority (PA) perspective, the model minimises social cost, travel times, queuing delays and charging expenses, while ensuring infrastructure profitability. To solve the resulting Mixed-Integer Nonlinear Programme, we propose a scalable two-level approximation method, Joint Placement and Pricing Optimisation under Driver Equilibrium (JPPO-DE), combining driver behaviour decomposition with integer relaxation. Experiments on the benchmark Sioux Falls Transportation Network (TN) demonstrate that our method consistently outperforms single-parameter baselines, effectively adapting to varying budgets, EV penetration levels, and station capacities. It achieves performance improvements of at least 16% over state-of-the-art approaches. A generalisation procedure further extends scalability to larger networks. By accurately modelling traffic equilibria and enabling adaptive, efficient infrastructure design, our framework advances key intelligent transportation system goals for sustainable urban mobility.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2603.21713v1' target='_blank'>Simple Trajectory Smoothing for UAV Reference Path Planning Based on Decoupling, Spatial Modeling and Linear Programming</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Mogens Plessen</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-03-23 08:55:12</h6>
+<p class='card-text'>A method for trajectory smoothing for UAV reference path planning is presented. It is derived based on the dynamics of a Dubins airplane model, and involves a decoupling step, spatial modeling and linear programming. The decoupling step enables algebraic control laws for flight-path angle and speed control. Only for roll angle control an optimization step is applied, involving the solution of a small linear program. Two variations are discussed. They differ by reference centerline tracking and the introduction of a path shaping constraint. The benefit of natural dimensionality reduction for spatial modeling is discussed. The simplicity of the overall method is highlighted. An extension to acrobative flight is outlined, which comes at the cost of a model approximation, however at the gain of maintaining the general model structure. An extension of the method to tractor path planning along 3D terrain is discussed. The method is validated in simulations.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2603.21706v1' target='_blank'>Comprehensive Dosimetric Verification and Positional Sensitivity Analysis in Brachytherapy: A Unified ESAPI Tool for HDR and LDR Treatments</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:J. A. Valgoma</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-03-23 08:46:31</h6>
+<p class='card-text'>This study presents the development and validation of an independent software tool based on the Varian Eclipse Scripting API (ESAPI) for multi-modal brachytherapy Quality Assurance (QA). The tool addresses GEC-ESTRO HDR protocols and LDR positional uncertainty analysis. Engineered in C#, the application interfaces with BrachyVision, Vitesse, and Variseed, enabling independent TG-43 dose calculations -- comparing point and line source models -- integrated with EQD2-based radiobiological summation. In HDR cervical cancer, the tool successfully automated EMBRACE II protocol reporting, streamlining clinical workflows by combining dosimetric QA with predictive and prospective planning. For LDR prostate treatments, a stochastic simulation module quantified the impact of systematic (rigid-body) versus random seed displacements on target coverage ($D_{90\%}$) and Organs at Risk (OAR) safety ($D_{0.1cc}$). Sensitivity analysis in LDR prostate implants was benchmarked using two clinical cases (prostate volumes 31 cc and 71.3 cc). LDR simulations revealed that systematic displacements ($\pm$ 2 mm) yielded significantly higher dosimetric deviations than stochastic movements. In the 31 cc case, systematic shifts resulted in a rectal ($D_{0.1cc}$) standard deviation (SD) of 24.3 Gy, whereas random displacements reduced this to 12.4 Gy. In the 71.3 cc case, random displacements resulted in a rectal $D_{0.1cc}$ SD of 7.6 Gy, confirming that smaller volumes exhibit heightened sensitivity to errors. Technical analysis demonstrated that the point source model overestimated bladder $D_{10\%}$ by 8% relative to the line source model. Our findings confirm that systematic rigid-body shifts represent a greater clinical risk for OAR toxicity than stochastic migration. Integrating predictive sensitivity analysis into the clinical workflow significantly enhances patient safety through robust plan verification.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2603.21692v1' target='_blank'>Reasoning Provenance for Autonomous AI Agents: Structured Behavioral Analytics Beyond State Checkpoints and Execution Traces</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Neelmani Vispute</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-03-23 08:27:54</h6>
+<p class='card-text'>As AI agents transition from human-supervised copilots to autonomous platform infrastructure, the ability to analyze their reasoning behavior across populations of investigations becomes a pressing infrastructure requirement. Existing operational tooling addresses adjacent needs effectively: state checkpoint systems enable fault tolerance; observability platforms provide execution traces for debugging; telemetry standards ensure interoperability. What current systems do not natively provide as a first-class, schema-level primitive is structured reasoning provenance -- normalized, queryable records of why the agent chose each action, what it concluded from each observation, how each conclusion shaped its strategy, and which evidence supports its final verdict. This paper introduces the Agent Execution Record (AER), a structured reasoning provenance primitive that captures intent, observation, and inference as first-class queryable fields on every step, alongside versioned plans with revision rationale, evidence chains, structured verdicts with confidence scores, and delegation authority chains. We formalize the distinction between computational state persistence and reasoning provenance, argue that the latter cannot in general be faithfully reconstructed from the former, and show how AERs enable population-level behavioral analytics: reasoning pattern mining, confidence calibration, cross-agent comparison, and counterfactual regression testing via mock replay. We present a domain-agnostic model with extensible domain profiles, a reference implementation and SDK, and outline an evaluation methodology informed by preliminary deployment on a production platformized root cause analysis agent.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2603.21691v1' target='_blank'>Strategic Infrastructure Design via Multi-Agent Congestion Games with Joint Placement and Pricing</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Niloofar Aminikalibar, Farzaneh Farhadi, Maria Chli</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-03-23 08:24:55</h6>
+<p class='card-text'>Real-world infrastructure planning increasingly involves strategic interactions among autonomous agents competing over congestible, limited resources. Applications such as Electric Vehicle (EV) charging, emergency response, and intelligent transportation require coordinated resource placement and pricing decisions, while anticipating the adaptive behaviour of decentralised, self-interested agents. We propose a novel multi-agent framework for joint placement and pricing under such interactions, formalised as a bi-level optimisation model. The upper level represents a central planner, while the lower level captures agent responses via coupled non-atomic congestion games. Motivated by the EV charging domain, we study a setting where a central planner provisions chargers and road capacity under budget and profitability constraints. The agent population includes both EV drivers and non-charging drivers (NCDs), who respond to congestion, delays, and costs. To solve the resulting NP-hard problem, we introduce ABO-MPN, a double-layer approximation framework that decouples agent types, applies integer adjustment and rounding, and targets high-impact placement and pricing decisions. Experiments on benchmark networks show that our model reduces social cost by up to 40% compared to placement- or pricing-only baselines, and generalises to other MAS-relevant domains.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2603.21679v1' target='_blank'>BiPreManip: Learning Affordance-Based Bimanual Preparatory Manipulation through Anticipatory Collaboration</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yan Shen, Feng Jiang, Zichen He, Xiaoqi Li, Yuchen Liu, Zhiyu Li, Ruihai Wu, Hao Dong</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-03-23 08:12:24</h6>
+<p class='card-text'>Many everyday objects are difficult to directly grasp (e.g., a flat iPad) or manipulate functionally (e.g., opening the cap of a pen lying on a desk). Such tasks require sequential, asymmetric coordination between two arms, where one arm performs preparatory manipulation that enables the other's goal-directed action - for instance, pushing the iPad to the table's edge before picking it up, or lifting the pen body to allow the other hand to remove its cap. In this work, we introduce Collaborative Preparatory Manipulation, a class of bimanual manipulation tasks that demand understanding object semantics and geometry, anticipating spatial relationships, and planning long-horizon coordinated actions between the two arms. To tackle this challenge, we propose a visual affordance-based framework that first envisions the final goal-directed action and then guides one arm to perform a sequence of preparatory manipulations that facilitate the other arm's subsequent operation. This affordance-centric representation enables anticipatory inter-arm reasoning and coordination, generalizing effectively across various objects spanning diverse categories. Extensive experiments in both simulation and the real world demonstrate that our approach substantially improves task success rates and generalization compared to competitive baselines.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js'></script>
+</body>
+</html>
