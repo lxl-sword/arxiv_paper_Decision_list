@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>planning - 2026-03-30</title>
+<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap' rel='stylesheet'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css'>
+<style>
+body {
+font-family: 'Roboto', sans-serif;
+background-color: #f5f7fa;
+padding: 20px;
+}
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.card-title {
+    font-weight: 700;
+}
+.card:hover {
+    transform: scale(1.02);
+    transition: 0.3s ease-in-out;
+}
+</style>
+</head>
+<body>
+<div class='container'>
+<h1 class='text-center my-4'><i class='fas fa-book'></i>planning - 2026-03-30</h1>
+<div class='row'>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2603.26612v1' target='_blank'>Meta-Adaptive Beam Search Planning for Transformer-Based Reinforcement Learning Control of UAVs with Overhead Manipulators under Flight Disturbances</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Hazim Alzorgan, Sayed Pedram Haeri Boroujeni, Abolfazl Razi</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-03-27 17:08:40</h6>
+<p class='card-text'>Drones equipped with overhead manipulators offer unique capabilities for inspection, maintenance, and contact-based interaction. However, the motion of the drone and its manipulator is tightly linked, and even small attitude changes caused by wind or control imperfections shift the end-effector away from its intended path. This coupling makes reliable tracking difficult and also limits the direct use of learning-based arm controllers that were originally designed for fixed-base robots. These effects appear consistently in our tests whenever the UAV body experiences drift or rapid attitude corrections. To address this behavior, we develop a reinforcement-learning (RL) framework with a transformer-based double deep Q learning (DDQN), with the core idea of using an adaptive beam-search planner that applies a short-horizon beam search over candidate control sequences using the learned critic as the forward estimator. This allows the controller to anticipate the end-effector's motion through simulated rollouts rather than executing those actions directly on the actual model, realizing a software-in-the-loop (SITL) approach. The lookahead relies on value estimates from a Transformer critic that processes short sequences of states, while a DDQN backbone provides the one-step targets needed to keep the learning process stable. Evaluated on a 3-DoF aerial manipulator under identical training conditions, the proposed meta-adaptive planner shows the strongest overall performance with a 10.2% reward increase, a substantial reduction in mean tracking error (from about 6% to 3%), and a 29.6% improvement in the combined reward-error metric relative to the DDQN baseline. Our method exhibits elevated stability in tracking target tip trajectory (by maintaining 5 cm tracking error) when the drone base exhibits drifts due to external disturbances, as opposed to the fixed-beam and Transformer-only variants.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2603.26542v1' target='_blank'>The Multi-AMR Buffer Storage, Retrieval, and Reshuffling Problem: Exact and Heuristic Approaches</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Max Disselnmeyer, Thomas Bömer, Laura Dörr, Bastian Amberg, Anne Meyer</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-03-27 15:51:38</h6>
+<p class='card-text'>Buffer zones are essential in production systems to decouple sequential processes. In dense floor storage environments, such as space-constrained brownfield facilities, manual operation is increasingly challenged by severe labor shortages and rising operational costs. Automating these zones requires solving the Buffer Storage, Retrieval, and Reshuffling Problem (BSRRP). While previous work has addressed scenarios where the focus is limited to reshuffling and retrieving a fixed set of items, real-world manufacturing necessitates an adaptive approach that also incorporates arriving unit loads. This paper introduces the Multi-AMR BSRRP, coordinating a robot fleet to manage concurrent reshuffling, alongside time-windowed storage and retrieval tasks, within a shared floor area. We formulate a Binary Integer Programming (IP) model to obtain exact solutions for benchmarking purposes. As the problem is NP-hard, rendering exact methods computationally intractable for industrial scales, we propose a hierarchical heuristic. This approach decomposes the problem into an A* search for task-level sequence planning of unit load placements, and a Constraint Programming (CP) approach for multi-robot coordination and scheduling. Experiments demonstrate orders-of-magnitude computation time reductions compared to the exact formulation. These results confirm the heuristic's viability as responsive control logic for high-density production environments.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2603.26458v1' target='_blank'>Can AI Models Direct Each Other? Organizational Structure as a Probe into Training Limitations</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Rui Liu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-03-27 14:27:45</h6>
+<p class='card-text'>Can an expensive AI model effectively direct a cheap one to solve software engineering tasks? We study this question by introducing ManagerWorker, a two-agent pipeline where an expensive "manager" model (text-only, no code execution) analyzes issues, dispatches exploration tasks, and reviews implementations, while a cheap "worker" model (with full repo access) executes code changes. We evaluate on 200 instances from SWE-bench Lite across five configurations that vary the manager-worker relationship, pipeline complexity, and model pairing. Our findings reveal both the promise and the limits of multi-agent direction: (1) a strong manager directing a weak worker (62%) matches a strong single agent (60%) at a fraction of the strong-model token usage, showing that expensive reasoning can substitute for expensive execution; (2) a weak manager directing a weak worker (42%) performs worse than the weak agent alone (44%), demonstrating that the directing relationship requires a genuine capability gap--structure without substance is pure overhead; (3) the manager's value lies in directing, not merely reviewing--a minimal review-only loop adds just 2pp over the baseline, while structured exploration and planning add 11pp, showing that active direction is what makes the capability gap productive; and (4) these behaviors trace to a single root cause: current models are trained as monolithic agents, and splitting them into director/worker roles fights their training distribution. The pipeline succeeds by designing around this mismatch--keeping each model close to its trained mode (text generation for the manager, tool use for the worker) and externalizing organizational structure to code. This diagnosis points to concrete training gaps: delegation, scoped execution, and mode switching are skills absent from current training data.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2603.26450v1' target='_blank'>Bordisms and unbounded $KK$-theory</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Robin J. Deeley, Magnus Goffeng, Bram Mesland</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-03-27 14:20:06</h6>
+<p class='card-text'>This monograph studies $KK$-theory in its unbounded model. The central object is the $KK$-bordism group obtained by imposing the $KK$-bordism relation on unbounded $KK$-cycles. In the paradigm of noncommutative geometry, an unbounded $KK$-cycle is a noncommutative geometry in its own right and our approach allow for the study of mildly noncommutative geometries (orbifolds, foliations et cetera) as if they were closed manifolds. The techniques we introduce enable us to directly import manifold techniques and arguments into the important yet technical field of unbounded $KK$-theory.
+  Recent decades has seen a tremendous progress in the study of the unbounded model for $KK$ as well as secondary invariants, the first motivated by refining computational tools in Kasparov's $KK$-theory and the second by applications to geometry and topology. The aim of this work is to provide a common framework for these two areas: equipping unbounded $KK$-cycles with a geometrically motivated relation recovering Kasparov's $KK$-theory that is computationally tractable for working with secondary invariants.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2603.26440v1' target='_blank'>Interpretable long-term traffic modelling on national road networks using theory-informed deep learning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yue Li, Shujuan Chen, Akihiro Shimoda, Ying Jin</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-03-27 14:08:59</h6>
+<p class='card-text'>Long-term traffic modelling is fundamental to transport planning, but existing approaches often trade off interpretability, transferability, and predictive accuracy. Classical travel demand models provide behavioural structure but rely on strong assumptions and extensive calibration, whereas generic deep learning models capture complex patterns but often lack theoretical grounding and spatial transferability, limiting their usefulness for long-term planning applications. We propose DeepDemand, a theory-informed deep learning framework that embeds key components of travel demand theory to predict long-term highway traffic volumes using external socioeconomic features and road-network structure. The framework integrates a competitive two-source Dijkstra procedure for local origin-destination (OD) region extraction and OD pair screening with a differentiable architecture modelling OD interactions and travel-time deterrence. The model is evaluated using eight years (2017-2024) of observations on the UK strategic road network, covering 5088 highway segments. Under random cross-validation, DeepDemand achieves an R2 of 0.718 and an MAE of 7406 vehicles, outperforming linear, ridge, random forest, and gravity-style baselines. Performance remains strong under spatial cross-validation (R2 = 0.665), indicating good geographic transferability. Interpretability analysis reveals a stable nonlinear travel-time deterrence pattern, key socioeconomic drivers of demand, and polycentric OD interaction structures aligned with major employment centres and transport hubs. These results highlight the value of integrating transport theory with deep learning for interpretable highway traffic modelling and practical planning applications.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2603.26360v1' target='_blank'>Realtime-VLA V2: Learning to Run VLAs Fast, Smooth, and Accurate</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Chen Yang, Yucheng Hu, Yunchao Ma, Yunhuan Yang, Jing Tan, Haoqiang Fan</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-03-27 12:37:44</h6>
+<p class='card-text'>In deployment of the VLA models to real-world robotic tasks, execution speed matters. In previous work arXiv:2510.26742 we analyze how to make neural computation of VLAs on GPU fast. However, we leave the question of how to actually deploy the VLA system on the real robots open. In this report we describe a set of practical techniques to achieve the end-to-end result of running a VLA-driven robot at an impressive speed in real world tasks that require both accuracy and dexterity. The stack of technology ranges across calibration, planning & control, and learning based method to identify optimal execution speed. In the tasks we show, the robot even executes in a speed on par with casual human operation and approaching the hardware limit of our lightweight arm. The unaccelerated videos and inference traces are provided in https://dexmal.github.io/realtime-vla-v2/.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2603.26322v1' target='_blank'>DiffusionAnything: End-to-End In-context Diffusion Learning for Unified Navigation and Pre-Grasp Motion</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Iana Zhura, Yara Mahmoud, Jeffrin Sam, Hung Khang Nguyen, Didar Seyidov, Miguel Altamirano Cabrera, Dzmitry Tsetserukou</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-03-27 11:40:13</h6>
+<p class='card-text'>Efficiently predicting motion plans directly from vision remains a fundamental challenge in robotics, where planning typically requires explicit goal specification and task-specific design. Recent vision-language-action (VLA) models infer actions directly from visual input but demand massive computational resources, extensive training data, and fail zero-shot in novel scenes. We present a unified image-space diffusion policy handling both meter-scale navigation and centimeter-scale manipulation via multi-scale feature modulation, with only 5 minutes of self-supervised data per task. Three key innovations drive the framework: (1) Multi-scale FiLM conditioning on task mode, depth scale, and spatial attention enables task-appropriate behavior in a single model; (2) trajectory-aligned depth prediction focuses metric 3D reasoning along generated waypoints; (3) self-supervised attention from AnyTraverse enables goal-directed inference without vision-language models and depth sensors. Operating purely from RGB input (2.0 GB memory, 10 Hz), the model achieves robust zero-shot generalization to novel scenes while remaining suitable for onboard deployment.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2603.26266v1' target='_blank'>GUIDE: Resolving Domain Bias in GUI Agents through Real-Time Web Video Retrieval and Plug-and-Play Annotation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Rui Xie, Zhi Gao, Chenrui Shi, Zirui Shang, Lu Chen, Qing Li</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-03-27 10:33:08</h6>
+<p class='card-text'>Large vision-language models have endowed GUI agents with strong general capabilities for interface understanding and interaction. However, due to insufficient exposure to domain-specific software operation data during training, these agents exhibit significant domain bias - they lack familiarity with the specific operation workflows (planning) and UI element layouts (grounding) of particular applications, limiting their real-world task performance. In this paper, we present GUIDE (GUI Unbiasing via Instructional-Video Driven Expertise), a training-free, plug-and-play framework that resolves GUI agent domain bias by autonomously acquiring domain-specific expertise from web tutorial videos through a retrieval-augmented automated annotation pipeline. GUIDE introduces two key innovations. First, a subtitle-driven Video-RAG pipeline unlocks video semantics through subtitle analysis, performing progressive three-stage retrieval - domain classification, topic extraction, and relevance matching - to identify task-relevant tutorial videos. Second, a fully automated annotation pipeline built on an inverse dynamics paradigm feeds consecutive keyframes enhanced with UI element detection into VLMs, inferring the required planning and grounding knowledge that are injected into the agent's corresponding modules to address both manifestations of domain bias. Extensive experiments on OSWorld demonstrate GUIDE's generality as a plug-and-play component for both multi-agent systems and single-model agents. It consistently yields over 5% improvements and reduces execution steps - without modifying any model parameters or architecture - validating GUIDE as an architecture-agnostic enhancement to bridge GUI agent domain bias.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2603.26250v1' target='_blank'>Real-Time Branch-to-Tool Distance Estimation for Autonomous UAV Pruning: Benchmarking Five DEFOM-Stereo Variants from Simulation to Jetson Deployment</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yida Lin, Bing Xue, Mengjie Zhang, Sam Schofield, Richard Green</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-03-27 10:16:39</h6>
+<p class='card-text'>Autonomous tree pruning with unmanned aerial vehicles (UAVs) is a safety-critical real-world task: the onboard perception system must estimate the metric distance from a cutting tool to thin tree branches in real time so that the UAV can approach, align, and actuate the pruner without collision. We address this problem by training five variants of DEFOM-Stereo - a recent foundation-model-based stereo matcher - on a task-specific synthetic dataset and deploying the checkpoints on an NVIDIA Jetson Orin Super 16 GB. The training corpus is built in Unreal Engine 5 with a simulated ZED Mini stereo camera capturing 5,520 stereo pairs across 115 tree instances from three viewpoints at 2m distance; dense EXR depth maps provide exact, spatially complete supervision for thin branches. On the synthetic test set, DEFOM-Stereo ViT-S achieves the best depth-domain accuracy (EPE 1.74 px, D1-all 5.81%, delta-1 95.90%, depth MAE 23.40 cm) but its Jetson inference speed of ~2.2 FPS (~450 ms per frame) remains too slow for responsive closed-loop tool control. A newly introduced balanced variant, DEFOM-PrunePlus (~21M backbone, ~3.3 FPS on Jetson), offers the best deployable accuracy-speed trade-off (EPE 5.87 px, depth MAE 64.26 cm, delta-1 87.59%): its frame rate is sufficient for real-time guidance and its depth accuracy supports safe branch approach planning at the 2m operating range. The lightweight DEFOM-PruneStereo (~6.9 FPS) and DEFOM-PruneNano (~8.5 FPS) run fast but sacrifice substantial accuracy (depth MAE > 57 cm), making estimates too unreliable for safe actuation. Zero-shot inference on real photographs confirms that full-capacity models preserve branch geometry, validating the sim-to-real transfer. We conclude that DEFOM-PrunePlus provides the most practical accuracy-latency balance for onboard distance estimation, while ViT-S serves as the reference for future hardware.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2603.26240v1' target='_blank'>SwarmCoDe: A Scalable Co-Design Framework for Heterogeneous Robot Swarms via Dynamic Speciation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Andrew Wilhelm, Josie Hughes</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-03-27 10:03:38</h6>
+<p class='card-text'>Robot swarms offer inherent robustness and the capacity to execute complex, collaborative tasks surpassing the capabilities of single-agent systems. Co-designing these systems is critical, as marginal improvements in individual performance or unit cost compound significantly at scale. However, under traditional frameworks, this scale renders co-design intractable due to exponentially large, non-intuitive design spaces. To address this, we propose SwarmCoDe, a novel Collaborative Co-Evolutionary Algorithm (CCEA) that utilizes dynamic speciation to automatically scale swarm heterogeneity to match task complexity. Inspired by biological signaling mechanisms for inter-species cooperation, the algorithm uses evolved genetic tags and a selectivity gene to facilitate the emergent identification of symbiotically beneficial partners without predefined species boundaries. Additionally, an evolved dominance gene dictates the relative swarm composition, decoupling the physical swarm size from the evolutionary population. We apply SwarmCoDe to simultaneously optimize task planning and hardware morphology under fabrication budgets, successfully evolving specialized swarms of up to 200 agents -- four times the size of the evolutionary population. This framework provides a scalable, computationally viable pathway for the holistic co-design of large-scale, heterogeneous robot swarms.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2603.26219v1' target='_blank'>EPDQ: Efficient and Privacy-Preserving Exact Distance Query on Encrypted Graphs</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Xuemei Fu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-03-27 09:42:10</h6>
+<p class='card-text'>With the explosive growth of graph-structured data, graph databases have become a critical infrastructure for supporting large-scale and complex data analysis. Among various graph operations, shortest distance queries play a fundamental role in numerous applications, such as path planning, recommendation systems, and knowledge graphs. However, existing encrypted graph query methods still suffer from limitations in computational efficiency and system scalability, making it challenging to support efficient query processing over large-scale encrypted graph data. To address these challenges, this paper proposes a tensor-based shortest distance query scheme for encrypted graph databases. The proposed method integrates an encrypted 2-hop cover indexing framework with the Pruned Landmark Labeling (PLL) technique, thereby constructing an efficient and privacy-preserving indexing mechanism. Furthermore, a tensorized representation is introduced to uniformly model graph structures, which effectively reduces computational complexity while ensuring data privacy, and significantly improves the scalability of the system. Extensive experimental evaluations on large-scale graph datasets demonstrate that the proposed approach achieves superior scalability and lower computational costs compared with existing encrypted graph query methods. Moreover, it provides strong privacy protection guarantees, making it well suited for privacy-preserving graph query applications in cloud computing and distributed environments.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2603.26115v1' target='_blank'>Exploring LSST's capabilities for early detection of outbursts in low-mass X-ray binaries</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Susmita Sett, Arash Bahramian, Kristen Dage, David Russell, William I. Clarkson</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-03-27 07:01:36</h6>
+<p class='card-text'>Following long periods of quiescence, low-mass X-ray binaries can exhibit intense X-ray outbursts triggered by instabilities within the accretion disk. These outbursts can sometimes be detected in optical wavelengths before being detected in X-rays, acting as an early onset warning and enabling a deep study of accretion disk properties informed by the lag between optical and X-ray rise. We explore the potential of Vera C. Rubin Observatory's Legacy Survey of Space and Time (LSST) to detect these outbursts early through optical observations. We evaluate the capabilities of LSST based on currently planned survey cadence, filter-specific depth, and other observational factors that affect early detection. We develop and apply an extended metric to assess outburst detectability and recovery fraction. We find that despite inherent potential for early detection of XRB outbursts, the currently planned survey strategy makes it challenging to detect early onset of XRBs. Lastly, we demonstrate how this estimate can be used to infer the wider LMXB population in the Galaxy as the LSST progresses.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2603.26019v1' target='_blank'>Unlabeled Cross-Center Automatic Analysis for TAAD: An Integrated Framework from Segmentation to Clinical Features</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Mengdi Liu, Qiang Li, Weizhi Nie, Shaopeng Zhang, Yuting Su</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-03-27 02:27:28</h6>
+<p class='card-text'>Type A Aortic Dissection (TAAD) is a life-threatening cardiovascular emergency that demands rapid and precise preoperative evaluation. While key anatomical and pathological features are decisive for surgical planning, current research focuses predominantly on improving segmentation accuracy, leaving the reliable, quantitative extraction of clinically actionable features largely under-explored. Furthermore, constructing comprehensive TAAD datasets requires labor-intensive, expert level pixel-wise annotations, which is impractical for most clinical institutions. Due to significant domain shift, models trained on a single center dataset also suffer from severe performance degradation during cross-institutional deployment. This study addresses a clinically critical challenge: the accurate extraction of key TAAD clinical features during cross-institutional deployment in the total absence of target-domain annotations. To this end, we propose an unsupervised domain adaptation (UDA)-driven framework for the automated extraction of TAAD clinical features. The framework leverages limited source-domain labels while effectively adapting to unlabeled data from target domains. Tailored for real-world emergency workflows, our framework aims to achieve stable cross-institutional multi-class segmentation, reliable and quantifiable clinical feature extraction, and practical deployability independent of high-cost annotations. Extensive experiments demonstrate that our method significantly improves cross-domain segmentation performance compared to existing state-of-the-art approaches. More importantly, a reader study involving multiple cardiovascular surgeons confirms that the automatically extracted clinical features provide meaningful assistance for preoperative assessment, highlighting the practical utility of the proposed end-to-end segmentation-to-feature pipeline.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2603.25981v1' target='_blank'>Policy-Guided World Model Planning for Language-Conditioned Visual Navigation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Amirhosein Chahe, Lifeng Zhou</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-03-26 23:47:49</h6>
+<p class='card-text'>Navigating to a visually specified goal given natural language instructions remains a fundamental challenge in embodied AI. Existing approaches either rely on reactive policies that struggle with long-horizon planning, or employ world models that suffer from poor action initialization in high-dimensional spaces. We present PiJEPA, a two-stage framework that combines the strengths of learned navigation policies with latent world model planning for instruction-conditioned visual navigation. In the first stage, we finetune an Octo-based generalist policy, augmented with a frozen pretrained vision encoder (DINOv2 or V-JEPA-2), on the CAST navigation dataset to produce an informed action distribution conditioned on the current observation and language instruction. In the second stage, we use this policy-derived distribution to warm-start Model Predictive Path Integral (MPPI) planning over a separately trained JEPA world model, which predicts future latent states in the embedding space of the same frozen encoder. By initializing the MPPI sampling distribution from the policy prior rather than from an uninformed Gaussian, our planner converges faster to high-quality action sequences that reach the goal. We systematically study the effect of the vision encoder backbone, comparing DINOv2 and V-JEPA-2, across both the policy and world model components. Experiments on real-world navigation tasks demonstrate that PiJEPA significantly outperforms both standalone policy execution and uninformed world model planning, achieving improved goal-reaching accuracy and instruction-following fidelity.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2603.25976v1' target='_blank'>Second-Order, First-Class: A Composable Stack for Curvature-Aware Training</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Mikalai Korbit, Mario Zanon</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-03-26 23:36:37</h6>
+<p class='card-text'>Second-order methods promise improved stability and faster convergence, yet they remain underused due to implementation overhead, tuning brittleness, and the lack of composable APIs. We introduce Somax, a composable Optax-native stack that treats curvature-aware training as a single JIT-compiled step governed by a static plan. Somax exposes first-class modules -- curvature operators, estimators, linear solvers, preconditioners, and damping policies -- behind a single step interface and composes with Optax by applying standard gradient transformations (e.g., momentum, weight decay, schedules) to the computed direction. This design makes typically hidden choices explicit and swappable. Somax separates planning from execution: it derives a static plan (including cadences) from module requirements, then runs the step through a specialized execution path that reuses intermediate results across modules. We report system-oriented ablations showing that (i) composition choices materially affect scaling behavior and time-to-accuracy, and (ii) planning reduces per-step overhead relative to unplanned composition with redundant recomputation.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2603.25959v1' target='_blank'>Firing Rate Neural Network Implementations of Model Predictive Control</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jaidev Gill, Jing Shuang Li</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-03-26 22:59:39</h6>
+<p class='card-text'>Human and animal brains perform planning to enable complex movements and behaviors. This process can be effectively described using model predictive control (MPC); that is, brains can be thought of as implementing some version of MPC. How is this done? In this work, we translate model predictive controllers into firing rate neural networks, offering insights into the nonlinear neural dynamics that underpin planning. This is done by first applying the projected gradient method to the dual problem, then generating alternative networks through factorization and contraction analysis. This allows us to explore many biologically plausible implementations of MPC. We present a series of numerical simulations to study different neural networks performing MPC to balance an inverted pendulum on a cart (i.e., balancing a stick on a hand). We illustrate that sparse neural networks can effectively implement MPC; this observation aligns with the sparse nature of the brain.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2603.25902v1' target='_blank'>Chasing Autonomy: Dynamic Retargeting and Control Guided RL for Performant and Controllable Humanoid Running</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Zachary Olkin, William D. Compton, Ryan M. Bena, Aaron D. Ames</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-03-26 20:48:33</h6>
+<p class='card-text'>Humanoid robots have the promise of locomoting like humans, including fast and dynamic running. Recently, reinforcement learning (RL) controllers that can mimic human motions have become popular as they can generate very dynamic behaviors, but they are often restricted to single motion play-back which hinders their deployment in long duration and autonomous locomotion. In this paper, we present a pipeline to dynamically retarget human motions through an optimization routine with hard constraints to generate improved periodic reference libraries from a single human demonstration. We then study the effect of both the reference motion and the reward structure on the reference and commanded velocity tracking, concluding that a goal-conditioned and control-guided reward which tracks dynamically optimized human data results in the best performance. We deploy the policy on hardware, demonstrating its speed and endurance by achieving running speeds of up to 3.3 m/s on a Unitree G1 robot and traversing hundreds of meters in real-world environments. Additionally, to demonstrate the controllability of the locomotion, we use the controller in a full perception and planning autonomy stack for obstacle avoidance while running outdoors.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2603.25887v1' target='_blank'>World Reasoning Arena</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:PAN Team, Qiyue Gao, Kun Zhou, Jiannan Xiang, Zihan Liu, Dequan Yang, Junrong Chen, Arif Ahmad, Cong Zeng, Ganesh Bannur, Xinqi Huang, Zheqi Liu, Yi Gu, Yichi Yang, Guangyi Liu, Zhiting Hu, Zhengzhong Liu, Eric Xing</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-03-26 20:22:52</h6>
+<p class='card-text'>World models (WMs) are intended to serve as internal simulators of the real world that enable agents to understand, anticipate, and act upon complex environments. Existing WM benchmarks remain narrowly focused on next-state prediction and visual fidelity, overlooking the richer simulation capabilities required for intelligent behavior. To address this gap, we introduce WR-Arena, a comprehensive benchmark for evaluating WMs along three fundamental dimensions of next world simulation: (i) Action Simulation Fidelity, the ability to interpret and follow semantically meaningful, multi-step instructions and generate diverse counterfactual rollouts; (ii) Long-horizon Forecast, the ability to sustain accurate, coherent, and physically plausible simulations across extended interactions; and (iii) Simulative Reasoning and Planning, the ability to support goal-directed reasoning by simulating, comparing, and selecting among alternative futures in both structured and open-ended environments. We build a task taxonomy and curate diverse datasets designed to probe these capabilities, moving beyond single-turn and perceptual evaluations. Through extensive experiments with state-of-the-art WMs, our results expose a substantial gap between current models and human-level hypothetical reasoning, and establish WR-Arena as both a diagnostic tool and a guideline for advancing next-generation world models capable of robust understanding, forecasting, and purposeful action. The code is available at https://github.com/MBZUAI-IFM/WR-Arena.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2603.25741v1' target='_blank'>Vega: Learning to Drive with Natural Language Instructions</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Sicheng Zuo, Yuxuan Li, Wenzhao Zheng, Zheng Zhu, Jie Zhou, Jiwen Lu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-03-26 17:59:56</h6>
+<p class='card-text'>Vision-language-action models have reshaped autonomous driving to incorporate languages into the decision-making process. However, most existing pipelines only utilize the language modality for scene descriptions or reasoning and lack the flexibility to follow diverse user instructions for personalized driving. To address this, we first construct a large-scale driving dataset (InstructScene) containing around 100,000 scenes annotated with diverse driving instructions with the corresponding trajectories. We then propose a unified Vision-Language-World-Action model, Vega, for instruction-based generation and planning. We employ the autoregressive paradigm to process visual inputs (vision) and language instructions (language) and the diffusion paradigm to generate future predictions (world modeling) and trajectories (action). We perform joint attention to enable interactions between the modalities and use individual projection layers for different modalities for more capabilities. Extensive experiments demonstrate that our method not only achieves superior planning performance but also exhibits strong instruction-following abilities, paving the way for more intelligent and personalized driving systems.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2603.25740v1' target='_blank'>Drive My Way: Preference Alignment of Vision-Language-Action Model for Personalized Driving</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Zehao Wang, Huaide Jiang, Shuaiwu Dong, Yuping Wang, Hang Qiu, Jiachen Li</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-03-26 17:59:54</h6>
+<p class='card-text'>Human driving behavior is inherently personal, which is shaped by long-term habits and influenced by short-term intentions. Individuals differ in how they accelerate, brake, merge, yield, and overtake across diverse situations. However, existing end-to-end autonomous driving systems either optimize for generic objectives or rely on fixed driving modes, lacking the ability to adapt to individual preferences or interpret natural language intent. To address this gap, we propose Drive My Way (DMW), a personalized Vision-Language-Action (VLA) driving framework that aligns with users' long-term driving habits and adapts to real-time user instructions. DMW learns a user embedding from our personalized driving dataset collected across multiple real drivers and conditions the policy on this embedding during planning, while natural language instructions provide additional short-term guidance. Closed-loop evaluation on the Bench2Drive benchmark demonstrates that DMW improves style instruction adaptation, and user studies show that its generated behaviors are recognizable as each driver's own style, highlighting personalization as a key capability for human-centered autonomous driving. Our data and code are available at https://dmw-cvpr.github.io/.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2603.25706v1' target='_blank'>Wan-Weaver: Interleaved Multi-modal Generation via Decoupled Training</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jinbo Xing, Zeyinzi Jiang, Yuxiang Tuo, Chaojie Mao, Xiaotang Gai, Xi Chen, Jingfeng Zhang, Yulin Pan, Zhen Han, Jie Xiao, Keyu Yan, Chenwei Xie, Chongyang Zhong, Kai Zhu, Tong Shen, Lianghua Huang, Yu Liu, Yujiu Yang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-03-26 17:50:37</h6>
+<p class='card-text'>Recent unified models have made unprecedented progress in both understanding and generation. However, while most of them accept multi-modal inputs, they typically produce only single-modality outputs. This challenge of producing interleaved content is mainly due to training data scarcity and the difficulty of modeling long-range cross-modal context. To address this issue, we decompose interleaved generation into textual planning and visual consistency modeling, and introduce a framework consisting of a planner and a visualizer. The planner produces dense textual descriptions for visual content, while the visualizer synthesizes images accordingly. Under this guidance, we construct large-scale textual-proxy interleaved data (where visual content is represented in text) to train the planner, and curate reference-guided image data to train the visualizer. These designs give rise to Wan-Weaver, which exhibits emergent interleaved generation ability with long-range textual coherence and visual consistency. Meanwhile, the integration of diverse understanding and generation data into planner training enables Wan-Weaver to achieve robust task reasoning and generation proficiency. To assess the model's capability in interleaved generation, we further construct a benchmark that spans a wide range of use cases across multiple dimensions. Extensive experiments demonstrate that, even without access to any real interleaved data, Wan-Weaver achieves superior performance over existing methods.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2603.25688v1' target='_blank'>Intelligent Navigation and Obstacle-Aware Fabrication for Mobile Additive Manufacturing Systems</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yifei Li, Ruizhe Fu, Huihang Liu, Guha Manogharan, Feng Ju, Ilya Kovalenko</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-03-26 17:38:09</h6>
+<p class='card-text'>As the demand for mass customization increases, manufacturing systems must become more flexible and adaptable to produce personalized products efficiently. Additive manufacturing (AM) enhances production adaptability by enabling on-demand fabrication of customized components directly from digital models, but its flexibility remains constrained by fixed equipment layouts. Integrating mobile robots addresses this limitation by allowing manufacturing resources to move and adapt to changing production requirements. Mobile AM Robots (MAMbots) combine AM with mobile robotics to produce and transport components within dynamic manufacturing environments. However, the dynamic manufacturing environments introduce challenges for MAMbots. Disturbances such as obstacles and uneven terrain can disrupt navigation stability, which in turn affects printing accuracy and surface quality. This work proposes a universal mobile printing-and-delivery platform that couples navigation and material deposition, addressing the limitations of earlier frameworks that treated these processes separately. A real-time control framework is developed to plan and control the robot's navigation, ensuring safe motion, obstacle avoidance, and path stability while maintaining print quality. The closed-loop integration of sensing, mobility, and manufacturing provides real-time feedback for motion and process control, enabling MAMbots to make autonomous decisions in dynamic environments. The framework is validated through simulations and real-world experiments that test its adaptability to trajectory variations and external disturbances. Coupled navigation and printing together enable MAMbots to plan safe, adaptive trajectories, improving flexibility and adaptability in manufacturing.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2603.25636v1' target='_blank'>Designing Any Imaging System from Natural Language: Agent-Constrained Composition over a Finite Primitive Basis</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Chengshuai Yang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-03-26 16:47:27</h6>
+<p class='card-text'>Designing a computational imaging system -- selecting operators, setting parameters, validating consistency -- requires weeks of specialist effort per modality, creating an expertise bottleneck that excludes the
+  broader scientific community from prototyping imaging instruments. We introduce spec.md, a structured specification format, and three autonomous agents -- Plan, Judge, and Execute -- that translate a one-sentence
+  natural-language description into a validated forward model with bounded reconstruction error. A design-to-real error theorem decomposes total reconstruction error into five independently bounded terms, each linked
+  to a corrective action. On 6 real-data modalities spanning all 5 carrier families, the automated pipeline matches expert-library quality (98.1 +/- 4.2%). Ten novel designs -- composing primitives into chains from 3D
+  to 5D -- demonstrate compositional reach beyond any single-modality tool.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2603.25522v1' target='_blank'>Automating Computational Chemistry Workflows via OpenClaw and Domain-Specific Skills</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Mingwei Ding, Chen Huang, Yibo Hu, Yifan Li, Zitian Lu, Xingtai Yu, Duo Zhang, Wenxi Zhai, Tong Zhu, Qiangqiang Gu, Jinzhe Zeng</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-03-26 14:56:51</h6>
+<p class='card-text'>Automating multistep computational chemistry tasks remains challenging because reasoning, workflow specification, software execution, and high-performance computing (HPC) execution are often tightly coupled. We demonstrate a decoupled agent-skill design for computational chemistry automation leveraging OpenClaw. Specifically, OpenClaw provides centralized control and supervision; schema-defined planning skills translate scientific goals into executable task specifications; domain skills encapsulate specific computational chemistry procedures; and DPDispatcher manages job execution across heterogeneous HPC environments. In a molecular dynamics (MD) case study of methane oxidation, the system completed cross-tool execution, bounded recovery from runtime failures, and reaction network extraction, illustrating a scalable and maintainable approach to multistep computational chemistry automation.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2603.25462v1' target='_blank'>Temporally Decoupled Diffusion Planning for Autonomous Driving</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Xiang Li, Bikun Wang, John Zhang, Jianjun Wang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-03-26 14:04:15</h6>
+<p class='card-text'>Motion planning in dynamic urban environments requires balancing immediate safety with long-term goals. While diffusion models effectively capture multi-modal decision-making, existing approaches treat trajectories as monolithic entities, overlooking heterogeneous temporal dependencies where near-term plans are constrained by instantaneous dynamics and far-term plans by navigational goals. To address this, we propose Temporally Decoupled Diffusion Model (TDDM), which reformulates trajectory generation via a noise-as-mask paradigm. By partitioning trajectories into segments with independent noise levels, we implicitly treat high noise as information voids and weak noise as contextual cues. This compels the model to reconstruct corrupted near-term states by leveraging internal correlations with better-preserved temporal contexts. Architecturally, we introduce a Temporally Decoupled Adaptive Layer Normalization (TD-AdaLN) to inject segment-specific timesteps. During inference, our Asymmetric Temporal Classifier-Free Guidance utilizes weakly noised far-term priors to guide immediate path generation. Evaluations on the nuPlan benchmark show TDDM approaches or exceeds state-of-the-art baselines, particularly excelling in the challenging Test14-hard subset.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2603.25395v1' target='_blank'>UMBRELLA: Uncertainty-aware Multi-robot Reactive Coordination under Dynamic Temporal Logic Tasks</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Qisheng Zhao, Meng Guo, Hengxuan Du, Lars Lindemann, Zhongkui Li</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-03-26 12:40:04</h6>
+<p class='card-text'>Multi-robot systems can be extremely efficient for accomplishing team-wise tasks by acting concurrently and collaboratively. However, most existing methods either assume static task features or simply replan when environmental changes occur. This paper addresses the challenging problem of coordinating multi-robot systems for collaborative tasks involving dynamic and moving targets. We explicitly model the uncertainty in target motion prediction via Conformal Prediction(CP), while respecting the spatial-temporal constraints specified by Linear Temporal Logic (LTL). The proposed framework (UMBRELLA) combines the Monte Carlo Tree Search (MCTS) over partial plans with uncertainty-aware rollouts, and introduces a CP-based metric to guide and accelerate the search. The objective is to minimize the Conditional Value at Risk (CVaR) of the average makespan. For tasks released online, a receding-horizon planning scheme dynamically adjusts the assignments based on updated task specifications and motion predictions. Spatial and temporal constraints among the tasks are always ensured, and only partial synchronization is required for the collaborative tasks during online execution. Extensive large-scale simulations and hardware experiments demonstrate substantial reductions in both the average makespan and its variance by 23% and 71%, compared with static baselines.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2603.25382v1' target='_blank'>IntentReact: Guiding Reactive Object-Centric Navigation via Topological Intent</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yanmei Jiao, Anpeng Lu, Wenhan Hu, Rong Xiong, Yue Wang, Huajin Tang, Wen-an Zhang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-03-26 12:32:11</h6>
+<p class='card-text'>Object-goal visual navigation requires robots to reason over semantic structure and act effectively under partial observability. Recent approaches based on object-level topological maps enable long-horizon navigation without dense geometric reconstruction, but their execution remains limited by the gap between global topological guidance and local perception-driven control. In particular, local decisions are made solely from the current egocentric observation, without access to information beyond the robot's field of view. As a result, the robot may persist along its current heading even when initially oriented away from the goal, moving toward directions that do not decrease the global topological distance. In this work, we propose IntentReact, an intent-conditioned object-centric navigation framework that introduces a compact interface between global topological planning and reactive object-centric control. Our approach encodes global topological guidance as a low-dimensional directional signal, termed intent, which conditions a learned waypoint prediction policy to bias navigation toward topologically consistent progression. This design enables the robot to promptly reorient when local observations are misleading, guiding motion toward directions that decrease global topological distance while preserving the reactivity and robustness of object-centric control. We evaluate the proposed framework through extensive experiments, demonstrating improved navigation success and execution quality compared to prior object-centric navigation methods.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2603.25298v1' target='_blank'>Connectivity-Aware Representations for Constrained Motion Planning via Multi-Scale Contrastive Learning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Suhyun Jeon, Yumin Lim, Woo-Jeong Baek, Hyeonseo Kim, Suhan Park, Jaeheung Park</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-03-26 10:44:21</h6>
+<p class='card-text'>The objective of constrained motion planning is to connect start and goal configurations while satisfying task-specific constraints. Motion planning becomes inefficient or infeasible when the configurations lie in disconnected regions, known as essentially mutually disconnected (EMD) components. Constraints further restrict feasible space to a lower-dimensional submanifold, while redundancy introduces additional complexity because a single end-effector pose admits infinitely many inverse kinematic solutions that may form discrete self-motion manifolds. This paper addresses these challenges by learning a connectivity-aware representation for selecting start and goal configurations prior to planning. Joint configurations are embedded into a latent space through multi-scale manifold learning across neighborhood ranges from local to global, and clustering generates pseudo-labels that supervise a contrastive learning framework. The proposed framework provides a connectivity-aware measure that biases the selection of start and goal configurations in connected regions, avoiding EMDs and yielding higher success rates with reduced planning time. Experiments on various manipulation tasks showed that our method achieves 1.9 times higher success rates and reduces the planning time by a factor of 0.43 compared to baselines.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2603.25207v1' target='_blank'>Semi-Automated Generation and Hemodynamic Assessment of Surgical Baffle Geometry for Biventricular Repair</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Elena Sabdy Martinez, Alexander D. Kaiser, Alexander K. Reed, Sascha W. Stocker, Amit Sharir, Perry S. Choi, Shiraz A. Maskatia, Michael R. Ma, Alison Lesly Marsden</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-03-26 09:10:03</h6>
+<p class='card-text'>Patient-specific computational modeling has emerged as a powerful tool for surgical planning in complex congenital heart disease. One promising application is complex biventricular repair, which often requires construction of a custom intraventricular baffle to establish a physiologic left ventricle-to-aorta outflow pathway. In current practice, baffle geometry is designed and shaped intraoperatively and preoperative planning remains largely manual, limiting the ability to generate anatomically conformal, watertight models suitable for quantitative hemodynamic assessment. In this work, we present a semi-automated computational framework for the design and assessment of patient-specific intraventricular baffles. The method constructs an explicit VSD-to-aorta flow pathway, preserves native right ventricular geometry, and reshapes only the baffle region using section-wise area constraints along a physiologically aligned centerline. The resulting geometry is integrated into a closed, multi-labeled domain for computational fluid dynamics analysis. We retrospectively applied this framework to four patients with double outlet right ventricle (DORV) who previously underwent biventricular repair. For each case, a patient-specific baffle was generated and its hemodynamic performance was evaluated using CFD. Predicted pressure gradients across the reconstructed outflow were within clinically acceptable ranges and comparable to the patients' postoperative echocardiographs. This approach enables quantitative, pre-operative design and evaluation of candidate baffle geometries and provides a reproducible method for generating simulation-ready models. By combining physiologically constrained geometric design with CFD-based assessment, the framework represents a step toward computational, patient-specific decision support for biventricular flow restoration in a complex heterogeneous patient population.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2603.25121v1' target='_blank'>CTS-PLL: A Robust and Anytime Framework for Collaborative Task Sequencing and Multi-Agent Path Finding</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Junkai Jiang, Yitao Xu, Ruochen Li, Shaobing Xu, Jianqiang Wang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-03-26 07:45:44</h6>
+<p class='card-text'>The Collaborative Task Sequencing and Multi-Agent Path Finding (CTS-MAPF) problem requires agents to accomplish sequences of tasks while avoiding collisions, posing significant challenges due to its combinatorial complexity. This work introduces CTS-PLL, a hierarchical framework that extends the configuration-based CTS-MAPF planning paradigm with two key enhancements: a lock agents detection and release mechanism leveraging a complete planning method for local re-planning, and an anytime refinement procedure based on Large Neighborhood Search (LNS). These additions ensure robustness in dense environments and enable continuous improvement of solution quality. Extensive evaluations across sparse and dense benchmarks demonstrate that CTS-PLL achieves higher success rates and solution quality compared with existing methods, while maintaining competitive runtime efficiency. Real-world robot experiments further demonstrate the feasibility of the approach in practice.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js'></script>
+</body>
+</html>
