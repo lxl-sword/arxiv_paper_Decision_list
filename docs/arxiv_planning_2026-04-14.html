@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>planning - 2026-04-14</title>
+<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap' rel='stylesheet'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css'>
+<style>
+body {
+font-family: 'Roboto', sans-serif;
+background-color: #f5f7fa;
+padding: 20px;
+}
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.card-title {
+    font-weight: 700;
+}
+.card:hover {
+    transform: scale(1.02);
+    transition: 0.3s ease-in-out;
+}
+</style>
+</head>
+<body>
+<div class='container'>
+<h1 class='text-center my-4'><i class='fas fa-book'></i>planning - 2026-04-14</h1>
+<div class='row'>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2604.11798v1' target='_blank'>Budget-Aware Uncertainty for Radiotherapy Segmentation QA Using nnU-Net</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Ricardo Coimbra Brioso, Lorenzo Mondo, Damiano Dei, Nicola Lambri, Pietro Mancosu, Marta Scorsetti, Daniele Loiacono</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-04-13 17:58:15</h6>
+<p class='card-text'>Accurate delineation of the Clinical Target Volume (CTV) is essential for radiotherapy planning, yet remains time-consuming and difficult to assess, especially for complex treatments such as Total Marrow and Lymph Node Irradiation (TMLI). While deep learning-based auto-segmentation can reduce workload, safe clinical deployment requires reliable cues indicating where models may be wrong. In this work, we propose a budget-aware uncertainty-driven quality assurance (QA) framework built on nnU-Net, combining uncertainty quantification and post-hoc calibration to produce voxel-wise uncertainty maps (based on predictive entropy) that can guide targeted manual review. We compare temperature scaling (TS), deep ensembles (DE), checkpoint ensembles (CE), and test-time augmentation (TTA), evaluated both individually and in combination on TMLI as a representative use case. Reliability is assessed through ROI-masked calibration metrics and uncertainty--error alignment under realistic revision constraints, summarized as AUC over the top 0-5% most uncertain voxels. Across configurations, segmentation accuracy remains stable, whereas TS substantially improves calibration. Uncertainty-error alignment improves most with calibrated checkpoint-based inference, leading to uncertainty maps that highlight more consistently regions requiring manual edits. Overall, integrating calibration with efficient ensembling seems a promising strategy to implement a budget-aware QA workflow for radiotherapy segmentation.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2604.11751v1' target='_blank'>Grounded World Model for Semantically Generalizable Planning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Quanyi Li, Lan Feng, Haonan Zhang, Wuyang Li, Letian Wang, Alexandre Alahi, Harold Soh</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-04-13 17:25:41</h6>
+<p class='card-text'>In Model Predictive Control (MPC), world models predict the future outcomes of various action proposals, which are then scored to guide the selection of the optimal action. For visuomotor MPC, the score function is a distance metric between a predicted image and a goal image, measured in the latent space of a pretrained vision encoder like DINO and JEPA. However, it is challenging to obtain the goal image in advance of the task execution, particularly in new environments. Additionally, conveying the goal through an image offers limited interactivity compared with natural language. In this work, we propose to learn a Grounded World Model (GWM) in a vision-language-aligned latent space. As a result, each proposed action is scored based on how close its future outcome is to the task instruction, reflected by the similarity of embeddings. This approach transforms the visuomotor MPC to a VLA that surpasses VLM-based VLAs in semantic generalization. On the proposed WISER benchmark, GWM-MPC achieves a 87% success rate on the test set comprising 288 tasks that feature unseen visual signals and referring expressions, yet remain solvable with motions demonstrated during training. In contrast, traditional VLAs achieve an average success rate of 22%, even though they overfit the training set with a 90% success rate.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2604.11734v1' target='_blank'>Multi-ORFT: Stable Online Reinforcement Fine-Tuning for Multi-Agent Diffusion Planning in Cooperative Driving</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Haojie Bai, Aimin Li, Ruoyu Yao, Xiongwei Zhao, Tingting Zhang, Xing Zhang, Lin Gao, and Jun Ma</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-04-13 17:13:46</h6>
+<p class='card-text'>Closed-loop cooperative driving requires planners that generate realistic multimodal multi-agent trajectories while improving safety and traffic efficiency. Existing diffusion planners can model multimodal behaviors from demonstrations, but they often exhibit weak scene consistency and remain poorly aligned with closed-loop objectives; meanwhile, stable online post-training in reactive multi-agent environments remains difficult. We present Multi-ORFT, which couples scene-conditioned diffusion pre-training with stable online reinforcement post-training. In pre-training, the planner uses inter-agent self-attention, cross-attention, and AdaLN-Zero-based scene conditioning to improve scene consistency and road adherence of joint trajectories. In post-training, we formulate a two-level MDP that exposes step-wise reverse-kernel likelihoods for online optimization, and combine dense trajectory-level rewards with variance-gated group-relative policy optimization (VG-GRPO) to stabilize training. On the WOMD closed-loop benchmark, Multi-ORFT reduces collision rate from 2.04% to 1.89% and off-road rate from 1.68% to 1.36%, while increasing average speed from 8.36 to 8.61 m/s relative to the pre-trained planner, and it outperforms strong open-source baselines including SMART-large, SMART-tiny-CLSFT, and VBD on the primary safety and efficiency metrics. These results show that coupling scene-consistent denoising with stable online diffusion-policy optimization improves the reliability of closed-loop cooperative driving.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2604.11709v1' target='_blank'>A Mamba-Based Multimodal Network for Multiscale Blast-Induced Rapid Structural Damage Assessment</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Wanli Ma, Sivasakthy Selvakumaran, Dain G. Farrimond, Adam A. Dennis, Samuel E. Rigby</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-04-13 16:43:16</h6>
+<p class='card-text'>Accurate and rapid structural damage assessment (SDA) is crucial for post-disaster management, helping responders prioritise resources, plan rescues, and support recovery. Traditional field inspections, though precise, are limited by accessibility, safety risks, and time constraints, especially after large explosions. Machine learning with remote sensing has emerged as a scalable solution for rapid SDA, with Mamba-based networks achieving state-of-the-art performance. However, these methods often require extensive training and large datasets, limiting real-world applicability. Moreover, they fail to incorporate key physical characteristics of blast loading for SDA. To overcome these challenges, we propose a Mamba-based multimodal network for rapid SDA that integrates multi-scale blast-loading information with optical remote sensing images. Evaluated on the 2020 Beirut explosion, our method significantly improves performance over state-of-the-art approaches. Code is available at: https://github.com/IMPACTSquad/Blast-Mamba</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2604.11587v1' target='_blank'>Optimal Kinodynamic Motion Planning Through Anytime Bidirectional Heuristic Search with Tight Termination Condition</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yi Wang, Bingxian Mu, Shahab Shokouhi, May-Win Thein</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-04-13 15:03:00</h6>
+<p class='card-text'>This paper introduces Bidirectional Tight Informed Trees (BTIT*), an asymptotically optimal kinodynamic sampling-based motion planning algorithm that integrates an anytime bidirectional heuristic search (Bi-HS) and ensures the \emph{meet-in-the-middle} property (MMP) and optimality (MM-optimality). BTIT* is the first anytime MEET-style algorithm to utilize termination conditions that are efficient to evaluate and enable early termination \emph{on-the-fly} in batch-wise sampling-based motion planning. Experiments show that BTIT* achieves strongly faster time-to-first-solution and improved convergence than representative \emph{non-lazy} informed batch planners on two kinodynamic benchmarks: a 4D double-integrator model and a 10D linearized Quadrotor. The source code is available here.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2604.11548v1' target='_blank'>SemaClaw: A Step Towards General-Purpose Personal AI Agents through Harness Engineering</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Ningyan Zhu, Huacan Wang, Jie Zhou, Feiyu Chen, Shuo Zhang, Ge Chen, Chen Liu, Jiarou Wu, Wangyi Chen, Xiaofeng Mou, Yi Xu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-04-13 14:37:53</h6>
+<p class='card-text'>The rise of OpenClaw in early 2026 marks the moment when millions of users began deploying personal AI agents into their daily lives, delegating tasks ranging from travel planning to multi-step research. This scale of adoption signals that two parallel arcs of development have reached an inflection point. First is a paradigm shift in AI engineering, evolving from prompt and context engineering to harness engineering-designing the complete infrastructure necessary to transform unconstrained agents into controllable, auditable, and production-reliable systems. As model capabilities converge, this harness layer is becoming the primary site of architectural differentiation. Second is the evolution of human-agent interaction from discrete tasks toward a persistent, contextually aware collaborative relationship, which demands open, trustworthy and extensible harness infrastructure. We present SemaClaw, an open-source multi-agent application framework that addresses these shifts by taking a step towards general-purpose personal AI agents through harness engineering. Our primary contributions include a DAG-based two-phase hybrid agent team orchestration method, a PermissionBridge behavioral safety system, a three-tier context management architecture, and an agentic wiki skill for automated personal knowledge base construction.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2604.11540v1' target='_blank'>A collaborative agent with two lightweight synergistic models for autonomous crystal materials research</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Tongyu Shi, Yutang Li, Zhanyuan Li, Qian Liu, Jie Zhou, Wenhe Xu, Yang Li, Dawei Dai, Rui He, Wenhua Zhou, Jiahong Wang, Xue-Feng Yu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-04-13 14:33:19</h6>
+<p class='card-text'>Current large language models require hundreds of billions of parameters yet struggle with domain-specific reasoning and tool coordination in materials science. Here, we present MatBrain, a lightweight collaborative agent system with two synergistic models specialization for crystal materials research. MatBrain employs a dual-model architecture: Mat-R1 (30B parameters) as the analytical model providing expert-level domain reasoning, and Mat-T1 (14B parameters) as the executive model orchestrating tool-based actions. Entropy analysis confirms that this architecture resolves the conflict between tool planning and analytical reasoning by decoupling their distinct entropy dynamics. Enabled by this dual-model architecture and structural efficiency, MatBrain significantly outperforms larger general-purpose models while reducing the hardware deployment barrier by over 95%. MatBrain exhibits versatility across structure generation, property prediction, and synthesis planning tasks. Applied to catalyst design, MatBrain generated 30,000 candidate structures and identified 38 promising materials within 48 hours, achieving approximately 100-fold acceleration over traditional approaches. These results demonstrate the potential of lightweight collaborative intelligence for advancing materials research capabilities.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2604.11427v1' target='_blank'>METRO: Towards Strategy Induction from Expert Dialogue Transcripts for Non-collaborative Dialogues</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Haofu Yang, Jiaji Liu, Chen Huang, Faguo Wu, Wenqiang Lei, See-Kiong Ng</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-04-13 13:12:02</h6>
+<p class='card-text'>Developing non-collaborative dialogue agents traditionally requires the manual, unscalable codification of expert strategies. We propose \ours, a method that leverages large language models to autonomously induce both strategy actions and planning logic directly from raw transcripts. METRO formalizes expert knowledge into a Strategy Forest, a hierarchical structure that captures both short-term responses (nodes) and long-term strategic foresight (branches). Experimental results across two benchmarks show that METRO demonstrates promising performance, outperforming existing methods by an average of 9%-10%. Our further analysis not only reveals the success behind METRO (strategic behavioral diversity and foresight), but also demonstrates its robust cross-task transferability. This offers new insights into building non-collaborative agents in a cost-effective and scalable way. Our code is available at https://github.com/Humphrey-0125/METRO.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2604.11407v1' target='_blank'>Retrieval as Generation: A Unified Framework with Self-Triggered Information Planning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Bo Li, Mingda Wang, Gexiang Fang, Shikun Zhang, Wei Ye</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-04-13 12:53:17</h6>
+<p class='card-text'>We revisit retrieval-augmented generation (RAG) by embedding retrieval control directly into generation. Instead of treating retrieval as an external intervention, we express retrieval decisions within token-level decoding, enabling end-to-end coordination without additional controllers or classifiers. Under the paradigm of Retrieval as Generation, we propose \textbf{GRIP} (\textbf{G}eneration-guided \textbf{R}etrieval with \textbf{I}nformation \textbf{P}lanning), a unified framework in which the model regulates retrieval behavior through control-token emission. Central to GRIP is \textit{Self-Triggered Information Planning}, which allows the model to decide when to retrieve, how to reformulate queries, and when to terminate, all within a single autoregressive trajectory. This design tightly couples retrieval and reasoning and supports dynamic multi-step inference with on-the-fly evidence integration. To supervise these behaviors, we construct a structured training set covering answerable, partially answerable, and multi-hop queries, each aligned with specific token patterns. Experiments on five QA benchmarks show that GRIP surpasses strong RAG baselines and is competitive with GPT-4o while using substantially fewer parameters.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2604.11406v1' target='_blank'>Using Unwrapped Full Color Space Palette Recording to Measure Exposedness of a Vehicle Exterior Parts for External Human Machine Interfaces</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jaerock Kwon, Jose Gonzalez-Belmonte</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-04-13 12:49:20</h6>
+<p class='card-text'>One of the concerns with autonomous vehicles is their ability to communicate their intent to other road users, specially pedestrians, in order to prevent accidents. External Human-Machine Interfaces (eHMIs) are the proposed solution to this issue, through the introduction of electronic devices on the exterior of a vehicle that communicate when the vehicle is planning on slowing down or yielding. This paper uses the technique of unwrapping the faces of a mesh onto a texture where every pixel is a unique color, as well as a series of animated simulations made and ran in the Unity game engine, to measure how many times is each point on a 2015 Ford F-150 King Ranch is unobstructed to a pedestrian attempting to cross the road at a four-way intersection. By cross-referencing the results with a color-coded map of the labeled parts on the exterior of the vehicle, it was concluded that while the bumper, grill, and hood were the parts of the vehicle visible to the crossing pedestrian most often, the existence of other vehicles on the same lane that might obstruct the view of these makes them insufficient. The study recommends instead a distributive approach to eHMIs by using both the windshield and frontal fenders as simultaneous placements for these devices.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2604.11379v1' target='_blank'>From GDSII to Wafer: EDA Design Flow and Data Conversion for Wafer-Scale Manufacturing of Superconducting Quantum Chips</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Ling Qiao, Fumin Luo, Qinglang Guo</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-04-13 12:19:22</h6>
+<p class='card-text'>Superconducting quantum computing is advancing toward the thousand- and even million-qubit regime, making wafer-scale fabrication an essential pathway for achieving large-scale, cost-effective quantum processors. This manufacturing paradigm imposes new requirements on quantum-chip electronic design automation (Q-EDA): design tools must not only generate layouts (GDSII files) that satisfy quantum-circuit physical constraints but also ensure that the design data can be seamlessly converted into a complete set of manufacturing files executable by a wafer foundry, thereby enabling reliable translation from design intent to physical chip. This paper focuses on this critical data-conversion pipeline and presents a systematic treatment of the Q-EDA technology stack for wafer-scale fabrication. Starting from GDSII as the single authoritative data source, we analyze the key stages including process-design-kit (PDK)-based design rule checking (DRC), layout-versus-schematic (LVS) verification, design for manufacturability (DFM) optimization, wafer layout planning, and mask data preparation (MDP). We describe the concrete architecture of a Q-EDA system, present nine quantum-specific DRC rules together with their physical underpinnings and a multi-layer process stack model, and benchmark the manufacturing data-flow coverage of mainstream Q-EDA tools. Finally, we discuss the core challenges and future directions in this field.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2604.11302v1' target='_blank'>3D-Anchored Lookahead Planning for Persistent Robotic Scene Memory via World-Model-Based MCTS</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Bronislav Sidik, Dror Mizrahi</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-04-13 11:01:30</h6>
+<p class='card-text'>We present 3D-Anchored Lookahead Planning (3D-ALP), a System 2 reasoning engine for robotic manipulation that combines Monte Carlo Tree Search (MCTS) with a 3D-consistent world model as the rollout oracle. Unlike reactive policies that evaluate actions from the current camera frame only, 3D-ALP maintains a persistent camera-to-world (c2w) anchor that survives occlusion, enabling accurate replanning to object positions that are no longer directly observable. On a 5-step sequential reach task requiring spatial memory (Experiment E3), 3D-ALP achieves 0.650 0.109 success rate on memory-required steps versus 0.006 0.008 for a greedy reactive baseline (Δ=+0.645), while step 5 success reaches 0.822 against 0.000 for greedy. An ablation study (30 episodes, 3 seeds) isolates tree search spatial memory as the primary driver (+0.533, 82% of gain) with additional benefit from deeper lookahead (+0.111, 17%). We also identify and resolve four structural failure modes in applying UCT-MCTS (Upper Confidence Bounds applied to Trees [10]) to continuous robotic manipulation.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2604.11020v1' target='_blank'>Inferring World Belief States in Dynamic Real-World Environments</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jack Kolb, Aditya Garg, Nikolai Warner, Karen M. Feigh</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-04-13 05:34:26</h6>
+<p class='card-text'>We investigate estimating a human's world belief state using a robot's observations in a dynamic, 3D, and partially observable environment. The methods are grounded in mental model theory, which posits that human decision making, contextual reasoning, situation awareness, and behavior planning draw from an internal simulation or world belief state. When in teams, the mental model also includes a team model of each teammate's beliefs and capabilities, enabling fluent teamwork without the need for constant and explicit communication. In this work we replicate a core component of the team model by inferring a teammate's belief state, or level one situation awareness, as a human-robot team navigates a household environment. We evaluate our methods in a realistic simulation, extend to a real-world robot platform, and demonstrate a downstream application of the belief state through an active assistance semantic reasoning task.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2604.11009v1' target='_blank'>From Planning to Revision: How AI Writing Support at Different Stages Alters Ownership</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Katy Ilonka Gero, Tao Long, Carly Schnitzler, Paramveer Dhillon</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-04-13 05:21:07</h6>
+<p class='card-text'>Although AI assistance can improve writing quality, it can also decrease feelings of ownership. Ownership in writing has important implications for attribution, rights, norms, and cognitive engagement, and designers of AI support systems may want to consider how system features may impact ownership. We investigate how the stage at which AI support for writing is provided (planning, drafting, or revising) changes ownership. In a study of short essay writing (between subjects, n = 253) we find that while any AI assistance decreased ownership, planning support only minimally decreased ownership, while drafting support saw the largest decrease. This variation maps onto the amount of text and ideas contributed by AI, where more text and ideas from AI decreased ownership. Notably, an AI-generated draft based on participants' own outline resulted in significantly more AI-contributed ideas than AI support for planning. At the same time, more AI contributions improved essay quality. We propose that writers, educators, and designers consider writing stage when introducing AI assistance.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2604.10999v1' target='_blank'>TraversalBench: Challenging Paths to Follow for Vision Language Models</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Clara Petrova, Zhuo Chen, Marin Soljačić</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-04-13 04:58:52</h6>
+<p class='card-text'>Vision-language models (VLMs) perform strongly on many multimodal benchmarks. However, the ability to follow complex visual paths -- a task that human observers typically find straightforward -- remains under-tested. We introduce TraversalBench, a controlled benchmark for exact visual path traversal. Each instance contains a single continuous polyline, a unique start marker, and markers placed at path vertices; the task is to recover the exact ordered sequence encountered when traversing the path from start to finish. The benchmark explicitly balances key path-structural factors including self-intersection count, tortuosity, vertex count, and nearby confounding lines, while minimizing reliance on OCR, world knowledge, and open-ended planning. We find that self-intersections are the dominant source of difficulty. A first-crossing analysis shows that errors are sharply localized: performance is relatively stable immediately before the first crossing, then drops steeply when the model must resolve the correct continuation. By contrast, nearby confounding lines produce a weaker persistent degradation that compounds with repeated exposure. These analyses make TraversalBench a useful diagnostic for identifying whether models suffer from human-like failures or other breakdowns in sustained visual processing. An auxiliary reading-order benchmark further reveals a consistent preference for layouts compatible with left-to-right serialization, while not explaining away the main effects of path complexity. Together, these results position TraversalBench as a controlled diagnostic of path-faithful visual reasoning and as a useful testbed for studying multimodal spatial reasoning under ambiguity, clutter, and distractor structure. More broadly, we position TraversalBench as a contribution to the still-limited area of sustained visual grounding benchmarks for VLMs.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2604.10997v1' target='_blank'>A Two-Stage Optimization Framework for Validating Electric Vehicle Charging Infrastructure under Grid Constraints</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Biswarup Mukherjee</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-04-13 04:56:28</h6>
+<p class='card-text'>This paper proposes a two-stage optimization framework to evaluate whether cost-optimal electric vehicle (EV) charging infrastructure translates into effective operation under distribution grid constraints. The proposed approach explicitly links infrastructure planning with grid-constrained charging operation through a consistent optimal power flow (OPF) formulation applied in both stages. The framework is formulated as a mixed-integer program (MIP) and evaluated across different fleet sizes, demonstrating its scalability and applicability to realistic planning scenarios. The model incorporates heterogeneous charging technologies, including fast and slow chargers with both single-port and multi-port configurations. The results show a fundamental trade-off between cost optimality and service performance. Infrastructure configurations that minimize capital investment tend to spatially concentrate charging resources, resulting in lower achieved state-of-charge (SOC) and higher unmet energy demand. In contrast, uniformly distributed deployments of the same infrastructure significantly improve the spatial availability of charging and operational performance, reducing energy shortfall by up to 74%. Our findings reveal that cost-optimal planning alone is insufficient to guarantee satisfactory system performance. Effective EV charging infrastructure design must jointly consider cost optimality, spatial distribution of charging resources, and grid constraints. Sensitivity analysis with respect to battery capacity further highlights the nonlinear scaling of infrastructure requirements.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2604.10988v1' target='_blank'>WebForge: Breaking the Realism-Reproducibility-Scalability Trilemma in Browser Agent Benchmark</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Peng Yuan, Yuyang Yin, Yuxuan Cai, Zheng Wei</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-04-13 04:45:27</h6>
+<p class='card-text'>Existing browser agent benchmarks face a fundamental trilemma: real-website benchmarks lack reproducibility due to content drift, controlled environments sacrifice realism by omitting real-web noise, and both require costly manual curation that limits scalability. We present WebForge, the first fully automated framework that resolves this trilemma through a four-agent pipeline -- Plan, Generate, Refine, and Validate -- that produces interactive, self-contained web environments end-to-end without human annotation. A seven-dimensional difficulty control framework structures task design along navigation depth, visual complexity, reasoning difficulty, and more, enabling systematic capability profiling beyond single aggregate scores. Using WebForge, we construct WebForge-Bench, a benchmark of 934 tasks spanning 7 domains and 3 difficulty levels. Multi-model experiments show that difficulty stratification effectively differentiates model capabilities, while cross-domain analysis exposes capability biases invisible to aggregate metrics. Together, these results confirm that multi-dimensional evaluation reveals distinct capability profiles that a single aggregate score cannot capture. Code and benchmark are publicly available at https://github.com/yuandaxia2001/WebForge.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2604.10916v1' target='_blank'>ReXSonoVQA: A Video QA Benchmark for Procedure-Centric Ultrasound Understanding</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Xucheng Wang, Xiaoman Zhang, Sung Eun Kim, Ankit Pal, Pranav Rajpurkar</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-04-13 02:32:51</h6>
+<p class='card-text'>Ultrasound acquisition requires skilled probe manipulation and real-time adjustments. Vision-language models (VLMs) could enable autonomous ultrasound systems, but existing benchmarks evaluate only static images, not dynamic procedural understanding. We introduce ReXSonoVQA, a video QA benchmark with 514 video clips and 514 questions (249 MCQ, 265 free-response) targeting three competencies: Action-Goal Reasoning, Artifact Resolution & Optimization, and Procedure Context & Planning. Zero-shot evaluation of Gemini 3 Pro, Qwen3.5-397B, LLaVA-Video-72B, and Seed 2.0 Pro shows VLMs can extract some procedural information, but troubleshooting questions remain challenging with minimal gains over text-only baselines, exposing limitations in causal reasoning. ReXSonoVQA enables developing perception systems for ultrasound training, guidance, and robotic automation.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2604.10892v1' target='_blank'>HECTOR: Human-centric Hierarchical Coordination and Supervision of Robotic Fleets under Continual Temporal Tasks</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Shen Wang, Yinhang Luo, Jie Li, Meng Guo</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-04-13 01:39:19</h6>
+<p class='card-text'>Robotic fleets can be extremely efficient when working concurrently and collaboratively, e.g., for delivery, surveillance, search and rescue. However, it can be demanding or even impractical for an operator to directly control each robot. Thus, autonomy of the fleet and its online interaction with the operator are both essential, particularly in dynamic and partially unknown environments. The operator might need to add new tasks, cancel some tasks, change priorities and modify planning results. How to design the procedure for these interactions and efficient algorithms to fulfill these needs have been mostly neglected in the related literature. Thus, this work proposes a human-centric coordination and supervision scheme (HECTOR) for large-scale robotic fleets under continual and uncertain temporal tasks. It consists of three hierarchical layers: (I) the bidirectional and multimodal protocol of online human-fleet interaction, where the operator interacts with and supervises the whole fleet; (II) the rolling assignment of currently-known tasks to teams within a certain horizon, and (III) the dynamic coordination within a team given the detected subtasks during online execution. The overall mission can be as general as temporal logic formulas over collaborative actions. Such hierarchical structure allows human interaction and supervision at different granularities and triggering conditions, to both improve computational efficiency and reduce human effort. Extensive human-in-the-loop simulations are performed over heterogeneous fleets under various temporal tasks and environmental uncertainties.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2604.10883v1' target='_blank'>Towards Designing for Resilience: Community-Centered Deployment of an AI Business Planning Tool in a Small Business Center</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Quentin Romero Lauro, Aakash Gautam, Yasmine Kotturi</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-04-13 01:05:36</h6>
+<p class='card-text'>Entrepreneurs in resource-constrained communities often lack time and support to translate ideas into actionable business plans. While generative AI promises assistance, most systems assume high digital literacy and overlook community infrastructures that shape adoption. We report on the community-centered design and deployment of BizChat, an AI-powered business planning tool, introduced across four workshops at a feminist makerspace in Pittsburgh. Through log data (N=30) and interviews (N=10), we examine how entrepreneurs build resilience through collective AI literacy development-encompassing adoption, adaptation, and refusal of AI. Our findings reveal that while BizChat lowered barriers to accessing capital by translating ideas into "business language," this ease raised questions about whether instant AI outputs undermine sensemaking essential to planning. We show how peer support helped entrepreneurs navigate this tension. We contribute design implications, including productive friction, communal scaffolds, and co-optability, for strengthening resilience amid technological change.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2604.10856v1' target='_blank'>BridgeSim: Unveiling the OL-CL Gap in End-to-End Autonomous Driving</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Seth Z. Zhao, Luobin Wang, Hongwei Ruan, Yuxin Bao, Yilan Chen, Ziyang Leng, Abhijit Ravichandran, Honglin He, Zewei Zhou, Xu Han, Abhishek Peri, Zhiyu Huang, Pranav Desai, Henrik Christensen, Jiaqi Ma, Bolei Zhou</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-04-12 23:37:07</h6>
+<p class='card-text'>Open-loop (OL) to closed-loop (CL) gap (OL-CL gap) exists when OL-pretrained policies scoring high in OL evaluations fail to transfer effectively in closed-loop (CL) deployment. In this paper, we unveil the root causes of this systemic failure and propose a practical remedy. Specifically, we demonstrate that OL policies suffer from Observational Domain Shift and Objective Mismatch. We show that while the former is largely recoverable with adaptation techniques, the latter creates a structural inability to model complex reactive behaviors, which forms the primary OL-CL gap. We find that a wide range of OL policies learn a biased Q-value estimator that neglects both the reactive nature of CL simulations and the temporal awareness needed to reduce compounding errors. To this end, we propose a Test-Time Adaptation (TTA) framework that calibrates observational shift, reduces state-action biases, and enforces temporal consistency. Extensive experiments show that TTA effectively mitigates planning biases and yields superior scaling dynamics than its baseline counterparts. Furthermore, our analysis highlights the existence of blind spots in standard OL evaluation protocols that fail to capture the realities of closed-loop deployment.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2604.10795v1' target='_blank'>Optimization Under Uncertainty for Energy Infrastructure Planning: A Synthesis of Methods, Tools, and Open Challenges</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Rahman Khorramfar, Aron Brenner, Lara Booth, Ana Rivera, Ruaridh Macdonald, Priya Donti, Saurabh Amin</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-04-12 19:59:09</h6>
+<p class='card-text'>Energy infrastructure planning under uncertainty has become increasingly complex as electrification, interdependence between energy carriers, decarbonization, and extreme weather events reshape long-term investment decisions. This paper surveys recent advances at the intersection of generation and transmission expansion, and optimization under uncertainty, with a focus on stochastic programming, robust optimization, and distributionally robust optimization. We then categorize modeling needs along the axes of modeling fidelity, uncertainty characterization, and solution methods to identify dominant modeling features and trace research gaps. We further examine emerging directions at the interface of optimization and machine learning, including surrogate modeling, learning uncertainty sets, probabilistic forecasting, and synthetic scenarios, and discuss how these tools can be embedded within infrastructure planning models.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2604.10760v1' target='_blank'>Prosociality by Coupling, Not Mere Observation: Homeostatic Sharing in an Inspectable Recurrent Artificial Life Agent</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Aishik Sanyal</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-04-12 18:09:24</h6>
+<p class='card-text'>Artificial agents can be made to "help" for many reasons, including explicit social reward, hard-coded prosocial bonuses, or direct access to another agent's internal state. Those possibilities make minimal prosocial behavior hard to interpret. Building on ReCoN-Ipsundrum, an inspectable recurrent controller with affect-coupled regulation, I add an explicit homeostat and a social coupling channel while keeping planning strictly self-directed: the agent scores only its own predicted internal state, and no partner-welfare reward term is introduced. I compare four matched conditions in two toy worlds. In a one-step FoodShareToy, an exact solver finds a sharp switch from EAT to PASS at $λ* \approx 0.91$ for the default state. In the experimental runs, the self-only and partner-observing conditions never help, whereas the affectively coupled conditions always do. In a multi-step SocialCorridorWorld, the same dissociation reappears: coupling flips help rate and partner recovery from 0 to 1 and cuts rescue latency from 18 to 9 steps, while raising mutual viability from 0.15 to 0.33. Sham lesions preserve helping, but coupling-off and shuffled-partner lesions abolish it in both tasks. A coupling sweep shows a load-dependent feasibility boundary: under low load, helping appears for $λ \geq 0.25$, whereas under medium and high loads no tested value rescues the partner within horizon. The result is a narrow claim for artificial life: in this minimal architecture, helping appears when another's need is routed into self-regulation.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2604.10755v1' target='_blank'>MMRareBench: A Rare-Disease Multimodal and Multi-Image Medical Benchmark</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Junzhi Ning, Jiashi Lin, Yingying Fang, Wei Li, Jiyao Liu, Cheng Tang, Chenglong Ma, Wenhao Tang, Tianbin Li, Ziyan Huang, Guang Yang, Junjun He</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-04-12 17:53:02</h6>
+<p class='card-text'>Multimodal large language models (MLLMs) have advanced clinical tasks for common conditions, but their performance on rare diseases remains largely untested. In rare-disease scenarios, clinicians often lack prior clinical knowledge, forcing them to rely strictly on case-level evidence for clinical judgments. Existing benchmarks predominantly evaluate common-condition, single-image settings, leaving multimodal and multi-image evidence integration under rare-disease data scarcity systematically unevaluated. We introduce MMRareBench, to our knowledge the first rare-disease benchmark jointly evaluating multimodal and multi-image clinical capability across four workflow-aligned tracks: diagnosis, treatment planning, cross-image evidence alignment, and examination suggestion. The benchmark comprises 1,756 question-answer pairs with 7,958 associated medical images curated from PMC case reports, with Orphanet-anchored ontology alignment, track-specific leakage control, evidence-grounded annotations, and a two-level evaluation protocol. A systematic evaluation of 23 MLLMs reveals fragmented capability profiles and universally low treatment-planning performance, with medical-domain models trailing general-purpose MLLMs substantially on multi-image tracks despite competitive diagnostic scores. These patterns are consistent with a capacity dilution effect: medical fine-tuning can narrow the diagnostic gap but may erode the compositional multi-image capability that rare-disease evidence integration demands.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2604.10750v1' target='_blank'>Motion planning and approximate controllability of a moving cantilever beam with a tip-mass</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Soham Chatterjee, Aman Batra, Vivek Natarajan</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-04-12 17:45:09</h6>
+<p class='card-text'>Consider a non-uniform Euler-Bernoulli beam with a tip-mass at one end and a cantilever joint at the other end. The cantilever joint is not fixed and can itself be moved along an axis perpendicular to the beam. The position of the cantilever joint is the control input to the beam. The dynamics of the beam is governed by a coupled PDE-ODE model with boundary input. On a natural state-space, there exists a unique state trajectory for this beam model for every initial state and each twice continuously differentiable control input which is compatible with the initial state. In this paper, we study the motion planning problem of transferring the beam model from an initial state to a final state over a prescribed time-interval and then employ the results obtained to establish the approximate controllability of this model. We address these problems by extending and applying the generating functions approach to flatness-based control to the beam model. We prove that the transfer described above is feasible if the initial and final states belong to a certain set, which also contains the steady-states of the beam model. We then establish that this set contains all the eigenfunctions of the beam model, which form a Riesz basis for the state-space, and thereby conclude the approximate controllability of the beam model over all time intervals. We illustrate our theoretical results on motion planning using simulations and experiments.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2604.10741v1' target='_blank'>Deep-Reporter: Deep Research for Grounded Multimodal Long-Form Generation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Fangda Ye, Zhifei Xie, Yuxin Hu, Yihang Yin, Shurui Huang, Shikai Dong, Jianzhu Bao, Shuicheng Yan</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-04-12 17:30:44</h6>
+<p class='card-text'>Recent agentic search frameworks enable deep research via iterative planning and retrieval, reducing hallucinations and enhancing factual grounding. However, they remain text-centric, overlooking the multimodal evidence that characterizes real-world expert reports. We introduce a pressing task: multimodal long-form generation. Accordingly, we propose Deep-Reporter, a unified agentic framework for grounded multimodal long-form generation. It orchestrates: (i) Agentic Multimodal Search and Filtering to retrieve and filter textual passages and information-dense visuals; (ii) Checklist-Guided Incremental Synthesis to ensure coherent image-text integration and optimal citation placement; and (iii) Recurrent Context Management to balance long-range coherence with local fluency. We develop a rigorous curation pipeline producing 8K high-quality agentic traces for model optimization. We further introduce M2LongBench, a comprehensive testbed comprising 247 research tasks across 9 domains and a stable multimodal sandbox. Extensive experiments demonstrate that long-form multimodal generation is a challenging task, especially in multimodal selection and integration, and effective post-training can bridge the gap.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2604.10738v1' target='_blank'>Accessing gluon GTMD $F^g_{1,4}$ via the $\langle\sin(2φ)\rangle$ azimuthal asymmetry of exclusive $π^0$ production in $ep$ collisions</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Chentao Tan, Zhun Lu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-04-12 17:20:26</h6>
+<p class='card-text'>The longitudinal single-target spin asymmetry in exclusive $π^0$ production in $ep$ collisions is a sensitive probe of the imaginary part of the gluon generalized transverse momentum dependent distribution $F_{1,4}^g$. It appears as a characteristic $\sin(2φ)$ azimuthal correlation between the transverse momenta of the scattered electron and the recoil proton, generated by Coulomb-nuclear interference; consequently, the Primakoff process should be included. We compute the relevant gluon distributions in a light-front spectator model of the proton that explicitly incorporates gluonic degrees of freedom. This work presents the first model calculation of the imaginary part of $F_{1,4}^g$ and delivers predictions for the resulting asymmetries in kinematics relevant to the planned Electron-Ion Colliders (EIC and EicC), providing theoretical predictions for upcoming measurements.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2604.10734v1' target='_blank'>Self-Correcting RAG: Enhancing Faithfulness via MMKP Context Selection and NLI-Guided MCTS</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Shijia Xu, Zhou Wu, Xiaolong Jia, Yu Wang, Kai Liu, April Xiaowen Dong</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-04-12 17:14:36</h6>
+<p class='card-text'>Retrieval-augmented generation (RAG) substantially extends the knowledge boundary of large language models. However, it still faces two major challenges when handling complex reasoning tasks: low context utilization and frequent hallucinations. To address these issues, we propose Self-Correcting RAG, a unified framework that reformulates retrieval and generation as constrained optimization and path planning. On the input side, we move beyond traditional greedy retrieval and, for the first time, formalize context selection as a multi-dimensional multiple-choice knapsack problem (MMKP), thereby maximizing information density and removing redundancy under a strict token budget. On the output side, we introduce a natural language inference (NLI)-guided Monte Carlo Tree Search (MCTS) mechanism, which leverages test-time compute to dynamically explore reasoning trajectories and validate the faithfulness of generated answers. Experiments on six multi-hop question answering and fact-checking datasets demonstrate that our method significantly improves reasoning accuracy on complex queries while effectively reducing hallucinations, outperforming strong existing baselines.Our code is available at https://github.com/xjiacs/Self-Correcting-RAG .</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2604.10685v1' target='_blank'>COD-ssi: Enforcing Mutual Privacy for Credential Oblivious Disclosure in Self Sovereign Identity</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Elia Onofri, Andrea De Salve, Paolo Mori, Laura Emilia Maria Ricci, Roberto Di Pietro</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-04-12 15:23:06</h6>
+<p class='card-text'>The Self-Sovereign Identity (SSI) paradigm is instrumental for decentralised identity management, allowing an entity to create, manage, and present their digital credentials without relying on centralised authorities. Credential selective disclosure is one of the most attractive privacy-preserving features of SSI, allowing users to reveal only the minimum necessary information from their credentials. However, current selective disclosure mechanisms primarily focus on protecting the privacy of credential Holders, while offering limited protection to the Verifiers of credentials. Indeed, the specific credential information requested by a Verifier can inadvertently reveal to credential Holders sensitive information, including internal decision-making criteria, business rules, or strategic plans. In this work, we address this threat by proposing, to the best of our knowledge, the first approach that enforces mutual privacy in credential exchanges. To this end, we introduce COD-ssi (Claim Oblivious Disclosure for SSI), a novel framework that leverages Oblivious Pseudorandom Functions to allow Verifiers to selectively access a subset of claims without revealing which specific claims were accessed to the credential Holder. The security of our solution is formally verified and its feasibility is assessed through the experimental evaluation of our open-source prototype implementation. These results show that provable mutual privacy in the context of SSI can be achieved with just moderate computational and communication overhead.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2604.10658v1' target='_blank'>Governed Reasoning for Institutional AI</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Mamadou Seck</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-04-12 14:09:18</h6>
+<p class='card-text'>Institutional decisions -- regulatory compliance, clinical triage, prior authorization appeal -- require a different AI architecture than general-purpose agents provide. Agent frameworks infer authority conversationally, reconstruct accountability from logs, and produce silent errors: incorrect determinations that execute without any human review signal. We propose Cognitive Core: a governed decision substrate built from nine typed cognitive primitives (retrieve, classify, investigate, verify, challenge, reflect, deliberate, govern, generate), a four-tier governance model where human review is a condition of execution rather than a post-hoc check, a tamper-evident SHA-256 hash-chain audit ledger endogenous to computation, and a demand-driven delegation architecture supporting both declared and autonomously reasoned epistemic sequences.
+  We benchmark three systems on an 11-case balanced prior authorization appeal evaluation set. Cognitive Core achieves 91% accuracy against 55% (ReAct) and 45% (Plan-and-Solve). The governance result is more significant: CC produced zero silent errors while both baselines produced 5-6. We introduce governability -- how reliably a system knows when it should not act autonomously -- as a primary evaluation axis for institutional AI alongside accuracy. The baselines are implemented as prompts, representing the realistic deployment alternative to a governed framework. A configuration-driven domain model means deploying a new institutional decision domain requires YAML configuration, not engineering capacity.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js'></script>
+</body>
+</html>
