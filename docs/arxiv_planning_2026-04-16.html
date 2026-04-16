@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>planning - 2026-04-16</title>
+<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap' rel='stylesheet'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css'>
+<style>
+body {
+font-family: 'Roboto', sans-serif;
+background-color: #f5f7fa;
+padding: 20px;
+}
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.card-title {
+    font-weight: 700;
+}
+.card:hover {
+    transform: scale(1.02);
+    transition: 0.3s ease-in-out;
+}
+</style>
+</head>
+<body>
+<div class='container'>
+<h1 class='text-center my-4'><i class='fas fa-book'></i>planning - 2026-04-16</h1>
+<div class='row'>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2604.14151v1' target='_blank'>Visplot: A visibility plot and observation scheduling tool for astronomical observatories</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Emanuel Gafton, Illa R. Losada</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-04-15 17:59:59</h6>
+<p class='card-text'>We present Visplot, a free, open-source, web-based tool for hardware-aware visibility analysis and heuristic scheduling of both sidereal and non-sidereal astronomical observations. Visplot computes visibility windows as finite unions of disjoint intervals by intersecting user-defined constraints. This framework natively incorporates celestial parameters (airmass, moon distance, twilight), mechanical telescope boundaries (altitude and hour-angle limits), and custom temporal restrictions defined in UTC or Local Sidereal Time, allowing for a high degree of scheduling flexibility. The scheduling engine combines deterministic pre-allocation for mandatory targets with a multi-objective heuristic optimization of the remaining target pool, balancing scientific priority, target urgency, altitude, and telescope slew overhead. Originally developed to address an operational need for flexible and lightweight scheduling support at the Nordic Optical Telescope (NOT) in La Palma, Visplot has been in continuous use since 2016. Its nearly decade-long operational history, together with routine use by astronomers at multiple observatories worldwide, demonstrates its practical value in real-world observational workflows. Its client-side, zero-installation architecture facilitates real-time schedule refinement, making it particularly suited for time-domain triggers (e.g., GRB/GW alerts) and geographically distributed remote observing. A user survey indicates that the tool significantly reduces the cognitive overhead of nightly planning while ensuring that generated schedules remain strictly within the mechanical and operational limits of the telescope hardware. Visplot provides a robust, lightweight alternative to monolithic scheduling suites, supporting the practical needs of modern PI-led observatories.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2604.14140v1' target='_blank'>LongCoT: Benchmarking Long-Horizon Chain-of-Thought Reasoning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Sumeet Ramesh Motwani, Daniel Nichols, Charles London, Peggy Li, Fabio Pizzati, Acer Blake, Hasan Hammoud, Tavish McDonald, Akshat Naik, Alesia Ivanova, Vignesh Baskaran, Ivan Laptev, Ruben Glatt, Tal Ben-Nun, Philip Torr, Natasha Jaques, Ameya Prabhu, Brian Bartoldson, Bhavya Kailkhura, Christian Schroeder de Witt</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-04-15 17:58:05</h6>
+<p class='card-text'>As language models are increasingly deployed for complex autonomous tasks, their ability to reason accurately over longer horizons becomes critical. An essential component of this ability is planning and managing a long, complex chain-of-thought (CoT). We introduce LongCoT, a scalable benchmark of 2,500 expert-designed problems spanning chemistry, mathematics, computer science, chess, and logic to isolate and directly measure the long-horizon CoT reasoning capabilities of frontier models. Problems consist of a short input with a verifiable answer; solving them requires navigating a graph of interdependent steps that span tens to hundreds of thousands of reasoning tokens. Each local step is individually tractable for frontier models, so failures reflect long-horizon reasoning limitations. At release, the best models achieve <10% accuracy (GPT 5.2: 9.8%; Gemini 3 Pro: 6.1%) on LongCoT, revealing a substantial gap in current capabilities. Overall, LongCoT provides a rigorous measure of long-horizon reasoning, tracking the ability of frontier models to reason reliably over extended periods.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2604.14125v1' target='_blank'>HiVLA: A Visual-Grounded-Centric Hierarchical Embodied Manipulation System</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Tianshuo Yang, Guanyu Chen, Yutian Chen, Zhixuan Liang, Yitian Liu, Zanxin Chen, Chunpu Xu, Haotian Liang, Jiangmiao Pang, Yao Mu, Ping Luo</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-04-15 17:50:07</h6>
+<p class='card-text'>While end-to-end Vision-Language-Action (VLA) models offer a promising paradigm for robotic manipulation, fine-tuning them on narrow control data often compromises the profound reasoning capabilities inherited from their base Vision-Language Models (VLMs). To resolve this fundamental trade-off, we propose HiVLA, a visual-grounded-centric hierarchical framework that explicitly decouples high-level semantic planning from low-level motor control. In high-level part, a VLM planner first performs task decomposition and visual grounding to generate structured plans, comprising a subtask instruction and a precise target bounding box. Then, to translate this plan into physical actions, we introduce a flow-matching Diffusion Transformer (DiT) action expert in low-level part equipped with a novel cascaded cross-attention mechanism. This design sequentially fuses global context, high-resolution object-centric crops and skill semantics, enabling the DiT to focus purely on robust execution. Our decoupled architecture preserves the VLM's zero-shot reasoning while allowing independent improvement of both components. Extensive experiments in simulation and the real world demonstrate that HiVLA significantly outperforms state-of-the-art end-to-end baselines, particularly excelling in long-horizon skill composition and the fine-grained manipulation of small objects in cluttered scenes.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2604.14084v1' target='_blank'>TIP: Token Importance in On-Policy Distillation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yuanda Xu, Hejian Sang, Zhengze Zhou, Ran He, Zhipeng Wang, Alborz Geramifard</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-04-15 16:58:24</h6>
+<p class='card-text'>On-policy knowledge distillation (OPD) trains a student on its own rollouts under token-level supervision from a teacher. Not all token positions matter equally, but existing views of token importance are incomplete. We ask a direct question: which tokens carry the most useful learning signal in OPD? Our answer is that informative tokens come from two regions: positions with high student entropy, and positions with low student entropy plus high teacher--student divergence, where the student is overconfident and wrong.
+  Empirically, student entropy is a strong first-order proxy: retaining $50\%$ of tokens with entropy-based sampling matches or exceeds all-token training while reducing peak memory by up to $47\%$. But entropy alone misses a second important region. When we isolate low-entropy, high-divergence tokens, training on fewer than $10\%$ of all tokens nearly matches full-token baselines, showing that overconfident tokens carry dense corrective signal despite being nearly invisible to entropy-only rules.
+  We organize these findings with TIP (Token Importance in on-Policy distillation), a two-axis taxonomy over student entropy and teacher--student divergence, and give a theoretical explanation for why entropy is useful yet structurally incomplete. This view motivates type-aware token selection rules that combine uncertainty and disagreement. We validate this picture across three teacher--student pairs spanning Qwen3, Llama, and Qwen2.5 on MATH-500 and AIME 2024/2025, and on the DeepPlanning benchmark for long-horizon agentic planning, where Q3-only training on $<$$20\%$ of tokens surpasses full-token OPD. Our experiments are implemented by extending the OPD repository https://github.com/HJSang/OPSD_OnPolicyDistillation, which supports memory-efficient distillation of larger models under limited GPU budgets.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2604.14026v1' target='_blank'>Scale-Invariant Sampling in Multi-Arm Bandit Motion Planning for Object Extraction</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Servet B. Bayraktar, Andreas Orthey, Marc Toussaint</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-04-15 16:07:22</h6>
+<p class='card-text'>Object extraction tasks often occur in disassembly problems, where bolts, screws, or pins have to be removed from tight, narrow spaces. In such problems, the distance to the environment is often on the millimeter scale. Sampling-based planners can solve such problems and provide completeness guarantees. However, sampling becomes a bottleneck, since almost all motions will result in collisions with the environment. To overcome this problem, we propose a novel scale-invariant sampling strategy which explores the configuration space using a grow-shrink search to find useful, high-entropy sampling scales. Once a useful sampling scale has been found, our framework exploits this scale by using a principal components analysis (PCA) to find useful directions for object extraction. We embed this sampler into a multi-arm bandit rapidly-exploring random tree (MAB-RRT) planner and test it on eight challenging 3D object extraction scenarios, involving bolts, gears, rods, pins, and sockets. To evaluate our framework, we compare it with classical sampling strategies like uniform sampling, obstacle-based sampling, and narrow-passage sampling, and with modern strategies like mate vectors, physics-based planning, and disassembly breadth first search. Our experiments show that scale-invariant sampling improves success rate by one order of magnitude on 7 out of 8 scenarios. This demonstrates that scale-invariant sampling is an important concept for general purpose object extraction in disassembly tasks.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2604.13996v1' target='_blank'>Acts of Configuration: Rethinking Provenance, Temporality and Legitimacy in Post-Mortem Agents</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Kellie Yu Hui Sim, Pin Sym Foong, Darryl Lim, John-Henry Lim, Kenny Tsu Wei Choo</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-04-15 15:41:52</h6>
+<p class='card-text'>Work on persona-persistent post-mortem agents typically frames design around a life/death binary. This framing neglects a consequential yet under-theorised condition: when individuals remain alive but have impaired decisional capacity. Drawing on a multi-phase workshop in which participants trained and reflected on an AI agent for Advance Care Planning, we examined how people reason about agentic delegation post-capacity loss. Initially, participants favoured bounded agents grounded in first-party authorship and representational fidelity over autonomous or evolving stand-ins. However, temporality introduced novel ideas like adjacent use driven by persona persistence over functional expansion: agents should evolve while users retain capacity, remain static once capacity is lost, but somehow inform adjacent post-mortem uses. We discuss the implications of these findings and propose that the configuration of agents for post-capacity use reshapes our understanding of provenance, temporality, and legitimacy for post-mortem agents.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2604.13957v1' target='_blank'>Block-Based Pathfinding: A Minecraft System for Visualizing Graph Algorithms</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Luca-Stefan Pirvu, Bogdan-Alexandru Maciuca, Andrei-Ciprian Rabu, Adrian-Marius Dumitran</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-04-15 15:07:16</h6>
+<p class='card-text'>Graph theory is a cornerstone of Computer Science education, yet entry-level students often struggle to map abstract node-edge relationships to practical applications. This paper presents the design and architecture of a Minecraft-based educational tool specifically built to visualize graph traversal and shortest-path algorithms. We propose a three-layer system: (1) a Grid Traversal module where terrain types (e.g., soul sand, ice) represent edge weights, allowing for the gamified study of shortest path algorithms; (2) a "Sky Graph" module for interactive 3D manipulation of both directed and undirected graphs; and (3) lessons and quizzes available through books. The system grounds its design in Constructionist learning theory, transitioning students from passive observers to active protagonists who physically manipulate algorithmic behavior. We additionally present a planned empirical evaluation using NASA-TLX and in-game telemetry to validate the system's pedagogical efficacy.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2604.13946v1' target='_blank'>CollabCoder: Plan-Code Co-Evolution via Collaborative Decision-Making for Efficient Code Generation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Duy Tung Doan, Quang Huy Phung, Dzung Nguyen, Khac-Hoai Nam Bui</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-04-15 14:58:26</h6>
+<p class='card-text'>Automated code generation remains a persistent challenge in software engineering, as conventional multi-agent frameworks are often constrained by static planning, isolated execution, high computational overhead, and limited adaptability to complex tasks. This paper introduces CollabCoder, a novel Plan-Code Co-Evolution framework that improves code generation through dynamic multi-agent collaboration. The core idea is to design a collaborative decision-making process between the plan module and the code module to decide which module should be executed for the debugging process. Extensive experiments on widely used benchmarks demonstrate that CollabCoder consistently improves code quality and robustness across tasks. Importantly, CollabCoder achieves performance comparable to or exceeding current state-of-the-art methods while reducing computational overhead, with efficiency gains becoming more pronounced as benchmark difficulty increases. On the more challenging LiveCodeBench and xCodeEval benchmarks, our approach improves performance by 11-20% over strong baselines while reducing the number of API calls by an average of 4-10 per execution.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2604.13942v1' target='_blank'>Goal2Skill: Long-Horizon Manipulation with Adaptive Planning and Reflection</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Zhen Liu, Xinyu Ning, Zhe Hu, Xinxin Xie, Weize Li, Zhipeng Tang, Chongyu Wang, Zejun Yang, Hanlin Wang, Yitong Liu, Zhongzhu Pu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-04-15 14:53:09</h6>
+<p class='card-text'>Recent vision-language-action (VLA) systems have demonstrated strong capabilities in embodied manipulation. However, most existing VLA policies rely on limited observation windows and end-to-end action prediction, which makes them brittle in long-horizon, memory-dependent tasks with partial observability, occlusions, and multi-stage dependencies. Such tasks require not only precise visuomotor control, but also persistent memory, adaptive task decomposition, and explicit recovery from execution failures. To address these limitations, we propose a dual-system framework for long-horizon embodied manipulation.
+  Our framework explicitly separates high-level semantic reasoning from low-level motor execution. A high-level planner, implemented as a VLM-based agentic module, maintains structured task memory and performs goal decomposition, outcome verification, and error-driven correction. A low-level executor, instantiated as a VLA-based visuomotor controller, carries out each sub-task through diffusion-based action generation conditioned on geometry-preserving filtered observations. Together, the two systems form a closed loop between planning and execution, enabling memory-aware reasoning, adaptive replanning, and robust online recovery. Experiments on representative RMBench tasks show that the proposed framework substantially outperforms representative baselines, achieving a 32.4% average success rate compared with 9.8% for the strongest baseline. Ablation studies further confirm the importance of structured memory and closed-loop recovery for long-horizon manipulation.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2604.13926v1' target='_blank'>Importance of Aggregated DER Installed Capacity in Distribution Networks</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Alexandre M. V. Gouveia, Md. Umar Hashmi, Reinhilde D'hulst, Dirk Van Hertem</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-04-15 14:34:30</h6>
+<p class='card-text'>The increasing penetration of Distributed Energy Resources (DERs), particularly electric vehicles, heat pumps, and photovoltaic systems, is fundamentally changing power flows in Low-Voltage (LV) distribution networks. Despite this transition, Distribution System Operators (DSOs) often lack reliable and up-to-date knowledge of the DER capacity connected downstream of LV substations. Limited observability, incomplete topology information, and restricted access to customer-level data make it difficult to maintain accurate DER registries, creating uncertainty in both operational and planning processes. This paper presents aggregated DER installed capacity, estimated at LV aggregation points, as a practical and scalable approach to improving DER awareness without requiring customer-level monitoring. We define the problem of estimating DER installed capacities from commonly available substation and feeder measurements. By linking these estimates to operational and planning needs, we discuss how knowledge of aggregated DER installed capacity enhances DER-aware forecasting, congestion management, flexibility quantification, hosting capacity assessment, and monitoring of DER adoption.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2604.13861v1' target='_blank'>Simulation-Based Optimisation of Batting Order and Bowling Plans in T20 Cricket</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Tinniam V Ganesh</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-04-15 13:28:45</h6>
+<p class='card-text'>This paper develops a unified Markov Decision Process (MDP) framework for optimising two recurring in-match decisions in T20 cricket namely batting order selection and bowling plan assignment, directly in terms of win and defend probability rather than expected runs. A three-phase player profile engine (Powerplay, Middle, Death) with James-Stein shrinkage is estimated from 1,161 IPL ball-by-ball records (2008-2025). Win/defend probabilities are evaluated by vectorised Monte Carlo simulation over N = 50,000 innings trajectories. Batting orders are searched by exhaustive enumeration. Bowling plans are computed by simulated annealing over the remaining quota with the constraint that the same bowler cannot bowl consecutive overs. Applied to two 2026 IPL matches, the optimal batting order improves Mumbai Indians' win probability by 4.1 percentage points (52.4% to 56.5%), and the optimal Gujarat Titans bowling plan improves defend probability by 5.2 percentage points (39.1% to 44.3%). In both cases the observed sub-optimality is consistent with phase-agnostic deployment in decisions that appear reasonable by aggregate metrics but are exposed as costly when phase-specific profiles are applied.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2604.13853v1' target='_blank'>Mosaic: An Extensible Framework for Composing Rule-Based and Learned Motion Planners</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Nick Le Large, Marlon Steiner, Lingguang Wang, Willi Poh, Jan-Hendrik Pauls, Ömer Şahin Taş, Christoph Stiller</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-04-15 13:23:47</h6>
+<p class='card-text'>Safe and explainable motion planning remains a central challenge in autonomous driving. While rule-based planners offer predictable and explainable behavior, they often fail to grasp the complexity and uncertainty of real-world traffic. Conversely, learned planners exhibit strong adaptability but suffer from reduced transparency and occasional safety violations. We introduce Mosaic, an extensible framework for structured decision-making that integrates both paradigms through arbitration graphs. By decoupling trajectory verification and scoring from the generation of trajectories by individual planners, every decision becomes transparent and traceable. Trajectory verification at a higher level introduces redundancy between the planners, limiting emergency braking to the rare case where all planners fail to produce a valid trajectory. Through unified scoring and optimal trajectory selection, rule-based and learned planners with complementary strengths and weaknesses can be combined to yield the best of both worlds. In experimental evaluation on nuPlan, Mosaic achieves 95.48 CLS-NR and 93.98 CLS-R on the Val14 closed-loop benchmark, setting a new state of the art, while reducing at-fault collisions by 30% compared to either planner in isolation. On the interPlan benchmark, focused on highly interactive and difficult scenarios, Mosaic scores 54.30 CLS-R, outperforming its best constituent planner by 23.3% - all without retraining or requiring additional data. The code is available at github.com/KIT-MRT/mosaic.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2604.13824v1' target='_blank'>Beyond State Consistency: Behavior Consistency in Text-Based World Models</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Youling Huang, Guanqiao Chen, Junchi Yao, Lu Wang, Fangkai Yang, Chao Du, ChenZhuo Zhao, Pu Zhao, Qingwei Lin, Saravan Rajmohan, Dongmei Zhang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-04-15 12:56:45</h6>
+<p class='card-text'>World models have been emerging as critical components for assessing the consequences of actions generated by interactive agents in online planning and offline evaluation. In text-based environments, world models are typically evaluated and trained with single-step metrics such as Exact Match, aiming to improve the similarity between predicted and real-world states, but such metrics have been shown to be insufficient for capturing actual agent behavior. To address this issue, we introduce a new behavior-aligned training paradigm aimed at improving the functional consistency between the world model and the real environment. This paradigm focuses on optimizing a tractable step-level metric named Behavior Consistency Reward (BehR), which measures how much the likelihood of a logged next action changes between the real state and the world-model-predicted state under a frozen Reference Agent. Experiments on WebShop and TextWorld show that BehR-based training improves long-term alignment in several settings, with the clearest gains in WebShop and less movement in near-ceiling regimes, while preserving or improving single-step prediction quality in three of four settings. World models trained with BehR also achieve lower false positives in offline surrogate evaluation and show modest but encouraging gains in inference-time lookahead planning.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2604.13814v1' target='_blank'>Cognitive Offloading in Agile Teams: How Artificial Intelligence Reshapes Risk Assessment and Planning Quality</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Adriana Caraeni, Alexander Shick, Andrew Lan</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-04-15 12:48:29</h6>
+<p class='card-text'>Recent advances in artificial intelligence (AI) have shown promise in automating key aspects of Agile project management, yet their impact on team cognition remains underexplored. In this work, we investigate cognitive offloading in Agile sprint planning by conducting a controlled, three-condition experiment comparing AI-only, human-only, and hybrid planning models on a live client deliverable at a mid-sized digital agency. Using quantitative metrics -- including estimation accuracy, rework rates, and scope change recovery time -- alongside qualitative indicators of planning robustness, we evaluate each model's effectiveness beyond raw efficiency. We find that while AI-only planning minimizes time and cost, it significantly degrades risk capture rates and increases rework due to unstated assumptions, whereas human-only planning excels at adaptability but incurs substantial overhead. Drawing on these findings, we propose a theoretical framework for hybrid AI-human sprint planning that assigns algorithmic tools to estimation and backlog formatting while mandating human deliberation for risk assessment and ambiguity resolution. Our results challenge the assumption that efficiency equates to effectiveness, offering actionable governance strategies for organizations seeking to augment rather than erode team cognition.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2604.13812v1' target='_blank'>AlphaCNOT: Learning CNOT Minimization with Model-Based Planning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jacopo Cossio, Daniele Lizzio Bosco, Riccardo Romanello, Giuseppe Serra, Carla Piazza</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-04-15 12:46:40</h6>
+<p class='card-text'>Quantum circuit optimization is a central task in Quantum Computing, as current Noisy Intermediate Scale Quantum devices suffer from error propagation that often scales with the number of operations. Among quantum operations, the CNOT gate is of fundamental importance, being the only 2-qubit gate in the universal Clifford+T set. The problem of CNOT gates minimization has been addressed by heuristic algorithms such as the well-known Patel-Markov-Hayes (PMH) for linear reversible synthesis (i.e., CNOT minimization with no topological constraints), and more recently by Reinforcement Learning (RL) based strategies in the more complex case of topology-aware synthesis, where each CNOT can act on a subset of all qubits pairs. In this work we introduce AlphaCNOT, a RL framework based on Monte Carlo Tree Search (MCTS) that address effectively the CNOT minimization problem by modeling it as a planning problem. In contrast to other RL- based solution, our method is model-based, i.e. it can leverage lookahead search to evaluate future trajectories, thus finding more efficient sequences of CNOTs. Our method achieves a reduction of up to 32% in CNOT gate count compared to PMH baseline on linear reversible synthesis, while in the constraint version we report a consistent gate count reduction on a variety of topologies with up to 8 qubits, with respect to state-of-the-art RL-based solutions. Our results suggest the combination of RL with search-based strategies can be applied to different circuit optimization tasks, such as Clifford minimization, thus fostering the transition toward the "quantum utility" era.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2604.13800v1' target='_blank'>EmbodiedClaw: Conversational Workflow Execution for Embodied AI Development</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Xueyang Zhou, Yihan Sun, Xijie Gong, Guiyao Tie, Pan Zhou, Lichao Sun, Yongchao Chen</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-04-15 12:36:59</h6>
+<p class='card-text'>Embodied AI research is increasingly moving beyond single-task, single-environment policy learning toward multi-task, multi-scene, and multi-model settings. This shift substantially increases the engineering overhead and development time required for stages such as evaluation environment construction, trajectory collection, model training, and evaluation. To address this challenge, we propose a new paradigm for embodied AI development in which users express goals and constraints through conversation, and the system automatically plans and executes the development workflow. We instantiate this paradigm with EmbodiedClaw, a conversational agent that turns high-frequency, high-cost embodied research activities, including environment creation and revision, benchmark transformation, trajectory synthesis, model evaluation, and asset expansion, into executable skills. Experiments on end-to-end workflow tasks, capability-specific evaluations, human researcher studies, and ablations show that EmbodiedClaw reduces manual engineering effort while improving executability, consistency, and reproducibility. These results suggest a shift from manual toolchains to conversationally executable workflows for embodied AI development.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2604.13796v1' target='_blank'>Driving Engagement in Daily Fantasy Sports with a Scalable and Urgency-Aware Ranking Engine</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Unmesh Padalkar</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-04-15 12:34:20</h6>
+<p class='card-text'>In daily fantasy sports (DFS), match participation is highly time-sensitive. Users must act within a narrow window before a game begins, making match recommendation a time-critical task to prevent missed engagement and revenue loss. Existing recommender systems, typically designed for static item catalogs, are ill-equipped to handle the hard temporal deadlines inherent in these live events. To address this, we designed and deployed a recommendation engine using the Deep Interest Network (DIN) architecture. We adapt the DIN architecture by injecting temporality at two levels: first, through real-time urgency features for each candidate match (e.g., time-to-round-lock), and second, via temporal positional encodings that represent the time-gap between each historical interaction and the current recommendation request, allowing the model to dynamically weigh the recency of past actions. This approach, combined with a listwise neuralNDCG loss function, produces highly relevant and urgency-aware rankings. To support this at industrial scale, we developed a multi-node, multi-GPU training architecture on Ray and PyTorch. Our system, validated on a massive industrial dataset with over 650k users and over 100B interactions, achieves a +9% lift in nDCG@1 over a heavily optimized LightGBM baseline with handcrafted features. The strong offline performance of this model establishes its viability as a core component for our planned on-device (edge) recommendation system, where on-line A/B testing will be conducted.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2604.13709v1' target='_blank'>Adaptive Sample Size Simulations with R package adsasi</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Skerdi Haviari</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-04-15 10:37:14</h6>
+<p class='card-text'>Planning empirical experiments such as clinical trials or A/B tests requires sample size determination, which in many interesting cases has no closed-form solution (e.g. factorial or adaptive designs). adsasi is a new R package that enables simulations-first sample size calculations for any trial that can be simulated in short compute time. First, the user specifies as a function that takes a sample size as argument, simulates the experiment, and returns a boolean for success/failure. Then, adsasi functions adsasi_0d and adsasi_1d iteratively call it on different sample sizes and progressively home in on the one with nominal success rate (power), assuming that increasing sample size increases power. adsasi_1d can also draw, purely empirically, the relationship between a design parameter and sample size. The implementation uses a modified probit regression (with success/failure as the dependent variable), informed by simulations conducted around the target size, and provides standard errors at each stage using the Cramér-Rao bound derived from a custom analytical Hessian matrix. Simple examples are first presented, yielding results within Monte Carlo variance of their closed-form expressions, then intractable ones (including bootstrapping from an existing medical cohort). adsasi will hopefully facilitate the funding and conduct of interesting, highly complex experimental designs by making their sizing straightforward.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2604.13708v1' target='_blank'>Homotopy-Guided Potential Games for Congestion-Aware Navigation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Mohammed Irshadh Ismaaeel Sathyamangalam Imran, Lasse Peters, Michael Khayyat, Stefano Arrigoni, Francesco Braghin, Laura Ferranti</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-04-15 10:37:10</h6>
+<p class='card-text'>We address the multi-agent motion planning problem where interactions, collisions, and congestion co-exist. Conventional game-theoretic planners capture interactions among agents but often converge to conservative, congested equilibria. Homotopy planners, on the other hand, can explore topologically distinct paths, but lack mechanisms to account for the interdependence of agents' future actions. We propose a unified framework that leverages homotopy classes as structured strategy sets within a receding-horizon setup. At each planning stage, a deterministic homotopy planner generates topologically distinct paths for each agent, conditioned on the joint configuration. To avoid intractable growth of candidate paths, we propose a simple heuristic filtering step that selects a top-$K$ subset of the most suitable congestion-free joint strategies to ensure computational tractability. These serve as initializations for a potential game that enforces homotopy-consistent constraints and yields a generalized open-loop Nash equilibrium (OLNE), with penalties discouraging abrupt strategy shifts in a receding-horizon setting. Simulations with three agents demonstrate improved efficiency (faster completion) and enhanced safety (greater inter-agent clearance, leading to reduced congestion) compared to a local baseline and NH-ORCA that do not reason about homotopies. Hardware trials with two robots and one human demonstrate robustness to irrational behaviors, where our method adapts by switching to alternative feasible equilibria while the baseline game fails.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2604.13542v1' target='_blank'>Self-adaptive Multi-Access Edge Architectures: A Robotics Case</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Mahyar T Moghaddam, Joakim Leed, Anders Frandsen</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-04-15 06:45:54</h6>
+<p class='card-text'>The growth of compute-intensive AI tasks highlights the need to mitigate the processing costs and improve performance and energy efficiency. This necessitates the integration of intelligent agents as architectural adaptation supervisors tasked with adaptive scaling of the infrastructure and efficient offloading of computation within the continuum. This paper presents a self-adaptation approach for an efficient computing system of a mixed human-robot environment. The computation task is associated with a Neural Network algorithm that leverages sensory data to predict human mobility behaviors, to enhance mobile robots' proactive path planning, and ensure human safety. To streamline neural network processing, we built a distributed edge offloading system with heterogeneous processing units, orchestrated by Kubernetes. By monitoring response times and power consumption, the MAPE-K-based adaptation supervisor makes informed decisions on scaling and offloading. Results show notable improvements in service quality over traditional setups, demonstrating the effectiveness of the proposed approach for AI-driven systems.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2604.13534v1' target='_blank'>Who Decides in AI-Mediated Learning? The Agency Allocation Framework</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Conrad Borchers, Olga Viberg, René F. Kizilcec</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-04-15 06:29:03</h6>
+<p class='card-text'>As AI-mediated learning systems increasingly shape how learners plan, decide, and progress through education, learner agency is becoming both more consequential and harder to conceptualize at scale. Existing research often treats agency as a proxy for engagement and self-regulation, leaving unclear who actually holds decision-making authority in large-scale, automated learning environments. This paper reframes learner agency as the allocation of decision authority across learners, educators, institutions, and AI systems. We introduce the Agency Allocation Framework (AAF) for analyzing how decisions are distributed, how choices are architected, what evidence supports them, and over what time horizons their consequences unfold. Drawing on a focused review of Learning@Scale literature and an illustrative tutoring-system example, we identify four recurring challenges for studying learner agency at scale: (1) conceptual ambiguity, (2) reliance on behavioral proxies, (3) trade-offs between efficiency and learner control, and (4) the redistribution of agency through AI-mediated systems. Rather than advocating more or less automation, the AAF supports systematic analysis of when AI scaffolds learners' capacity to act and when it substitutes for it. By making decision authority explicit, the framework provides researchers and designers with analytic tools for studying, comparing, and evaluating agency-preserving learning systems in increasingly automated educational contexts.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2604.13533v1' target='_blank'>Evolvable Embodied Agent for Robotic Manipulation via Long Short-Term Reflection and Optimization</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jianzong Wang, Botao Zhao, Yayun He, Junqing Peng, Xulong Zhang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-04-15 06:29:02</h6>
+<p class='card-text'>Achieving general-purpose robotics requires empowering robots to adapt and evolve based on their environment and feedback. Traditional methods face limitations such as extensive training requirements, difficulties in cross-task generalization, and lack of interpretability. Prompt learning offers new opportunities for self-evolving robots without extensive training, but simply reflecting on past experiences.However, extracting meaningful insights from task successes and failures remains a challenge. To this end, we propose the evolvable embodied agent (EEAgent) framework, which leverages large vision-language models (VLMs) for better environmental interpretation and policy planning. To enhance reflection on past experiences, we propose a long short-term reflective optimization (LSTRO) mechanism that dynamically refines prompts based on both past experiences and newly learned lessons, facilitating continuous self-evolution, thereby enhancing overall task success rates. Evaluations on six VIMA-Bench tasks reveal that our approach sets a new state-of-the-art, notably outperforming baselines in complex scenarios.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2604.13531v1' target='_blank'>RiskWebWorld: A Realistic Interactive Benchmark for GUI Agents in E-commerce Risk Management</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Renqi Chen, Zeyin Tao, Jianming Guo, Jing Wang, Zezhou Xu, Jingzhe Zhu, Qingqing Sun, Tianyi Zhang, Shuai Chen</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-04-15 06:27:49</h6>
+<p class='card-text'>Graphical User Interface (GUI) agents show strong capabilities for automating web tasks, but existing interactive benchmarks primarily target benign, predictable consumer environments. Their effectiveness in high-stakes, investigative domains such as authentic e-commerce risk management remains underexplored. To bridge this gap, we present RiskWebWorld, the first highly realistic interactive benchmark for evaluating GUI agents in e-commerce risk management. RiskWebWorld features 1,513 tasks sourced from production risk-control pipelines across 8 core domains, and captures the authentic challenges of risk operations on uncooperative websites, partially environmental hijackments. To support scalable evaluation and agentic reinforcement learning (RL), we further build a Gymnasium-compliant infrastructure that decouples policy planning from environment mechanics. Our evaluation across diverse models reveals a dramatic capability gap: top-tier generalist models achieve 49.1% success, while specialized open-weights GUI models lag at near-total failure. This highlights that foundation model scale currently matters more than zero-shot interface grounding in long-horizon professional tasks. We also demonstrate the viability of our infrastructure through agentic RL, which improves open-source models by 16.2%. These results position RiskWebWorld as a practical testbed for developing robust digital workers.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2604.13517v1' target='_blank'>Representation over Routing: Overcoming Surrogate Hacking in Multi-Timescale PPO</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jing Sun</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-04-15 06:03:07</h6>
+<p class='card-text'>Temporal credit assignment in reinforcement learning has long been a central challenge. Inspired by the multi-timescale encoding of the dopamine system in neurobiology, recent research has sought to introduce multiple discount factors into Actor-Critic architectures, such as Proximal Policy Optimization (PPO), to balance short-term responses with long-term planning. However, this paper reveals that blindly fusing multi-timescale signals in complex delayed-reward tasks can lead to severe algorithmic pathologies. We systematically demonstrate that exposing a temporal attention routing mechanism to policy gradients results in surrogate objective hacking, while adopting gradient-free uncertainty weighting triggers irreversible myopic degeneration, a phenomenon we term the Paradox of Temporal Uncertainty. To address these issues, we propose a Target Decoupling architecture: on the Critic side, we retain multi-timescale predictions to enforce auxiliary representation learning, while on the Actor side, we strictly isolate short-term signals and update the policy based solely on long-term advantages. Rigorous empirical evaluations across multiple independent random seeds in the LunarLander-v2 environment demonstrate that our proposed architecture achieves statistically significant performance improvements. Without relying on hyperparameter hacking, it consistently surpasses the ''Environment Solved'' threshold with minimal variance, completely eliminates policy collapse, and escapes the hovering local optima that trap single-timescale baselines.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2604.13487v1' target='_blank'>Site Quality Analysis for an Indian Submillimeter Telescope: A Reanalysis-Based Approach</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Tanmay Singh, Mayuri Sathyanarayana Rao, Ritoban Basu Thakur</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-04-15 05:19:16</h6>
+<p class='card-text'>The Himalayan plateau region of Ladakh, India, is a potential host for a science-class submillimeter observatory, building on existing astronomical infrastructure near Hanle and Merak. Using the fifth-generation European Centre for Medium-Range Weather Forecasts (ECMWF) Reanalysis (ERA5) data, we analyze precipitable water vapor (PWV) at monthly resolution over 184 months from January 2010 to April 2025, map PWV statistics across Ladakh, and identify candidate regions that reach PWV $\leq 1$ mm. For promising locations, we compute atmospheric transmittance and the corresponding atmospheric photon noise using the am (Atmospheric Model) radiative transfer code; we present transmittance and brightness temperature estimates over 10--1000 GHz and compare the inferred performance to sites hosting current or planned submillimeter facilities worldwide. We find Ladakh to be favorable for submillimeter observations, with multiple ERA5 grid cells reaching PWV $\leq 1$ mm. Within ERA5's spatial resolution, two regions emerge as particularly promising: Site A ($\approx 34.25^\circ$N, $78.75^\circ$E) and Site B ($\approx 32.50^\circ$N, $79.00^\circ$E), which satisfy PWV $\leq 1$ mm for about 23% and 19% of the study duration, respectively, compared to about 5% and 8% for the Hanle and Merak grid cells. These results motivate targeted in situ radiometer measurements for final site selection.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2604.13462v1' target='_blank'>Learning from Change: Predictive Models for Incident Prevention in a Regulated IT Environment</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Eileen Kapel, Jan Lennartz, Luis Cruz, Diomidis Spinellis, Arie van Deursen</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-04-15 04:33:46</h6>
+<p class='card-text'>Effective IT change management is important for businesses that depend on software and services, particularly in highly regulated sectors such as finance, where operational reliability, auditability, and explainability are essential. A significant portion of IT incidents are caused by changes, making it important to identify high-risk changes before deployment. This study presents a predictive incident risk scoring approach at a large international bank. The approach supports engineers during the assessment and planning phases of change deployments by predicting the potential of inducing incidents. To satisfy regulatory constraints, we built the model with auditability and explainability in mind, applying SHAP values to provide feature-level insights and ensure decisions are traceable and transparent. Using a one-year real-world dataset, we compare the existing rule-based process with three machine learning models: HGBC, LightGBM, and XGBoost. LightGBM achieved the best performance, particularly when enriched with aggregated team metrics that capture organisational context. Our results show that data-driven, interpretable models can outperform rule-based approaches while meeting compliance needs, enabling proactive risk mitigation and more reliable IT operations.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2604.13452v1' target='_blank'>CANVAS: Continuity-Aware Narratives via Visual Agentic Storyboarding</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Ishani Mondal, Yiwen Song, Mihir Parmar, Palash Goyal, Jordan Boyd-Graber, Tomas Pfister, Yale Song</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-04-15 04:03:47</h6>
+<p class='card-text'>Long-form visual storytelling requires maintaining continuity across shots, including consistent characters, stable environments, and smooth scene transitions. While existing generative models can produce strong individual frames, they fail to preserve such continuity, leading to appearance changes, inconsistent backgrounds, and abrupt scene shifts. We introduce CANVAS (Continuity-Aware Narratives via Visual Agentic Storyboarding), a multi-agent framework that explicitly plans visual continuity in multi-shot narratives. CANVAS enforces coherence through character continuity, persistent background anchors, and location-aware scene planning for smooth transitions within the same setting We evaluate CANVAS on two storyboard generation benchmarks ST-BENCH and ViStoryBench and introduce a new challenging benchmark HardContinuityBench for long-range narrative consistency. CANVAS consistently outperforms the best-performing baseline, improving background continuity by 21.6%, character consistency by 9.6% and props consistency by 7.6%.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2604.13441v1' target='_blank'>Robust Energy-Aware Routing for Air-Ground Cooperative Multi-UAV Delivery in Wind-Uncertain Environments</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Tianshun Li, Hongliang Lu, Yanggang Sheng, Zhongzhen Wang, Haoang Li, Xinhu Zheng</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-04-15 03:43:18</h6>
+<p class='card-text'>Ensuring energy feasibility under wind uncertainty is critical for the safety and reliability of UAV delivery missions. In realistic truck-drone logistics systems, UAVs must deliver parcels and safely return under time-varying wind conditions that are only partially observable during flight. However, most existing routing approaches assume static or deterministic energy models, making them unreliable in dynamic wind environments. We propose Battery-Efficient Routing (BER), an online risk-sensitive planning framework for wind-sensitive truck-assisted UAV delivery. The problem is formulated as routing on a time dependent energy graph whose edge costs evolve according to wind-induced aerodynamic effects. BER continuously evaluates return feasibility while balancing instantaneous energy expenditure and uncertainty-aware risk. The approach is embedded in a hierarchical aerial-ground delivery architecture that combines task allocation, routing, and decentralized trajectory execution. Extensive simulations on synthetic ER graphs generated in Unreal Engine environments and quasi-real wind logs demonstrate that BER significantly improves mission success rates and reduces wind-induced failures compared with static and greedy baselines. These results highlight the importance of integrating real-time energy budgeting and environmental awareness for UAV delivery planning under dynamic wind conditions.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2604.13397v1' target='_blank'>A Multimodal Clinically Informed Coarse-to-Fine Framework for Longitudinal CT Registration in Proton Therapy</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Caiwen Jiang, Yuzhen Ding, Mi Jia, Samir H. Patel, Terence T. Sio, Jonathan B. Ashman, Lisa A. McGee, Jean-Claude M. Rwigema, William G. Rule, Sameer R. Keole, Sujay A. Vora, William W. Wong, Nathan Y. Yu, Michele Y. Halyard, Steven E. Schild, Dinggang Shen, Wei Liu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-04-15 01:54:14</h6>
+<p class='card-text'>Proton therapy offers superior organ-at-risk sparing but is highly sensitive to anatomical changes, making accurate deformable image registration (DIR) across longitudinal CT scans essential. Conventional DIR methods are often too slow for emerging online adaptive workflows, while existing deep learning-based approaches are primarily designed for generic benchmarks and underutilize clinically relevant information beyond images. To address this gap, we propose a clinically scalable coarse-to-fine deformable registration framework that integrates multimodal information from the proton radiotherapy workflow to accommodate diverse clinical scenarios. The model employs dual CNN-based encoders for hierarchical feature extraction and a transformer-based decoder to progressively refine deformation fields. Beyond CT intensities, clinically critical priors, including target and organ-at-risk contours, dose distributions, and treatment planning text, are incorporated through anatomy- and risk-guided attention, text-conditioned feature modulation, and foreground-aware optimization, enabling anatomically focused and clinically informed deformation estimation. We evaluate the proposed framework on a large-scale proton therapy DIR dataset comprising 1,222 paired planning and repeat CT scans across multiple anatomical regions and disease types. Extensive experiments demonstrate consistent improvements over state-of-the-art methods, enabling fast and robust clinically meaningful registration.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2604.13367v1' target='_blank'>A 3D SAM-Based Progressive Prompting Framework for Multi-Task Segmentation of Radiotherapy-induced Normal Tissue Injuries in Limited-Data Settings</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Caiwen Jiang, Lei Zeng, Wei Liu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-04-15 00:22:23</h6>
+<p class='card-text'>Radiotherapy-induced normal tissue injury is a clinically important complication, and accurate segmentation of injury regions from medical images could facilitate disease assessment, treatment planning, and longitudinal monitoring. However, automatic segmentation of these lesions remains largely unexplored because of limited voxel-level annotations and substantial heterogeneity across injury types, lesion size, and imaging modality. To address this gap, we curate a dedicated head-and-neck radiotherapy-induced normal tissue injury dataset covering three manifestations: osteoradionecrosis (ORN), cerebral edema (CE), and cerebral radiation necrosis (CRN). We further propose a 3D SAM-based progressive prompting framework for multi-task segmentation in limited-data settings. The framework progressively incorporates three complementary prompts: text prompts for task-aware adaptation, dose-guided box prompts for coarse localization, and click prompts for iterative refinement. A small-target focus loss is introduced to improve local prediction and boundary delineation for small and sparse lesions. Experiments on ORN, CE, and CRN demonstrate that the proposed method achieves reliable segmentation performance across diverse injury types and outperforms state-of-the-art methods.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js'></script>
+</body>
+</html>
