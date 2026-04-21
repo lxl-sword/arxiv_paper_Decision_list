@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>planning - 2026-04-21</title>
+<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap' rel='stylesheet'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css'>
+<style>
+body {
+font-family: 'Roboto', sans-serif;
+background-color: #f5f7fa;
+padding: 20px;
+}
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.card-title {
+    font-weight: 700;
+}
+.card:hover {
+    transform: scale(1.02);
+    transition: 0.3s ease-in-out;
+}
+</style>
+</head>
+<body>
+<div class='container'>
+<h1 class='text-center my-4'><i class='fas fa-book'></i>planning - 2026-04-21</h1>
+<div class='row'>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2604.18500v1' target='_blank'>QRAFTI: An Agentic Framework for Empirical Research in Quantitative Finance</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Terence Lim, Kumar Muthuraman, Michael Sury</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-04-20 16:52:22</h6>
+<p class='card-text'>We introduce a multi-agent framework intended to emulate parts of a quantitative research team and support equity factor research on large financial panel datasets. QRAFTI integrates a research toolkit for panel data with MCP servers that expose data access, factor construction, and custom coding operations as callable tools. It can help replicate established factors, formulate and test new signals, and generate standardized research reports accompanied by narrative analysis and computational traces. On multi-step empirical tasks, using chained tool calls and reflection-based planning may offer better performance and explainability than dynamic code generation alone.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2604.18486v1' target='_blank'>OneVL: One-Step Latent Reasoning and Planning with Vision-Language Explanation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jinghui Lu, Jiayi Guan, Zhijian Huang, Jinlong Li, Guang Li, Lingdong Kong, Yingyan Li, Han Wang, Shaoqing Xu, Yuechen Luo, Fang Li, Chenxu Dang, Junli Wang, Tao Xu, Jing Wu, Jianhua Wu, Xiaoshuai Hao, Wen Zhang, Tianyi Jiang, Lingfeng Zhang, Lei Zhou, Yingbo Tang, Jie Wang, Yinfeng Gao, Xizhou Bu, Haochen Tian, Yihang Qiu, Feiyang Jia, Lin Liu, Yigu Ge, Hanbing Li, Yuannan Shen, Jianwei Cui, Hongwei Xie, Bing Wang, Haiyang Sun, Jingwei Zhao, Jiahui Huang, Pei Liu, Zeyu Zhu, Yuncheng Jiang, Zibin Guo, Chuhong Gong, Hanchao Leng, Kun Ma, Naiyang Wang, Guang Chen, Kuiyuan Yang, Hangjun Ye, Long Chen</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-04-20 16:37:22</h6>
+<p class='card-text'>Chain-of-Thought (CoT) reasoning has become a powerful driver of trajectory prediction in VLA-based autonomous driving, yet its autoregressive nature imposes a latency cost that is prohibitive for real-time deployment. Latent CoT methods attempt to close this gap by compressing reasoning into continuous hidden states, but consistently fall short of their explicit counterparts. We suggest that this is due to purely linguistic latent representations compressing a symbolic abstraction of the world, rather than the causal dynamics that actually govern driving. Thus, we present OneVL (One-step latent reasoning and planning with Vision-Language explanations), a unified VLA and World Model framework that routes reasoning through compact latent tokens supervised by dual auxiliary decoders. Alongside a language decoder that reconstructs text CoT, we introduce a visual world model decoder that predicts future-frame tokens, forcing the latent space to internalize the causal dynamics of road geometry, agent motion, and environmental change. A three-stage training pipeline progressively aligns these latents with trajectory, language, and visual objectives, ensuring stable joint optimization. At inference, the auxiliary decoders are discarded and all latent tokens are prefilled in a single parallel pass, matching the speed of answer-only prediction. Across four benchmarks, OneVL becomes the first latent CoT method to surpass explicit CoT, delivering state-of-the-art accuracy at answer-only latency, and providing direct evidence that tighter compression, when guided in both language and world-model supervision, produces more generalizable representations than verbose token-by-token reasoning. Project Page: https://xiaomi-embodied-intelligence.github.io/OneVL</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2604.18463v1' target='_blank'>Using large language models for embodied planning introduces systematic safety risks</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Tao Zhang, Kaixian Qu, Zhibin Li, Jiajun Wu, Marco Hutter, Manling Li, Fan Shi</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-04-20 16:18:08</h6>
+<p class='card-text'>Large language models are increasingly used as planners for robotic systems, yet how safely they plan remains an open question. To evaluate safe planning systematically, we introduce DESPITE, a benchmark of 12,279 tasks spanning physical and normative dangers with fully deterministic validation. Across 23 models, even near-perfect planning ability does not ensure safety: the best-planning model fails to produce a valid plan on only 0.4% of tasks but produces dangerous plans on 28.3%. Among 18 open-source models from 3B to 671B parameters, planning ability improves substantially with scale (0.4-99.3%) while safety awareness remains relatively flat (38-57%). We identify a multiplicative relationship between these two capacities, showing that larger models complete more tasks safely primarily through improved planning, not through better danger avoidance. Three proprietary reasoning models reach notably higher safety awareness (71-81%), while non-reasoning proprietary models and open-source reasoning models remain below 57%. As planning ability approaches saturation for frontier models, improving safety awareness becomes a central challenge for deploying language-model planners in robotic systems.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2604.18411v1' target='_blank'>Grid-Supporting Equipment Supply Chains Constrain the Feasible Pace of Power System Expansion</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Boyu Yao, Yury Dvorkin</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-04-20 15:28:43</h6>
+<p class='card-text'>Power system expansion depends on the equipment required to connect, convert, regulate, and condition electricity, yet grid-supporting equipment (GSE) is rarely modeled as an explicit constraint. We develop a framework integrating dynamic stock-flow modeling, bill-of-materials accounting, multi-regional supply-use analysis, and expansion optimization to quantify GSE deployment requirements and upstream material dependence. Because manufacturing data are often fragmented or proprietary, we use critical material requirements as a physically grounded proxy for GSE supply constraints. In a U.S. case study, GSE shortages reach 269.6--274.1 GVA (28.5%--28.6%) by 2030 under high-growth conditions. Copper becomes fully binding, with steel and nickel forming additional constraints. Trade disruption intensifies shortages, while grid-enhancing technologies provide limited relief. These results show that grid expansion depends on the timely manufacturability, replacement, and material support of GSE, motivating planning frameworks that explicitly incorporate deliverability, supply chain exposure, and resilience strategies.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2604.18407v1' target='_blank'>The Rise of Quantum Computing -- Take a BITE for Built Environment and Urban Microclimate Research</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Liangzhu Leon Wang, Huiheng Liu, Honghao Fu, Zhipeng Deng, Bing Dong, Naiping Gao</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-04-20 15:25:03</h6>
+<p class='card-text'>Quantum computing is a new approach to computation that utilizes superposition, entanglement, interference, and tunneling to solve problems too complex for classical computers. This paper discusses the basic concepts and development of quantum computing, exploring its potential applications in the built environment and urban microclimate research. In buildings, quantum computing may help optimize energy management, control HVAC systems, and plan electric vehicle charging networks more efficiently. For urban microclimates, it could accelerate renewable energy planning and support multi-objective design, making it easier to balance urban building performance with climate conditions. Since current quantum hardware is still in the Noisy Intermediate-Scale Quantum (NISQ) stage, we propose the "BITE" principle to guide researchers in choosing suitable problems for quantum acceleration: B (Big search), I (Input-light), T (Tiny computation), and E (Evaluation polish). Although quantum computing still faces challenges such as noise and hardware limits, it offers great potential for developing more climate-resilient, sustainable, and energy-efficient cities of the future.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2604.18404v1' target='_blank'>Six Llamas: Comparative Religious Ethics Through LoRA-Adapted Language Models</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Chad Coleman, W. Russell Neuman, Manan Shah, Ali Dasdan, Matthew Crispi, Morris Chiang, Zack Leitman, Mustafa Poonawala</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-04-20 15:22:59</h6>
+<p class='card-text'>We present Six Llamas, a comparative study examining whether large language models fine-tuned on distinct religious corpora encode systematically different patterns of ethical reasoning. Six variants of Meta-Llama-3.1-8B are constructed: one unmodified control and five LoRA-adapted models trained exclusively on the sacred and theological texts of Christianity, Islam, Judaism, Hinduism, or Buddhism. All six models are probed with an identical battery of 17 standardized ethical prompts spanning moral dilemmas, game-theoretic scenarios, public policy questions, and moral-psychological self-assessments. To assess robustness and reproducibility, we implement a multi-temperature sampling design spanning ten temperature settings. We compute response consistency metrics, pairwise inter-model agreement rates, temperature sensitivity coefficients across four prompt domains, and run-to-run stability analyses.
+  Findings show that LoRA-adapted models produce ethical reasoning patterns that are (a) systematically differentiated from the base model, (b) consistent with the moral logics of their training traditions, (c) structured along interpretable dimensions in moral-philosophical space, (d) core ethical positions remain stable across temperature variations for high-consensus dilemmas. The Trolley Problem achieves 100% consistency across all models and temperatures, while (e) tradition-specific divergence intensifies at higher temperatures in morally contested domains, and (f) the base model exhibits the highest overall response consistency (mean 88.3%), suggesting LoRA adaptation introduces both tradition-specific signal and increased sampling sensitivity.
+  The study offers a proof-of-concept for the condensate comparative method using differentially trained language models as instruments for cultural and ethical analysis and identifies specific criteria for falsification and planned extensions.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2604.18343v1' target='_blank'>DAG-STL: A Hierarchical Framework for Zero-Shot Trajectory Planning under Signal Temporal Logic Specifications</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Ruijia Liu, Ancheng Hou, Xiao Yu, Xiang Yin</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-04-20 14:41:37</h6>
+<p class='card-text'>Signal Temporal Logic (STL) is a powerful language for specifying temporally structured robotic tasks. Planning executable trajectories under STL constraints remains difficult when system dynamics and environment structure are not analytically available. Existing methods typically either assume explicit models or learn task-specific behaviors, limiting zero-shot generalization to unseen STL tasks. In this work, we study offline STL planning under unknown dynamics using only task-agnostic trajectory data. Our central design philosophy is to separate logical reasoning from trajectory realization. We instantiate this idea in DAG-STL, a hierarchical framework that converts long-horizon STL planning into three stages. It first decomposes an STL formula into reachability and invariance progress conditions linked by shared timing constraints. It then allocates timed waypoints using learned reachability-time estimates. Finally, it synthesizes trajectories between these waypoints with a diffusion-based generator. This decomposition--allocation--generation pipeline reduces global planning to shorter, better-supported subproblems. To bridge the gap between planning-level correctness and execution-level feasibility, we further introduce a rollout-free dynamic consistency metric, an anytime refinement search procedure for improving multiple allocation hypotheses under finite budgets, and a hierarchical online replanning mechanism for execution-time recovery. Experiments in Maze2D, OGBench AntMaze, and the Cube domain show that DAG-STL substantially outperforms direct robustness-guided diffusion on complex long-horizon STL tasks and generalizes across navigation and manipulation settings. In a custom environment with an optimization-based reference, DAG-STL recovers most model-solvable tasks while retaining a clear computational advantage over direct optimization based on the explicit system model.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2604.18312v1' target='_blank'>Scale-free adaptive planning for deterministic dynamics & discounted rewards</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Peter L. Bartlett, Victor Gabillon, Jennifer Healey, Michal Valko</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-04-20 14:17:52</h6>
+<p class='card-text'>We address the problem of planning in an environment with deterministic dynamics and stochastic rewards with discounted returns. The optimal value function is not known, nor are the rewards bounded. We propose Platypoos, a simple scale-free planning algorithm that adapts to the unknown scale and smoothness of the reward function. We provide a sample complexity analysis for Platypoos that improves upon prior work and holds simultaneously over a broad range of discount factors and reward scales, without the algorithm knowing them. We also establish a matching lower bound showing our analysis is optimal up to constants.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2604.18210v1' target='_blank'>TacticGen: Grounding Adaptable and Scalable Generation of Football Tactics</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Sheng Xu, Guiliang Liu, Tarak Kharrat, Yudong Luo, Mohamed Aloulou, Javier López Peña, Konstantin Sofeikov, Adam Reid, Paul Roberts, Steven Spencer, Joe Carnall, Ian McHale, Oliver Schulte, Hongyuan Zha, Wei-Shi Zheng</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-04-20 12:57:11</h6>
+<p class='card-text'>Success in association football relies on both individual skill and coordinated tactics. While recent advancements in spatio-temporal data and deep learning have enabled predictive analyses like trajectory forecasting, the development of tactical design remains limited. Bridging this gap is essential, as prediction reveals what is likely to occur, whereas tactic generation determines what should occur to achieve strategic objectives. In this work, we present TacticGen, a generative model for adaptable and scalable tactic generation. TacticGen formulates tactics as sequences of multi-agent movements and interactions conditioned on the game context. It employs a multi-agent diffusion transformer with agent-wise self-attention and context-aware cross-attention to capture cooperative and competitive dynamics among players and the ball. Trained with over 3.3 million events and 100 million tracking frames from top-tier leagues, TacticGen achieves state-of-the-art precision in predicting player trajectories. Building on it, TacticGen enables adaptable tactic generation tailored to diverse inference-time objectives through classifier guidance mechanism, specified via rules, natural language, or neural models. Its modeling performance is also inherently scalable. A case study with football experts confirms that TacticGen generates realistic, strategically valuable tactics, demonstrating its practical utility for tactical planning in professional football. The project page is available at: https://shengxu.net/TacticGen/.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2604.18178v1' target='_blank'>Latest results from the IceCube Neutrino Observatory</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Thijs Juan van Eeden</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-04-20 12:34:25</h6>
+<p class='card-text'>The IceCube Neutrino Observatory has opened a new window into the high-energy Universe, providing measurements of neutrinos over a broad energy range. This contribution presents recent results, including a follow-up on the first identification of a steady neutrino source NGC 1068, measurements of the flavor composition of the diffuse astrophysical flux, limits on prompt atmospheric neutrinos, and searches for neutrinos from dark matter annihilation in the Sun. These measurements probe neutrino production mechanisms, fundamental particle interactions, and physics beyond the Standard Model. Looking forward, the recently deployed IceCube Upgrade will enhance sensitivity to lower-energy neutrinos and reduce systematic uncertainties, while the planned IceCube-Gen2 will expand the detector volume, increase the neutrino detection rate, and extend energy reach, enabling more detailed studies of cosmic sources and high-energy particle physics.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2604.18151v1' target='_blank'>AI-based Waste Mapping for Addressing Climate-Exacerbated Flood Risk</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Steffen Knoblauch, Levi Szamek, Iddy Chazua, Benedcto Adamu, Innocent Maholi, Alexander Zipf</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-04-20 12:12:16</h6>
+<p class='card-text'>Urban flooding is a growing climate change-related hazard in rapidly expanding African cities, where inadequate waste management often blocks drainage systems and amplifies flood risks. This study introduces an AI-powered urban waste mapping workflow that leverages openly available aerial and street-view imagery to detect municipal solid waste at high resolution. Applied in Dar es Salaam, Tanzania, our approach reveals spatial waste patterns linked to informal settlements and socio-economic factors. Waste accumulation in waterways was found to be up to three times higher than in adjacent urban areas, highlighting critical hotspots for climate-exacerbated flooding. Unlike traditional manual mapping methods, this scalable AI approach allows city-wide monitoring and prioritization of interventions. Crucially, our collaboration with local partners ensured culturally and contextually relevant data labeling, reflecting real-world reuse practices for solid waste. The results offer actionable insights for urban planning, climate adaptation, and sustainable waste management in flood-prone urban areas.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2604.18126v1' target='_blank'>Chatting about Conditional Trajectory Prediction</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yuxiang Zhao, Wei Huang, Haipeng Zeng, Huan Zhao, Yujie Song</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-04-20 11:44:16</h6>
+<p class='card-text'>Human behavior has the nature of mutual dependencies, which requires human-robot interactive systems to predict surrounding agents trajectories by modeling complex social interactions, avoiding collisions and executing safe path planning. While there exist many trajectory prediction methods, most of them do not incorporate the own motion of the ego agent and only model interactions based on static information. We are inspired by the humans theory of mind during trajectory selection and propose a Cross time domain intention-interactive method for conditional Trajectory prediction(CiT). Our proposed CiT conducts joint analysis of behavior intentions over time, and achieves information complementarity and integration across different time domains. The intention in its own time domain can be corrected by the social interaction information from the other time domain to obtain a more precise intention representation. In addition, CiT is designed to closely integrate with robotic motion planning and control modules, capable of generating a set of optional trajectory prediction results for all surrounding agents based on potential motions of the ego agent. Extensive experiments demonstrate that the proposed CiT significantly outperforms the existing methods, achieving state-of-the-art performance in the benchmarks.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2604.18013v1' target='_blank'>An Exact Algorithm for Public Transport Line Planning Considering Passenger and Operational Costs and Lost Demand</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Siv Marie Cartland Hansen, Rowan Hoogervorst, Otto Anker Nielsen, Richard Martin Lusby, Evelien van der Hurk</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-04-20 09:36:52</h6>
+<p class='card-text'>Line planning in public transport is the strategic problem of selecting lines and their operating frequencies. This problem is important as it defines the passenger service, based on available connections and expected travel times, and drives operational cost in terms of the number of vehicles required. This paper presents a line planning model that minimizes the weighted sum of passenger travel time, including in-vehicle time and frequency-dependent waiting and transfer times, and operating costs for the public transport agency. Unlike traditional approaches that assume demand to be fixed, our approach requires a minimum service level for demand to be captured, ensuring that services are provided only when they are attractive to users and cost-efficient to operate. The introduced capacity constraints ensure sufficient capacity on the lines and help guide the trade-off between expected demand on selected lines and their frequencies. The resulting mixed-integer program presents a challenging combinatorial problem as the number of passenger paths grows rapidly in relation to the number of lines and frequencies considered. To address this, we propose an iterative exact algorithm that utilizes a reduced problem representation and dynamically expands it with additional frequencies and paths. Evaluated on four networks with varying complexity and cost trade-offs, our method achieves significant speed-ups and tighter bounds compared to solving the complete model directly by CPLEX, particularly when operator and passenger costs are more evenly balanced in the objective. Furthermore, we demonstrate how accounting for lost demand leads to more efficient resource use from an overall perspective.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2604.17991v1' target='_blank'>EcoTIM: Fuel-saving multi-brand tillage with ISO 11783 TIM</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Ruben Hefele, Timo Oksanen</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-04-20 09:14:35</h6>
+<p class='card-text'>Tillage operations account for a large share of on-farm diesel consumption, yet the fuel efficiency of the combined tractor-implement system is not optimised in current practice. Modern continuously variable transmission (CVT) tractors minimise engine fuel consumption internally, but they treat the implement as an unknown load and do not account for the effect of vehicle speed on implement draft force. This paper presents EcoTIM, a distributed fuel-optimisation concept in which the tractor and tillage implement cooperate through the extended ISO 11783 (ISOBUS) Tractor Implement Management (TIM) interface to minimise fuel consumption per hectare in real time. In the EcoTIM concept, the tractor Electric Control Unit fuses its internal engine, transmission, and traction efficiencies into a single combined efficiency value and its derivative with respect to vehicle speed, and broadcasts both to the implement at the standard 100 ms CAN bus cycle. The implement ECU combines these two received scalars with its own analytically known draft force model to evaluate the fuel-consumption gradient, and commands the optimal speed, and as a novel TIM extension, the desired acceleration, back to the tractor. Because only two scalar values are exchanged and neither party discloses proprietary subsystem models, the architecture is inherently multi-brand and plug-and-play. The required data exchange is realised with three new messages and one backward-compatible byte-level extension to the standard TIM speed command, and this paper proposes that these messages are standardised within ISO 11783. The acceleration command enables feed-forward torque and CVT ratio planning on the tractor side, improving transient response compared with speed-only TIM commands. This paper also contains a proof-of-concept simulation with six tillage scenarios and a spatially varying 1km test track for initial concept validation.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2604.17969v1' target='_blank'>E3VS-Bench: A Benchmark for Viewpoint-Dependent Active Perception in 3D Gaussian Splatting Scenes</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Koya Sakamoto, Taiki Miyanishi, Daichi Azuma, Shuhei Kurita, Shu Morikuni, Naoya Chiba, Motoaki Kawanabe, Yusuke Iwasawa, Yutaka Matsuo</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-04-20 08:49:39</h6>
+<p class='card-text'>Visual search in 3D environments requires embodied agents to actively explore their surroundings and acquire task-relevant evidence. However, existing visual search and embodied AI benchmarks, including EQA, typically rely on static observations or constrained egocentric motion, and thus do not explicitly evaluate fine-grained viewpoint-dependent phenomena that arise under unrestricted 5-DoF viewpoint control in real-world 3D environments, such as visibility changes caused by vertical viewpoint shifts, revealing contents inside containers, and disambiguating object attributes that are only observable from specific angles. To address this limitation, we introduce {E3VS-Bench}, a benchmark for embodied 3D visual search where agents must control their viewpoints in 5-DoF to gather viewpoint-dependent evidence for question answering. E3VS-Bench consists of 99 high-fidelity 3D scenes reconstructed using 3D Gaussian Splatting and 2,014 question-driven episodes. 3D Gaussian Splatting enables photorealistic free-viewpoint rendering that preserves fine-grained visual details (e.g., small text and subtle attributes) often degraded in mesh-based simulators, thereby allowing the construction of questions that cannot be answered from a single view and instead require active inspection across viewpoints in 5-DoF. We evaluate multiple state-of-the-art VLMs and compare their performance with humans. Despite strong 2D reasoning ability, all models exhibit a substantial gap from humans, highlighting limitations in active perception and coherent viewpoint planning specifically under full 5-DoF viewpoint changes.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2604.17944v1' target='_blank'>ReCoQA: A Benchmark for Tool-Augmented and Multi-Step Reasoning in Real Estate Question and Answering</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yindong Zhang, Wenmian Yang, Yiquan Zhang, Weijia Jia</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-04-20 08:22:18</h6>
+<p class='card-text'>Developing agents capable of navigating fragmented, multi-source information remains challenging, primarily due to the scarcity of benchmarks reflecting hybrid workflows combining database querying with external APIs. To bridge this gap, we introduce ReCoQA, a large-scale benchmark of 29,270 real-estate instances featuring machine-verifiable supervision for intermediate steps, including structured intent labels, SQL queries, and API calls. Complementarily, we propose HIRE-Agent, a hierarchical framework instantiating an understand-plan-execute architecture as a strong baseline. By orchestrating a Front-end parser, a planning Supervisor, and execution Specialists, HIRE-Agent effectively integrates heterogeneous evidence. Extensive experiments demonstrate that HIRE-Agent constitutes a strong baseline and substantiates the necessity of hierarchical collaboration for complex, real-world reasoning tasks.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2604.17888v1' target='_blank'>SpaceDex: Generalizable Dexterous Grasping in Tiered Workspaces</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Wensheng Wang, Chuanjun Guo, Wei Wei, Tong Wu, Ning Tan</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-04-20 07:01:21</h6>
+<p class='card-text'>Generalizable grasping with high-degree-of-freedom (DoF) dexterous hands remains challenging in tiered workspaces, where occlusion, narrow clearances, and height-dependent constraints are substantially stronger than in open tabletop scenes. Most existing methods are evaluated in relatively unoccluded settings and typically do not explicitly model the distinct control requirements of arm navigation and hand articulation under spatial constraints. We present SpaceDex, a hierarchical framework for dexterous manipulation in constrained 3D environments. At the high level, a Vision-Language Model (VLM) planner parses user intent, reasons about occlusion and height relations across multiple camera views, and generates target bounding boxes for zero-shot segmentation and mask tracking. This stage provides structured spatial guidance for downstream control instead of relying on single-view target selection. At the low level, we introduce an arm-hand Feature Separation Network that decouples global trajectory control for the arm from geometry-aware grasp mode selection for the hand, reducing feature interference between reaching and grasping objectives. The controller further integrates multi-view perception, fingertip tactile sensing, and a small set of recovery demonstrations to improve robustness to partial observability and off-nominal contacts. In 100 real-world trials involving over 30 unseen objects across four categories, SpaceDex achieves a 63.0\% success rate, compared with 39.0\% for a strong tabletop baseline. These results indicate that combining hierarchical spatial planning with arm-hand representation decoupling improves dexterous grasping performance in spatially constrained environments.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2604.17887v1' target='_blank'>StableIDM: Stabilizing Inverse Dynamics Model against Manipulator Truncation via Spatio-Temporal Refinement</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Kerui Li, Zhe Jing, Xiaofeng Wang, Zheng Zhu, Yukun Zhou, Guan Huang, Dongze Li, Qingkai Yang, Huaibo Huang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-04-20 06:57:55</h6>
+<p class='card-text'>Inverse Dynamics Models (IDMs) map visual observations to low-level action commands, serving as central components for data labeling and policy execution in embodied AI. However, their performance degrades severely under manipulator truncation, a common failure mode that makes state recovery ill-posed and leads to unstable control. We present StableIDM, a spatio-temporal framework that refines features from visual inputs to stabilize action predictions under such partial observability. StableIDM integrates three complementary components: (1) auxiliary robot-centric masking to suppress background clutter, (2) Directional Feature Aggregation (DFA) for geometry-aware spatial reasoning, which extracts anisotropic features along directions inferred from the visible arm and (3) Temporal Dynamics Refinement (TDR) to smooth and correct predictions via motion continuity. Extensive evaluations validate our approach: StableIDM improves strict action accuracy by 12.1% under severe truncation on the AgiBot benchmark, and increases average task success by 9.7% in real-robot replay. Moreover, it boosts end-to-end grasp success by 11.5% when decoding video-generated plans, and improves downstream VLA real-robot success by 17.6% when functioning as an automatic annotator. These results demonstrate that StableIDM provides a robust and scalable backbone for both policy execution and data generation in embodied artificial intelligence.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2604.17859v1' target='_blank'>Producing High-Resolution Martian Surface Temperature Maps Using VIR-TIR Relationships</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Michael A. Frazer, Eriita G. Jones, Katarina Miljkovic, Gretchen K. Benedix</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-04-20 06:11:54</h6>
+<p class='card-text'>Thermal infrared data (TIR; 8 - 15 $μm$) has a wide range of applications in Earth and planetary remote sensing. On Mars, this includes deriving thermal inertia (TI), which describes surface physical characteristics (e.g. particle size, degree of cementation) and is key for understanding geologic processes, assessing in-situ resource utilisation (ISRU) environments, and assisting mission planning. However, TI data from the THEMIS instrument is limited to 100 m/pixel resolution. Hyperspectral visible and near-infrared data (VIR; 0.5 - 5 $μm$) compliments TIR data by providing information on surface composition and is provided by the CRISM instrument at 12 m/pixel. In this work, we generate a machine learning regressor-based model to constrain relationships between THEMIS TI and CRISM VIR images at THEMIS resolution, and predict TI values from CRISM spectra with high accuracy (R2 $\sim$ 0.90, RMSE $\sim$ 23.6 TIU). We use the model to produce a downscaled TI map at a spatial resolution of 12 m/pixel, an order of magnitude finer than currently available, revealing decametre-scale features previously unresolved in THEMIS data.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2604.17846v1' target='_blank'>AI Approach for MRI-only Full-Spine Vertebral Segmentation and 3D Reconstruction in Paediatric Scoliosis</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Nathasha Naranpanawa, Maree T. Izatt, Robert D. Labrom, Geoffrey N. Askin, J. Paige Little</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-04-20 05:57:06</h6>
+<p class='card-text'>MRI is preferred over CT in paediatric imaging because it avoids ionising radiation, but its use in spine deformity assessment is largely limited by the lack of automated, high-resolution 3D bony reconstruction, which continues to rely on CT. MRI-based 3D reconstruction remains impractical due to manual workflows and the scarcity of labelled full-spine datasets. This study introduces an AI framework that enables fully automated thoracolumbar spine (T1-L5) segmentation and 3D reconstruction from MRI alone. Historical low-dose CT scans from adolescent idiopathic scoliosis (AIS) patients were converted into MRI-like images using a GAN and combined with existing labelled thoracic MRI data to train a U-Net-based model. The resulting algorithm accurately generated continuous thoracolumbar 3D reconstructions, improved segmentation accuracy (88% Dice score), and reduced processing time from approximately 1 hour to under one minute, while preserving AIS-specific deformity features. This approach enables radiation-free 3D deformity assessment from MRI, supporting clinical evaluation, surgical planning, and navigation in paediatric spine care.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2604.17830v1' target='_blank'>SYMBOLIZER: Symbolic Model-free Task Planning with VLMs</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Sami Azirar, Zlatan Ajanovic, Hermann Blum</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-04-20 05:32:47</h6>
+<p class='card-text'>Traditional Task and Motion Planning (TAMP) systems depend on physics models for motion planning and discrete symbolic models for task planning. Although physics model are often available, symbolic models (consisting of symbolic state interpretation and action models) must be meticulously handcrafted or learned from labeled data. This process is both resource-intensive and constrains the solution to the specific domain, limiting scalability and adaptability. On the other hand, Visual Language Models (VLMs) show desirable zero-shot visual understanding (due to their extensive training on heterogeneous data), but still achieve limited planning capabilities. Therefore, integrating VLMs with classical planning for long-horizon reasoning in TAMP problems offers high potential. Recent works in this direction still lack generality and depend on handcrafted, task-specific solutions, e.g. describing all possible objects in advance, or using symbolic action models. We propose a framework that generalizes well to unseen problem instances. The method requires only lifted predicates describing relations among objects and uses VLMs to ground them from images to obtain the symbolic state. Planning is performed with domain-independent heuristic search using goal-count and width-based heuristics, without need for action models. Symbolic search over VLM-grounded state-space outperforms direct VLM-based planning and performs on par with approaches that use a VLM-derived heuristic. This shows that domain-independent search can effectively solve problems across domains with large combinatorial state spaces. We extensively evaluate on extensively evaluate our method and achieve state-of-the-art results on the ProDG and ViPlan benchmarks.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2604.17787v1' target='_blank'>AnchorRefine: Synergy-Manipulation Based on Trajectory Anchor and Residual Refinement for Vision-Language-Action Models</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Tingzheng Jia, Kan Guo, Lanping Qian, Yongli Hu, Daxin Tian, Guixian Qu, Chunmian Lin, Baocai Yin, Jiapu Wang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-04-20 04:25:24</h6>
+<p class='card-text'>Precision-critical manipulation requires both global trajectory organization and local execution correction, yet most vision-language-action (VLA) policies generate actions within a single unified space. This monolithic formulation forces macro-level transport and micro-level refinement to be optimized under the same objective, causing large motions to dominate learning while suppressing small but failure-critical corrective signals. In contrast, human manipulation is structured by global movement planning together with continuous local adjustment during execution. Motivated by this principle, we propose AnchorRefine, a hierarchical framework that factorizes VLA action modeling into trajectory anchor and residual refinement. The anchor planner predicts a coarse motion scaffold, while the refinement module corrects execution-level deviations to improve geometric and contact precision. We further introduce a decision-aware gripper refinement mechanism to better capture the discrete and boundary-sensitive nature of gripper control. Experiments on LIBERO, CALVIN, and real-robot tasks demonstrate that AnchorRefine consistently improves both regression-based and diffusion-based VLA backbones, yielding gains of up to 7.8% in simulation success rate and 18% in real-world success rate.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2604.17696v1' target='_blank'>Stratagem: Learning Transferable Reasoning via Trajectory-Modulated Game Self-Play</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Xiachong Feng, Deyi Yin, Xiaocheng Feng, Yi Jiang, Libo Qin, Yangfan Ye, Lei Huang, Weitao Ma, Qiming Li, Yuxuan Gu, Bing Qin, Lingpeng Kong</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-04-20 01:20:31</h6>
+<p class='card-text'>Games offer a compelling paradigm for developing general reasoning capabilities in language models, as they naturally demand strategic planning, probabilistic inference, and adaptive decision-making. However, existing self-play approaches rely solely on terminal game outcomes, providing no mechanism to distinguish transferable reasoning patterns from game-specific heuristics. We present STRATAGEM, which addresses two fundamental barriers to reasoning transfer: domain specificity, where learned patterns remain anchored in game semantics, and contextual stasis, where static game contexts fail to cultivate progressive reasoning. STRATAGEM selectively reinforces trajectories exhibiting abstract, domain-agnostic reasoning through a Reasoning Transferability Coefficient, while incentivizing adaptive reasoning development via a Reasoning Evolution Reward. Experiments across mathematical reasoning, general reasoning, and code generation benchmarks demonstrate substantial improvements, with particularly strong gains on competition-level mathematics where multi-step reasoning is critical. Ablation studies and human evaluation confirm that both components contribute to transferable reasoning.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2604.17679v1' target='_blank'>A Hamilton-Jacobi Reachability-Guided Search Framework for Efficient and Safe Indoor Planar Robot Navigation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Hanyang Hu, Cameron Siu, Mo Chen</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-04-20 00:30:21</h6>
+<p class='card-text'>Autonomous navigation requires planning to reach a goal safely and efficiently in complex and potentially dynamic environments. Graph search-based algorithms are widely adopted due to their generality and theoretical guarantees when equipped with admissible heuristics. However, the computational complexity of graph search grows rapidly with the dimensionality of the search space, often making real-time planning in dynamic environments intractable. In this paper, we combine offline Hamilton-Jacobi (HJ) reachability with online graph search to leverage the complementary strengths of both. Precomputed HJ value functions, used as informative heuristics and proactive safety constraints, amortize online computation of the graph search process. At the same time, graph search enables reachability-based reasoning to be incorporated into online planning, overcoming the long-standing challenge of HJ reachability requiring full knowledge of the environment. Extensive simulation studies and real-world experiments demonstrate that the proposed approach consistently outperforms baseline methods in terms of planning efficiency and navigation safety, in environments with and without human presence.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2604.17656v1' target='_blank'>Video-Robin: Autoregressive Diffusion Planning for Intent-Grounded Video-to-Music Generation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Vaibhavi Lokegaonkar, Aryan Vijay Bhosale, Vishnu Raj, Gouthaman KV, Ramani Duraiswami, Lie Lu, Sreyan Ghosh, Dinesh Manocha</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-04-19 22:54:56</h6>
+<p class='card-text'>Video-to-music (V2M) is the fundamental task of creating background music for an input video. Recent V2M models achieve audiovisual alignment by typically relying on visual conditioning alone and provide limited semantic and stylistic controllability to the end user. In this paper, we present Video-Robin, a novel text-conditioned video-to-music generation model that enables fast, high-quality, semantically aligned music generation for video content. To balance musical fidelity and semantic understanding, Video-Robin integrates autoregressive planning with diffusion-based synthesis. Specifically, an autoregressive module models global structure by semantically aligning visual and textual inputs to produce high-level music latents. These latents are subsequently refined into coherent, high-fidelity music using local Diffusion Transformers. By factoring semantically driven planning into diffusion-based synthesis, Video-Robin enables fine-grained creator control without sacrificing audio realism. Our proposed model outperforms baselines that solely accept video input and additional feature conditioned baselines on both in-distribution and out-of-distribution benchmarks with a 2.21x speed in inference compared to SOTA. We will open-source everything upon paper acceptance.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2604.17643v1' target='_blank'>Is segregation encoded in urban form? An entropy-based analysis</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Vinicius M. Netto, Caio Cacholas, Camila Carvalho, Edgardo Brigatti</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-04-19 22:26:56</h6>
+<p class='card-text'>The footprints of residential segregation have long been documented, yet the role of urban form as both medium and manifestation of segregation remains under-specified. We investigate whether the configuration of the built fabric may encode residential segregation in its spatial structure, hypothesising that built-form entropy (BFE) regimes are associated with the spatial distribution of income groups and their local clustering in non-linear ways. We examine this by quantifying BFE through a Shannon-based measure computed from building footprints, characterising income-based distributions using the Gini index and Moran's I, and placing both on a common spatial footing through a regular tessellation. Applying this framework to Sao Paulo, Latin America's largest city, we find non-linear relationships between BFE, income, and segregation: income levels and residential clustering increase toward both extremes of the entropy spectrum, with a stronger rise at the high-entropy end. This asymmetry suggests that high-entropy urban forms are associated with distinct spatial processes of segregation, including elite enclaving and incremental development in lower-income settlements, while low-entropy forms reflect more selective occupation shaped by planning and market filtering. Overall, the findings suggest that built form is more than a neutral backdrop, functioning as both affordance and signal of segregation.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2604.17611v1' target='_blank'>STEP-PD: Stage-Aware and Explainable Parkinson's Disease Severity Classification Using Multimodal Clinical Assessments</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Md Mezbahul Islam, John Michael Templeton, Christian Poellabauer, Ananda Mohan Mondal</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-04-19 20:53:59</h6>
+<p class='card-text'>Parkinson's disease (PD) is a progressive disorder in which symptom burden and functional impairment evolve over time, making severity staging essential for clinical monitoring and treatment planning. However, many computational studies emphasize binary PD detection and do not fully use repeated follow-up clinical assessments for stage-aware prediction. This study proposes STEP-PD, a severity-aware machine learning framework to classify PD severity using clinically interpretable boundaries. It leverages all available visits from the Parkinson's Progression Markers Initiative (PPMI) and integrates routinely collected subjective questionnaires and objective clinician-assessed measures. Disease severity is defined using Hoehn and Yahr staging and grouped into three clinically meaningful categories: Healthy, Mild PD (stages 1-2), and Moderate-to-Severe PD (stages 3-5). Three binary classification problems and a three-class severity task were evaluated using stratified cross-validation with imbalance-aware training. To enhance interpretability, SHAP was used to provide global explanations and local patient-level waterfall explanations. Across all tasks, XGBoost achieved the strongest and most stable performance, with accuracies of 95.48% (Healthy vs. Mild), 99.44% (Healthy vs. Moderate-to-Severe), and 96.78% (Mild vs. Moderate-to-Severe), and 94.14% accuracy with 0.8775 Macro-F1 for three-class severity classification. Explainability results highlight a shift from early motor features to progression-related axial and balance impairments. These findings show that multimodal clinical assessments within the PPMI cohort can support accurate and interpretable visit-level PD severity stratification.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2604.17527v1' target='_blank'>Safer Trajectory Planning with CBF-guided Diffusion Model for Unmanned Aerial Vehicles</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Peiwen Yang, Shiyu Bai, Weisong Wen, Yixin Gao, Jiahao Hu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-04-19 16:41:16</h6>
+<p class='card-text'>Safe and agile trajectory planning is essential for autonomous systems, especially during complex aerobatic maneuvers. Motivated by the recent success of diffusion models in generative tasks, this paper introduces AeroTrajGen, a novel framework for diffusion-based trajectory generation that incorporates control barrier function (CBF)-guided sampling during inference, specifically designed for unmanned aerial vehicles (UAVs). The proposed CBF-guided sampling addresses two critical challenges: (1) mitigating the inherent unpredictability and potential safety violations of diffusion models, and (2) reducing reliance on extensively safety-verified training data. During the reverse diffusion process, CBF-based guidance ensures collision-free trajectories by seamlessly integrating safety constraint gradients with the diffusion model's score function. The model features an obstacle-aware diffusion transformer architecture with multi-modal conditioning, including trajectory history, obstacles, maneuver styles, and goal, enabling the generation of smooth, highly agile trajectories across 14 distinct aerobatic maneuvers. Trained on a dataset of 2,000 expert demonstrations, AeroTrajGen is rigorously evaluated in simulation under multi-obstacle environments. Simulation results demonstrate that CBF-guided sampling reduces collision rates by 94.7% compared to unguided diffusion baselines, while preserving trajectory agility and diversity. Our code is open-sourced at https://github.com/RoboticsPolyu/CBF-DMP.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2604.17421v1' target='_blank'>The structure of technological learning: insights from water electrolysis for cost forecasting, policy, and strategy</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Mohamed Atouife, Jesse Jenkins</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-04-19 13:02:51</h6>
+<p class='card-text'>Forecasting the cost evolution of emerging clean technologies is crucial for informed policy, investment, and decarbonization decisions, yet it remains deeply uncertain. Learning curves, which link cost declines to cumulative deployment, are widely used for technological cost forecasting. However, applying them to emerging technologies is challenging due to parametric uncertainty in learning rates, which are scarce and highly uncertain, and structural uncertainty stemming from multiple plausible learning frameworks. Using water electrolysis as a case study, we evaluate how different learning structures, from shared to fragmented learning across technology variants and regions, alter expected cost paths. We interrogate model assumptions that represent contrasting industrial realities, including competition among electrolyzer variants and supply chain fragmentation associated with protectionism and industrial policy. We find that plausible modeling choices generate widely different trajectories, with materially different implications for policy design and technology strategy. We argue for routinely applying multiple learning frameworks to explore decision spaces and stress-test conclusions for scale-up planning, national industrial strategy, and energy-systems modeling.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2604.17414v1' target='_blank'>Physics-Aware Query-Conditioned Graph Attention Networks for Radio Map Estimation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Ang Li, Chengyu Liu, Yue Wang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-04-19 12:44:29</h6>
+<p class='card-text'>Radio map estimation from sparse measurements is fundamental to wireless network planning, optimization, and localized map updating. Most recent learning-based approaches formulate the problem as dense map completion over a predefined grid, whereas many practical deployments require estimating transmitter-specific received signal strength only at queried locations or refining an existing map after local changes. This paper proposes a physics-aware query-conditioned hierarchical graph attention network for transmitter-resolved point-wise radio map estimation. For each queried target--transmitter pair, the proposed encoder constructs a bounded local graph over sampled reference observations and aggregates reference-to-query evidence through transmitter-referenced geometric descriptors. A global graph then exchanges representation-level context among nearby target locations to improve neighborhood consistency without revisiting a large number of reference measurements. On top of this shared architecture, we instantiate three operating regimes: direct RSS estimation, prior-conditioned residual correction, and post-hoc gated attenuation of the learned correction. The framework uses only measurement-side quantities and does not rely on environment-side inputs. Simulations on the DeepMIMO scenario show that, in the direct regime, the proposed HGAT achieves the lowest RMSE and MAE among the evaluated learning-based baselines on all reported sites. When conventional prior estimate is available, the residual and gated regimes further reduce the prior error.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js'></script>
+</body>
+</html>
