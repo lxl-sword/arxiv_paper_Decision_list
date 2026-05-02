@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>planning - 2026-05-02</title>
+<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap' rel='stylesheet'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css'>
+<style>
+body {
+font-family: 'Roboto', sans-serif;
+background-color: #f5f7fa;
+padding: 20px;
+}
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.card-title {
+    font-weight: 700;
+}
+.card:hover {
+    transform: scale(1.02);
+    transition: 0.3s ease-in-out;
+}
+</style>
+</head>
+<body>
+<div class='container'>
+<h1 class='text-center my-4'><i class='fas fa-book'></i>planning - 2026-05-02</h1>
+<div class='row'>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2604.28179v1' target='_blank'>Stop Holding Your Breath: CT-Informed Gaussian Splatting for Dynamic Bronchoscopy</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Andrea Dunn Beltran, Daniel Rho, Aarav Mehta, Xinqi Xiong, Raúl San José Estépar, Ron Alterovitz, Marc Niethammer, Roni Sengupta</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-04-30 17:57:19</h6>
+<p class='card-text'>Bronchoscopic navigation relies on registering endoscopic video to a preoperative CT scan, but respiratory motion deforms the airway by 5-20 mm, creating CT-to-body divergence that limits localization accuracy. In practice, this is mitigated through breath-hold protocols, which attempt to match the intraoperative anatomy to a static CT, but are difficult to reproduce and disrupt clinical workflow. We propose to eliminate the need for breath-hold protocols by leveraging patient-specific respiratory modeling. Paired inhale-exhale CT scans, already acquired for planning, implicitly define the patient-specific deformation space of the breathing airway. By registering these scans, we reduce respiratory motion to a single scalar breathing phase per frame, constraining all reconstructions to anatomically observed configurations. We embed this representation within a mesh-anchored Gaussian splatting framework, where a lightweight estimator infers breathing phase directly from endoscopic RGB, enabling continuous, deformation-aware reconstruction throughout the respiratory cycle without breath-holds or external sensing. To enable quantitative evaluation, we introduce RESPIRE, a physically grounded bronchoscopy simulation pipeline with per-frame ground truth for geometry, pose, breathing phase, and deformation. Experiments on RESPIRE show that our approach achieves geometrically faithful reconstruction, over 20x faster training, and 1.22 mm target localization accuracy (within the 3mm clinically relevant tolerances) outperforming unconstrained single-CT baselines. Please check out our website for additional visuals: https://asdunnbe.github.io/RESPIRE/</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2604.28161v1' target='_blank'>RopeDreamer: A Kinematic Recurrent State Space Model for Dynamics of Flexible Deformable Linear Objects</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Tim Missal, Lucas Domingues, Berk Guler, Simon Manschitz, Jan Peters, Paula Dornhofer Paro Costa</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-04-30 17:47:44</h6>
+<p class='card-text'>The robotic manipulation of Deformable Linear Objects (DLOs) is a fundamental challenge due to the high-dimensional, non-linear dynamics of flexible structures and the complexity of maintaining topological integrity during contact-rich tasks. While recent data-driven methods have utilized Recurrent and Graph Neural Networks for dynamics modeling, they often struggle with self-intersections and non-physical deformations, such as tangling and link stretching. In this paper, we propose a latent dynamics framework that combines a Recurrent State Space Model with a Quaternionic Kinematic Chain representation to enable robust, long-term forecasting of DLO states. By encoding the DLO as a sequence of relative rotations (quaternions) rather than independent Cartesian positions, we inherently constrain the model to a physically valid manifold that preserves link-length constancy. Furthermore, we introduce a dual-decoder architecture that decouples state reconstruction from future-state prediction, forcing the latent space to capture the underlying physics of deformation. We evaluate our approach on a large-scale simulated dataset of complex pick-and-place trajectories involving self-intersections. Our results demonstrate that the proposed model achieves a 40.52% reduction in open-loop prediction error over 50-step horizons compared to the state-of-the-art baseline, while reducing inference time by 31.17%. Our model further maintains superior topological consistency in scenarios with multiple crossings, proving its efficacy as a compositional primitive for long-horizon manipulation planning.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2604.28095v1' target='_blank'>UHR-Net: An Uncertainty-Aware Hypergraph Refinement Network for Medical Image Segmentation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Shuokun Cheng, Jinghao Shi, Kun Sun</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-04-30 16:38:51</h6>
+<p class='card-text'>Accurate lesion segmentation is crucial for clinical diagnosis and treatment planning. However, lesions often resemble surrounding tissues and exhibit ill-defined boundaries, leading to unstable predictions in boundary/transition regions. Moreover, small-lesion cues can be diluted by multi-scale feature extraction, causing under- or over-segmentation. To address these challenges, we propose an Uncertainty-Aware Hypergraph Refinement Network (UHR-Net). First, we introduce an Uncertainty-Oriented Instance Contrastive (UO-IC) pretraining strategy that couples geometry-aware copy-paste augmentation with hard-negative mining of lesion-like background regions to improve instance-level discrimination for small and visually ambiguous lesions. Second, we design an Uncertainty-Guided Hypergraph Refinement (UGHR) block, which derives an entropy-based uncertainty map from a coarse probability map to guide hypergraph refinement. By splitting hyperedge prototypes into foreground and background groups, UGHR decouples higher-order interactions and improves refinement in ambiguous regions. Experiments on five public benchmarks demonstrate consistent gains over strong baselines. Code is available at: https://github.com/CUGfreshman/UHR-Net.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2604.28079v1' target='_blank'>Tailwind: A Practical Framework for Query Accelerators</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Geoffrey X. Yu, Ryan Marcus, Tim Kraska</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-04-30 16:25:27</h6>
+<p class='card-text'>Relational database management systems (RDBMSes) can process general-purpose queries, but often have lower performance compared to custom-built solutions for specific queries. For example, consider a group-by query over a few known groups (e.g., grouping by country). While an RDBMS would likely use a hash map to do the grouping, a faster method could hard-code the expected groups into the query executor. But such workload-specific techniques, which we call query accelerators, are not widely used in practice because the engineering effort (optimizer and engine changes, potential bugs) does not justify the isolated performance gains (speedup on a single specific query). We propose Tailwind: an external query planner that brings accelerators into any RDBMS that supports data import/export. Users define their accelerators using abstract logical plans (ALPs): a new mostly-declarative abstraction over relational operators built on regular tree expressions. ALPs allow Tailwind to automatically build customized neural network models to estimate when using a particular accelerator is beneficial. At runtime, Tailwind sits atop an RDBMS and transparently rewrites queries to run across one or more accelerators when predicted to be beneficial, falling back to the underlying RDBMS when not. On Redshift and DuckDB with a library of four diverse accelerators, Tailwind accelerates TPC-H queries by 1.38x on average (up to 29x).</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2604.27981v1' target='_blank'>ITS-Mina: A Harris Hawks Optimization-Based All-MLP Framework with Iterative Refinement and External Attention for Multivariate Time Series Forecasting</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Pourya Zamanvaziri, Amirhossein Sadr, Aida Pakniyat, Dara Rahmati</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-04-30 15:10:18</h6>
+<p class='card-text'>Multivariate time series forecasting plays a pivotal role in numerous real-world applications, including financial analysis, energy management, and traffic planning. While Transformer-based architectures have gained popularity for this task, recent studies reveal that simpler MLP-based models can achieve competitive or superior performance with significantly reduced computational cost. In this paper, we propose ITS-Mina, a novel all-MLP framework for multivariate time series forecasting that integrates three key innovations: (1) an iterative refinement mechanism that progressively enhances temporal representations by repeatedly applying a shared-parameter residual mixer stack, effectively deepening the model's computational capacity without multiplying the number of distinct parameters; (2) an external attention module that replaces traditional self-attention with learnable memory units, capturing cross-sample global dependencies at linear computational complexity; and (3) a Harris Hawks Optimization (HHO) algorithm for automatic dropout rate tuning, enabling adaptive regularization tailored to each dataset. Extensive experiments on six widely-used benchmark datasets demonstrate that ITS-Mina achieves state-of-the-art or highly competitive performance compared to eleven baseline models across multiple forecasting horizons.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2604.27935v1' target='_blank'>Flying by Inference: Active Inference World Models for Adaptive UAV Swarms</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Kaleem Arshid, Ali Krayani, Lucio Marcenaro, David Martin Gomez, Carlo Regazzoni</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-04-30 14:34:31</h6>
+<p class='card-text'>This paper presents an expert-guided active-inference-inspired framework for adaptive UAV swarm trajectory planning. The proposed method converts multi-UAV trajectory design from a repeated combinatorial optimization problem into a hierarchical probabilistic inference problem. In the offline phase, a genetic-algorithm planner with repulsive-force collision avoidance (GA--RF) generates expert demonstrations, which are abstracted into Mission, Route, and Motion dictionaries. These dictionaries are used to learn a probabilistic world model that captures how expert mission allocations induce route orders and how route orders induce motion-level behaviors. During online operation, the UAV swarm evaluates candidate actions by forming posterior beliefs over symbolic states and minimizing KL-divergence-based abnormality indicators with respect to expert-derived reference distributions. This enables mission allocation, route insertion, motion adaptation, and collision-aware replanning without rerunning the offline optimizer. Bayesian state estimators, including EKF and PF modules, are integrated at the motion level to improve trajectory correction under uncertainty. Simulation results show that the proposed framework preserves expert-like planning structure while producing smoother and more stable behavior than modified Q-learning. Additional validation using real-flight UAV trajectory data demonstrates that the learned world model can correct symbolic predictions under noisy and non-smooth observations, supporting its applicability to adaptive UAV swarm autonomy.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2604.27895v1' target='_blank'>Graph World Models: Concepts, Taxonomy, and Future Directions</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jiawei Liu, Senqiao Yang, Mingjun Wang, Yu Wang, Bei Yu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-04-30 14:09:14</h6>
+<p class='card-text'>As one of the mainstream models of artificial intelligence, world models allow agents to learn the representation of the environment for efficient prediction and planning. However, classical world models based on flat tensors face several key problems, including noise sensitivity, error accumulation and weak reasoning. To address these limitations, many recent studies use graph structure to decompose the environment into entity nodes and interactive edges, and model virtual environments in a structured space. This paper systematically formalizes and unifies these emerging graph-based works under the concept of graph world models (GWMs). To the best of our knowledge, GWMs have not yet been explicitly defined and surveyed as a unified research paradigm. Furthermore, we propose a taxonomy based on relational inductive biases (RIB), categorizing GWMs by the specific structural priors they inject: (1) spatial RIB for topological abstraction; (2) physical RIB for dynamic simulation; and (3) logical RIB for causal and semantic reasoning. For each model category, we outline the key design principles, summarize representative models, and conduct comparative analyses. We further discuss open challenges and future directions, including dynamic graph adaptation, probabilistic relational dynamics, multi-granularity inductive biases, and the need for dedicated benchmarks and evaluation metrics for GWMs.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2604.27821v1' target='_blank'>Learning-Based Hierarchical Scene Graph Matching for Robot Localization Leveraging Prior Maps</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Nimrod Millenium Ndulue, Jose Andres Millan-Romera, Matteo Giorgi, Holger Voos, Jose Luis Sanchez-Lopez</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-04-30 13:05:57</h6>
+<p class='card-text'>Accurate localization is a fundamental requirement for autonomous robots operating in indoor environments. Scene graphs encode the spatial structure of an environment as a hierarchy of semantic entities and their relationships, and can be constructed both online from robot sensor data and offline from architectural priors such as Building Information Models (BIM). Matching these two complementary representations enables drift correction in SLAM by grounding robot observations against a known structural prior. However, establishing reliable node-to-node correspondences between them remains an open challenge: existing combinatorial methods are prohibitively expensive at scale, and prior learned approaches address only flat graph matching, ignoring the multi-level semantic structure present in both representations. Here we present a learned, end-to-end differentiable pipeline that augments both graphs with semantically motivated edge types encoding intra- and inter- level relationships, explicitly exploiting this hierarchy to enable simultaneous matching from high-level room concepts down to low-level wall surfaces. Trained exclusively on floor plans, the proposed method outperforms the combinatorial baseline in F1 on real LiDAR environments while running an order of magnitude faster, demonstrating viable zero-shot generalization for BIM-assisted robot localization.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2604.27708v1' target='_blank'>Towards an Ethical AI Curriculum: A Pan-African, Culturally Contextualized Framework for Primary and Secondary Education</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Abidemi Kuburat Adedeji, Franklin Tchakounte, Sulaiman Oluwasegun Yusuff</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-04-30 10:54:59</h6>
+<p class='card-text'>Artificial intelligence (AI) is now embedded in educational, civic, and economic systems worldwide. For African primary and secondary education, this creates a double imperative: to prepare a young population (over sixty per cent of Africans are under twenty-five) for AI-mediated labour markets without uncritically importing curricula designed for other linguistic, cultural, and socio-political contexts. The African Union's Continental AI Strategy (2024) and the 2025 Africa Declaration on AI have elevated these questions to the continental agenda. This paper proposes a Pan-African, culturally contextualised, and ethically grounded framework for integrating AI education into African primary and secondary schools. The paper is a structured conceptual synthesis of continental and national policy documents, peer-reviewed scholarship on AI ethics, AI literacy, decolonial pedagogy, and Ubuntu-grounded AI governance. We contribute: (i) a framework of six guiding principles, four curriculum domains, five ethical competencies, and an age-banded progression from lower primary to upper secondary; (ii) a comparative analysis of continental and national policy contexts; (iii) an explicit mapping between global AI-ethics principles and Ubuntu-informed relational ethics; (iv) a planned empirical validation programme combining a Delphi study, teacher surveys across anglophone, francophone, lusophone, and arabophone contexts, and multi-country classroom piloting; and (v) targeted recommendations for policymakers, educators, civil society, and international partners. We argue that an ethical AI curriculum can serve as a transformative tool for equity, innovation, and social justice, and outline a research agenda to embed ethics, resilience, and critical thinking at the core of Africa's digital future.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2604.27669v1' target='_blank'>Fairness for distribution network operations and planning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Pedro F. C. de Carvalho, Zijie Liu, Md Umar Hashmi, Dirk Van Hertem</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-04-30 10:04:43</h6>
+<p class='card-text'>The incorporation of fairness into the distribution network (DN) planning and operation has become a key goal of recent studies. The cost of implementing fairness, denominated the price of fairness (PoF), covers the efficiency that is renounced for attaining social cohesion through fair outcomes. Locational disparity makes fairness schemes emerge to level the consumers playing field. However, fairness encompasses a range of notions. From egalitarian to merit-based criteria, various metrics are implemented as a tool for measuring equitable utility distribution. These have different mathematical complexities, from linear to non-linear programming cases, which affect their overall applicability. Hence, this study compiles the overarching fairness notions and metrics, reviewing how these affect stakeholders and the inherent mathematical optimisation in resource allocation problems. The aim is to support consistent and transparent planning and decision-making within DN operations.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2604.27658v1' target='_blank'>Mechanistic driven TCP and NTCP modeling for particle therapy accounting for a broad range of physical irradiation parameters and tissue environmental conditions</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Marco Battestini, Jules Morand, Giulio Bordieri, Marta Missiaggia, Emanuele Scifoni, Francesco G. Cordoni</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-04-30 09:51:53</h6>
+<p class='card-text'>In conventional radiotherapy, the probability of controlling tumor growth is quantified using Tumor Control Probability (TCP) models. Instead, the probability of experiencing a side effect after the irradiation of healthy tissues and organs is typically assessed using the concept of Normal Tissue Complication Probability (NTCP), an additional crucial metric for evaluating and comparing treatment plans.
+  This work is dedicated to the development, implementation, and application of a general mechanistic model to describe the effects of particle therapy (PT) on different tissue organizations beyond Poissonian assumptions, extending the Generalized Stochastic Microdosimetric Model (GSM2), i.e., a stochastic radiobiological model that describes the time evolution of DNA lesions in a cell nucleus according to microdosimetric principles, to the study of macroscopic biological systems. Specifically, we extend the biological stage of radiation damage of the GSM2 model to larger spatial and temporal scales, involving cell populations with a specific geometric and functional architecture.
+  The model's single-cell resolution allows it to account for energy deposition and tissue heterogeneity, considering different organ volume effects, cell type distributions, and oxygen gradients for different radiation qualities of the beam, that is, type, energy, and LET of radiation, and various fractionation schemes. We show the interplay between physical and environmental parameters on the induction of side effects on healthy tissues, for different radiation qualities and fractionation schemes, and we highlight the impact of biochemical heterogeneities in the target environment, for tumor response.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2604.27654v1' target='_blank'>MSR:Hybrid Field Modeling for CT-MRI Rigid-Deformable Registration of the Cervical Spine with an Annotated Dataset</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Bohai Zhang, Wenjie Chen, Mu Li, Kaixing Long, Xing Shen, Xinqiang Yao, Jincheng Yang, Jianting Chen, Wei Yang, Qianjin Feng, Lei Cao</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-04-30 09:48:51</h6>
+<p class='card-text'>Accurate CT-MRI registration of the cervical spine is essential for preoperative planning because this region is anatomically complex,highly variable,and vulnerable to injury of the vertebral arteries and spinal cord. However,cervical CT-MRI registration remains underexplored,particularly for rigid-deformable hybrid modeling,and the lack of high-quality annotated multimodal data further limits progress. To address these challenges, we construct and release a comprehensively annotated CT-MRI dataset, R-D-Reg, and propose MSR, a rigid-deformable hybrid registration framework for complex joint structures. Specifically, MSR includes a rigid registration module for independent local rigid alignment of individual vertebrae and a deformable registration module with an MSL block that combines Mamba-based global modeling and Swin Transformer-based local modeling through adaptive gating. The rigid and deformable deformation fields are then fused to generate a hybrid field that better preserves local anatomical consistency. The code and dataset are publicly available at https://github.com/ssc1230609-spec/MSR-registration.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2604.27622v1' target='_blank'>Exact formulations for rectangular-warehouse single-picker routing with scattered storage in single-block and two-block layouts</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:George Dunn</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-04-30 09:11:33</h6>
+<p class='card-text'>Order picking travel dominates much of warehouse effort, and exact routing is especially valuable when storage is scattered so pick locations are not fixed in advance. We address the single picker routing problem (SPRP) and its scattered-storage variant (SPRP-SS) in single-block and two-block rectangular warehouses. We propose two mixed-integer linear programming formulations that exploit structural properties of optimal tours to simplify connectivity modelling and remove redundant edge configurations: a Configuration Connectivity model tailored to single-block layouts and an Edge Connectivity model that extends to two-block layouts. In extensive computational experiments on large randomly generated benchmark sets for single-block and two-block rectangular layouts, we compare these formulations against established MILP and network-flow baselines for SPRP and SPRP-SS and report computational gains tied to the structural restrictions. The results support using compact, solver-based exact routing models in industrial settings where dynamic programming is cumbersome to integrate, particularly for SPRP-SS and for routing subproblems embedded in larger planning or warehouse-design optimizations.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2604.27586v1' target='_blank'>Trace-Level Analysis of Information Contamination in Multi-Agent Systems</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Anna Mazhar, Huzaifa Suri, Sainyam Galhotra</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-04-30 08:39:42</h6>
+<p class='card-text'>Reasoning over heterogeneous artifacts (PDFs, spreadsheets, slide decks, etc.) increasingly occurs within structured agent workflows that iteratively extract, transform, and reference external information. In these workflows, uncertainty is not merely an input-quality issue: it can redirect decomposition and routing decisions, reshape intermediate state, and produce qualitatively different execution trajectories. We study this phenomenon by treating uncertainty as a controlled variable: we inject structured perturbations into artifact-derived representations, execute fixed workflows under comprehensive logging, and quantify contamination via trace divergence in plans, tool invocations, and intermediate state. Across 614 paired runs on 32 GAIA tasks with three different language models, we find a decoupling: workflows may diverge substantially yet recover correct answers, or remain structurally similar while producing incorrect outputs. We characterize three manifestation types: silent semantic corruption, behavioral detours with recovery, and combined structural disruption and their control-flow signatures (rerouting, extended execution, early termination). We measure operational costs and characterize why commonly used verification guardrails fail to intercept contamination. We contribute (i) a formal taxonomy of contamination manifestations in structured workflows, (ii) a trace-based measurement framework for detecting and localizing contamination across agent interactions, and (iii) empirical evidence with implications for targeted verification, defensive design, and cost control.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2604.27582v1' target='_blank'>Assessing Pancreatic Ductal Adenocarcinoma Vascular Invasion: the PDACVI Benchmark</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:M. Riera-Marín, O. K. Sikha, J. Rodríguez-Comas, M. S. May, T. Kirscher, X. Coubez, P. Meyer, S. Faisan, Z. Pan, X. Zhou, X. Liang, C. Hémon, V. Boussot, J. -L. Dillenseger, J. -C. Nunes, K. -C. Kahl, C. Lüth, J. Traub, P. -H. Conze, M. M. Duh, A. Aubanell, R. de Figueiredo Cardoso, S. Egger-Hackenschmidt, J. García-López, M. A. González-Ballester, A. Galdran</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-04-30 08:37:37</h6>
+<p class='card-text'>Surgical resection remains the only potentially curative treatment for pancreatic ductal adenocarcinoma (PDAC), and eligibility depends on accurate assessment of vascular invasion (VI), i.e., tumor extension into adjacent critical vessels. Despite its importance for preoperative staging and surgical planning, computational VI assessment remains underexplored. Two major challenges are the lack of public datasets and the diagnostic ambiguity at the tumor-vessel interface, which leads to substantial inter-rater variability even among expert radiologists. To address these limitations, we introduce the CURVAS-PDACVI Dataset and Challenge, an open benchmark for uncertainty-aware AI in PDAC staging based on a densely annotated dataset with five independent expert annotations per scan. We also propose a multi-metric evaluation framework that extends beyond spatial overlap to include probabilistic calibration and VI assessment. Evaluation of six state-of-the-art methods shows that strong global volumetric overlap does not necessarily translate into reliable performance at clinically critical tumor-vessel interfaces. In particular, methods optimized for binary segmentation perform competitively on average overlap metrics, but often degrade in high-complexity cases with low expert consensus, either collapsing in volume or overextending at uncertain boundaries. In contrast, methods that model inter-rater disagreement produce better calibrated probabilistic maps and show greater robustness in these ambiguous cases. The benchmark highlights the limitations of volumetric accuracy as a proxy for localized surgical utility, motivating uncertainty-aware probabilistic models for preoperative decision-making.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2604.27572v1' target='_blank'>SandSim: Curve-Guided Gaussian Splatting for Reconstructing Sand Painting Processes</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yilin Wang, Haojie Huang, Chen Li, Yang Li, Changbo Wang, Chenhui Li</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-04-30 08:27:48</h6>
+<p class='card-text'>Sand painting is a process-driven art where visual appearance emerges from granular accumulation. Given a single image, reconstructing a plausible sand painting process requires modeling coherent stroke structures and material-dependent effects. Existing methods, including stroke-based optimization and diffusion-based video synthesis, often lack structural coherence and material consistency, leading to unrealistic drawing sequences. We present SandSim, a framework that reconstructs a sand painting process from a single image. We introduce a curve-guided Gaussian representation that models strokes as sequences of anisotropic primitives along continuous trajectories, whose smooth kernels capture the soft boundaries of sand strokes and enable coherent stroke formation. We further adopt a subtractive compositing scheme to model light attenuation during sand accumulation. We incorporate a semantic-guided planning module for scene decomposition and drawing order inference. Our framework jointly optimizes stroke geometry and appearance and can be integrated with a physics-based simulator for interactive sand dynamics and editing. Experiments show that our method produces temporally coherent and visually realistic results, achieving improved reconstruction quality and perceptual fidelity compared to existing approaches.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2604.27472v1' target='_blank'>PRTS: A Primitive Reasoning and Tasking System via Contrastive Representations</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yang Zhang, Jiangyuan Zhao, Chenyou Fan, Fangzheng Yan, Tian Li, Haitong Tang, Sen Fu, Xuan'er Wu, Qizhen Weng, Weinan Zhang, Xiu Li, Chi Zhang, Chenjia Bai, Xuelong Li</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-04-30 06:14:02</h6>
+<p class='card-text'>Vision-Language-Action (VLA) models advance robotic control via strong visual-linguistic priors. However, existing VLAs predominantly frame pretraining as supervised behavior cloning, overlooking the fundamental nature of robot learning as a goal-reaching process that requires understanding temporal task progress. We present \textbf{PRTS} (\textbf{P}rimitive \textbf{R}easoning and \textbf{T}asking \textbf{S}ystem), a VLA foundation model that reformulates pretraining through Goal-Conditioned Reinforcement Learning. By treating language instructions as goals and employing contrastive reinforcement learning, PRTS learns a unified embedding space where the inner product of state-action and goal embeddings approximates the log-discounted goal occupancy, the probability of reaching the language-specified goal from the current state-action, quantitatively assessing physical feasibility beyond static semantic matching. PRTS draws this dense goal-reachability supervision directly from offline trajectories without reward annotations, and folds it into the VLM backbone via a role-aware causal mask, incurring negligible overhead over vanilla behavior cloning. This paradigm endows the high-level reasoning system with intrinsic goal reachability awareness, bridging semantic reasoning and temporal task progress, and further benefits goal-conditioned action prediction. Pretrained on 167B tokens of diverse manipulation and embodied-reasoning data, PRTS reaches state-of-the-art performance on LIBERO, LIBERO-Pro, LIBERO-Plus, SimplerEnv, and a real-world suite of 14 complex tasks, with particularly substantial gains on long-horizon, contact-rich, and zero-shot novel-instruction settings, confirming that injecting goal-reachability awareness significantly improves both execution success and long-horizon planning of general-purpose robotic foundation policies.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2604.27450v1' target='_blank'>RAY-TOLD: Ray-Based Latent Dynamics for Dense Dynamic Obstacle Avoidance with TDMPC</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Seungho Han, Seokju Lee, Jeonguk Kang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-04-30 05:44:46</h6>
+<p class='card-text'>Dense, dynamic crowds pose a persistent challenge for autonomous mobile robots. Purely reactive planning methods, such as Model Predictive Path Integral (MPPI) control, often fail to escape local minima in complex scenarios due to their limited prediction horizon. To bridge this gap, we propose Ray-based Task-Oriented Latent Dynamics (RAY-TOLD), a hybrid control architecture that integrates obstacle information into latent dynamics and utilizes the robustness of physics-based MPPI with the long-horizon foresight of reinforcement learning. RAY-TOLD leverages a LiDAR-centric latent dynamics model to encode high-dimensional sensor data into a compact state representation, enabling the learning of a terminal value function and a policy prior. We introduce a policy mixture sampling strategy that augments the MPPI candidate population with trajectories derived from the learned policy, effectively guiding the planner towards the goal while maintaining kinematic feasibility. Extensive tests in a stochastic environment with high-density dynamic obstacles demonstrate that our method outperforms the MPPI baseline, reducing the collision rate. The results confirm that blending short-horizon physics-based rollouts with learned long-horizon intent significantly enhances navigation reliability and safety.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2604.27418v1' target='_blank'>MAAS-SFRThelper: An Integrated ESAPI Plugin for Structure Generation, Optimization, and Evaluation of Spatially Fractionated Radiation Therapy</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Japan K. Patel, Todd A. Wareing, Tenzin Kunkyab, Caleb Raman, Ilias Sachpazidis, Peter Szentivanyi, Ryan Clark, Gregory Gill, Pierre Lansonneur, Arjun Karnwal, Michael Kudla, Sergejs Unterkirhers, Junqi Song, Jun Yang, Anthony Magliari, Matthew C. Schmidt</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-04-30 04:48:38</h6>
+<p class='card-text'>Spatially fractionated radiation therapy (SFRT) planning requires three coordinated tasks: generation of high-dose sphere structures, position-aware optimization, and peak-valley dose ratio evaluation. We present MAAS-SFRThelper, a shared-source Eclipse Scripting Application Programming Interface (ESAPI) plugin that integrates structure generation, geometric-aware optimization, and peak-valley dose ratio evaluation for SFRT into a single workflow inside Varian's Eclipse treatment planning system. The plugin exposes five task-oriented tabs sharing common services for sphere extraction and objective creation. The SphereLattice tab generates sphere lattices using five placement patterns. The Optimization tab searches over candidate lattice positions using a four-metric geometric surrogate score and triggers VMAT optimization and dose calculation. The Evaluation tab implements four analysis modes; its three-dimensional peak-valley classification recovers sphere centers from the lattice structure through a geometric extraction pipeline rather than relying on dose thresholds. We validated all functionality on digital phantoms against analytic ground truth. The plugin is distributed as source code under the Varian Limited Use Software License Agreement. Source code and documentation are publicly available on GitHub.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2604.27411v1' target='_blank'>Detecting is Easy, Adapting is Hard: Local Expert Growth for Visual Model-Based Reinforcement Learning under Distribution Shift</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Haiyang Zhao</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-04-30 04:28:02</h6>
+<p class='card-text'>Visual model-based reinforcement learning (MBRL) agents can perform well on the training distribution, but often break down once the test environment shifts. In visual MBRL, recognizing that a shift has occurred is often the easier part; the harder part is turning that recognition into useful action-level correction. We study several ways of responding to shift, including planning penalties, direct fine-tuning, global residual correction, and coarse gating. In our experiments, these approaches either do not improve closed-loop control or hurt in-distribution (ID) performance. Based on these negative results, we propose JEPA-Indexed Local Expert Growth. The method uses a frozen JEPA representation only for problem indexing, while cluster-specific residual experts add local action corrections on top of the original controller. The baseline controller itself is not modified. Using paired-bootstrap evaluation, we find that the original naive-preference variant is not stable under stricter testing. In contrast, the harder-pair variant produces statistically significant OOD improvements on all four evaluated shift conditions while preserving ID performance. The learned experts also remain useful when the same shift is encountered again, which supports the view of adaptation as incremental knowledge growth rather than repeated full retraining. We further show that automatic ID rejection can be achieved with simple density models, whereas fine-grained discrimination among OOD sub-families is limited by the representation. Overall, the results indicate that, for visual MBRL under distribution shift, the main challenge is not simply noticing that the environment has changed, but applying the right local action correction after the change has been recognized.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2604.27375v1' target='_blank'>VeraRetouch: A Lightweight Fully Differentiable Framework for Multi-Task Reasoning Photo Retouching</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yihong Guo, Youwei Lyu, Jiajun Tang, Yizhuo Zhou, Hongliang Wang, Jinwei Chen, Changqing Zou, Qingnan Fan</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-04-30 03:39:32</h6>
+<p class='card-text'>Reasoning photo retouching has gained significant traction, requiring models to analyze image defects, give reasoning processes, and execute precise retouching enhancements. However, existing approaches often rely on non-differentiable external software, creating optimization barriers and suffering from high parameter redundancy and limited generalization. To address these challenges, we propose VeraRetouch, a lightweight and fully differentiable framework for multi-task photo retouching. We employ a 0.5B Vision-Language Model (VLM) as the central intelligence to formulate retouching plans based on instructions and scene semantics. Furthermore, we develop a fully differentiable Retouch Renderer that replaces external tools, enabling direct end-to-end pixel-level training through decoupled control latents for lighting, global color, and specific color adjustments. To overcome data scarcity, we introduce AetherRetouch-1M+, the first million-scale dataset for professional retouching, constructed via a new inverse degradation workflow. Furthermore, we propose DAPO-AE, a reinforcement learning post-training strategy that enhances autonomous aesthetic cognition. Extensive experiments demonstrate that VeraRetouch achieves state-of-the-art performance across multiple benchmarks while maintaining a significantly smaller footprint, enabling mobile deployment. Our code and models are publicly available at https://github.com/OpenVeraTeam/VeraRetouch.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2604.27351v1' target='_blank'>Heterogeneous Scientific Foundation Model Collaboration</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Zihao Li, Jiaru Zou, Feihao Fang, Xuying Ning, Mengting Ai, Tianxin Wei, Sirui Chen, Xiyuan Yang, Jingrui He</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-04-30 03:02:27</h6>
+<p class='card-text'>Agentic large language model systems have demonstrated strong capabilities. However, their reliance on language as the universal interface fundamentally limits their applicability to many real-world problems, especially in scientific domains where domain-specific foundation models have been developed to address specialized tasks beyond natural language. In this work, we introduce Eywa, a heterogeneous agentic framework designed to extend language-centric systems to a broader class of scientific foundation models. The key idea of Eywa is to augment domain-specific foundation models with a language-model-based reasoning interface, enabling language models to guide inference over non-linguistic data modalities. This design allows predictive foundation models, which are typically optimized for specialized data and tasks, to participate in higher-level reasoning and decision-making processes within agentic systems. Eywa can serve as a drop-in replacement for a single-agent pipeline (EywaAgent) or be integrated into existing multi-agent systems by replacing traditional agents with specialized agents (EywaMAS). We further investigate a planning-based orchestration framework in which a planner dynamically coordinates traditional agents and Eywa agents to solve complex tasks across heterogeneous data modalities (EywaOrchestra). We evaluate Eywa across a diverse set of scientific domains spanning physical, life, and social sciences. Experimental results demonstrate that Eywa improves performance on tasks involving structured and domain-specific data, while reducing reliance on language-based reasoning through effective collaboration with specialized foundation models.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2604.27315v1' target='_blank'>Cross-lingual Comparison of Research Funding Projects with Multilingual Sentence-BERT: Evidence from KAKENHI, NIH, NSF, and UKRI</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Miki Kimura-Ida</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-04-30 01:57:42</h6>
+<p class='card-text'>Cross-national comparison of research funding projects is increasingly important for science policy and strategic planning, but language differences remain a major obstacle. In particular, KAKENHI project descriptions are written primarily in Japanese, whereas projects from major overseas funding agencies, such as NSF, NIH, and UKRI, are documented in English.
+  This study investigates whether multilingual sentence embeddings can support meaningful cross-lingual comparison of research funding projects, with particular attention to the semantic effects of translating Japanese texts into English. For each KAKENHI project, we construct two representations: the original Japanese text and its machine-translated English version, both embedded in a shared semantic space using a multilingual Sentence-BERT model. We then compare their distances and nearest-neighbor relationships with respect to projects from English-language funding agencies.
+  The results show that the Japanese and translated English representations of the same KAKENHI project are, on average, located closer to one another than to native English projects, indicating substantial cross-lingual alignment. However, the overlap of nearest neighbors between the two representations is limited, averaging 2.9 out of 10. This suggests that multilingual embeddings capture semantic similarity across languages to a meaningful extent, while language differences and translation still affect the local structure of the embedding space.
+  These findings suggest that multilingual embeddings provide a useful basis for large-scale exploratory comparison of funding projects across countries and agencies. At the same time, they offer an empirical reference for assessing semantic drift when Japanese research project data are translated into English for international analysis.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2604.27245v1' target='_blank'>Addressing the Reality Gap: A Three-Tension Framework for Agentic AI Adoption</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jason Fournier, Kacper Łodzikowski</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-04-29 22:33:36</h6>
+<p class='card-text'>Generative AI has rapidly entered education through free consumer tools, outpacing the ability of schools and universities to respond. Now a new wave of more autonomous agentic AI systems--with the capacity to plan and act towards goals--promises both greater educational personalization and greater disruption. This chapter argues that successfully navigating these innovations requires balancing three core tensions: (1) Implementation Feasibility, or the practical capacity to integrate AI sustainably into real classrooms; (2) Adaptation Speed, or the mismatch between fast-evolving AI capabilities and the slower pace of educational change; and (3) Mission Alignment, or the need to ensure AI applications uphold educational values such as equity, privacy, and pedagogical integrity. First, we review early evidence of generative and agentic AI in various sectors and in frontline education to illustrate these tensions in context. Then, we present a three-tension framework to guide decision-makers in evaluating and designing AI initiatives across K-12 and higher education. We provide examples of how the framework can be applied to plan responsible AI deployments, and we identify emerging trends--such as curriculum-linked AI agents and educator-informed AI design--along with open research directions. We conclude the chapter with recommendations for educational leaders to proactively engage with the opportunities and challenges of AI, so that this technology can be harnessed to enhance teaching and learning in the decade ahead.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2604.27237v1' target='_blank'>X-Ray Diagnostics Analysis Verification and Exploration (xDAVE) Code for the Prediction and Interpretation of X-Ray Thomson Scattering Experiments</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Hannah M. Bellenbaum, Dave A. Chapman, Maximilian P. Böhme, Thomas Gawne, Sebastian Schwalbe, Willow M. Martin, Michael Bussmann, Dirk O. Gericke, Uwe Hernandez Acosta, Jan Vorberger, Tobias Dornheim</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-04-29 22:15:52</h6>
+<p class='card-text'>X-ray Thomson scattering (XRTS) is a common diagnostic used in the warm dense matter (WDM) regime to estimate plasma parameters like density, temperature and charge state. Experimental analysis typically relies on a forward model to obtain estimates for these parameters, as the measured spectrum is a convolution of the dynamic structure factor (DSF) and the source-instrument function. The Chihara decomposition, where the spectrum is separated into contributions from bound and free electrons, is commonly used to estimate DSFs in the WDM regime, as it allows for the fast calculation of DSFs and therefore can easily be applied in a large-scale parameter optimization. Due to the limited availability of XRTS codes, in this work we present the ``\textbf{X}-ray \textbf{D}iagnostics, \textbf{A}nalysis, \textbf{V}erification and \textbf{E}xploration`` (\texttt{xDAVE}) code, designed to quickly estimate DSFs using the Chihara decomposition and analyse experimental spectra. The code is validated by re-analysing an experiment with isochorically heated beryllium at the OMEGA Laser Facility. In addition, we demonstrate the applicability of the code to plan experiments and predict scattering spectra through the coupling to a ray-tracing code. Lastly, the importance of accounting for the energy-dependence of spectrometer instrument functions is demonstrated by comparing ray-tracing simulations to the standard convolution for strongly compressed Beryllium shots at the National Ignition Facility similar to previously published results.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2604.27217v1' target='_blank'>Toward Personalized Digital Twins for Cognitive Decline Assessment: A Multimodal, Uncertainty-Aware Framework</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Bulent Soykan, Gulsah Hancerliogullari Koksalmis, Hsin-Hsiung Huang, Laura J. Brattain</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-04-29 21:40:55</h6>
+<p class='card-text'>Cognitive decline is highly heterogeneous across individuals, which complicates prognosis, trial design, and treatment planning. We present the Personalized Cognitive Decline Assessment Digital Twin (PCD-DT), a multimodal and uncertainty-aware framework for modeling patient-specific disease trajectories from sparse, noisy, and irregular longitudinal data. The framework combines three methodological components: (1) latent state-space models for individualized temporal dynamics, (2) multimodal fusion for clinical, biomarker, and imaging features, and (3) uncertainty-aware validation and adaptive updating for robust digital twin operation. We also outline how conditional generative models can support data augmentation and stress testing for underrepresented progression patterns. As a preliminary feasibility study, we analyze longitudinal TADPOLE trajectories and show clear separation between cognitively normal and Alzheimer's disease cohorts in ADAS13, ventricle volume, and hippocampal volume over five years. We further conduct a multimodal next-visit prediction ablation using an LSTM sequence model on 3{,}003 visit-pair sequences derived from TADPOLE, where the combined cognitive plus MRI configuration achieves the lowest standardized RMSE for both ADAS13 (0.4419) and ventricle volume (0.5842), outperforming a Last Observation Carried Forward baseline. A Bayesian tensor modeling component for high-dimensional imaging fusion is also discussed. These results support the feasibility of the proposed architecture while also highlighting the need for stronger uncertainty calibration and longer-horizon predictive evaluation. The PCD-DT framework provides a principled starting point for personalized in silico modeling in neurodegenerative disease. This work positions PCD-DT as a foundational step toward clinically deployable, uncertainty-aware digital twin systems.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2604.27186v1' target='_blank'>Learning to Spend: Model Predictive Control for Budgeting under Non-Stationary Returns</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Nilavra Pathak, Smriti Shyamal, Prasant Mhasker, Christopher Swartz</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-04-29 20:39:25</h6>
+<p class='card-text'>We study finite-horizon budget allocation as a closed-loop economic control problem and evaluate receding-horizon Model Predictive Control (MPC) relative to reactive budgeting policies. Budgets are allocated periodically under execution noise and operational constraints, while return efficiency may evolve over time. Using a controlled simulation framework motivated by digital marketing, we compare reactive pacing to MPC across environments with increasing degrees of non-stationarity. Our results show that non-stationarity alone does not justify predictive control. When return dynamics are stationary or evolve through unpredictable stochastic drift, MPC offers no systematic advantage over reactive baselines. By contrast, when return efficiency exhibits predictable structure over the planning horizon, that is captured through an underlying model, MPC consistently outperforms reactive budgeting by exploiting intertemporal trade-offs.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2604.27101v1' target='_blank'>A Two Stage Pipeline for Left Atrial Wall Constrained Scar Segmentation and Localization from LGE-MR Images</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Bipasha Kundu, Cristian Linte</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-04-29 18:46:40</h6>
+<p class='card-text'>Accurate segmentation and localization of left atrial (LA) ablation scars from Late gadolinium enhancement (LGE)-MRI is essential for assessing the lesion completeness and guiding ablation therapy. Incomplete or discontinuous lesions can increase the recurrence rate of the therapy and inaccurate localization can misguide treatment planning. However, reliable quantification and localization of scar in LGE-MRI is challenging. The severely class imbalanced scar voxels, thin structure of the LA wall, and weak tissue contrast often lead to unrealistic scar predictions. In this paper, we propose a two stage nnUNet based framework that takes LA anatomy into account to help with more precise scar localization and segmentation. In the first stage, an nnUNet model is trained to segment the LA cavity. In the second stage, patient specific cavity and wall signed distance maps (SDMs) are derived from the predicted anatomy to use as geometry aware inputs, and explicitly encode each voxel's signed spatial relationship to the atrial cavity and wall. This approach transforms scar segmentation from a solely intensity-based classification into anatomy-conditioned localization task, providing a continuous spatial prior that stabilizes learning for the thin atrial wall and suppresses topologically invalid predictions. To further address boundary ambiguity, we introduce a wall ROI-masked weighted loss combined with boundary uncertainty-aware supervision strategy that restricts learning to the atrial wall, while accounting for severe class imbalance. We evaluated our approach on the LAScarQS 2022 dataset and achieved a Dice of 61.1% and ASSD of 1.711mm. Our reliable and effective framework improves scar segmentation and localization accuracy by enforcing anatomical validity through geometry-aware supervision, and lowering the false positive detections far away from the atrial wall.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2604.26946v1' target='_blank'>Three-Step Nav: A Hierarchical Global-Local Planner for Zero-Shot Vision-and-Language Navigation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Wanrong Zheng, Yunhao Ge, Laurent Itti</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-04-29 17:55:05</h6>
+<p class='card-text'>Breakthrough progress in vision-based navigation through unknown environments has been achieved by using multimodal large language models (MLLMs). These models can plan a sequence of motions by evaluating the current view at each time step against the task and goal given to the agent. However, current zero-shot Vision-and-Language Navigation (VLN) agents powered by MLLMs still tend to drift off course, halt prematurely, and achieve low overall success rates. We propose Three-Step Nav to counteract these failures with a three-view protocol: First, "look forward" to extract global landmarks and sketch a coarse plan. Then, "look now" to align the current visual observation with the next sub-goal for fine-grained guidance. Finally, "look backward" audits the entire trajectory to correct accumulated drift before stopping. Requiring no gradient updates or task-specific fine-tuning, our planner drops into existing VLN pipelines with minimal overhead. Three-Step Nav achieves state-of-the-art zero-shot performance on the R2R-CE and RxR-CE dataset. Our code is available at https://github.com/ZoeyZheng0/3-step-Nav.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2604.26919v1' target='_blank'>Causal Learning with Neural Assemblies</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Evangelia Kopadi, Dimitris Kalles</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-04-29 17:34:33</h6>
+<p class='card-text'>Can Neural Assemblies -- groups of neurons that fire together and strengthen through co-activation -- learn the direction of causal influence between variables? While established as a computationally general substrate for classification, parsing, and planning, neural assemblies have not yet been shown to internalize causal directionality. We demonstrate that the inherent operations of neural assemblies -- projection, local plasticity control, and sparse winner selection -- are sufficient for directional learning. We introduce DIRECT (DIRectional Edge Coupling/Training), a mechanism that co-activates source and target assemblies under an adaptive gain schedule to internalize directed relations. Unlike backpropagation-based methods, DIRECT relies solely on local plasticity, making the resulting causal claims auditable at the mechanism level. Our findings are verified through a dual-readout validation strategy: (i) synaptic-strength asymmetry, measuring the emergent weight gap between forward and reverse links, and (ii) functional propagation overlap, quantifying the reliability of directional signal flow. Across multiple domains, the framework achieves perfect structural recovery under a supervised, known-structure setting. These results establish neural assemblies as an auditable bridge between biologically plausible dynamics and formal causal models, offering an "explainable by design" framework where causal claims are traceable to specific neural winners and synaptic asymmetries.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js'></script>
+</body>
+</html>
