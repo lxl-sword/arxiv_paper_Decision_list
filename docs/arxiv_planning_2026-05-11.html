@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>planning - 2026-05-11</title>
+<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap' rel='stylesheet'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css'>
+<style>
+body {
+font-family: 'Roboto', sans-serif;
+background-color: #f5f7fa;
+padding: 20px;
+}
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.card-title {
+    font-weight: 700;
+}
+.card:hover {
+    transform: scale(1.02);
+    transition: 0.3s ease-in-out;
+}
+</style>
+</head>
+<body>
+<div class='container'>
+<h1 class='text-center my-4'><i class='fas fa-book'></i>planning - 2026-05-11</h1>
+<div class='row'>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2605.08084v1' target='_blank'>123D: Unifying Multi-Modal Autonomous Driving Data at Scale</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Daniel Dauner, Valentin Charraut, Bastian Berle, Tianyu Li, Long Nguyen, Jiabao Wang, Changhui Jing, Maximilian Igl, Holger Caesar, Boris Ivanovic, Yiyi Liao, Andreas Geiger, Kashyap Chitta</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-05-08 17:59:53</h6>
+<p class='card-text'>The pursuit of autonomous driving has produced one of the richest sensor data collections in all of robotics. However, its scale and diversity remain largely untapped. Each dataset adopts different 2D and 3D modalities, such as cameras, lidar, ego states, annotations, traffic lights, and HD maps, with different rates and synchronization schemes. They come in fragmented formats requiring complex dependencies that cannot natively coexist in the same development environment. Further, major inconsistencies in annotation conventions prevent training or measuring generalization across multiple datasets. We present 123D, an open-source framework that unifies such multi-modal driving data through a single API. To handle synchronization, we store each modality as an independent timestamped event stream with no prescribed rate, enabling synchronous or asynchronous access across arbitrary datasets. Using 123D, we consolidate eight real-world driving datasets spanning 3,300 hours and 90,000 kilometers, together with a synthetic dataset with configurable collection scripts, and provide tools for data analysis and visualization. We conduct a systematic study comparing annotation statistics and assessing each dataset's pose and calibration accuracy. Further, we showcase two applications 123D enables: cross-dataset 3D object detection transfer and reinforcement learning for planning, and offer recommendations for future directions. Code and documentation are available at https://github.com/kesai-labs/py123d.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2605.08071v1' target='_blank'>Vibe Econometrics and the Analysis Contract</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Lydia Ashton</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-05-08 17:54:47</h6>
+<p class='card-text'>"Vibe coding" and "vibe analytics" have been framed as a democratization of technical capability. This paper argues that AI-assisted methodology more broadly, or what I call "vibe methodology," also democratizes the failure modes specific to each domain. When AI assists with methods whose validity depends on assumptions that cannot be verified from the output alone (a class I call "vibe inference"), the failure surface is structurally different: the output does not reliably signal invalidity, and when it does, recognizing the signal requires the expertise the workflow bypasses. I focus on "vibe econometrics," the subset of AI-assisted causal analysis where identification can be named faster than it can be audited. The claim of this paper is not that AI invents inferential failures that did not previously exist, but that it changes their incidence, observability, and persuasive force enough to create a practically distinct governance problem. This results in three failure modes: method-data mismatch, where AI bypasses expertise at execution; confidence laundering, where AI amplifies the credibility of formatted output; and invisible forking, which spans both. What is new is not the failure modes but AI's industrialization of their packaging. The barrier between naming a method and executing it has collapsed, and weak foundations, dressed as rigorous analysis, now reach audiences at a scale, speed, and polish that previously required expertise. I propose the Analysis Contract, a pre-commitment framework that adapts the logic of pre-analysis plans and the Causal Roadmap to the AI-assisted setting. The contract imposes three conditions before a causal claim is made: a method-data contract, a data audit, and a pre-commitment statement defining what would count as a disconfirming result. The framework generalizes across domains of vibe inference through domain-specific instantiation.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2605.08035v1' target='_blank'>PropSplat: Map-Free RF Field Reconstruction via 3D Gaussian Propagation Splatting</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:William Bjorndahl, Maninder Pal Singh, Farhad Nouri, Joseph Camp</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-05-08 17:24:06</h6>
+<p class='card-text'>Building a site-specific propagation model typically requires either ray-tracing over detailed 3D maps or dense measurement campaigns. Both approaches are expensive and often infeasible for rapid deployments where geographic data is unavailable or outdated. We present PropSplat, a map-free propagation modeling method that reconstructs radio frequency (RF) fields using 3D anisotropic Gaussian primitives. Each Gaussian encodes a scalar path loss offset relative to an explicit baseline path loss model with a learnable path loss exponent. Gaussians are initialized along observed transmitter--receiver paths and optimized end-to-end to learn the propagation environment without external information like floor plans, terrain databases, or clutter data. We evaluate PropSplat against wireless radiance field methods NeRF$^2$, GSRF, and WRF-GS+ on two real-world datasets. On large-scale outdoor drive-tests spanning multiple topographical regions at six sub-6 GHz frequencies, PropSplat achieves 5.38 dB RMSE when training measurements are spaced 300m apart and outperforms WRF-GS+ (5.87 dB), GSRF (7.46 dB), and NeRF$^2$ (14.76 dB). On indoor Bluetooth Low Energy measurements, PropSplat achieves 0.19m mean localization error, an order of magnitude better than NeRF$^2$ (1.84m), while achieving near-identical received signal strength prediction accuracy. These results show that accurate site-specific propagation reconstruction is achievable from sparse RF-native measurements. The need for geographic data as a prerequisite for scalable RF environment modeling is reduced.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2605.08019v1' target='_blank'>Reason to Play: Behavioral and Brain Alignment Between Frontier LRMs and Human Game Learners</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Botos Csaba, Sreejan Kumar, Austin Tudor David Andrews, Laurence Hunt, Chris Summerfield, Joshua B. Tenenbaum, Rui Ponte Costa, Marcelo G. Mattar, Momchil Tomov</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-05-08 17:07:41</h6>
+<p class='card-text'>Humans rapidly learn abstract knowledge when encountering novel environments and flexibly deploy this knowledge to guide efficient and intelligent action. Can modern AI systems learn and plan in a similar way? We study this question using a dataset of complex human gameplay with concurrent fMRI recordings, in which participants learn novel video games that require rule discovery, hypothesis revision, and multi-step planning. We jointly evaluate models by their ability to play the games, match human learning behavior, and predict brain activity during the same task, comparing a suite of frontier Large Reasoning Models (LRMs) against model-free and model-based deep reinforcement learning agents and a Bayesian theory-based agent. We find that frontier LRMs most closely match human behavioral patterns during game discovery and predict brain activity an order of magnitude better than both reinforcement learning alternatives across cortical and subcortical regions, with effects robust to permutation controls. Through targeted manipulations, we further show that brain alignment reflects the model's in-context representation of the game state rather than its downstream planning or reasoning. Our results establish LRMs as compelling computational accounts of human learning and decision making in complex, naturalistic environments. Project page with interactive replays: https://botcs.github.io/reason-to-play/</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2605.07984v1' target='_blank'>Where's the Plan? Locating Latent Planning in Language Models with Lightweight Mechanistic Interventions</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Nicole Ma, Nick Rui</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-05-08 16:44:21</h6>
+<p class='card-text'>We study planning site formation in language models -- where internal representations of structurally-constrained future tokens form during the forward pass, and whether they causally drive generation. Using rhyming-couplet completion as a clean test of forward-looking constraint, we apply two lightweight methods (linear probing and activation patching) across Qwen3, Gemma-3, and Llama-3 at more than ten scales. Probing shows that future-rhyme information is linearly decodable at the line boundary, with signal that strengthens with scale in all three families. Activation patching reveals that only Gemma-3-27B causally relies on this encoding, exhibiting a handoff in which the causal driver migrates from the rhyme word to the line boundary around layer 30. Every other model we test conditions on the rhyme word throughout generation, with near-zero causal effect at the line boundary despite strong probe signal. We localize the Gemma-3-27B handoff to five attention heads through two-stage path patching that recover ~90% of the rhyme-routing capacity at the newline.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2605.07983v1' target='_blank'>Price and Payoff: Non-Determinism in Fault Tolerant Quantum Computation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Aditi Awasthi, Sayam Sethi, Sahil Khan, Gokul Subramanian Ravi, Jonathan Mark Baker</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-05-08 16:44:12</h6>
+<p class='card-text'>A promising approach to achieving scalable fault-tolerant quantum computation is the use of quantum error correction (QEC) codes augmented with magic states i.e. resource states produced via distillation, cultivation, or $R_z$ synthesis and teleported into the circuit as needed. Because magic-state production dominates the space-time volume of fault-tolerant programs, system architects must decide how many production units to allocate. Current approaches rely on deterministic analysis that either provisions for worst-case peak demand (wasting valuable qubit resources on factories that are never simultaneously utilized) or assumes average demand, which increases execution time. In this work, we build a simulation framework that couples circuit scheduling with different stochastic magic state production models, and use it to quantify the impact of non-determinism on circuit execution. We show that non-determinism has a dual effect that deterministic models cannot capture: it inflates total execution time (the price), while deflating peak per-cycle resource demand (the payoff). For distillation-based architectures, this demand smoothing shifts the space-time-optimal provisioning point: fewer factories are needed to minimize space-time volume than deterministic analysis predicts. Across benchmarks, stochastic-aware provisioning reduces space-time volume by up to 27% compared to the deterministic optimum for distillation, while requiring up to 30% fewer factories. We characterize these effects across each preparation mechanism, map the resulting design-space tradeoffs, and demonstrate that static resource estimation systematically mis-characterizes the cost of fault-tolerant execution. Our results establish that stochastic-aware analysis is necessary for right-sizing the factory allocations and should replace deterministic heuristics as the standard methodology for FTQC resource planning.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2605.07931v1' target='_blank'>One Token Per Frame: Reconsidering Visual Bandwidth in World Models for VLA Policy</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Zuojin Tang, Shengchao Yuan, Xiaoxin Bai, Zhiyuan Jin, De Ma, Gang Pan, Bin Liu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-05-08 16:04:43</h6>
+<p class='card-text'>Vision-language-action (VLA) models increasingly rely on auxiliary world modules to plan over long horizons, yet how such modules should be parameterized on top of a pretrained VLA remains an open design question. Existing world-model-augmented VLAs typically pass the per-frame visual stream into the world module at high visual bandwidth and treat its rollout as a side product of action prediction; under a constrained adaptation budget on a frozen backbone, this leaves both the per-frame representation and the latent action coupling under-examined. We introduce OneWM-VLA, which compresses each view into a single semantic token per frame through an Adaptive Attention Pooling, and produces the resulting latent stream and the action trajectory under a single flow-matching objective rather than connecting them through a separate decoder. Empirically, we find that per-frame visual bandwidth can be reduced to a single token without compromising long-horizon performance under our setup. Trained with 14.71M LoRA parameters on a $π_0$ (2B) backbone, OneWM-VLA improves the average success rate from 47.9% to 61.3% on MetaWorld~MT50, reaches 95.6% on LIBERO-Long (vs.85.2% for $π_0$), and reaches 60.0% on the long-horizon deformable task Fold Cloth on a real Piper arm (vs.20.0% for $π_0$).</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2605.07880v1' target='_blank'>Robust Capacity Expansion under Wildfire Ignition Risk and High Renewable Penetration</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Tomás Tapia, Ryan Piansky, Yury Dvorkin, Jean-Paul Watson</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-05-08 15:33:10</h6>
+<p class='card-text'>In power systems, the risk of wildfire ignition has increased significantly in recent years. The impact and severity of these events on energy dispatch, as well as their societal ramifications, make wildfire prevention critical for power system planning and operation. A common intervention by system operators is to de-energize transmission lines to mitigate the risk of fire caused by equipment failures. With the growing integration of variable renewable generation, managing and preparing the system to de-energization under wildfire risk has become even more challenging. In this context, mitigation decisions such as installing battery energy storage systems and undergrounding transmission lines can reduce the risk and adverse effects associated with de-energization and renewable generation variability. This paper presents a robust optimization model to determine the optimal location of battery storage and undergrounding of transmission line investment, utilizing representative weeks and uncertainty sets to capture the temporal relationship of uncertain variables. Specifically, this paper addresses: (i) the worst-case realization of ignition risk leading to the de-energization of transmission lines, combined with the worst-case realization of renewable energy availability, and (ii) the optimal investment decisions for energy storage capacity and undergrounding of transmission lines that are exposed to ignition risk. The proposed model is formulated as a mixed-integer linear programming (MILP) problem, employing duality theory and binary decomposition to address nonlinearities, and is solved using a column-and-constraint generation algorithm. The proposed framework is evaluated on a model of the San Diego power system, demonstrating its practical effectiveness in improving the resilience to wildfire risk.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2605.07768v1' target='_blank'>Interactive Trajectory Planning with Learning-based Distributionally Robust Model Predictive Control and Markov Systems</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Erik Börve, Nikolce Murgovski, Morteza Haghir Chehreghani, Leo Laine</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-05-08 14:09:54</h6>
+<p class='card-text'>We investigate interactive trajectory planning subject to uncertainty in the decisions of surrounding agents. To control the ego-agent, we aim to first learn the decision distribution and solve a Stochastic Model Predictive Control (SMPC) problem. To account for errors in the learned distribution, we show that it is possible to utilize Probably Approximately Correct (PAC) learning in combination with Distributionally Robust (DR) optimization to obtain a solution which accounts for the errors induced by the learning model. The results indicate that our PAC learning-based DR-MPC framework provides a method to interpolate between a robust MPC and an omnipotent SMPC, based on the available number of samples.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2605.07744v1' target='_blank'>Alternating Target-Path Planning for Scalable Multi-Agent Coordination</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yu Kumagai, Keisuke Okumura</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-05-08 13:50:51</h6>
+<p class='card-text'>The concurrent target assignment and pathfinding (TAPF) problem extends multi-agent pathfinding (MAPF) by asking planners to allocate distinct targets and collision-free paths to agents. Prior work on TAPF has relied exclusively on Conflict-Based Search (CBS), which tightly couples target assignment and pathfinding, resulting in compute-intensive, non-scalable solutions. In contrast, we propose an iterative refinement framework that decouples target assignment from pathfinding. Our framework builds on modern, fast, suboptimal MAPF solvers, such as LaCAM. Specifically, within a given time budget, it repeatedly solves MAPF for the current target assignment, identifies bottleneck agents via MAPF feedback, and refines the assignment. Empirical results show that feedback-driven reassignment loop is effective, enabling our framework to scale well beyond the reach of the state-of-the-art CBS-based solver while maintaining decent solution quality. This represents a solid step toward practical, large scale TAPF suitable for real-world setups.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2605.07736v1' target='_blank'>Online Goal Recognition using Path Signature and Dynamic Time Warping</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Douglas Tesch, Nathan Gavenski, Leonardo Amado, Odinaldo Rodrigues, Felipe Meneguzzi</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-05-08 13:45:14</h6>
+<p class='card-text'>Online goal recognition in continuous domains poses two central challenges: efficiently encoding large trajectories and effectively comparing them. Recent work addresses these challenges by using custom state-space representations and metrics to compare observations against hypotheses. However, these approaches often overlook well-established encoding techniques used in other domains that offer substantial advantages. This paper introduces a novel method for online goal recognition that leverages path signatures, a compact, expressive representation of rough path theory that efficiently captures key semantic features of trajectories, enabling more meaningful comparisons between them. Experiments show that our method consistently outperforms the state of the art in predictive accuracy and online planning efficiency, while remaining competitive offline.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2605.07703v1' target='_blank'>Finite-Time Analysis of MCTS in Continuous POMDP Planning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Da Kong, Vadim Indelman</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-05-08 13:13:29</h6>
+<p class='card-text'>This paper presents a finite-time analysis for Monte Carlo Tree Search (MCTS) in Partially Observable Markov Decision Processes (POMDPs), with probabilistic concentration bounds in both discrete and continuous observation spaces. While MCTS-style solvers such as POMCP achieve empirical success in many applications, rigorous finite-time guarantees remain an open problem due to the nonstationarity and the interdependencies induced by heuristic action selection (e.g., UCB). In the discrete setting, we address these challenges by extending the polynomial exploration bonus to UCB in POMDP setting, yielding polynomial concentration bounds for the empirical value estimation at the root node. For continuous observation spaces, we introduce an abstract partitioning framework and propose a finite-time bound on partitioning loss. Under mild conditions, we prove highprobability bound on value estimates in POMDPs with continuous observation space. Specifically, we propose Voro-POMCPOW, a variant of POMCPOW with f inite-time guarantees that adaptively partitions the continuous observation space using Voronoi cells. This approach maintains a finite branching factor while preserving the original observation generator. Empirical validation demonstrates that the proposed Voro-POMCPOW shows competitive performance while providing theoretical guarantees. Although our analysis focuses on continuous POMDPs, the techniques developed herein are also applicable to continuous MDPs, closing another gap on the MDP side.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2605.07637v1' target='_blank'>Learning to Communicate Locally for Large-Scale Multi-Agent Pathfinding</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Valeriy Vyaltsev, Alsu Sagirova, Anton Andreychuk, Yuri Kuratov, Konstantin Yakovlev, Aleksandr Panov, Alexey Skrynnik</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-05-08 12:05:08</h6>
+<p class='card-text'>Multi-agent pathfinding (MAPF) is a widely used abstraction for multi-robot trajectory planning problems, where multiple homogeneous agents move simultaneously within a shared environment. Although solving MAPF optimally is NP-hard, scalable and efficient solvers are critical for real-world applications such as logistics and search-and-rescue. To this end, the research community has proposed various decentralized suboptimal MAPF solvers that leverage machine learning. Such methods frame MAPF (from a single agent perspective) as a Dec-POMDP where at each time step an agent has to decide an action based on the local observation and typically solve the problem via reinforcement learning or imitation learning. We follow the same approach but additionally introduce a learnable communication module tailored to enhance cooperation between agents via efficient feature sharing. We present the Local Communication for Multi-agent Pathfinding (LC-MAPF), a generalizable pre-trained model that applies multi-round communication between neighboring agents to exchange information and improve their coordination. Our experiments show that the introduced method outperforms the existing learning-based MAPF solvers, including IL and RL-based approaches, across diverse metrics in a diverse range of (unseen) test scenarios. Remarkably, the introduced communication mechanism does not compromise LC-MAPF's scalability, a common bottleneck for communication-based MAPF solvers.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2605.07605v1' target='_blank'>BrickCraft: Visuomotor Skill Composition with Situated Manual Guidance for Long-Horizon Interlocking Brick Assembly</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jichuan Yu, Bowei Li, Zhenran Tang, Guanxing Lu, Chuxiong Hu, Ruixuan Liu, Changliu Liu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-05-08 11:30:25</h6>
+<p class='card-text'>Autonomous robotic assembly of interlocking bricks demands seamless integration of long-horizon task reasoning, spatial grounding, and fine-grained manipulation. This paper presents BrickCraft, a compositional framework designed for long-horizon and generalizable interlocking brick assembly. BrickCraft models the assembly process using a relative formulation, where each step is anchored to a reference brick within the partial structure, thereby decomposing complex tasks into a finite set of reusable primitive skills. BrickCraft bridges the gap between high-level assembly plans and physical execution through situated manuals, which provide explicit spatial guidance for learned visuomotor skills by projecting the assembly intent onto real-time robot observations. Finally, BrickCraft employs a compositional execution pipeline that chains these spatially grounded skills to accomplish long-horizon assembly tasks. Extensive experimental validations demonstrate that BrickCraft acquires proficient assembly skills from a limited set of demonstrations and exhibits strong compositional generalization to unseen structures. The project website is available at https://intelligent-control-lab.github.io/BrickCraft.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2605.07584v1' target='_blank'>Parallel Lifted Planning via Semi-Naive Datalog Evaluation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Dominik Drexler, Oliver Joergensen, Jendrik Seipp</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-05-08 10:53:40</h6>
+<p class='card-text'>Lifted classical planners operate directly on first-order planning tasks to avoid the computationally demanding grounding step. However, lifted planning is typically slower, as planners must repeatedly instantiate ground structures during search. Many core components of lifted classical planning, such as successor generation, axiom evaluation, task grounding, and delete-relaxed heuristics, have previously been studied through the lens of Datalog evaluation. We build upon this line of work and extend it by developing and analyzing an execution model with two levels of parallelism: rule-level parallelism and grounding parallelism. We further specialize this solver for planning-specific workloads with a grounder based on clique enumeration, which we extend to support semi-naive Datalog evaluation. Our experimental evaluation using greedy best-first search with the FF heuristic shows that our implementation already solves more tasks than the baselines on a single core, and the gap widens as additional cores are used. Moreover, on hard-to-ground tasks where on average 97.6% of the total runtime is spent in Datalog execution, the proposed execution model exhibits an average parallel fraction of 92.4%, while achieving up to a 6-fold speedup on 8 cores in practice.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2605.07570v1' target='_blank'>Coordinated Motion Planning is FPT on Discretized Simple Polygons</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Argyrios Deligkas, Eduard Eiben, Robert Ganian, Iyad Kanj</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-05-08 10:42:43</h6>
+<p class='card-text'>In the coordinated motion planning problem, we are given a graph together with the starting and destination vertices of $k$ robots. At each time step, any subset of robots may move, each traversing an edge of the graph, provided that no two robots collide. The goal is to compute a schedule that routes all robots to their destinations while minimizing some objective function. In this paper, we focus on the well-studied objective of minimizing the total travel length of all robots. This problem is known to be NP-hard, and it has been shown to be fixed-parameter tractable (FPT), when parameterized by the number $k$ of robots, on full grids (SoCG 2023) and on bounded-treewidth graphs (ICALP 2024).
+  We present a fixed-parameter algorithm for coordinated motion planning, parameterized by the number $k$ of robots, on graphs arising from discretizations of simple polygons. Such graphs are of particular interest in real-world applications, where planar motion is often constrained to discretized representations of polygonal environments. Moreover, these graphs generalize rectangular grids; consequently, our result constitutes a significant step toward resolving the parameterized complexity of coordinated motion planning on subgrids and, ultimately, planar graphs -- two prominent open problems in the field.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2605.07530v1' target='_blank'>Search-based Robustness Testing of Laptop Refurbishing Robotic Software</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Erblin Isaku, Hassan Sartaj, Shaukat Ali, Malaika Din Hashmi, Francois Picard</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-05-08 10:02:45</h6>
+<p class='card-text'>The Danish Technological Institute (DTI) focuses on transferring advanced technologies (including robots) to the industry and the public sector. One key application is laptop refurbishment using specialized robots, aimed at promoting reuse, reducing electronic waste, and supporting the European Circular Economy Action Plan. The software of such robots often includes features that use object detection models to detect objects for various purposes, such as identifying screws for laptop disassembly or detecting stickers to remove them. Ensuring the robustness of such models to small input variations remains a critical challenge, and addressing it is important to avoid potential damage to laptops during refurbishment. In this paper, we propose PROBE, a search-based robustness testing approach that leverages multi-objective optimization to identify minimal, localized perturbations that expose failures in object detection models used in the software of laptop refurbishing robots. PROBE employs NSGA-II to systematically explore the perturbation space, optimizing for failure induction considering both localization and confidence, and perturbation magnitude, while enabling the discovery of diverse failure cases. Results show that PROBE is 3$\times$ to 7$\times$ more effective than random search in generating failure-inducing perturbations, while requiring smaller perturbation magnitudes, and that the generated perturbations transfer across models. We further show that metamorphic relations provide additional insights into model robustness, enabling the assessment of stability even in non-failing cases.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2605.07529v1' target='_blank'>Stochastic Differential Dynamic Programming for Trajectory Optimization under Partial Observability</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Masahiro Fujiwara, Naoya Ozaki</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-05-08 09:57:48</h6>
+<p class='card-text'>Designing spacecraft trajectories remains challenging in the presence of stochastic effects such as maneuver execution errors and observation uncertainties. Although covariance control and belief-space planning provide useful tools for designing robust control policies and information-aware trajectories under uncertainty, practical methods remain limited for partially observable trajectory optimization problems in which trajectory design, orbit determination, and correction maneuver planning are tightly coupled. This paper presents a stochastic differential dynamic programming algorithm for such coupled problems. The proposed method optimizes the nominal control sequence and feedback gains subject to belief dynamics and general mission constraints, explicitly accounting for the dependence of covariance propagation on the nominal trajectory without relying on the separation principle. Numerical examples demonstrate that the proposed algorithm produces navigation-aware and uncertainty-robust solutions across a range of dynamical systems, observation models, and uncertainty levels. In particular, the circular restricted three-body problem shows that the proposed method can exploit the coupling between trajectory design and orbit determination to obtain navigation-aware solutions with substantially lower fuel consumption than those from deterministic local optimization starting from the same initial guess.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2605.07522v1' target='_blank'>WeatherSyn: An Instruction Tuning MLLM For Weather Forecasting Report Generation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Zinan Zheng, Yang Liu, Nuo Chen, Juepeng Zheng, Hong Cheng, Jia Li</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-05-08 09:53:33</h6>
+<p class='card-text'>Accurate weather forecast reporting enables individuals and communities to better plan daily activities and agricultural operations. However, the current reporting process primarily relies on manual analysis of multi-source data, which leads to information overload and reduced efficiency. With the development of multimodal large language models (MLLMs), leveraging data-driven models to analyze and generate reports in the weather forecasting domain remains largely underexplored. In this work, we propose the Weather Forecasting Report (WFR) task and construct the first instruction-tuning dataset for this task, named~\DatasetNameL, which covers 31 cities in America and 8 weather aspects. Based on this corpus, we develop the first model, \ModelNameL, specialized in generating weather forecast reports. Evaluation across multiple metrics on our dataset shows that \ModelNameL~ consistently outperforms leading closed-source MLLMs, particularly on structurally complex weather aspects. We further analyze its performance across diverse geographic regions and weather aspects. \ModelNameL~ demonstrates strong transferability across different regions, highlighting its zero-shot generalization capability. \ModelNameL~offers valuable insight for developing MLLMs specialized in weather report generation. .</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2605.07521v1' target='_blank'>From Feasible to Practical: Pareto-Optimal Synthesis Planning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Friedrich Hastedt, Dongda Zhang, Antonio del Rio Chanona</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-05-08 09:53:30</h6>
+<p class='card-text'>Current computer-aided synthesis planning (CASP) methods often treat retrosynthesis as solved once a single feasible route is identified, focusing primarily on convergence or shortest-path metrics. This view is misaligned with real-world practice, where chemists must balance competing objectives such as cost, sustainability, toxicity, and overall yield. To address this, we formulate synthesis planning as a multi-objective search problem and introduce MORetro*, an algorithm that generates a Pareto front of synthesis routes to explicitly capture trade-offs among user-defined criteria. MORetro* uses weighted scalarization and BO-informed sampling to efficiently navigate the combinatorial search space and prioritize promising trade-offs. Building on multi-objective A*-search, we provide optimality guarantees showing that, for a fixed single-step model, MORetro* recovers the true Pareto front. Across multiple retrosynthesis benchmarks, MORetro* produces diverse, high-quality Pareto fronts, uncovering solutions overlooked by single-objective approaches and better aligning CASP outputs with industrial decision-making.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2605.07520v1' target='_blank'>Model-Driven Policy Optimization in Differentiable Simulators via Stochastic Exploration</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yuval Aroosh, Ayal Taitler</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-05-08 09:52:25</h6>
+<p class='card-text'>Differentiable planning enables gradient-based optimization of decision-making problems by leveraging differentiable models of system dynamics. However, in highly nonlinear and hybrid discrete-continuous domains, the resulting optimization landscapes are often ill-conditioned, with flat regions and sharp transitions that hinder effective optimization.
+  We propose Model-Driven Policy Optimization (MDPO), a framework that introduces stochastic exploration into differentiable planning by injecting noise into the action space during optimization. Leveraging access to the model, MDPO further adapts the noise magnitude based on gradient-derived sensitivity of the trajectory objective, yielding a time-dependent exploration profile. This enables improved exploration of the objective landscape and helps escape poor local optima via dynamic allocation of exploration across timesteps and iterations.
+  Experiments on benchmark domains demonstrate that MDPO consistently outperforms deterministic differentiable planning, including both the noise-free variant of our method and available state-of-the-art implementations, as well as model-free baselines such as PPO, significantly improving solution quality across challenging nonlinear and hybrid settings. We further analyze the evolution of the adaptive noise magnitude across both time steps and optimization iterations, providing insight into how exploration is allocated during learning.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2605.07514v1' target='_blank'>Is the Future Compatible? Diagnosing Dynamic Consistency in World Action Models</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Bo-Kai Ruan, Teng-Fang Hsiao, Ling Lo, Hong-Han Shuai</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-05-08 09:44:43</h6>
+<p class='card-text'>World Action Models (WAMs) enable decision-making through imagined rollouts by predicting future observations and actions. However, the reliability of these imagined futures remains under-examined: is a generated future merely visually plausible, or is it dynamically compatible with the action sequence it claims to model? In this work, we identify action-state consistency, the alignment between predicted actions and induced state transitions, as a missing reliability axis for WAMs. Through a systematic study across representative joint-prediction and inverse-dynamics models, we find that action-state consistency systematically separates successful and failed rollouts across many tasks and follows similar success-failure trends as learned value estimates. These results suggest that consistency captures decision-relevant structure beyond visual realism. We further identify background collapse as an important boundary condition, where low-dynamics failed trajectories can become deceptively consistent because static futures are easier to predict. Building on these findings, we introduce a value-free consensus strategy for test-time selection, which ranks candidate rollouts by agreement among predicted futures. This strategy improves success rates on RoboCasa and RoboTwin 2.0 without additional training or reward modeling. Taken together, our findings establish action-state consistency as both a diagnostic tool for evaluating WAM reliability and a practical signal for value-free planning.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2605.07505v1' target='_blank'>LiteGUI: Distilling Compact GUI Agents with Reinforcement Learning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yubin Wu, Zicheng Cai, Liping Ning, Hua Wang, Zhi Chen, Yaohua Tang, Hao Chen</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-05-08 09:38:29</h6>
+<p class='card-text'>Developing lightweight, on-device vision-language GUI agents is essential for efficient cross-platform automated interaction. However, current on-device agents are constrained by limited model capacity, and further performance improvements remain urgently needed. Traditional Supervised Fine-Tuning (SFT) for small-scale models often leads to overfitting, catastrophic forgetting and policy rigidity, and thus fails to fully address these challenges. In this work, we propose a novel SFT-free training paradigm that significantly enhances the performance of small-scale models. We first present the initial systematic integration of generalized knowledge distillation into the GUI agent domain via Guided On-policy Distillation. By incorporating oracle reference trajectories together with a dynamic retrieval mechanism, our method reduces hallucinations and mitigates the cognitive misalignment inherent in multi-solution GUI tasks. Building on this foundation, we further introduce a Multi-solution Dual-level GRPO framework that jointly aligns macro-level subtask planning with micro-level execution matching, thereby improving exploration in long-horizon GUI agent scenarios. In addition, we construct an automated data generation pipeline to synthesize GUI task trajectories with rich multi-solution annotations. Extensive experiments show that our method achieves state-of-the-art performance among lightweight models while remaining competitive with substantially larger-scale models across all benchmarks. Ablation studies further demonstrate that structured on-policy distillation and multi-solution dual-level exploration can fully unlock the capabilities of 2B/3B scale agents, surpassing the performance limits of conventional imitation learning.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2605.07498v1' target='_blank'>Modeling the Impact of Exposed Cases in a Hantavirus Outbreak on a Cruise Ship</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jiaming Cui</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-05-08 09:36:55</h6>
+<p class='card-text'>The emergence of a hantavirus variant aboard a commercial cruise ship presents a significant public health concern. This study develops a discrete-time stochastic Susceptible-Exposed-Infectious-Recovered-Dead model to estimate transmission dynamics, hidden exposed infections, and outbreak risk among passengers and crew. Epidemiological parameters and latent disease states were inferred using an Ensemble Adjustment Kalman Filter calibrated to reported case data from WHO and ECDC situation reports. The estimated basic reproduction number was 2.76, with a 95\% confidence interval of 2.52-2.99, indicating substantial potential for sustained onboard transmission before strict quarantine measures. Simulations further suggest that several exposed individuals may remain unidentified during the early outbreak phase, creating a hidden reservoir that symptom-based surveillance alone may fail to detect. These findings highlight the importance of rapid surveillance, widespread testing, targeted quarantine, and active monitoring of exposed individuals in confined travel settings. The proposed modeling framework can support timely outbreak assessment and intervention planning for infectious-disease events in similarly dense and spatially constrained populations.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2605.07474v1' target='_blank'>ForgeVLA: Federated Vision-Language-Action Learning without Language Annotations</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yuhao Zhou, Yunpeng Zhu, Yang Zhou, Jindi Lyu, Jian Lan, Zhangyuan Wang, Dan Si, Thomas Seidl, Qing Ye, Jiancheng Lyu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-05-08 09:20:56</h6>
+<p class='card-text'>Vision-Language-Action (VLA) models hold great promise for general-purpose robotic intelligence, yet scaling up such models is severely bottlenecked by the high cost of acquiring annotated training data. Fortunately, vision-equipped robots deployed across various domains already produce abundant vision-action pairs that can be leveraged to scale up VLA training more efficiently. However, these raw data cannot be centrally aggregated due to various constraints and also exhibit severe heterogeneity. To address these challenges, in this paper, we propose ForgeVLA, a federated VLA training framework that learns VLA models from distributed vision-action pairs without centralizing raw data or requiring manual annotations. Specifically, each client in ForgeVLA is equipped with an embodied instruction classifier that maps vision-action pairs to a predefined instruction set, recovering the missing language modality and forming complete vision-language-action triplets. Beyond triplet construction, we also identify vision-language feature collapse as a critical challenge that has been largely overlooked in prior federated VLA research. To mitigate this issue, ForgeVLA combines a client-side contrastive planning loss with a server-side adaptive aggregation strategy to learn task-discriminative representations efficiently. Extensive experiments across multiple benchmarks show that ForgeVLA significantly outperforms other baselines, and ablation studies further validate the contribution of each component.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2605.07457v1' target='_blank'>EditRefiner: A Human-Aligned Agentic Framework for Image Editing Refinement</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Zitong Xu, Huiyu Duan, Yifei Nie, Mingda Du, Sijing Wu, Xiongkuo Min, Tianyi Zheng, Jian Zhang, Shusong Xu, Jinwei Chen, Bo Li, Guangtao Zhai</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-05-08 09:05:08</h6>
+<p class='card-text'>Recent text-guided image editing (TIE) models have made remarkable progress, yet edited images still frequently suffer from fine-grained issues such as unnatural objects, lighting mismatch, and unexpected changes. Existing refinement approaches either rely on costly iterative regeneration or employ vision-language models (VLMs) with weak spatial grounding, often resulting in semantic drift and unreliable local corrections. To address these limitations, we first construct EditFHF-15K, a dataset of fine-grained human feedback for edited images, comprising (1) 15K images from 12 TIE models spanning 43 editing tasks, (2) 60K annotated artifact regions and 80K editing failure regions, each accompanied by textual reasoning, and (3) 45K mean opinion scores (MOSs) assessing perceptual quality, instruction following, and visual consistency. Based on EditFHF-15K, we propose EditRefiner, a hierarchical, interpretable, and human-aligned agentic framework that reformulates post-editing correction as a human-like perception-reasoning-action-evaluation loop. Specifically, we introduce: (1) a perception agent that detects contextual saliency maps of artifacts and editing failures, (2) a reasoning agent that interprets these perceptual cues to perform human-aligned diagnostic inference, (3) an action agent that uses the reasoning output to plan and execute localized re-editing, and (4) an evaluation agent that assesses the re-edited image and guides the action agent on whether further refinements are required. Extensive experiments demonstrate that EditRefiner consistently outperforms state-of-the-art methods in distortion localization, diagnose accuracy and human perception alignment, establishing a new paradigm for self-corrective and perceptually reliable image editing. The code is available at https://github.com/IntMeGroup/EditRefiner.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2605.07414v1' target='_blank'>OrchJail: Jailbreaking Tool-Calling Text-to-Image Agents by Orchestration-Guided Fuzzing</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jianming Chen, Yawen Wang, Junjie Wang, Zhe Liu, Qing Wang, Fanjiang Xu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-05-08 08:06:23</h6>
+<p class='card-text'>Tool-calling text-to-image (T2I) agents can plan and execute multi-step tool chains to accomplish complex generation and editing queries. However, this capability introduces a new safety attack surface: harmful outputs may arise from tool orchestration, where individually benign steps combine into unsafe results, making prompt-only jailbreak techniques insufficient. We present OrchJail, an orchestration-guided fuzzing framework for jailbreaking tool-calling T2I agents. Its core idea is to exploit high-risk tool-orchestration patterns: by learning from successful jailbreak tool-calling traces and their causal relationships to prompt wording, OrchJail directly guides the fuzzing search toward prompts that are more likely to trigger unsafe multi-step tool behaviors, rather than relying on surface-level textual perturbations. Extensive experiments demonstrate that OrchJail improves jailbreak effectiveness and efficiency across representative toolcalling T2I agents, achieving higher attack success rates, better image fidelity, and lower query costs, while remaining robust against common jailbreak defenses. Our work highlights tool orchestration as a critical, previously unexplored attack surface and provides a novel framework for uncovering safety risks in T2I agents.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2605.07370v1' target='_blank'>MORPH-U: Multi-Objective Resilient Motion Planning for V2X-Enabled Autonomous Driving in High-Uncertainty Environments via Simulation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Shih-Yu Lai</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-05-08 07:27:10</h6>
+<p class='card-text'>V2X can warn an autonomous vehicle about hazards beyond line-of-sight, but it also brings uncertainty: messages may be delayed, dropped, or even forged. Meanwhile, map knowledge may change during a trip, forcing the vehicle to replan under tight real-time budgets. This paper studies how to make motion planning and low-level control robust to such uncertain, event-driven updates. We present MORPH-U, a CARLA-based closed-loop stack that fuses LiDAR/radar/camera with V2X (CAM/DENM) into a Local Dynamic Map (LDM) and triggers Hybrid-A* replanning when validated hazards or map changes affect the planned route. We expose the planning/control trade-offs via a multi-objective formulation over tracking error, safety margin (minimum TTC), responsiveness, and smoothness, and select operating points using Pareto-frontier analysis. To avoid unsafe replanning from faulty V2X triggers, MORPH-U adds a lightweight Byzantine-inspired acceptance gate that combines a quorum rule with an on-board sensor veto. Experiments in dynamic CARLA scenarios show that V2X-augmented LDM improves downstream safety, Pareto tuning provides controllable accuracy-comfort trade-offs, and the gate prevents replanning under saturated false-DENM injection ($p_{\text{attack}}=1.0$).</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2605.07320v1' target='_blank'>Splitting User Stories Into Tasks with AI -- A Foe or an Ally?</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Luka Pavlič, Reinhard Bernsteiner, Stephan Schlögl, Christian Ploder</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-05-08 06:28:27</h6>
+<p class='card-text'>In agile software development, breaking down user stories into actionable tasks is a critical yet time-consuming process. This paper investigates the potential of Generative AI tools to assist in task splitting, aiming to enhance planning efficiency. We conducted a controlled experiment comparing traditional task-splitting methods with AI-assisted approaches using GitLab Duo. Our findings indicate that while current AI tools are not yet mature enough to replace developers, they can aid in generating more granular task lists and ensuring no important tasks are overlooked. Participants favored a hybrid approach, combining AI tools with conventional methods to maintain high accuracy in planning. This study highlights the potential benefits and limitations of integrating Generative AI into agile development processes, suggesting that AI tools can serve as valuable aids in task splitting, provided there is human oversight to filter out irrelevant tasks.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2605.07278v1' target='_blank'>Predictive but Not Plannable: RC-aux for Latent World Models</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Wenyuan Li, Guang Li, Keisuke Maeda, Takahiro Ogawa, Miki Haseyama</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-05-08 05:43:33</h6>
+<p class='card-text'>A latent world model may achieve accurate short-horizon prediction while still inducing a latent space that is poorly aligned with planning. A key issue is spatiotemporal mismatch: these models are often trained with local predictive supervision, but deployed for long-horizon goal-directed search in latent spaces where Euclidean distance may not reflect what is reachable within a finite action budget. We present the Reachability-Correction auxiliary objective (RC-aux), a lightweight correction for this mismatch in reconstruction-free latent world models. RC-aux keeps the world-model backbone unchanged and adds planning-aligned supervision along two axes. Along the time axis, multi-horizon open-loop prediction trains the model beyond one-step consistency. Along the space axis, budget-conditioned reachability supervision, together with temporal hard negatives, encourages the latent space to distinguish states that are eventually reachable from those reachable within the current planning horizon. At test time, the learned reachability signal can also be used by a reachability-aware planner to favor trajectories that are both goal-directed and attainable under the available budget. We instantiate RC-aux on LeWorldModel and evaluate it under both continuation-training and matched-from-scratch settings. Across goal-conditioned pixel-control tasks and a LIBERO-Goal extension, RC-aux improves LeWM-style planning with modest additional cost. These results suggest that planning with latent world models depends not only on predictive accuracy, but also on whether the learned representation encodes the temporal and geometric structure required by downstream search. The code is available at https://github.com/Guang000/RC-aux.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js'></script>
+</body>
+</html>
