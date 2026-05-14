@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>multi-agent - 2026-05-14</title>
+<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap' rel='stylesheet'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css'>
+<style>
+body {
+font-family: 'Roboto', sans-serif;
+background-color: #f5f7fa;
+padding: 20px;
+}
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.card-title {
+    font-weight: 700;
+}
+.card:hover {
+    transform: scale(1.02);
+    transition: 0.3s ease-in-out;
+}
+</style>
+</head>
+<body>
+<div class='container'>
+<h1 class='text-center my-4'><i class='fas fa-book'></i>multi-agent - 2026-05-14</h1>
+<div class='row'>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2605.13131v1' target='_blank'>ERPPO: Entropy Regularization-based Proximal Policy Optimization</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Changha Lee, Gyusang Cho</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-05-13 08:01:20</h6>
+<p class='card-text'>Multi-Agent Proximal Policy Optimization (MAPPO) is a variant of the Proximal Policy Optimization (PPO) algorithm, specifically tailored for multi-agent reinforcement learning (MARL). MAPPO optimizes cooperative multi-agent settings by employing a centralized critic with decentralized actors. However, in case of multi-dimensional environment, MAPPO can not extract optimal policy due to non-stationary agent observation. To overcome this problem, we introduce a novel approach, Entropy Regularization-based Proximal Policy Optimization (ERPPO). For the policy optimization, we first define the object detection ambiguity under multi-dimensional observation environment. Distributional Spatiotemporal Ambiguity (DSA) learner is trained to estimate object detection uncertainty in non-stationary constraints. Then, we enhance PPO with a novel Entropy Regularization term. This regularization dynamically adjusts the policy update by applying a stronger (L1) regularization in high-ambiguity observation to encourage significant exploratory actions and a weaker (L2) regularization in low-ambiguity observation to stabilize the proximal policy optimization. This approach is designed to enhance the probability of successful object localization in time-critical operations by reducing detection failures and optimizing search policy. Experiments on a testbed with AirSim-based maritime searching scenarios show that the proposed ERPPO improves accuracy performance. Our proposed method improves higher gradient than MAPPO. Qualitative results confirm that ERPPO effectiveness in terms of suppressing false detection in visually uncertain conditions.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2605.12655v1' target='_blank'>Macro-Action Based Multi-Agent Instruction Following through Value Cancellation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Wo Wei Lin, Ethan Rathbun, Enrico Marchesini Xiang Zhi Tan</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-05-12 19:01:16</h6>
+<p class='card-text'>Multi-agent reinforcement learning (MARL) in real-world use cases may need to adapt to external natural language instructions that interrupt ongoing behavior and conflict with long-horizon objectives. However, conditioning rewards on instructions introduces a fundamental failure mode as Bellman updates couple value estimates across instruction contexts, leading to inconsistent values when instructions interrupt macro-actions. We propose Macro-Action Value Correction for Instruction Compliance (MAVIC), which corrects Bellman backups at instruction boundaries by correcting the incoming instruction objective and restoring the continuation value under the current objective. Unlike reward shaping, MAVIC modifies the bootstrapping target itself, enabling consistent value estimation under stochastic instruction switching within a unified policy. We provide theoretical analysis and an actor-critic implementation, and show that MAVIC achieves high instruction compliance while preserving base task performance in increasingly complex cooperative multi-agent environments.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2605.12388v2' target='_blank'>Events as Triggers for Behavioral Diversity in Multi-Agent Reinforcement Learning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Hannes Büchi, Manon Flageat, Eduardo Sebastián, Amanda Prorok</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-05-12 16:51:23</h6>
+<p class='card-text'>Effective multi-agent cooperation requires agents to adopt diverse behaviors as task conditions evolve-and to do so at the right moment. Yet, current Multi-Agent Reinforcement Learning (MARL) frameworks that facilitate this diversity are still limited by the fact that they bind fixed behaviors to fixed agent identities. Consequently, they are ill-equipped for tasks where agents need to take on different roles at very specific moments in time. We argue that, to define these behavioral transitions, the missing ingredient is $\textbf{events}$. Events are changes in the state of the system that induce qualitative changes in the task. Based on this view, we introduce a framework that decouples agent identity from behavior, capturing a continuous manifold from which agents instantiate their behaviors in response to events. This framework is based on two elements. First, to build an expressive behavior manifold, we introduce Neural Manifold Diversity (NMD), a formal distance metric that remains well-defined when behaviors are transient and agent-agnostic. Second, we use an event-based hypernetwork that generates Low-Rank Adaptation (LoRA) modules over a shared team policy, enabling on-the-fly agent-policy reconfiguration in response to events. We prove that this construction ensures that diversity does not interfere with reward maximization by design. Empirical results demonstrate that our framework outperforms established baselines across benchmarks while exhibiting zero-shot generalization, and being the only method that solves tasks requiring sequential behavior reassignment.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2605.11880v1' target='_blank'>Adaptive TD-Lambda for Cooperative Multi-agent Reinforcement Learning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yue Deng, Zirui Wang, Yin Zhang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-05-12 09:56:24</h6>
+<p class='card-text'>TD($λ$) in value-based MARL algorithms or the Temporal Difference critic learning in Actor-Critic-based (AC-based) algorithms synergistically integrate elements from Monte-Carlo simulation and Q function bootstrapping via dynamic programming, which effectively addresses the inherent bias-variance trade-off in value estimation. Based on that, some recent works link the adaptive $λ$ value to the policy distribution in the single-agent reinforcement learning area. However, because of the large joint action space from multiple number of agents, and the limited transition data in Multi-agent Reinforcement Learning, the policy distribution is infeasible to be calculated statistically. To solve the policy distribution calculation problem in MARL settings, we employ a parametric likelihood-free density ratio estimator with two replay buffers instead of calculating statistically. The two replay buffers of different sizes store the historical trajectories that represent the data distribution of the past and current policies correspondingly. Based on the estimator, we assign Adaptive TD($λ$), \textbf{ATD($λ$)}, values to state-action pairs based on their likelihood under the stationary distribution of the current policy. We apply the proposed method on two competitive baseline methods, QMIX for value-based algorithms, and MAPPO for AC-based algorithms, over SMAC benchmarks and Gfootball academy scenarios, and demonstrate consistently competitive or superior performance compared to other baseline approaches with static $λ$ values.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2605.11355v1' target='_blank'>gym-invmgmt: An Open Benchmarking Framework for Inventory Management Methods</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Reza Barati, Qinmin Vivian Hu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-05-12 00:22:15</h6>
+<p class='card-text'>Inventory-policy comparisons are often difficult to interpret because performance depends on the evaluation contract as much as on the policy itself. Differences in topology, demand regime, information access, feasibility constraints, shortage treatment, and Key Performance Indicator (KPI) definitions can change method rankings. We present gym-invmgmt, a Gymnasium-compatible extension of the OR-Gym inventory-management lineage for auditable cross-paradigm evaluation. The benchmark evaluates optimization, heuristic, and learned controllers under a shared CoreEnv transition, reward, action-bound, and KPI contract, while varying stress conditions through a 22-scenario core grid plus four supplemental MARL-mode rows. Within these released scenarios, informed stochastic programming provides the strongest non-oracle reference, reflecting the value of scenario hedging under forecast access, but at substantially higher online computational cost. Among learned controllers, the Proximal Policy Optimization Transformer variant (PPO-Transformer) achieves the strongest learned-policy quality at fast inference, while Residual Reinforcement Learning (Residual RL) provides competitive hybrid performance. The graph neural network variant (PPO-GNN) is highly competitive on the default divergent topology but less robust on the serial topology. Imitation learning performs well in stationary regimes but degrades under demand shift, and the bounded Large Language Model (LLM) policy-parameter baseline is best interpreted as a diagnostic controller rather than an autonomous inventory optimizer. Overall, the benchmark identifies scenario-conditioned leaders while showing that performance depends jointly on information access, demand shift, topology, and policy representation.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2605.10377v1' target='_blank'>PC3D: Zero-Shot Cooperation Across Variable Rosters via Personalized Context Distillation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Ahmet Onur Akman, Rafał Kucharski</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-05-11 11:20:17</h6>
+<p class='card-text'>Cooperative multi-agent reinforcement learning often assumes a fixed execution team, yet many decentralized systems must operate with varying numbers of active agents during deployment. We study this setting under episodic roster variation: each episode is executed by a set of homogeneous agents, with the team size varying across episodes. Agents act only from local histories, without execution-time communication, privileged coordinators, or online retraining. Therefore, effective cooperation requires each agent to recover relevant context about the active team and adapt its behavior accordingly. To this end, we propose PC3D (Personalized Central Coordination Context Distillation), a method for training decentralized policies to recover and use personalized coordination context from local interaction histories. During training, a set-structured centralized teacher compresses the active team into coordination tokens and personalizes them into agent-specific contexts, which are distilled into decentralized policies. At execution, each agent predicts its own context from local history and adaptively uses it to condition decision-making. Across three cooperative MARL benchmarks, PC3D achieves higher returns than the evaluated baselines with both seen and unseen roster sizes, and ablations attribute these gains to both context distillation and adaptive context use.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2605.09153v1' target='_blank'>Beyond Self-Play: Hierarchical Reasoning for Continuous Motion in Closed-Loop Traffic Simulation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Weifan Zhang, Xiaofeng Zhao, Adel Bazzi, Mingrui Li, Yifan Wei, Dengfeng Sun</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-05-09 20:31:34</h6>
+<p class='card-text'>Closed-loop traffic simulation requires agents that are both scalable and behaviorally realistic. Recent self-play reinforcement learning approaches demonstrate strong scalability, but their equilibrium strategies fail to capture the socially aware behaviors of real human drivers. We propose a hierarchical architecture that goes beyond self-play by combining high-level multi-agent interaction reasoning with low-level continuous trajectory realization. Specifically, a Stackelberg-style Multi-Agent Reinforcement Learning (MARL) module generates interaction-aware intention commands. These commands condition a low-level continuous motion module, translating the strategic intent into physically consistent, scene-responsive control sequences. To mitigate distribution shift in closed-loop deployment, we introduce a hybrid co-training scheme combining MARL with auxiliary recovery supervision. Experiments on a SUMO-based urban network demonstrate that the proposed framework achieves superior control smoothness and safety compared to self-play and passive imitation baselines, while maintaining competitive traffic efficiency.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2605.07101v1' target='_blank'>Decentralized Diffusion Policy Learning for Enhanced Exploration in Cooperative Multi-agent Reinforcement Learning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yuyang Zhang, Haldun Balim, Na Li</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-05-08 01:29:42</h6>
+<p class='card-text'>Cooperative multi-agent reinforcement learning (MARL) involves complex agent interactions and requires effective exploration strategies. A prominent class of MARL algorithms, decentralized softmax policy gradient (DecSPG), addresses this through energy-based policy updates. In practice, however, such energy-based policies are intractable to maintain and are commonly projected onto the Gaussian policy class. In this work, we show that the limited expressiveness of Gaussian policies severely hinders exploration in DecSPG, and this limitation worsens as the number of agents grows. To address this issue, we propose decentralized diffusion policy learning (DDPL), which parameterizes each agent's policy with a denoising diffusion probabilistic model, an expressive generative model that captures multi-modal action distributions for enhanced exploration. DDPL enables efficient online training of diffusion policies via importance sampling score matching (ISSM), a novel training method with theoretical guarantee. We evaluate DDPL on representative continuous-action MARL benchmarks, including multi-agent particle environment, multi-agent MuJoCo, IsaacLab, and JAX-reimplemented StarCraft multi-agent challenge, and observe consistently improved performance.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2605.06825v1' target='_blank'>Randomness is sometimes necessary for coordination</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Rohan Patil, Jai Malegaonkar, Henrik I. Christensen</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-05-07 18:27:15</h6>
+<p class='card-text'>Full parameter sharing is standard in cooperative multi-agent reinforcement learning (MARL) for homogeneous agents. Under permutation-symmetric observations, however, a shared deterministic policy outputs identical action distributions for every agent, making role differentiation impossible. This failure can theoretically be resolved using symmetry breaking among anonymous identical processors, which requires randomness. We propose Diamond Attention, a cross-attention architecture in which each agent samples a scalar random number per timestep, inducing a transient rank ordering that masks lower-ranked peers from agent-to-agent attention while leaving task attention fully unmasked. This realizes a random-bit coordination protocol in a single broadcast round, and the set-based attention enables zero-shot deployment to teams of different sizes. We evaluate across three regimes that isolate when structured randomness matters. On the perfectly symmetric XOR game, our method achieves $1.0$ success while all deterministic baselines plateau near $0.5$. On control coordination tasks, a policy trained on $N=4$ generalizes zero-shot to $N \in [2,8]$. On SMACLite cross-scenario transfer, we achieve zero-shot transfer where standard baselines cannot transfer due to structural limitations. Furthermore, replacing the structured mask with standard dropout-based randomness results in a 0\% win rate, confirming that protocol-space structure, not stochastic noise, is the operative ingredient. https://anonymous.4open.science/r/randomness-137A/</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2605.06595v1' target='_blank'>Cross-Modal Navigation with Multi-Agent Reinforcement Learning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Shuo Liu, Xinzichen Li, Christopher Amato</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-05-07 17:20:34</h6>
+<p class='card-text'>Robust embodied navigation relies on complementary sensory cues. However, high-quality and well-aligned multi-modal data is often difficult to obtain in practice. Training a monolithic model is also challenging as rich multi-modal inputs induce complex representations and substantially enlarge the policy space. Cross-modal collaboration among lightweight modality-specialized agents offers a scalable paradigm. It enables flexible deployment and parallel execution, while preserving the strength of each modality. In this paper, we propose \textbf{CRONA}, a Multi-Agent Reinforcement Learning (MARL) framework for \textbf{Cro}ss-Modal \textbf{Na}vigation. CRONA improves collaboration by leveraging control-relevant auxiliary beliefs and a centralized multi-modal critic with global state. Experiments on visual-acoustic navigation tasks show that multi-agent methods significantly improve performance and efficiency over single-agent baselines. We find that homogeneous collaboration with limited modalities is sufficient for short-range navigation under salient cues; heterogeneous collaboration among agents with complementary modalities is generally efficient and effective; and navigation in large, complex environments requires both richer multi-modal perception and increased model capacity.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2605.06557v1' target='_blank'>Coordination Matters: Evaluation of Cooperative Multi-Agent Reinforcement Learning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Maria Ana Cardei, Matthew Landers, Afsaneh Doryab</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-05-07 16:50:53</h6>
+<p class='card-text'>Cooperative multi-agent reinforcement learning (MARL) benchmarks commonly emphasize aggregate outcomes such as return, success rate, or completion time. While essential, these metrics often fail to reveal how agents coordinate, particularly in settings where agents, tasks, and joint assignment choices scale combinatorially. We propose a coordination-aware evaluation perspective that supplements return with process-level diagnostics. We instantiate this perspective using STAT, a controlled commitment-constrained spatial task-allocation testbed that systematically varies agents, tasks, and environment size while holding observation access and task rules fixed. We evaluate six representative value-based MARL methods across varying levels of centralization. Our results show that similar return trends can reflect distinct coordination mechanisms, including differences in redundant assignment, assignment diversity, and task-completion efficiency. We find that in commitment-constrained task allocation, performance under scale is shaped not only by nominal action-space size, but also by assignment pressure, sparse decision opportunities, and redundant choices among interdependent agents. Our findings motivate coordination-aware evaluation as a necessary complement to return-based benchmarking for cooperative MARL.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2605.04741v2' target='_blank'>Hierarchical Multiagent Reinforcement Learning for Multi-Group Tax Game</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Honglei Guo, Yuhan Zhao, Yexin Li</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-05-06 10:37:41</h6>
+<p class='card-text'>Reinforcement learning has increasingly been applied to economic decision-making, including taxation, public spending, and labor supply. However, existing RL-based economic models typically consider only a single government-household group, overlooking strategic interactions among competing governments. To address this limitation, we formulate taxation as a hierarchical multi-group game. Within each group, the government and households form a leader--follower game, while governments compete across groups through strategic fiscal policies. This coupled structure is difficult to solve using standard multi-agent reinforcement learning (MARL) methods. We therefore propose a bilevel MARL framework with \textit{Curriculum Learning} and a \textit{Closed-Loop Sequential Update} mechanism to improve training stability and convergence. We instantiate the framework in a taxation simulation environment grounded in classical economic models, supporting the evaluation of taxation policies under inter-group competition. Experiments show that the proposed method learns stable and sustainable tax policies. Compared with a two-group baseline without the proposed mechanisms, our approach avoids premature game collapse, extends the effective game duration by 60.92\%, and reduces GDP disparities among governments by 44.12\%.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2605.04565v1' target='_blank'>Delay-Aware Large-Small Model Collaboration over LEO Satellite Networks</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Mingyu Guo, Wen Wu, Ying Wang, Songge Zhang, Liang Li</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-05-06 07:08:54</h6>
+<p class='card-text'>In this paper, we introduce a delay-aware largesmall model collaboration scheme for low Earth orbit (LEO) satellite networks, which can balance the computational load among satellites and the communication load across inter-satellite links. Specifically, computational resource constrained remote sensing satellites are responsible for data collection and local processing using small models, while collaborating with computing satellites that provide large model processing. To minimize the service delay, we formulate a joint optimization problem for offloading decision and routing strategy design, which is transformed into a decentralized partially observable Markov decision process. To solve the problem, we develop a multi-agent reinforcement learning (MARL)-based algorithm with offline policy training and online bisection search. The offline trained policy determines routing strategies, while online bisection search iteratively adjusts the offloading decisions. Simulation results demonstrate that the proposed scheme can reduce the service delay by up to 31.85% compared with the benchmarks.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2605.04466v1' target='_blank'>Distributed TD Tracking with Linear Function Approximation over Directed Communication Networks</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Haocheng Yang, Shengchao Zhao, Yongchao Liu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-05-06 03:47:03</h6>
+<p class='card-text'>We study the policy evaluation problem in multi-agent reinforcement learning (MARL) over directed communication networks, where agents cooperate with each other to explore an unknown environment and accomplish a specific task. We propose a Push-Pull-type distributed algorithm, named PP-DTD, for policy evaluation in MARL within the framework of temporal difference (TD) learning with linear function approximation. PP-DTD integrates TD learning with the Push-Pull mechanism to accommodate directed communication networks, and further utilizes variance reduction techniques to enhance both algorithmic stability and convergence rate. We show that PP-DTD achieves linear convergence to a neighborhood of the optimum under constant step-sizes and a convergence rate of $\mathcal{O}({T^{-1}})$ under decaying step-sizes when the sample is independent and identically distributed or Markovian. To the best of our knowledge, PP-DTD is the first distributed algorithm for policy evaluation in MARL over directed graphs that achieves a comparable convergence rate to single-agent TD. The numerical experiments on cooperative navigation tasks demonstrate the robustness and effectiveness of PP-DTD.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2605.04345v1' target='_blank'>Structural Equivalence and Learning Dynamics in Delayed MARL</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jules Sintes, Ana Bušić, Jiamin Zhu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-05-05 23:07:09</h6>
+<p class='card-text'>We formally establish the equivalence between Observation Delay (OD) and Action Delay (AD) in cooperative partially observable multi-agent systems using observation-action histories. We show that both systems generate identical admissible joint-policy sets, and their induced state-action-observation trajectories are identical in distribution, leading to identical optimal solutions in Decentralized Partially Observable Markov Decision Processes (Dec-POMDPs). This formally generalizes existing infinite-horizon single-agent results to any-horizon partially observable cooperative multi-agent problems with decentralized policy execution, and allows any mixed-delay configuration to be reduced to a pure OD system. We further prove that in Transition-Independent MDPs (TI-MDPs), the observation-action history reduces to a tractable minimal local augmented state.
+  However, we show through numerical experiments that although the optimal solution spaces are structurally isomorphic, the practical learning dynamics are fundamentally different. First, using the minimal local augmented state, the equivalence no longer holds when transitions are not independent. Second, operational constraints and causal credit-assignment errors in Temporal Difference (TD) algorithms induce different learning behaviors across regimes. Finally, leveraging this structural equivalence to bypass these learning challenges, we demonstrate successful multi-agent zero-shot policy transfer from OD to AD, paving the way for unified, efficient solution methods in complex delayed systems.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2605.03125v2' target='_blank'>Taming the Curses of Multiagency in Robust Markov Games with Large State Space through Linear Function Approximation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jingchu Gai, Laixi Shi</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-05-04 20:04:52</h6>
+<p class='card-text'>Multi-agent reinforcement learning (MARL) holds great potential but faces robustness challenges due to environmental uncertainty. To address this, distributionally robust Markov games (RMGs) optimize worst-case performance when the environment deviates from the nominal model within a uncertainty set. Beyond robustness, an equally urgent goal for MARL is data efficiency -- sampling from vast state and action spaces that grow exponentially with the number of agents potentially leads to the curse of multiagency. However, current provably data-efficient algorithms for RMGs are limited to tabular settings with finite state and action spaces, which are only computationally manageable for small-scale problems, leaving RMGs with large-scale (or infinite) state spaces largely unexplored. The only existing work beyond tabular settings focuses on linear function approximation (LFA) for a restrictive class of RMGs using vanish minimal value assumption and still suffers from sample complexity with the curse of multiagency. In this work, we focuses on general RMGs with LFA. For uncertainty sets defined by total variation distance, we develop provably data-efficient algorithms that break the curse of multiagency in both the generative model setting and a newly proposed online interactive setting. To our knowledge, our results are the first to break the curse of multiagency of sample complexity for RMGs with large (possibly infinite) state spaces, regardless of the uncertainty set construction.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2605.02149v1' target='_blank'>Hierarchical Cooperative MARL for Joint Downlink PRB and Power Allocation in a 5G System</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Alireza Ebrahimi Dorcheh, Tolunay Seyfi, Ryan Barker, Fatemeh Afghah</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-05-04 02:20:43</h6>
+<p class='card-text'>Efficient downlink radio resource management in 5G requires jointly optimizing user scheduling and transmit-power allocation under time-varying wireless conditions. This is challenging in OFDMA systems because PRB assignment is combinatorial, power allocation is continuous, and performance depends on channel evolution, link adaptation, and long-term fairness. We propose a hierarchical cooperative multi-agent reinforcement learning framework with staged curriculum training for joint downlink PRB and power allocation in a physically grounded 5G environment. System-level simulation is implemented in Sionna, while Sionna RT supports wireless scene construction and mobility-aware ray-traced channel generation. The control task is decomposed into two sequential stages: a PRB agent learns user-level resource shares, which are converted to exact PRB assignments by a deterministic channel-aware quota resolver, and a power agent distributes the base-station power budget across users and their assigned PRB-symbol resources. The framework operates in a cross-layer loop with adaptive modulation and coding, HARQ feedback, outer-loop link adaptation, and a fairness-aware reward based on smoothed throughput and Jain's fairness index. Training stability is improved through a three-phase curriculum for PRB allocation, power control, and joint fine-tuning. Under matched channel realizations, we compare against a PF scheduler with equal-power transmission and two ablations isolating the learned PRB and power-control components. Results show that both learned components improve throughput distribution relative to PF, while the full PRB and power controller achieves the largest cell-throughput gain with only a modest reduction in Jain's fairness index.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2605.01865v1' target='_blank'>Quality-Aware Exploration Budget Allocation for Cooperative Multi-Agent Reinforcement Learning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Dahyun Oh, Minhyuk Yoon, H. Jin Kim</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-05-03 13:20:00</h6>
+<p class='card-text'>Cooperative multi-agent reinforcement learning (MARL) requires agents to discover joint strategies in a combinatorially large state-action space, yet effective coordination configurations are exceedingly rare. Intrinsic motivation, which augments task rewards with novelty bonuses, is a popular approach for driving exploration, but its effectiveness hinges on the exploration intensity $β$, where too large a value overwhelms the task signal and causes coordination collapse, while too small a value prevents discovery of rare strategies. We address two complementary challenges: adapting $β$ globally over training, and allocating the exploration budget across agents whose intrinsic reward signals vary in reliability. Our framework combines a return-conditioned sigmoid schedule (RCB) for global intensity control with a per-agent Reward Signal Quality (RSQ) metric that concentrates the exploration budget on agents with reliable signals. The core insight is that agents receiving noisy intrinsic rewards should explore less aggressively, and this allocation can be determined automatically from signal-to-noise statistics. Successor Distance (SD), a quasimetric intrinsic reward, naturally produces distinguishable per-agent signal quality, completing the framework with convergence and ordering preservation guarantees. On seven cooperative benchmarks (MPE, SMAX, MABrax), our method achieves top-tier returns across all environments.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2605.01805v2' target='_blank'>MAGIC: Multi-Step Advantage-Gated Causal Influence for Multi-agent Reinforcement Learning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Haohan Yu, Jinmiao Cong, Shengzhi Wang, Lu Wang, Chanjuan Liu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-05-03 10:05:48</h6>
+<p class='card-text'>A key challenge in multi-agent reinforcement learning (MARL) lies in designing learning signals that effectively promote coordination among agents. Designing such signals requires estimating how one agent's current action affects its teammates over future interaction steps. To address this, we introduce Multi-step Advantage-Gated Interventional Causal MARL (MAGIC), a framework that estimates multi-step action effects between agents and selectively converts them into intrinsic rewards. MAGIC uses counterfactual action interventions to compare teammate futures under factual and counterfactual branches, and introduces a gate based on advantage to direct exploration toward beneficial behaviors aligned with the task goal. Experiments on Multi-Agent Particle Environments (MPE) and StarCraft micromanagement benchmarks (SMAC and SMACv2) show that MAGIC consistently outperforms leading prior methods, with average relative final performance improvements of 26.9% and 10.1%, respectively.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2605.01457v3' target='_blank'>CoFlow: Coordinated Few-Step Flow for Offline Multi-Agent Decision Making</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Guowei Zou, Haitao Wang, Beiwen Zhang, Boning Zhang, Hejun Wu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-05-02 14:12:04</h6>
+<p class='card-text'>Generative models have emerged as a promising paradigm for offline multi-agent reinforcement learning (MARL), but existing approaches require many iterative sampling steps. Recent few-step acceleration methods either distill a joint teacher into independent students or apply averaged velocity fields independently to each agent. Unfortunately, these few-step approaches hurt inter-agent coordination. We show that the efficiency-coordination trade-off is not inherent: single-pass multi-agent generation can preserve coordination when the velocity field is natively joint-coupled. We propose Coordinated few-step Flow (CoFlow), an architecture that combines Coordinated Velocity Attention (CVA) with Adaptive Coordination Gating. A finite-difference consistency surrogate further replaces memory-prohibitive Jacobian-vector product backpropagation through the averaged velocity field with two stop-gradient forward passes. Across 60 configurations spanning MPE, MA-MuJoCo, and SMAC, CoFlow matches or surpasses Gaussian policies, value-based methods, transformer policies, diffusion models, and prior flow baselines on episodic return. Three independent coordination probes confirm that CoFlow's improvements arise from inter-agent coordination rather than per-agent capacity. A denoising-step sweep shows that single-pass inference suffices on every configuration. CoFlow reaches state-of-the-art coordination quality in 1-3 denoising steps under both centralized and decentralized execution.
+  Project Page: https://guowei-zou.github.io/coflow/</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2605.05236v1' target='_blank'>Topology-Driven Anti-Entanglement Control for Soft Robots</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Haoyang Le, Shengxuan Wang, Mohan Chen, Shuo Feng</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-05-01 06:08:44</h6>
+<p class='card-text'>In the field of precision manufacturing in complex constrained environments, the role of soft robots is increasingly prominent, and the realization of anti-winding control based on multi-intelligent body reinforcement learning has become a research hotspot. One of the core problems at present is to coordinate multiple robots to complete the unwinding operation in a highly constrained environment. The existing distributed training framework faces some observability challenges in high-density barrier and unstable environments, resulting in poor learning results. This paper proposes a topology-driven Multi-Agent Reinforcement Learning (TD-MARL) framework to coordinate multi-robot systems to avoid entanglement. Specifically, the critical network adopts centralized learning, so that each intelligent body can perceive the strategies of other intelligent bodies by sharing the topological state, thus alleviating the training instability caused by complex interactions; eliminating the demand for communication resources between robots through distributed execution, Upgrade system reliability; the integrated topological security layer uses topological invariants to accurately assess and mitigate the risk of entanglement to avoid the strategy from falling into local difficulties. Finally, the full simulation experiments carried out in the real simulation environment show that the method is better than the current advanced deep reinforcement learning (DRL) method in terms of convergence and anti-winding effect.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2604.25972v1' target='_blank'>A Survey of Multi-Agent Deep Reinforcement Learning with Graph Neural Network-Based Communication</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Valentin Cuzin-Rambaud, Laetitia Matignon, Maxime Morge</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-04-28 07:50:24</h6>
+<p class='card-text'>In multi-agent reinforcement learning (MARL), the integration of a communication mechanism, allowing agents to better learn to coordinate their actions and converge on their objectives by sharing information. Based on an interaction graph, a subclass of methods employs graph neural networks (GNNs) to learn the communication, enabling agents to improve their internal representations by enriching them with information exchanged. With growing research, we note a lack of explicit structure and framework to distinguish and classify MARL approaches with communication based on GNNs. Thus, this paper surveys recent works in this field. We propose a generalized GNN-based communication process with the goal of making the underlying concepts behind the methods more obvious and accessible.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2604.25076v1' target='_blank'>Zero Shot Coordination for Sparse Reward Tasks with Diverse Reward Shapings</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Keenan Powell, Peihong Yu, Pratap Tokekar</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-04-28 00:09:28</h6>
+<p class='card-text'>Many Multi-Agent Reinforcement Learning (MARL) agents fail to adapt properly to cooperating with agents trained with the same objectives but different seeds, algorithms, or other training differences. This is the problem of Zero-Shot Coordination (ZSC), which focuses on training agents to cooperate well with unknown agents. ZSC has been studied for a variety of tabular cases and simple games such as Hanabi, achieving excellent results. However, existing solutions to ZSC only consider identical rewards for your trained agents and all future partners. This is not realistic for the trained agents, as they do not consider the problem of cooperating with agents that have identical sparse objectives but shape the rewards for those objectives in different manner. To address this issue, we show how to train an ensemble of methods using randomized reward shapings chosen using 4 selection algorithms. Experiments done on the Overcooked environment demonstrate consistent improvements of 62.2%-119.2% in sparse reward over baseline ZSC algorithms when playing with agents that have identical sparse rewards but different reward shapings.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2604.24501v2' target='_blank'>TARMM: Scaling Delay-Critical Edge AI Offloading in 5G O-RAN via Temporal Graph Mobility Management</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Peihao Yan, Yun Chen, Jie Lu, Qijun Wang, Huacheng Zeng</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-04-27 14:04:55</h6>
+<p class='card-text'>Emerging delay-critical edge AI applications, such as VR perception and real-time video analytics, impose stringent latency and reliability requirements on 5G networks. However, existing mobility management mechanisms are largely reactive and fail to adapt to dynamic network conditions, resulting in suboptimal handover decisions and degraded performance. In this paper, we present TARMM, a 5G Open Radio Access Network (O-RAN) system that optimizes user mobility management for delay-critical edge AI offloading. The core of TARMM is a temporal graph model that captures the spatiotemporal dynamics of the RAN across users and cells, enabling near real-time handover decisions. Building on this representation, we design a multi-agent reinforcement learning (MARL) framework with rule-based action masking and proactive resource preparation to ensure safe, stable, and efficient handovers. We implement TARMM on a multi-cell indoor 5G O-RAN testbed and evaluate it using diverse VR workloads. Extensive experiments show that TARMM reduces tail latency by up to 44% and packet loss by up to 56% compared to state-of-the-art approaches. Source code and demo videos are available at: https://margo-source.github.io/Margo/</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2604.23557v1' target='_blank'>DLM: Unified Decision Language Models for Offline Multi-Agent Sequential Decision Making</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Zhuohui Zhang, Bin Cheng, Bin He</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-04-26 06:34:21</h6>
+<p class='card-text'>Building scalable and reusable multi-agent decision policies from offline datasets remains a challenge in offline multi-agent reinforcement learning (MARL), as existing methods often rely on fixed observation formats and action spaces that limit generalization. In contrast, large language models (LLMs) offer a flexible modeling interface that can naturally accommodate heterogeneous observations and actions. Motivated by this, we propose the Decision Language Model (DLM), which formulates multi-agent decision making as a dialogue-style sequence prediction problem under the centralized training with decentralized execution paradigm. DLM is trained in two stages: a supervised fine-tuning phase, which leverages dialogue-style datasets for centralized training with inter-agent context and generates executable actions from offline trajectories, followed by a group relative policy optimization phase to enhance robustness to out-of-distribution actions through lightweight reward functions. Experiments on multiple benchmarks show that a unified DLM outperforms strong offline MARL baselines and LLM-based conversational decision-making methods, while demonstrating strong zero-shot generalization to unseen scenarios across tasks.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2604.23308v1' target='_blank'>CODA: Coordination via On-Policy Diffusion for Multi-Agent Offline Reinforcement Learning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Marcel Hedman, Kale-ab Abebe Tessera, Juan Claude Formanek, Anya Sims, Riccardo Zamboni, Trevor McInroe, John Torr, Elliot Fosong</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-04-25 13:49:43</h6>
+<p class='card-text'>Offline multi-agent reinforcement learning (MARL) enables policy learning from fixed datasets, but is prone to coordination failure: agents trained on static, off-policy data converge to suboptimal joint behaviours because they cannot co-adapt as their policies change. We introduce CODA (Coordination via On-Policy Diffusion for Multi-Agent Reinforcement Learning), a diffusion-based multi-agent trajectory generator for data augmentation that samples conditioned on the current joint policy, producing synthetic experience which reflects the evolving behaviours of the agents, thereby providing a mechanism for co-adaptation. We find that previous diffusion-based augmentation approaches are insufficient for fostering multi-agent coordination because they produce static augmented datasets that do not evolve as the current joint policy changes during training; CODA resolves this by more closely simulating on-policy learning and is a meaningful step toward coordinated behaviours in the offline setting. CODA is algorithm-agnostic and can be layered onto both model-free and model-based offline reinforcement learning pipelines as an augmentation module. Empirically, CODA not only resolves canonical coordination pathologies in continuous polynomial games but also delivers strong results on the more complex MaMuJoCo continuous-control benchmarks.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2604.23179v1' target='_blank'>Cooperative Informative Sensing for Monitoring Dynamic Indoor Environments via Multi-Agent Reinforcement Learning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Kanghoon Lee, Matthew M. Sato, Jinnyeong Yang, Seungro Lee, Sujin Lee, Jiachen Li, Kuk-Jin Yoon, Jinkyoo Park, Kincho H. Law, Yoonjin Yoon</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-04-25 07:20:15</h6>
+<p class='card-text'>Monitoring human activity in indoor environments is important for applications such as facility management, safety assessment, and space utilization analysis. While mobile robot teams offer the potential to actively improve observation quality, existing multi-robot monitoring and active perception approaches typically rely on coverage or visitation based objectives that are weakly aligned with the accuracy requirements of human-centric monitoring tasks. In this work, we formulate cooperative active observation as a decentralized control problem in which multiple robots adjust their motion to directly optimize monitoring accuracy under partial observability. We propose a learning-based framework for cooperative policies from decentralized observations using multi-agent reinforcement learning (MARL), supported by an architecture that handles variable numbers of humans and temporal dependencies. Simulation results across diverse indoor environments and monitoring tasks show that the proposed approach consistently outperforms classical coverage, persistent monitoring, and learning-free multi-robot baselines, while remaining robust to changes in the number of observed humans.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2604.20586v1' target='_blank'>A Hierarchical MARL-Based Approach for Coordinated Retail P2P Trading and Wholesale Market Participation of DERs</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Patrick Wilk, Ethan Cantor, Yikui Liu, Jie Li</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-04-22 14:02:56</h6>
+<p class='card-text'>The ongoing shift towards decentralization of the electric energy sector, driven by the growing electrification across end-use sectors, and widespread adoption of distributed energy resources (DERs), necessitates their active participation in the electricity markets to support grid operations. Furthermore, with bi-directional energy and communication flows becoming standard, intelligent, easy-to-deploy, resource-conservative demand-side participation is expected to play a critical role in securing power grid operational flexibility and market efficiency. This work proposes a market engagement framework that leverages a hierarchical multi-agent deep reinforcement learning (MARL) approach to enable individual prosumers to participate in peer-to-peer retail auctions and further aggregate these intelligent prosumers to facilitate effective DER participation in wholesale markets. Ultimately, a Stackelberg game is proposed to coordinate this hierarchical MARL-based DER market participation framework toward enhanced market performance.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2604.17379v2' target='_blank'>MAGRPO: Accelerated MARL Training for Fluid Antenna-Assisted Wireless Network Optimization</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Wanzhe Wang, Tong Zhang, Hao Xu, Shuai Wang, Rui Wang, Kai-Kit Wong</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-04-19 11:05:51</h6>
+<p class='card-text'>Fluid antenna system (FAS) becomes a promising paradigm for next-generation wireless networks, which enables position-flexible antenna elements that can dynamically adjust to more favorable channel conditions. However, the optimization of fluid antenna (FA) positions, beamforming, and power allocation in FA-assisted wireless networks is challenging, due to the non-convexity and the lack of base station (BS) coordination. In this paper, we first formulate this challenging optimization problem as a decentralized partially observable Markov decision process, and then propose a multi-agent group relative policy optimization (MAGRPO) algorithm under the centralized training decentralized execution (CTDE) paradigm. Compared with multi-agent proximal policy optimization (MAPPO), MAGRPO replaces the critic network with group relative advantage estimation. This design reduces computational complexity by nearly half under parameter sharing. Furthermore, we derive a variance upper bound of the cumulative reward, which scales with network parameters, e.g., the number of BSs, users, and FAs. Simulation results show that compared with wireless networks with fixed antenna positions, FA-assisted wireless networks achieve multiple-fold sum-rate enhancement. Moreover, the proposed MAGRPO attains sum-rates comparable to those of MAPPO in testing, while reducing training time by $30\% \sim 40\%$.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2604.17281v1' target='_blank'>Safety-Aware AoI Scheduling for LEO Satellite-Assisted Autonomous Driving</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Kangkang Sun, Junyi He, Juntong Liu, Xiuzhen Chen, Jianhua Li, Minyi Guo</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-04-19 06:41:16</h6>
+<p class='card-text'>Autonomous platoons traversing infrastructure gaps increasingly depend on LEO satellite backhaul for safety-critical updates, yet no existing framework jointly addresses compound Doppler from simultaneous satellite and vehicle motion, sub-slot handover outages that exceed collision-alert deadlines, and heterogeneous freshness requirements across three vehicular priority classes. The core challenge is a \emph{timescale mismatch}: coarse control slots hide sub-slot outages, which makes both AoI spike analysis and safety verification ill-posed. Ping-pong handover oscillations further compound AoI cost in a way that purely reactive schedulers cannot mitigate. We address these challenges through a unified framework that couples a two-timescale AoI model with tiered time-average safety constraints enforced by virtual queues. A closed-form ping-pong AoI envelope reveals that cumulative penalty grows quadratically in oscillation length, analytically justifying oscillation suppression as the highest-leverage safety mechanism. The resulting drift-plus-penalty template is instantiated as SafeScale-MATD3 with proactive handover timing and multi-task dual-critic MARL. A key finding is that suppressing brief but repeated ping-pong oscillations yields larger safety returns than shortening any single outage, and that tick-level AoI accounting is a necessary condition for verifiable collision-alert guarantees under LEO handovers. Simulations show that SafeScale-MATD3 is the only method satisfying the strict 1 % collision-alert violation budget, reducing violation rate by 4 to 5.5 times versus baselines, while achieving 35 % lower collision-alert AoI and strict Pareto dominance on the energy and freshness tradeoff.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js'></script>
+</body>
+</html>
