@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>planning - 2026-06-10</title>
+<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap' rel='stylesheet'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css'>
+<style>
+body {
+font-family: 'Roboto', sans-serif;
+background-color: #f5f7fa;
+padding: 20px;
+}
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.card-title {
+    font-weight: 700;
+}
+.card:hover {
+    transform: scale(1.02);
+    transition: 0.3s ease-in-out;
+}
+</style>
+</head>
+<body>
+<div class='container'>
+<h1 class='text-center my-4'><i class='fas fa-book'></i>planning - 2026-06-10</h1>
+<div class='row'>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2606.11169v1' target='_blank'>Piper: A Programmable Distributed Training System</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Megan Frisella, Shubham Tiwari, Andy Ruan, Yi Pan, Parker Gustafson, Mat Jacob, Gilbert Bernstein, Stephanie Wang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-06-09 17:48:41</h6>
+<p class='card-text'>Large-scale model training increasingly relies on composing multiple parallelism strategies, such as data, pipeline, and expert parallelism, together with memory-saving optimizations like ZeRO. Deployed systems for foundation model pretraining often rely on human experts to manually design a high-level parallelism strategy then implement the corresponding low-level execution strategy, making it difficult to adapt the system to new strategies. Meanwhile, many general-purpose frameworks are more flexible but their implementations are still tied to a fixed set of common parallelism strategies, making it challenging to integrate state-of-the-art strategies.
+  We present Piper, a user-controllable distributed training system that decouples the strategy from the runtime implementation. Piper allows users to declare a comprehensive distributed training strategy with a small set of model annotations and scheduling directives. Each directive applies a transformation on Piper's intermediate representation (IR), a unified global training DAG that represents all computation and communication. Using this IR, Piper compiles per-device execution plans and executes them with a distributed runtime agnostic to the strategy. We show that the combined system maintains performance parity on commonly available strategies such as ZeRO, while also enabling additional performance and memory efficiency gains through joint scheduling of compute and communication in composed parallelism strategies such as DeepSeek-V3's DualPipe.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2606.11151v1' target='_blank'>JOIN: Anchor-Grasp-Conditioned Joining via Opposition, Inference, and Navigation for Bimanual Assistive Manipulation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Drake Moore, Matt Cheng, Xiang Zhi Tan, Taşkın Padır</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-06-09 17:36:06</h6>
+<p class='card-text'>Assistive mobility and manipulation platforms have received increasing attention as a means of restoring independence to individuals with disabilities. While effective for many basic activities of daily living (ADLs), a significant percentage of everyday tasks such as opening a jar, pouring a liquid, lifting a tray, or basic meal preparation, is fundamentally bimanual and remains out of reach for any single-arm system. Adding a second arm to a wheelchair is impractical, due to the additional power draw, cost, and the loss of space required for transfers and mobility. We instead propose a heterogeneous, on-demand bimanual system, in which a wheelchair-mounted anchor arm is joined when needed by a summoned mobile manipulator that serves as a complement arm. The central technical problem, which we call bimanual joining, is conditional: the anchor has already committed to a grasp, and the complement arm must choose where to stand and what to grasp to complete the task. We formulate bimanual joining as a three-phase decomposition (plan, drive, grasp) and show that a vision-language model (VLM), coupled with standard geometric tools, provides task-level knowledge sufficient to solve a representative class of bimanual ADLs. Our system JOIN, contributes (i) a wheelchair-referenced opposition score, and (ii) task-conditioned directional manipulability. We evaluate JOIN on a Kinova Gen3 anchor and a Hello Robot Stretch~3 complement on representative same-object and different-object tasks. JOIN accomplished more attempts (19/20) than state-of-the-art methods (14/20) and required markedly less correction by the operator.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2606.11132v1' target='_blank'>Operationalizing Property-Based Testing for Data-Intensive Scalable Computing Systems</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yaoxuan Wu, Ingrid Lee, Ahmad Humayun, Muhammad Ali Gulzar, Miryung Kim</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-06-09 17:25:38</h6>
+<p class='card-text'>While fuzzing effectively catches crashes, its shallow oracles often miss semantic drifts and optimization-related errors in data-intensive scalable computing (DISC) frameworks. Property-based testing (PBT) addresses this limitation by checking general semantic invariants across diverse workloads and inputs, rather than relying on specific expected outputs. However, systematically operationalizing PBT for DISC systems remains difficult because it requires both reusable property definitions and effective instantiation into valid workloads and data.
+  We present DiscPBT, a property-based testing engine for Apache Spark. DiscPBT introduces eight reusable meta-properties for DISC semantic testing, spanning equivalence rewriting, data decomposition, computation decomposition, and operator-local semantic relations. To operationalize these meta-properties, DiscPBT provides reusable generators for synthesizing valid workload skeletons and input data, together with an instantiation framework that realizes each meta-property in schema-compatible contexts through compatible operators, expressions, and UDFs.
+  Our evaluation on PySpark shows that DiscPBT achieves 1.2$\times$ higher branch coverage and 1153$\times$ greater plan diversity than CometFuzz. Across 66 concrete properties, DiscPBT reveals cross-version semantic drift as well as subtle corner-case pitfalls involving NaN and empty inputs, that are not captured by crash-based fuzzing alone. These results demonstrate the value of systematic PBT for uncovering semantic issues in DISC frameworks.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2606.11103v1' target='_blank'>Spatially heterogeneous power-law attenuation with multiple relaxation mechanisms for ultrasound modeling</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Masashi Sode, Gianmarco Pinton</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-06-09 17:01:57</h6>
+<p class='card-text'>Objective. The soft tissue attenuation laws have a magnitude and frequency dependence that varies across tissue types and generally follow power laws. An accurate model of ultrasound propagation in the human body thus may require spatially heterogeneous power-law attenuation alpha(x,f) = alpha_0(x) f^(y(x)). However, a spatially heterogeneous representation of frequency-dependent attenuation is technically challenging, so existing methods introduce simplifying assumptions. For example, prior approaches such as Fullwave 2 achieved <5% error for individual tissue types but required manual parameter tuning for each (alpha_0, y) pair, limiting the construction of realistic tissue libraries. Approach. We introduce a calibration framework that uses derivative-free optimization to systematically fit relaxation parameters across diverse tissue combinations spanning alpha_0 = 0.0022-1.0 dB/(MHz^y cm) and y = 0.4-2.0. The Nelder-Mead algorithm minimizes complex-wavenumber mismatch. The attenuation is extended to a convolutional perfectly matched layer, where the same relaxation formulation is used in the boundaries. Main results. The method achieves mean errors below 3% over 1-20 MHz with dispersion error of 1.1 +/- 0.8 m/s across the clinically relevant core region (y = 0.7-1.4). Boundary reflections remain below -50 dB for clinically relevant tissue exponents (y <= 1.5). We validated the method with two-layer muscle/fat/liver models and confirmed per-layer accuracy (<2.5% normalized error). A 3D abdominal simulation using the Visible Human dataset demonstrates stable propagation with voxel-level heterogeneity in both alpha_0(x) and y(x). Significance. The open-source multi-GPU implementation (Fullwave 2.5) provides a practical tool for patient-specific therapy planning, training data generation, estimation of acoustic radiation force, quantitative imaging, and inverse problem applications.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2606.11088v1' target='_blank'>A Distributed Multi-UGV Exploration Framework With Loop-Aware Planning and Descriptor-Aided Localization in Resource-Limited Environments</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Zhiwei Li, Haiou Liu, Xijun Zhao, Ji Li, Yingze Wang, Boyang Wang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-06-09 16:48:53</h6>
+<p class='card-text'>Robust and efficient cooperative exploration with multiple unmanned ground vehicles (UGVs) in unknown, GPSdenied, and bandwidth-limited environments without prior maps remains challenging, as localization drift degrades map consistency and induces redundant coverage. This paper presents a fully distributed exploration framework that couples descriptoraided inter-UGV loop closure with loop-aware hierarchical planning while enabling autonomous localization and exploration. We develop a lightweight LiDAR global descriptor with range-image prealignment to enable robust cross-UGV place recognition under large yaw and lateral variations, and use verified loop closures to maintain globally consistent trajectories and a sparse topological representation. We further introduce an uncertainty-aware crossUGV loop-closure selection module that scores candidate loop closures under pose uncertainty and retains high-utility loop closures as planning anchors for global task allocation and local route refinement. Simulations and real-UGV experiments show that the loop-closure module achieves AR@1/AR@1% of 89.9%/95.5%, distributed optimization reduces absolute trajectory error, the system substantially reduces two-way communication volume, and the overall framework reduces exploration time and travel distance by 15% and 14%, respectively, compared with an mTSP baseline.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2606.11078v1' target='_blank'>A History-Aware Visually Grounded Critic for Computer Use Agents</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jaewoo Lee, Zaid Khan, Archiki Prasad, Justin Chih-Yao Chen, Supriyo Chakraborty, Kartik Balasubramaniam, Sambit Sahu, Elias Stengel-Eskin, Hyunji Lee, Mohit Bansal</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-06-09 16:39:10</h6>
+<p class='card-text'>Various test-time interventions for Computer Use Agents (CUAs), including critic models, have been developed to improve performance through pre-execution action evaluation in complex Graphical User Interface (GUI) environments. However, existing critics suffer from two key limitations: they (1) focus primarily on short-sighted decision loops (e.g., forgetting earlier actions) and (2) lack the visual grounding needed to detect flawed actions (e.g., clicking wrong UI elements). To address these, we introduce HiViG, a History-aware Visually Grounded test-time framework, built around a multimodal critic trained on real GUI trajectories to abstract past interactions into a compact record and to evaluate actions with visual grounding. At test time, HiViG integrates the critic into the policy decision loop to provide macro-action history, which summarizes the policy's completed achievements, and visually grounded critique, which verifies raw execution coordinates against the current screenshot to intercept errors before execution. Across web, mobile, and desktop benchmarks, HiViG consistently outperforms existing scalar and verbal critics, improving average success rates over the strongest baseline by 5.8% for Qwen3-VL-32B and 9.0% for Gemini-3-Flash, and demonstrates strong cross-platform generalization. Ablations show that macro-action history mitigates short-sighted planning and visually grounded critique reduces execution errors, with both components being critical for test-time scaling in long-horizon GUI tasks.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2606.11019v1' target='_blank'>Diffusion Forcing Planner: History-Annealed Planning with Time-Dependent Guidance for Autonomous Driving</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Zehan Zhang, Neng Zhang, Yaoyi Li, Jia Cai, Zhiling Wang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-06-09 15:56:41</h6>
+<p class='card-text'>Learning-based motion planners, despite recent progress, often suffer from temporal inconsistency. Small perturbations across frames can accumulate into unstable trajectories, degrading comfort and safety in closed-loop driving. Several methods attempt to inject history as a static conditioning signal to stabilize outputs, only to induce the planner to copy historical patterns instead of adapting to environment contexts. To address this limitation, we propose Diffusion Forcing Planner (DFP), a diffusion-based planning framework driven by history-guided control. Specifically, DFP decomposes the full trajectory into history, current and future segments, and assign independent noise levels to each segment. The model jointly denoises the historical and the future segments, enforcing a heterogeneous joint diffusion process. At inference, classifier-free guidance (CFG) is applied to steer future sampling using annealed history in a controllable manner. Closed-loop evaluation and comprehensive ablations on nuPlan show that DFP achieves competitive performance while producing continuous, stable, and controllable motion plans in complex driving scenarios.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2606.11012v1' target='_blank'>An Uncertainty Estimation Framework for Dose Accumulation in Adaptive Radiotherapy: Application to CBCT-Guided Radiotherapy for Cervical Cancer</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Cedric Hemon, Delphine Lebret, Jean-Claude Nunes, Valentin Boussot, Karine Peignaux, Nathalie Mesgouez-Nebout, Chantal Hanzen, Antoine Simon, Anaïs Barateau, Renaud de Crevoisier, Caroline Lafond</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-06-09 15:52:58</h6>
+<p class='card-text'>Background and purpose: oART enables daily plan adaptation to interfraction anatomical variations, but cumulative dose estimation remains limited by DIR, segmentation, and anatomical uncertainties. We introduce IMPACT-DoseAcc, an uncertainty-aware dose accumulation framework, within IMPACT for semantic feature-driven image analysis. The framework is modality- and disease-agnostic and is applied to CBCT-guided oART for cervical cancer (LACC).
+  Material and Methods: Nine LACC patients were retrospectively analyzed using daily CBCT-derived virtual CTs for dose recalculation. IMPACT-DoseAcc focuses on uncertainty from DIR, without modeling vCT-generation uncertainty. Two DIR uncertainty strategies were tested within IMPACT-Reg: a Bayesian segmentation-guided approach using one probabilistic model to quantify anatomical uncertainty, and an ensemble of segmentation models targeting structures to capture epistemic variability. Voxel-wise uncertainty maps were propagated through dose warping and accumulation to generate probabilistic dose-volume histograms. Ensemble uncertainty was quantified from voxel-wise standard deviation across deformation fields, and geometric error was assessed using surface distance between warped and validated contours. Anatomical-variability weighting refined aggregation.
+  Results: Ensemble DIR uncertainty correlated with geometric error, with Pearson coefficients of 0.63 for CTVt and 0.66 for bladder. For CTVt, pDVHs achieved 96.3 +/- 3.9% coverage, showing calibration of propagated uncertainty. Weighting stabilized estimates across fractions and organs.
+  Conclusions: IMPACT-DoseAcc propagates registration-driven uncertainty to cumulative dose metrics, improving interpretation of accumulated dose under anatomical variations. Its 3DSlicer integration supports reproducible, uncertainty-informed ART workflows.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2606.10986v1' target='_blank'>Multi-UAV Active Sensing with Information Gain-based Planning and Belief Fusion</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:S. Habibi, L. Marques</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-06-09 15:25:32</h6>
+<p class='card-text'>Unmanned aerial vehicles (UAVs) are increasingly used for active sensing and information gathering in spatially distributed environments. Their performance, however, is constrained by limited flight time, sensing uncertainty, and the trade-off between spatial coverage and observation accuracy. This paper presents a real-world validation of a multi-UAV active sensing framework for probabilistic binary terrain mapping, with precision agriculture used as the application case. The environment is represented as a probabilistic belief map, where spatial dependencies are modeled through a factor-graph formulation. UAV decision making is guided by Information Gain based Informative Path Planning (IGbIPP), and the approach is compared with Random Walk and Sweep coverage path planning baselines using both synthetic terrains and real UAV-derived agricultural imagery. The study also evaluates spatial correlation weights and several probabilistic belief-fusion rules for multi-UAV information sharing. Results show that IGbIPP reduces entropy and mapping error more effectively than the baselines, while a wider field of view improves real-world coverage and map accuracy. The results further show that simple equal or biased spatial weights can be more robust than adaptive weights, and that Bayesian, log-odds, and Dempster--Shafer fusion achieve the best cooperative mapping performance. These findings highlight the importance of uncertainty-driven planning, sensing geometry, spatial modeling, and probabilistic fusion for real-world UAV-based active sensing.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2606.10953v1' target='_blank'>Architect-Ant: Editable Automatic Furnishing of Architectural Floor Plans</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Fedor Rodionov, Aleksandar Cvejic, Michael Birsak, John Femiani, Peter Wonka</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-06-09 14:55:43</h6>
+<p class='card-text'>Furnished floor plans are fundamental to real estate visualization, interior design, and architectural workflows. However, progress in automatic furniture arrangement has been limited by the lack of real, professionally designed floor-plan datasets with object-level furniture annotations. To address this gap, we introduce AntPlan-270, a curated dataset of 270 architectural floor plans with per-room furniture bounding box annotations across ten residential room categories. Building on this dataset, we present Architect-Ant, an editable automatic furnishing framework powered by a fine-tuned vision-language model. Furniture layouts are represented using a compact, coordinate-based domain-specific language (DSL) that encodes object categories and placements relative to the room geometry. To improve spatial reasoning, we generate procedural reasoning traces that capture architectural constraints such as wall alignment, door and window clearance, circulation, fixture compatibility, and room-specific furniture inventories, and use them to supervise fine-tuning of the model. We then apply preference optimization over candidate object placements to further refine layout quality. The generated DSL can be rasterized into semantic masks and used to condition a Flux-based LoRA renderer, producing realistic blueprint-style furnished floor-plan images while preserving the editable symbolic layout. Experiments on layout furnishing show that Architect-Ant produces geometrically valid and functionally plausible layouts, and suggest a scalable path for furnishing larger structure-only floor-plan datasets.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2606.10918v1' target='_blank'>Task Robustness via Re-Labelling Vision-Action Robot Data</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Artur Kuramshin, Özgür Aslan, Cyrus Neary, Glen Berseth</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-06-09 14:28:22</h6>
+<p class='card-text'>The recent trend in scaling models for robot learning has resulted in impressive policies that can perform various manipulation tasks and generalize to novel scenarios. However, these policies continue to struggle with following instructions, likely due to the limited linguistic and action sequence diversity in existing robotics datasets. This paper introduces Task Robustness via Re-Labelling Vision-Action Robot Data (TREAD), a scalable framework that leverages large Vision-Language Models (VLMs) to augment existing robotics datasets without additional data collection, harnessing the transferable knowledge embedded in these models. Our approach leverages a pretrained VLM through three stages: generating semantic sub-tasks from original instruction labels and initial scenes, segmenting demonstration videos conditioned on these sub-tasks, and producing diverse instructions that incorporate object properties, effectively decomposing longer demonstrations into grounded language-action pairs. We further enhance robustness by augmenting the data with linguistically diverse versions of the text goals. Evaluations on LIBERO demonstrate that policies trained on our augmented datasets exhibit improved performance on novel, unseen tasks and goals. Our results show that TREAD enhances both planning generalization through trajectory decomposition and language-conditioned policy generalization through increased linguistic diversity.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2606.10903v1' target='_blank'>AgniNav: Configuration-Driven Cross-Embodiment Local Planning for Robot Navigation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Tianhao Zang, Siwei Cheng, Haidong Huang, Shanze Wang, Wei Zhang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-06-09 14:13:45</h6>
+<p class='card-text'>Monocular local navigation is attractive for lightweight robots, but existing vision-based policies often couple perception to a specific body, camera height, and footprint, making transfer from wheeled bases to legged platforms dependent on retraining or active depth hardware. This paper introduces AgniNav, a configuration-driven local navigation framework that standardizes cross-embodiment transfer at the collision-envelope level. Each robot is specified by a measurable four-parameter safety envelope: collision-relevant height, front length, rear length, and half width. The height parameter conditions an image-to-scan network to predict a one-dimensional, collision-relevant pseudo-laserscan from a monocular color image, while the remaining footprint parameters configure a dimension-aware local planner for collision checking. Training uses height-conditioned column-minimum scan labels generated from paired color-depth data, allowing the same image to supervise different safety envelopes without collecting robot-specific data. To the best of our knowledge, AgniNav is the first monocular local-navigation framework that jointly conditions perception and planning on a shared collision-envelope configuration for zero-retraining deployment across wheeled, quadruped, and humanoid platforms. Real-robot experiments on a Turtlebot2, Unitree Go2, and Accelerated Evolution K1 achieve 39/40, 18/20, and 18/20 successes with 0/40, 1/20, and 2/20 collisions, respectively, while running at 30 Hz on Jetson Orin.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2606.10825v1' target='_blank'>MODIP: Efficient Model-Based Optimization for Diffusion Policies</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Zakariae El Asri, Philippe Gratias-Quiquandon, Nicolas Thome, Olivier Sigaud</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-06-09 13:09:21</h6>
+<p class='card-text'>Diffusion policies (DPs) have emerged as expressive policy representations for robot learning, often used with imitation learning methods such as behavioral cloning (BC). However, while their success has largely been confined to BC, direct reinforcement learning (RL) fine-tuning remains challenging because actions are generated through a multi-step denoising process. In this work, we propose MODIP, a framework for the offline-to-online fine-tuning of DPs. Rather than directly applying RL to the DPs, MODIP leverages a world model (WM) to guide policy adaptation and keeps the simplicity and stability of BC. We utilize model predictive control (MPC) to generate high-quality trajectories within the WM, and use them as supervised targets for fine-tuning the DP. To make MPC planning efficient, MODIP uses a terminal state value instead of a policy-dependent state-action value, reducing inference time. Additionally, MODIP trains critics with policy-independent TD targets, reducing training time. Experiments on D4RL (MuJoCo, Kitchen) and RoboMimic tasks show that MODIP improves diffusion policies beyond BC, and is competitive with or outperforms diffusion policy RL fine-tuning methods and strong model-based baselines such as TD-MPC2.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2606.10818v1' target='_blank'>IMPACT: Learning Internal-Model Predictive Control for Forceful Robotic Manipulation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jiawei Gao, Chaoqi Liu, Peilin Wu, Haonan Chen, Yilun Du</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-06-09 13:00:56</h6>
+<p class='card-text'>Real-world robotic manipulation tasks often involve forceful interactions with the environment, such as using tools of varying weights, transporting objects with different masses, and performing contact-rich tasks like table wiping. Previous learning-based approaches typically employ imitation learning policies that output target end-effector poses tracked by low-level impedance controllers. In these systems, forceful interactions are either implicitly realized through steady-state tracking errors or explicitly commanded using wrist force/torque or tactile sensors. However, implicit approaches generalize poorly across object weights, while explicit approaches require specialized hardware and increase system complexity. In this work, we propose IMPACT, a framework that decouples these forceful tasks into task-planning and internal-model-based predictive control. Extensive simulation and real-world experiments demonstrate that the proposed framework achieves higher success rates and improved generalization to unseen object weights, as well as better safety and energy efficiency.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2606.10803v1' target='_blank'>Beyond APIs: Probing the Limits of MLLMs in Physical Tool Use</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Zhixin Ma, Yutong Zhou, Yongqi Li, Chong-Wah Ngo, Wenjie Li</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-06-09 12:49:11</h6>
+<p class='card-text'>Multimodal Large Language Models (MLLMs) excel at utilizing digital APIs and increasingly serve as the "brain" of embodied AI, instructing robots to interact with the physical world. In such embodied settings, a central capability is the use of physical tools, which underpins MLLMs' ability to assist humans in real-world tasks. Despite the importance, MLLMs' proficiency in physical tool use remains largely unexplored. To address this gap, we introduce PhysTool-Bench, the first physical tool-use benchmark designed to evaluate MLLMs' ability to comprehend real-world scenarios, identify physical tools, and plan their use. PhysTool-Bench comprises 2,510 queries over 2,678 real-world physical tools spanning diverse domains, including manufacturing, electrical work, agriculture, and healthcare. Concretely, models are evaluated along two primary dimensions: 1) recognizing all physical tools present in the scene, and 2) planning the tool selection and use sequence based on the instruction and visual context. Across 13 leading MLLMs, even the strongest model (Gemini-3.1-Pro) identifies only 58.7% of tools in a scene and completes merely 21.0% of queries end-to-end. Our analysis reveals a two-level deficit: MLLMs struggle to perceive tools in realistic scenes, and the much larger drop at the planning stage further indicates a lack of functional commonsense for mapping perceived tools onto task semantics, pinpointing a critical bottleneck for the development of practical embodied AI.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2606.10753v1' target='_blank'>Deploying Speech-Driven 3D Facial Animation in Unreal Engine for Production-Ready Digital Humans</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Alessandro Busacchi, Kazi Injamamul Haque, Zerrin Yumak</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-06-09 12:03:42</h6>
+<p class='card-text'>Speech-driven 3D facial animation research has shown promising results, but most methods rely on representations that are not compatible with production pipelines. In this work, we present a deployable system that bridges this gap by enabling speech-driven 3D facial animation directly in Unreal Engine (UE) using ARKit-compatible representations. We construct 3DMEAD-ARKit dataset by converting the MEAD corpus into blendshape sequences using MediaPipe, and retrain FaceDiffuser and ProbTalk3D-X to generate stochastic and emotion controllable animations. We further develop a modular UE plugin with a Python backend that supports model selection, and parameter control. We compare the results to two existing commercial tools: Epic Games' MetaHuman speech-driven animator and Nvidia Audio2Face with a perceptual user study. The results highlight the importance of comparisons among academic and commercial pipelines. We recommend watching the supplementary video. We also plan to do live demonstrations of our work at Siggraph 2026 conference.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2606.10733v1' target='_blank'>Pushing the Performance Limits in Autonomous Racing: Continuous Stability-Aware Adaptive Velocity Planning in Formula Student Driverless</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Tamara Bergerhoff, Sebastian Baader, Pascal Meißner, Frank Deinzer</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-06-09 11:40:30</h6>
+<p class='card-text'>In autonomous racing, especially in competitions such as Formula Student Driverless, precise planning of the target velocity of a race car is crucial for competitive lap times and stable driving behavior. Especially at high speeds, Velocity Planning (VP) is a significant challenge as it has to be performed in real time, taking into account track layouts, environmental influences, mechanical tolerances, and the resulting control inaccuracies. In this paper, we present a novel approach to VP that dynamically adapts to such changing conditions. Instead of estimating the physical Tire-Road Friction Coefficient (TRFC), a continuous scaling factor is inferred indirectly from vehicle stability. This factor not only reflects the effective tire-road interaction but also captures effects of control inaccuracies. From this, we generate a continuous friction map, which serves as a robust, adaptive basis for computing the optimal target speed, accounting for both vehicle and environmental limits. Our proposed approach was evaluated on a real Formula Student race car, showing a lap time improvement of 35 % over ten laps and an average increase of 8 % compared to a non-adaptive approach.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2606.10705v1' target='_blank'>Event-Driven Reinforcement Learning Enables Long-Horizon Control in Semiconductor Fabrication</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yavar Yeganeh, Mahsa Shekari, Nicla Frigerio, Daniele Pagano, Andrea Matta</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-06-09 11:08:45</h6>
+<p class='card-text'>Reinforcement learning promises to optimize sequential decisions in large-scale systems. Semiconductor manufacturing systems are stochastic and highly constrained environments where heterogeneous wafers traverse hundreds of processing steps across extensive equipment networks. These characteristics yield complex, high-dimensional decision problems with delayed feedback and long-horizon requirements, complicating production planning and control. We propose a deep reinforcement learning framework for multi-objective policy optimization at this scale. Specifically, we formulate control as a centralized-agent problem, where a core policy coordinates system-wide decisions, while system evolution is represented as an interconnected temporal process driven by discrete events. Accordingly, we develop a tailored event-driven temporal-difference formulation that remains general and can be integrated with various policy optimization methods under relevant training settings. We investigate several core model-free algorithms incorporated into this framework and evaluate their effectiveness using high-fidelity simulations of diverse, industry-real operating scenarios. Across extensive validation experiments, agents trained in both offline and online settings show significant and consistent gains in throughput and utilization. We further evaluate performance and generalization across training phases, clarifying the relative strengths of alternative reinforcement learning formulations and algorithms. Overall, the results support the scalability, generality, and transferability of the proposed framework for controlling event-driven complex adaptive systems.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2606.10688v1' target='_blank'>Self-Supervised Relevance Modelling in Autonomous Driving via Counterfactual Analysis</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Luca Lusvarghi, Javier Gozalvez, Pablo Urbano Hidalgo</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-06-09 10:47:14</h6>
+<p class='card-text'>Autonomous driving relies on computationally intensive perception pipelines to continuously detect and track objects in the surrounding environment. While some objects are key to plan safe and effective maneuvers, others may not be relevant and have no impact on the autonomous vehicle's driving decisions. Focusing on relevant objects allows a more efficient usage of available computational resources, reduces processing latencies, and limits the downstream propagation of perception noise. In this work, we propose a novel self-supervised approach based on counterfactual analysis to develop a relevance model - an AI-based tool that quantifies the relevance of objects for an autonomous vehicle. To demonstrate the potential of the proposed approach, we train a relevance model on a synthetic causal dataset generated in a selected urban scenario. Results show that the relevance model is able to accurately estimate the objects' relevance with millisecond-level latency, enabling real-time relevance estimation also in high-density scenarios. We also show that the relevance model can be used to build relevance heatmaps that offer valuable insights into the autonomous vehicle's driving policy and can be used to proactively inform perception and planning tasks. We openly release both the relevance model and the causal dataset.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2606.10579v1' target='_blank'>LieIPM: Lie Group Interior Point Method for Direct Trajectory Optimization of Rigid Bodies</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Sangli Teng, Ruiqi Zhang, Tzu-Yuan Lin, William A Clark, Mark Mueller, Ram Vasudevan, Maani Ghaffari, Koushil Sreenath</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-06-09 08:45:08</h6>
+<p class='card-text'>Designing dynamically feasible trajectories for rigid bodies is a fundamental problem in robotics. While direct methods are widely used, the existing constrained optimizers typically operate in Euclidean space and ignore the manifold structure of rigid body motions. This mismatch may introduce singularities or lead to poorly conditioned optimization problems. To bridge this gap, we develop a structure-aware framework for constrained trajectory optimization directly on matrix Lie groups. Our approach is based on the second-order rigid body models utilizing Lie group structures, which enables efficient Newton-type updates while preserving the underlying geometry. Building on this model, we propose a line-search Lie Group Interior Point Method (LieIPM) to handle constraints on the manifolds. We instantiate the framework for rigid body motion planning using Lie group variational integrators and derive closed-form intrinsic derivatives that exploit group symmetries. The LieIPM preserves the topology of rotation motions by construction and avoids singularities. Numerical results demonstrate superior robustness and faster convergence compared to general-purpose solvers and structure-exploiting optimal control methods.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2606.10478v1' target='_blank'>3D-CoS: A New 3D Reconstruction Paradigm Based on VLM Code Synthesis</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yuhao Wang, Puyi Wang, Linjie Li, Zhengyuan Yang, Kevin Qinghong Lin, Yu Cheng</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-06-09 06:46:29</h6>
+<p class='card-text'>Most recent 3D reconstruction and editing systems operate on implicit and explicit representations such as NeRF, point clouds, or meshes. While these representations enable high-fidelity rendering, they are fundamentally low-level and hard to control programmatically. In contrast, we propose and systematically evaluate a new 3D reconstruction paradigm, 3D Code Synthesis (3D-CoS), where 3D assets are constructed as executable Blender code, a programmatic and interpretable medium. To assess how well current VLMs can use code to represent 3D objects, we evaluate representative open-source and closed-source VLMs in code-based reconstruction under a unified protocol. We further introduce a suite of structured code-synthesis workflows, including blueprint-based planning, Retrieval-Augmented Generation (RAG) over Blender API documentation, few-shot geometric demonstrations, and a component-level Agent workflow for part-wise code generation. To demonstrate the unique advantages of this representation, we further evaluate localized text-driven modifications and compare our code-based edits with a point-cloud-based 3D editing baseline. Our study shows that code as a 3D representation offers strong controllability and locality, yielding stronger edit fidelity and better preservation of unedited regions in our targeted editing evaluation. Our work also analyzes the potential of this paradigm, delineates the current capability frontier of VLMs for programmatic 3D modeling, and highlights code synthesis as a promising direction for editable 3D reconstruction.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2606.10475v1' target='_blank'>Decoupling Thought from Speech: Knowledge-Grounded Counterfactual Reasoning for Resilient Multi-Agent Argumentation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jakub Masłowski, Jarosław A. Chudziak</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-06-09 06:43:18</h6>
+<p class='card-text'>Multi-agent debate frameworks have been shown to improve large language model performance in convergent tasks, but they are currently optimized in a way that heavily favors final output accuracy rather than stability of the process. During long-horizon exchanges reactive systems under sustained perturbations often experience logic degradation, argument repetition, and role drift. To structurally prevent the identity loss and maintain the process fidelity, we introduce Knowledge-Grounded Counterfactual Reasoning (KG-CFR), a dual-stage architecture that enforces a strict separation of concerns between a private, retrieval-augmented planning buffer, and a public execution layer. We assess this system in Dynamic Resource Allocation under Uncertainty (DRAU), a dedicated 1v1v1 environment, introducing diversity as distinct from standard debate settings. Over 270 completely factorial crisis simulation trajectories with stochastic environmental shocks, KG-CFR prevents judge-detected critical post-shock degradation (defined as a quality shift, $Δ\le -0.20$) in more than 95% of perturbed runs, increasing the overall argument quality from 0.694 to 0.822. Our primary contribution is the demonstration of architectural decoupling being an important factor of systemic resilience enhancement under sustained pressure without quality loss. Furthermore, we introduce custom vector metrics for discourse divergence and plan-execution alignment that provide strong, directionally consistent evidence of operational stability. Our ablation experiments suggest that the proper doctrinal grounding can be an equally important factor for argument quality, as the prospective planning. KG-CFR, according to our initial metric evaluations, reduces semantic looping, by preserving the agent's consistency with the original plan.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2606.10449v1' target='_blank'>GuideWalk: Learning Unified Autonomous Navigation and Locomotion for Humanoid Robots across Versatile Terrains</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Haoxuan Han, Chen Chen, Linao Gong, Xin Yang, Hao Hu, Junhong Guo, Zhicheng He, Yao Su, Fenghua He</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-06-09 05:55:36</h6>
+<p class='card-text'>Humanoid robots have achieved strong locomotion capabilities, but reliable navigation on versatile terrains remains challenging because obstacle avoidance must be coordinated with dynamically feasible motion. In this work, we present GuideWalk, a unified end-to-end framework that integrates traversability-aware navigation guidance with terrain-adaptive locomotion teacher for humanoid navigation. Specifically, we introduce a navigation module that provides explicit velocity guidance, decoupling obstacle avoidance from terrain conditions to enable robust planning across diverse environments. We propose a composite teacher distillation scheme, where goal-directed commands and dynamically consistent actions are aggregated and distilled into a single policy. To further improve robustness, the distilled policy is refined with reinforcement learning and an auxiliary behavior cloning objective, which promotes exploration while preserving desirable teacher behaviors. Experiments demonstrate that GuideWalk achieves stable and effective navigation while maintaining stable humanoid locomotion.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2606.10438v1' target='_blank'>Sequential Search with Planning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Ruhi Sonal, Saptarshi Mukherjee, Abhinaba Lahiri, Aniruddha Ghosh</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-06-09 05:29:42</h6>
+<p class='card-text'>Sequential development of a new product or technology, or natural resource exploration, often progresses through ordered stages with uncertain rewards and requires costly (ex ante) planning to make future stages accessible. We model this process as an ordered Pandora's box problem where a decision-maker first chooses an initial scope, paying a cost that rises with the number of stages made accessible, and may later expand the scope at a marginal adjustment cost. Since the paid planning costs are sunk, the continuation values depend on the state variable ``paid scope''. We prove existence and uniqueness of scope-dependent reservation values, characterize the optimal search strategy as a threshold rule indexed by paid scope, and derive comparative statics. Interactions among three economic forces shape the optimal behavior -- a guarantee effect (a higher current best offer reduces the expected improvement from the next stage and induces earlier stopping), a paid-scope effect (a larger prepaid scope lowers the marginal cost of future access, raises the continuation value, and supports continuation at higher guarantees), and a remaining-horizon effect (fewer stages remaining shrink the option value of continuing). Two examples illustrate how these forces generate distinct planning and search patterns under normal and fat-tailed rewards.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2606.10376v1' target='_blank'>Belief-Space Control for Personalized Cancer Treatment via Active Inference</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Deniz Sargun, H. Bugra Tulay, C. Emre Koksal</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-06-09 03:38:53</h6>
+<p class='card-text'>Cancer treatment is at the core a sequential decision-making problem with partial observability, latent patient heterogeneity, and explicit constraints on the budget for medical measurements. Unlike standard Reinforcement Learning (RL) approaches that control state trajectories, cancer treatments permanently modify patients' transition dynamics, changing how states evolve over time. We model cancer treatment as a belief-space planning problem using active inference, deriving an expected free-energy objective that unifies goal-directed control and information acquisition under measurement budgets without. We implement this framework using real clinical cancer data from the AACR Project GENIE Biopharma Collaborative dataset. Results on clinical data demonstrate a simultaneous patient categorization and high treatment efficacy, under real measurement and treatment constraints.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2606.10215v1' target='_blank'>LEAP: A Rapid Neural Surrogate of Multi-Fluid MHD at Europa</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Sachin Alexander Reddy, Abigail R. Azari, Corey J. Cochrane, Xianzhe Jia, Tom A. Nordheim, Lukas Mandrake, Steven D. Vance, Camilla Harris, Ioana Ciucǎ</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-06-08 22:09:42</h6>
+<p class='card-text'>Characterizing Europa's subsurface ocean is a key objective of the Europa Clipper and JUICE missions in the search for life beyond Earth. Although the ocean's induced magnetic field provides key constraints on habitability, interpretation is complicated by perturbations arising from Jupiter's plasma interaction with Europa. Physics-based models (e.g. magnetohydrodynamic, MHD) required to characterize these effects are physically comprehensive, but have a prohibitive computational cost. To address this, we introduce Learning Europa's Atmosphere and Plasma (LEAP), a transformer-based surrogate trained on outputs from a state-of-the-art multi-fluid MHD code to predict magnetic field perturbations along spacecraft trajectories. LEAP evaluates in milliseconds on a laptop, whereas MHD takes 12 hrs on a high-performance computer (~40,000x speed-up). The model has test set errors of -/+ 2.6 nT, and for the Galileo E4 and E14 flybys of Europa it matches the parent MHD model in accuracy. Its enhanced speed enables large-scale parameter surveys and probabilistic estimations of plasma conditions, establishing a new framework for accelerated plasma interaction modeling. LEAP can also inform future MHD simulations while learning from them. Beyond Europa, this framework could be expanded to planning future missions or to other high-priority bodies, including Uranus and Neptune.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2606.10199v1' target='_blank'>A Continuous-Time Markov Chain Framework for Insertion Language Models</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Dhruvesh Patel, Benjamin Rozonoyer, Soumitra Das, Tahira Naseem, Tim G. J. Rudner, Andrew McCallum</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-06-08 21:39:43</h6>
+<p class='card-text'>Insertion Language Models (ILMs) offer several advantages over left-to-right generation and mask-based generation. However, existing formulations of insertion-based generation have largely been ad-hoc. In this paper, we derive a diffusion-style denoising objective for ILMs from first principles by formulating the noising process as a continuous-time Markov chain on the space of variable-length sequences. We show that previous formulations of ILMs can be viewed as special cases of this denoising framework. Through empirical evaluation on a synthetic planning task, we show that the proposed approach retains the benefits of insertion-based generation over left-to-right generation and masked diffusion models. In language modeling, our diffusion-based approach is competitive with left-to-right generation and masked diffusion models, while offering additional flexibility in sampling compared to existing insertion language models.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2606.10192v1' target='_blank'>Submodular Optimization with Applications to Decision and Control</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Shamak Dutta, Bahman Gharesifard, Stephen L. Smith</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-06-08 21:28:54</h6>
+<p class='card-text'>Submodular set functions, characterized by the diminishing-returns property, provide a unifying combinatorial framework for many subset-selection problems in decision and control. Although exact maximization is NP-hard in general, the structural properties of submodular functions enable simple greedy algorithms that achieve constant-factor approximation guarantees for monotone objectives, with randomized greedy-based variants extending such guarantees to the non-monotone case. This survey reviews the theory, algorithms, and applications of submodular optimization with a focus on systems and control. We cover the structural properties of submodular functions, including curvature and the submodularity ratio, the constraint families that arise in practice (matroids, knapsack, and $p$-systems), and the main approximation algorithms for monotone and non-monotone submodular maximization, with up-to-date approximation ratios and hardness results. We then survey applications across sensor scheduling, multi-agent coordination, robust submodular optimization, leader-follower systems, distributed submodular optimization, game theory, system theory, resource allocation, social networks, and informative path planning. The survey emphasizes practically implementable greedy-based algorithms and instance-dependent refinements via curvature and the submodularity ratio. We close with observations on canonical control-theoretic objectives: certain functionals are submodular (the log-determinant and rank of the controllability Gramian, and the log-determinant of the Kalman filter information matrix), whereas closely related objectives fail to be sub- or supermodular (the steady-state Kalman filter error covariance, and the average control energy obtained from the inverse Gramian). We also highlight the cross-cutting open directions that follow.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2606.10167v1' target='_blank'>FlexPath: Learned Semantic Path Priors for Image-Based Planning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Taehyoung Kim, Tim Schoenbrod, David Eckel, Henri Meeß</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-06-08 20:53:11</h6>
+<p class='card-text'>Recent learning-based path planners use neural networks to process visual map representations and approximate heuristics for classical search algorithms, yielding near-optimal paths with reduced search effort. However, these methods are tied to the shortest-path objective implicit in their supervision, which limits their flexibility to accommodate alternative criteria. We introduce FlexPath, a two-stage framework that decouples feasibility from preference. In Stage 1, we use imitation learning to acquire a task-independent spatial prior over feasible paths from visual map inputs. In Stage 2, differentiable Path Shape Objectives (PSOs) adapt this prior toward task-specific criteria without relearning path structure, requiring only efficient objective-level adaptation. A single pretrained model can be adapted to multiple objectives. For shortest-path planning, FlexPath reduces search effort on TMP by 14.3% compared to the state-of-the-art TransPath, while also finding lower-cost paths on average and demonstrating strong zero-shot generalization across three unseen domains. For obstacle clearance with minimum clearance distance 2, it achieves 96.8% full obstacle avoidance while maintaining low search cost. The framework further extends to semantic-aware avoidance and waypoint guidance via objective-level adaptation, and remains compatible with classical planners at inference time. Data and code are available at https://github.com/FraunhoferIVI/FlexPath.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2606.10153v1' target='_blank'>Compositional Generative Modeling from Decentralized Data</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Mashrur M. Morshed, Vishnu Naresh Boddeti</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-06-08 20:32:35</h6>
+<p class='card-text'>Learning the compositional nature of the physical world requires joint observation of interacting factors. However, because practical data is often decentralized, these factors are fragmented across isolated silos. Existing decentralized generative approaches focus only on modeling the union of siloed data, overlooking novel combinations implied by the collective whole. To bridge this gap, we introduce Decentralized Compositional Flow Matching (DCFM), a framework that enforces structural constraints across the global set of generative factors, without exchanging any raw data. DCFM enables novel combinations to emerge through peer interactions, even when no single data source can independently support the composition. Empirically, DCFM substantially outperforms federated learning and mixture-of-experts baselines across conditional image generation, robotic spatial planning, and medical attribute co-occurrence modeling.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js'></script>
+</body>
+</html>
