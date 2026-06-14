@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>planning - 2026-06-14</title>
+<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap' rel='stylesheet'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css'>
+<style>
+body {
+font-family: 'Roboto', sans-serif;
+background-color: #f5f7fa;
+padding: 20px;
+}
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.card-title {
+    font-weight: 700;
+}
+.card:hover {
+    transform: scale(1.02);
+    transition: 0.3s ease-in-out;
+}
+</style>
+</head>
+<body>
+<div class='container'>
+<h1 class='text-center my-4'><i class='fas fa-book'></i>planning - 2026-06-14</h1>
+<div class='row'>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2606.13679v1' target='_blank'>InterleaveThinker: Reinforcing Agentic Interleaved Generation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Dian Zheng, Harry Lee, Manyuan Zhang, Kaituo Feng, Zoey Guo, Ray Zhang, Hongsheng Li</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-06-11 17:59:50</h6>
+<p class='card-text'>Recent image generators have demonstrated impressive photorealism and instruction-following capabilities in single-image generation and editing. However, constrained by their architectures, they cannot achieve interleaved generation (text-image sequence), which has crucial applications in visual narratives, guidance, and embodied manipulation. Even the latest open-source Unified Multimodal Models (UMMs) exhibit limited performance in this regard. In this paper, we introduce InterleaveThinker, the first multi-agent pipeline designed to endow any existing image generator with interleaved generation capabilities. Specifically, we employ a planner agent to organize the image-text input sequence, instructing the image generator on the required execution at each step. Subsequently, we introduce a critic agent to evaluate the generator's outputs, identify samples that deviate from the planned instructions, and refine the instructions for regeneration. To implement this pipeline, we construct the Interleave-Planner-SFT-80k and Interleave-Critic-SFT-112k to perform a format cold-start. Then we develop Interleave-Critic-RL-13k to reinforce the step-wise instruction correction capability within a generation trajectory using GRPO. Since a single interleaved generation trajectory may involve over 25 generator calls, optimizing the entire trajectory is computationally impractical. Therefore, we propose accuracy reward and step-wise reward, allowing single-step RL to effectively guide the entire generation trajectory. The results show that InterleaveThinker improves performance across various image generators. On interleaved generation benchmarks, it achieves performance comparable to Nano Banana and GPT-5. Surprisingly, it also significantly enhances the base model on reasoning-based benchmarks; for example, on 4-step FLUX.2-klein, we observe substantial gains on WISE and RISE.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2606.13677v1' target='_blank'>Mana: Dexterous Manipulation of Articulated Tools</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Zhao-Heng Yin, Guanya Shi, Pieter Abbeel, C. Karen Liu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-06-11 17:59:49</h6>
+<p class='card-text'>Articulated tool manipulation remains a major challenge in dexterous robotics due to the need to coordinate internal degrees of freedom and contact-rich interactions. While prior work has largely focused on rigid objects, articulated tool use remains underexplored because of its physical complexity and the difficulty of learning functional grasping and manipulation policies. We present Mana (Manipulation Animator), a general sim-to-real framework that reinterprets dexterous manipulation as an animation problem. Inspired by computer animation, Mana employs a coarse-to-fine pipeline that transforms procedurally-generated grasp keyframes into manipulation trajectories through motion planning and reinforcement learning. The data generation process is largely automatic, requiring only a few mouse clicks to specify functional affordances (<1 minute per tool). Across four articulated tools spanning different scales and joint types, Mana achieves zero-shot sim-to-real transfer for both grasping and in-hand manipulation, demonstrating a scalable approach to dexterous articulated tool use.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2606.13672v1' target='_blank'>$\texttt{WEAVER}$, Better, Faster, Longer: An Effective World Model for Robotic Manipulation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Arnav Kumar Jain, Yilin Wu, Jesse Farebrother, Gokul Swamy, Andrea Bajcsy</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-06-11 17:59:15</h6>
+<p class='card-text'>The potential impacts of world models (WMs, i.e., learned simulators) on robotics are far-reaching -- policy evaluation, policy improvement, and test-time planning -- all with limited real-world interaction. To unlock these downstream capabilities, a WM needs to jointly satisfy three desiderata: $\textit{(i)}$ fidelity (i.e., producing simulated trajectories that correlate with reality), $\textit{(ii)}$ consistency (i.e., producing simulated trajectories that are coherent over long horizons), and $\textit{(iii)}$ efficiency (i.e., producing simulated trajectories quickly). We propose $\texttt{WEAVER}$ (World Estimation Across Views for Embodied Reasoning): a WM architecture that simultaneously achieves all three desiderata, providing state-of-the-art results on robotic manipulation tasks. $\texttt{WEAVER}$ is a multi-view WM trained to predict future latents and reward values via a flow-matching loss. We distill the key design decisions across model architecture, memory, and prediction objectives required to unlock the kinds of long-horizon dynamic manipulation tasks that have confounded prior world modeling approaches. We apply $\texttt{WEAVER}$ in robotic hardware, demonstrating its effectiveness at policy evaluation ($ρ$=0.870 correlation with real-world success rate), policy improvement (real-world success rate improvement of $38\%$ on top of the $π_{0.5}$ robot foundation model), and test-time planning (real-world success rate improvement of $14\%$ with a $5-10\times$ speedup over prior WMs). $\texttt{WEAVER}$ also demonstrates better performance than prior WMs when evaluated on out-of-distribution scenarios. Code, models, and videos at: https://arnavkj1995.github.io/WEAVER/ .</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2606.13659v1' target='_blank'>Specifying Hardware Communication as Programs</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Ernest Ng, Nikil Shyamsunder, Francis Pham, Adrian Sampson, Kevin Laeufer</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-06-11 17:56:13</h6>
+<p class='card-text'>To test and debug hardware modules, it is common to write two programs: a driver, which translates high-level transactions into interactions on the module's input and output signals, and a monitor, which analyzes a signal-level execution trace and recognizes a transaction. These two programs are commonly implemented separately for each hardware protocol, but this separation entails manual effort and risks inconsistencies.
+  We advocate an alternative approach. We present a DSL in which users specify hardware communication protocols as succinct imperative programs. Crucially, the same specification can be used to both drive designs and monitor transactions. We present the design of a tool, which given a specification in our DSL and a waveform, automatically infers a transaction-level trace consistent with the waveform. We discuss plans to evaluate our DSL on real-world interconnects such as Wishbone and AXI-Stream.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2606.13643v1' target='_blank'>Recursive Agent Harnesses</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Elias Lumer, Sahil Sen, Kevin Paul, Vamse Kumar Subbiah</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-06-11 17:47:30</h6>
+<p class='card-text'>Recursive language models (RLMs) showed that recursion over model calls is an effective strategy for long-context reasoning, and production coding agents have begun to write code that spawns subagents at scale, most recently in Anthropic's dynamic workflows. We name and study the pattern between these two lines of work, where the recursive unit is a full agent harness with filesystem tools, code execution, and planning rather than a model call with no tools. We call this the Recursive Agent Harness (RAH) and frame it as harness recursion, the code-first extension to the model recursion of RLMs. A parent agent generates and runs an executable script that spawns subagent harnesses in parallel for fine-grained workloads and uses structured function calls for small subtasks. We provide a controlled evaluation on long-context reasoning. With the backbone held fixed at GPT-5 to match the published Codex and RLM baselines, RAH improves the Codex coding-agent baseline from 71.75% to 81.36% on Oolong-Synthetic (199 samples, 13 context-length buckets up to 4M tokens), a gain attributable to the harness rather than the model. With a stronger backbone, Claude Sonnet 4.5, the same design reaches 89.77%.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2606.13633v1' target='_blank'>Aerial Wildfire Suppression Planning with a Hybrid CNN-Cellular Automata Fire Model</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Ion Matei, Maksym Zhenirovskyy, Takuya Kurihana, Rohit Vupala, Anthony Wong</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-06-11 17:42:34</h6>
+<p class='card-text'>Aerial wildfire suppression requires not only predicting fire spread, but also designing effective intervention strategies under operational and environmental uncertainty. We present a modeling and optimization framework for aerial wildfire suppression that combines a hybrid neural-cellular automaton wildfire model with gradient-based design of targeted aerial drops. The wildfire model predicts spatially varying spread behavior from terrain, fuel, and wind data, while the intervention module determines binary drop actions with continuous-valued location and orientation parameters mapped to the simulation grid. Water and retardant are represented with distinct suppression effects, corresponding to immediate reduction of active burning and persistent reduction of future spread. To evaluate the robustness of the resulting suppression plans, we quantify both aleatoric uncertainty through Monte Carlo sampling of daily fire-state realizations and epistemic uncertainty through spatially correlated prediction-error perturbations. A case study based on the 2020 Bear Fire shows that the framework can generate coherent aerial suppression schedules for reducing total fire-affected area and can support uncertainty-aware analysis of wildfire intervention strategies.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2606.13605v1' target='_blank'>Distribution-Agnostic Robust Trajectory Optimization via Chance-Constrained Reinforcement Learning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yashdeep Chaudhary, Roberto Armellin, Harry Holt, Marco Sagliano</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-06-11 17:22:05</h6>
+<p class='card-text'>This paper presents a distribution-agnostic robust trajectory-optimization framework based on chance-constrained reinforcement learning. The uncertainty is represented here through initial conditions and process noise, with the only requirement being that it can be sampled. A deterministic nominal trajectory is first computed offline, and reinforcement learning is then used only to robustify that baseline through a structured affine closed-loop correction law comprising a feedforward control adjustment and time-varying feedback gains. Probabilistic feasibility is enforced empirically through rollout-based upper-tail quantiles, while terminal dispersion is regulated through covariance-feasibility penalties. The framework is assessed on two materially different trajectory design problems. The flagship case study is a three-dimensional multi-impulse Earth-Mars transfer, where the learned policy is benchmarked against a recent robust trajectory-optimization reference under Gaussian uncertainty and then evaluated under bounded uniform uncertainty and under process disturbances not seen during training. The second case study is a stochastic atmospheric pinpoint rocket landing problem, used to assess portability to a short-horizon continuous-thrust setting with drag, mass depletion, and glide-slope constraints. The results show that the proposed framework can remain competitive in upper-tail fuel cost while preserving probabilistic feasibility, and that the same robustification scaffold can be carried across heterogeneous spacecraft trajectory planning problems without redesign of its core stochastic-control structure.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2606.13578v1' target='_blank'>LabVLA: Grounding Vision-Language-Action Models in Scientific Laboratories</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Baochang Ren, Xinjie Liu, Xi Chen, Yanshuo Liu, Chenxi Li, Daqi Gao, Zeqin Su, Jintao Xing, Zirui Xue, Rui Li, Xiangyu Zhao, Shuofei Qiao, Minting Pan, Wangmeng Zuo, Lei Bai, Dongzhan Zhou, Ningyu Zhang, Huajun Chen</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-06-11 17:03:53</h6>
+<p class='card-text'>Scientific laboratories increasingly rely on AI systems to reason about experiments, but the physical act of doing science remains largely outside their reach. AI can help read literature, generate hypotheses, and plan protocols, yet the execution of those protocols at the bench still requires a human operator. Vision-Language-Action (VLA) models provide one possible interface between written protocols and robot execution, but existing policies are trained mostly on household and tabletop demonstrations and rarely encounter the instruments, transparent liquids, or fixed protocol workflows found in scientific laboratories. Closing this gap requires both laboratory-specific supervision and a unified learning framework that can accommodate the diverse robot embodiments used to execute experimental protocols. We therefore identify data and embodiment as central bottlenecks alongside model design. To address the data side, we build RoboGenesis, a simulation-based workflow and data engine that composes configured laboratory workflows from atomic skills, validates and filters rollouts, and exports structured demonstrations across supported robot profiles. On the policy side, we present LabVLA, trained with a two-stage recipe: FAST action token pretraining first makes the Qwen3-VL-4B-Instruct backbone action aware before any continuous control is learned, and flow matching posttraining then attaches a DiT action expert under knowledge insulation. On the LabUtopia benchmark, LabVLA achieves the highest average success rate among all evaluated baselines under both in-distribution and out-of-distribution settings.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2606.13497v1' target='_blank'>SPARC: Reliable Spatial Annotations from Robot Demonstrations at Scale</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Nils Blank, Paul Mattes, Maximilian Xiling Li, Jakub Suliga, Thomas Roth, Moritz Reuss, Pankhuri Vanjani, Rudolf Lioutikov</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-06-11 15:46:28</h6>
+<p class='card-text'>This work introduces Spatial Annotations from Robot Demonstrations with Reliability Calibration (SPARC), a risk-aware framework that automatically labels robot demonstrations with structured spatial annotations and assigns each annotation a reliability score. Structured spatial annotations, such as bounding boxes, object trajectories, and manipulation phase labels, benefit a broad range of robotics applications from training grounded robot policies and embodied foundation models to motion planning and hierarchical task composition. Existing automated pipelines generate such annotations at scale but provide no reliable quality signal: detector confidence is poorly calibrated for annotation correctness, forcing a choice between accepting noisy labels or discarding useful samples. In contrast to existing automated pipelines, SPARC leverages the spatio-temporal structure inherent to robot tasks to generate a reliability signal, reducing noisy labels and retaining more useful samples. We further introduce Interaction-Aware Bench (IA-Bench), a benchmark that measures model accuracy in grounding the locations of interacted objects in robot demonstrations. On 1.7k human-annotated demonstrations spanning diverse embodiments and scenarios, SPARC significantly outperforms detection-only baselines in localization accuracy while retaining three times more samples at high-precision operating points. Our experiments demonstrate that models finetuned on our annotations achieve state-of-the-art results on object-grounding and pointing benchmarks among similarly sized models, while remaining competitive on broader spatial-reasoning suites without manually verified or annotated training data. Furthermore, policies trained on SPARC-generated annotations outperform baselines in cluttered, visually ambiguous real-world scenes. Code, data, and models are available at intuitive-robots.github.io/sparc-labeling.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2606.13494v1' target='_blank'>NavWAM: A Navigation World Action Model for Goal-Conditioned Visual Navigation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Daichi Azuma, Taiki Miyanishi, Koya Sakamoto, Shuhei Kurita, Yaonan Zhu, Petr Khrapchenkov, Motoaki Kawanabe, Yusuke Iwasawa, Yutaka Matsuo</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-06-11 15:44:36</h6>
+<p class='card-text'>Goal-conditioned visual navigation requires a robot to act under partial observability by anticipating how its motion will change the future egocentric view and whether that change brings it closer to the goal. Navigation world models provide such visual foresight, but they remain prediction modules that require an external planner to convert predicted futures into closed-loop control. We propose Navigation World Action Model (NavWAM), a diffusion-transformer policy that turns navigation world-model prediction into executable action by representing future observations, goal-progress values, and action chunks in a shared latent sequence. By learning future prediction jointly with the action and value targets that determine closed-loop behavior, NavWAM makes visual foresight directly usable for robot control. We build NavWAM through simulation pretraining and real-robot adaptation, and evaluate it on image-goal navigation against planning-based world models and a representative direct navigation policy. Across offline benchmarks and closed-loop real-robot deployment, NavWAM improves over planning-based world-model baselines in our evaluations while using the default policy mode without CEM-style action search. Project page: https://dachii-azm.github.io/navwam/</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2606.13440v1' target='_blank'>Japan's Possible Contributions for Coronagraph of the Habitable Worlds Observatory (HWO)</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Keigo Enya, Kenta Yoneta, Naoshi Murakami, Jun Nishikawa, Satoshi Itoh, Taro Matsuo, Reiki Kojima, Takayuki Kotani, Olivier Guyon, Takahiro Sumi, Satoshi Miyazaki, Toru Yamada, Aoi Takahashi, Hajime Kawahara, Shota Miyazaki, Iona Kondo, Nana Higashio, Noriko Yamasaki, Masayuki Kuzuhara, Motohide Tamura, Masahiro Ikoma, Norio Narita, Julien Lozi</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-06-11 15:03:28</h6>
+<p class='card-text'>In this paper, we describe Japan's possible contributions for coronagraph of the Habitable Worlds Observatory (HWO) based on our independent study. We are considering to contribute to the HOW coronagraph by science and hardware, based on Japan's experience for the SPICA coronagraph instrument, contributions to the Nancy Grace Roman Space Telescope, and SCExAO for the Subaru telescope. Currently, hardware contributions of various scales, from large-scale to small components, are considered. As an example of the large-scale hardware case, the optical and mechanical layout of the entire infrared coronagraph is presented. Several individual high-contrast technologies are also briefly introduced, for which research is ongoing in Japan. In discussions, it is pointed out that both the inner working angle (IWA) and sensitivity are particularly critical for the NIR coronagraph. In this situation, dedicated observations of a small number of targets close to the solar system can be one of key science program in this situation, and designing consolidating science objectives, requirements, observation targets, and survey plans is important. It is essential to push the development of advanced coronagraphs that provide small IWAs. On the other hand, it is also necessary to prepare solutions that adopt more robust coronagraphs in parallel. How to coexist visible and NIR coronagraphs within constraints of volume, mass, budget etc. is an important issue. The international sharing for the coronagraph development should be carefully decided by international agreement. Although all of our studies may not be realized in contributions to the first generation of HWO instruments, we are considering Japan's multigenerational participation in the HWO to maximize outcomes of the HWO.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2606.13400v1' target='_blank'>PolyFlow: Safe and Efficient Polytope-Constrained Flow Matching with Constraint Embedding and Projection-free Update</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jianming Ma, Qiyue Yang, Yang Zhang, Liyun Yan, Zhanxiang Cao, Yazhou Zhang, Yue Gao</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-06-11 14:30:50</h6>
+<p class='card-text'>While flow-based generative models have demonstrated strong performance across a wide range of domains, deploying them in safety-critical physical systems remains challenging due to strict constraint requirements. Existing approaches typically enforce safety through post-hoc corrections, which incur substantial computational overhead and may distort the learned distribution. We propose PolyFlow, a polytope-constrained flow matching framework that embeds constraints directly into the model and flow dynamics. PolyFlow introduces a discrete-time flow formulation and a projection-free architecture, which eliminate the discretization error and guarantee strict satisfaction of arbitrary polyhedral constraints, without the need for expensive iterative solvers. Experimental results show that PolyFlow achieves zero constraint violation while maintaining high distributional fidelity across a range of planning and control tasks. Compared to state-of-the-art constrained generation baselines, PolyFlow significantly reduces inference latency and demonstrates a favorable trade-off between safety, efficiency, and generative quality. Code is available on https://github.com/MJianM/PolyFlow.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2606.13389v1' target='_blank'>Structuring Transparency: Developing Domain-Specific Generative AI Declaration Frameworks in Higher Education</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Nicholas Micallef, Olga Petrovska</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-06-11 14:18:34</h6>
+<p class='card-text'>As Generative AI (GenAI) disrupts higher education, institutions increasingly require students to declare AI use. However, generic, binary declarations (e.g., "I used GenAI") fail to capture the nuanced application of these tools in different academic tasks. Establishing transparency is key to protecting academic integrity, promoting AI literacy, and shifting the focus from policing to professional practice. In response, this paper contributes a design artefact and an accompanying position: a framework of two task-specific declaration structures, one for writing-focused activities and one for coding assessments, developed for a Computer Science department on the basis of an existing taxonomy of GenAI usage, together with an argument that task-specific disclosure is needed to move beyond binary declarations. By categorising AI usage across specific cognitive and developmental stages, such as structural planning vs. Textual Content Generation, or code improvement vs. code generation, the framework encourages students to reflect on their own learning process and clarifies the boundary between acceptable assistance and academic misconduct. We propose this domain-specific approach as a foundation for fostering more honest assessment in Computer Science and other disciplines, aiming to better prepare students for professional environments where documenting GenAI workflows might be an essential job requirement.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2606.13300v1' target='_blank'>Quantizing Time-Series Models As Dynamical Systems: Trajectory-Based Quantization Sensitivity Score</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Mariya Pavlova, Harrison Bo Hua Zhu, Elizsveta Semenova, Yingzhen Li</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-06-11 12:53:03</h6>
+<p class='card-text'>We introduce the Trajectory-based Quantization Sensitivity Score (TQS), a metric that reframes post-training quantization (PTQ) through the lens of dynamical-systems stability. By modeling the network's rollout as a discrete-time dynamical system, TQS characterizes how quantization-induced errors propagate and amplify over the rollout horizon. Unlike conventional PTQ methods, where sensitivity analysis is often coupled to the quantization procedure, TQS enables a priori sensitivity estimation decoupled from quantizer selection and bit-width assignment. This separation allows for quantization budget planning even for black-box or compiled networks with fused operators. Building on this, we present TQS-PTQ, a flexible mixed-precision framework that requires no calibration data or costly second-order approximations. Our experiments show that a dynamical-systems perspective provides a robust, high-performing pathway for low-precision deployment in resource-constrained settings.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2606.13232v1' target='_blank'>WT-UMI: Tactile-based Whole-Body Manipulation via Force-Supervised Contact-Aware Planning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jaehwi Jang, Zhaoyuan Gu, Alfred Cueva, Zimeng Chai, Junjie Sheng, Thong Nguyen, Himank Galundia, Yifan Wu, Huishu Xue, Isaac Legene, Ojas Mediratta, Davin Doan, Andrew Collins, Sarah Sadegh, KyoungMok Kim, Rishita Dhalbisoi, Zun Chen, Ye Zhao</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-06-11 11:45:58</h6>
+<p class='card-text'>Whole-body humanoid manipulation of bulky, deformable, and shared-load objects requires distributed contact sensing and explicit force regulation, yet most imitation policies treat contact force only implicitly. On the other hand, different demonstration sources provide complementary modalities with inherent trade-offs: human demonstrations capture natural contact forces but not robot-executable actions, while teleoperation directly records robot actions but with less natural force regulation. This paper presents \textbf{WT-UMI}, a wearable whole-body tactile interface worn by human operators or mounted on humanoids, providing accurate observations of tactile images, contact forces, and end-effector poses across both human demonstration and humanoid teleoperation modes. We introduce a force-conditioned target-pose correction module that converts measured human poses into contact-aware robot targets by learning corrections from teleoperation data. To leverage the natural force interaction in human data, we propose a force-supervised planner that predicts end-effector pose chunks and contact-force trajectories. The predicted contact force serves as the reference for a tactile-based admittance controller. Across five contact-rich tasks spanning deformable objects, bulky rigid objects, and human--humanoid collaboration, WT-UMI improves success rate and reduces contact-position tracking error over four policy baselines. Our project page is available at https://wt-umi.github.io/WTUMI/.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2606.13226v1' target='_blank'>Multi-Phase Optimization of Shared Charging Infrastructure for Freight Electrification</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Joas Kahlert, Jiali Fu, Chengxi Liu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-06-11 11:39:02</h6>
+<p class='card-text'>The transition to heavy-duty battery electric vehicles requires an efficient and cost-effective deployment of the charging infrastructure, particularly when multiple operators share resources. This paper presents a multi-phase optimization framework for the joint planning of charging stations in a shared network, using high-resolution empirical truck trajectory data from two freight companies with distinct operational characteristics. The model is formulated to minimize the total number of charging stations while ensuring that the predefined electrification targets are met over successive expansion stages. The analysis captures heterogeneity in fleet usage, with one company operating a spatially concentrated network with shorter and more consistent routes, and the other exhibiting more dispersed operations with longer and more variable driving patterns. The results show that early-stage infrastructure deployment primarily supports fleets with concentrated operations, while later expansion phases are essential to accommodate long-haul and geographically dispersed transport demand. Furthermore, shared infrastructure not only enables reductions in redundant investments, but also introduces dependencies where certain fleets rely heavily on the full network to sustain electrified operations. In general, the findings highlight the importance of coordinated and data-driven infrastructure planning, and demonstrate that fleet-specific characteristics strongly influence both infrastructure requirements and electrification outcomes. The proposed framework provides practical insights on how collaborative and phased deployment strategies can enhance the scalability and efficiency of freight transport electrification.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2606.13222v1' target='_blank'>Proprioceptive-visual correspondence enables self-other distinction in humanoid robots</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yurun Chen, Tianyuan Gao, Yizhong Ge, Shikun Ban, Yizhou Wang, Hongkai Xiong, Wenjun Zeng, Wentao Zhu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-06-11 11:38:34</h6>
+<p class='card-text'>Distinguishing self from others is a prerequisite for social intelligence, yet humanoid robots that increasingly share workspaces with humans still lack this ability. Here we show that a humanoid robot can learn self-other distinction from proprioceptive-visual correspondence, without any identity labels or kinematic models. Once established, this distinction bootstraps a predictive self-model that maps joint configurations to three-dimensional body occupancy, capturing how the robot's body changes with action. In multi-agent scenes involving humans or morphologically identical robots, the system reliably identifies itself, learns a 3D self-model, and supports downstream tasks including target reaching, collision-aware motion planning, and human-to-robot motion retargeting. Together, these results outline a route toward bodily self-representation in robots that act and coordinate alongside others in shared physical environments. Project page: https://euron-zc.github.io/humanoid-self-model/.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2606.13215v1' target='_blank'>Mitigating business risks from renewable PPA power sourcing uncertainties for European green hydrogen production: Robust system design, regulatory adjustments and offtake flexibility</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jonathan Brandt, Astrid Bensmann, Richard Hanke-Rauschenbach</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-06-11 11:27:33</h6>
+<p class='card-text'>As energy prices surge for the second time in recent years driven by the ongoing crisis in the Middle East, the European Union's continuing reliance on fossil energy imports is becoming increasingly apparent. However, despite offering an intriguing prospect of improved energy resilience, the ramp-up of local green hydrogen production lags far behind the officially stated ambitions set after the 2022 energy crisis. A prominent reason for the widening implementation gap between announced and realised production projects is overly strict rules on renewable power sourcing, prompting Member states' ministries and the European Commission to propose advancing a planned rules review from 2028 to 2026. To contribute to a successful review and rule adjustments, we address an important gap in understanding the effects of power purchase rules on green hydrogen production. By taking the perspective of European electrolyser operators, we show how the criterion of additionality and its interaction with required temporal correlation can jeopardise the fulfilment of green hydrogen offtake agreements and affect green hydrogen production costs across different European bidding zones. Applying different design paradigms to a green hydrogen production system reveals that electrolyser operator measures, such as PPA and storage upsizing, can help to mitigate the business risks posed by the additionality criterion but come with increased costs. Alternatively, relaxed temporal correlation and increased offtake flexibility both increase production system robustness and reduce production costs simultaneously. Whereby relaxing temporal correlation rules does not result in exceeded emission intensity thresholds, underlining the potential of extended transitional rules to support the ramp-up of European green hydrogen production.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2606.13211v1' target='_blank'>Hallucination in Medical Imaging AI: A Cross-Modality Analytical Framework for Taxonomy, Detection, and Mitigation under Regulatory Constraints</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Omar Alshahrani, Muzammil Behzad</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-06-11 11:19:31</h6>
+<p class='card-text'>AI systems are being deployed across medical imaging faster than their failure modes are understood. At this point in time, the failure of greatest clinical concern is hallucination: clinically plausible but factually incorrect outputs, including fabricated anatomical structures, missed findings, incorrect laterality, and invented measurements in generated reports, with direct consequences, for example, for biopsy decisions, staging, and treatment planning. This structured narrative synthesizes peer-reviewed studies, benchmark datasets, and FDA regulatory guidance across five imaging modalities to produce a cross-modality analysis of hallucination taxonomy, etiology, detection, and mitigation. Specifically, we address three questions in this study: (1) how can existing taxonomies be unified across modalities?, (2) how do medical-specialized foundation models hallucinate less than general-purpose ones?, and (3) which mitigation strategies are effective and compatible with FDA lifecycle oversight? We note that three taxonomic frameworks together cover the imaging pipeline in a way no single framework does alone. We also highlight that general-purpose foundation models outperform medical-specialized models on hallucination-specific benchmarks, indicating that narrow domain fine-tuning can introduce overfitting-induced confabulation. At the same time, the oversight of radiologists remains essential; for instance, a very high percentage of of AI-generated flags required expert correction before clinical use. Physics-informed architectural constraints, Chain-of-Thought prompting, and human-in-the-loop safeguards each address different failure modes and is effective when combined. All findings are mapped to the FDA's Total Product Lifecycle and Predetermined Change Control Plan frameworks, which treat hallucination management as a lifecycle obligation rather than a pre-deployment checklist.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2606.13113v1' target='_blank'>MPC for underactuated spacecraft control with a Lyapunov supervised physics-informed neural network correction layer</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Amirhossein Ayanmanesh Motlaghmofrad, Carlo Cena, Mauro Martini, Marcello Chiaberge</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-06-11 09:39:14</h6>
+<p class='card-text'>Underactuated spacecraft faces controllability limitations and heightened sensitivity to environmental disturbances, complicating attitude maneuvering and stabilization. Due to the lack of control authority along the underactuated axis, conventional controllers cannot directly stabilize all attitude components and therefore require reference planning strategies. Furthermore, MPC approaches remain sensitive to inertia uncertainty and unmodeled dynamic couplings, resulting in degraded tracking performance under mismatch. To address these issues, we consider a hierarchical architecture integrating three layers: (i) a nonlinear model predictive controller (NMPC) for constraint and underactuation-aware maneuver planning and nominal closed-loop stability under actuator limits; (ii) a physics-informed neural network (PINN) trained offline on simulation data to estimate residual disturbance torques, with loss terms that enforce consistency with rigid-body rotational dynamics; (iii) a Lyapunov-based supervisory safety mechanism that evaluates the learned correction online and bounds or suppresses its influence to preserve the stability properties of the baseline controller. The architecture is evaluated in a high-fidelity simulation environment modelling reaction wheel dynamics, actuator saturation, and environmental disturbances. Monte Carlo studies show statistically significant reductions in steady-state attitude error relative to standalone NMPC while maintaining robust behavior under uncertainty. The supervisory layer ensures graceful degradation to purely model-based control when the learning-based augmentation is unreliable.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2606.13096v1' target='_blank'>Unified MRI Brain Image Translation via Hierarchical Tumor Structure Comparison</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yupeng Cai, Jia Wei, Jianlong Zhou</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-06-11 09:25:24</h6>
+<p class='card-text'>Multi-modal MRI brain image translation via available modalities holds significant practical importance in modern medicine, providing robust support for early diagnosis, treatment planning, and outcome assessment of diseases. For this purpose, it is important to ensure the fidelity of the tumor regions after translation. However, existing brain image translation methods ignore the structure information of different tumor regions, which could assist translation models in enhancing the quality and clinical applicability of the translated images.
+  In this work, we propose a novel translation model called HTSCGAN, which is a unified multi-modal brain image translation generative adversarial model integrating the structural information within tumor regions with the aim of improving the quality of brain image translation. Specifically, the generator employs three Patch Contrast Module (PCM) with different patch sizes to capture the hierarchical structural information of the tumor regions. In addition, a pretrained Patch Classifier (PC) and a pretrained Structure-Aware Encoder (SAE) are employed to derive the generated image containing the same tumor region structure as the ground truth image via patch classification loss and tumor perceptual loss, respectively. The experiments on BraTS2020 and BraTS2021 demonstrate strong performance of our model in both translation tasks and down stream segmentation tasks, highlighting its effectiveness in enhancing the quality and clinical relevance of the translated brain images. Our code is available at https://anonymous.4open.science/r/HTSCGAN.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2606.13068v1' target='_blank'>Effects of Social Interactions in Self-Organising Railway Traffic Management</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Fabio Oddi, Federico Naldini, Leo D'Amato, Grégory Marlière, Paola Pellegrini, Vito Trianni</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-06-11 08:54:12</h6>
+<p class='card-text'>Recent research is exploring self-organised traffic management as a solution for scaling to complex real-world networks. In such a system, trains predict their neighbourhood, produce traffic plan hypotheses, and agree via consensus with neighbours on a future traffic plan to be implemented. This paper investigates a structural parameter within this pipeline: the predictive neighbourhood horizon. The horizon is used by trains to identify future potential conflicts with neighbours, and to establish the local interaction topology, that is, the subset of trains to negotiate with. As the primary design variable, the horizon directly determines the size and density of the social interaction graph, whereas its impact on the complexity of local sub-problems and the distributed consensus dynamics represents a trade-off to be explored. Through a closed-loop simulation framework the study evaluates how variations of the horizon impact the overall decentralised coordination process, from initial conflict detection to distributed schedule consensus. The analysis focuses on investigating the potential trade-off introduced by the horizon choice: balancing local tractability and computational responsiveness with the need for global schedule coherence and feasibility in safety-critical environments. Contrary to intuition, our empirical results indicate that the short time horizons suffice, while long values compromise local tractability and computational responsiveness with no gain in global schedule optimality.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2606.13053v1' target='_blank'>EA-WM: Event-Aware World Models with Task-Specification Grounding for Long-Horizon Manipulation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Kailin Wang, Haoxiang Jie, Yaoyuan Yan, Jiacheng Zhou, Zhiyou Heng</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-06-11 08:35:37</h6>
+<p class='card-text'>Pretrained-feature world models provide a useful substrate for robot imagination, but visual or latent prediction alone does not determine whether an imagined future satisfies task-relevant events. Long-horizon manipulation requires progress signals that are relational, predicate-level, and physically grounded: whether an object has moved, whether a drawer or contact state has changed, whether a placement predicate is satisfied, and whether a candidate future is reliable enough for execution. We introduce EA-WM, an event-aware world-model framework that augments frozen visual-feature dynamics with task-specification-grounded event prediction and verification. EA-WM rolls out candidate futures in pretrained visual-feature space, decodes them into structured event states, and scores them using task-progress, semantic-consistency, physical-feasibility, and uncertainty terms. The verifier guides sampling-based planning, gates candidate actions, and, in the contact-sensitive LIBERO wine-rack setting, selects among PPOgenerated proposals. Across navigation, deformable-object, wall-constrained, and languagedescribed manipulation studies, EA-WM shows that event-aware verification can make featurespace world models more interpretable and better aligned with task progress.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2606.13049v1' target='_blank'>Y-BotFrame: An Extensible Embodied Agent Framework for Quadruped Robot Assistants</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Luyao Zhang, Ke Li, Yuan Ding, Xulong Zhao, Guo Yu, Chengwei Yan, Fuyu Dong, Jiawei Hu, Di Wang, Nan Luo, Gang Liu, Quan Wang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-06-11 08:33:43</h6>
+<p class='card-text'>Quadruped robots are capable of traversing a wide range of complex terrains with high flexibility. As highly mobile ground-based intelligent platforms, they can be equipped with modules for navigation control, environmental perception, and intelligent interaction, thereby serving as real-world mobile deployment platforms for various algorithms. In this paper, we introduce Y-BotFrame, an extensible embodied platform that turns a robot into an intelligent ground assistant. Y-BotFrame integrates multimodal perception capabilities, including speech, vision, and LiDAR, and employs a large language model as the cognitive core for environmental understanding, contextual reasoning, and task planning. The system maps user natural-language instructions into executable embodied task units that can be carried out by the robot. Y-BotFrame supports natural interaction through voice commands and visual feedback, removing the need for a remote controller and enabling efficient human-robot collaboration. With a highly extensible framework, Y-BotFrame supports plug-and-play integration of new functional modules as well as modular upgrades and iterative development, offering a reference implementation for the real-world deployment of general-purpose, instruction-driven embodied agents.The supplementary video is available at https://xdei-group.github.io/Y-BotFrame/.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2606.12987v1' target='_blank'>Diffusion Transformer World-Action Model for AV Scene Prediction</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Ruslan Sharifullin, Benjamin Jiang, Kai Xi Chew</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-06-11 07:24:12</h6>
+<p class='card-text'>Action-conditioned world models let an autonomous vehicle predict future camera scenes from its own planned controls, enabling planning and simulation without real-world rollouts, but at compact, trainable scale the futures are ambiguous and the field's standard distortion metrics actively mislead: they reward a blurry regression mean over a realistic prediction. We confront this with a compact latent world model that, given the present front-camera latent and a sequence of ego-actions, predicts future scene latents a frozen decoder renders to $256 \times 256$ frames up to 8 seconds ahead, evaluated on 150 held-out nuScenes scenes. We first benchmark where to predict: across six frozen encoders spanning four representation families, V-JEPA2 with temporal context reduces steering RMSE by 40% over the best single-frame encoder. We then train a latent Diffusion Transformer (DiT) and, through a controlled diagnosis, identify the four ingredients it needs: spatial tokens, the $x_0$ objective, residual anchoring, and sampling matched to target uncertainty. In a Stable-Diffusion-VAE encode-predict-decode pipeline we expose the central tension: distortion metrics (cosine similarity, SSIM) favor the blurry mean, masking that the diffusion model is far closer to the real frame distribution. Inception-based FID and KID reveal a clean perception-distortion frontier: diffusion attains KID 0.078 versus 0.375 for regression ($4.8\times$ better), and a deployable train-derived calibration makes this practical without test-time ground truth. The model is genuinely action-controllable (steering drives scene displacement, Spearman $ρ= 0.81$, vs $-0.18$ for regression). We trace limited single-pass motion to a shared-present anchor and engineer a compact 1.7M-parameter "jump" model that recovers full ground-truth motion magnitude ($1.02\times$ GT), where single-pass models capture less than half.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2606.12969v1' target='_blank'>Multi-Modal Agents for Power Distribution Defect Detection: An Evaluation of Foundation Models</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Quan Quan</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-06-11 06:57:01</h6>
+<p class='card-text'>The power distribution network is critical to reliable electricity delivery, yet traditional inspection methods face limitations in semantic understanding, generalization, and closed-loop automation. To address these challenges, this paper proposes a Multi-Modal Agent framework specifically for power distribution defect detection. Central to this study is the systematic evaluation of multimodal foundation models as unified cognitive engines. We rigorously assess their integrated performance across three critical capabilities: (1) Perception, where the model must accurately identify equipment and generate expert-level descriptions of defects; (2) Reasoning, where the model interprets visual findings to diagnose causes, assess severity, and plan maintenance strategies based on domain knowledge; and (3) Tool Usage, where the model acts as an autonomous operator to execute actions -- such as querying knowledge bases or generating work orders -- to achieve closed-loop maintenance. To support this evaluation, a domain-specific evaluation dataset and a comprehensive benchmark are developed. Experimental results demonstrate the strengths and limitations of current foundation models in these three dimensions, providing empirical evidence for deploying autonomous agents in high-stakes industrial environments.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2606.12910v1' target='_blank'>Bounding Boxes as Goals: Language-Conditioned Grasping via Neuro-Symbolic Planning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Allison Andreyev, Landon Eum, Nestor Tiglao, Romel Gomez</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-06-11 05:09:34</h6>
+<p class='card-text'>For robotics to be effectively integrated into household or industrial environments, machines must adapt to natural-language prompts in real time. Although Vision-Language Models (VLMs) have enabled zero-shot generalization in robot task and motion planning (TAMP), current state-of-the-art approaches often remain computationally "heavyweight" or require extensive training on thousands of demonstrations. We present GRASP (Grounded Reasoning and Symbolic Planning), a framework designed as a step toward open-vocabulary tabletop manipulation. Our approach leverages a pretrained VLM to translate natural-language queries into neuro-symbolic goal states, grounded in the physical world via a bounding-box detection pipeline. Unlike methods that rely on fixed color lists or hard-coded coordinates, GRASP enables robots to interpret abstract spatial concepts such as "top shelf" and execute tasks without additional fine-tuning. We achieve 73.3% overall success across 90 real-robot trials at three difficulty levels, requiring no task-specific training.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2606.12855v1' target='_blank'>Computing Headway Bounds under Worst-Case Bunching in Fixed-Line Transit Systems</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Michael Yuhas, George Gunter, Jose Paulo Talusan, Aron Laszka, Dan Freudberg, Abhishek Dubey</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-06-11 03:39:24</h6>
+<p class='card-text'>Vehicle bunching is a major problem for transit operators. When vehicles bunch together, the lead vehicle will service the majority of passenger demand, leaving the following vehicles to operate below capacity, wasting fuel and money. Furthermore, after the last vehicle in the bunch passes, the time before the next vehicle's arrival (headway) will be large. Transit operators can combat bunching by holding buses at stops along a route, trading riding time for even headway times. While prior work has focused on developing holding policies to minimize average case bunching, no work has focused on analyzing the longest and shortest possible headway times under a broad group of such policies. We assume that dwell times at stops and travel times between stops are bounded and develop a dynamic program that computes the maximum and minimum headway times for a single bus route with an arbitrary number of control points, vehicles, and holding policies. These bounds are tight in the sense that it is always possible to identify the specific sequence of events that lead to their occurrence. We use these bounds to investigate the effects of different holding policies, stop placement, and number of vehicles on route headways and worst-case bunching. Finally, we apply these analysis techniques to a real-world transit system in Nashville, TN and show their utility for transit planning.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2606.12797v1' target='_blank'>The Containment Gap: How Deployed Agentic AI Frameworks Fail Public-Facing Safety Requirements</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Md Jafrin Hossain, Mohammad Arif Hossain, Weiqi Liu, Nirwan Ansari</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-06-11 01:46:26</h6>
+<p class='card-text'>Agentic large language model systems that autonomously invoke tools, maintain persistent memory, and execute multi-step plans are increasingly deployed in public-facing domains, including government services, healthcare triage, and financial advising. We ask whether the frameworks used to build these systems provide architectural-level structural safety guarantees. Applying six containment principles derived from a compositional model of agentic architectures, we audit three dominant frameworks (LangChain, AutoGPT, and OpenAI Agents SDK) and find no native compliance in any of them. Memory integrity, a defense against one of the most prevalent vulnerability classes, is not observed in any of the three evaluated frameworks. We validate these findings empirically: in a simulated government benefits agent built on LangChain, a single memory-poisoning write induces persistent targeted corruption across all tested seeds and backends, increasing the wrongful denial rate for targeted applicants to 88.9%. Under a complex five-factor policy, the same attack preserves aggregate accuracy while increasing targeted wrongful denials by 3.5x, rendering the corruption difficult to detect through standard monitoring. We then introduce two lightweight containment mechanisms: a memory integrity validator and a policy gate, which eliminate both attack vectors with sub-millisecond overhead (<0.2ms per call). We conclude that the current agentic framework ecosystem may not yet meet secure-by-default expectations for public-facing deployments and outline priority architectural interventions to enable trustworthy deployment in high-stakes, socially impactful applications.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2606.12791v1' target='_blank'>The GIST 2064-Bus Test System: A Public-Data Synthetic Model of the Korean Power Grid</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yun-Su Kim</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-06-11 01:15:14</h6>
+<p class='card-text'>No model of the Korean transmission system at native resolution is publicly available, which makes reproducible research on one of the world's most distinctive grids difficult-an islanded interconnection with extreme separation between generation and the Seoul Metropolitan Area load center, low renewable penetration, and heavy reliance on extra-high-voltage (EHV) transmission. Working strictly from public data, and for research purposes only, we present the GIST 2064-bus test system, a geographically grounded synthetic model of the Korean grid. Unlike fully synthetic cases, whose lines match no real corridor, and aggregated public Korean models, it derives its 345 and 154 kV layout from the OpenStreetMap/OpenInfraMap power layer by a multi-source shortest-path reassembly of overhead-line geometry, gap-fills unreachable substations with a geographic minimum-spanning-tree backbone, and calibrates the aggregate circuit length to published national statistics (108/107/97% at 765/345/154 kV). The model spans 2064 buses, 512 generation and renewable sources (144 GW), 3044 AC line circuits plus high-voltage direct-current (HVDC) equivalents, 3073 transformers, and reactive resources (shunts and 11 FACTS devices), serialized to a PSS/E-compatible CSV schema. A general-purpose pandapower Newton-Raphson solver-with generator reactive limit enforcement, a secant-gain remote voltage-control loop, tap-changer and switched-shunt fixed-point control, and zero-impedance regularization-solves an 85 GW high demand snapshot to a single connected, converged operating point (mean voltage 0.996 pu, 2.3 % losses, no undervoltage buses), structurally consistent with the independent public KPG-193 model. The dataset, maps, and tooling are released as a citable platform for power flow, planning, and decarbonization studies.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js'></script>
+</body>
+</html>
