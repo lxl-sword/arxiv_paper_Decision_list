@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>planning - 2026-06-16</title>
+<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap' rel='stylesheet'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css'>
+<style>
+body {
+font-family: 'Roboto', sans-serif;
+background-color: #f5f7fa;
+padding: 20px;
+}
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.card-title {
+    font-weight: 700;
+}
+.card:hover {
+    transform: scale(1.02);
+    transition: 0.3s ease-in-out;
+}
+</style>
+</head>
+<body>
+<div class='container'>
+<h1 class='text-center my-4'><i class='fas fa-book'></i>planning - 2026-06-16</h1>
+<div class='row'>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2606.17030v1' target='_blank'>Qwen-RobotWorld Technical Report: Unifying Embodied World Modeling through Language-Conditioned Video Generation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jie Zhang, Xiaoyue Chen, Anzhe Chen, Chenxu Lv, Deqing Li, Gengze Zhou, Hang Yin, Haoqi Yuan, Haoyang Li, Jiahao Li, Jiazhao Zhang, Jingren Zhou, Kaiyuan Gao, Kun Yan, Lihan Jiang, Ningyuan Tang, Pei Lin, Qihang Peng, Shengming Yin, Tianhe Wu, Tianyi Yan, Xiao Xu, Yan Shu, Yanran Zhang, Ye Wang, Yi Wang, Yilei Chen, Yixian Xu, Yiyang Huang, Yuxiang Chen, Zekai Zhang, Zhendong Wang, Zhixing Lei, Zhixuan Liang, Zihao Liu, Zikai Zhou, Xiong-Hui Chen, Chenfei Wu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-06-15 17:52:31</h6>
+<p class='card-text'>We introduce Qwen-RobotWorld, a language-conditioned video world model for embodied intelligence. With natural language as a unified action interface, it predicts physically grounded future visual trajectories from current observations across robotic manipulation, autonomous driving, indoor navigation, and human-to-robot transfer. This unified formulation provides three promising application directions: synthetic data generation for policy training augmentation, scalable virtual environments for policy evaluation, and language-guided planning signals for downstream robot control. This is achieved through a three-part design: a) Double-Stream MMDiT with MLLM Action Encoding, where a 60-layer double-stream diffusion transformer couples frozen Qwen2.5-VL semantics with video-VAE latents through layer-wise joint attention; b) Embodied World Knowledge (EWK), an 8.6M video-text corpus (200M+ frames) with action-language mapping over 20+ embodiments and 500+ action categories; and c) General+Expert Progressive Curriculum, a two-stage training strategy that first learns general visual priors and then injects embodied specialization under a shared language interface. Extensive results show strong competitiveness: ranks 1st overall on EWMBench and DreamGen Bench, outperforms all open-source models on WorldModelBench and PBench. Additional zero-shot analyses on RoboTwin-IF benchmark further support robust generalization and multi-view consistency.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2606.16995v1' target='_blank'>When in Doubt, Plan It Out: Committed Small Language Model Deliberation for Reactive Reinforcement Learning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Nathan Gavenski, Juarez Monteiro, Francisco Galuppo, Adriano Veloso, Odinaldo Rodrigues</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-06-15 17:31:22</h6>
+<p class='card-text'>Reinforcement Learning (RL) policies often degrade in unfamiliar environments because they lack explicit deliberation. We propose Plan, Align, Commit, Think (PACT), a hybrid architecture that combines a fast, reactive RL policy with a slow, deliberative Small Language Model (SLM) planner. PACT invokes the SLM asynchronously to generate and validate candidate action plans. Once a plan is verified through simulation as safe, feasible, and complete, it is executed directly, bypassing the RL policy without retraining or modifying it. Evaluated on three FrozenLake configurations of increasing difficulty, PACT outperforms all baselines while relying on a 2B-parameter SLM backbone, suggesting that deliberative planning and reactive execution are more powerful in concert than either is alone in these settings.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2606.16978v1' target='_blank'>Task-Error Residual Learning for Real-Robot Five-Ball Juggling</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Kai Ploeger, Jan Peters</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-06-15 17:14:32</h6>
+<p class='card-text'>For residual learning that refines existing behavior, sample efficiency depends on two things: how much information each rollout returns, and how efficiently the learner uses that information. Reinforcement learning's standard scalar reward carries far less information than the directional task error that defines the task. Random exploration further discards whatever information each rollout returns. Through residual learning with directional task-error supervision and a task error model that drives sample selection, we achieve stable three-, four-, and five-ball juggling on anthropomorphic Barrett WAM arms. Despite planning and controlling through a simple, idealized stack, the system converges from the second attempt. The first attempt drops, after which task error decreases monotonically without further failures. In comparison, five-ball juggling typically takes humans years of practice. We compare residual learners across two ternary axes, the directional information in the learning feedback and the commitment of the analytic prior, spanning Newton-style Jacobian updates, Composite Bayesian Optimization, and stochastic search methods. Both axes prove necessary: neither directional feedback nor an informative prior suffices alone, and the simplest method that combines them, a fixed-Jacobian Newton update, is the most reliable. The learned residual tolerates substantial prior misalignment and degraded joint tracking, affecting mainly convergence speed. The bottleneck for residual learning on real robots is therefore the information content of the supervision signal and how the learner uses it, not the accuracy of the surrounding stack. Video documentation of all experiments is available at https://kai-ploeger.com/residual-juggling.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2606.16972v1' target='_blank'>When Should a Robot Replan? Regret-Guided Update Scheduling in Time-Varying MDPs</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Negin Musavi, Gokul Puthumanaillam, Ruben Hernandez, William Schafer, Melkior Ornik</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-06-15 17:09:07</h6>
+<p class='card-text'>Robots operating in non-stationary environments must continually adapt their policies as the dynamics drift, but onboard energy and compute budgets cap how often a full state estimation and re-planning step can be performed. This raises a question: \emph{when}, along a horizon, should a robot spend its limited budget? We formulate this problem in time-varying Markov decision processes (TVMDPs) with a known bound on the rate of transition drift. We model execution as a \emph{skip-update} scheme in which, at chosen update times, the agent estimates the transition kernel by maximum likelihood and computes a finite-horizon policy, and between updates reuses this policy under a propagated state estimate. We analyze the dynamic regret of this scheme and show how it grows during skip intervals in terms of the properties of the TVMDP and the skip lengths; the resulting bound answers the opening question via an online, regret-guided update rule that allocates the budget adaptively. We evaluate the rule in a simulated Mars-rover navigation task with time-varying slip dynamics and on a Crazyflie quadrotor in indoor obstacle fields. Adaptive allocation outperforms other budgeted baselines.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2606.16960v1' target='_blank'>SurroundNEXO: Ego-Centric Metric Bridging for Spatially Consistent Geometry in Autonomous Driving</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Shuai Yuan, Runxi Tang, Yuzhou Ji, Fudong Ge, Hanshi Wang, Yifei Wang, Xianming Zeng, Jianyun Xu, Xingliang Liu, Yanfeng Wang, Zhipeng Zhang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-06-15 17:00:32</h6>
+<p class='card-text'>Modern autonomous driving depends on accurate metric 3D understanding for perception, reconstruction, and planning, which in turn requires reliable multi-camera depth prediction. However, the outward-facing nature of vehicle-mounted surround-view camera rigs inherently limits visual overlap across views, challenging the correspondence-based assumptions that underpin conventional multi-view geometry. To bridge this gap, we present SurroundNEXO, named after the Spanish word nexo for a geometric link, a low-overlap multi-camera metric depth framework that grounds cross-view reasoning in ego-centric geometry rather than dense visual correspondences. Instead of directly enforcing early global fusion, SurroundNEXO first assigns image tokens globally comparable ego-frame viewing directions through Ego-Ray Positional Encoding, then uses sparse LiDAR measurements as metric anchors to propagate absolute scale cues, and finally expands feature interaction progressively from view-local modeling to decomposed spatio-temporal reasoning and global integration. This design enables metric-scale depth prediction with improved spatial consistency across weakly overlapping cameras. Across low-overlap autonomous driving benchmarks, including NuScenes, Waymo and DDAD, SurroundNEXO reduces single-view error by 33.2%, improves cross-view consistency by 10.5%, and enhances metric reconstruction quality by 25.6% compared with SOTA methods. It further remains robust under extremely sparse depth prompts and exhibits strong zero-shot generalization to unseen camera layouts.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2606.16878v1' target='_blank'>Integrated Marketing Attribution: A Bayesian Framework for Privacy-Safe Granular Measurement Anchored in MMM</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Meghana R. Bhat, Ankit Umare, Utsav Aggarwal, Richard Vecsler, Arunkumar Mani, Karthik Nair, Chandhu Nair</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-06-15 15:52:48</h6>
+<p class='card-text'>Retail marketing measurement increasingly requires granular campaign-level insights without relying on user-level tracking. However, the two dominant approaches, Marketing Mix Modeling (MMM) and Multi-Touch Attribution (MTA), often produce fragmented insights. MMM is privacy-safe and robust for channel-level planning but is too coarse for campaign optimization, while MTA provides granular attribution but has become less reliable under increasing privacy restrictions. We propose Integrated Marketing Attribution (IMA), a unified framework that combines MMM with channel specific Bayesian attribution models to derive campaign-level effects from aggregated data. By leveraging MMM-informed priors, IMA delivers granular, privacy-safe attribution while preserving consistency with MMM.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2606.16780v1' target='_blank'>DIFF-IPPO: Diffusion-Based Informative Path Planning with Open-Vocabulary Belief Maps</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Sausar Karaf, Oleg Sautenkov, Mikhail Martynov, Dzmitry Tsetserukou</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-06-15 14:26:02</h6>
+<p class='card-text'>Exploration and object search require robots to perceive their environment, identify regions of interest, and plan trajectories that improve target-detection likelihood or maximize information gain. Many IPP methods, especially in continuous environmental monitoring, rely on Gaussian-process belief models, while object-search settings often produce complex, multimodal belief maps from semantic or open-vocabulary perception. Global trajectory generation directly conditioned on such non-Gaussian belief maps remains comparatively underexplored. Although diffusion-based planners offer strong capabilities for modeling such distributions, their use in informative path planning remains limited. In this work, we propose DIFF-IPPO, a pipeline that integrates an open-vocabulary belief map generator with a diffusion-based planner for global trajectory generation over belief maps. The method generates trajectories that concentrate sensor coverage over high-belief regions, achieving normalized detection scores between 81.49% and 86.55% across different dataset scenarios. We validate the system in a simulated search-and-rescue scenario where the planner searches candidate building regions to locate a burning building. In this setting, a team of five drones using batched belief-map-conditioned trajectory generation achieves first detections in 3.5 minutes.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2606.16765v1' target='_blank'>A Validated LBM Dataset and Pipeline for Surrogate Modeling of Turbulent 3D Obstructed Channel Flows</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Lukas Schröder, Shubham Kavane, Harald Köstler</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-06-15 14:15:25</h6>
+<p class='card-text'>Evaluating neural operators for 3D turbulent flow requires validated datasets with physical benchmarks. We present a reproducible pipeline generating training data for 3D channel flows around generated geometries at Re=1,000-10,000. Our lattice Boltzmann solver with cumulant collision operators is rigorously verified against experimental measurements (Strouhal number, drag coefficients, turbulent fluctuations) with comprehensive grid convergence studies at resolution 1024x512x512. Building upon an established framework, this validated pipeline enables standardized surrogate model comparison. We outline planned systematic evaluation of Fourier Neural Operator and U-Net variants on forecasting, super-resolution, and error correction tasks, using physics-informed metrics to assess turbulent energy cascade representation. Future work will compare computational efficiency between numerical solvers and neural surrogates, exploring practical application. We seek community feedback on our validation approach, planned benchmark methodology, and evaluation priorities for neural operators in turbulent flows.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2606.16726v1' target='_blank'>Too Few or Too Many? Sample Size Estimation for Differential Abundance Studies</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Michael Agronah, Benjamin M. Bolker</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-06-15 13:51:51</h6>
+<p class='card-text'>Determining an appropriate sample size for a study is a crucial step in planning scientific research. Appropriate sample size planning avoids both inadequate and inflated sample sizes. Inflated sample sizes wastes resources, time and effort of human subjects, and lives of experimental animals. Inadequate sample sizes, a much more common problem, wastes even more resources through the inability to detect biologically meaningful differences and encourages questionable research practices like $p$-hacking. Microbiome studies are particularly challenged by small sample sizes, particularly in studies of human subjects or expensive animal models. In practice, the statistical power of taxa within a differential abundance study is influenced by the effect size (typically quantified as fold change), mean abundance of individual taxa, and the number of samples. We present a novel approach for sample size calculation for differential abundance studies as a function of effect size, mean abundance and statistical power of taxa. Our method is implemented in the power.nb R package, available at https://michaelagronah.com/power.nb/articles/stub.html. We applied our model for sample size calculation using estimates of mean abundance and fold change of taxa obtained from thirty real-world microbiome datasets. Our results showed that differential abundance microbiome studies require larger sample sizes than are currently prevalent in the literature to achieve adequate statistical power. Our framework will help researchers make informed decisions about appropriate sample sizes.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2606.16721v1' target='_blank'>Medical world models: representing medical states, modelling clinical dynamics and guiding intervention policies</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Ke Liu, Mengxuan Li, Yanyi Bao, Tianyun Zhang, Chong Chu, Jiajun Bu, Haishuai Wang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-06-15 13:49:43</h6>
+<p class='card-text'>Medical diagnosis and treatment are dynamic processes in which patient states evolve over time and clinical interventions alter future outcomes. Although current medical AI can detect disease, estimate risk and generate reports, many systems still return static labels or scores, offering limited insight into how illness may progress or how alternative interventions may reshape its trajectory. Medical world models adapt the world-model idea from artificial intelligence to healthcare by learning internal simulators of patient-state dynamics. Their long-term goal is to help clinicians anticipate deterioration, compare treatment-conditioned futures and tailor care to individual patients. Yet relevant work remains scattered across foundation models, longitudinal modelling, disease simulation, treatment-effect estimation, reinforcement learning and digital twins. To bridge this gap, this review outlines a roadmap for advancing medical AI from isolated diagnosis and prediction toward medical world models that simulate disease evolution and support intervention decisions. This roadmap is organized around three coupled capabilities: patient-state construction, clinical dynamics modelling and intervention decision support. Across representative systems, the comparison highlights what each capability contributes and how partial components can be integrated into more mature perception--dynamics--planning systems. Finally, we identify the challenges involved in turning plausible rollouts into clinically useful simulators. Related literature is available at https://github.com/1999kevin/awesome_medical_world_models.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2606.16677v1' target='_blank'>Distributional Forecasting of EU Asylum Applications with Dynamic Multivariate Count Models</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Gregor Zens, Jakub Bijak</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-06-15 13:10:45</h6>
+<p class='card-text'>We propose a Bayesian framework for joint distributional forecasting of monthly asylum applications across the EU-27. The model decomposes latent application intensities into country-specific random walks and common factors, with idiosyncratic and shared shocks allowed to exhibit heavy tails or stochastic volatility. Using Eurostat data from 2008 to 2026, we evaluate predictive distributions in a rolling out-of-sample exercise, scoring overall distributional accuracy and upper-tail risk. Three findings emerge. First, the preferred specification varies across countries, scoring rules, and horizons, underscoring the need to align models with policy-specific loss functions. Second, joint EU-27 models improve on country-by-country benchmarks, with the largest gains in the upper tail, where preparedness costs are most relevant. Third, random-walk log-intensities provide a useful short-run description of national asylum-application dynamics, especially when combined with flexible innovation dynamics. We conclude by discussing implications for national and EU-level agencies involved in asylum forecasting and preparedness planning.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2606.16649v1' target='_blank'>The Integrator Advantage: Controlled Agentic AI for Small and Medium-Sized Companies</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Christopner Koch, Joshua A. Wellbrock</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-06-15 12:38:53</h6>
+<p class='card-text'>Agentic AI marks a new phase of enterprise automation. Unlike traditional automation or conversational AI, agentic systems can interpret goals, plan multi step tasks, access tools, interact with enterprise systems, and execute workflows with varying degrees of autonomy. For small and medium sized companies, this creates potential to reduce administrative burden, accelerate routine processes, and improve the use of organizational knowledge. This paper argues that the near term value of Agentic AI does not lie in full autonomy or workforce reduction, but in controlled partial autonomy for simple and medium complexity business processes. It proposes an integration framework covering use case suitability, autonomy levels, technical integration, governance, security, employee enablement, and measurable impact. The paper concludes that Agentic AI can become a productivity lever when implemented as a human centered capability with responsibility and accountability retained by people.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2606.16605v1' target='_blank'>ARB4WM: An Adversarial Robustness Benchmark for World Models in Continuous Control</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Junjian Zhang, Hao Tan, Ruonan Li, Dong Zhu, Aiping Li, Zhaoquan Gu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-06-15 11:51:19</h6>
+<p class='card-text'>World models are widely used in robotic and agentic engineering control systems due to their ability to learn latent dynamics for planning and decision-making. As these systems are increasingly deployed in safety-critical settings, understanding their robustness under adversarial conditions has become essential. However, existing evaluations lack a unified benchmark for testing adversarial threats across the policy, value, and latent-dynamics levels of world-model agents. To fill this gap, we present ARB4WM, a unified evaluation framework for pre-deployment robustness and risk assessment of world-model agents under visual perturbations. ARB4WM defines five white-box loss objectives across these three levels and studies their effects when combined with single-step or multi-step perturbation strategies and temporal attack modes, including full-frame, half-sequence, and sparse-frame exposure. Specifically, we evaluate four Dreamer-style agents across 20 tasks from MetaWorld and the DeepMind Control Suite under different loss objectives, perturbation strategies, and temporal attack modes. Results show that attacks targeting value estimation, latent representations, and RSSM dynamics can be as damaging as direct policy disruption, and that early or frequent perturbations are especially harmful, while input-level defenses provide limited recovery under adaptive attacks. These findings suggest that safety, risk, and reliability assessment for world models should cover multiple component-oriented attack objectives and temporal exposure protocols rather than relying solely on action-space robustness. Source code is available at https://github.com/zaoanguai/ARB4WM.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2606.16600v1' target='_blank'>WaveSync: Constrained Wavefront Optimization for Synchronized Co-Speech Gestures in Humanoid Robots</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Thang Tran Viet, Thanh Nguyen Canh, Gia Huy Uong, Phuc Van Dinh, Tan Viet Tuyen Nguyen, Xiem HoangVan, Nak Young Chong</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-06-15 11:47:30</h6>
+<p class='card-text'>Expressive co-speech gestures are crucial for natural human-robot interaction, but generating them on physical humanoid robots is difficult because gesture strokes must align with speech emphasis while satisfying strict kinematic and dynamic constraints. Unlike virtual avatars, humanoid robots cannot freely execute rapid or overlapping motions, making word-level synchronization and hardware-safe motion planning a coupled problem. We present \textbf{WaveSync}, a hybrid framework in which a Large Language Model decomposes dialogue responses into structured semantic schemas and assigns per-word importance weights, constructing a continuous Semantic Importance Wave. Gesture trajectories are shaped through Dynamic Movement Primitives, enforcing kinematic feasibility while enhancing expressiveness. A Wavefront Optimization stage aligns peak-to-peak gesture-speech synchronization and resolves residual kinematic violations through gesture-duration compression and forward propagation. Experimental evaluation based on five dialogue scenarios shows that our method achieves high synchronization accuracy and outperforms three baselines in both objective and subjective evaluations. Each component in WaveSync plays a necessary role in producing gestures that are expressive, semantically grounded, and kinematically compliant. The code, resources, and videos are available at \href{https://github.com/pairs-lab/WaveSync}{WaveSync}</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2606.16580v1' target='_blank'>Multi-Modal Spatio-Temporal Graph Neural Network with Mixture of Experts for Soil Organic Carbon Prediction</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Daniele Mos, Felipe Drummond, Anton Bossenbroek, Soufiane el Khinifri</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-06-15 11:25:38</h6>
+<p class='card-text'>Top-soil organic carbon (SOC) prediction is fundamental to agricultural sustainability, land use policy and fertilization planning. Existing approaches face two limitations: they pair hand-crafted covariates with classical ML or single-modal deep models that miss rich spectral and temporal information, and grid-based architectures ignore the irregular spatial structure of field measurements. We introduce SpTGNN, a multi-modal spatio-temporal graph neural network addressing both. SpTGNN represents soil measurements as nodes in a heterogeneous graph with three edge types (spatial proximity, spectral similarity, elevation), and applies relational graph attention to learn separate patterns per relation. A fine-tuned TerraMind encoder extracts node features from Sentinel-2, Sentinel-1 and DEM signals, combined with per-sample environmental covariates and learned positional and temporal embeddings. A sparse Mixture-of-Experts module fuses the four streams via top-$k$ routing. Uncertainty is captured by pairing heteroscedastic regression (aleatoric) with deep ensembles (epistemic), and a Moran's $I$ penalty regularizes spatial autocorrelation. We evaluate on a global SOC corpus split into three regional instances ($\sim$49k samples globally, Africa $\sim$26k, Europe $\sim$14k). Our 5-member deep ensemble reports $R^2=0.762$, RMSE $=3.51\pm0.48$ g/kg and MAPE $=22.9\%$ on the Africa test split, improving over a tabular XGBoost baseline; the best single checkpoint reaches validation $R^2=0.864$. Ablations confirm the heterogeneous graph, MoE fusion and fine-tuned backbone each contribute substantively, and the ensemble UQ stack achieves post-calibration ECE of $0.031$ (hybrid) and $0.026$ ($β$-NLL). To our knowledge, this is the first framework to unify foundation-model feature extraction, heterogeneous graph attention and decomposed uncertainty quantification for SOC estimation.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2606.16565v1' target='_blank'>Distributionally robust decision-making under ambiguity: case study of water environmental management</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Hidekazu Yoshioka, Motoh Tsujimura, Yumi Yoshioka, Ayumi Hashiguchi</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-06-15 11:07:43</h6>
+<p class='card-text'>Decision-making under uncertainty is ubiquitous in environmental project planning. Environmental processes such as a streamflow discharge often present a subexponential memory, where the autocorrelation persists for a long time. In addition, optimization problems driven by environmental processes encounter the issue of model ambiguity because of a lack of sufficient data for model identification. To facilitate decision-making for the management of aquatic environments (e.g., flood mitigation, water abstraction for hydropower generation), we formulate a unified distributionally robust stochastic optimization problem based on a mixed moving average (MMA) process. The MMA process is a superposition of infinite-dimensional affine stochastic processes that is seemingly complex, but the affine property helps with the formulation and computation of the optimization. Our problem is based on a convex objective with a nonsmooth conditional value-at-risk measure. We present a convergent regularization to obtain its smooth and strictly convex counterpart. The model ambiguity is represented as a distortion of the probability density of the target dynamics, and it is penalized by a divergence with which the optimization problem remains convex and becomes computable. As a case study, we apply the optimization problem to two cases with identified parameter values. The performance of the optimized dynamics is evaluated through a statistical simulation. This paper serves as a multidisciplinary work covering both the theory and application of distributionally robust optimization.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2606.16480v1' target='_blank'>HOLO-MPPI: Multi-Scenario Motion Planning via Hierarchical Policy Optimization</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Youngjae Min, Jovin D'sa, Faizan M. Tariq, David Isele, Navid Azizan, Sangjae Bae</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-06-15 09:49:14</h6>
+<p class='card-text'>Robots deployed in the real world must plan motions across diverse scenarios without per-scenario retuning. End-to-end reinforcement learning (RL) can generalize across scenarios but often becomes brittle under distribution shift, reward misspecification, and stochastic interactions. Model predictive path integral (MPPI) control enables strong real-time refinement without gradients, but its performance depends on a well-shaped sampling prior, while manually designing the priors does not scale to multi-scenario deployment. We present HOLO-MPPI (High-level Offline, Low-level Online MPPI), a multi-scenario motion planning framework that combines high-level policy learning with low-level stochastic optimal control. Offline, we learn a high-level policy that proposes scenario-robust plans in an abstract action space, with a learned world model for online rollout. Online, the policy serves as a data-driven prior generator that parameterizes MPPI's sampling distribution conditioned on the current observation and goal. MPPI then optimizes low-level control sequences around this prior in real time to adapt to local disturbances. We instantiate HOLO-MPPI in autonomous driving by designing an effective high-level action space and tailored model architectures. Our evaluation across diverse driving scenarios shows that HOLO-MPPI improves upon MPPI and end-to-end RL baselines while maintaining real-time control.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2606.16428v1' target='_blank'>LectūraAgents: A Multi-Agent Framework for Adaptive Personalized AI-Assisted Learning and Embodied Teaching</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jaward Sesay, Yue Yu, Siwei Dong, Yemin Shi, Guangyao Chen, Börje F. Karlsson</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-06-15 09:03:12</h6>
+<p class='card-text'>Effective personalized AI-assisted learning demands systems that can not only generate accurate learner-specific educational materials, but also dynamically adapt their instruction to diverse learners. However, existing educational agents have primarily focused on lecture content automation and simulations, which often fall short of modelling multimodal and embodied instructional methods tailored for the individual learner. To this end, we propose LectūraAgents - a multi-agent framework that enables personalized learning through end-to-end adaptive embodied teaching. At its core, LectūraAgents mirrors a professor-student relationship, in which a ProfessorAgent leads a collaborative team of specialized subordinate agents through research, planning, review, and embodied delivery of lecture contents that adapt to a learner's needs. The framework offers three main contributions: (1) a hierarchical multi-agent architecture for end-to-end personalized learning; (2) an adaptive embodied teaching mechanism, wherein the ProfessorAgent executes visible and pedagogically motivated teaching actions (e.g., handwrite, highlight, underline, etc.) over contents in a teaching environment; and (3) a Teaching Action-Speech Alignment (TASA) algorithm that employs salience-based heuristics and temporal semantic segmentation to generate coherent teaching action sequences aligned with learner profiles. We evaluate LectūraAgents on diverse courses at high school, undergraduate, and graduate levels using sample-specific rubric-based analysis; with generated lecture materials and teaching actions assessed and validated by expert educators. Experimental results show consistent gains in lecture content quality, embodied teaching quality, assessment, and personalization over existing approaches, positioning LectūraAgents as a pedagogically well-grounded framework for personalized learning at scale.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2606.16423v1' target='_blank'>Single-item lot sizing problem under budgeted lead-time uncertainty</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Romain Guillaume, Adam Kasperski, Szymon Wrobel, Pawel Zielinski</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-06-15 08:59:54</h6>
+<p class='card-text'>In this paper, a single-item lot sizing problem with backordering is discussed. The time horizon is divided into planning periods, characterized by fixed and variable production costs, and future delivery periods with specified demands, where inventory holding and backordering costs may occur. For each planning period, a common nominal lead time is given. The true lead times can deviate to some extent from the nominal one, and their exact values are unknown at the planning step. We assume that lead times take only integer values and splitting production orders is not allowed. Furthermore, order crossovers are prohibited; thus, an order placed earlier cannot arrive after one placed later. A budgeted uncertainty set of possible lead-time scenarios is defined, where a budget allows us to control the amount of uncertainty of lead times. It is shown how to construct a family of production plans varying from the most optimistic (a best lead-time scenario occurs) to the most pessimistic (a worst lead-time scenario occurs). In order to compute these plans the R* criterion is applied which generalizes the conservative robust min-max criterion, commonly used in robust optimization. The computational complexity of the problem is investigated. Polynomial, pseudopolynomial time algorithms, and mixed integer programming formulations are proposed to solve the general problem and its special cases. The results of computational tests are provided that demonstrate that using the R* criterion can significantly enlarge the set of candidate production plans.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2606.16400v1' target='_blank'>SemGeoNav:A Safety-Guided Visual Navigation Approach with Semantic Reasoning and Geometric Planning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yu Liu, Zongyang Chen, Yan Guo, Chao Liu, Xianfei Pan</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-06-15 08:38:46</h6>
+<p class='card-text'>Learning-based visual navigation has enhanced semantic goal-reaching capabilities. However, due to their black-box nature, purely end-to-end models often lack explicit geometric constraints, leading to unpredictable and unreliable obstacle avoidance in open environments. Conversely, traditional geometric planners ensure safety but struggle with high-dimensional visual targets. To address these limitations, we propose SemGeoNav, a novel hierarchical visual navigation framework.It tightly integrates the high-level semantic reasoning of end-to-end models with the reliable local planning ability of geometry-based methods, achieving robust image-based navigation while significantly improving obstacle avoidance. Furthermore, we introduce a temporal trajectory smoothing mechanism to ensure continuous and stable robot motion. We evaluated SemGeoNav on a Unitree Go2 quadruped robot in real-world environments. The results demonstrate that SemGeoNav outperforms existing representative methods, including ViNT and NoMaD, achieving higher success rates and shorter navigation times.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2606.16386v1' target='_blank'>Game-Theoretic Multi-Agent Reinforcement Learning for Swarm Trajectory Planning in Low-Altitude Wireless Networks</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Nguyen Duc Minh Quang, Ruoxi Chong, Zhiqiang Wei, Chang Liu, Derrick Wing Kwan Ng</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-06-15 08:17:28</h6>
+<p class='card-text'>The Low-Altitude Economy (LAE) is rapidly expanding, giving rise to low-altitude wireless networks (LAWNs), where large-scale cellular-connected unmanned aerial vehicle (UAV) deployments support heterogeneous mission-critical applications over multi-cell ground base station (GBS) infrastructures. To ensure mission success, each UAV must jointly optimize communication throughput and mission completion efficiency. In fifth-generation (5G) new radio (NR) systems, the equal resource block (RB) allocation policy induces strong strategic coupling among UAV trajectories: when a UAV enters a GBS cell, it reduces the RB share available to all co-served UAVs, thereby altering their achievable rates and trajectory incentives through shared wireless resources. Existing studies either ignore this coupling or focus on single-cell infrastructure, leaving the multi-cell, congestion-aware UAV trajectory planning problem insufficiently addressed. To fill this gap, we formulate the problem as a cooperative stochastic congestion game with a communication-and-mission-aware utility function, and propose a centralized-training decentralized-execution multi-agent proximal policy optimization (CTDE-MAPPO) algorithm to maximize social welfare under multi-cell RB congestion. Simulation results show that the proposed method outperforms QMIX, independent Q-learning, and random baselines in terms of aggregate utility and mission success rate, while achieving stable convergence within practical training budgets.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2606.16354v1' target='_blank'>GraphBEV++: Multi-Modal Feature Alignment for Autonomous Driving</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Ziying Song, Caiyan Jia, Lin Liu, Shaoqing Xu, Lei Yang, Yadan Luo</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-06-15 07:50:33</h6>
+<p class='card-text'>Feature misalignment in BEV perception is a critical yet often overlooked challenge in autonomous driving, especially under calibration uncertainties between LiDAR and camera sensors. To address this issue, we propose a robust multi-modal fusion framework, GraphBEV++, which systematically mitigates projection-induced misalignment. The framework consists of two key modules: LocalAlign-v2 and GlobalAlign-v2. LocalAlign-v2 introduces neighborhood-aware depth features via graph matching to correct local misalignment. It supports both LSS-based and query-based BEV representations, making it compatible with BEVFusion and BEVFormer architectures for consistent cross-paradigm alignment. GlobalAlign-v2 encompasses two variants: Deformable and Diffusion. The Deformable variant addresses global misalignment in LSS-based multi-modal BEV by explicitly learning cross-modal feature offsets. In contrast, the Diffusion variant targets implicit misalignment in query-based BEV by injecting noise to simulate misalignment and employing a denoising process to recover aligned features. Experimental results show that GraphBEV++ achieves state-of-the-art performance under misalignment noise on nuScenes and Waymo subset, improves long-range detection on Argoverse2, and generalizes effectively to the 3D occupancy prediction task, consistently improving occupancy estimation accuracy and robustness under both clean and noisy settings. Furthermore, GraphBEV++ effectively alleviates misalignment issues in end-to-end autonomous driving. Compared with five baselines (UniAD, VAD, FusionAD, MomAD, and WoTE), it demonstrates superior performance in both open-loop (nuScenes) and closed-loop (Bench2Drive and NAVSIM) evaluations across perception, prediction, and planning tasks.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2606.16342v1' target='_blank'>When the Past Matters: FlashBack Memory for Precipitation Nowcasting</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yuhao Du, Boxiao Huang, Chengrong Wu, Jiankai Zhang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-06-15 07:45:54</h6>
+<p class='card-text'>Accurate precipitation nowcasting is crucial for disaster mitigation and socio-economic planning, yet existing methods often struggle with false alarms, missed events, and long range dependency modeling at high spatiotemporal resolution. To address these challenges, we propose FlashBack Memory (FB), a module that dynamically retrieves key historical states and integrates them via an adaptive fusion gate, enhancing the spatiotemporal representation capability of recurrent-based models. We incorporate FB into PredRNN, PredRNNpp, MIM, MotionRNN, and PredRNN-V2, and evaluate on CIKM2017, Shanghai2020, and SEVIR datasets. Experimental results demonstrate that FB significantly improves MSE, MAE, SSIM, and CSI metrics, particularly for high-intensity rainfall and long-sequence predictions, while reducing false alarms and missed events and enhancing temporal consistency and spatial localization. The proposed method provides a general and efficient memory enhancement mechanism, improving the overall performance of recurrent-based precipitation nowcasting models.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2606.16341v1' target='_blank'>Filtered ANN as a Phase Transition: When Selectivity-Estimation Error Causes Plan Regret</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Madhulatha Mandarapu, Sandeep Kunkunuru</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-06-15 07:44:58</h6>
+<p class='card-text'>A filtered approximate-nearest-neighbor (ANN) query returns the k nearest vectors among those satisfying an attribute predicate P of selectivity s. The best execution strategy -- pre-filter, post-filter, or in-filter -- changes with s, so a system must estimate s and choose. We model this as an argmax over a landscape with phases (regions where each strategy wins) separated by boundaries, and show that selectivity-estimation error produces plan regret -- recall lost versus the oracle strategy -- only in the critical regions around those boundaries. The regret is a wedge of log-width equal to the multiplicative estimation error epsilon and height equal to the local cliff |V'(s*)| epsilon; the flip-margin 1/|V'(s*)| is the condition number of a sibling cardinality-estimation study reappearing as the local boundary theory. The two phase boundaries follow from independent mathematics: order statistics place the post-filter cliff at s ~ k/K, and site percolation places the in-filter cliff at s_c ~ 0.83/M for graph degree M (corpus-size independent). Criticality exists only under a constrained budget B < sqrt(k n). Under pre-registered decision rules we confirm, on synthetic sweeps and real SIFT1M, that regret concentrates ~290x at the boundary and that the regret curves obey a finite-size scaling collapse onto one universal wedge across two decades of corpus size. A real approximate index does not mis-locate the boundary, but a biased cost model opens a persistent miscalibration band that estimation-error robustness cannot fix. The contribution is a characterization, not a new index. Code and the full pre-registration are public.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2606.16329v1' target='_blank'>Exploiting Search in Symbolic Numeric Planning with Patterns</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Matteo Cardellini, Enrico Giunchiglia</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-06-15 07:32:46</h6>
+<p class='card-text'>In this paper, we present a procedure for numeric planning based on Symbolic Pattern Planning (SPP). Given a numeric planning problem $Π$, a pattern $\prec$ is a sequence of actions used to define a formula encoding the subsequences of $\prec$ executable from a starting state $S$. Cardellini, Giunchiglia, and Maratea (2024a) follow the Planning as Satisfiability approach by defining, at each step $n \ge 0$, a formula $Π^\prec_n$ in which $(i)$ the pattern $\prec$ is computed only for $n=0$ in the initial state $I$ of $Π$, and then exploited at each step $n$, $(ii)$ the starting state $S$ is set to $I$, and $(iii)$ the set $G$ of goals is required to hold in the last state that can be reached by one of the subsequences of $\prec$ concatenated $n$ times. The procedure begins with $n=0$, terminates as soon as $Π^\prec_n$ is satisfiable, and otherwise proceeds by incrementing $n$. In this paper, possibly at each step, $(i)$ we symbolically search for an intermediate state $P$ reachable from $I$, closer to a goal state, $(ii)$ dynamically recompute the pattern $\prec_h$ -- to be used in the next step -- in $P$, $(iii)$ refine the pattern $\prec_g$ used to reach $P$, and $(iv)$ start the new search from the state $S$ which can be either the initial state $I$ or the last computed intermediate state $P$, exploiting the computed patterns $\prec_g$ and $\prec_h$ to define the pattern $\prec$ to be used in the search. In particular, at each step, we define a formula $Π^{\prec}_{S,P}$ encoding the existence of a state $P'$ closer than $P$ to a goal state, with $P'$ reachable from the starting state $S$ when using the pattern $\prec$. We present different techniques for producing such formulas, each corresponding to a different strategy for exploring the search space. We prove their correctness and completeness, the latter under certain conditions.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2606.16313v1' target='_blank'>Is Your Trajectory Displacement Safe in Long-tail?</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Qiao Sun, Weicheng Zheng, Yixin Huang, Hang Zhao</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-06-15 07:19:38</h6>
+<p class='card-text'>Long-tail scenarios remain a major bottleneck for autonomous driving evaluation, even as datasets grow by orders of magnitude. Existing evaluation pipelines are rarely human-aligned, safety-aware, verifiable, and explainable at the same time: closed-loop metrics often saturate among strong planners, while unstructured human ratings can be noisy without a carefully designed protocol. We formulate planning evaluation as additional-threat detection: given a planner trajectory and an expert reference, does the planner's displacement introduce new unsafe driving behavior? We propose FluidTest, an evaluation pipeline with three components: a pairwise WebUI protocol for reliable human annotation; a taxonomy of 32 semantic threats with evidence-grounded decision graphs; and a three-agent verification system with reflection for precision and auditability. Experiments on the WOD-E2E dataset show that FluidTest produces consistent labels among trained annotators and identifies additional threats in 65% of Poutine trajectories and 51% of RAP trajectories. These results show that state-of-the-art planners can still exhibit substantial safety-relevant failures despite high Rater Feedback Scores (RFS) and low Average Displacement Error (ADE). Additional details, guidance, and code are available at https://fluidtest.web.app.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2606.16302v1' target='_blank'>Explainable Flood Segmentation on Sentinel-1 SAR Imagery: A Comparative Study of CNN and Transformer Architectures</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Arundhuti Banerjee, David Daou</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-06-15 07:06:30</h6>
+<p class='card-text'>Rapid and accurate flood prediction is essential for disaster response and mitigation planning. Synthetic Aperture Radar (SAR) sensors in satellites are well-suited for this purpose because they operate independently of weather and daylight conditions. Although SAR-based data enable all-weather flood monitoring, distinguishing flooded land from permanent water remains a significant challenge, particularly when flooding is defined strictly as inundated land. This study provides a comprehensive comparison of convolutional neural network (CNN) and vision transformer architectures for multi-class flood segmentation using Sentinel-1 SAR imagery, specifically trained to separate flooded land from permanent water bodies and land. Three state-of-the-art (SOTA)CNN-based models, U-Net, U-Net++, and DeepLabV3 with ResNet-34 backbone, and three SegFormer variants (b0,b1,b2) were evaluated in two benchmark datasets, the ETCI NASA dataset and SenFloods11, using scene-based data splits to ensure a realistic assessment of spatial generalization. The results demonstrate that SegFormer-b2 significantly outperforms the U-Net baseline on the ETCI dataset (higher flood IoU across all 7 test scenes in the Wilcoxon signed-rank test), while after fine-tuning on Sen1Floods11, the advantage narrows to within the range of scene variability and is concentrated in spatially fragmented flood events. The study includes both qualitative and quantitative explainability techniques to visually comprehend model decisions and systematically assess prediction reliability. Qualitative analysis reveals that SegFormer-b2 produces more spatially coherent Grad-CAM activations focused on flood-relevant features, while U-Net generates more informative uncertainty estimates along flood boundaries.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2606.16286v1' target='_blank'>FlowMPC: Improving Flow Matching policies with World Models</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Chandon Hamel</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-06-15 06:50:11</h6>
+<p class='card-text'>Flow Matching (FM) is a powerful approach for behavior cloning in multimodal action spaces [Jiang et al., 2025], but because it is not trained to directly maximize expected return, there is still room to improve how FM policies act at test time. This work investigates whether a learned world model can improve FM policies by enabling Model Predictive Path Integral (MPPI) planning over candidate action sequences proposed by the policy. Building on TD-MPC2 [Hansen et al., 2024], I introduce FlowMPC, a framework that combines an imitation-learned FM policy with a learned world model for test-time planning in ManiSkill manipulation tasks [Tao et al., 2025]. Across PickCube and PickSingleYCB, adding the world model improved performance over the FM policy alone, with especially clear gains in end-of-episode success. These results suggest that world-model-based planning can effectively complement flow-based imitation policies without modifying the FM training objective.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2606.16274v1' target='_blank'>GraphWorld: Long-Horizon Planning with World Models for End-to-End Autonomous Driving</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Ziying Song, Caiyan Jia, Lin Liu, Lei Yang, Shengkai Zhang, Feiyang Jia, Fengda Zhao, Peiliang Wu, Shaoqing Xu, Chen Lv, Yadan Luo</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-06-15 06:26:46</h6>
+<p class='card-text'>End-to-end autonomous driving has made significant progress by unifying perception, prediction, and planning within a single learning framework, achieving strong performance in short-horizon decision making. However, most existing E2E-AD methods remain confined to short-horizon planning and lack the ability to model long-term temporal dependencies, which severely limits their generalization and security in complex and highly interactive driving scenarios. In this work, we propose GraphWorld, an E2E-AD framework that explicitly enhances long-horizon planning through latent world modeling. We introduce an Ego-Centric Interaction Graph, which adaptively models critical neighboring agents based on spatial proximity, and propagates relational context to planning queries via cross-node cross-attention. We present a World-State-Conditioned Planning that learns ego-centric latent world representations by modeling interactions between an ego vehicle and surrounding agents. This latent world state captures key interaction dynamics and safety-relevant semantics, and serves as a conditioning signal to guide long-horizon, safety-aware trajectory planning. Extensive experiments on Bench2Drive, NAVSIMv1/2, and nuScenes demonstrate that GraphWorld significantly reduces collision rates and improves long-horizon planning performance, validating its effectiveness in complex driving environments.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2606.16232v1' target='_blank'>PolyMerge: Compressing 3D Gaussian Splats with Polytope Coverings for Provably Safe Resource-Constrained Navigation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jihoon Hong, Chih-Yuan Chiu, Sara Fridovich-Keil, Glen Chou</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-06-15 05:30:14</h6>
+<p class='card-text'>Obstacle avoidance is essential for safe navigation and motion planning. Recent radiance field reconstruction methods enable object detection and modeling with high fidelity, but remain too memory- and compute-intensive for on-board perception-based path planning. To address these limitations, we propose PolyMerge to convert a large, photorealistic 3D Gaussian Splatting (3DGS) model of a scene into a lightweight representation of convex polytopes whose union provably over-approximates all obstacles in the original 3DGS model. PolyMerge tunes the polytope count to trade off conservativeness and compute cost, and integrates with control barrier functions (CBFs) to plan collision-free paths. We showcase PolyMerge in simulation and hardware experiments on a Crazyflie drone, which uses PolyMerge to compute and follow safe trajectories in real time under severe onboard compute constraints, outperforming baselines in speed while guaranteeing safety. For our code and videos, visit https://athlon76.github.io/PolyMerge-website/.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js'></script>
+</body>
+</html>
