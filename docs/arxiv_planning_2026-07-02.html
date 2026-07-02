@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>planning - 2026-07-02</title>
+<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap' rel='stylesheet'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css'>
+<style>
+body {
+font-family: 'Roboto', sans-serif;
+background-color: #f5f7fa;
+padding: 20px;
+}
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.card-title {
+    font-weight: 700;
+}
+.card:hover {
+    transform: scale(1.02);
+    transition: 0.3s ease-in-out;
+}
+</style>
+</head>
+<body>
+<div class='container'>
+<h1 class='text-center my-4'><i class='fas fa-book'></i>planning - 2026-07-02</h1>
+<div class='row'>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.01203v1' target='_blank'>GPU-Parallel Linearization Error Bounds for Real-Time Robust Optimal Control of Nonlinear and Neural Network Dynamics</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jeffrey Fang, Keyi Shen, Anutam Srinivasan, Glen Chou</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-01 17:42:37</h6>
+<p class='card-text'>This paper studies real-time robust optimal control for uncertain nonlinear systems, where linear time-varying (LTV) approximations make planning tractable but require sound linearization error bounds (LEBs) to guarantee robust constraint satisfaction. We develop tight, differentiable, GPU-parallel LEBs for LTV approximations of nonlinear and neural network (NN) dynamics. For analytic dynamics, we introduce path-based Hessian bounds that are tighter than standard interval methods. For NN dynamics, we derive certified LEBs using NN verifier-generated affine relaxations and local Jacobian corrections. We adapt a GPU-parallel system-level synthesis LTV-based robust control solver to be compatible with these LEBs by extending it to handle right-invertible disturbance matrices and non-zero-centered disturbance sets for tight zonotopic uncertainty propagation. Our method, GPUSLS-LEO, enables online optimization of robust feedback policies that account for linearization error, producing tight, formally verified reachable tubes. On complex nonlinear and NN dynamics up to 168 state dimensions, our method can compute robust control policies on the GPU at rates up to 67 Hz, reducing solve times and conservativeness relative to baselines while preserving formal guarantees and real-time performance.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.01188v1' target='_blank'>Optimal Resource Utilization for Autonomous Laboratory Orchestrators</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Austin McDannald, Julia Tisaranni, Howie Joress</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-01 17:20:45</h6>
+<p class='card-text'>In autonomous laboratories, AI agents suggest the next batch of experiments to do. However, planning and executing those tasks taking full advantage of the available resources is a completely different question. This can be challenging when dealing with real-world hardware constraints, especially so when there are multiple instruments with different capacities and throughputs. Here we demonstrate a 2-step method to address resource utilization for our autonomous platform for metal-organic framework synthesis. First, we use constraint programming to find optimal schedules. This finds schedules that minimizes the total time while still satisfying the limitations and capacities of the hardware. Secondly, we use a system of status dependencies for each task, which allows for the robust execution of the optimal schedules.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.01166v1' target='_blank'>Structured 4D Latent Predictive Model for Robot Planning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Zhiyi Li, Peilin Wu, Xiaoshen Han, Ruojin Cai, Yilun Du</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-01 16:52:49</h6>
+<p class='card-text'>Video predictive models are emerging as a powerful paradigm in robotics, offering a promising path toward task generalization, long-horizon planning, and flexible decision-making. However, prevailing approaches often operate on 2D video sequences, inherently lacking the 3D geometric understanding necessary for precise spatial reasoning and physical consistency. We introduce a Structured 4D Latent Predictive Model, which predicts the evolution of a scene's 3D structure in a structured latent space conditioned on observations and textual instructions. Our representation encodes the scene holistically and can be decoded into diverse 3D formats, enabling a more complete and 3D consistent scene understanding. This structured 4D latent predictive model serves as a planner, generating future scenes that are translated into executable actions by a goal-conditioned inverse dynamics module. Experiments demonstrate that our model generates futures with strong visual quality, substantially better 3D consistency and multi-view coherence compared to state-of-the-art video-based planners. Consequently, our full planning pipeline achieves superior performance on complex manipulation tasks, exhibits robust generalization to novel visual conditions, and proves effective on real-world robotic platforms. Our website is available at https://structured-4d-model.github.io/.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.01133v1' target='_blank'>Towards Metric-Agnostic Trajectory Forecasting</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Markus Knoche, Daan de Geus, Bastian Leibe</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-01 16:20:43</h6>
+<p class='card-text'>Accurate trajectory forecasting of surrounding traffic participants is a core capability for autonomous driving, enabling vehicles to anticipate behavior and plan safe maneuvers. We observe that current state-of-the-art forecasting models on Argoverse 2 and the Waymo Open Motion Dataset tailor their training objectives to the different benchmark metrics. Because these metrics encourage conflicting behavior, we propose a paradigm change for trajectory forecasting: training models with metric-agnostic probabilistic objectives and treating metric optimization as a downstream task applied to the predictive distribution. Concretely, we introduce Trajectory Distribution Evaluation (TraDiE) policies, metric-specific policies that map a predictive distribution to the set of $K$ trajectories and confidences required by trajectory forecasting metrics. We evaluate this framework by introducing DONUT-NLL, which adapts the training objective of the state-of-the-art trajectory forecasting model DONUT to directly optimize the predictive distribution. Using our policies, DONUT-NLL achieves state-of-the-art results on all metrics of the Waymo motion prediction benchmark.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.01132v1' target='_blank'>WST, the Wide-field Spectroscopic Telescope: Mechanical Design and FE Analyses for the High Resolution Spectrograph</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Simone D'Auria, Andrea Tozzi, Anna Brucalassi, Matteo Munari, Ciro Del Vecchio, Maria Sofia Randich, Roland Bacon, David Lee</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-01 16:19:33</h6>
+<p class='card-text'>The Wide-field Spectroscopic Telescope (WST) is a planned 12-meter-class dedicated spectroscopic facility designed to address key scientific challenges through large spectroscopic surveys. This paper presents the current status of Work Package 4.5, which focuses on the High-Resolution Multi-Object Spectrograph (MOS-HR) module for WST. The MOSHR instrument is expected to provide a resolving power of R = 40,000 with a multiplexing capability of about 2,000 targets. The mechanical design activities carried out for the development of the HR spectrograph and for the definition of its optomechanical architecture are described. To account for both the scientific requirements of the spectrograph and the manufacturability constraints associated with such a complex instrument, the mechanical layout has been organized into four larger modules, each containing two sub-modules. Guided by feasibility considerations, such as mechanical performance, available volume, and fabrication and assembly aspects, each sub-module adopts a vertical optical bench configuration with optical elements mounted on both sides. Starting from the baseline optical design, the mechanical configuration has been developed to achieve the required alignment accuracy, structural stability, and environmental robustness. The workflow includes the translation of the optical prescription into a complete mechanical model, the definition of the main mounting and alignment interfaces, and preliminary static, modal, and seismic analyses to evaluate performance under operational and survival loads. As an outcome, the proposed design provides architecture that enables preliminary estimates of mass, volume, cost, and mechanical performance in terms of deformation, stress, and modal behavior of the modules.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.01105v1' target='_blank'>SynLaD: Latent Diffusion for Generating Synthesizable Molecules Conditioned on 3D Pharmacophore Profiles</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Miruna Cretu, John Bradshaw, Patricia Suriana, Saeed Saremi, Omar Mahmood, Kirill Shmilovich, Kangway Chuang, Vishnu Sresht, Colin Grambow</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-01 15:57:19</h6>
+<p class='card-text'>We present SynLaD, a latent diffusion framework for small-molecule generation that unifies ligand-based drug design objectives (what to make) with synthetic accessibility (how to make it). Current models typically optimize one objective at the expense of the other, creating a bottleneck for discovering high-scoring and synthesizable molecules. SynLaD combines reaction-constrained generation with pharmacophore-conditioned 3D design by learning a latent space that decodes to both 3D structures and synthesis pathways. An encoder maps molecules to a latent representation used by two decoder heads: (i) a geometric head that reconstructs atom types and coordinates and (ii) an autoregressive synthesis head that outputs synthetic routes in a serialized, reaction-based notation. A diffusion transformer generates novel latents in the learned space, conditioned on pharmacophore profiles. Across analogue generation tasks for bioactive ligands, SynLaD outperforms existing baselines in synthesizable and diverse hit generation, demonstrating that a single model can produce shape-aligned molecules with feasible synthesis plans.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.01029v1' target='_blank'>AMBUSH: Collaborative Capture in Complex Environments with Neural Acceleration</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Junfeng Chen, YinHang Luo, Xinyi Wang, Junrui Li, Meng Guo</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-01 14:59:28</h6>
+<p class='card-text'>Collaborative capture of dynamic targets is common in nature as an essential strategy for weaker species against the strong. Similar concepts have shown to be useful for numerous robotic applications, such as security and surveillance, search and rescue. However, most existing works focus on analytical and geometric solutions or end-to-end reinforcement learning methods, which are largely constrained to obstacle-free environments or scenarios with sparse, regularly distributed obstacles. This work tackles the problem from a unique perspective: the renowned strategy of``ambush'' alone would suffice for multiple slower pursuers to capture one faster evader with different levels of intelligence efficiently in complex environments. A parameterized strategy of ambush (including discrete and continuous parameters) is designed first, which takes into account the topological properties of the workspace, the truncated line-of-sight visibility, the relative speed ratio and the limited capture range. Then, a Hybrid Monte Carlo Tree Search (H-MCTS) algorithm is proposed to optimize the associated parameters through long-term planning, enabling the identification of highly promising parameters for future capture. Lastly, the neural acceleration is trained offline to learn the ranking of different choices of parameters across various environments, and to directly predict scores, replacing the rollout process in H-MCTS. The neural acceleration is adopted during online H-MCTS to accelerate the planning procedure while guaranteeing the planning quality. Its efficiency and effectiveness are validated in extensive simulations and hardware experiments, against evaders with different capabilities and intelligence levels, including two-times higher velocity and human-controlled behavior.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.00920v1' target='_blank'>GMO-E$^2$DIT: Grounded Multi-Operation Editing for E-Commerce Images</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Zipeng Guo, Xiaoan Liu, Lichen Ma, Cheng Wang, Yu He, Xiaolong Fu, Jingling Fu, Xinyuan Shan, Shaojie Guo, Luohang Liu, Junshi Huang, Yan Li</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-01 13:23:45</h6>
+<p class='card-text'>Real-world e-commerce image editing often requires multiple, localized, and auditable operations rather than global restyling. This compositional nature poses a dual challenge: models must precisely apply all requested edits to the correct regions while preserving unmodified content, even under ambiguous instructions. Existing one-shot editors conflate intent resolution, spatial grounding, and synthesis into a single step, frequently resulting in partial execution failures, which is unacceptable for commercial scenarios. To address this, we introduce GMO-E$^2$DIT, an agentic editing framework that couples a Vision-Language Model (VLM) with a mask-conditioned image editor to tackle structured multi-turn task completion. Given an underspecified instruction, the VLM agent constructs a region-grounded edit agenda, effectively decoupling cognitive reasoning from generative rendering. The framework then executes sub-programs via operation-aware masks and references, utilizing a reflection-driven loop to inspect intermediate results and determine the subsequent state. This iterative mechanism reliably preserves safe partial progress, retries unfinished operations, and recovers from errors. Furthermore, we develop a unified data pipeline providing aligned supervision for planning, execution, and reflection, alongside EComEditBench, a comprehensive benchmark for instruction-driven evaluation. Extensive experiments demonstrate that GMO-E$^2$DIT achieves competitive performance compared to strong closed-source models, yielding superior instruction accuracy and edit fidelity over existing baselines.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.00917v1' target='_blank'>Valdi: Value Diffusion World Models</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Christopher Lindenberg, Kashyap Chitta</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-01 13:22:18</h6>
+<p class='card-text'>World models can enable Model Predictive Control (MPC), but this requires dynamics prediction that is both fast enough for online use and expressive enough to represent uncertain futures. Diffusion models offer a natural mechanism for modeling uncertain dynamics, yet their iterative inference procedure makes them difficult to use for low-latency latent planning. We bridge this gap with Value Diffusion World Models (Valdi), combining end-to-end online training for MPC with a latent diffusion dynamics model. In preliminary experiments on the CarRacing environment, we show that Valdi, using a single diffusion step at both training and inference, matches a deterministic MLP baseline. Our experiments expose a trade-off between predictive multimodality and control performance in this setup. Code is available at https://github.com/Kit115/ValueDiffusionWorldModels.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.00868v1' target='_blank'>From Single to Multiple Attributes: Experimental Insights on Sampling-Based Distinct Combination Estimation in GROUP-BY Queries</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yujie Zhang, Xiaochun Yang, Bin Wang, Yuan Sui</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-01 12:33:00</h6>
+<p class='card-text'>Estimating the number of distinct combinations in multi-attribute GROUP-BY queries remains a significant yet underexplored challenge. Current cardinality estimation techniques primarily focus on SPJ queries (i.e., selections, projections, and joins) and neglect GROUP-BY operations; meanwhile, distinct value estimation research has mainly targeted the single-attribute setting. Although sampling-based methods, including recent approaches with learned models, can theoretically support multi-attribute estimation, their practical effectiveness remains unclear. A comprehensive empirical evaluation is thus lacking to address whether joint distribution information from samples alone is sufficient for accurate multi-attribute estimation, whether existing methods fully exploit single-attribute information and can be further optimized, and whether filtered GROUP-BY queries can be accurately estimated. To this end, we propose a specialized workload generator for multi-attribute GROUP-BY queries and generate both filtered and non-filtered queries over four real-world datasets. By evaluating existing methods across synthetic workloads and the multi-table TPC-H benchmark, we analyze the sources of GROUP-BY cardinality estimation errors and their impact on PostgreSQL's plan selection, offering key recommendations for future estimator design.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.00830v1' target='_blank'>Petrify: Petri-net Based Analysis of Concurrency Properties in Java Bytecode</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Akshatha Shenoy, Carlo A. Furia</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-01 11:52:40</h6>
+<p class='card-text'>The landscape of automated formal verification is populated by techniques that make prominently different trade-offs: some focus on expressiveness and precision, supporting the verification of complex properties; others favor scalability and practicality, so that they are applicable to larger programs using different features. This paper presents Petrify, a novel automated verification technique for concurrency properties that achieves a distinctive trade-off. Petrify encodes the semantics of Java bytecode programs into Petri nets (PNs), which can be analyzed by state-of-the-art model checking tools such as LoLA. As our experiments demonstrate, Petrify's approach offers an interesting combination of expressiveness and practicality: PNs are a fairly precise encoding of the concurrent behavior of programs; at the same time, Petrify's PN encoding is succinct, so that its analysis remains quite insensitive to parameter size. Another practical benefit of targeting bytecode is that jPetrify, the prototype tool that implements the Petrify technique, is applicable to programs written in any version of Java and even a subset of Kotlin (another language that compiles to Java bytecode) while other similar tools are limited to older versions of Java. While this paper's experiments focus on analyzing fundamental properties like deadlock, Petrify's approach lends itself to be extended to other kinds of concurrency analysis, which we plan to tackle in future work.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.00776v1' target='_blank'>From Prediction Uncertainty to Conformalized Distance Fields for Safe Motion Planning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jaeuk Shin, Yoonseok Ra, Insoon Yang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-01 11:02:51</h6>
+<p class='card-text'>Safe motion planning in dynamic environments requires reasoning about the uncertainty in predicted obstacle motion without sacrificing real-time performance. Existing conformal approaches conformalize a scalar score that aggregates per-obstacle prediction errors, losing spatial coherence and scaling poorly with scene density. We instead conformalize the entire predicted distance field at once. This functional conformal prediction (FCP) framework yields a distribution-free, field-level lower bound, from which safety follows uniformly: any trajectory satisfying the resulting constraint is certified safe, independent of how the control space is sampled. The key enabler is that the residual distance field is empirically low-rank and approximately time-invariant, which makes the bound decomposable in coefficient space. An envelope is fitted offline via functional PCA and a Gaussian-mixture inductive conformal procedure, then refined online by a lightweight adaptive functional conformal (AFCP) update on a low-dimensional vector. This keeps the per-step cost largely insensitive to obstacle count and retains long-run field coverage under distribution shift. We embed the envelope as a tightened safety constraint in a sampling-based model predictive controller, FCP-MPC. On the ETH--UCY pedestrian benchmarks and a dense 3D quadrotor task with up to 280 dynamic obstacles, FCP-MPC attains a favorable balance of safety, feasibility, and efficiency, reaching goals where pointwise and egocentric conformal baselines become too conservative or too expensive, while keeping per-step computation far below online uncertainty-reasoning baselines.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.00741v1' target='_blank'>Development for the Belle II vertex detector upgrade with depleted monolithic active pixel sensors</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Y. Onuki, M. Babeluk, T. Bergauer, M. Friedl, C. Irmler, B. Pilsl, R. Russo, C. Schwanda, L. Gaioni, V. Re, E. Riceputi, G. Traversi, S. Giroletti, L. Ratti, G. F. Benfratello, S. Bettarini, F. Bosi, G. Casarosa, L. Corona, F. Forti, A. Gabrielli, M. Massa, L. Massaccesi, M. Minuti, A. Moggi, S. Mondal, G. Rizzo, M. Rovini, A. Taffara, M. Barbero, P. Barrillon, R. Boudagga, P. Breugnon, D. Fougeron, P. Pangaud, J. Serrano, V. Vobbilisetti, D. Xu, D. Auguste, J. Bonis, Y. Peinaud, M. Winter, J. Baudot, G. Bertolone, A. Dorokhov, G. Dujany, L. Federici, C. Finck, A. Himmi, C. Hu-Guo, A. Kumar, M. Maushart, F. Morel, H. Pham, I. Ripp-Baudot, R. Sefri, P. Stavroulakis, I. Valin, F. Bernlochner, C. Bespin, J. Dingfelder, T. Kishishita, H. Krüger, L. Schall, M. Vogt, M. Karagounis, Y. Buch, A. Frey, B. Schwenker, M. Schwickardi, K. Hara, D. Jeans, K. R. Nakamura, Y. Okazaki, T. Higuchi, S. Wang, C. Lacasta, C. Marinas, J. Mazorra de Cos, L. Molina-Bueno, A. Bevan, M. Bona, D. Howgill, W. Song, J. Gong, X. Gao, A. Fernandez Prieto, A. Gallas Torreira</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-01 10:23:48</h6>
+<p class='card-text'>The vertex detector upgrade project for the Belle II experiment, based on CMOS depleted monolithic active pixel sensor technology, is planned to be carried out in conjunction with the major modification of the interaction region of the SuperKEKB collider during Long Shutdown 2 from 2032 to 2034. The MAPS sensor, named OBELIX currently under development, is derived from the successor to TJ-Monopix2, with modifications implemented to ensure compatibility with the Belle II trigger system. The new vertex detector consists of two layers of four self-supported consecutive OBELIX sensors, and three layers of discrete OBELIX sensors mounted on mechanical support structures with readout flex circuits attached to the sensors. The detector is arranged cylindrically around the beam pipe at radii ranging from 14 mm to 140 mm. The minimization of the material budget is required in order to enhance physics performance. We present an overview of the project and its latest developments, with particular emphasis on the development of low-material-budget flex circuits employing aluminum conductors.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.00693v1' target='_blank'>The Rise and Fall of Google's Privacy Sandbox</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Rachid Youssef Grib, Alberto Verna, Nikhil Jha, Martino Trevisan, Marco Mellia</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-01 09:43:46</h6>
+<p class='card-text'>On October 17th, 2025, Google announced the retirement of most Privacy Sandbox APIs, concluding nearly five years of experimentation with its alternative to privacy-invasive data collection on the Web. Designed to balance privacy with advertising functionality and cross-site tracking, the initiative faced repeated redesigns and limited ecosystem support.
+  In this work, we present the first longitudinal, consent-aware measurement of the Privacy Sandbox's deployment across the Web. Using a custom call listener and weekly crawls of the top-10,000 websites, we monitor the usage of all major APIs in the months preceding their retirement. Adoption had already stagnated well before Google's announcement: most APIs were used by only a handful of actors, whose activity declined steadily throughout our study. Even the APIs that Google plans to maintain show no sign of growth. The sole exception is Cookies Having Independent Partitioned State (CHIPS). Overall, the demise of the Privacy Sandbox leaves unresolved the challenge of enabling privacy-preserving interest-based advertising.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.00673v1' target='_blank'>Path Planning in Physically Viable World Models</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Su Ann Low, Cheng-Hsi Hsiao, Xingjian Li, Adam J. Thorpe, Ufuk Topcu, Krishna Kumar</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-01 09:19:29</h6>
+<p class='card-text'>Robots deployed in unstructured outdoor environments often plan from scene reconstructions collected before deployment because operators cannot remap large or remote sites before every mission. As a result, robots must make long-horizon planning decisions using stale maps that assume the terrain remains unchanged, even though physical changes to the environment may render previously feasible routes unsafe or unreachable at execution time. We present a physically viable world model for evaluating what-if queries for robot navigation under future terrain change. The system augments reconstructed 3D Gaussian splat scenes with physics-based simulation to generate physically modified versions of the same environment without recollecting sensor data or rebuilding the map. We then implement a terrain-aware planner that accounts for physical events, obstacles, and deformations that are simulated by the world model. This allows robots and human operators to evaluate whether planned routes remain feasible before committing to a planned route, particularly in constrained environments where retreat or recovery may become impossible once conditions change. We evaluate the system on a real outdoor field site in Central Texas using simulated flooding across multiple severity levels. We measure route and mission feasibility as terrain conditions deteriorate under physically simulated interventions. Our results show that physically viable world models expose long-horizon route failures and rerouting behavior that are not apparent when planning only on the original reconstructed environment, allowing robots to evaluate how future terrain changes may affect route feasibility before deployment.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.00665v1' target='_blank'>Effective dynamics of the Sinkhorn algorithm in the regime of low entropy regularization</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Guillaume Wang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-01 09:13:24</h6>
+<p class='card-text'>The Sinkhorn algorithm is the de facto standard method for numerically solving entropy-regularized optimal transport problems over finite sets. In this work, we investigate a phenomenon arising when Sinkhorn is applied with a small regularization parameter $τ$: the evolution of the dual variables (the logarithm of the scaling factors) is approximately piecewise-linear, while the primal variables (the approximate transport plans) exhibit a saddle-to-saddle type behavior. We prove that as $τ\to 0$, the Sinkhorn iterates indeed converge to a continuous-time curve consistent with these observations, when time is rescaled as $t = τk$, and we characterize the limiting "cold Sinkhorn" dynamics explicitly. In particular, we show that it acts as a dual optimization dynamics for the unregularized problem with properties analogous to the simplex algorithm. Notably, this dynamics converges in finite time to an unregularized solution, implying a novel guarantee for the Sinkhorn algorithm itself: it achieves $\tilde{O}(τ)$ dual suboptimality in $k = O(τ^{-1})$ iterations, instead of $k = O(τ^{-2})$ as existing analyses would suggest.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.00591v1' target='_blank'>From Real-Time Planning to Reliable Execution:Scalable Coordination for Heterogeneous Multi-Robot Fleets in Industrial Environments</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Bo Cao, Zhe Liu, Hesheng Wang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-01 08:16:19</h6>
+<p class='card-text'>With the increasing deployment of heterogeneous robot fleets in industrial environments, efficient coordination remains a critical challenge. Real-time path planning must simultaneously accommodate high robot densities and heterogeneous motion capabilities, while communication delays, execution uncertainties, and other disturbances may cause robots to deviate from the temporal assumptions underlying planned paths. Such deviations can lead to excessive waiting and congestion propagation across the fleet. This paper presents SCALE, a reactive online coordination framework that enables real-time planning while maintaining robust execution. Within this framework, we introduce a motion-induced conflict reduction mechanism to support the online generation of feasible paths for online conflict resolution. To mitigate the effects of disturbances, we further design a generalized Conjugate Action-Precedence Hypergraph (CAPH) that adaptively adjusts precedence relations among robots. Extensive validation experiments, together with a three-day deployment in a warehouse, demonstrate the</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.00582v1' target='_blank'>How Environment and Urbanization Shape Bird Diversity in Sri Lanka</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Dilusha Chandrasiri, Maneesha Herath, Yasith Hewarathna, Muditha Herath, Gishan Bandara, Madara Mendis, Nathali Athukorala, Nisansa de Silva, Sandareka Wickramanayake</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-01 08:06:47</h6>
+<p class='card-text'>This study presents a comprehensive analysis of bird diversity across Sri Lanka by integrating spatial, temporal, and environmental data. Bird observation records were combined with environmental variables, including weather conditions, air pollution, the Normalized Difference Vegetation Index (NDVI), land cover, elevation, and Artificial Light At Night (ALAN), and rigorously preprocessed to ensure data quality. Spatial analyses were conducted on multiple grid scales (2 km, 5 km, 10 km) to evaluate patterns in species richness while minimizing sampling bias through spatial thinning. Temporal trends were assessed using effort-corrected metrics including rarefied richness and occupancy rates to account for variations in observation effort over time. Environmental drivers of bird diversity were examined using multivariate statistical models, including Poisson Generalized Linear Models (GLMs) and correlation analyses, to identify key associations between ecological factors and species richness. Additionally, community structure, dominance patterns, and beta diversity were analyzed to understand variations in species composition across regions and time. The study found that land-cover type is a stronger predictor of bird diversity than individual continuous variables such as NDVI or temperature alone. Urbanization, measured by ALAN, exhibits nuanced scale-dependent effects, supporting high abundances of a few generalist species while reducing overall richness. The findings provide actionable insights into the patterns and drivers of avian diversity in Sri Lanka, offering a scalable and reproducible framework for biodiversity research and conservation planning.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.00537v1' target='_blank'>B2X Networks: Joint Design of Communication and Control for Embodied Intelligence</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yuanwei Liu, Xu Gan, Zhaolin Wang, Chongjun Ouyang, Hao Jiang, Zongyao Zhao, Kaibin Huang, Robert Schober</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-01 07:28:22</h6>
+<p class='card-text'>This article proposes the concept of \emph{brain-body-to-everything (B2X)} networks to facilitate the integration of wireless networks and embodied intelligence. In this framework, the \emph{brain} refers to the intelligence functions for reasoning, planning, and decision-making, the \emph{body} denotes the physical embodied agent that senses and acts in the real world, and \emph{X} represents the surrounding ecosystem involved in the brain-body interaction loop. Two B2X architectures with \emph{distributed} and \emph{centralized} brains are introduced to characterize different placements of intelligence across the body, base station, and core network. The uplink and downlink designs of B2X networks are then discussed under a representative base-station-side brain setting. For the uplink, communication is redesigned for B2X state acquisition under event urgency, sensing volume, and simultaneous multi-body access. For the downlink, communication is redesigned to coordinate command delivery and conventional service under shared radio resources. Based on these uplink and downlink considerations, a communication-control Pareto boundary is further used to characterize the loop-level trade-off between wireless transmission performance and control quality in B2X networks. Finally, several open research problems are discussed to guide future B2X network design.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.00516v1' target='_blank'>Auditing Empirical Comparisons in Quantum Software</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Boshuai Ye, Peng Liang, Maryam Tavassoli Sabzevari, Arif Ali Khan</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-01 07:02:46</h6>
+<p class='card-text'>Empirical quantum-software papers often report that one compiler, optimizer, backend, or ansatz outperforms another. Such comparisons are not properties of a tool alone: they can change with benchmark scope, circuit construction, compilation, sampling, backend or noise assumptions, optimizer choices, and resource budgets. Existing testing, benchmarking, and reproducibility methods help assess programs, tools, executions, and platforms, but they do not directly audit whether the reported comparison itself is supported by the evidence exposed in the source paper or accompanying materials.
+  We present CLAIMSTAB-QC, a source-bounded framework for auditing empirical comparisons in quantum software. Given a reported comparison, the framework records the baselines, metric, relation, and admissible evidence; locks the comparison design before outcomes are computed; and reports either a scoped relation outcome or an explicit evidence boundary. For strict scalar-directional comparisons, the reported direction is classified as Sustained, Unresolved, or Reversed within the locked audit scope.
+  We evaluate CLAIMSTAB-QC on 455 comparative claims from 119 quantum-software papers. The central finding is a materialization gap: 175 claims can be represented for audit planning, 79 become scalar-directional planning records, 53 yield lockable audit or diagnostic designs, and only 8 expose enough matched evidence to audit the original comparison without proxy reconstruction. These 8 records yield 2 Sustained, 4 Unresolved, and 2 Reversed outcomes. Controlled diagnostics over 24 benchmark-relevant comparisons further show that simpler checks can preserve apparent directions whose support weakens under locked audit designs.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.00504v1' target='_blank'>How optimistic inflow forecasts distort dispatch, prices, and contracts in hydro-dominated power systems: evidence from Brazil</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Arthur Brigatto, Alexandre Street, Joaquim Dias Garcia</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-01 06:39:18</h6>
+<p class='card-text'>Centralized hydrothermal planning models determine generation schedules and electricity spot prices based on inflow forecasts in audited-cost power systems, such as those prevalent in Latin America, and provide operational benchmarks and decision support in hydro-dominated competitive electricity markets. Consequently, biased forecasts can propagate directly into both operational decisions and market outcomes. This paper studies how persistent optimistic inflow-forecast bias propagates through the Brazilian hydrothermal power system and market. For a stylized hydrothermal model, we show analytically that optimistic bias weakly reduces water values and weakly increases first-stage hydro discharge relative to the unbiased optimum, thereby lowering reservoir storage and postponing thermal commitment. Using official Brazilian planning and operational data, we provide empirical evidence consistent with this mechanism. We then conduct a controlled SDDP experiment to compare policies trained under biased and bias-corrected inflow-forecast processes, evaluating both under the same bias-corrected inflow scenarios. The policy trained under biased forecasts produces lower reservoir levels, delayed dry-season thermal dispatch, sharper spot-price peaks, higher reliability risk, and higher expected operating costs. Finally, we show that these distortions increase the price-quantity risk for hydropower producers and reduce their willingness to contract. The results indicate that inflow-forecast bias is not merely a statistical forecasting problem, but can be a source of operational inefficiency, reliability risk, and distorted market incentives in hydro-dominated power systems. We argue that the insights and policy implications drawn in this paper may be relevant beyond Brazil to other hydro-dominated systems and electricity markets that are increasingly reliant on energy storage.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.00444v1' target='_blank'>Search-Based Spatiotemporal and Multi-Robot Motion Planning on Graphs of Space-Time Convex Sets</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jingtao Tang, Zining Mao, Lufan Yang, Hang Ma</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-01 04:58:00</h6>
+<p class='card-text'>Spatiotemporal motion planning, especially in multi-robot settings, requires robots to reason about collision-free regions that change over time, which is challenging in continuous spaces when feasible regions are transient and geometrically constrained. We present an algorithmic framework based on graphs of space-time convex sets (ST-GCSs), where collision-free regions are represented as convex sets in space-time and trajectories correspond to paths on the graph together with continuous motions within the selected sets. We formulate time-optimal planning on ST-GCSs as a graph-search problem over path-indexed states and develop a best-first search solver that evaluates partial paths via continuous trajectory optimization, guided by admissible heuristics and dominance checks. We further present an Exact Convex Decomposition (ECD) scheme to reserve trajectory occupancies in space-time, enabling unified handling of dynamic obstacles and multi-robot interactions. For multi-robot motion planning, we integrate ST-GCS planning and ECD into prioritized planning methods and introduce a windowed coordination scheme to improve efficiency. Extensive experiments on single-robot and multi-robot problems demonstrate substantial speedups over various planners while maintaining high solution quality, particularly in environments with narrow and transient feasible regions. Large-scale demonstrations further show that the proposed multi-robot motion planner can solve instances with up to $100$ robots within only a few minutes. Project homepage: https://sites.google.com/view/stgcs</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.00420v1' target='_blank'>A Simple Solution to Improving Human Supervision of Algorithms: Evidence from Smart Vending</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Minda Zhao, Brian Rongqing Han, Xin Chen, Tao Zhu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-01 04:29:42</h6>
+<p class='card-text'>Organizations increasingly deploy autonomous artificial intelligence (AI) systems for operational decisions, such as inventory replenishment. Yet fully granting override rights can degrade performance due to human bias and noise, while prohibiting them may overlook valuable private information. This raises a key question: How should override rights be structured to improve human supervision of autonomous AI? Methodology/results: We propose a constrained override policy that limits overrides per decision episode to enable selective filtering that prioritizes high-value overrides. We tested it through a randomized field experiment with 553 workers at a major Chinese smart vending machine retailer that manages more than 59,000 machines and 4,000 SKUs. Workers were assigned to no overrides, free overrides, or a two-per-machine limit on downward overrides. Free overrides reduce inventory by 1.95% but also cut sales by 1.19%. Constrained overrides reduce inventory by 1.28% without harming sales, as workers select better SKUs to override, confirmed via local average treatment effects. Gains are largest for experienced workers, high-incentive SKUs, and growth-stage SKUs. A simulated personalized policy further increases sales probability by 9.1%. Managerial implications: Academics gain novel insights from the causal effects of discretion design in human-supervised AI, emphasizing selective filtering to enhance decision quality. Managers can benefit from a scalable, low-cost policy for operations such as retail, logistics, and resource planning, reducing excess inventory without sales loss while harnessing private human information, with no need for algorithmic redesign, information customization, or additional training.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.00407v1' target='_blank'>Personalization as Inverse Planning: Learning Latent Design Intents for Agentic Slide Generation via Structural Denoising</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Tianci Liu, Zihan Dong, Linjun Zhang, Haoyu Wang, jing Gao, Emre Kiciman, Ranveer Chandra, Wei-Ting Chen</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-01 04:05:47</h6>
+<p class='card-text'>Slide design requires personalizing both deck themes and page layouts. Yet, current AI agent-based methods struggle with fine-grained, page-level design. Solely relying on prespecified templates or user verbose instructions, they fail to capture latent design intents, leaving Page-level Slide Personalization (PSP) unresolved. To close this gap, this work formulates PSP as an inverse planning problem. We propose to learn a design intent without assuming any knowledge of the specific executing tools (e.g., PowerPoint, Beamer) being used. However, relinquishing control over these tools makes the problem intractable to optimize end-to-end. To overcome this, we propose SPIRE, a principled framework to solve PSP approximately. By intentionally corrupting the visual structures of clean slides, SPIRE creates a verifiable task to denoise the corruption, whereby two agents learn to collaboratively refine executable designs via reinforcement learning (RL). We present a proof that structural denoising is a consistent surrogate for PSP, and that the multi-agent formulation strictly reduces policy gradient variance in RL. Extensive experiments demonstrate the superiority of SPIRE.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.00399v1' target='_blank'>DriveVer: Lightweight Trajectory Evaluator as Test-Time Verifier for Autonomous Driving</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Chong He, Yuechen Luo, Fang Li, Shaoqing Xu, Fuxi Wen</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-01 03:50:45</h6>
+<p class='card-text'>End-to-end autonomous driving models often encounter performance bottlenecks, as training-time scaling leads to high computational costs and diminishing marginal returns. Existing planners typically adopt a one-shot generation paradigm, lacking secondary validation and active correction mechanisms to detect and revise suboptimal or unsafe trajectories during inference. To address this issue, we propose DriveVer, a lightweight, plug-and-play Test-Time Verifier that leverages the test-time scaling paradigm to enable autonomous driving systems to validate and refine trajectories without costly and heavy training. We construct a dedicated trajectory dataset based on the NAVSIM benchmark through condition-driven clustering and balanced sampling according to ego-vehicle states and navigation commands. Employing a dual-head architecture, DriveVer efficiently fuses candidate trajectories with multi-view visual representations and ego-vehicle kinematic features to simultaneously predict a safety confidence score and an absolute geometric refinement vector. Extensive experiments on the NAVSIM benchmark show that DriveVer significantly improves the performance of base planning models. Notably, as an extremely compact model with only 34M parameters, DriveVer introduces minimal computational overhead, achieving competitive results while maintaining real-time inference efficiency.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.00344v1' target='_blank'>A minimax Bilinear Transport Problem and Nash-Monge-Kantorovich Maps</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Rene Cabrera, Edward Huynh</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-01 02:37:14</h6>
+<p class='card-text'>We study a min-max bilinear transport problem arising from a two-player zero-sum game with quadratic kinetic and interaction costs. Starting from a dynamic path space formulation, we establish existence of minimax and maximin plans and prove a minimax theorem. We show that the equilibrium induces a finite-dimensional stationary problem via an endpoint cost on transport plans, which is well defined below a critical interaction strength and yields a Nash equilibrium over couplings. In the quadratic interaction case, we derive an explicit endpoint cost and a dual formulation. The resulting Nash-Monge-Kantorovich (NMK) plans admit Monge solutions, recovering classical structures in optimal transport, with optimal maps given by gradients of convex or concave functions when they exist. Our analysis highlights duality and cyclical (anti-)monotonicity for nonstandard costs and links the equilibrium maps to coupled nonlinear PDEs, bridging optimal transport, zero-sum games, and Monge-Ampere-type equations.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.00342v1' target='_blank'>Semantic-based Internet of Embodied Intelligence: Visions and Frontiers</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yaheng Wang, Rui Meng, Xiaodong Xu, Yiming Liu, Feiliang Song, Linyuan Hu, Huishi Song, Lexi Xu, Tony Q. S. Quek, Ping Zhang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-01 02:32:48</h6>
+<p class='card-text'>Recent advances in generative artificial intelligence (AI) and embodied intelligence (EI) enable autonomous agents to interact with the physical world. However, scaling these systems into networks of multiple agents, namely the Internet of EI (IoEI), faces critical bottlenecks. These include the overhead of massive multimodal data transmission and the decoupling of logical reasoning from physical constraints. To address these challenges, we envision the Semantic-based IoEI (SIoEI), which leverages semantic information as a unified metric throughout the agent lifecycle. We systematically define four key dimensions of EI: perception, intelligence, control, and communication. We further elaborate how semantic empowerment revolutionizes environmental perception, cognition and task planning, action generation and robust control, and communication and networking. We also present a case study to verify that, the semantic-empowered end-to-end process significantly improves channel robustness and reduces end-to-end latency for EI. Finally, we outline critical open research directions for the SIoEI paradigm.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.00339v1' target='_blank'>TRACE: State-Aware Query Processing over Temporal Evidence Graphs for Conversational Data</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Maolin Wang, Yu Wang, Zichun Liu, Baiyuan Qiu, Chenbin Zhang, Jiguang Shen, Haoran Yang, Hao Miao</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-01 02:28:47</h6>
+<p class='card-text'>Conversational data is increasingly used as a persistent source of user state for long-running assistants and AI agents. However, querying this data remains challenging because conversations naturally evolve: plans are revised, preferences change, and later messages frequently supersede or contradict earlier information. Existing long-memory pipelines largely treat memories as independent text or vector objects. This approach often retrieves semantically similar but stale evidence, offering limited support for state-aware reasoning. To address this problem, we present TRACE, a query processing framework over temporal evidence graphs for evolving conversational data. TRACE models conversations as a hierarchical graph spanning events, sessions, and topics, enriched with typed temporal, causal, update, and contradiction relations. Crucially, the framework maintains validity annotations so obsolete facts remain accessible for historical queries but are discounted for current-state answers. At query time, TRACE combines vector-based note retrieval with graph-guided evidence search, generating validity-aware support paths and a hybrid context for answer generation. This design separates lexical recall from evidence reconstruction, enabling bounded query-time reasoning over long conversational histories. Experiments on long-conversation query-answering (QA) benchmarks show that TRACE improves temporal and multi-hop reasoning, with ablations highlighting the importance of hierarchy, update-aware seeding, and path-grounded evidence.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.00326v1' target='_blank'>NeHMO: Neural Hamilton-Jacobi Reachability Learning for Decentralized Safe Multi-Arm Motion Planning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Qingyi Chen, Zachary Kingston, Ahmed H. Qureshi</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-01 01:56:07</h6>
+<p class='card-text'>Safe multi-arm motion planning is a challenging problem in robotics due to its high dimensionality, coupled configuration space, and complex collision constraints. Centralized planners are capable of coordinating all arms but often face scalability limitations, restricting applicability in real-time settings. On the other hand, decentralized methods are scalable and recent deep learning-based approaches have shown promising results. However, these depend on accurate behavior prediction or coordination protocols and may fail when other arms act unpredictably. To address these challenges, we introduce a neural Hamilton-Jacobi Reachability (HJR) learning-based approach to approximate a safety value function that captures worst-case inter-arm safety constraints. We further develop a decentralized trajectory optimization framework that uses the learned HJR representation for real-time planning. The proposed method is scalable and data-efficient, generalizes across multi-manipulator systems, and outperforms state-of-the-art baselines on challenging multi-arm motion planning tasks.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.00283v1' target='_blank'>What's Hidden Matters: Identifying Planning-Critical Occluded Agents using Vision-Language Models</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Amirhosein Chahe, Tyler Naes, Jovin D'sa, Faizan M. Tariq, Sangjae Bae, Lifeng Zhou, David Isele</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-01 00:14:13</h6>
+<p class='card-text'>Autonomous vehicles must safely navigate complex environments where planning-critical agents may be hidden from view. Current approaches often treat all occlusions with uniform conservatism, yielding needlessly defensive driving, or they infer hidden spaces without estimating the impact on the planner. This work bridges the critical gap between perception and planning by enabling Vision-Language Models (VLMs) to identify and reason about the specific hidden agents that are most critical to the ego-vehicle's trajectory. We introduce a novel framework that uses Planning KL-divergence (PKL), an information-theoretic metric, to systematically identify and rank occluded agents based on their impact on the ego vehicle's plan. Using this planning-aware ranking, we employ an expert VLM (GPT-5) to generate rich, structured annotations that capture the visual evidence and reasoning required for this task. We apply this framework to the nuScenes dataset to create a new benchmark focused on high-impact scenarios. We conduct comprehensive experiments on a wide range of general-purpose and domain-adapted VLMs, demonstrating that fine-tuning on our PKL-guided data yields dramatic performance improvements across all models. Notably, our results show that smaller, fine-tuned models significantly outperform their much larger zero-shot counterparts, and that our PKL-guided data selection strategy improves performance by approximately 30\% over random sampling. Our work presents the first systematic approach for training VLMs to focus on planning-critical occlusions, enabling more semantically grounded and efficient risk assessment in autonomous driving.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js'></script>
+</body>
+</html>
