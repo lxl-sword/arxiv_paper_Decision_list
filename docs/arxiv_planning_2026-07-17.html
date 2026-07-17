@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>planning - 2026-07-17</title>
+<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap' rel='stylesheet'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css'>
+<style>
+body {
+font-family: 'Roboto', sans-serif;
+background-color: #f5f7fa;
+padding: 20px;
+}
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.card-title {
+    font-weight: 700;
+}
+.card:hover {
+    transform: scale(1.02);
+    transition: 0.3s ease-in-out;
+}
+</style>
+</head>
+<body>
+<div class='container'>
+<h1 class='text-center my-4'><i class='fas fa-book'></i>planning - 2026-07-17</h1>
+<div class='row'>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.15278v1' target='_blank'>Hierarchical Denoising For Multi-Step Visual Reasoning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Zezhong Qian, Xiaowei Chi, Chak-Wing Mak, Tianze Zhou, Ruibin Yuan, Yuhan Rui, Hengzhe Sun, Zhuoqun Wu, Yuming Li, Siyuan Qian, Sirui Han, Shanghang Zhang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-16 17:59:57</h6>
+<p class='card-text'>Video models are evolving into vision foundation models, yet they still lack human-like multi-step reasoning. Streaming autoregressive diffusion models are efficient but limited in reasoning, while bidirectional diffusion enables global revision with high inference costs due to dense frame-level denoising. Both paradigms struggle to achieve logical consistency and low-latency streaming for complex reasoning tasks. We propose HDR (Hierarchical Denoising for Visual Reasoning), a unified framework that integrates hierarchical latents into causal video generation for multi-step reasoning. HDR organizes video latents into a tree-structured hierarchy, enabling coarse-to-fine reasoning before streaming output. Coarse denoising layers preserve uncertain hypotheses for global planning, while finer layers progressively refine them into concrete visual states. A sparse hierarchical attention pattern (SHAP) further reduces temporal attention costs. We introduce a level-stratified multi-step video reasoning benchmark with out-of-distribution cases, covering six tasks: maze navigation, Tower of Hanoi, one-line drawing, sliding puzzle, Sokoban, and water pouring. Compared with streaming autoregressive diffusion baselines, HDR improves success from 34.22 to 60.29 (76.2% relative gain) and increases average progress from 76.00 to 89.56, demonstrating more consistent reasoning trajectories. HDR maintains low-latency streaming at 0.70 seconds per latent, achieving 54.2 times faster inference than bidirectional diffusion. It also retains 82.9% of full-data performance with only 2% training data, compared with 52.0% for bidirectional diffusion. Real-world robot experiments further demonstrate HDR's potential for physical interaction and world modeling. Project demo: https://hierarchical-diffusion-reasoning.github.io/.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.15193v1' target='_blank'>Plover: Steering GUI Agents through Plan-Centric Interaction</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Madhumitha Venkatesan, Shicheng Wen, Jiajing Guo, Jorge Piazentin Ono, Liu Ren, Dongyu Liu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-16 16:48:39</h6>
+<p class='card-text'>Graphical user interface (GUI) automation remains challenging in real-world environments, where dynamic layouts, unexpected dialogs, and evolving interface states can cause autonomous agents to drift from user intent. Recent vision-based multimodal agents improve flexibility by operating directly over screenshots and natural language instructions, but planning and adaptation often remain internal, limiting users' ability to inspect, supervise, or correct system behavior. We present Plover, a plan-centric vision-based GUI automation system that externalizes task plans and replanning as persistent, inspectable, and revisable artifacts. Through a planner--executor architecture, Plover supports explicit supervision of evolving execution, localized correction through editable plans, natural-language guidance, and screenshot-grounded interventions, while preserving prior progress during repair. A formative study with six participants informed the interaction design. We then evaluate Plover through benchmark failure-case repair and scenario-based workflow analyses. Our results show that many autonomous GUI-agent failures are structurally repairable when plans remain visible and interventions are localized, and that explicit replanning helps make GUI automation more transparent, controllable, and adaptable.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.15182v1' target='_blank'>Stigmergic Graph Memory: An Environment-Aware Approach for Many-to-Many Multi-Agent Pickup and Delivery</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Aditya Dutta, Joon-Seok Kim</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-16 16:34:57</h6>
+<p class='card-text'>Automated fulfillment warehouses must continuously assign and execute pickup-and-delivery work while avoiding congestion. In many-to-many Multi-Agent Pickup and Delivery (MAPD), a request specifies a stock-keeping unit rather than fixed endpoints, requiring the controller to select an agent, source, and destination before path planning. Existing graph-guidance methods primarily influence routing after goals are fixed, leaving endpoint instantiation uninformed by recent traffic. We introduce Stigmergic Graph Memory (SGM), a bounded, decaying memory layer that records recent execution signals on warehouse nodes and directed edges to rank feasible endpoints and route preferences without altering collision constraints or planner validity. Across paired request streams on five layouts, three load levels, and 25 seeds per condition, SGM outperforms two reconstructed many-to-many allocation baselines in all 15 map-load conditions, with paired throughput gains of 20.5-36.7%. These results show that recent execution memory can improve warehouse throughput by shaping which feasible goals enter the planner, not only how agents travel to already fixed goals.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.15172v1' target='_blank'>AHEAD: Anticipatory Hand-Driven Teleoperation via Human Intent Prediction</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Seok Joon Kim, Junho Lee, Federica Spinola, Taein Kwon, Mohsen Moghaddam</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-16 16:21:40</h6>
+<p class='card-text'>Direct hand-driven teleoperation maps an operator's hand motion to robot end-effector commands at every frame, enabling precise control, but it requires constant monitoring and correction during approach, grasp, and placement, which can be slow and fatiguing. For repetitive pick-and-place tasks, supervisory (goal-based) teleoperation simplifies this process: the operator specifies goals/waypoints, and the robot executes the motion using planning algorithms. Yet, this introduces latency, as the robot must wait for the next command before it can plan and act. "How can we reduce robot reaction time while lowering operator workload?" To tackle this question, we present AHEAD, a real-time VR teleoperation system that anticipates operator intent to enable proactive, hand-driven control. In a digital twin, the operator performs pick-and-place naturally, using hand motion to convey high-level commands rather than a continuous robot trajectory. AHEAD processes a short window of 3D hand and head signals together with scene context through an attention-based classifier to predict the intended grasp object and placement slot. A state machine converts intent predictions into stable robot goals, enabling early motion while remaining stable under noisy predictions and corrective hand movements. AHEAD's intent prediction module achieves Top1 accuracy: 76% for grasp objects and 76% for target slots. Moreover, our user study shows AHEAD reduces robot reaction latency by 0.6 s (object) and 1.4 s (slot) relative to baselines. Participants also reported lower operator load, indicating faster robot responses while maintaining low operator effort in practice.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.15129v1' target='_blank'>Catch, Throw, Repeat: Planning for Human-Robot Partner Juggling</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jonathan Rainer Lippert, Kai Ploeger, Abir Chowdhury, Hermann Müller, Jan Peters, Alap Kshirsagar</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-16 15:39:30</h6>
+<p class='card-text'>Dynamic object exchange between humans and robots remains a challenging problem due to uncertainty in perception, timing, and contact-rich interaction. Human-robot juggling represents a particularly demanding instance of this problem, requiring precise real-time coordination, predictive motion planning with feedback control, and robustness to variability in human motion. Enabling such skills is of interest for advancing physical human-robot interaction and shared autonomy. We present a real-time planning and control architecture for human-robot partner juggling that enables a robot to reliably catch and throw balls in synchronized multi-ball patterns with a human partner. The system integrates predictive ball tracking, adaptive online trajectory optimization using a multiple-shooting formulation, and a state-machine-based coordination logic to enable synchronized multi-ball human-robot partner juggling. In a user study with 8 participants of varying juggling skill from beginner to expert, we demonstrate that our system can achieve three-ball cascades shared between the robot and the human. All participants exceeded previously reported best-case results within a 10-minute test session, with one participant extending the previous record for shared three-ball cascade juggling fivefold to 20 consecutive robot catches, and another participant achieving a 100% success rate with 40 consecutive catches in a single-ball catch-and-return setting. Video documentation can be found at https://kai-ploeger.com/partner-juggling</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.15065v1' target='_blank'>DriftWorld: Fast World Modeling through Drifting</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Susie Lu, Haonan Chen, Weirui Ye, Yilun Du</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-16 14:37:43</h6>
+<p class='card-text'>Predictive world models enable robots to plan by imagining the outcomes of their actions, but their value for control hinges on generating many rollouts quickly. This creates a bottleneck for diffusion-based world models: multistep sampling makes each rollout expensive, limiting large-scale action search at inference time. We introduce DriftWorld, an action-conditioned world model based on drifting generative models. Rather than denoising iteratively at inference, DriftWorld learns an action-conditioned drift during training, allowing it to generate future frames from the current observation and a candidate action sequence in a single forward pass at 30+ fps, which is 17x faster on average than diffusion based baselines. We evaluate DriftWorld on standard vision-based robotic manipulation benchmarks, including Bridge-V2, RT-1, Language Table, Push-T, and Robomimic. By producing rollouts that are both accurate and fast, DriftWorld achieves state-of-the-art decision-making performance with far less inference time than diffusion-based world model baselines. Beyond online control, DriftWorld can also serve as an offline simulator for ranking real-world robot policies, with rollout-based scores correlating with ground truth at up to 0.99. These results show that drifting models are a strong fit for robot world modeling, where fast, high-quality imagination directly supports planning and policy evaluation.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.15001v1' target='_blank'>LQCDMaster: Agentic Scientific Computing for Lattice Quantum Chromodynamics Research</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Haofei Gao, Tingjia Miao, Wenkai Jin, Muhua Zhang, Hanzhang Wang, Jie Ran, Jinxin Tan, Zhentao Zhang, Bo Tang, Leiyi Li, Jun Hua, Xiangyu Jiang, Qi-An Zhang, Siheng Chen, Wei Wang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-16 13:50:27</h6>
+<p class='card-text'>Lattice quantum chromodynamics (LQCD) provides a first-principles framework for computing hadronic observables, but its practical use remains limited by the substantial expertise required to turn research motivation into reliable computing workflows. Here we present \textsc{LQCDMaster}, a tool-augmented, skill-guided and domain-specialized scientific computing agent that converts natural-language LQCD research tasks into executable PyQUDA computing workflows, including measurement scripts, job-submission artifacts, execution logs and numerical outputs. The system combines agentic planning, expert-annotated LQCD skills and a deterministic Wick-contraction tool to constrain the algebraically fragile components of code generation. We evaluate \textsc{LQCDMaster} on a benchmark at the forefront of scientific research, comprising 70 LQCD computing tasks, with observables covering local and nonlocal two-point functions, Wilson loops, meson and baryon three-point functions. The generated workflows exactly reproduce expert-written implementations in 63 of 70 tasks at machine precision, with three additional discrepancies attributable to convention mismatches. Across representative observables, the agent reduces implementation time from hours to minutes while preserving end-to-end numerical validation. Further, we present a typical case of \textsc{LQCDMaster}-driven exploration: a lattice computation of light-cone distribution amplitudes with diagonal Wilson-line, a quantity accessible with standard methods but never before computed, and computation of the spectrum of proton, deuteron, triton, hyperon, hyperdeuteron and hypertriton. This work pioneers the paradigm of agentic scientific computing by automating the end-to-end scientific computing workflows in lattice QCD research, lowering its barrier and facilitating the exploration and verification of non-standard scientific ideas.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.14989v1' target='_blank'>OmniaBench: Benchmarking General AI Agents Across Diverse Scenarios</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Chengyu Shen, Yujie Fu, Gangtao Xin, Yanheng Hou, Wenlong Fei, Guojie Zhu, Jiawei Li, Hongcheng Gao, Runming He, Zhen Hao Wong, Meiyi Qiang, Hao Liang, Zhao Cao, Hao Jiang, Chong Chen, Wentao Zhang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-16 13:38:07</h6>
+<p class='card-text'>Large language models are increasingly evolving from text generators into general agents capable of understanding user requests, invoking external tools, and completing complex tasks through interaction. However, existing agent benchmarks often focus on limited scenarios, tool ecosystems, or interaction formats, making it difficult to systematically characterize model capabilities across heterogeneous application settings. We introduce OmniaBench, a benchmark for evaluating general agents across diverse scenarios with explicit state spaces. We derive application-oriented scenario knowledge from app stores, product documents, industry resources, Web retrieval, and human refinement, forming a hierarchical taxonomy that spans ToC, ToB and ToE with 90 level-1 and 354 level-2 domains. Based on this taxonomy, we construct executable environments and synthesize single-turn and multi-turn tasks through four complementary routes: DAG, DAG-S, Solver, and Program. OmniaBench further introduces a ten-dimensional capability taxonomy and eight compositional atomic difficulty factors to support fine-grained evaluation and analysis. The resulting dataset contains 1,431 tasks, together with a challenging subset of 644 tasks designed to reduce evaluation cost and mitigate potential contamination of the full set after public release. The bench presents substantial challenges to current frontier models, with even Claude-Sonnet-5 and GPT-5.6-Sol achieving Overall Pass@1 scores of only 58.54 and 57.14, respectively. Further analyses reveal clear differences across domains and capabilities, as well as persistent limitations in planning, constraint maintenance, and adaptive correction. OmniaBench provides a broad and diagnostic benchmark for characterizing the capability boundaries of general agents.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.14870v1' target='_blank'>One-for-All Adaptive Radiotherapy Planning Agent: A Foundation Framework for Daily CBCT-guided Radiotherapy</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Shaoyan Pan, Kirk Jon Luca, Yuan Gao, Shansong Wang, Mingzhe Hu, Ryan Sanford, Mojtaba Safari, Justin Roper, Zhen Tian, Tonghe Wang, Xiaofeng Yang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-16 11:44:33</h6>
+<p class='card-text'>In this work, we introduce the One-for-All Adaptive Radiotherapy Planning Agent, a unified foundation-model-based system that performs complete, treatment-specific online adaptive planning directly from daily cone-beam CT in under two minutes. The agent first autonomously predicts all essential planning components, including synthetic CT generation, multimodal alignment, and tumor/organ segmentation. It then intelligently leverages these outputs to execute the final clinical plan design, providing a comprehensive, automated solution for daily treatment. We also demonstrate that the agent enables clinicians to define planning with intent and intervene at critical decision points, ensuring a "human-in-the-loop" framework that generates acceptable plans before final approval. Evaluated on multiple datasets spanning head-and-neck, lung, abdominal, and prostate cancers with both photon and proton therapy, the proposed framework achieves clinically acceptable accuracy and plan quality comparable to clinically generated treatment plans, with target dose errors (D98) generally within 2.0 Gy of the reference plan. The strong performance of the One-for-All agent highlights the promise of a unified foundation-model approach and opens opportunities for fast, scalable, and fully automated online adaptive radiotherapy across diverse clinical scenarios.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.14845v1' target='_blank'>Flow-Driven Limb-Asymmetry of Haze Distribution Part I: An Analytical Framework for Predicting the Size Distribution of Photochemical Hazes Across the Two Limbs of hot-Jupiters</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Mei Ting Mak, Thaddeus D. Komacek, Nathan J. Mayne, David K. Sing</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-16 11:12:58</h6>
+<p class='card-text'>Photochemical haze, a common aerosol type expected to form in the atmospheres of hot-Jupiters, can become concentrated to different extents between the morning and evening limbs depending on the balance between advection, gravitational settling, and radiation pressure. We present a analytical framework incorporating the effect of gravity, planetary radius, and stellar flux, alongside the particle size of the haze on its resulting relative distribution between the two limbs. Using this framework and further comparing with 3D climate simulations, our framework provides a reasonable first-order estimate of the maximum radius of haze particles which would reach the morning limb and subsequently be trapped by the nightside gyres, resulting in a higher or comparable concentration of haze over the morning limb compared to the evening limb for a given hot-Jupiter atmosphere. We find that the framework performs best for higher-gravity planets, where the transport of haze particles is more strongly controlled by gravitational settling and therefore less sensitive to the approximations made in describing the atmospheric circulation. We further show that for low-gravity hot-Jupiters, even large haze particles can be readily transported to the morning limb before being removed by gravitational settling, whereas for high-gravity hot-Jupiters only small particles can survive transport to the morning limb. Our novel framework provides a rapid way to understand the transport of haze and plan limb asymmetry observations with JWST, constraining the parameter space exploration for full-scale computationally expensive 3D simulations.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.14826v1' target='_blank'>Interventional Causal Circuits for Safe Robot Action Testing and Failure Recovery</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Naren Vasantakumaar, Tom Schierenbeck, Michael Beetz</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-16 10:41:20</h6>
+<p class='card-text'>Safe physical AI for robot actions are required not only likely to succeed but tested to be safe before execution. In practice, however, formal testing of motion parameters is computationally expensive, and the cost scales poorly with the dimensionality of the action space. When a proposed action is rejected by a tester, the naive response is to resample blindly until a passing candidate is found. This is wasteful, uninformative, and offers no convergence. We argue that rejection should instead trigger causal diagnosis: a principled identification of which action parameter caused the failure and what corrective value maximises the probability of passing testing under the interventional probability distribution. We propose a closed-loop framework that couples a Joint Probability Tree (JPT) with a Causal Circuit derived from a Marginal-Deterministic Variable Tree, enabling exact polytime computation without retraining, or additional data collection. The framework validates tractability of all interventional queries before the robot begins operating, and out-of-support candidates are detected and excluded from correction automatically. We perform experiments in a ROS2 simulation environment, and the framework demonstrates complementary roles across quality of distribution: under a high-quality JPT, the Causal Circuit reduces failed attempts by 10.3% and under a degraded JPT, it reduces total failed attempts by 37%. Every rejected plan produces a structured, interpretable causal report naming the primary cause variable, its observed value, and the recommended corrective region, supporting operator oversight and autonomous recovery without a separately trained failure model.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.14798v1' target='_blank'>Ground-Side Mission Plan Compilation with Policy-as-Code Guardrails for Cloud-Native Satellite Platforms</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Hsiu-Chi Tsai, Chia-Tung Chung</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-16 10:17:15</h6>
+<p class='card-text'>Onboard cloud-native runtimes for satellites are emerging on multiple tracks (ORCHIDE, Axiom Space's AxDCU-1, Kepler's Jetson nodes), but each assumes that the workflow artifacts it executes arrive from the ground. ORCHIDE's architecture document D3.1 states explicitly that "only the Deferred Phase is part of the ORCHIDE scope," and no open-source ground-side toolchain has been released by the consortium. We present Satellite Mission Compiler, a four-stage pipeline that addresses this gap: it takes a human-authored mission plan, checks it against machine-checkable structural and policy rules, and compiles it into the container-workflow artifacts that cloud-native satellite runtimes consume. The pipeline parses the plan against a Pydantic schema derived from public ORCHIDE materials, evaluates it against an OPA/Rego policy package of ten deny rules with documented provenance, compiles it into a typed WorkflowIntent intermediate representation, and renders it as Argo Workflow DAGs and Kueue Job manifests with Dynamic Resource Allocation (DRA) support. We classify pre-uplink loss events into four severity tiers tied to specific schema and policy checks, and anchor the layered-validation design in the safety reading of defense-in-depth (NASA-STD-8739.8B) rather than the security reading (NIST SP 800-53). The implementation is validated by golden translation evaluations, argo lint, an in-process baseline that reproduces OPA's decisions, and live single-node cluster submission, including a DRA-backed GPU admission cascade on Kueue v0.17.3 (re-validated on v0.18.3) and, on v0.18.3, a unified GPU+CPU device-class quota with a scheduler-level accelerator fallback. Six Model Context Protocol (MCP) tools expose the pipeline to AI agents. The compiler is released under EUPL-1.2 (DOI 10.5281/zenodo.21228150).</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.14727v1' target='_blank'>WorkDrive: Roadwork Chain of Causation for Autonomous Driving</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Tianyi Jiang, Wen Zhang, Sihan Yang, Ming Lu, Wentao Zhang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-16 08:53:25</h6>
+<p class='card-text'>Autonomous driving vision-language models (VLMs) struggle in roadwork zones, where familiar visual cues such as lane markings and permanent signs are altered or absent, and temporary devices such as cones and barriers redefine the drivable corridor. VLMs can detect these objects, but without explicit guidance they anchor their reasoning on familiar elements from pre-training and fail to connect work-zone observations to correct planning decisions. We propose WorkDrive, a framework that constructs perception-grounded causal reasoning for work zones and aligns it with trajectory prediction. An automated multitask perception pipeline extracts structured scene facts and injects them into a Chain-of-Causation (CoC) annotation pipeline, redirecting the annotator's attention to domain-specific elements. The resulting reasoning labels are used for supervised fine-tuning, followed by reinforcement learning with a single reward: consistency between lateral meta-actions and the predicted trajectory. On ROADWork, the largest public work-zone dataset, the proposed roadwork CoC reduces trajectory average displacement error (ADE) by 9.0\%, and consistency-based GRPO yields a further 3.0\%, achieving progressive improvement over the trajectory-only baseline. Code and data will be publicly released.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.14725v1' target='_blank'>BridgeFlow: Fast and Robust SE(2)-Equivariant Motion Planning with Flow Matching</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Xinzhe Zhou, Xuyang Wang, Xiaoming Duan, Jianping He</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-16 08:53:08</h6>
+<p class='card-text'>In robotic motion planning, equivariance to rigid body transformations is crucial for robust spatial generalization. However, current learning-based planners face a critical dilemma: they either lack inherent equivariance, treating transformed tasks as novel scenarios, or enforce it via computationally expensive specialized architectures that bottleneck real-time inference. To break this trade-off, we propose BridgeFlow, a fast and strictly SE(2)-equivariant generative motion planning framework. Rather than relying on heavy equivariant networks, BridgeFlow achieves exact spatial equivariance via a lightweight task-centric canonicalization module, enabling generalization using standard architectures. To further accelerate inference, we pair a Brownian bridge informative prior with context-aware mini-batch optimal transport. This constructs a straightened vector field that minimizes transport costs and stabilizes training. Furthermore, environmental awareness is explicitly embedded via Classifier-Free Guidance. Evaluations in dense 2D environments and on a 7-DoF Franka manipulator demonstrate that BridgeFlow achieves up to a 15x inference speedup and a 2x higher valid trajectory rate over state-of-the-art diffusion baselines, alongside robust generalization to entirely unseen environments and arbitrary spatial transformations.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.14688v1' target='_blank'>MIND-CAVs: Multi-Intelligence Negotiation and Decision System for CAVs based on Intent-Driven Autonomy</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Mainak Mondal, Yihang Feng, Yangchao Luo, Han Song</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-16 07:46:34</h6>
+<p class='card-text'>Modern autonomous vehicles largely operate as isolated agents: they rely on on-board perception and decision modules and broadcast Basic Safety Messages (BSMs) that expose only low-level kinematic state. While existing cooperative driving frameworks enable limited sensor sharing, they rarely communicate high-level maneuver intentions, and edge computing is primarily used for content delivery rather than decision arbitration. As a result, current connected autonomy lacks a principled mechanism for making globally consistent, intent-aware coordination decisions across vehicles. To address this gap, we propose MIND-CAVs, a Multi-Intelligence Negotiation and Decision framework for connected autonomous vehicles (CAVs) based on intent-driven autonomy. Each vehicle abstracts raw sensor observations into structured intent representations, exchanges them over V2X links, and receives globally consistent coordination plans from roadside edge servers. Edge agents combine learned and rule-based arbitration mechanisms to negotiate conflicting intents among vehicles, while a cloud platform records decisions for auditing and continual retraining. We implement MIND-CAVs in a CARLA-based AI-in-the-loop platform and evaluate it in multi-lane highway scenarios involving conflicting maneuvers and route-constrained exits. Experimental results show improved maneuver completion time and reduced unsafe proximity and unnecessary braking compared with isolated autonomy, first-come-first-served arbitration, and multi-agent reinforcement learning baselines.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.14658v1' target='_blank'>TopoAgent: A Self-Evolving Topological Agent for Multimodal Scientific Reasoning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Mingze Xu, Yinghui Li, Jiayi Kuang, Zhanhui Kang, Di Yin, Ying Shen, Xing Sun, Yuxing Han</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-16 07:22:59</h6>
+<p class='card-text'>While Multimodal Large Language Models (MLLMs) excel in general tasks, rigorous scientific reasoning remains challenging due to the limitations of monolithic, linear planning. Such sequential designs often suffer from visual-semantic misalignment, long-context hallucinations, and brittle execution under fixed task granularity. We propose TopoAgent, a self-evolving topological framework that replaces linear trajectories with dynamic, state-isolated graph evolution. TopoAgent first employs a front-end decomposer to fracture complex queries into visually-grounded atoms. These atoms are organized into a Directed Acyclic Graph (DAG) based on their dependencies, enabling strict context isolation to shield the reasoning engine from irrelevant historical noise. Furthermore, we introduce adaptive atomic fission, which dynamically splits bottleneck nodes into finer-grained sub-atoms at runtime when tool capability boundaries are exceeded. Extensive experiments across mathematics, physics, and chemistry benchmarks demonstrate that TopoAgent significantly outperforms state-of-the-art linear agent frameworks, providing a robust, noise-resistant, and self-correcting paradigm for autonomous scientific reasoning.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.14625v1' target='_blank'>Observational planning for the 2026 August 5 Falcon 9 Upper Stage lunar impact</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Benjamin Fernando, Jennifer Heldmann, Bill Grey, John Ortiz, Bryan Euser, Darryl Z. Seligman, Eunhyeuk Kim, Anthony Colaprete, Elisa Maria Alessi, Detlef Koschny, Anthony Cook, Joel Green, Patrick King, Stacy Teng, Dawn Graninger, Arnold Goldberg, William Cooke, Mike F. Skrutskie, Kevin Schlaufman, Nicholas Schmerr, Carly M. Donahue, Carl A. Schmidt, Nancy J. Chanover</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-16 06:42:17</h6>
+<p class='card-text'>On 2026 August 5, at approximately 06:35 UT, a spent Falcon 9 upper stage will impact the lunar surface near Einstein Crater. This event will occur on sunlit terrain near the eastern limb as seen from Earth. The impact flash and resultant ejecta plume from this event are potentially observable from ground- and space-based observational facilities. This event provides an opportunity to attempt the recording of an artificial impact in real-time; although many of the properties of the event (such as visual magnitude) are imprecisely predicted at present. Moreover, this event provides an opportunity to test a pipeline for localising impacts on the lunar surface for future seismic experiments, investigating the dust and plume dynamics from impact events on the Moon, and considering hazards from artificial space debris impacts. Both professional and amateur astronomers are encouraged to attempt observations of this event.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.14548v1' target='_blank'>HyMobileAgent: Data-Environment Co-Scaling for Efficient GUI Agents</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Hy Vision Team, Huawen Shen, Zhengyang Tang, Shangpin Peng, Liang Wu, Anran Zhang, Weinong Wang, Yiduo Guo, Chenxin Li, Zhengyao Fang, Yang Ding, Junyi Li, Fei Tang, Zheng Ruan, Yi Zhang, Xingran Zhou, Dingchen Yang, Sunqi Fan, Zhiyi Wan, Han Hu, Xin Lai, Pengyuan Lyu, Chengquan Zhang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-16 04:12:42</h6>
+<p class='card-text'>As large multimodal models move from understanding content to operating on digital environments, mobile GUI has emerged as a challenging and consequential testbed for digital embodied intelligence. Mobile agents operate under three coupled constraints: precise perception of complex interfaces, scalable acquisition of high-quality interaction data, and robust long-horizon decision making under compounding execution errors. This report presents HyMobileAgent, a mobile GUI agent built on Hy3.0-VL-A3B, a vision-native foundation model featuring native any-resolution input, an A3B-scale deployment budget, and a 32K context window to model extended interaction histories. Rather than relying solely on model scaling, we develop a joint data and environment centric scaling framework to address the key bottlenecks of mobile interaction.
+  Our framework integrates a GUI perception flywheel combining mock-interface synthesis, rejection sampling, and icon-specific augmentation; a knowledge pipeline that transforms tutorial videos into structured interaction data; a million-scale action data pipeline deployed across more than 2000 sandbox and real-device instances with automated failure attribution; the PhoneWorld Mock App Factory, providing a resettable training environment with 34 mock applications and over 34000 tasks; and a structured Planning-and-Reflection mechanism with explicit dead-loop detection for reliable long-horizon execution.
+  We also introduce a progressive training recipe consisting of mid-training, supervised fine-tuning, and reinforcement learning with task-specific reward designs.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.14544v1' target='_blank'>3D Geometric Tooth Alignment Planning via Deep Reinforcement Learning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yong Li, Jianwen Lou, Jiayue Ma, Yao-Xiang Ding, Youyi Zheng, Haihua Zhu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-16 04:00:05</h6>
+<p class='card-text'>3D geometric tooth alignment planning, which determines sequential trajectories from initial malocclusion to the final target alignment, is a cornerstone of modern digital orthodontics. This paper presents a novel deep reinforcement learning (DRL) framework to automate the generation of these alignment paths. We formulate the planning process as a Markov Decision Process (MDP) to capture its sequential decision-making nature, focusing on optimizing geometric trajectories while integrating essential spatial constraints, such as inter-dental collision avoidance and path efficiency. The proposed method leverages the Deep Deterministic Policy Gradient (DDPG) algorithm, enhanced by three key innovations: (1) a Transformer-based agent to model complex spatial interactions between teeth and manage high-dimensional state-action spaces; (2) a dynamic masking scheme that restricts movement to a sparse subset of teeth per step, better reflecting the clinical logic of sequential alignment; and (3) a two-stage curriculum learning strategy that gradually increases task difficulty to ensure training stability and efficient path discovery. We evaluate our approach on a dataset of 10K expert-designed treatment plans based on clinical data. Experimental results demonstrate that our method outperforms existing baselines in terms of path safety and geometric efficiency, providing a robust and automated solution for 3D geometric orthodontic alignment planning.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.14543v1' target='_blank'>SafeRelBench: A Spatial-Relation-Aware Benchmark for Process-Level Safety in VLM-Driven Embodied Agents</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Huaigang Yang, Ya Li, Min Ren, Bo Dai, Zhenliang Zhang, Zhaofeng He</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-16 03:59:44</h6>
+<p class='card-text'>Vision-language models (VLMs) are increasingly used as the reasoning backbone of embodied agents, enabling robots to interpret visual scenes, follow language instructions, and plan multi-step actions. In household environments, however, safety depends not only on recognizing objects, but also on how actions change the physical scene over time. Existing embodied safety evaluations largely focus on static risk recognition, unsafe instruction refusal, or final-state task completion. As a result, process-level safety failures induced by spatial relations such as support, containment, and proximity remain insufficiently studied. To address this gap, we introduce SAFERELBENCH, a spatial-relation-aware safety benchmark with 507 executable evaluation samples, including 248 spatial-relation samples and 259 non-spatial control samples. Using SAFERELBENCH to evaluate seven open- and closed-source VLM-driven embodied agents, we find a substantial gap between task success and process-level safety compliance: models often complete the requested task while violating process-level safety constraints. Unlike prior benchmarks, SAFERELBENCH explicitly tests whether agents satisfy safety conditions before risk-prone actions, making spatial relations a core dimension in embodied safety assessment. More broadly, our results show that safe embodied intelligence requires not only stronger perception and planning, but also reliable reasoning about how object relations shape risk during interaction.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.14507v1' target='_blank'>DRIFT: Drift and Aggregation for Motion Planning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yining Xing, Zhiyuan Liu, Zehong Ke, Wenhao Yu, Jianqiang Wang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-16 02:43:13</h6>
+<p class='card-text'>End-to-end trajectory planners need to represent multiple plausible driving behaviors while producing a single executable trajectory under real-time constraints. Proposal-based approaches address this ambiguity by generating multiple candidates, but converting the proposal set into a final plan remains a key design problem. We present DRIFT, a fixed-depth planner that combines one-step drifting in a compact trajectory latent space with scene-aware proposal aggregation. Conditioned on features from a pretrained visual encoder, the DRIFT Decoder generates 48 proposal features in a single batched pass, with 32 samples at alpha=0.5 and 16 samples at alpha=0.9. A lightweight Aggregation Head integrates these features with scene, navigation, and ego-state information and directly predicts the final trajectory without requiring trajectory-level quality labels for aggregation. Its output is trained with expert-trajectory imitation and a map-derived boundary regularizer that penalizes waypoints outside the drivable polygon and inside waypoints near its boundary. On NAVSIM navtest, DRIFT achieves 89.6 PDMS and 90.4 EPDMS, with strong drivable-area compliance and ego progress among the methods compared. The proposal-generation and aggregation module runs in 10.82 ms on an NVIDIA RTX 4090, while full-model inference including the visual backbone takes 66.43 ms. These results show that one-step latent proposal generation and direct aggregation provide an efficient design for multi-hypothesis motion planning.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.14455v1' target='_blank'>Motion Planning with Model-Based Diffusion via Constraint Optimization and Adaptive Scheduling</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Zhilin He, Bowei Li, Jianlin Dou, Yuner Zhang, Changliu Liu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-16 01:04:32</h6>
+<p class='card-text'>Single-Robot Motion Planning (SRMP) in highly non-convex constrained environments, where robots must satisfy collision-free guarantees, dynamic feasibility, and task-related constraints, is challenging under complex constraints and computational limits. Recent Model-Based Diffusion (MBD) approaches recast the SRMP as trajectory optimization that samples from a posterior over trajectories, using known dynamics, and analytically estimates the score function from rollout samples to guide diffusion denoising toward a low-cost, clean trajectory without demonstration learning. While existing works further adapt MBD to constrained environments and showcase promising performance, they are still limited by (1) enforcing safety either via soft feasibility diffusion priors or hard projection operators, but lack a unified framework to integrate both, and (2) fixing safety enforcement to neglect the changing of diffusion scheduling. Therefore, we introduce Model-Based Diffusion via Constraint Optimization and Adaptive Scheduling (MD-COAS) for SRMP that unifies the inexact Augmented Lagrangian Method (iALM) soft diffusion prior with a Convex Feasible Set (CFS)-based hard projection operator, and adaptively schedules and co-optimizes safety enforcement, along with diffusion scheduling. Experiments demonstrate that our method achieves higher safety \& success rates, faster convergence, and lower final costs than baseline planners on randomly generated highly non-convex 2D benchmarks and a 7-DoF robot arm avoidance task.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.14328v1' target='_blank'>ViPSAM: Visual Prompting Medical Image Segmentation Using Segment Anything Model</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:San Lee, Nalee Kim, Jeong Il Yu, Hee Chul Park, Boah Kim</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-15 19:46:32</h6>
+<p class='card-text'>In proton therapy planning, respiratory-gated non-contrast CT (NCCT) is commonly used for lesion segmentation; however, accurate delineation remains challenging due to low lesion-to-background contrast. Although learning-based methods have shown strong performance, they often struggle with non-contrast image segmentation. Inspired by clinical practice, where contrast-enhanced MRI is referenced to delineate lesions on NCCT, we propose ViPSAM, a visual prompting framework that leverages complementary cross-modality information. Built upon the Segment Anything Model (SAM), ViPSAM introduces a visual prompt encoder to extract guidance features from contrast-enhanced images and a visual-guided cross-attention module to integrate non-contrast and contrast-enhanced features, thereby enhancing lesion-relevant representations in low-contrast regions. The mask decoder is further adapted in a parameter-efficient manner to utilize visual prompts effectively. We evaluate the proposed method on liver lesion segmentation using NCCT acquired for proton therapy. Experimental results demonstrate that ViPSAM outperforms representative U-Net- and SAM-based methods, indicating that cross-modality visual prompting enables more robust and accurate segmentation in non-contrast images.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.14272v1' target='_blank'>Lyapunov Guidance: A Unified Framework for Stabilizing Generative Flows</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jingdong Zhang, Xinze Li, Yize Jiang, Luan Yang, Minkai Xu, Junhong Liu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-15 18:28:08</h6>
+<p class='card-text'>Flow matching has emerged as an effective framework for learning complex data distributions, but adapting pretrained flow models to new tasks often requires computationally expensive retraining. Post-training guidance provides a more efficient alternative, but existing methods are largely heuristic and offer no explicit stability guarantees. We address this limitation by proposing LyaGuide, a unified Lyapunov-guided framework that formulates flow guidance as a Lyapunov control problem. Our main theoretical result establishes an equivalence between guided flow matching and Lyapunov control, thereby unifying common guidance strategies, such as classifier guidance, reward guidance, and energy-based guidance, within a single control-theoretic framework. To enforce the Lyapunov condition, we introduce a pseudo-projection operator with a closed-form expression that endows learned or heuristic guidance terms with explicit stability guarantees. LyaGuide supports two practical settings: a model-driven setting, where the target guidance distribution is specified through a known Lyapunov function, and a data-driven setting, where the guidance is adapted from task-specific downstream data. LyaGuide is compatible with existing guidance methods, introduces minimal additional computational overhead, and is straightforward to integrate in practice. Extensive experiments on synthetic benchmarks, image inverse problems, reinforcement learning planning, and energy-based modeling demonstrate consistent improvements in sample quality, guidance fidelity, and robustness, while maintaining computational efficiency.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.14252v1' target='_blank'>MEMORA: Embodied Action Memory from Egocentric Videos for Reasoning and Planning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Zihao Yu, Xiu Yuan, Chongjie Zhang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-15 18:12:28</h6>
+<p class='card-text'>Long-horizon robot planning requires more than predicting what actions will do next; it also requires memory of the embodied experience that makes future goals interpretable. People do not plan from the present scene alone: they draw on remembered places, object-state changes, prior procedures, and regularities revealed through repeated action. We formulate Embodied Action Memory (EAM) as the capability to form, maintain, and use such experience as a persistent memory state for later decisions. MEMORA realizes EAM with a formation-consolidation-retrieval lifecycle and four typed stores: Environment Memory, Entity Memory, Activity Memory, and Inferred Knowledge. Online editing maintains object identities and state histories as new observations arrive; offline consolidation abstracts repeated experience into reusable procedures and participant-specific regularities. MEMORA-Bench evaluates this lifecycle on 45 hours of EPIC-KITCHENS-100 extension video across 18 participants through memory-grounded planning, including previously unseen goals, and a complementary memory-assessment task. Across four open-weight language models, full MEMORA--combining editing, typed stores, and consolidation--achieves the strongest aggregate results among the evaluated memory conditions. It improves memory-assessment accuracy by up to 20.5 points over the strongest controlled baseline and improves out-of-distribution Robot-Grounded Plan score by up to 16.6% relative. A qualitative two-task robot deployment study further illustrates how memory-grounded language plans can interface with downstream control, while the overall results show that editable, consolidated memory can supply remembered context for robot planning. Project page: https://yuzihaowashu.github.io/MEMORA/</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.14245v1' target='_blank'>Information-Theoretic Adaptive Cooling for Deterministic MPPI via Entropy Feedback</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Shuqi Wang, Wenrong Sun, Tao Han, Yue Gao, Xiang Yin</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-15 18:04:38</h6>
+<p class='card-text'>This paper investigates deterministic optimal control using Model Predictive Path Integral (MPPI) control, a sampling-based and derivative-free framework well suited for systems with complex dynamics and nonsmooth objectives. In deterministic MPPI, the temperature must be driven to zero to recover the true optimum, yet the design of an effective cooling schedule remains a fundamental challenge. Existing methods typically rely on predefined open-loop schedules, which limit the efficiency and robustness of the algorithm. To overcome this limitation, we propose an Information-Theoretic Adaptive Cooling (ITAC) framework that uses the Shannon entropy of the importance weights as an online feedback signal to regulate the temperature. The proposed mechanism adapts the cooling rate to the current sampling state, enabling fast progress when the weights are diffuse and cautious cooling when they become concentrated. We prove asymptotic convergence of the resulting scheme to the deterministic optimum, and further derive a critical entropy threshold that leads to a smooth barrier against premature weight collapse. Experiments on nonsmooth signal temporal logic motion-planning tasks show that ITAC improves sampling efficiency and achieves substantially faster convergence than state-of-the-art baselines without sacrificing the derivative-free nature of MPPI.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.14050v1' target='_blank'>Update on the slicer IFU for the Magellan InfraRed Multi-Object Spectrograph (MIRMOS)</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Maren Cosens, Patricio Schurter, Nicholas P. Konidaris, Gwen C. Rudie, Andrew B. Newman, Leon Aslan, Robert Barkhouser, Christoph Birk, Julia Brady, Tyson Hare, Stephen C. Hope, Charlie Hull, Karim Kaismoune, Daniel D. Kelson, Gerrad Killion, Alicia Lanz, Jacob McCloskey, Solange V. Ramirez, William Schoenell, Stephen A. Smee, Jason E. Williams</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-15 17:21:35</h6>
+<p class='card-text'>The Magellan InfraRed Multi-Object Spectrograph (MIRMOS) is a planned next generation multi-object and integral field spectrograph for the 6.5m Magellan telescopes at Las Campanas Observatory in Chile. MIRMOS will perform $\rm R\sim3700$ spectroscopy over a simultaneous wavelength range of 0.886 - 2.404um (Y, J, H, K bands) in addition to imaging over the range of 0.7 - 0.886um. The integral field mode of operation for MIRMOS will be achieved via an image slicer style integral field unit (IFU) located on a linear stage to facilitate movement into the beam during use or storage while operating in multi-object mode. The IFU will provide an $\rm\sim18''\times26''$ field of view (FoV) made up of $\rm0.84''\times26''$ slices. This will be the largest FoV IFS operating at these wavelengths from either the ground or space, making MIRMOS an ideal instrument for a wide range of science cases including studying the high redshift circumgalactic medium and emission line tracers from ionized and molecular gas in nearby galaxies. We present here an update on the IFU design from our 2024 proceeding. Previously we utilized a re-imaging style slicer which required freeform pupil mirrors in order to achieve the required image quality while obeying significant packaging constraints near the instrument focal surface. In order to reduce the manufacturing cost and decouple the IFU from the configurable slit unit used in multi-object mode, we have moved the IFU deeper into the instrument, allowing for a switch to a virtual style IFU. This now requires a re-imaging doublet before the slicer mirrors, but removes the need for any freeform surfaces. We present here the optical design and predicted performance of the new MIRMOS IFU along with a conceptual design for the opto-mechanical system which will move the IFU between its active and stored positions.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.13998v1' target='_blank'>The Dynamic Verifiable Multi-Agent Human Agentic Loyalty Loop (DVM-HALL) Model and the Net Human-Agent Score (NHAS) in Autonomous Commerce</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Sai Srikanth Madugula, Peplluis Esteva de la Rosa, Daya Shankar</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-15 16:27:48</h6>
+<p class='card-text'>The rapid proliferation of Agentic Artificial Intelligence fundamentally disrupts traditional customer loyalty paradigms. As AI evolves from passive recommendation algorithms to autonomous, goal-directed agents capable of executing purchasing decisions, the conventional understanding of consumer-brand relationships requires a structural reevaluation. By synthesizing extant literature across human-machine teaming, consumer decision-making, and algorithmic trust dynamics, we demonstrate that traditional loyalty models fail to account for algorithmic bounded rationality and constructed autonomy. To address this, we introduce the Dynamic Verifiable Multi-Agent Human Agentic Loyalty Loop (DVM-HALL) model. We formalize brand choice via a softmax probability formulation where human emotional equity, agentic machine-experience utility, calibrated trust, delegated authority, and verifiable execution jointly determine selection. The model features recursive updating mechanisms to dynamically calibrate trust and delegation after each interaction. Crucially, the framework integrates a verifiable execution layer for Decentralized Finance (DeFi) and tokenized loyalty settings, incorporating execution risks -- such as gas costs, slippage, MEV exposure, and smart-contract vulnerabilities -- as core predictors of agentic brand preference. Furthermore, we introduce the Net Human-Agent Score (NHAS), an auditable, risk-weighted metric designed to measure human-agent alignment using human feedback, execution logs, benchmark comparisons, and verifiable receipts. Finally, we propose a comprehensive three-stage empirical validation plan spanning controlled shopping experiments, multi-agent market simulations, and DeFi testbeds. This framework provides the foundational theory required for brands to navigate the impending transition toward machine customers.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.14190v1' target='_blank'>A Temporal Machine Learning-Based Time-to-Event Model for Predicting ALS Progression and Healthcare Utilization</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Zongliang Yue, Qi Li, Terry Heiman-Patterson, Frank Bearoff, Zhaohui Qin, Huanmei Wu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-15 16:11:23</h6>
+<p class='card-text'>Amyotrophic lateral sclerosis (ALS) is a progressive and heterogeneous neurodegenerative disease in which predicting clinically meaningful milestones, such as assistive device use, remains challenging. We developed a time-to-event, digital-twin-inspired framework that integrates longitudinal ALS Functional Rating Scale-Revised (ALSFRS-R) trajectories with survival modeling to support individualized prediction of functional decline and assistive device utilization. We constructed a harmonized longitudinal dataset by integrating diagnosis records, ALSFRS-R assessments, activities of daily living, and demographic information, followed by preprocessing to ensure data quality, temporal alignment, and cohort consistency. Correlation-based clustering identified coherent functional domains spanning bulbar, upper limb, axial, lower limb, and respiratory systems. Generalized additive mixed models characterized nonlinear, domain-specific functional decline across all domains. In addition, a temporal machine learning model was developed to predict longitudinal functional decline and capture stage-dependent disease progression. Cox proportional hazards modeling further identified lower limb function, particularly walking and stair climbing, as the strongest predictors of earlier wheelchair access. Building on these results, we implemented a digital twin-inspired temporal machine learning-based time-to-event (TTE) model that generates individualized survival curves and dynamically predicts wheelchair-free survival. This framework provides a scalable, interpretable, and clinically actionable approach for linking ALS progression with personalized decision support, with applications in proactive care planning, clinical trial stratification, and precision medicine.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.13978v1' target='_blank'>Music-to-Dance Generation via Atomic Movements</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Xinhao Cai, Yixuan Sun, Minghang Zheng, Qingchao Chen, Xin Jin, Song-chun Zhu, Yang Liu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-15 16:03:55</h6>
+<p class='card-text'>Music-driven dance generation aims to produce human motion that is both rhythmically synchronized and semantically consistent with music. While recent neural approaches have achieved impressive visual realism, they typically model motion as a continuous signal and neglect its compositional nature, making generated dances structurally incoherent and difficult to control. In this work, we introduce a structure-aware framework that models choreography as a sequence of atomic movements-semantically interpretable motion events that serve as the building blocks of dance. To construct this atomic movement vocabulary, we first segment large-scale dance data and cluster them into atomic movement groups. We then employ a large language model to semantically relabel and refine the clusters, yielding a set of interpretable and reusable atomic movements. Based on these atomic movement annotations, we design a two-stage generation framework that mirrors the human choreography process. In the atomic movement planning stage, the model predicts the type, duration, and timing of atomic movements conditioned on the input music, forming a symbolic dance allocation. In the completion stage, a transition-aware generator synthesizes smooth and stylistically coherent motion conditioned on the planned structure. Extensive experiments demonstrate that our method produces dances with significantly improved structural coherence, rhythmic alignment, and perceptual naturalness compared to existing baselines, while providing enhanced interpretability and controllable editing through explicit structural representation.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js'></script>
+</body>
+</html>
