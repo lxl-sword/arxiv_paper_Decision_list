@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>planning - 2026-07-28</title>
+<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap' rel='stylesheet'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css'>
+<style>
+body {
+font-family: 'Roboto', sans-serif;
+background-color: #f5f7fa;
+padding: 20px;
+}
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.card-title {
+    font-weight: 700;
+}
+.card:hover {
+    transform: scale(1.02);
+    transition: 0.3s ease-in-out;
+}
+</style>
+</head>
+<body>
+<div class='container'>
+<h1 class='text-center my-4'><i class='fas fa-book'></i>planning - 2026-07-28</h1>
+<div class='row'>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.24744v1' target='_blank'>Data Pyramid for Embodied Manipulation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yifan Ye, Yankai Fu, Yaoxu Lv, Bohan Hou, Jun Cen, Lingdong Kong, Duo Zheng, Tianxing Chen, Jiaming Liu, Ziang Cao, Yunfan Lou, Wei Chow, Xian Sun, Yingshuo Wang, Kuangzhi Ge, Xiaowei Chi, Xidong Zhang, Zhibo Pang, Yiwu Zhong, Sirui Han, Zhihe Lu, Weihao Yuan, Qifeng Chen, Michael Yu Wang, Yao Mu, Ziwei Liu, Jianfei Yang, Ping Luo, Shanghang Zhang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-27 17:59:58</h6>
+<p class='card-text'>Multimodal foundation models learned to see and to speak by consuming the whole internet. Embodied agents admit no such shortcut, since they require data that couple observations with physical states and actions. These signals can be provided, to varying degrees, by multiple data sources. In this work, we organize the embodied data ecosystem as a "pyramid" spanning five complementary sources: real-robot data, UMI-style data, egocentric and exocentric data, simulation data, and general vision-language data. We organize the pyramid around the tension between scalability and robot alignment, and further characterize each source in terms of data quality, diversity, reusability, and physical fidelity. We then analyze recent embodied foundation models through the lens of their data recipes, examining how different sources are selected, aligned, and mixed during pretraining. For embodied brain models, vision-language-action models, and world-action models alike, we relate data composition to capabilities in perception, reasoning, planning, action generation, and world prediction. We close by discussing six open challenges: building large-scale tactile datasets, collecting failure and recovery data, developing scalable data-collection pipelines, aligning actions across embodiments, leveraging egocentric data for dexterous manipulation, and designing principled data recipes for robot learning. We hope this work paves the foundation for the design of next-generation embodied systems.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.24720v1' target='_blank'>The Physics of Multi-Turn Long-Horizon Planning: From Pre-training to Post-training via Single- and Multi-Teacher On-Policy Agentic Distillation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Tianyi Men, Zhuoran Jin, Kang Liu, Jun Zhao</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-27 17:55:03</h6>
+<p class='card-text'>Multi-turn long-horizon planning is critical for foundation model agents, yet how to fundamentally improve it remains unclear. Existing models are trained on uncontrollable and opaque Internet data, making it difficult to identify how planning ability is acquired, shaped, and integrated. To address this challenge, we introduce a unified and controlled multi-turn environment that enables precise control. It allows systematically study long-horizon planning across three stages. (1) Planning ability acquisition during pre-training. We study data format, distribution, and quality. Explicit world model construction through CoT state transition modeling yields stronger long-horizon generalization. Atomic skills alone are insufficient for compositional generalization, whereas a litte long-horizon data works. Moreover, suboptimal trajectories severely impair performance because errors amplify over long horizons. (2) Planning ability shaping via GRPO and OPD post-training. Through mutual information, we distinguish general planning patterns from task-specific planning knowledge. For planning patterns, we identify three application regions of post-training: unnecessary, effective, and unsupported. OPD has a broader effective region than GRPO under low-quality and long-horizon settings, as it provides more consistent update directions. For planning knowledge, distilling unseen procedures from a teacher with different knowledge may impair student's prior world modeling without fully establishing new knowledge. (3) Planning ability integration through MOPD post-training. We show that multi-teacher on-policy distillation (MOPD) integrates capabilities by converging to shared planning-pattern across environments. Compatible patterns enable cross-environment generalization, partially shared patterns support continual learning, while completely conflicting patterns cause severe interference.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.24610v1' target='_blank'>CAP-DO: Learned Contextual Action Proposals for Certified Double-Oracle Solving Across Related Zero-Sum Games</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Mu Wang, Zhenkun Liu, Liang Liang, Guofu Zhang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-27 16:12:08</h6>
+<p class='card-text'>Many security and inspection-planning problems require solving a sequence of related zero-sum games. Across this sequence, the feasible defender and attacker action spaces re-main fixed, whereas each context induces a different payoff matrix through changes in target values, inspection effective-ness, costs, and interaction effects. Double Oracle (DO) solves large zero-sum games without materializing the full payoff matrix by iteratively expanding a restricted game. However, applying standard DO independently to each new payoff context requires restarting the search from a generic restricted game and requires rediscovering context-relevant actions through full-space best responses. We propose Con-textual Action Proposal Double Oracle (CAP-DO), a learning-augmented framework that warm-starts DO for repeated contextual games. Offline, CAP-DO trains separate defender and attacker rankers once from solved contexts. Online, the fixed rankers propose initial restricted action sets for each new context. Learning therefore determines where certified search starts, while the current game, through full-space best-response checks and a two-sided certificate, still determines whether the output is accepted. Theoretically, CAP-DO pre-serves DO's full-game certification guarantee, so every accepted output meets the prescribed certificate tolerance. Under standard exact-oracle assumptions, CAP-DO also retains finite convergence when expansion is uncapped. Empirically, across three scales of a non-additive contextual inspection-game benchmark, with up to 9,880 actions per player, CAP-DO-balanced achieves higher certification rates and uses few-er full-space best-response calls than cold-start, trace-reuse, and heuristic warm starts under fixed expansion budgets.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.24575v1' target='_blank'>Optimum Multiple Sampling Plan Based on the Process Capability Index $C_{py}$ Under Type-II Hybrid Censoring</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Rajat Das, Tanmay Kayal, Yogesh Mani Tripathi, Tanmay Sen</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-27 15:43:09</h6>
+<p class='card-text'>This paper proposes a stage independent multiple sampling plan (SIMSP) to improve inspection efficiency by reducing the number of samples required at each sampling stage. Unlike conventional multiple sampling plans (MSP), the proposed SIMSP eliminates the dependence of each sampling stage on the outcome of the preceding inspection. The proposed approach is developed for non-repairable products sold under a pro-rata warranty policy based on the generalized process capability index $C_{py}$. The SIMSP is designed under a Type-II hybrid censoring scheme (Type-II HCS), which provides greater flexibility in controlling test time and failure information in life testing experiments. The asymptotic distribution of the process capability index estimate is used to compute the operating characteristic (OC) function, and the exact Fisher information matrix (FIM) is obtained for further statistical analysis. A constraint optimization problem is formulated to determine the optimal design by minimizing the total cost subject to the manufacturer's and consumer's risk. Numerical investigations are conducted to examine the effects of model parameters, warranty policy characteristics, and cost factors on the optimal solution. The results demonstrate that the proposed approach provides an economically efficient and feasible method for lot acceptance while satisfying the tolerable risks requirements.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.24546v1' target='_blank'>The Wide-field Spectroscopic Telescope (WST): design trade-offs for the low-resolution multi-object spectrograph instrument</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Dimitri Buffat, Will Saunders, Kjetil Dohlen, Laurence Tresse, David Lee, Roland Bacon, Andrea Bianco, Laurane Fréour, Roelof de Jong, Etienne Burtin, Olaf Iwert, Virgile Meyer, Elizabeth George</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-27 15:24:05</h6>
+<p class='card-text'>The Wide-field Spectroscopic Telescope (WST) is a planned 12-meter-class dedicated spectroscopic facility designed to address key scientific challenges through large spectroscopic surveys. This paper presents design and performance trade-offs for the Low-Resolution Multi-Object Spectrograph (MOS-LR) instrument. With a multiplex of 30,000 covering a field of view of 3.1 square degrees, this instrument will provide unprecedented survey efficiency, an order of magnitude beyond those of current facilities. Covering the 370 to 930 nm range at a resolving power of 3,000 with a sky-projected fiber diameter of 1 arcsec, this instrument faces extreme challenges in design, manufacturing, and maintenance. We present a systematic approach to trading off optical and mechanical design options, taking into account constraints such as volume and mass, but also projected availability of detectors and gratings etc.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.24536v1' target='_blank'>RemiAssist: A Therapist-Supporting System for Photo-Based Reminiscence Therapy in Dementia Care</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Shuchang Xu, Minglong Tang, Junyan Mao, Xiaofu Jin, Wazeer Zulfikar, Yasith Samaradivakara, Jiayi Zhou, Huamin Qu, Yuling Sun, Pattie Maes</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-27 15:14:50</h6>
+<p class='card-text'>Despite growing interest in applying AI to photo-based reminiscence therapy (PRT) for people with dementia (PwD), existing systems primarily focus on PwD-AI interaction and often overlook therapists' critical role in practical PRT delivery. We present RemiAssist, a system that supports therapist-in-the-loop PRT through AI-assisted planning and real-time facilitation. RemiAssist incorporates two core techniques: (1) a Memory Graph, which organizes key life events from a PwD's photo collection into a hierarchical graph to support theme-centered intervention planning; and (2) a Context-Aware Guiding Strategy, which provides real-time suggestions to help therapists guide reminiscence conversations and respond to sensitive situations. A field study with eight therapist-PwD dyads suggests that RemiAssist was associated with a 44% improvement in planning efficiency and a 54% increase in conversation duration, and provided timely support for handling sensitive situations. We highlight opportunities for AI systems to empower therapists and enable more personalized reminiscence therapy in dementia care.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.24527v1' target='_blank'>Modelling Radio Frequency Interference on the Lunar Farside</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Charlie K. Ashe, Ella J. Marshall, Evan F. Keane, Steve Prabu, Richard Lynch, David R. DeBoer</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-27 15:07:52</h6>
+<p class='card-text'>Technological progress is a double-edged sword in the world of radio astronomy: improvements in antennas, receivers, and digital backends increase sensitivity, but rapid growth in terrestrial and orbital communications has caused a steep rise in radio-frequency interference (RFI). Modern datasets have become increasingly contaminated by RFI that is difficult to remove and can mimic or obscure astrophysical signals, complicating the search for objects such fast radio bursts (FRBs), pulsars, and technosignatures. The lunar farside has such been proposed as a site for radio-quiet observations, motivating missions such as the Lunar Farside Transients and Technology Telescope (LFT3) and others. However, planned lunar missions may introduce intended and unintended radio emissions into this protected environment. We use a LFT3-like instrument to model the evolution of the apparent lunar farside RFI environment over the coming years. Using a planned lunar mission catalogue and models for intended and unintended emissions, we estimate the received RFI over the 0.1-2700 MHz frequency range. We find that while intended emissions are concentrated near communications bands, particularly 2.4-2.6 GHz, unintended emissions contaminate broad regions of the LFT3 band. We further find that, under the assumptions of our model, uniform UEMR shielding of at least 30 dB is required to place the maximum interference below the sensitivity of a LFT3-like instrument; more sensitive telescopes would require higher UEMR shielding. We predict that the lunar farside will remain usable for LFT3-like observations, but will become increasingly contaminated as the lunar satellite population grows. This highlights the decreasing window of opportunity for measurements of the lunar farside's radio quiet environment and should inform future mission design and policy choices for the protection of Moon-based radio science.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.24470v1' target='_blank'>The beamformed trigger of RNO-G: its design and in-field performance</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:RNO-G Collaboration, :, S. Agarwal, J. A. Aguilar, N. Alden, S. Ali, P. Allison, M. Betts, D. Besson, A. Bishop, O. Botner, S. Bouma, S. Buitink, R. Camphyn, J. Chan, S. Chiche, B. A. Clark, K. Couberly, D. Dakroub, K. D. de Vries, C. Deaconu, P. Giri, C. Glaser, H. Gui, A. Hallgren, J. C. Hanson, S. Hassiki, K. Helbing, B. Hendricks, J. Henrichs, N. Heyer, C. Hornhuber, E. Huesca Santiago, K. Hughes, A. Jaitly, A. Karle, J. L. Kelley, C. Kopper, M. Korntheuer, M. Kowalski, I. Kravchenko, R. Krebs, M. Kugelmeier, D. Kullgren, R. Lahmann, C. -H. Liu, Y. Liu, M. J. Marsee, K. Mulrey, M. Muzio, A. Nelles, A. Novikov, A. Nozdrina, E. Oberla, N. Punsuebsay, M. Ravn, Z. Riesen, A. Rifaie, D. Ryckbosch, F. Schlüter, O. Scholten, P. Schriefer, D. Seckel, M. F. H. Seikh, Z. S. Selcuk, J. Stachurska, J. Stoffels, S. Toscano, D. Tosi, J. Tutt, N. van Eijndhoven, A. G. Vieregg, A. Vijai, H. Warnhofer, D. Washington, C. Welling, D. R. Williams, P. Windischhofer, S. Wissel, A. Zink</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-27 14:07:08</h6>
+<p class='card-text'>The Radio Neutrino Observatory in Greenland (RNO-G) is a neutrino detector under construction at Summit Station, with 8 out of a planned 35 stations currently deployed. We have designed and deployed a new phased array (PA) trigger based on delay-and-sum beamforming and power integration. This trigger improves detector performance by suppressing thermal noise and better targeting neutrino-induced Askaryan signals. The new PA trigger has been deployed since the 2025 season. The trigger performance has been characterized using test pulses and calibration pulsers both in the lab and in-situ, and we find across these tests a 25% average reduction in the signal-to-noise ratio (SNR) needed to trigger on signals. Simulations are shown to be representative of the detector, and simulated trigger efficiencies are within 10% of measured data. Following the in-situ trigger validation, we use data-driven trigger performance to inform simulations of the detector effective volumes. The PA trigger increases our effective volume significantly, by over a factor of 2 below 0.1 EeV and at least a factor of 1.3 at the highest energies of 100 EeV.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.24423v1' target='_blank'>Does Central Planning Fail Locally? Evaluating EV Charging Flexibility Optimization Across Grid Levels</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Ambra Van Liedekerke, Lorenzo Zapparoli, María Parajeles Herrera, Blazhe Gjorgiev, Gabriela Hug, Giovanni Sansavini</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-27 13:35:55</h6>
+<p class='card-text'>Electric vehicles (EVs) are a key enabler of global decarbonization, and their charging flexibility is crucial for integrating high shares of renewable energy into future power systems. Research on EV charging flexibility in future power systems has largely focused on either the transmission or the distribution level, with limited integration between the two. However, these two scales cannot be separated: EV charging optimized at the national transmission level for system-wide planning is ultimately activated in local distribution grids, where it may cause voltage and loading issues. This study bridges that gap by evaluating EV charging flexibility across both grid levels, using two different control approaches. First, a top-down approach disaggregates the optimal charging demand obtained from a centralized planner at the transmission grid down to the distribution grid, explicitly accounting for grid constraints and individual driving requirements. Second, a bottom-up approach optimizes EV charging locally under distribution-grid constraints using electricity price signals from the centralized planning model. Controlled charging from the top-down and bottom-up approaches is then compared with uncontrolled charging. Results show that the top-down approach produces EV charging schedules that are compatible with individual driving behavior and reduce grid violations compared to uncontrolled charging. The bottom-up approach identifies an optimal profile similar to the centrally optimized profile, showing that electricity price signals are a suitable coordination mechanism. These findings suggest that centrally optimized EV charging remains effective when implemented at the distribution level, in systems with high DER penetration.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.24411v1' target='_blank'>Occluded Oculus: Operationalizing Stylistic Obscurement</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Robert Dilworth</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-27 13:27:00</h6>
+<p class='card-text'>What did it take for Hermes, the devout messenger of the Olympian gods, to slay Argus Panoptes, the multi-eyed giant of Greek myth? As the perfect guardian, Panoptes' legion of ever-watchful eyes proved difficult -- but not impossible -- to defeat. The centerpiece of Hermes' strategy was obfuscation and sabotage. Posing as a shepherd, Hermes sealed each of Panoptes' eyes -- eyes that would otherwise have alerted the fearsome giant to Hermes' plot -- and vanquished him. The moral of the story: when a challenger must surmount a formidable foe -- one far greater in stature and vastly more equipped -- crafty maneuvers are not merely advisable but indispensable for victory. In this work, the "challenger" is a collective leveraging adversarial tactics to overcome the "multi-eyed giant" of stylometric systems and surveillance apparatuses. To successfully claw back the privacy siphoned by the multi-eyed giant, the challenger must carefully evaluate their plan of attack, $\textit{TraceTarnish}$, and determine what does and does not work to anonymize the authorship of text. To that end, we conduct an ablation study of $\textit{TraceTarnish}$ to better understand which module -- Translation, Obfuscation, Imitation, or Injection -- best confounds a stylometric system. Our results indicate that the most effective approach was Injection, meaning that inserting zero-width Unicode characters, homoglyphs, and intentional misspellings neutralizes the indefatigable eyes long enough to claim the head of the all-seeing giant.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.24369v1' target='_blank'>Model Predictive Planner for UAV Navigation in Non-Convex Air Corridors</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Henrique Silva, Marcelo A. Santos, Guilherme V. Raffo</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-27 12:42:38</h6>
+<p class='card-text'>This work presents a motion planning framework for UAV navigation in non-convex urban air corridors. The planner is based on a mixed-integer tracking model predictive control formulation that enforces corridor feasibility and dynamic consistency within a single optimization problem. To guarantee convergence to the target and mitigate the occurrence of local minima induced by non-convex geometry, a shortest-path-based offset cost with feasibility constraints is embedded directly into the planning problem. Numerical simulations show that the proposed formulation generates dynamically valid trajectories that satisfy the corridor constraints and converge to the target without relying on external global planning stages.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.24287v1' target='_blank'>The Semantic Least-Energy Principle: A Hypothesis for Intelligence</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jie Zhang, Haoyuan Zhu, James Jinheng Zhang, Haonan Hu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-27 11:35:13</h6>
+<p class='card-text'>Despite remarkable advances in artificial intelligence and cognitive neuroscience, no generally accepted first-principle explains why intelligent systems organize latent semantic states as they do. Existing frameworks such as information theory, the Information Bottleneck, the Degree of Information Abstraction, predictive coding and the Free Energy Principle provide powerful frameworks for understanding communication, learning, and prediction, but do not explicitly explain the emergence and organization of semantic intelligence. Here we propose the \textbf{Semantic Least-Energy Principle (SLEP)} as a hypothesis that intelligent systems evolve internal representations by maximizing semantic utility while progressively minimizing semantic, predictive, and computational energy. We formulate this hypothesis within a variational framework in which semantic cognition is governed by a Semantic Action Functional whose stationary solutions define efficient trajectories on a latent semantic manifold. This formulation emerges a series of theoretical predictions, including semantic geometry, semantic thermodynamics, and low-energy latent semantic states as complementary consequences of the same underlying optimization process. SLEP unifies semantic abstraction, reasoning, planning, and communication within a common mathematical framework while generating experimentally testable predictions for both artificial and biological intelligence. Although the hypothesis remains to be rigorously validated, it provides a principled foundation for investigating semantic intelligence from a first-principle perspective.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.24280v1' target='_blank'>From Proprietary to Open-Source: Bridging the Distribution Gap via Multi-Agent Protocol Distillation in Agentic Search</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Junlin Liu, Jiangwang Chen, Zixin Song, Shuaiyu Zhou, Chunji Lv, Hank Wu, Kailin Jiang, Jinyang Wu, Bohan Yu, Chenxi Zhou</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-27 11:27:38</h6>
+<p class='card-text'>Agentic search enables large language models to solve knowledge-intensive tasks by interleaving multi-step reasoning with retrieval, yet optimizing this with outcome-based reinforcement learning (RL) provides only sparse supervision. Knowledge distillation can supply denser guidance, and advanced proprietary models with their strong reasoning capabilities are promising teachers. While distilling from proprietary models can densify this supervisory signal, conventional logit-matching is precluded by hidden logits and mismatched tokenizers, whereas raw natural language trajectory imitation transfers superficial stylistic artifacts rather than core reasoning competence. To address the heterogeneous distillation problem and bridge the distribution gap, we propose Multi-Agent Protocol Distillation (MAPD), a joint distillation and RL framework uses a structured, style-normalized protocol as an intermediate representation. An offline multi-agent system (MAS) decomposes each query, retrieves supporting evidence, repairs failed searches, and converts the resulting exploration trace into a JSON protocol containing the task type, reasoning plan, and extractive grounding facts. During training, the protocol is provided only to a privileged branch of the student policy, whose token distributions furnish a dense distillation signal alongside the sparse RL objective. Extensive evaluations across seven QA benchmarks demonstrate that MAPD consistently outperforms competitive distillation and RL, achieving average success rates of 39.4\% on Qwen3-1.7B and 44.4\% on Qwen3-4B. Crucially, the framework generalizes robustly across diverse proprietary teachers while effectively mitigating the student policy from style drift and verbosity degeneration.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.24267v1' target='_blank'>FeelWorld: Visuo-Tactile World Model for Hierarchical Contact Prediction and Planning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Wenxuan Ma, Chaofan Zhang, Chao Xue, Yinghao Cai, Guocai Yao, Shaowei Cui, Shuo Wang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-27 11:00:26</h6>
+<p class='card-text'>Humans plan physical interactions by imagining the possible outcomes of candidate actions. However, existing visual world models primarily capture appearance dynamics while overlooking the tactile states that govern contact-rich interactions, potentially producing imagined futures that appear visually plausible but violate physical dynamics. We introduce FeelWorld, a hierarchical visuo-tactile world model that jointly predicts future visual latents and three tactile states. FeelWorld organizes these states hierarchically as contact state, a 3D tactile latent that encodes force-related information, and slip state. These states are jointly predicted by a shared latent dynamics model with explicit supervision. To prevent irrelevant tactile signals during free-space motion from degrading visual prediction, we introduce a contact-gated asymmetric attention mechanism that maintains a visual-only prediction pathway before contact and enables joint visuo-tactile dynamics prediction during contact. The model is further trained with autoregressive rollouts and context noise injection to improve robustness to compounding errors. The predicted contact and slip states also support contact-aware CEM planning. Experiments on chip grasping, fruit grasping, and USB insertion show that FeelWorld reduces 10-step LPIPS from 0.084 to 0.058 and maintains an LPIPS that is 61% lower than that of the visual baseline after an 80-step autoregressive rollout. FeelWorld also achieves an average zero-shot planning success rate of 81.7%, providing an effective approach for incorporating tactile sensing into world models.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.24233v1' target='_blank'>Quality-Adaptive Multi-UAV 3D Reconstruction with Sparse Workload Redistribution</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Benjamin Sportich, Kenza Boubakri, Olivier Simonin, Alessandro Renzaglia</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-27 10:10:31</h6>
+<p class='card-text'>3D reconstruction of unknown environments is a key application in robotics but is severely limited by the computational and energy capabilities of current aerial platforms. Deploying multiple UAVs and providing efficient and scalable path planning strategies are common approaches, but effective online coordination among UAVs remains a significant challenge. To address this problem, we propose a quality-adaptive decentralized decision-making strategy to build a 3D map with user-defined degrees of fidelity. The approach integrates a quality-oriented criterion based on TSDF confidence into view generation and information gain estimation to produce viewpoints consistent with the desired fidelity target. Additionally, we employ two levels of coordination: a penalty factor in the viewpoint evaluation to encourage local dispersion among the UAVs and a global imbalance correction mechanism. The latter, based on regularized clustering and optimal task assignment, is only triggered when an unbalanced configuration relative to high-information regions is detected. Simulation results demonstrate that the proposed method improves path efficiency compared to state-of-the-art multi-UAV exploration approaches, while also achieving higher-fidelity reconstructions in terms of coverage and accuracy. We make our code publicly available to the community.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.24230v1' target='_blank'>Umulsai: A Plain-Text Format and In-Browser Engraving System for Jeongganbo, Korean Mensural Notation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Danbinaerin Han</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-27 10:06:45</h6>
+<p class='card-text'>Jeongganbo is a grid-based mensural notation created in fifteenth-century Korea and still in standard use for Korean traditional music. Its structure -- a vertical column of square beat-cells read right to left, in which the position and share of a syllable inside a cell encode its duration -- is incompatible with engraving systems built for Western staff notation, and no practical digital tool for producing it has been in sustained distribution. This report describes the technical design of Umulsai, a jeongganbo editor that runs entirely in a web browser as a static, serverless application. Its core is (i) a human-writable plain-text format whose spatial arrangement corresponds one-to-one with the notational grid, so that duration is expressed by position and share in the text exactly as on the page; (ii) an engraving engine that formalizes the typesetting conventions of published scores -- right-to-left column flow, daegang section lines, octave-variant Sinographs, ornament attachment and micro-spacing -- as automatic rules; and (iii) a dependency-free implementation in which documents remain plain data, enabling print-quality output, playback, and interchange with recently proposed machine-oriented encodings of jeongganbo. We specify the format and its rhythmic semantics, describe the engraving model and its typographic edge cases, and discuss limitations and planned interoperability with MusicXML/MEI and optical music recognition pipelines. The implementation was produced through an AI-assisted workflow led by a domain expert and verified behaviorally against published reference scores; this workflow and its verification regime are disclosed in the report.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.24213v1' target='_blank'>Integrating Factual and Normative Industrial Knowledge via Constraint-Aware Graph Attention for Process Plan Recommendation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yuntong Chen, Yingqi Li, Yingying Xiao, Ziang Wang, Zewei Liu, Jiahao Liu, Xitian Tian, Lijiang Huang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-27 09:45:05</h6>
+<p class='card-text'>Integrating heterogeneous industrial knowledge, including factual relations and decision constraints, remains a core challenge in industrial information systems. Machining process planning exemplifies this problem because engineers must select operations by combining material properties, feature characteristics, and quality requirements. Existing methods rely mainly on similarity retrieval or classification, without a unified ranking objective or standardized evaluation. We propose PCA-GAT, which formulates machining process plan recommendation as a knowledge graph enhanced collaborative filtering problem. Bayesian Personalized Ranking provides the learning objective, while Recall@K and NDCG@K define evaluation. The knowledge graph supplies semantic structure when collaborative signals are sparse. Four domain constraints, material compatibility, precision requirements, feature applicability, and operation sequencing, are introduced as attention biases during graph propagation. Type-specific weights learn their importance, and an adaptive gate adjusts their influence using local context. On a real aerospace dataset with 115 parts and 507 plans, PCA-GAT achieves Recall@1 = 0.9087 and strong cold-start robustness, with about half the degradation of the strongest baseline under severe sparsity. Ablation studies show that knowledge graph enrichment is essential, constraints add value, and ungated constraint injection can hurt performance. The learned weights identify material-operation compatibility as the dominant factor, consistent with domain expertise. Results on three public benchmarks show no degradation when constraints are absent, supporting generalization beyond manufacturing. This study establishes a standardized recommendation protocol for engineering process planning and benchmarks seven methods across three categories, showing that knowledge representation is the main bottleneck.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.24205v1' target='_blank'>MADHAT: A Sensor Prototype for the ALICE 3 Outer Tracker</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Philip Hauer, Lars Döpper, Malte Grönbeck, Alexander Rachev, Felix Lochter, Bernhard Ketzer</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-27 09:31:25</h6>
+<p class='card-text'>The ALICE collaboration plans a completely new tracking detector based on silicon MAPS technology manufactured in the 65 nm production node as part of the ALICE~3 upgrade during Long Shutdown 4 of the LHC. The size of the whole active area is planned to be 50 m$^2$, with the Outer Tracker spanning 45 m$^2$.
+  To reach the material budget target of less than 1% $X_0$ per layer, open questions like cooling solutions, mechanical structures and electronics have to be answered. A simple sensor prototype MADHAT (Mechanical Assessment Design for Heat And Thermal solutions), mechanically identical to the final sensor, but with integrated heating elements and temperature probes, was developed to study the temperature distribution in the final detector assembly and to assess different mechanical designs of the circuit board that houses the sensor. Furthermore, it will be used to practice the industrialization of the whole mass-production, including the assembly of FPCs with external companies.
+  In this paper, we present the design of the MADHAT, a prototype readout module and show the results of first measurements.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.24075v1' target='_blank'>Data-Driven Sequential Market Optimization for Front-of-the-Meter Battery Energy Storage Systems</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Steffen Kortmann, Hannah Sanders, Andreas Ulbig</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-27 07:18:23</h6>
+<p class='card-text'>The growing integration of Battery Energy Storage Systems into electricity markets has highlighted the importance of coordinated participation across energy and balancing services to fully exploit their operational flexibility. However, existing revenue-stacking models often simplify market sequences and neglect the impact of rolling forecasts, leading to unrealistic scheduling and overestimated revenues.
+  This paper addresses this gap by introducing a sequential, data-driven optimization framework for Front-of-the-Meter Battery Energy Storage Systems that mirrors actual market operations. The framework explicitly models market mechanisms and its respective Gate Closure Times across Frequency Containment Reserve, automated Frequency Restoration Reserve, Day-Ahead Auction, and Intraday Continuous markets. Each market stage optimizes expected revenue over all remaining markets using updated price forecasts while maintaining feasibility within both technical and regulatory limits.
+  A key contribution is the opportunity-cost-based bidding strategy, which endogenously derives market-consistent bid prices and quantities from residual capacity optimization.
+  Validation for a representative operating day demonstrates that the framework yields consistent and feasible schedules, effectively adapts to updated forecasts, and minimizes deviations between planned and realized dispatch, thereby enhancing the realism and profitability of BESS operation.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.24049v1' target='_blank'>Quantum-Inspired Evolutionary Neighborhood Search for Arrival-Departure Track Utilization Adjustment under Short-Term Disturbances</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Xiaobin Li, Wuming Lei, Yanbin Gao, Weiguang Wang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-27 06:44:10</h6>
+<p class='card-text'>Short-term disturbances at major passenger railway stations alter train arrival and departure times as well as the release sequence of station resources. Effective recovery therefore requires coordinated adjustment of arrival-departure track allocation, station resource occupation, and train retiming. This study represents the station resources involved in train arrival, track occupancy, and departure operations as zone-level resource-occupation intervals. An arrival-departure track allocation adjustment model is formulated. Resource compatibility is imposed as the feasibility condition, while train delays and resource reassignment costs are jointly considered. A quantum-inspired evolutionary algorithm combined with neighborhood search (QEA-NS) is proposed to solve the model. Perturbation instances are constructed using GTFS timetable data from Frankfurt Hauptbahnhof, Germany. QEA-NS is compared with CP-SAT under the same candidate resource set and feasibility criteria. Both methods generate solutions satisfying the modeled resource compatibility constraints. QEA-NS yields a total delay of 388 min, compared with 519 min for CP-SAT, representing a reduction of 25.2\%. The mean delay of delayed trains decreases from 4.99 to 3.73 min, although QEA-NS requires a longer solution time. Across 10 random perturbation instances, QEA-NS achieves lower total delay in every case. Its mean total delay and standard deviation are 390.5 min and 35.945 min, respectively, compared with 673.8 min and 105.739 min for CP-SAT. The results indicate that, under the adopted resource representation and constraints, QEA-NS improves the delay performance of recovery plans. Its computational efficiency, however, requires further improvement.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.23989v1' target='_blank'>Co-planning of Flight Corridors and Communication Infrastructure for Urban Drone Logistics Networks</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yingjie He, Yikang Wang, Zhenyu Gao</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-27 04:34:23</h6>
+<p class='card-text'>Reliable wireless connectivity is essential for urban air mobility (UAM) networks in dense urban environments. It is therefore imperative to carefully plan the supporting communication infrastructure for UAM flight corridors. Most existing works optimize communication infrastructure and UAV flight paths independently, often leading to unnecessary base station (BS) deployment or excessive flight detours. This paper studies the joint optimization of BS deployment and UAV flight corridors in complex urban environments, aiming to minimize both infrastructure investment and flight distance while satisfying communication quality constraints. We propose CR-CMAB, a channel reciprocity-guided combinatorial multi-armed bandit framework. The framework constructs high-fidelity radio maps using 3D ray tracing, selects BS combinations via coverage-aware CMAB search, and dynamically expands the search space by identifying promising BS locations through channel reciprocity. Experimental results from a detailed case study demonstrate that CR-CMAB outperforms baseline methods with moderate computational time, yielding more strategically positioned BSs and shorter flight corridors. This study offers a practical planning perspective for cost-effective and communication-reliable UAM deployment in future smart cities.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.23942v1' target='_blank'>From Cognitive Architectures to Language Agents: A Mechanism-Level Review of Lineage, Convergence, and Migration Gaps</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Haodi Fan, Zucong Lan</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-27 02:38:59</h6>
+<p class='card-text'>Memory, planning, reflection, and tool use are often compared as feature labels, obscuring the control semantics that determine how an agent actually runs. This review connects ten historical cognitive architectures, eight language-agent runtime families, and forty-two mechanism-focused modern systems. We reconstruct each mechanism through state, control, transition, persistence, failure, learning, and resource governance, then code evidence relation (E1-E4) separately from migration depth (D0-D4). The resulting landscape is uneven. Modern agents have operationalized substantial parts of adaptive memory, failure recovery, dynamic team selection, workflow search, skill induction, resource scheduling, and uncertainty-conditioned action, although often through independent convergence rather than documented inheritance. The strongest remaining opportunities lie in couplings among mechanisms. Closest-baseline screening closes one proposed gap: GraSP already combines calibrated multi-skill selection, typed compilation, verification, bounded repair, and replanning or ReAct fallback. Five residual bundles remain: activation with latency and action utility; typed impasse with isolated substates and resolution compilation; bounded content competition with broadcast and admission learning; persistent intention with reconsideration and live method authority; and uncertainty with resource allocation, interruption, and stopping. We contribute a distinctive-mechanism catalog, an auditable evidence-depth framework, and a falsifiable agenda for testing these bundles as composable runtime invariants.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.23930v1' target='_blank'>Bridging Reinforcement Learning and Optimal Control via Feasible Action Mapping</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Stefan Richter, Alberto Giammarino, Guillem Torrente, Sam Blakeman, Peter Dürr</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-27 02:01:14</h6>
+<p class='card-text'>Operating constrained dynamical systems requires controllers to efficiently solve complex tasks while enforcing recursive feasibility and safety constraints. To address these competing requirements, we present Feasible Action for Optimal Control (FAOC), a novel control framework integrating Reinforcement Learning (RL) and Optimal Control (OC). The key contribution is a computationally efficient, optimization-based mapping algorithm that transforms the RL agent's action from a static abstract set into a state-dependent feasible parameter set of the Optimal Control Problem (OCP), guaranteeing strict satisfaction of the dynamical system's constraints. Thus, FAOC effectively combines the predictable safety of OC with the flexibility of RL. In contrast to prior work, the abstract action space of the RL agent does not require expert or heuristic design, and the OCP formulation is not compromised by the inability of RL to guarantee feasibility. We apply our approach to real-time motion planning for robot table tennis, which encapsulates these challenges. Via simulated experiments, we show that FAOC outperforms state-of-the-art baselines in both sample efficiency and closed-loop performance.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.23922v1' target='_blank'>Scalable No-Stockout Charging Scheduling for Battery Swapping Under Time-of-Use Prices</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Eunbin Cho, Junki Cho, Hakjin Lee, Jaehoon Sim, Junghoon Seo</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-27 01:31:36</h6>
+<p class='card-text'>A battery-swapping station must provide every arriving vehicle with a charged battery while minimizing the time-of-use cost of recharging returned units. Coordinating heterogeneous compatibility, vehicle-specific return times, and finite charger capacity requires service-aware recharge decisions across the planning horizon. We formulate a per-battery mixed-integer linear program that captures these operational features under a hard no-stockout constraint and derive a provably equivalent reduced form with fewer explicit binary variables. In the synthetic scaling study, a price-guided battery-path heuristic returned a full-service schedule for every instance; regime-level median solve times ranged from 0.24 to 8.0 seconds. Its median cost premiums were 7-8% over certified reference costs at the Small and Medium scales, and its certified ex post optimality-gap upper bounds were 9-12% at the Large and xlarge scales. For each operational baseline, the certified reference schedules reduced charging-energy cost by 50-60% on instances that the baseline fully served and for which a certified reference was available. In a 30-day replay of 1,002 swaps recorded at a commercial station, the reduced-model and heuristic rolling controllers served every swap and reduced charging-energy cost by approximately 50% relative to immediate charging.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.23920v1' target='_blank'>What Can I Edit? Open-Ended Strategy Discovery and the Emotion Editability Landscape</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Qing Li, Zeyu Dong, Yin Cui, Chuan Yan, Xiaojiang Peng</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-27 01:22:54</h6>
+<p class='card-text'>Emotional image editing requires more than applying affective filters or modifying predefined visual factors: an effective edit must identify what a particular image can afford for a target emotion. Existing affective image manipulation methods, including recent agentic variants, largely operate within bounded strategy spaces based on predefined factor taxonomies, knowledge libraries, or conventional editing templates, and therefore often miss image-specific, context-grounded strategies. We introduce EmoScope, a multi-agent framework that reframes the task from "how should I edit?" to "what can I edit?" EmoScope first discovers an image-specific editable space through emotion-conditioned affordance reasoning, then uses a semantic hierarchy of anchors, variables, and context to balance content consistency and emotional expressiveness before executing and verifying the edit. Because its plans are expressed as image-specific affordances rather than retrieved templates, EmoScope also exposes the editing strategy as an interactive surface for user refinement at the plan level. In a large-scale human evaluation covering all eight Mikels emotion categories, with 4,693 valid responses across 1,824 pairwise questions, participants preferred EmoScope over two competitive baselines by 88.1% on average. Attribution analysis further shows that EmoScope selects target-emotion-adaptive strategies rather than applying a uniform template. The same affordance-level plan also supports lightweight user refinement in an interactive pilot. Finally, we show that classifier-based metrics exhibit emotion-conditional blind spots toward non-stereotypical, context-grounded edits, and present a relative content-emotion preference-affinity landscape showing that EmoScope's advantage varies systematically across image-emotion combinations.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.23870v1' target='_blank'>MulRobBench: A Decision-Level Benchmark for Safe and Security-Policy-Compliant Multimodal UAV Agents</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Belal S. Alsinglawi, Weizheng Wang, Junyi Wu, Yi Jiang, Lianhai Lin, Merouane Debbah, Izzat Alsmadi</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-26 22:23:43</h6>
+<p class='card-text'>Smart-city airspace is transforming Uncrewed Aerial Vehicles (UAVs) from passive sensing platforms into cyber-physical decision makers that must follow operational rules under degraded observations and ambiguous language. Existing UAV and multimodal benchmarks evaluate perception, navigation, collaboration, and reasoning, but few assess whether physical evidence, protocol constraints, and action risk remain coupled during critical decisions. We introduce MulRobBench, an offline, protocol-conditioned benchmark for Vision-Language-Action (VLA) UAV agents in smart-city environments. MulRobBench integrates real UAV multimodal observations, protocol-level security policies, and action-level cyber-physical safety into a unified evaluation framework. The benchmark contains 3,024 samples spanning 17 task taxonomy nodes and 12 scoring dimensions across four stages: operational context understanding, multimodal evidence arbitration, degradation-aware reasoning, and risk-aware action planning. Evaluation combines semantic scoring with structural diagnostics, including policy compliance, format compliance, unsafe actions, parsing failures, and dimension-level validity. Across 17 multimodal models, the best semantic protocol-decision score reaches only 0.5141, while the best strict mean scoring-dimension accuracy is 0.1599. A controlled 20-anchor modality-ablation study changes 4-15 action selections per model, confirming that both visual and textual inputs influence decisions. Analysis identifies modality-trust selection, constraint extraction, glare, missing data, and operator shorthand as the primary causes of decision instability. MulRobBench provides a reproducible benchmark for trustworthy multimodal UAV decision making under realistic operational constraints.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.23867v1' target='_blank'>BC-NMPC: Battery-Constrained NMPC with Propulsion Prediction and Replanning for High-Speed Flight</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Parakh M. Gupta, Matej Mihulka, Matej Novosad, Robert Penicka, Martin Saska</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-26 22:16:36</h6>
+<p class='card-text'>Trajectory tracking performance of Uncrewed Aerial Vehicles (UAVs) degrades during high-speed and agile flight due to the depletion of the battery and subsequent loss of maximum available thrust. In applications such as drone racing, the consequent trajectory tracking error leads to a collision with obstacles and a subsequent failure to complete the race. In this paper, we present a novel method for integrating battery and propulsion system models into a Nonlinear Model Predictive Controller (NMPC) framework to enable real-time prediction of the voltage, consumed current, power, and maximum available thrust of the platform. This enables our approach to account for the dynamic variations in the maximum available thrust of the UAV caused by battery discharge, allowing it to plan for the depleting thrust and improve trajectory tracking performance. A trajectory planning algorithm is implemented to replan the trajectory in-flight based on evolving thrust limits. The accuracy of the proposed model is verified in real-world flight experiments, while the effectiveness of the replanning algorithm is evaluated in simulation. Compared to an uncompensated flight, our novel approach demonstrates achieves a collision-free flight to achieve a 6-fold decrease in tracking Root Mean Square Error (RMSE), a 46 % increase in flight distance, and a 100 % increase in flight time in an obstacle-ridden environment.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.23797v1' target='_blank'>Memory for Attention: Language-Conditioned Re-Perception with a Vision--Language--Motion Map</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Dibyendu Ghosh</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-26 18:49:54</h6>
+<p class='card-text'>A robot carrying a persistent, behavior-annotated map faces two planning questions, and its memory answers only one well. The \emph{spatial-navigation} question -- how to walk around a room -- we address first and report a negative: building on Vision--Language--Motion Maps (VLMM), a behavior-aware planner cost cuts a planning-time objective by $\sim$35\% over 28 AI2-THOR scenes, but under closed-loop execution the real benefit nearly vanishes ($\sim$4\%) and an on-demand vision--language model (VLM) does as well. The \emph{resource-allocation} question differs: under a limited perception budget, what should the robot re-observe now to keep its map fresh? Framing re-perception as this attention decision, we show a persistent map's memory (change-history, or even just recency of last sighting) yields the best schedule (held-out), matching an oracle, while the memoryless VLM prior is poor. Because the schedule reallocates budget toward what matters, memory's benefit concentrates on the important objects ($\sim$1.6$\times$ the mean), and a downstream fetch task confirms fewer wasted trips; the gain grows with per-instance heterogeneity exactly as a Cauchy--Schwarz bound predicts -- it equals $\mathrm{Var}(\sqrtλ)$, the variance of root-volatility. With a real CLIP prior on rendered objects the advantage is $+21$--$26\%$. The map's distinctive value appears when the task is \emph{language-conditioned}: told what to track, VLMM grounds the relevant objects (open-vocabulary) and tracks their change (memory), beating even a strong relevance-weighted recency baseline ($+2.5\%$) -- so its motion channel adds value beyond a last-seen timestamp -- and an on-demand VLM ($+8.9\%$); neither language nor dynamics alone suffices. The map earns its keep not by telling the robot how to walk around a room, but by telling it what to pay attention to.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.23734v1' target='_blank'>TRUAV: Distributed Multi-Agent Reinforcement Learning for Trajectory Planning and Routing Enhancement in UAV-Aided IoT-Enabled VANETs</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Muhammad Umar Farooq Qaisar, Lin Zhang, Zhen Chen, Wajdy Othman, Shehzad Ashraf Chaudhry, Chang Liu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-26 16:06:08</h6>
+<p class='card-text'>Unmanned aerial vehicles (UAVs) have emerged as a key enabler of next-generation Internet of Things (IoT) ecosystems, offering flexible aerial relaying to extend connectivity across dynamic vehicular ad hoc networks (VANETs) in smart city environments. However, conventional centralized approaches for UAV trajectory planning require continuous global network state aggregation, making them impractical under bandwidth and energy constraints typical of dense urban deployments. In this article, we present TRUAV, a distributed multi-agent reinforcement learning framework based on independent tabular Q-learning for joint UAV trajectory planning and routing enhancement in UAV-aided VANETs. Each UAV is equipped with a local Q-learning agent that operates purely on locally observable information, including vehicle density, packet queue states, and neighbor UAV positions, thereby eliminating the need for global state exchange. A potential-game-inspired reward design encourages spatial diversity and routing-aware UAV positioning among interacting agents while accounting for energy consumption. Numerical simulations over a large urban area with 200 mobile vehicles show that the proposed TRUAV framework achieves network coverage and packet delivery ratios comparable to centralized deep reinforcement learning methods, while also improving relay delay and energy efficiency. Finally, we discuss emerging challenges and future research directions for distributed multi-agent UAV-assisted IoT systems.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.23726v1' target='_blank'>Hierarchical Soft Actor-Critic for Sparse-Reward Long-Horizon Reinforcement Learning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Zahra Abdalla Elashaal, Afef Hfaiedh, Nahla Khraief, Issmail Ellabib, Giansalvo Cirrincione</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-26 15:41:52</h6>
+<p class='card-text'>Exploration in sparse-reward long-horizon tasks poses significant challenges for reinforcement learning. To address these challenges, we propose a two-level Hierarchical Reinforcement Learning (HRL) framework. The first level handles high-level strategic planning, while the low-level uses the continuous-control Soft Actor-Critic (SAC) algorithm, and they utilize entropy-regularized policy optimization. The proposed framework was trained and evaluated using the Search-and-Rescue-2 (SAR-2) dataset. HRL-SAC effectively addresses sparse-reward long-horizon search problems characterized by delayed rewards and continuous control, and its outperforming the flat SAC baseline reinforcement learning in terms of success rates, coverage efficiency, and convergence. These findings indicate that hierarchical entropy-regularized policies are a promising solution to tackle long-horizon sparse-reward reinforcement learning tasks.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js'></script>
+</body>
+</html>
