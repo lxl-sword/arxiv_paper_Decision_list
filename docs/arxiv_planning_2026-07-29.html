@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>planning - 2026-07-29</title>
+<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap' rel='stylesheet'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css'>
+<style>
+body {
+font-family: 'Roboto', sans-serif;
+background-color: #f5f7fa;
+padding: 20px;
+}
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.card-title {
+    font-weight: 700;
+}
+.card:hover {
+    transform: scale(1.02);
+    transition: 0.3s ease-in-out;
+}
+</style>
+</head>
+<body>
+<div class='container'>
+<h1 class='text-center my-4'><i class='fas fa-book'></i>planning - 2026-07-29</h1>
+<div class='row'>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.26056v1' target='_blank'>INTACT: Isomorphic Intent-to-Action Learning for Search-Free World Models</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Junhan Sun, Hao Zhao, Guofeng Zhang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-28 17:59:40</h6>
+<p class='card-text'>Forward latent world models predict how actions change a scene, but recover actions for a desired change only through expensive test-time search. We introduce INTACT (INtent-To-ACTion), an end-to-end JEPA that turns action-labeled, reward-free trajectories into a deployable intent-to-action interface. Each transition supplies physical intent $z_{t+1}-z_t$, while a future goal supplies deployment intent $\operatorname{sg}(z_g)-z_t$. The architecture is isomorphic between the local and goal motion-intent backbone-input graphs through an identical four-slot grammar and shared parameters, and between supported local and goal motion-intent families through action-law semantics induced by the same predictor rather than pointwise latent equality. INTACT also provides intact transfer from RGB evidence to action-effective latent intent coordinates and from intent families to their corresponding action-law families. Asymmetric endpoint gradients ground physical successors and fix future goals as anchors, joining representation learning and control without pointwise latent matching or globally linear dynamics. The resulting coordinates support a robust distributional action law: its conditional mean serves directly as a search-free policy, while sampling remains available for diversity or optional verification. On the four official LeWM tasks, one-epoch, zero-search models reach 85.78\%, 100.00\%, 97.67\%, and 97.89\% success. Optional local CEM centered on the Direct plan reaches 96.86\% macro success using 384 instead of 9,000 candidate sequences, reducing sampling by $23.44\times$ while improving pure CEM by 16.00 points. One shared four-task encoder reaches 89.39\% E5 Direct macro and improves every task over jointly trained LeWM, while predicted--expert action-family kNN tracks Direct success at $r=0.954$. Direct inference takes 2.9--5.5 ms.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.26041v1' target='_blank'>Desktop-Delta Bench: Do Computer-Use Models Understand Desktop GUI Transitions?</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Abhishek Pillai, Samir Kumar Nayak, Yuan Chen</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-28 17:49:51</h6>
+<p class='card-text'>Computer-use agents (CUAs) increasingly act through desktop GUIs to complete long-horizon tasks. Current benchmarks primarily measure end-task success or single-frame grounding. Neither isolates whether a model can reconstruct the causal, task-relevant transition produced by an action- crucial for rejecting stale observations, verifying progress, and recovering from failure. This is difficult because inference, remote input, app rendering, and screenshot capture are asynchronous: the next observation may be delayed, occluded, transient, or unrelated, then misread as progress and carried into subsequent planning. We introduce Desktop-Delta Bench (DDB), an offline step-level benchmark with 2,013 human-verified instances from novel, multi-app Linux trajectories across ~15 applications and 50 task domains. DDB trajectories targets 3 failure dimensions- state verification, source tracking, and context-aware control- through 2 complementary tasks: 463 3-frame temporal-ordering instances, including 105 with a cross-trajectory decoy, and 1,550 before-after pairs labeled from 5 actions + its payload. We evaluate 8 closed and open-source model families across 32 ordering and 16 single-action settings, observing consistent gaps. Ordering remains unsaturated: best non-decoy and decoy exact-match rates are 65.1% and 65.7%. Task context improves decoy identification by 6.9 percentage points but reduces non-decoy exact match by 2.2 points; error analysis reveals systematic copying of the presented A-B-C order. Single-action results show that inferring the action family is harder than locating it: click F1 is 0.96 vs, 0.76 for drag, while recognized drags are generally localized well. DDB, thus, complements end-to-end benchmarks by filling the missing diagnostic layer between GUI grounding and final task success, enabling targeted improvements to desktop CUA verification, reliability, and recovery.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.25993v1' target='_blank'>Beyond Zooming: Learning Multi-Tool Visual Reasoning for Ultra-High-Resolution Remote Sensing</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Fengxiang Wang, Jiangnan Huang, Mingshuo Chen, Yueying Li, Yang Shi, Junwei Luo, Haoyu Wang, Yansheng Li, Jing Zhang, Haiyan Zhao, Wenjing Yang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-28 17:09:16</h6>
+<p class='card-text'>Ultra-high-resolution (UHR) remote-sensing (RS) imagery provides fine-grained Earth-observation evidence over city-scale scenes, but poses a fundamental challenge for multimodal large language models (MLLMs): task-relevant evidence is often sparse, local, and spatially dispersed across extremely large visual contexts. A natural solution is to equip MLLMs with zoom-in tools for active local inspection. However, through a pilot study on XLRS-Bench, we find that zoom-in is only partially effective: it resolves easy and medium-level tasks with locally recoverable evidence, but saturates on hard cases requiring global search, multi-region comparison, path planning, or dispersed-evidence reasoning. Motivated by this finding, we move beyond single-tool zoom-in and introduce GeoMTVR, a large-scale Geospatial Multi-Tool Visual Reasoning dataset built from wide-area satellite imagery. GeoMTVR contains 13K UHR VQA samples with interleaved reasoning trajectories, diverse visual tool calls, and returned visual observations, enabling models to learn question decomposition, tool selection, regional inspection, object-level grounding, auxiliary visual reasoning, and cross-tool evidence integration. Beyond supervised fine-tuning, we propose a tool-attention-focused reinforcement learning algorithm that concentrates optimization on critical tool-use decisions, including when to invoke tools, which tool to select, where to apply it, and how to interpret tool outputs. By combining SFT on GeoMTVR with our RL algorithm, we develop GeoLens, a multi-tool visual reasoning MLLM for UHR RS. Experiments show that GeoLens consistently outperforms direct reasoning and single-tool zoom-in baselines, achieving stronger accuracy, better evidence grounding, and more efficient tool-use trajectories.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.25984v1' target='_blank'>Schrödinger's Cat: Probabilistic Representation and Prediction of Potential Scene Kinematics</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Timy Phan, Jannik Wiese, Björn Ommer</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-28 17:05:39</h6>
+<p class='card-text'>Predicting how a scene may evolve from partial observations requires reasoning about multiple possible futures rather than committing to a single trajectory. Existing approaches either generate appearance-dominated video predictions or sample a small number of trajectories without explicitly modeling the distribution of possible motion. We introduce Goal-Aware Representations of Future kInEmatic Latent Distributions (GARFIELD), a probabilistic model of scene kinematics that learns a structured spatio-temporal latent representation of the distribution over possible futures given an image and optional spatio-temporally sparse constraints. The same latent representation enables both joint sampling of all trajectories and direct access to the underlying motion distribution through an efficient deterministic density decoder. As a result, uncertainty about future motion can be localized to specific scene elements and timesteps and progressively refined through additional constraints. Experiments demonstrate strong motion planning performance competitive with large video generation models while sampling trajectories $97\times$ faster. Our method further estimates motion densities two orders of magnitude faster than Monte-Carlo sampling from motion generation models, enabling interactive exploration and uncertainty-aware planning.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.25875v1' target='_blank'>A2TTA: Anchored-and-Agile Test-Time Adaptation for Evolving Traffic Sensor Networks</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Du Yin, Xiachong Lin, Yue Tan, Jinliang Deng, Estrid He, Hao Xue, Flora D. Salim</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-28 15:38:27</h6>
+<p class='card-text'>Traffic forecasting is important for efficient traffic management and route planning in smart cities. Existing traffic forecasting studies typically assume fixed sensor graphs, overlooking the continuous evolution of real-world traffic networks, e.g., ongoing road network construction and evolving human mobility patterns. These dynamic changes can substantially degrade conventional forecasting models, motivating test-time adaptation (TTA) to efficiently adapt pretrained models during deployment. However, applying TTA to evolving traffic sensor networks remains challenging in two aspects. First, topology expansion introduces new sensors and connections, continuously reshaping the sensor graph. Second, tem- poral shifts vary in time scale and stability, requiring differentiated adaptation to long-term and short-term shifts. In this study, we address these challenges by proposing A2TTA, an Anchored-and-Agile Test-Time Adaptation framework for evolving traffic sensor networks, which transforms topology-induced forecasting errors into an expandable output calibration problem and separates tem- poral adaptation into persistent global correction and agile context-specific specialization. By jointly addressing topology evolution and multi-scale temporal shifts, A2TTA enables efficient and robust adaptation to continuously evolving traffic environments. Extensive experiments on ten real-world traffic networks demonstrate that A2TTA consistently improves forecasting performance across different backbones, datasets, and prediction horizons. Our code is available in https://github.com/lixus7/A2TTA.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.25780v1' target='_blank'>Macroscopic wall pressure and microscopic contact load in crowds without egress: social-group cohesion and boundary buffering</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Bo-Shiun Shen, Son-Hsien Chen</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-28 14:35:07</h6>
+<p class='card-text'>Crowd safety in confined venues is usually evaluated through evacuation performance or pre-collision avoidance, while direct mechanical hazards in dense gatherings without egress remain poorly understood. We study an Elastic Reorientation Model (ERM), a Social Force Model (SFM), and their coupled dynamics. Post-collision behavior is represented by social-group cohesion ($γ_g$) and wall buffering ($γ_w$), while risk is quantified by the macroscopic wall line pressure ($P_{\text{wall}}$) and the microscopic maximum per-agent collision impulse ($δp_{\text{max}}$). In the ERM, cohesion and wall buffering generally reduce $P_{\text{wall}}$ by retaining agents in the bulk, but large groups exhibit a high-$δp_{\text{max}}$ hazard window at intermediate cohesion. As $γ_g\rightarrow1$, local pairing suppresses cluster growth and shifts kinetic energy from relative to center-of-mass motion, reducing $δp_{\text{max}}$. SFM pushing and sliding amplify $δp_{\text{max}}$, especially when agent-agent and agent-wall interactions coexist, while active driving raises $P_{\text{wall}}$ through near-wall accumulation. The coupled dynamics produces a wall-pressure/contact-load ($P$-$p$) trade-off. Finite-size scaling reveals an independent-agent-induced phase boundary at $γ_w=0.5$, characterized by a susceptibility discontinuity, and a grouped-agent-induced continuous phase boundary along a finite segment of $(1-γ_w)(1-γ_g)=0.5$, characterized by divergent susceptibility and terminating at a critical point. Both disappear in the social-force-free ERM, showing that they emerge from the coupled ERM+SFM dynamics. These results provide mechanistic guidance for crowd-risk mitigation and safety planning in high-density venues without egress.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.25755v1' target='_blank'>RAISE: A Low-Frequency Space-Based Payload for Solar Radio and RFI Measurements on the SMiLE Mission</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Sangeetha A, Harsha Avinash Tanti, Abhirup Datta, Anshu Kumari, Rajesh Bodade</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-28 14:16:17</h6>
+<p class='card-text'>We present the Radio-wave Apparatus for Investigating Solar & Earth interference (RAISE), a compact low-frequency radio payload proposed for hosting on the SMiLE mission. Operating from Low Earth Orbit, RAISE targets a spectral regime that is largely inaccessible from the ground due to ionospheric effects. The payload is designed to enable space-based observations of low-frequency solar radio emissions while simultaneously characterizing terrestrial and ionospheric radio frequency interference in the near-Earth environment. RAISE employs mode-dependent Earth-pointing and Sun-pointing observations to generate dynamic spectral measurements relevant to space weather studies and low-frequency radio mission planning. As an experimental and technology demonstration payload, RAISE provides essential heritage for future space-based low-frequency radio astronomy and space weather missions.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.25728v1' target='_blank'>Shared Voxel-Map-Based Cooperative Indoor UAV Guidance with a Multi-Agent Soft Actor-Critic Controller</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Thomas Hickling, Dylan Wynne, Yu Su, Nabil Aouf</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-28 13:52:12</h6>
+<p class='card-text'>This paper presents a cooperative indoor UAV guidance framework that combines a shared voxel-map world model with a multi-agent Soft Actor-Critic (MASAC) controller. Multiple drones fuse 360 LiDAR observations into a common world-frame occupancy map, which is converted into a compact bird's-eye-view (BEV) representation and provided to each agent as an ego-aligned local crop. This integrate-in-world, act-in- ego design enables consistent multi-UAV spatial fusion whilst retaining decentralised continuous control. The policy combines BEV map features, near-field obstacle observations, and compact goal and peer-state information within a centralised-training, decentralised-execution framework. In simulation, the learned controller achieves a 90.3% success rate in corridor navigation, outperforming Astar planning, an artificial potential field controller, and a prior guidance method. To address residual sim-to-real mismatch, the simulation-trained policy is further adapted using offline imitation fine-tuning from real-world data. Real-world experiments in GNSS-denied indoor environments demonstrate stable two-UAV cooperative operation across increasingly chal- lenging obstacle layouts. The results show that shared voxel-map representations provide an effective and scalable spatial substrate for learned cooperative indoor UAV guidance.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.25656v1' target='_blank'>OrchBench: Evaluating Multi-Agent Orchestration Plans in Isolation via Deterministic Simulation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Zhenzhen Ren, Jiyan He, Xinpeng Zhang, Zhenxing Qian, Ke Han, Shuxin Zheng, GuoBiao Li, Xiaoqing Zhang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-28 12:43:34</h6>
+<p class='card-text'>Complex tasks often decompose into parallelizable yet interdependent subtasks, making orchestration critical to the performance of multi-agent systems (MAS). Existing evaluations typically rely on end-to-end execution, which conflates orchestration-plan quality with worker capabilities, tool reliability, and environmental noise. Moreover, the time and token costs of real execution grow rapidly with workflow scale, making systematic evaluation expensive. We present OrchBench, a simulation-based benchmark for evaluating multi-agent orchestration plans in isolation. Starting from real-world tasks, OrchBench constructs directed acyclic graphs (DAGs) that encode task dependencies, with controlled sizes and degrees of parallelism. Given a DAG, a per-agent context limit, and an agent budget, the evaluated planner assigns subtasks to agents and specifies cross-agent information transfers and their retention ratios. A deterministic simulator evaluates the resulting plan without invoking worker agents and returns interpretable measures of result quality, makespan, and token cost. The simulated scores produced by OrchBench correlate strongly with quality scores from Claude Code executions, achieving a Pearson correlation of \(r=0.816\), while requiring only \(1.3\%\) of the tokens and \(10.3\%\) of the wall-clock time. Across diverse planners and workflow scales, we find that preserving task-critical information is more important than simply increasing the number of agents, and the benefits of parallelism diminish as coordination failures accumulate. These results establish OrchBench as an efficient and interpretable benchmark for comparing and diagnosing multi-agent orchestration plans.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.25589v1' target='_blank'>Forensic Reproducibility Audit of a Radiology Vision-Language Model Benchmark: From Intended Protocol to Released Artifact</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Mateusz Kozłowski</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-28 11:19:38</h6>
+<p class='card-text'>Medical-imaging AI benchmarks combine datasets, DICOM rendering, prompts, provider APIs, automated labels, statistical code, manuscripts, and repository releases. Agreement across these artifacts is usually assumed rather than tested. We performed a retrospective forensic reproducibility audit of a preserved chest-radiograph vision-language model (VLM) pilot; no model was called again and no image or report was newly annotated. We traced prompt bindings, DICOM metadata, output completeness, label extraction, matched analyses, and release propagation. Of 300 planned model-prompt calls, 297 yielded nonempty reports. Sixty Claude calls labeled A/B were executed with the same C prompt. The 30 studies represented 28 patients. Four MONOCHROME1 images were rendered without required polarity inversion, dataset split membership was not retained, and the unvalidated extractor truncated five reports to 4000 characters. Reconstructing one common cohort of 369 complete case-finding blocks changed Cochran's Q from 154.73 to 182.29. Of 45 McNemar comparisons, 27 had unadjusted p < 0.05 and 20 remained below 0.05 after Holm adjustment. These values describe only the archived automated-label matrix; they do not recover the intended prompt comparison or establish clinical performance. We withdraw the original performance, ranking, prompt-effect, and clinical claims and specify machine-verifiable controls for cohort, DICOM rendering, prompt and model identity, call status, annotation provenance, keyed analysis, and derived artifacts.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.25489v1' target='_blank'>Agentic AI in medicine: architectures, applications, evaluation, and challenges for clinical translation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Zheng Tong, Yang Liu, Wanshu Fan, Jing Qin, Zhongbin Han, Haifan Gong, Congyu Liao, Xiaofeng Liu, Cong Wang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-28 09:25:25</h6>
+<p class='card-text'>Large language models and multimodal foundation models are enabling medical artificial intelligence (AI) systems to move beyond isolated prediction and undertake multistep clinical tasks that require planning, tool use, memory, iterative correction, and coordination among specialized agents. However, the scope of agentic AI in medicine remains unsettled, and current evaluation practices are not yet aligned with the requirements of clinical use. We conducted a scoping review with systematic evidence mapping across five electronic sources, screened 1,649 exportable records, and provisionally included 557 unique studies that met predefined criteria for goal-directed task execution, tool use, interaction with external resources, feedback-based refinement, or multi-agent collaboration. The included studies describe single agents that use external tools, workflows supported by retrieval and external knowledge, multimodal agents, and multi-agent systems applied to medical question answering, image interpretation, electronic health record analysis, drug safety, and clinical trial prediction. The evidence base remains dominated by public benchmarks, simulated settings, retrospective datasets, and small-scale expert evaluation. Process reliability, evidence traceability, uncertainty, safety, workflow impact, and external validity are evaluated less consistently. Clinical translation will depend on clearer definitions, reproducible evaluation, auditable oversight, interoperable system design, and prospective validation in real-world clinical workflows.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.25487v1' target='_blank'>CoTinyVLA: Chain-of-Thought Distillation for a Sub-Billion-Parameter Vision-Language-Action Model</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Minhyeok Lee, Chiyoung Kim, Chanhoe Gu, Seongrok Kim, Sanghyuk Roy Choi, Donghwan Hwang, Donghun Ryu, Seokhyun Kim</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-28 09:24:17</h6>
+<p class='card-text'>Vision-Language-Action (VLA) models translate natural-language commands into robot action sequences, but leading systems on the LIBERO-Plus robustness benchmark use three- to seven-billion-parameter backbones whose memory demands can exceed embedded robotic budgets. We present CoTinyVLA, a 0.9B-parameter action model on a Qwen3.5-0.8B backbone that obtains that robustness by structuring supervision instead of enlarging the model. Three components target different axes of the problem: dual-view temporal input of 16 history frames per step with textual camera and time markers; hierarchical chain-of-thought (CoT) distillation from a 35B teacher into an episode-level Plan and a chunk-level Think span over task phase, gripper state and next subaction; and paraphrase augmentation expanding 40 base commands into 800 variants. On LIBERO-Plus, spanning 10,030 perturbed tasks across seven perturbation dimensions, CoTinyVLA reaches 90.8% on Spatial, 87.3% on Object, 86.6% on Goal and 80.7% on Long, leading the strongest 7B baseline on all four suites by 4.7, 2.8, 15.9 and 3.0 points, with every margin interval excluding zero. The gains concentrate on the hardest axes of the benchmark: across the eleven published baselines none exceeds 53.2% on Robot Initial States in any suite, whereas CoTinyVLA reaches 73.6% on Goal against 39.9% for the strongest baseline. Ablations show the three components to be separable by perturbation axis, and at a matched image budget how frames are divided between the two cameras and across time accounts for 8.6 points on its own. Closed-loop inference peaks at 2.25 GiB of allocated GPU memory, and paired interventions show the episode Plan to be load-bearing: replacing it with an empty or contradictory span costs 40 to 45 points of success. Structured supervision thus lets a 0.9B backbone exceed all of them. Code: https://github.com/BrainJellyPie/CoTinyVLA</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.25484v1' target='_blank'>Finding Optimal Cost-Bounded Plan Reductions: Refined Model</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Martha Del Toro, Raquel Fuentetaja, Angel García-Olaya</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-28 09:21:19</h6>
+<p class='card-text'>In some real applications a plan may later become unfeasible due to newly imposed budget constraints, yet, at the same time, using only the original actions of the plan and their order is mandatory. In this paper, we study the problem of extracting, from a precomputed plan, a valid subplan that maximizes utility while respecting a cost bound. Each goal is given a utility value and the plan is reduced by removing actions that support low-utility goals, while preserving both executability and the original action order. We show the decision variant is NP-complete and propose two exact methods to solve it: one via oversubscription planning (OSP) and another via Integer Linear Programming (ILP). This paper extends our previous work published at ICAPS 2026 (Del Toro, Fuentetaja, and García-Olaya 2026b). While the core framework remains as introduced there, we further introduce a refined ILP formulation that significantly decreases the model size and improves computational efficiency.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.25482v1' target='_blank'>Integrated Framework for Long-term Elective Surgery Management under Uncertainty: From Strategic to Tactical Planning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Joao P. F. da Silva, Lucas Bortoletto, Rafael C. S. Schouery, Edilson F. Arruda, Fabricio F. Santos, Ana Paula C. I. Alves</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-28 09:17:48</h6>
+<p class='card-text'>In public healthcare systems, elective surgery waiting lists are a persistent management challenge, as hospitals must balance limited operating theatre capacity with uncertain and evolving demand. Long-term planning for these lists requires more than assigning operating theatre (OT) time to medical specialities, as isolated allocation decisions may fail to stabilise waiting lists over time. Such planning must account for uncertainty in patient arrivals in the queue and surgery durations, which are often neglected in OT scheduling models. In this context, we propose a novel integrated framework for elective surgery management under uncertainty, linking strategic queue-control decisions with tactical OT scheduling. The framework combines three components: (i) a closed-loop control policy that determines the number of patients to schedule in each planning cycle; (ii) a model to account for overtime-related cancellation risks; and (iii) a mixed-integer linear programming formulation, informed by the previous components, to solve an OT Scheduling Problem. The resulting tactical schedules are therefore guided by the long-term evolution of speciality-specific queues and by cancellation-risk considerations. We evaluate the proposed framework through a case study at University Hospital Unicamp, a large Brazilian public referral hospital. The results show that integrating strategic and tactical decisions stabilises waiting lists, controls cancellation risks, and supports more transparent theatre-allocation decisions, while remaining computationally efficient for practical implementation.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.25397v1' target='_blank'>Decompose and Reorganize: Planning with Primitives and Visuomotor Policies Learned from Demonstrations</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yizhou Chen, Hang Xu, Dongjie Yu, Yupu Lu, Tengye Xu, Zeqing Zhang, Wei Zhang, Yi Ren, Ben M. Chen, Jia Pan</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-28 07:57:09</h6>
+<p class='card-text'>Successfully automating dexterous, long-horizon robotic manipulation requires frameworks capable of both high-level reasoning and fine-grained execution. Traditional task and motion planning (TAMP), while excellent at symbolic planning, is often brittle in contact-rich operations. Simultaneously, imitation learning (IL), while effective in manipulation tasks with visual feedback, is limited by its low capability in spatial generalization and multi-stage operation. To reconcile their complementary strengths and limitations, we propose DR-LfD (Decomposed and Reorganized Skills Learned from Demonstrations), a framework that seamlessly integrates visuomotor policies into a TAMP-gated decision-making system. Based on contact relationships, DR-LfD decomposes human demonstrations into atomic skills, which are reproduced as visuomotor policies or object-centric primitives. The initiation, termination, and constraints of the visuomotor policies are carefully modeled and implemented in a TAMP-compatible form, enabling reorganization of skills learned from different sources. DR-LfD transforms the learning problem from one requiring exponential demonstration data over possible skill sequences to one whose demonstration burden scales with the number of distinct skill types, with limited data for each skill. Through comprehensive real-world and simulation benchmarking across diverse scenarios, we demonstrate the strong performance of DR-LfD on tasks involving multiple steps, unseen setups, and physical constraints. Project website: https://dr-lfd.github.io/DR-LfD-website.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.25388v1' target='_blank'>SGTP: Sampling-based Game-Theoretic Planning for Real-Time Multi-Vehicle Autonomous Racing</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Zhouheng Li, Fangguo Zhao, Mattia Piccinini, Baha Zarrouki, Yuan Gao, Zitong Shan, Johannes Betz, Chen Lv, Lei Xie</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-28 07:46:43</h6>
+<p class='card-text'>Autonomous multi-vehicle racing requires real-time planning of diverse competitive behaviors in intense interactions. Existing planners often struggle to balance strategic diversity and computational efficiency. To address this challenge, we propose Sampling-based Game-Theoretic Planning (SGTP), a real-time framework that combines game-theoretic reasoning with GPU-accelerated sampling of control sequences and dynamics rollouts. Sampled trajectories are ranked using a game-aware cost to capture competitive interactions and generate diverse racing behaviors. Our planner then performs feasibility selection by explicitly enforcing track-boundary and dynamic collision-avoidance constraints, ensuring safe and reliable transitions between racing strategies. Extensive simulations on challenging tracks show that SGTP achieves a 95.24% win rate and a 99.35% task-completion ratio in highly interactive races, with a mean computational time of 0.095 s over multiple iterative solving steps. We also demonstrate the successful application of SGTP in large-scale scenarios with up to 10 agents. We release our code and provide an open-source benchmark of multi-agent autonomous racing algorithms to facilitate future research. Project page: https://sgtp-racing.github.io/.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.25337v1' target='_blank'>Temporal-Distance JEPA: Plan-Aware Representation Learning for Latent World Model Predictive Control</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jiaxin Bai, Jiaxuan Xiong</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-28 06:38:16</h6>
+<p class='card-text'>Joint-Embedding Predictive Architectures (JEPAs) learn world models by predicting in representation space rather than reconstructing pixels, making them a natural backbone for latent model predictive control from offline demonstration logs. JEPA-style training optimizes short-horizon latent prediction, whereas planning requires a multi-step ranking of imagined futures by goal progress. Prior JEPA planners often inherit that ranking from embedding geometry, typically latent Euclidean distance, which arises as a byproduct of representation learning rather than as a progress cost mined from the logs. We propose temporal-distance JEPA (TD-JEPA), which retains the LeWM encoder--predictor backbone and mines a directed temporal cost from reward-free trajectories: same-trajectory step order supplies positive targets, cross-trajectory pairs act as heuristic negatives, and a rollout-consistency term matches the planner horizon. The mined supervision serves two roles: as the deployed planning cost when progress is topological, and as a representation signal that improves Euclidean planning when contact geometry dominates. Under locked evaluation, deploying the mined cost raises Two-Room success to 100.0% versus LeWM's 97.4%, while shared Euclidean planning on the same temporally trained checkpoint raises OGB-Cube by 14.2 points over LeWM and improves Push-T. Against LeWM and the concurrent RC-aux baseline under locked evaluation, TD-JEPA matches or exceeds both methods on every environment. Ablations show that the directed head, cross-trajectory negatives, and rollout consistency each contribute. TD-JEPA narrows the train--plan gap for JEPA world-model planners by discovering temporal progress structure in offline logs and co-designing cost form with plan-time deployment. Code is available at https://github.com/HKBU-KnowComp/TD-JEPA.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.25326v1' target='_blank'>Functionally Grading the Slicing Process by Compiling Design Intent into Slicer Projects</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Charles Wade, Devon Beck, Robert MacCurdy</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-28 06:21:32</h6>
+<p class='card-text'>Functional gradients control part behavior by varying structure, material, or process conditions across an object. Yet functionally graded fabrication is usually framed as grading geometry or material distribution rather than the slicing and fabrication process itself. In material-extrusion printing, many functional effects arise from slicer-controlled mechanisms, including local toolpath planning, surface treatment, material assignment, color mixing, and printer state. Mainstream FFF slicers expose these mechanisms as settings, but users must manually reconstruct heterogeneous intent as assigned mesh regions. We present slicer project compilation, an automated workflow that lowers heterogeneous implicit designs into slicer-native .3MF projects containing sub-meshes, settings, recipes, and process-state assignments. The compiler partitions spatial attributes into finite regions, extracts aligned sub-meshes, and serializes them into the target slicer's project dialect while preserving native toolpath planning, preview, support generation, and printer profiles. We demonstrate the approach across three parameter classes: settings meshes, virtual extrusion, and color or material halftoning. We also introduce calibrated translation models for temperature-responsive foaming TPU and PLA, allowing high-level density and Shore-hardness fields to drive fabrication-ready process fields. Printed examples include graded toolpath settings, foaming-filament properties, combined texture and process-state control, and color or material-mixture halftoning, replacing more than 2,500 repetitive manual slicer interactions. Our open-source implementation connects heterogeneous design representations to existing slicer ecosystems and provides a reusable foundation for automated, scalable functionally graded FFF fabrication.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.25285v1' target='_blank'>LiteBIRD Mission Overview after Mission Reformation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:LiteBIRD Collaboration, K. Aizawa, H. Akamatsu, R. Akizawa, E. Allys, A. Anand, D. Audley, J. Aumont, S. Azzoni, C. Baccigalupi, M. Ballardini, A. J. Banday, G. Barbieri Ripamonti, R. B. Barreiro, N. Bartolo, S. Basak, M. Bersanelli, A. Besnard, D. Blinov, F. Bouchet, F. Boulanger, N. Brancadori, T. Brinckmann, E. Calabrese, P. Campeti, A. Carones, F. Carralot, F. J. Casas, J. Chandran, Y. Chinone, M. Citran, F. Columbro, A. Coppolecchia, F. Cuttaia, P. Dal Bo, P. de Bernardis, T. de Haan, E. de la Hoz, M. De Lucia, M. De Petris, S. Della Torre, C. Dickinson, P. Diego-Palazuelos, J. J. Díaz García, T. Dotani, M. Douspis, K. Ebisawa, H. K. Eriksen, J. Errard, E. Ferreira, F. Finelli, C. Franceschet, R. Fujimoto, U. Fuskeland, G. Galloni, M. Galloway, M. Gerbino, M. Gervasi, R. T. Génova-Santos, T. Ghigna, S. Giardiello, E. Gjerløw, M. Gomes, A. Gruppuso, J. E. Gudmundsson, P. Hargrave, S. E. Harper, M. Hasegawa, M. Hazumi, S. Henrot-Versillé, L. T. Hergt, E. Hivon, K. Ichiki, K. Ikuma, T. L. Irikura, H. Ishino, B. Jost, R. Keskitalo, K. Kikuno, K. Kohri, E. Komatsu, L. Lamagna, M. Lattanzi, C. Leloup, M. Lembo, F. Levrier, J. Liu, A. I. Lonappan, M. López-Caniego, G. Luzzi, J. Macias-Perez, A. Maeda, B. Maffei, D. Maino, V. Maranchery, E. Martínez-González, S. Masi, S. Matarrese, F. T. Matsuda, T. Matsumura, S. Micheli, M. Migliaccio, M. Monelli, L. Montier, L. Mousset, S. Myozen, Y. Nagano, R. Nagata, K. Nagayoshi, M. Najafi, T. Namikawa, P. Natoli, F. Noviello, A. Occhiuzzi, K. Odagiri, S. Oguri, H. Ohsaki, S. Okumura, L. Pagano, A. Paiella, D. Paoletti, S. Paradiso, G. Pascual-Cisneros, G. Patanchon, V. Pavlidou, F. Piacentini, M. Piat, G. Piccirilli, M. Pinchera, G. Pisano, G. Polenta, L. Porcelli, F. S. Porter, M. Reinecke, M. Remazeilles, A. Rizzieri, J. A. Rubiño-Martín, M. Ruiz-Granda, Y. Sakurai, L. Salvati, J. Sanghavi, G. Savini, D. Scott, Y. Sekimoto, M. Shiraishi, G. Signorelli, S. Stellati, R. Stompor, R. M. Sullivan, R. Takahashi, R. Takaku, H. Takakura, Y. Takase, A. Tartari, K. Tassis, K. Tateoka, L. Terenzi, M. Tomasi, M. Tristram, M. Tsujimoto, D. Vaccaro, L. Vacher, B. van Tent, P. Vielva, S. Vinzl, K. Watanuki, D. J. Watts, I. K. Wehus, G. Weymann-Despres, B. Winter, E. J. Wollack, N. Y. Yamasaki, K. Yoshihara, A. Zacchei, M. Zannoni</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-28 04:42:30</h6>
+<p class='card-text'>LiteBIRD is a JAXA-led space mission designed to produce all-sky microwave polarization maps. Its primary science goal is to test representative inflationary models by measuring the cosmic microwave background $B$-mode polarization generated by primordial gravitational waves, while also providing new insights into cosmology, particle physics, and astrophysics. The mission concept has been updated following the reformation activities initiated after the Mission Definition Review in 2024. The current concept preserves the central scientific objectives, while simplifying the payload configuration: a single telescope covers 12 frequency bands with band centers spanning 40 to 402~GHz, corresponding to an optical coverage of 34--448~GHz. The telescope is a cross-Dragone reflector with a 500~mm aperture diameter, cooled to approximately 5~K and coupled to transition-edge-sensor bolometer arrays operated at 0.1~K. LiteBIRD will observe from a Lissajous orbit around the Sun--Earth L2 point during a nominal 3-year survey. More specifically, the primary scientific objective is to achieve total uncertainty in the tensor-to-scalar ratio of $δr < 0.002$ (68\% C.L.), including contributions from foreground residuals, statistical uncertainties, instrumental systematics, and margin contingency. The corresponding map-noise requirements are specified separately for the low-, mid-, and high-frequency ranges over the reionization and recombination multipole ranges. This sensitivity makes LiteBIRD unique not only for inflationary science but also for a broad range of scientific investigations probing the history of both the early and late Universe, as well as for astrophysical processes, including Galactic science. This paper summarizes the scientific objectives, updated payload and instrument concepts, observation strategy, and ground segment plans.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.25242v1' target='_blank'>Medical world models in healthcare: foundations, applications, and challenges for trustworthy clinical translation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Zhaoyan Chen, Zhongxiu Cong, Zhuanfeng Jin, Wanshu Fan, Dongsheng Zhou, Qi Ai, Haifan Gong, Congyu Liao, Xiaofeng Liu, Cong Wang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-28 03:35:47</h6>
+<p class='card-text'>Medical world models offer a framework for extending medical artificial intelligence beyond static prediction by representing evolving patient states and modelling how they change over time and in response to clinical interventions. This Review defines the conceptual boundaries, technical foundations, application domains, and evidence requirements of the field through a structured narrative synthesis with reproducible evidence mapping.We screened 1,455 unique records and assembled a corpus of 98 sources, including 14 studies that met a strict empirical definition of a medical world model. The field is organised around four capabilities: patient state representation, temporal dynamics modelling, intervention-conditioned simulation, and clinician-supervised planning. Evidence spans medical imaging, longitudinal electronic health records, treatment response modelling, physiological and multimodal state modelling, ultrasound and surgical interaction, and population and health-system simulation; clinical digital twins are treated as a cross-cutting integration framework.Current studies provide early evidence of technical feasibility for trajectory forecasting and comparison of candidate interventions, but most remain retrospective, task-specific, or preclinical. The evidence base is further limited by incomplete longitudinal intervention data, inconsistent action semantics, limited causal identifiability, long-horizon error accumulation, inadequate uncertainty estimation, and limited external validation. Clinical translation will therefore depend on precise intervention representations, robust causal and mechanistic grounding, calibrated trajectory-level uncertainty, safety-constrained planning, and prospective multicentre validation against clinically meaningful endpoints.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.25236v1' target='_blank'>VisualPatchWorld: Code World Models as Latent Structured Representations for Planning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jiaxin Bai, Jiaxuan Xiong</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-28 03:23:47</h6>
+<p class='card-text'>Different research lines use the term world model in different ways, yet they share a common aim: to capture how the world evolves under action in a form that supports perception, simulation, and planning. Two prominent realizations are neural predictors that learn dynamics in continuous vector spaces, and hand-built physics engines that expose explicit state and physical laws. Neural predictors scale from data but leave the form of the dynamics implicit; physics engines are inspectable and editable but difficult to construct at scale. We introduce VisualPatchWorld (VPW), which represents world dynamics as code. VPW first selects a qualitative dynamical form with short active probes, then fits that form's free parameters from recorded state-action traces by minimizing multi-step prediction error. The resulting programs can be rolled forward like a simulator, inspected in source form, and used inside model-predictive control; image-derived scene graphs can supply the live state at replan time. Across comparisons with prior code-based world models, VPW attains 69.0% mean planning success and exceeds the strongest code baseline by 23.5 points. The largest gains arise when choosing the correct qualitative dynamics is essential. Under the same planner, the induced models approach ground-truth engine success on navigation and grasp-rich control; a residual gap remains for contact-rich pushing, and checking a shortlist of promising plans in the engine closes most of that gap. These results establish a practical route toward automatically constructed code world models that are useful for planning. Code is available at https://github.com/HKBU-KnowComp/VisualPatchWorld/.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.25235v1' target='_blank'>Progressive Replacement Sequence Planning for Laser-Enhanced BeiDou Navigation Constellations</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Huan Yan, Juan A. Fraire, Ziqi Yang, Kanglian Zhao, Wenfeng Li, Jinjun Zheng, Ziyu Wang, Changgang Zheng</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-28 03:23:19</h6>
+<p class='card-text'>The early satellites of the third-generation BeiDou Navigation Satellite System (BDS-3) are approaching the end of their design lifetime, making progressive constellation replacement an inevitable engineering task. Meanwhile, laser inter-satellite links (LISLs) provide high-precision time transfer, sub-millimeter-level ranging, and high-rate data forwarding capabilities, offering a promising upgrade path for future BeiDou satellites. This paper investigates the replacement-sequence planning problem for progressively replacing legacy microwave satellites with laser-enabled satellites from a networking perspective. To address this problem, three main contributions are made: (i) BeiDou progressive replacement is formulated as a network-aware launch sequence planning problem over evolving laser--microwave hybrid constellation states; (ii) an integer linear programming (ILP) model is developed to evaluate the networking gain of each candidate launch action under practical engineering constraints; and (iii) a priority-aware search heuristic is introduced to reduce the action evaluation space for efficient round-wise decision making. Simulations based on the actual BDS-3 constellation demonstrate that the proposed replacement sequence achieves a more favorable hybrid-network evolution than the historical BDS-3 launch order, including earlier formation of a ground-accessible laser-enhanced network structure, better utilization of laser-link resources, fewer residual non-anchor satellites, and lower microwave-layer waiting delay. The proposed framework can serve as a network-aware decision-support tool for future BeiDou evolution, and the resulting replacement sequence can provide direct engineering guidance for BeiDou replacement planning.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.25233v1' target='_blank'>Beyond Single-Episode Optimization: Sliding-Window Aware Generative Auto-Bidding for Long-Term Advertising Effectiveness</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Binglin Wu, Chuan Yue, Yingyi Zhang, Xianneng Li, Ruyue Deng, Weiru Zhang, Xiaoyi Zeng</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-28 03:21:13</h6>
+<p class='card-text'>Auto-bidding systems optimize bids to maximize value under efficiency constraints such as Cost-Per-Action (CPA). Existing methods treat each day as an independent episode. However, many advertisers produce value so sparsely that per-day efficiency ratios become statistically unreliable, undermining advertiser retention. Platforms therefore evaluate window-level efficiency over sliding windows of $W{=}7$ days, ensuring fair evaluation and long-term advertising effectiveness. This creates cross-episode coupling: each day's bidding decisions affect up to $W$ overlapping windows, so setting daily targets requires anticipating future market conditions. We propose SWAG-Bid (Sliding-Window Aware Generative Auto-Bidding), a hierarchical framework decomposing this challenge into episode-level planning and step-level execution. The planner uses a Masked Trajectory Model to forecast markets and generate candidate plans, scored across all overlapping windows by Multi-Window Model Predictive Control Sampling (MWMS) with exponential confidence decay. The controller adjusts reliance on this guidance through a state-adaptive gate, Per-Step Gated Adaptive Layer Normalization (PSG-AdaLN), complemented by Return-to-Go and Cost-to-Go channels carrying budget and constraint information. Experiments on AuctionNet-Sparse and online A/B tests on AliExpress show that SWAG-Bid achieves competitive constraint satisfaction and value acquisition under sliding-window evaluation.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.25159v1' target='_blank'>Covariate-Adaptive Sample Size Re-estimation for Population-Standardized Historical Control Designs in Single-Arm Trials</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Keisuke Hanada, Masahiro Kojima</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-28 00:10:23</h6>
+<p class='card-text'>Externally controlled single-arm trials are increasingly considered when randomized controls are infeasible, but baseline imbalance between the active-arm trial and historical controls complicates both estimation and sample size planning. We propose a population-standardized design framework in which the target estimand is defined for the actually enrolled active-arm population and historical-control outcomes are standardized to that population through a pre-specified balancing score. Building on this estimand, we develop an outcome-blinded, covariate-adaptive sample size re-estimation (SSR) procedure that updates the required sample size using only accumulating baseline covariates, without using active-arm outcomes during enrollment. The method combines an initial scenario-based design with sequential updates of the enrolled-population score distribution, standardized control parameters, and target sample size under pre-specified stopping rules. We give conditional and unconditional power interpretations and sufficient conditions for approximate type I error control under repeated blinded SSR. In simulation studies with distributional shifts between planned and true active-arm populations, fixed designs based only on planning assumptions lost power, whereas the proposed SSR maintained power near the target level and performed similarly to an oracle design. In an illustrative ADCS-based example, the proposed procedures yielded different final sample sizes across adjustment sets, reflecting evolving enrolled-population covariate profiles. These results support covariate-adaptive, outcome-blinded SSR as a practical design strategy for externally controlled single-arm trials that target population-standardized treatment effects.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.25146v1' target='_blank'>FIDAC: An Easy-to-use Pipeline to Extract and Interpret Interpersonal Distance From Video</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Keshav Rastogi, Eugy Han, Jeremy N. Bailenson</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-27 23:44:34</h6>
+<p class='card-text'>The distance between persons reveals significant information about their perception of each other. However, such information is not easily extractable and interpretable from video input. We developed an open-sourced library, Facial Interpersonal Distance Analysis and Coding (FIDAC) that transforms facial detection results into actionable data about location and interpersonal distance. This tool merges data from multiple open-source facial detection models, strategically compensating for gaps in any individual model. In addition, we include methods for more accurate tracking, such as a pipeline for human coding of the selection of faces and a benchmarking tool to reduce depth distortion. For next steps, we plan on building upon FIDAC by evaluating its effectiveness at measuring interpersonal distance at various depths and orientations while further integrating features of proxemic analysis such as synchrony into its software.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.25138v1' target='_blank'>Reactive 3D Motion Planning for a Franka Arm via Star-World Workspace Reshaping</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Gia Dcosta, Saayuj Deshpande, Samhitha Vedire</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-27 23:12:32</h6>
+<p class='card-text'>Safety inflation can cause nearby obstacles to overlap, violating the disjoint-obstacle assumptions used by many modulation-based reactive planners. We investigate Star-World workspace reshaping for three-dimensional reactive control of a Franka Emika Panda manipulator. At each update, intersecting inflated obstacles are clustered and replaced by star-shaped proxies before a dynamical-system-based end-effector controller is evaluated. A null-space artificial-potential-field term provides complementary arm-body avoidance. We compare reshaped and unreshaped obstacle representations in six PyBullet scenarios using goal attainment, path-length ratio, and computation time. In this preliminary 12-trial evaluation, reshaping reaches the goal in five of six scenarios, compared with four of six for the unreshaped baseline. It resolves the canonical overlapping-wall case and requires 0.68--8.70\,ms per workspace update for scenes containing one to seven obstacles. However, it also increases path length, produces near-equilibria in two cases, and closes a navigable corridor through over-aggressive merging. These results show both the promise and the practical limitations of transferring Star-World guarantees from workspace geometry to a redundant manipulator controlled through inverse kinematics.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.25114v1' target='_blank'>Integrated Eco-Driving and Powertrain Optimization for Hybrid Vehicles in Complex Urban Traffic</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Milad Hasanzadeh, Amin Kargarian, Mehdi Farasat</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-27 22:19:00</h6>
+<p class='card-text'>Urban eco-driving requires the simultaneous planning of speed, acceleration, lane decisions, surrounding-vehicle safety, intersection rules, and vehicle energy use. Existing studies commonly optimize only selected aspects of urban driving, such as longitudinal motion, lane changing, intersection crossing, or powertrain energy management, while treating the remaining decisions separately. Unlike these studies, this paper develops an integrated finite-horizon eco-driving planning framework for urban hybrid vehicles that jointly optimizes traffic behavior and powertrain operation within a unified mixed-integer formulation. The novelty of the proposed method lies in simultaneously modeling longitudinal motion, lane occupancy and changes, car-following and lane-change safety, signalized and unsignalized intersection behavior, and hybrid powertrain operation. The formulation captures lane availability, lane-dependent speed limits, mandatory and emergency lane changes, safe-to-clear signal conditions, downstream clearance, stop-and-yield rules, engine and motor power, battery state of charge, regenerative braking, and fuel consumption. Simulation studies compare the proposed method with rule-following, signal-aware, overtaking-enabled, and kinematic-only optimization baselines. The results demonstrate improved energy performance while maintaining feasible, safe, comfortable, and traffic-rule-compliant urban driving plans.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.25105v1' target='_blank'>Simulating Single Transferable Voting for the Colorado House of Representatives</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Nora Nelson Laird, Beth Malmskog, Iris Pixler, Katherine Rodbell</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-27 22:08:39</h6>
+<p class='card-text'>Social choice theory research demonstrates that single transferable voting (STV) results in more proportionally representative legislative bodies. We aim to understand how using multi-member districts and ranked ballots with STV would affect the representation of political parties in the Colorado House of Representatives. We investigated this objective by producing 10,000 multi-member districting plans of Colorado, generating ranked ballots for each of these plans using returns from the 2022 Colorado attorney general race, and simulating STV using these ballots. Our simulated STV elections for the Colorado House of Representatives gave more proportional representation for Democrats and Republicans than the current first-past-the-post system. Future research should explore how the implementation of STV would influence the representation of racial and language minority groups in the Colorado General Assembly to provide guidance on electoral reform in the state.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.25056v1' target='_blank'>Hybrid Artificial Potential Fields and Spatio-Temporal Transformers for Real-Time AUV Path Planning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Khadija Rais, Abdelmadjid Benmachiche, Imene Soualmia</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-27 20:34:33</h6>
+<p class='card-text'>Autonomous Underwater Vehicles (AUVs) operate in complex, unstructured environments where efficient and safe path planning is critical for mission success and energy conservation. This paper presents a comprehensive comparative evaluation of thirteen path planning algorithms, ranging from classical graph-search methods (A*, Dijkstra) and sampling-based approaches (RRT*) to metaheuristics (PSO, GA, ACO, BCO) and learning-based architectures. Special emphasis is placed on a proposed hybrid approach combining Artificial Potential Fields (APF) with a Spatio-Temporal (ST) Transformer. Evaluated across five navigation scenarios on high-resolution underwater terrain maps, all algorithms achieved 100\% task completion; however, significant trade-offs emerged in path optimality, collision avoidance, and computational load. The Hybrid APF + ST-Transformer demonstrated superior balanced performance, achieving the shortest average path length (943.15 units), a low collision rate (0.031), and efficient computation time (0.96 s), outperforming standalone learning models, which required fallback mechanisms and classical methods that incurred higher latency. While classical algorithms guaranteed collision-free paths, their excessive path lengths and processing times render them less suitable for dynamic underwater operations. Conversely, metaheuristic approaches introduced trajectory complexity unsuitable for strict energy constraints. Based on these findings, the Hybrid APF + ST framework is recommended as a principal approach for real-time AUV navigation, offering a robust solution that harmonizes reactive obstacle avoidance with global path optimality in resource-constrained underwater systems.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.25053v1' target='_blank'>Motion Generation With Environmental Constraints</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Előd Páll, Oliver Brock</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-27 20:31:40</h6>
+<p class='card-text'>Robot motion planning faces challenges in high-dimensional spaces and uncertain environments, often constrained by the need for collision-free motions. We advocate an alternative approach, Environmental Constraint Exploitation (ECE), where deliberate contact with the environment simplifies planning by reducing dimensionality and computational complexity. By integrating ECE into motion planning algorithms, we bias exploration to task-relevant regions and leverage contact for uncertainty reduction to improve robustness during execution. We evaluate ECE benefits with RRT-based planners and demonstrate their practical benefits in a real-world application. This work consolidates and extends prior research, showcasing how ECE simplifies motion planning while enhancing adaptability and performance in complex environments.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js'></script>
+</body>
+</html>
