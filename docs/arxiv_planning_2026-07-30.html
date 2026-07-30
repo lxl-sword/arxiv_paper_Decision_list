@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>planning - 2026-07-30</title>
+<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap' rel='stylesheet'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css'>
+<style>
+body {
+font-family: 'Roboto', sans-serif;
+background-color: #f5f7fa;
+padding: 20px;
+}
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.card-title {
+    font-weight: 700;
+}
+.card:hover {
+    transform: scale(1.02);
+    transition: 0.3s ease-in-out;
+}
+</style>
+</head>
+<body>
+<div class='container'>
+<h1 class='text-center my-4'><i class='fas fa-book'></i>planning - 2026-07-30</h1>
+<div class='row'>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.27177v1' target='_blank'>Partner Capability Estimation for Task-Agnostic Adaptation in Ad-Hoc Teamwork</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Peter Tisnikar, Maja Swieczkowska, Benteng Ma, Gerard Canal, Matteo Leonetti</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-29 17:50:39</h6>
+<p class='card-text'>Effective collaboration with novel and diverse partners is a crucial skill for autonomous agents. Most current ad-hoc teamwork (AHT) approaches assume that agents will collaborate on a single, fixed task and that the partner's capabilities, their ability to successfully execute the desired action, are already known. In reality, a partner's true capabilities are often hidden, and human collaborators may act sub-optimally on tasks with multiple valid strategies. To address these limitations, we extend ad-hoc teamwork into a multi-task setting by re-framing it as a problem of joint planning with decentralised execution under hidden partner capabilities. We introduce CE-CM (Capability Estimation via Contextual Models), an approximate Bayesian method that infers task-invariant capability vectors. By using simulation-based sampling, the agent estimates capabilities and induces a contextual Multi-agent Markov Decision Processes for planning. This approach requires no population pre-training and refines its beliefs online from just a few tasks. To account for human unpredictability, we propose CE-CM-Div, an extension that evaluates capability hypotheses against diverse planner rollouts rather than a single optimal trajectory. Simulated experiments demonstrate that CE-CM rapidly recovers hidden capabilities, reduces infeasible action assignments, and adapts to changes over time. Furthermore, in an offline human study of 225 trajectories from 15 participants, CE-CM-Div substantially improved capability estimates over the baseline CE-CM method. Our results suggest capability-based modelling is a promising interpretable, task-agnostic representation in the studied settings, demonstrating that accounting for behavioural diversity is essential for robust human-AI teaming.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.27106v1' target='_blank'>Hierarchical Spatio-Temporal Transformer for Coherent Emergency Department Forecasting</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Filipa Lino, Bárbara Tavares, Carlos Santiago, Cláudia Soares, Manuel Marques</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-29 16:33:18</h6>
+<p class='card-text'>Emergency Departments (EDs) are critical access points in healthcare systems, yet they face persistent pressure from unpredictable patient demand, seasonal surges, and non-urgent visits. Effective ED planning requires forecasts at multiple decision-making levels: hospitals need local demand estimates for staffing and bed management, regions require forecasts to coordinate healthcare units, and national authorities need system-wide projections for capacity planning. However, most existing approaches forecast ED demand independently at a single level, ignoring the hierarchy linking hospitals, regions, and national systems. This can produce incoherent predictions, where hospital-level forecasts do not aggregate consistently to regional or national demand. We propose HierSTT, a hierarchical Transformer-based framework for coherent multi-level ED forecasting. HierSTT jointly predicts hospital, regional, and national level demand in a single end-to-end model. A Temporal Fusion Transformer captures national dynamics, while spatio-temporal Transformer encoder-decoder modules model regional and hospital demand conditioned on higher-level forecasts. A coherence-aware loss penalizes cross-level inconsistencies during training. We further introduce a nationwide Portuguese ED dataset covering 81 hospitals across 5 regional health administrations, with heterogeneous covariates at each level. Experiments show that HierSTT reduces average WAPE by 32\% relative to the best non-hierarchical deep learning baseline and outperforms all classical hierarchical reconciliation methods, while producing near-coherent predictions across levels. Additional resources associated with this work are available at https://github.com/FilipaLino/HierSTT.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.27018v1' target='_blank'>Watershed vs. Region Growing for Individual Tree Segmentation from Airborne LiDAR: An Urban Case Study in Bologna</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Aldo Canfora, Tommaso Rondini, Matteo Falcioni, Mirko Degli Esposti</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-29 15:15:45</h6>
+<p class='card-text'>We present a LiDAR-based pipeline for the segmentation and structural characterisation of tall urban vegetation in Bologna. Starting from airborne LiDAR point clouds previously classified as high vegetation by a Random Forest model, we implement and compare two individual-tree segmentation strategies: a watershed algorithm applied to the Canopy Height Model and a point-wise region growing algorithm operating directly on the three-dimensional cloud. Over an area of 12 tiles covering the Talea district, the watershed method detects a larger number of trees (7589), dominated by short trees with a height peak around 5 meters, whereas region growing yields fewer trees (6432) but retains the highest returns, yielding individuals above 40 meters, reflecting the absence of a smoothing step in the latter. We further confront the segmentation results with the municipal Open Data catalogue Alberi in manutenzione: on a sample tile roughly half of the LiDAR-detected trees turn out to be absent from the catalogue, several catalogued positions correspond to locations where no tree is observed, and the majority of the height records date back about two decades, which makes the dataset unsuitable as a ground truth reference. From the segmented trees we extract height and crown radius and use them to compute preliminary vegetation indicators, namely above-ground biomass and carbon storage through allometric relations and annual pollen production through species-specific inflorescence coefficients. All results are collected in an interactive per-tree metadata map. The pipeline is modular and can be recalibrated as improved classifications, field campaigns, or complementary sensing technologies become available, providing a scalable basis for data-driven urban greenery planning.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.26953v1' target='_blank'>Assurance-Scoped Reliability for Agentic Networks: Capturing the State That Matters</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Bilgehan Erman, Andrea Francini, Nikos Papadis</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-29 14:21:03</h6>
+<p class='card-text'>Agentic networks transform accepted intents into operational services through autonomous reasoning, adaptive planning, tool use, and cross-domain coordination, but these capabilities introduce failure modes that conventional reliability measures do not fully capture. An accepted intent may still be carried out incorrectly, for example because the system acts on stale information, repeats an external action, applies only part of a change, or enters a fallback mode that quietly relaxes policy enforcement. Such failures can leave a service running and apparently healthy while its behavior is unsafe or unaccountable, with too little evidence to detect, explain, or recover from them. This article proposes Reliability Assurance Intelligence (RAI), a general assurance architecture for such systems. From the service description, RAI derives a per-service reliability profile that states what must be checked, recorded, recovered, and audited. At runtime, generic functions use the service profile to retain the durable state needed for recovery and accountability in a context capsule adapted to service conditions. Using an agentic lifecycle manager for deterministic network services as a running example, we design the RAI architecture and propose a methodology for validating its reliability assurances.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.26903v1' target='_blank'>From Passive Video to Editable Experience: Physically Grounded Experience Synthesis for Embodied Intelligence</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jia Luo</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-29 13:35:23</h6>
+<p class='card-text'>The key bottleneck in embodied AI is not model architecture but data. Although billions of human manipulation videos exist online, robots cannot directly learn from them due to the embodiment gap between human morphology and robot hardware. We introduce Pegasus, a low-resource framework that bridges this gap by translating human demonstrations into robot-learnable data through structured knowledge transfer. Instead of relying on raw video prompts, Pegasus constructs a graph-based intermediate representation: a Task Graph extracted from human videos is transformed through Affordance and Constraint Graphs into a Robot Planning Graph for robot-conditioned video generation. A hierarchical affordance latent space models the relationship between object states, affordances, and tasks, enabling generalization beyond object identities. A closed-loop physics verifier further filters invalid generations using kinematic feasibility, collision constraints, and joint limits. We evaluate Pegasus across a range of egocentric manipulation benchmarks, including GTEA Gaze+ and EPIC-KITCHENS-100, and diverse robot embodiments, assessing Task Correctness, Executability, State Consistency, and Learnability. Results demonstrate reliable cross-embodiment translation and show that robot data generation can be reframed from a hardware collection problem into a scalable, low-resource knowledge transfer problem.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.26802v1' target='_blank'>Risk-Aware Motion Planning with Learned Trajectory Primitives and Probabilistic Safety Assessment</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Marc Kaufeld, Dian Zhuang, Johannes Betz</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-29 11:41:00</h6>
+<p class='card-text'>This paper presents a radial basis function network (RBFN)-informed motion planning framework for safe and efficient urban autonomous driving. The proposed approach combines RBFN-based candidate trajectory generation with an analytic collision probability assessment and optimization-based trajectory refinement. The network learns jerk-minimal trajectories, enabling the MPC to operate within a reduced and dynamically consistent search space. Candidate motion primitives are selected based on an accurate probabilistic risk measure. This design decreases solver complexity while preserving safety and constraint satisfaction. The framework is evaluated in numerous urban driving scenarios. Results demonstrate improved risk awareness and fewer vehicle-limit violations compared to benchmark methods. The proposed approach integrates learning-based trajectories into optimization-based motion planning, thereby ensuring safety and interpretability.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.26752v1' target='_blank'>CalTwin: Towards Calibrated, Shift-Robust Medical World Models via Fisher-Information Regularisation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Behraj Khan, Shabir Ahmad, Syed Ahmad Chan Bukhari, Tahir Qasim Syed</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-29 10:47:52</h6>
+<p class='card-text'>Medical world models aim to learn a latent state of patient or organ physiology and a transition function that forecasts how that state evolves under interventions, supporting downstream tasks from imaging-based diagnosis to digital-twin treatment planning. Two failure modes threaten the reliability of such models in clinical deployment: (i)~\emph{covariate shift}, because training data are fragmented across hospitals, scanners, and time, so the feature distribution seen by the latent-dynamics predictor differs across fragments and from the distribution at deployment; and (ii)~\emph{confidence misalignment}, because multi-step forecasts are often overconfident exactly where clinical risk is highest. We argue that both problems admit a unified treatment via a single lightweight regularisation objective, \textbf{CalTwin}, which combines a Fisher-Information-based shift penalty adapted from our prior work on fragmented covariate-shift remediation~\cite{khan2025mitigating,khan2025causal} with a Confidence Misalignment Penalty adapted from our prior work on calibrated vision-language classification~\cite{khan2025confidence}, applied here to a GRU-based medical world model's latent transition predictor. We derive the combined objective, establish which proof steps transfer from the classification setting without modification and which require adaptation, and evaluate it on the PhysioNet 2019 Sepsis Challenge, treating the two hospital systems as sequential training fragments and the unseen system as an out-of-distribution test. CalTwin reduces OOD next-step latent-state MSE by 9.1\% relative to the no-penalty baseline (FIM penalty alone accounts for 7.0\%); the ECE reduction from the Confidence Misalignment Penalty is real but small (0.7\% for CalTwin, 1.3\% for CMP alone).</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.26712v1' target='_blank'>ActSWM: Action-Sensitive World Models for Long-Horizon Planning in Open-World Games</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Zhenfeng Gan, ZiTong Zeng, Jiajun Cheng, Yeke Song, Yongyi Tang, Xueqian Wang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-29 09:55:54</h6>
+<p class='card-text'>Latent world models support efficient model-predictive control by optimizing future control sequences in latent space and replanning in a receding-horizon manner. However, existing latent predictors often lack stable long-horizon rollout ability, and prediction accuracy alone does not ensure that rollouts remain responsive to the actions being planned. We identify Context Collapse, a failure mode in which autoregressive latent predictors maintain high similarity to future states while producing nearly indistinguishable futures under different action sequences. To address this issue, we propose ActSWM, an action-sensitive latent world model grounded in a transition-separation principle: a planning-useful latent dynamics model should keep alternative-action futures distinguishable and make the action associated with each local transition recoverable. Under this principle, action sensitivity is enforced as a constraint on latent rollouts rather than treated only as an auxiliary prediction target, encouraging predicted futures to preserve action-dependent differences over long horizons. Across step-drift analysis, closed-loop Minecraft planning, and cross-game local action recovery, ActSWM preserves larger action-dependent rollout gaps than existing baselines, improves task success in long-horizon interactive settings, and enables world-model-based action recovery from offline gameplay videos.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.26646v1' target='_blank'>Genie Sim PanoWorld: An Infinite Indoor 3D World Generation Pipeline via Panoramic Scene Modeling and Simulation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yongxin Su, Linjie Hou, Feng Wang, Jialin Tang, Zhijun Li, Qian Wang, Maoqing Yao</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-29 09:08:16</h6>
+<p class='card-text'>We address the problem of reconstructing a high-fidelity, freely navigable 3D scene from a single $360^\circ$ panorama, without per-scene optimization or multi-view capture. Existing methods either lack metric trajectory control, which hinders reliable downstream 3D reconstruction, or struggle with large disocclusions under long-range camera motion while requiring high-end multi-GPU servers.We present Genie Sim PanoWorld, a two-stage feed-forward pipeline that bridges generation and reconstruction via an explicit, trajectory-controllable panoramic video. A NavMesh-planned $\mathrm{SE}(3)$ roaming trajectory is injected into a latent video diffusion model through dense geometry-warped conditioning; long--short trajectory mixed training and a self-consistency objective based on shortcut models together yield high-fidelity video in four CFG-free denoising steps.
+  A feed-forward panoramic reconstructor then lifts the generated video into a high-fidelity
+  3D Gaussian scene that supports real-time, free-viewpoint roaming and can be directly used as a simulation-ready asset for embodied AI applications. Experiments show that Genie Sim PanoWorld
+  outperforms geometry-conditioned baselines in both panoramic video generation and
+  downstream 3D reconstruction, while generalizing zero-shot to unseen indoor scenes.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.26579v1' target='_blank'>ContactFlow: A video action conditioning that transfers across embodiments</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Sami Azirar, Enrico Pallotta, Jan Nogga, Jürgen Gall, Sven Behnke, Hermann Blum</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-29 07:59:47</h6>
+<p class='card-text'>World models offer a promising route toward robot planning by enabling agents to imagine and verify the consequences of actions before execution. However, current video-based world models often struggle to capture the physical constraints that govern manipulation, particularly contact. Further, their action conditioning is often constrained to specific embodiments such as parallel grippers. We propose \emph{Contact Flow}, an embodiment-agnostic action representation that encodes manipulation through the trajectory of 3D contact points between an actor and a target object. By discarding actor-specific appearance and kinematics, Contact Flow provides a shared conditioning signal for both human demonstrations and robotic execution. Therefore, we can train a large-scale video generative model on both human and robotic object interaction videos conditioned on Contact Flow, yielding a world model that predicts physically plausible manipulation outcomes. We integrate this model into a propose-imagine-verify-act pipeline, where generated rollouts are assessed by a vision-language model before execution. Experiments on the DROID dataset and real-world tabletop manipulation tasks demonstrate that Contact Flow enables transfer between human demonstrations and different robotic embodiments.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.26570v1' target='_blank'>Semi-Decentralized Multi-Spacecraft Collision Avoidance under Communication Constraints</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Grace Ra Kim, Mahdi Al-Husseini, Duncan Eddy, Mykel J. Kochenderfer</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-29 07:48:18</h6>
+<p class='card-text'>Current spacecraft collision-avoidance operations rely on intermittent ground-station contacts, requiring operators to plan with delayed and asynchronously updated information. Consequently, maneuvers must be planned with only intermittent information sharing between operators, raising the question of how much coordination is needed to achieve collision-avoidance performance comparable to centralized planning. Although decision-theoretic approaches such as partially observable Markov decision processes (POMDPs) capture the sequential and uncertain nature of collision avoidance, existing multiagent extensions typically assume either continuous information sharing or communication models that do not reflect operational ground-station constraints. To explicitly model this intermittent information availability, we formulate the spacecraft-to-spacecraft collision avoidance problem as a semi-decentralized POMDP (SDec-POMDP), where we govern information propagation directly by realistic ground-station visibility windows. Joint maneuver policies are computed using approximate Recursive Small-Step Semi-Decentralized A* (RS-SDA*), following the state-of-the-art A*-based lineage for decentralized multiagent planning. Across a representative suite of conjunction scenarios, semi-decentralized planning recovers near-centralized maneuver quality while requiring 28.5% fewer synchronization events than continuous coordination. Comparisons with representative rule-based operator heuristics further show that communication-aware planning more consistently achieves the desired operational miss-distance band while minimizing unnecessary trajectory deviation. Together, these results establish a practical planning framework for autonomous collision avoidance under realistic intermittent communication, bridging the gap between idealized centralized coordination and fully decentralized planning execution.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.26460v1' target='_blank'>RLMM-Flow: A Flow-based Mobile Manipulation Framework with Latent-Space Reinforcement Learning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Shuhang Wang, Ziming Li, Hui Cheng</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-29 04:22:46</h6>
+<p class='card-text'>Mobile manipulation requires generating whole-body action chunks that jointly satisfy goal reaching, collision avoidance, base kinematic constraints, manipulator joint limits, and trajectory smoothness. Flow-based generative policies provide an efficient paradigm for learning multimodal and temporally consistent motion priors from expert demonstrations, but imitation-only training cannot improve policy quality beyond the demonstration distribution. We propose RLMM-Flow, a flow-based mobile manipulation framework that combines expert flow-policy pretraining with latent-space reinforcement learning post-training. The framework first learns a flow policy that captures a multimodal whole-body motion prior from expert demonstrations. The pretrained flow policy is then frozen, while a latent steering network steers its initial noise toward higher-value action chunks. To stabilize high-dimensional latent optimization, we warm up an action-space critic before jointly training the latent critic and latent actor, and introduce coarse-to-fine latent steering that progressively expands control from a horizon-shared latent representation to a full-dimensional residual representation. Experiments on mobile manipulation motion-planning benchmarks show that RLMM-Flow substantially improves task success, collision avoidance, and trajectory quality over imitation-only flow policies and existing reinforcement learning post-training baselines, while preserving fast flow-based inference.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.26452v1' target='_blank'>CG-World: A Large-Scale World-State Dataset and Protocol for World Models</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yiming Cai, Fangjie Yu, Meiqing Yu, Ziyue Shi, Pengfei Yuan, Yong Guo</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-29 04:06:28</h6>
+<p class='card-text'>World models must learn the joint dynamics of states, actions, events, and observations, yet existing video, robotics, and simulation datasets usually capture only part of this structure. We introduce CG-World, a large-scale world-state dataset and protocol derived from industrial computer graphics production pipelines. CG-World explicitly records intermediate states, including multimodal semantics, spatial structure, skeletal and controller states, motion curves, camera and lighting parameters, physics caches, contact events, and multi-pass renderings. CG-World v1 contains approximately 850,000 temporally aligned segments of 1-5 seconds. It separates latent states, observations, relations, events, and branch metadata, and organizes them into unified spatiotemporal samples. To support intervention learning and counterfactual reasoning, CG-World defines a branch lineage covering factual trajectories, observation interventions, action interventions, mechanism interventions, and strict counterfactual branches, with intervention targets, invariants, and alternative outcomes explicitly recorded. We evaluate the dataset on geometry-conditioned video generation, action prediction, and closed-loop vision-language-action policy transfer. Results show that CG-World provides reusable structured supervision for controlled generation, action modeling, and embodied policy transfer. We plan to expand CG-World through continued data collection and community collaboration toward a shared data infrastructure for world models, Physical AI, and embodied intelligence.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.26424v1' target='_blank'>Fully distributed singularity-free prescribed-time stabilization of the continuous-time generalized adaptive Bellman-Ford algorithm</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yuanqiu Mo, Jian Qin, Soura Dasgupta</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-29 03:09:16</h6>
+<p class='card-text'>Building upon the well-established distributed biased min-consensus protocol, which serves as an efficient approach to address the shortest path problem in a distributed fashion, the continuous-time generalized adaptive Bellman-Ford algorithm (GABF) introduces flexibility by accommodating various forms of distance metrics. This adaptability makes GABF suitable for more complex scenarios, such as time-dependent shortest path problem and robotic path planning. However, existing research on this protocol primarily focuses on asymptotic stability, providing no insights into convergence speed, which limits its practical applications. To address this gap, this paper proposes two control strategies that achieve prescribed-time stabilization of GABF by ensuring its convergence to the stationary value within a user-defined time, thereby broadening its applicability. Simulation scenarios, including robotic manipulator path planning with real-world data and learning-based path planning, are provided to validate the effectiveness of the proposed approaches.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.26371v1' target='_blank'>A Controlled Candidate-Set Benchmark for Offline Satellite-Security Plan Decomposition</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:João Paolo Cavalcante Martins Oliveira, Lucas Teske, Paulo Matias</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-29 01:18:47</h6>
+<p class='card-text'>Some security-development settings require local models that map an objective to an ordered, checkable plan. We present a low-rank decomposition adapter and release a case-disjoint corpus with 24 authored decompositions and 83 derived next-step examples across 24 satellite-security cases. To prevent reference-plan leakage, prompts contain one objective and eight shuffled SPARTA candidates. The evaluation candidate sets are constructed with oracle inclusion of every reference technique, so this study measures selection from a controlled set, not retrieval. On six fixed cases and five decoding seeds, mean scores vary across adapters and prompted Qwen2.5 baselines; a separate greedy check over three adapter training seeds shows non-negligible training variance. A 24-fold greedy leave-one-case-out control at the two compact sizes likewise shows tradeoffs: at 1.5B, adapter precision is 0.583 against 0.480 for two-shot prompting, while recall is 0.586 against 0.660. Case-resampling intervals for adapter precision relative to the strongest prompted baseline cross zero at 1.5B and 7B. The adapter is also substantially more format-compliant, which prevents attributing all score differences to selection. Autoregressive next-step accuracy is 0.08, 0.06, and 0.29 at 0.5B, 1.5B, and 7B. We therefore offer the formulation, leakage-controlled dataset, reproducibility package, and descriptive analysis as a proof of concept, not evidence of a reliable stand-alone decomposition system or a general adapter advantage. A separate diagnostic tests contract reuse.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.26345v1' target='_blank'>MetaKoopman: Bayesian Meta-Learning of Koopman Operators for Modeling Structured Dynamics under Distribution Shifts</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Mahmoud Selim, Sriharsha Bhat, Karl H. Johansson</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-28 23:37:55</h6>
+<p class='card-text'>Modeling and forecasting nonlinear dynamics under distribution shifts is essential for robust decision-making in real-world systems. In this work, we propose MetaKoopman, a Bayesian meta-learning framework for modeling nonlinear dynamics through linear latent representations. MetaKoopman learns a Matrix Normal-Inverse Wishart (MNIW) prior over the Koopman operator, enabling closed-form Bayesian updates conditioned on recent trajectory segments. Moreover, it provides a closed-form posterior predictive distribution over future state trajectories, capturing both epistemic and aleatoric uncertainty in the learned dynamics. We evaluate MetaKoopman on a full-scale autonomous truck and trailer system across a wide range of adverse winter scenarios, including snow, ice, and mixed-friction conditions, as well as in simulated control tasks with diverse distribution shifts. MetaKoopman consistently outperforms prior approaches in multi-step prediction accuracy, uncertainty calibration, and robustness to distributional shifts. Field experiments further demonstrate its effectiveness in dynamically feasible motion planning, particularly during evasive maneuvers and operation at the limits of traction. Project website: https://mahmoud-selim.github.io/MetaKoopman/</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.26324v1' target='_blank'>Planning Waste-to-Energy-Coupled AI Data Centers Through Grade-Matched Cooling and Corridor Screening</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Qi He, Chunyu Qu, Wenjie Zuo</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-28 22:45:19</h6>
+<p class='card-text'>AI data-center growth is increasingly constrained by limited deliverable electricity, interconnection capacity, and cooling demand. This study develops a boundary-consistent screening framework for waste-to-energy (WtE)-coupled AI data-center cooling. It treats cooling as an energy service that can be supplied through grade matching rather than only through electricity-driven mechanical chilling. The framework translates plant-side exportable heat into corridor-level planning metrics by accounting for thermal attenuation, absorption conversion, and parasitic electricity for delivery and auxiliaries. In a reference case, a regulated WtE plant processing 1500 t/day of municipal solid waste at 10 MJ/kg provides about 78.1 MWth of exportable heat. At a 20 km corridor, this yields about 53.0 MW of delivered cooling and 8.0 MWe of net avoided cooling electricity after parasitic loads. The coupled system is governed by operating regimes rather than a single efficiency score. Under baseline assumptions, full thermal coverage extends to about 20.9 km, the quality-adjusted criterion remains positive to about 22.9 km, and net electricity relief remains positive to about 44.7 km. For a 1 GW IT campus at 70 percent utilization and a 5 km corridor, net grid relief ranges from about 116.9 to 264.4 MW across scenarios. The required WtE footprint ranges from about 3 to 148 representative plants, or 0.6 to 40 full-load-equivalent plants at a 25 percent displacement target. The framework identifies when WtE-coupled cooling is corridor-feasible, when hybrid operation is required, and when infrastructure scale becomes the binding constraint. It is intended for screening and comparison, not project-specific hydraulic or plant-cycle design.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.26253v1' target='_blank'>Early Verdicts, Better Budgets: Sequential Adaptive Rollout Allocation for Compute-Efficient RLVR</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Pixel Nomand, Elena Voss, Marcus Hale, Sofia Reyes</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-28 20:43:23</h6>
+<p class='card-text'>Reinforcement learning with verifiable rewards (RLVR) is bottlenecked by rollout generation, yet many sampled prompts produce saturated groups (all responses correct or all incorrect) whose zero reward variance yields no policy-gradient signal. Existing remedies either oversample a larger candidate pool and discard saturated prompts (dynamic sampling), paying heavy extra rollouts, or predict prompt difficulty before sampling, which is fragile under a shifting policy. We observe that a group's effectiveness is usually decided early, within the first few of its rollouts, so spending a full group on an already-decided prompt is wasteful. We cast per-step rollout collection as a budget-constrained sequential allocation (optimal stopping) problem and introduce SARA (Sequential Adaptive Rollout Allocation). SARA maintains a Beta posterior over each prompt's success rate, evaluates a closed-form predictor of group effectiveness, and applies a two-threshold, SPRT-style rule that commits effective groups, abandons saturated ones after a short probe, and reallocates the freed budget to fresh prompts, without any extra prediction rollouts. We prove abandonment reliability, expected rollout savings, fixed-budget yield dominance, and a link between effective-group yield and the GRPO gradient norm. On mathematical reasoning and planning with 1.5B/3B models on a single GPU, SARA matches DPS (both below the DS oracle) while using 22% fewer rollouts than DS; composing SARA with DPS yields the best accuracy, slightly above DS, at 67% fewer rollouts (near-uniform cost).</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.26219v1' target='_blank'>Retrospective Orthogonal Design: Response-Surface Reconstruction from Observational Data</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Lawrence Fulton, Christopher Fulton, Arvind Sharma, Aleksandar Tomic</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-28 19:46:40</h6>
+<p class='card-text'>Regression estimates from observational data can depend on specification under multicollinearity, while sequential sums of squares (SS) depend on term order. We introduce Retrospective Orthogonal Design (ROD), which reconstructs conditional mean surfaces on a probability-balanced lattice. ROD preserves observed cell means, completes unsupported cells, applies weighted tensor-product contrasts, and evaluates the reconstructed surface through piecewise-affine interpolation over Freudenthal polyhedra. Resolution and completion are selected jointly by validation among rank-admissible candidates, followed by refitting and evaluation on an untouched test set. For an admissible lattice, $\mathbf{X}^{\top}\mathbf{W}\mathbf{X}=c\mathbf{I}$, yielding specification-invariant contrast effects and unique, order-independent SS within the retained contrast space. Response-free projection calibration maps the fixed reconstruction onto a declared scientific basis and corrects finite-resolution recovery loss. Across 6,480 simulation conditions spanning nine data-generating processes, ROD matched or exceeded polynomial regression in five processes and performed strongest on threshold, sign-interaction, and localized surfaces. For the quadratic-interaction process, mean out-of-sample $R^2$ differed by only $0.0001$, while calibrated coefficient bias remained small across prespecified targets. A Rao-based information adjustment provides dependence-aware sample-size guidance for ROD planning. In a weighted Mincer application, ROD produced the highest out-of-sample $R^2$ point estimate, with substantial interval overlap with polynomial regression, and provided exhaustive SS allocations invariant to term-entry order.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.26198v1' target='_blank'>How Wrangling Tools Shape Wrangling: A Technical Dimensions Analysis</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Shiyi He, El Kindi Rezig, Paul Rosen, Andrew M. McNutt</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-28 19:01:24</h6>
+<p class='card-text'>Wrangling consumes a disproportionate share of the effort associated with any data project. While a variety of tools support it, relatively little is known about how their differing interface forms shape the way people actually wrangle. We conduct a between-subjects (N=40) observational study of data cleaning tasks performed in tools spanning distinct interface paradigms: Jupyter (notebook), Excel (spreadsheet), ChatGPT (conversational AI), and OpenRefine (visual wranglers). We situate our observations within the Technical Dimensions of Programming Systems framework, which we use as a conceptual scaffold for comparing across interface paradigms. Within the context of our study, the results suggest that tool affordances steer user strategies but do not determine outcomes. There is no consistent advantage of any single tool, nor convergence of results within tools observed across our outcome measures. Instead, we identify trade-offs and connect them with observed practice. For example, a key tension is between data- and abstraction-centered interfaces, where data-centered interfaces encourage opportunistic cleaning rather than systematic, planned transformations found in abstraction-focused tools (but come with a cognitive burden). Tool design, beyond mere functionality, plays a structuring role in how data work unfolds.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.26056v1' target='_blank'>INTACT: Isomorphic Intent-to-Action Learning for Search-Free World Models</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Junhan Sun, Hao Zhao, Guofeng Zhang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-28 17:59:40</h6>
+<p class='card-text'>Forward latent world models predict how actions change a scene, but recover actions for a desired change only through expensive test-time search. We introduce INTACT (INtent-To-ACTion), an end-to-end JEPA that turns action-labeled, reward-free trajectories into a deployable intent-to-action interface. Each transition supplies physical intent $z_{t+1}-z_t$, while a future goal supplies deployment intent $\operatorname{sg}(z_g)-z_t$. The architecture is isomorphic between the local and goal motion-intent backbone-input graphs through an identical four-slot grammar and shared parameters, and between supported local and goal motion-intent families through action-law semantics induced by the same predictor rather than pointwise latent equality. INTACT also provides intact transfer from RGB evidence to action-effective latent intent coordinates and from intent families to their corresponding action-law families. Asymmetric endpoint gradients ground physical successors and fix future goals as anchors, joining representation learning and control without pointwise latent matching or globally linear dynamics. The resulting coordinates support a robust distributional action law: its conditional mean serves directly as a search-free policy, while sampling remains available for diversity or optional verification. On the four official LeWM tasks, one-epoch, zero-search models reach 85.78\%, 100.00\%, 97.67\%, and 97.89\% success. Optional local CEM centered on the Direct plan reaches 96.86\% macro success using 384 instead of 9,000 candidate sequences, reducing sampling by $23.44\times$ while improving pure CEM by 16.00 points. One shared four-task encoder reaches 89.39\% E5 Direct macro and improves every task over jointly trained LeWM, while predicted--expert action-family kNN tracks Direct success at $r=0.954$. Direct inference takes 2.9--5.5 ms.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.26041v1' target='_blank'>Desktop-Delta Bench: Do Computer-Use Models Understand Desktop GUI Transitions?</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Abhishek Pillai, Samir Kumar Nayak, Yuan Chen</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-28 17:49:51</h6>
+<p class='card-text'>Computer-use agents (CUAs) increasingly act through desktop GUIs to complete long-horizon tasks. Current benchmarks primarily measure end-task success or single-frame grounding. Neither isolates whether a model can reconstruct the causal, task-relevant transition produced by an action- crucial for rejecting stale observations, verifying progress, and recovering from failure. This is difficult because inference, remote input, app rendering, and screenshot capture are asynchronous: the next observation may be delayed, occluded, transient, or unrelated, then misread as progress and carried into subsequent planning. We introduce Desktop-Delta Bench (DDB), an offline step-level benchmark with 2,013 human-verified instances from novel, multi-app Linux trajectories across ~15 applications and 50 task domains. DDB trajectories targets 3 failure dimensions- state verification, source tracking, and context-aware control- through 2 complementary tasks: 463 3-frame temporal-ordering instances, including 105 with a cross-trajectory decoy, and 1,550 before-after pairs labeled from 5 actions + its payload. We evaluate 8 closed and open-source model families across 32 ordering and 16 single-action settings, observing consistent gaps. Ordering remains unsaturated: best non-decoy and decoy exact-match rates are 65.1% and 65.7%. Task context improves decoy identification by 6.9 percentage points but reduces non-decoy exact match by 2.2 points; error analysis reveals systematic copying of the presented A-B-C order. Single-action results show that inferring the action family is harder than locating it: click F1 is 0.96 vs, 0.76 for drag, while recognized drags are generally localized well. DDB, thus, complements end-to-end benchmarks by filling the missing diagnostic layer between GUI grounding and final task success, enabling targeted improvements to desktop CUA verification, reliability, and recovery.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.25993v1' target='_blank'>Beyond Zooming: Learning Multi-Tool Visual Reasoning for Ultra-High-Resolution Remote Sensing</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Fengxiang Wang, Jiangnan Huang, Mingshuo Chen, Yueying Li, Yang Shi, Junwei Luo, Haoyu Wang, Yansheng Li, Jing Zhang, Haiyan Zhao, Wenjing Yang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-28 17:09:16</h6>
+<p class='card-text'>Ultra-high-resolution (UHR) remote-sensing (RS) imagery provides fine-grained Earth-observation evidence over city-scale scenes, but poses a fundamental challenge for multimodal large language models (MLLMs): task-relevant evidence is often sparse, local, and spatially dispersed across extremely large visual contexts. A natural solution is to equip MLLMs with zoom-in tools for active local inspection. However, through a pilot study on XLRS-Bench, we find that zoom-in is only partially effective: it resolves easy and medium-level tasks with locally recoverable evidence, but saturates on hard cases requiring global search, multi-region comparison, path planning, or dispersed-evidence reasoning. Motivated by this finding, we move beyond single-tool zoom-in and introduce GeoMTVR, a large-scale Geospatial Multi-Tool Visual Reasoning dataset built from wide-area satellite imagery. GeoMTVR contains 13K UHR VQA samples with interleaved reasoning trajectories, diverse visual tool calls, and returned visual observations, enabling models to learn question decomposition, tool selection, regional inspection, object-level grounding, auxiliary visual reasoning, and cross-tool evidence integration. Beyond supervised fine-tuning, we propose a tool-attention-focused reinforcement learning algorithm that concentrates optimization on critical tool-use decisions, including when to invoke tools, which tool to select, where to apply it, and how to interpret tool outputs. By combining SFT on GeoMTVR with our RL algorithm, we develop GeoLens, a multi-tool visual reasoning MLLM for UHR RS. Experiments show that GeoLens consistently outperforms direct reasoning and single-tool zoom-in baselines, achieving stronger accuracy, better evidence grounding, and more efficient tool-use trajectories.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.25984v1' target='_blank'>Schrödinger's Cat: Probabilistic Representation and Prediction of Potential Scene Kinematics</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Timy Phan, Jannik Wiese, Björn Ommer</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-28 17:05:39</h6>
+<p class='card-text'>Predicting how a scene may evolve from partial observations requires reasoning about multiple possible futures rather than committing to a single trajectory. Existing approaches either generate appearance-dominated video predictions or sample a small number of trajectories without explicitly modeling the distribution of possible motion. We introduce Goal-Aware Representations of Future kInEmatic Latent Distributions (GARFIELD), a probabilistic model of scene kinematics that learns a structured spatio-temporal latent representation of the distribution over possible futures given an image and optional spatio-temporally sparse constraints. The same latent representation enables both joint sampling of all trajectories and direct access to the underlying motion distribution through an efficient deterministic density decoder. As a result, uncertainty about future motion can be localized to specific scene elements and timesteps and progressively refined through additional constraints. Experiments demonstrate strong motion planning performance competitive with large video generation models while sampling trajectories $97\times$ faster. Our method further estimates motion densities two orders of magnitude faster than Monte-Carlo sampling from motion generation models, enabling interactive exploration and uncertainty-aware planning.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.25875v1' target='_blank'>A2TTA: Anchored-and-Agile Test-Time Adaptation for Evolving Traffic Sensor Networks</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Du Yin, Xiachong Lin, Yue Tan, Jinliang Deng, Estrid He, Hao Xue, Flora D. Salim</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-28 15:38:27</h6>
+<p class='card-text'>Traffic forecasting is important for efficient traffic management and route planning in smart cities. Existing traffic forecasting studies typically assume fixed sensor graphs, overlooking the continuous evolution of real-world traffic networks, e.g., ongoing road network construction and evolving human mobility patterns. These dynamic changes can substantially degrade conventional forecasting models, motivating test-time adaptation (TTA) to efficiently adapt pretrained models during deployment. However, applying TTA to evolving traffic sensor networks remains challenging in two aspects. First, topology expansion introduces new sensors and connections, continuously reshaping the sensor graph. Second, tem- poral shifts vary in time scale and stability, requiring differentiated adaptation to long-term and short-term shifts. In this study, we address these challenges by proposing A2TTA, an Anchored-and-Agile Test-Time Adaptation framework for evolving traffic sensor networks, which transforms topology-induced forecasting errors into an expandable output calibration problem and separates tem- poral adaptation into persistent global correction and agile context-specific specialization. By jointly addressing topology evolution and multi-scale temporal shifts, A2TTA enables efficient and robust adaptation to continuously evolving traffic environments. Extensive experiments on ten real-world traffic networks demonstrate that A2TTA consistently improves forecasting performance across different backbones, datasets, and prediction horizons. Our code is available in https://github.com/lixus7/A2TTA.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.25780v1' target='_blank'>Macroscopic wall pressure and microscopic contact load in crowds without egress: social-group cohesion and boundary buffering</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Bo-Shiun Shen, Son-Hsien Chen</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-28 14:35:07</h6>
+<p class='card-text'>Crowd safety in confined venues is usually evaluated through evacuation performance or pre-collision avoidance, while direct mechanical hazards in dense gatherings without egress remain poorly understood. We study an Elastic Reorientation Model (ERM), a Social Force Model (SFM), and their coupled dynamics. Post-collision behavior is represented by social-group cohesion ($γ_g$) and wall buffering ($γ_w$), while risk is quantified by the macroscopic wall line pressure ($P_{\text{wall}}$) and the microscopic maximum per-agent collision impulse ($δp_{\text{max}}$). In the ERM, cohesion and wall buffering generally reduce $P_{\text{wall}}$ by retaining agents in the bulk, but large groups exhibit a high-$δp_{\text{max}}$ hazard window at intermediate cohesion. As $γ_g\rightarrow1$, local pairing suppresses cluster growth and shifts kinetic energy from relative to center-of-mass motion, reducing $δp_{\text{max}}$. SFM pushing and sliding amplify $δp_{\text{max}}$, especially when agent-agent and agent-wall interactions coexist, while active driving raises $P_{\text{wall}}$ through near-wall accumulation. The coupled dynamics produces a wall-pressure/contact-load ($P$-$p$) trade-off. Finite-size scaling reveals an independent-agent-induced phase boundary at $γ_w=0.5$, characterized by a susceptibility discontinuity, and a grouped-agent-induced continuous phase boundary along a finite segment of $(1-γ_w)(1-γ_g)=0.5$, characterized by divergent susceptibility and terminating at a critical point. Both disappear in the social-force-free ERM, showing that they emerge from the coupled ERM+SFM dynamics. These results provide mechanistic guidance for crowd-risk mitigation and safety planning in high-density venues without egress.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.25755v1' target='_blank'>RAISE: A Low-Frequency Space-Based Payload for Solar Radio and RFI Measurements on the SMiLE Mission</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Sangeetha A, Harsha Avinash Tanti, Abhirup Datta, Anshu Kumari, Rajesh Bodade</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-28 14:16:17</h6>
+<p class='card-text'>We present the Radio-wave Apparatus for Investigating Solar & Earth interference (RAISE), a compact low-frequency radio payload proposed for hosting on the SMiLE mission. Operating from Low Earth Orbit, RAISE targets a spectral regime that is largely inaccessible from the ground due to ionospheric effects. The payload is designed to enable space-based observations of low-frequency solar radio emissions while simultaneously characterizing terrestrial and ionospheric radio frequency interference in the near-Earth environment. RAISE employs mode-dependent Earth-pointing and Sun-pointing observations to generate dynamic spectral measurements relevant to space weather studies and low-frequency radio mission planning. As an experimental and technology demonstration payload, RAISE provides essential heritage for future space-based low-frequency radio astronomy and space weather missions.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.25728v1' target='_blank'>Shared Voxel-Map-Based Cooperative Indoor UAV Guidance with a Multi-Agent Soft Actor-Critic Controller</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Thomas Hickling, Dylan Wynne, Yu Su, Nabil Aouf</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-28 13:52:12</h6>
+<p class='card-text'>This paper presents a cooperative indoor UAV guidance framework that combines a shared voxel-map world model with a multi-agent Soft Actor-Critic (MASAC) controller. Multiple drones fuse 360 LiDAR observations into a common world-frame occupancy map, which is converted into a compact bird's-eye-view (BEV) representation and provided to each agent as an ego-aligned local crop. This integrate-in-world, act-in- ego design enables consistent multi-UAV spatial fusion whilst retaining decentralised continuous control. The policy combines BEV map features, near-field obstacle observations, and compact goal and peer-state information within a centralised-training, decentralised-execution framework. In simulation, the learned controller achieves a 90.3% success rate in corridor navigation, outperforming Astar planning, an artificial potential field controller, and a prior guidance method. To address residual sim-to-real mismatch, the simulation-trained policy is further adapted using offline imitation fine-tuning from real-world data. Real-world experiments in GNSS-denied indoor environments demonstrate stable two-UAV cooperative operation across increasingly chal- lenging obstacle layouts. The results show that shared voxel-map representations provide an effective and scalable spatial substrate for learned cooperative indoor UAV guidance.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.25656v1' target='_blank'>OrchBench: Evaluating Multi-Agent Orchestration Plans in Isolation via Deterministic Simulation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Zhenzhen Ren, Jiyan He, Xinpeng Zhang, Zhenxing Qian, Ke Han, Shuxin Zheng, GuoBiao Li, Xiaoqing Zhang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-28 12:43:34</h6>
+<p class='card-text'>Complex tasks often decompose into parallelizable yet interdependent subtasks, making orchestration critical to the performance of multi-agent systems (MAS). Existing evaluations typically rely on end-to-end execution, which conflates orchestration-plan quality with worker capabilities, tool reliability, and environmental noise. Moreover, the time and token costs of real execution grow rapidly with workflow scale, making systematic evaluation expensive. We present OrchBench, a simulation-based benchmark for evaluating multi-agent orchestration plans in isolation. Starting from real-world tasks, OrchBench constructs directed acyclic graphs (DAGs) that encode task dependencies, with controlled sizes and degrees of parallelism. Given a DAG, a per-agent context limit, and an agent budget, the evaluated planner assigns subtasks to agents and specifies cross-agent information transfers and their retention ratios. A deterministic simulator evaluates the resulting plan without invoking worker agents and returns interpretable measures of result quality, makespan, and token cost. The simulated scores produced by OrchBench correlate strongly with quality scores from Claude Code executions, achieving a Pearson correlation of \(r=0.816\), while requiring only \(1.3\%\) of the tokens and \(10.3\%\) of the wall-clock time. Across diverse planners and workflow scales, we find that preserving task-critical information is more important than simply increasing the number of agents, and the benefits of parallelism diminish as coordination failures accumulate. These results establish OrchBench as an efficient and interpretable benchmark for comparing and diagnosing multi-agent orchestration plans.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.25589v1' target='_blank'>Forensic Reproducibility Audit of a Radiology Vision-Language Model Benchmark: From Intended Protocol to Released Artifact</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Mateusz Kozłowski</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-28 11:19:38</h6>
+<p class='card-text'>Medical-imaging AI benchmarks combine datasets, DICOM rendering, prompts, provider APIs, automated labels, statistical code, manuscripts, and repository releases. Agreement across these artifacts is usually assumed rather than tested. We performed a retrospective forensic reproducibility audit of a preserved chest-radiograph vision-language model (VLM) pilot; no model was called again and no image or report was newly annotated. We traced prompt bindings, DICOM metadata, output completeness, label extraction, matched analyses, and release propagation. Of 300 planned model-prompt calls, 297 yielded nonempty reports. Sixty Claude calls labeled A/B were executed with the same C prompt. The 30 studies represented 28 patients. Four MONOCHROME1 images were rendered without required polarity inversion, dataset split membership was not retained, and the unvalidated extractor truncated five reports to 4000 characters. Reconstructing one common cohort of 369 complete case-finding blocks changed Cochran's Q from 154.73 to 182.29. Of 45 McNemar comparisons, 27 had unadjusted p < 0.05 and 20 remained below 0.05 after Holm adjustment. These values describe only the archived automated-label matrix; they do not recover the intended prompt comparison or establish clinical performance. We withdraw the original performance, ranking, prompt-effect, and clinical claims and specify machine-verifiable controls for cohort, DICOM rendering, prompt and model identity, call status, annotation provenance, keyed analysis, and derived artifacts.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js'></script>
+</body>
+</html>
