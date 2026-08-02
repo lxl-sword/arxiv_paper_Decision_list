@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>planning - 2026-08-02</title>
+<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap' rel='stylesheet'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css'>
+<style>
+body {
+font-family: 'Roboto', sans-serif;
+background-color: #f5f7fa;
+padding: 20px;
+}
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.card-title {
+    font-weight: 700;
+}
+.card:hover {
+    transform: scale(1.02);
+    transition: 0.3s ease-in-out;
+}
+</style>
+</head>
+<body>
+<div class='container'>
+<h1 class='text-center my-4'><i class='fas fa-book'></i>planning - 2026-08-02</h1>
+<div class='row'>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.28600v1' target='_blank'>SymFT: Universal Fault-Tolerant Quantum Circuit Simulation via Symbolic Clifford--Pauli Frames and Stabilizer Coordinates</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Wang Fang, Huazhe Lou, Riling Li</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-30 17:51:54</h6>
+<p class='card-text'>Fault-tolerant protocols often consist largely of stabilizer subcircuits, yet the non-Clifford operations required for universality make exact sampling costly. We present SymFT, a high-throughput simulator for Clifford-dominated circuits with Pauli rotations, stochastic Pauli noise, mid-circuit Pauli measurements, and measurement-record-controlled Pauli feedback. It combines two ideas. First, symbolic Clifford--Pauli frame factorization reduces branch-probability sampling to Pauli rotations and measurement projectors, with noise and feedback represented by symbolic signs. Since the residual Clifford and Pauli frames are unitary, they do not affect branch probabilities and need not be applied in every shot. Second, adaptive stabilizer-coordinate planning uses a shared stabilizer--destabilizer tableau to define the basis and stores only the active non-stabilizer degrees of freedom in a dynamically sized dense active-state vector. It resolves basis changes once and emits direct multi-coordinate sampling instructions, thereby avoiding per-shot tableau updates and localization-induced Clifford transformations of the dense vector. Across the tested pure-Clifford and near-Clifford circuits, SymFT achieves state-of-the-art sampling performance. On a single CPU core, it is $2.51\text{--}2.56\times$ faster than Stim for surface-code circuits and $1.86\text{--}3.51\times$ faster than Clifft for magic-state cultivation and distillation circuits. For the tested cultivation circuits, its sampling throughput also exceeds that of our previous simulator, SOFT, by more than two orders of magnitude.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.28576v1' target='_blank'>Sample More, Reflect Less: Self-Refine and Reflexion Lose to Repeated Sampling at Equal Token Cost, from 1.5B to 7B</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Iliya Mirzaei</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-30 17:38:23</h6>
+<p class='card-text'>Methods that make a language model plan, criticise and rewrite its own answer, reflect on mistakes, pick the best of several attempts, or debate with copies of itself nearly all make it generate far more text than a single chain of thought. Because generating more text raises accuracy by itself, a gain over one chain of thought does not show the method's idea is what helped. Wang et al. (2024) reported that a simple baseline, sampling the same question repeatedly and keeping the most common answer, often wins once budgets are comparable, but gave point estimates with no confidence intervals or significance tests.
+  We rerun that comparison as a designed experiment: seven methods, open models of 1.5B, 3B and 7B parameters, two mathematics benchmarks, 150 questions each. We count every generated token, including those spent on critiques, reflections, debate turns and checking, and compare each method against repeated sampling at its own measured cost. All 36 comparisons are paired by question, with bootstrap intervals and multiplicity correction.
+  No method is reliably better than repeated sampling at equal cost anywhere. Ten are reliably worse, all of them methods where the model inspects its own output, and all 18 self-inspection comparisons are negative. The two kinds of self-inspection part company as models grow. Choosing stops hurting: taking Best-of-N's eight samples and just counting the most common answer beats letting the model pick by 8.0 and 11.3 points at 1.5B, but only 2.0 and 1.3 at 7B, no longer distinguishable from zero. Rewriting does not recover: Self-Refine and a forced Reflexion stay 3.6 to 10.1 points below baseline at 7B.
+  Reflexion as published never triggered its own retry on the smallest model. It judged itself correct every time and silently became a single chain of thought. We release code, prompts, all generations, and our verification scripts.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.28573v1' target='_blank'>Rethinking Inference-Time Scaling in Local Computer-Use Agents: Failure Modes and Compute Tradeoffs</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Woongkyu Lee, Jungwook Choi</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-30 17:36:36</h6>
+<p class='card-text'>Deploying autonomous computer-use agents (CUAs) locally is increasingly important for privacy, cost efficiency, and practical usability, yet improving their performance under strict hardware constraints remains challenging. While recent studies show that inference-time scaling can improve frontier computer-use agents through additional computation during execution, its effectiveness for resource-constrained local models remains poorly understood. We present a systematic empirical study of inference-time scaling in local CUAs across contextual, temporal, structural, and parallel dimensions. We evaluate Qwen3-VL-8B/30B-A3B, UI-TARS-1.5-7B, and OpenCUA-7B on the OSWorld benchmark. Our results show that additional computation often yields diminishing returns while changing failure modes. Contextual scaling provides historical grounding that improves trajectory stability and task accuracy, but its gains saturate as token cost increases and failures shift from repetitive or stalled trajectories toward premature false successes. Temporal scaling similarly reduces max-step stalls, yet does not substantially improve task success, indicating that longer horizons often extend erroneous trajectories rather than correct them. We further find that structural decomposition can introduce planning and formatting overhead in local two-stage agents, while parallel scaling partially mitigates these failures at a substantial computational cost. Overall, our findings suggest that efficient local CUAs require selective compute allocation, failure-aware control mechanisms, and agentic frameworks designed around the capabilities and limitations of local models.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.28527v1' target='_blank'>MANTA: Multi-Agent Network Topology Adaptation for Self-Evolving Multi-Agent Systems</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Mao-xun Huang, Jerry Wang, Yi-Cheng Lai, Zhengxin Zhang, Claire Cardie, Hen-Hsen Huang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-30 17:01:27</h6>
+<p class='card-text'>Large language model-based multi-agent systems improve complex problem solving through task decomposition, agent specialization, information exchange, and intermediate validation. However, existing systems typically treat communication topology as a fixed design choice or an offline optimization target. We introduce MANTA, a framework for Multi-Agent Network Topology Adaptation that enables communication structures to self-evolve at inference time. Before execution, MANTA initializes a task-conditioned topology from prior structural experience. During deployment, it monitors collaboration traces and applies bounded structural updates when the current organization becomes insufficient. These updates can modify agent roles, communication links, execution order, information visibility, and validation pathways while preserving the task interface and agent budget. We evaluate MANTA against representative single-agent and multi-agent baselines on five benchmarks spanning information seeking, tool use, planning, workflow execution, and mathematical reasoning. MANTA achieves the highest average score of 74.0, outperforming the strongest baseline by 5.8 percentage points and obtaining the best result on PlanCraft. These results show that inference-time self-improvement can extend to the architecture of collaboration itself.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.28494v1' target='_blank'>Predictability of Human Movements across Industry Sectors using Multilayer Networks</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Maisha Islam Sejunti, Melissa Butler, Yingjie Hu, Dane Taylor</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-30 16:41:32</h6>
+<p class='card-text'>Understanding the spatiotemporal patterns of human movement is important across diverse applications including urban design, disease control, social and cognitive science, and emergency response planning. Recently, multilayer mobility networks were used to study how movements between spatial units (e.g., census tracts) can significantly vary when they are stratified according to different industry sectors-e.g., movements to grocery stores, to schools, or to hospitals. Here, we study the predictability of movements across different industry sectors using statistical and machine learning models trained on demographic, socioeconomic, and infrastructure information. We compare ten predictive models and identify advantages for nonlinear models (with random forest regression being a consistent top performer). We identify the most important features enabling prediction (population size for outward movements from regions and industry-related infrastructure for movements into regions). Of the two, prediction for inward movements (i.e., in-degrees) is generally more difficult; however, the difference is small for movements associated with food services. We also compare the prediction of weekly and time-averaged movements, finding that with the addition of time-encoding input features, weekly movements are easier to predict than time-averaged values (at least for the nonlinear predictive models). These findings provide a practical step toward using machine learning for human movement modeling and the many downstream applications.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.28488v1' target='_blank'>SCOPE: Supply-Chain Operations through Coupled Policies for End-to-End Coordination</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yunhao Liang, Xianqi Cao, Pujun Zhang, Yuan Qu, Yongzhi Qi, Ningxuan Kang, Max Z. J. Shen</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-30 16:38:57</h6>
+<p class='card-text'>Can supply-chain AI move beyond isolated decision modules toward unified operational planning? A complete replenishment plan specifies which products each location carries, which upstream facility supplies it, how often it is replenished, and how deliveries are routed. These decisions are operationally coupled: the selected assortment changes the demand and load passed to later stages; source assignment and replenishment frequency reshape the delivery requests; and route feasibility and cost, in turn, determine the system value of the earlier choices. Yet in modern supply chains, these decisions are often handled by separate departments and optimized through separate systems, which can lead to stockouts, inventory exposure, and avoidable transportation. We propose SCOPE: Supply-Chain Operations through Coupled Policies for End-to-End Coordination, a composite policy model that represents supply-chain entities as tokens, contextualizes them through a shared operational representation, and maps each token type to the corresponding decision interface. Each decision builds on the partial plan formed by earlier decisions while the completed plan is evaluated using a shared system-level utility. We instantiate this framework in urban fresh-retail replenishment, where service frequency, assortment, capacity pressure, and road-network routing interact strongly, and evaluate it on real operational data from Dingdong and JD.com, two large-scale supply chains operating at different replenishment echelons. Across both settings, SCOPE consistently outperforms methods that optimize each decision stage separately, as well as practice-oriented baselines commonly used in supply-chain operations. These results show that learning and coordinating cross-department operational couplings lead to more effective end-to-end supply-chain decisions.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.28459v1' target='_blank'>LeanCSP: A Framework for Certifying Constraint Reformulation and Solving in Lean</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Pablo Manrique, Stefan Szeider</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-30 16:21:58</h6>
+<p class='card-text'>Constraint programming is a core technology for solving complex combinatorial problems in scheduling, planning, configuration, and verification. Trusting its results therefore demands guarantees at two levels: that reformulations applied beforehand are semantics-preserving, and that solvers produce correct answers. In this work, we introduce a framework that addresses both verification levels in the Lean theorem prover: it can be used to prove formulation-level properties, such as equivalence, equisatisfiability, and the correctness of symmetry-breaking constraints, parametrically for entire problem families; and to check solver-produced certificates for individual instances via translation backends to external formats such as MiniZinc, SMT-LIB, and OPB. Combining both levels yields an end-to-end workflow that establishes the satisfiability or unsatisfiability of a constraint problem without trusting the external solver. Experimental results show that our framework's verified symmetry breaking also pays off in practice: a single parametric proof per problem family, reused across all instance sizes, reduces solver search effort by a factor of up to 2x10^7, while the entire in-Lean certification stays affordable, taking at most a few minutes for our largest instances.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.28451v1' target='_blank'>Machines that know they are aging: a framework for hardware-aware autonomous intelligence</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Cheng Siong Chin, Jianhua Zhang, Mohan Venkateshkumar</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-30 16:17:31</h6>
+<p class='card-text'>Autonomous systems inevitably age, yet their artificial intelligence typically assumes hardware remains in its original condition. Batteries degrade, sensors drift, processors accumulate timing errors, and memory reliability declines, creating a growing mismatch between assumed and actual capability. This can lead to agnostic collapse, where mission failure arises from accumulated hardware degradation rather than a single component fault. We propose Aging-Aware Autonomous Intelligence (AAAI), a framework that integrates hardware health directly into reasoning, planning, and mission execution. AAAI is built on three pillars: hardware self-awareness, which continuously estimates the health of power, sensing, memory, and computation subsystems using physics-of-failure models; self-adaptive reasoning, which adjusts inference complexity, planning horizon, and task priorities according to remaining hardware capability; and survival-centric intelligence, which allocates remaining operational life across mission objectives through performance optimization, resource conservation, and graceful degradation. Rather than introducing new hardware, AAAI unifies prognostics, lifecycle management, and hardware-aware computing into a closed-loop cognitive architecture. We argue that such integration is essential for autonomous systems operating in inaccessible or safety-critical environments, including space missions, marine robotics, and implantable medical devices. By enabling machines to recognize and respond to their own aging, AAAI improves resilience, extends operational lifetime, and supports safer, more graceful mission completion.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.28443v1' target='_blank'>One Future, Every Robot: Label-Efficient Collective-State Prediction with Decentralized JEPA</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Alan-Barsag Gazzaev, Alexey Garvilov, Sergey Muravyov</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-30 16:16:08</h6>
+<p class='card-text'>Can every robot in a swarm predict the same future collective state from only local observations and bandwidth-limited messages? We formulate this as decentralized shared-state prediction and introduce Collective-State JEPA (CS-JEPA), a recurrent joint-embedding predictive architecture whose output at every robot represents one common future token field. At deployment, each robot uses a 16-frame local history and one 64-float recurrent message per directed edge; there is no global pooling, target encoder, episode clock, or recorded future action. After pretraining without downstream collective labels, frozen representations are evaluated with ridge probes fitted on 6, 12, or 24 globally labeled episodes. Against raw-future reconstruction with the same receiver anchor and deployment capacity but 9,607 additional training-only parameters, a prospectively registered five-seed follow-up improves prediction-error and inter-robot-agreement label-budget AUC on in-distribution, ring, mutual-kNN, and unseen-size families up to 108 robots. Every effect favors CS-JEPA in 5/5 outer seeds. In a separate sealed eight-seed follow-up, matched action-conditioned predictors receive each candidate four-step plan before producing receiver-local predictive representations. CS-JEPA reduces branch-value MSE by 45.5% and improves within-context candidate-score Pearson correlation by 0.1291, with both effects favorable in 8/8 seeds, including at unseen N=32. These results support common-future JEPA targets as a label-efficient primitive for decentralized swarm prediction under topology and size shift, with additional evidence of planning-relevant value estimation.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.28415v1' target='_blank'>QQWorld: Quantile-Quantile Matching for World Model Regularization</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Zhoushun Yu, Xiaoyu Hu, Xiangyu Xu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-30 16:00:39</h6>
+<p class='card-text'>Latent world models enable efficient planning by predicting future states in a compact representation space, but their performance depends critically on the quality of the learned latent distribution. LeWorldModel (LeWM) regularizes its latents toward an isotropic Gaussian using the Epps-Pulley (EP) objective. We show that the corrective gradients of EP rapidly vanish for isolated tail samples, leaving heavy-tailed deviations insufficiently controlled. To address this limitation, we propose QQWorld, which replaces EP with a quantile-quantile matching objective that directly aligns projected latent samples with rank-matched Gaussian quantiles, thereby maintaining effective corrective gradients in the tails. We further develop cross-batch QQ, which enlarges the effective ranking pool using detached samples from previous batches, and characterize its bias-variance trade-off. Across four control environments, QQWorld effectively improves the average planning success rate of LeWM, while consistently yielding better Gaussian alignment and thinner latent tails.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.28399v1' target='_blank'>Why Are GUI Agents Correct but Late? Decode on the Decision-Time Critical Path, Tested with Pre-Compiled Policy Trees</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Zihan Dong, Rui Qian, Qishi Zhan, Dongshen Peng, Kaixin Li, Yu Li</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-30 15:50:10</h6>
+<p class='card-text'>Computer-use agents often fail on transient GUI events because they produce the correct action only after the relevant window has already closed. We identify the main cause as expensive autoregressive decoding on the decision-time critical path. We propose Adaptive Anticipatory Policy Trees (AAPT), which eliminates this delay without modifying the underlying model. During idle screen periods, the same frozen multimodal model constructs a bounded conditional policy tree with observable guards, pre-authorized actions, and branch-specific deadlines. The tree is sized to cover the model's own decoding latency. When an event occurs, a lightweight observer matches change-gated frames to a prepared branch and immediately executes the corresponding action without generating new text. In paired trials with pre-registered endpoints and exact McNemar tests, AAPT improves the success rate from 0.50 to 0.79 within a contested decision window ($p=1.8\times10^{-3}$), while producing no incorrect actions. Both open-loop and predict-and-replan baselines achieve zero success because they still decode during execution. A preparation-time sweep shows that the gain emerges where the latency-based tree-sizing rule predicts, and ablations reveal three key requirements: fast observer decoding, valid tree planning, and accurate branch routing. A pre-registered oracle probe rejects our initial hypothesis and instead points to branch routing as the causal bottleneck. We further reproduce the effect on an independent general-purpose multimodal model over 126 paired trials ($p=4.9\times10^{-13}$). On an external benchmark, AAPT matches the overall performance of a reactive baseline, although the two methods exhibit complementary strengths. Together, these results suggest that AAPT performs best when candidate actions can be enumerated in advance, whereas reactive execution remains stronger when they cannot.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.28367v1' target='_blank'>How Benchmarks Mis-Score Computer-Use Agents</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Zihan Dong, Zhiyuan Ma, Zekun Wang, Yunqing Li, Zirou Liu, Ruixuan Deng, Qishi Zhan, Rui Qian</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-30 15:29:42</h6>
+<p class='card-text'>Computer-use agents (CUA) are being deployed to browse the web and operate desktop software, yet their benchmark scores are still commonly produced by brittle scripted oracles. A score is the output of a pipeline in which tasks can be stale, trajectories can omit decisive visual evidence, evaluators can reject valid alternatives, and aggregate reports can hide the cause of failure. We organize these problems into a reliability framework spanning task construction, trajectory observation, scoring, and reporting. We then audit 150 public failure-scored trajectories from five web, enterprise-workflow, and desktop-control benchmarks, find that 15.3\% of FAIL verdicts are wrong: 10.7\% are evaluator false negatives and 4.7\% are broken tasks. For genuine failures, a three-tier diagnostic taxonomy shows that verification/feedback and planning failures dominate execution/grounding errors, while a single scalar success rate can not explain. We connect these findings to newer long-horizon CUA benchmarks and derive stage-specific design rules for CUA evaluation.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.28358v1' target='_blank'>No-Go Theorems for Quantum Transport Metrics from Fixed Cost Operators</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Minbo Gao, Zhengfeng Ji, Tianshi Yu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-30 15:24:50</h6>
+<p class='card-text'>Coupling-based quantum optimal transport generalizes classical optimal transport by representing transport plans as bipartite states with prescribed marginals and evaluating their cost as the expectation of a fixed Hermitian operator. Friedland et al. [Phys. Rev. Lett. 129, 110402 (2022)] conjectured that the square root of the optimal cost associated with the SWAP projector is a metric in every dimension and that this property persists for nearby quantum cost matrices. Miller [arXiv:2607.07764] disproved both conjectures by constructing explicit diagonal qutrit counterexamples. Building on his analysis, we prove a uniform no-go theorem for standard couplings. In every dimension $d\geq3$, no fixed cost operator makes either the optimal cost or its square root a metric, with violations occurring already among commuting states. The obstruction persists under stabilization of the SWAP cost. For channel-induced couplings, global nonnegativity and vanishing self-cost force the cost operator to be zero, precluding point separation when $d\geq2$. Taken together, these no-go results show that fixed-cost coupling formulations do not lead to metrics on the full quantum state space.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.28287v1' target='_blank'>Tycho: Active Abstraction with Programmatic World Models for ARC-AGI-3</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jens Lehmann, Andrei Aioanei, Sahar Vahdati</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-30 14:34:41</h6>
+<p class='card-text'>ARC-AGI-3 turns abstraction into an interactive problem of skill acquisition. A player must infer an unfamiliar game's rules, hidden state, and goal while maintaining action efficiency because every move counts. We formalize these environments as parameterized rendered deterministic Moore machines and introduce Tycho, a coding-agent system that constructs and uses game-specific models during interaction. Tycho separates actionable observations from intermediate animation, level-completion, and game-over frames. From this structured history, an agent can model, test, plan with, repair, or bypass a free-form executable hypothesis.
+  In one matched public-set run per policy, we compare four orchestration policies on all 25 public games using Claude Opus 4.8 under matched inference budgets. Actor-requested delegation to a model builder obtains the highest observed mean Relative Human Action Efficiency (RHAE), 88.49. With this selected policy, GPT-5.6 Sol and Opus 5 both reach 100.00 RHAE and complete all 183 levels. Their game-balanced first-run human-replay midranks are 98.5 and 100.0. Opus 5 uses 61% fewer scored actions than the aggregate official human baselines.
+  Automatic repair after verification failures produces models that reproduce observed transitions much more accurately, yet reaches only 83.07 RHAE. Transition match indicates whether a simulator reproduces observed dynamics, not whether it has identified the objective or improves the next action. Strong play also requires deciding when to construct, repair, use, or bypass a model. We call this joint problem active abstraction: generating a testable model from costly interaction and deciding when acquiring or using it is worth its cost.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.28227v1' target='_blank'>Qwen-UI-Agent Technical Report: Toward Next-Generation Real-World Centric Foundation GUI Agents</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Hanzhang Zhou, Panrong Tong, Xu Zhang, Quyu Kong, Chenglin Cai, Tianyu Xia, Gongjie Zhang, Jianan Zhang, Long Li, Long Chen, Lei Wang, Gaole Dai, Pengxiang Li, Liangyu Chen, Yue Wang, Steven Hoi</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-30 13:58:41</h6>
+<p class='card-text'>GUI agents have the potential to become a general purpose executor over existing digital devices. To advance them toward real-world use, we envision agents that operate reliably on real devices, execute workflows across platforms, combine GUI interaction with CLI execution, complete long-horizon tasks, proactively initiate useful services, and autonomously improve their capabilities with minimal human effort. Guided by this vision, we present Qwen-UI-Agent, a real-world centric foundation GUI agent spanning mobile, computer-use, web, and DeepSearch environments. Qwen-UI-Agent combines diverse sandbox environments with a large-scale real-device mobile runtime. Its unified action space interleaves GUI operations with CLI execution and generates batched actions in a single model turn. An AutoResearch-style data flywheel uses agents to construct tasks and environments, diagnose failures, and plan subsequent iterations. Online RL supports training on trajectories exceeding 100 turns, with over 10,000 concurrent environments accelerating rollout. A lightweight harness layer supports proactive service initiation and stateful workflows across mobile and computer.
+  Across a broad suite of evaluations, Qwen-UI-Agent sets state-of-the-art performance on mobile-use benchmarks while delivering competitive performance on computer- and browser-use tasks against frontier models, including Opus 4.8, Gemini 3.1 Pro, and GPT-5.6 Sol. On mobile use, it achieves 82.1% on MobileWorld, 92.2% on MobileWorld-Real, and 97.5% on AndroidDaily. On computer use, it achieves 79.5% on OSWorld-Verified and a 40.0% partial-progress score on OSWorld-v2. On browser use and GUI grounding, it achieves 73.6% on WebArena and 81.5% on ScreenSpot-Pro, respectively.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.28226v1' target='_blank'>Security of World-Model-Based Embodied AI: A Lifecycle of Threats, Defenses, and Evaluation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Fazhong Liu, Zhuoyan Chen, Haozhen Tan, Yan Meng, Guoxing Chen, Haojin Zhu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-30 13:58:33</h6>
+<p class='card-text'>World models give embodied AI a predictive core: they compress observations into states, simulate action-conditioned futures, and enable planning beyond reactive control. This predictive layer, however, opens a new security boundary-compromise can propagate from data, sensors, prompts, or feedback into physical action. Rather than treating world models as an isolated component, this survey traces threats across their entire lifecycle-from data construction and representation learning, through state grounding and imagination, to trajectory evaluation, execution, and long-term adaptation via memory and tools. We show that familiar attack families: poisoning, backdoors, adversarial examples, sensor spoofing, prompt injection, trajectory manipulation, and supply-chain attacks take on distinct meanings when they corrupt world states, learned dynamics, affordance estimates, or safety costs. We also highlight a duality: world models can serve as runtime safety shields, yet when compromised or over-trusted they generate predictive safety illusions. The survey offers a lifecycle taxonomy, maps existing attacks to world-model security properties, outlines evaluation protocols for safety failures, and structures defenses across provenance, robust grounding, uncertainty-aware prediction, trajectory gating, feedback auditing, and deployment assurance.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.28171v1' target='_blank'>The optimality of an (s, S) hiring policy on a workforce planning problem with fixed recruitment costs and binomial turnover</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Zhen Chen, Roberto Rossi, Belen Martin-Barragan, S. Armagan Tarim</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-30 13:08:44</h6>
+<p class='card-text'>We study a finite-horizon workforce planning problem in which staff turnover in each period follows a binomial distribution whose parameters depend on the post-hiring workforce level. The model incorporates a fixed hiring cost that is incurred whenever recruitment occurs, regardless of the number of employees hired. The objective is to minimise the expected total cost, including recruitment, salary, and shortage costs, where deviations below period-specific staffing requirements are penalised. To analyse this stochastic dynamic programme with decision-dependent transition probabilities, we establish the discrete convexity of the variable single-period cost (the sum of expected salary and penalty costs) and the K-convexity of the expected total cost. Specifically, we introduce the concept of Binomial-K-convexity to facilitate the proof that K-convexity is preserved under Binomial propagation in the Bellman function. We then show that the optimal hiring policy exhibits an (s, S)-type structure: when the workforce level in a given period falls below a threshold s, staff are hired up to level S; otherwise, no hiring occurs. Furthermore, we develop a piecewise approximation approach that yields a mixed-integer linear programming (MILP) formulation for solving the problem and computing the (s, S) parameters for each period. Numerical results demonstrate that the proposed method achieves fast computation with small optimality gaps.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.28109v1' target='_blank'>Beyond Rephrasing: Book-Level Organization Improves Synthetic Textbook Data for Mid-Training</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jiawen Tao, Miao Peng, Yaoming Li, Xiaokun Yuan, Mengzhou Wu, Wenhan Yu, Guoan Wang, Nuo Chen, Tong Yang, Maxm Pan</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-30 12:15:41</h6>
+<p class='card-text'>Synthetic textbook data has improved language model pre-training, but prior work largely treats the benefit as a property of generated content or local rewriting style. We study a different factor: whether related content is organized into coherent book-level documents. We contribute both a scalable synthesis pipeline and controlled evidence that this organization matters. The pipeline retrieves source material from a pre-training corpus, clusters it into topical units, plans hierarchical tables of contents, and assembles source-grounded sections into complete books (our Full setting), yielding 686K textbooks (32B tokens) across 15,000+ disciplines. Replacing natural books in a mid-training mix with this corpus improves downstream performance by +1.09 on average. Controlled comparisons then disentangle the relevant design factors. A content-matched Split condition holds generated text and tokens fixed but treats each section as an independent document; Full's +1.02 mean gain isolates document packaging. A length-matched RandomConcat control that joins sections from different books remains below Full, ruling out document length alone. A retrieval-pool-matched Rephrase condition independently rewrites individual retrieved documents under the same audience-by-style scheme, without clustering, TOC planning, or book assembly; Full's +1.17 gain demonstrates the value of structured synthesis. On Llama3-8B, Full likewise outperforms both RandomConcat and Natural Books, supporting book-level organization as a useful axis for synthetic pre-training data design.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.28072v1' target='_blank'>Investigating Effective Uncertainty Visualizations for Ordinal Crowdsourced Data of Crowding Conditions</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Bea Alexis Arcega, Annika Dominique S. Campos, Kathleen Therese Cruz, Aaron Ace Toledo, Briane Paul V. Samson</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-30 11:47:03</h6>
+<p class='card-text'>Commuters often encounter crowding in railway systems, particularly in queues where passenger density varies throughout the day. This introduces uncertainty in crowdedness, making it difficult for individuals to anticipate conditions and plan their trips effectively. Crowdsourcing has been a valuable method for collecting localized user data. But the unpredictability of crowds and the uncertainty of crowdsourced information pose new challenges for decision-making. However, we know little about how to effectively visualize uncertainty in crowdedness to support informed commuting decisions, particularly when using crowdsourced ordinal data. Here, we investigated different uncertainty visualizations and their effectiveness in representing the variability and reliability of crowdsourced crowding data. They were evaluated through an online study, and we found that cluster visualization is best suited to reduce cognitive load while maximizing user confidence and trust. On the other hand, participants showed higher accuracy in determining crowd levels when using bubble treemaps.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.28041v1' target='_blank'>When AI Does the Work, What Is Learning For? Post-Instrumental Learning and the Risk of Capacity Dissolution</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Kai Yao</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-30 11:24:56</h6>
+<p class='card-text'>As AI systems become capable of producing the essays, code, reports, summaries, plans, and decisions through which institutions usually recognize competence, a familiar question becomes harder to answer: what is learning for? Existing AI ethics rightly emphasizes present failures--bias, opacity, hallucination, labor extraction, privacy risk, and weak accountability. But if the case for learning rests only on those failures, then each technical improvement appears to weaken it. This article develops a different answer. Using the idealization of AI that executes specified tasks flawlessly while lacking authority over purposes, legitimacy, and responsibility, we argue for post-instrumental learning: learning that preserves the capacities people and institutions need when many useful outputs can be delegated. We analyze five such capacities--end-setting, reason-giving, contestability, refusal/revision, and participation--and name their erosion capacity dissolution. The central case is assessment under generative AI. When a polished artifact no longer reliably evidences understanding, institutions must assess the learner's accountable relation to AI-mediated work rather than the artifact alone. The takeaway is practical: AI governance should evaluate not only whether systems perform well, but also whether their deployment leaves people able to understand, challenge, revise, and share responsibility for the practices those systems mediate.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.27924v1' target='_blank'>ODEWorld: A Continuous Predictive Architecture via Physical-Time Flow</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Dongxiu Liu, Haoyi Niu, Peng Cheng, Yuan Gao, Xirui Kang, Sangli Teng, Koushil Sreenath, Xianyuan Zhan</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-30 09:37:30</h6>
+<p class='card-text'>In the physical world we inhabit, space and time are fundamentally continuous. However, existing machine learning paradigms for world modeling are largely confined to discrete-time prediction, thereby exhibiting significant inefficiency in capturing the dynamics of physical world. We introduce Physical-Time Flow (\textbf{PT-Flow}), a novel approach that learns a continuous latent velocity field operating in physical time. Crucially, the underlying dynamics of sequential data are parameterized by an ordinary differential equation (ODE) embedded in a well-structured representation space. Under this paradigm, the prediction of future can be recast as temporal integration via an ODE solver in the compressed latent space. Building upon PT-Flow, we construct \textbf{ODEWorld}, a continuous-time latent world model that is both efficient and versatile. By extracting time-variant features and enforcing ODE properties on both the dynamical representation space and the latent velocity field, ODEWorld effectively addresses the long-standing representation collapse issue in latent world model literature. This also enables high-quality image reconstruction even after long-horizon prediction. Moreover, its continuous nature allows for arbitrary temporal resolution and even backward prediction, which is impossible for most discrete-time models. Lastly, ODEWorld can provide rich planning-oriented information to facilitate downstream policy learning. Comprehensive experiments demonstrate that ODEWorld successfully reconciles planning-conducive dynamics abstraction with visual realism, excelling in both video generation and robotic control. \href{https://dstate.github.io/odeworld_website/}{Project Website}.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.27899v1' target='_blank'>Branching out: Prognostics-Based Replacement Policies for Series Systems</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Daniel Koutas, Daniel Straub</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-30 09:14:58</h6>
+<p class='card-text'>We propose a hybrid planning method for deriving prognostics-based predictive maintenance policies. The method accounts for the available decision options, the information on the future state of the system provided by a prognostic model, and the costs of the underlying renewal-reward process. It results in policies defined by only a few parameters, which can be determined based on theoretical considerations or by optimization from run-to-failure data. We demonstrate the potential of the method in two separate predictive maintenance decision settings: preventive replacement and preventive ordering. Numerical investigations show that the derived policies rival the performance of optimized benchmark policies, while being significantly more efficient and robust against overfitting.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.27881v1' target='_blank'>RoboBRIDGE: A Modular Framework for Bridging Policies to Robust Real-World Robotic Agents</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Sihyung Yoon, Minjong Yoo, Sanghyun Ahn, Seojeong Choi, Honguk Woo</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-30 08:55:45</h6>
+<p class='card-text'>Vision-Language-Action (VLA) models have attracted growing interest as a scalable approach to robotic manipulation. While these models are effective action predictors, deploying them as robotic agents exposes critical gaps: no mechanism for failure recovery, inconsistent execution over long horizons, and limited robustness to shifts in observations, tasks, or embodiments. Existing solutions address these limitations individually through model retraining or environment-specific modules, yet what is needed is a general framework that systematically transforms a pretrained VLA into a robotic agent. We present RoboBRIDGE, a modular framework that provides an orchestration layer over five coordinated modules, namely Monitor, Perceptor, Planner, Controller, and Robot Interface, to compose robust robotic agents from off-the-shelf components, including pretrained VLAs. The Monitor pairs rapid failure detection with hierarchical recovery to correct errors before they cascade. When the environment diverges from the current plan, the Planner triggers replanning while the Perceptor updates scene understanding asynchronously, avoiding execution stalls. Within the Controller, primitive skill fine-tuning factors manipulation into domain-invariant primitives with dedicated LoRA adapters, reducing sensitivity to domain shifts when a VLA is used. Across LIBERO, RoboCasa, and real-world case studies spanning multiple robot platforms and VLA backbones, RoboBRIDGE consistently outperforms both standalone policies and prior augmented VLA deployments. These results suggest that reliable robotic agency does not arise from scaling action predictors alone, but from structured orchestration around them.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.27835v1' target='_blank'>SAFViT: Spatial Attention Fusion Gating for Vision Transformer-Based Nucleus Segmentation and Classification</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Harshit Mittal, Arash Rabbani</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-30 08:15:36</h6>
+<p class='card-text'>Accurate cell segmentation and classification are foundational to digital pathology, enabling quantitative tissue analysis for diagnosis and treatment planning. Encoder-decoder architectures that fuse multi-scale features through skip connections have become the dominant paradigm for this task, yet standard direct skip connections treat every spatial location equally, which leads to redundant and potentially conflicting information reaching the decoder. To overcome this problem, various gating mechanisms have been introduced, but most of them operate solely on filtering encoder information, neglecting the benefit of global contextual information from the decoder. This study proposes replacing conventional skip connections in a CellViT-based model with a novel Spatial Attention Fusion (SAF) Gating module. Each SAF gate concatenates the encoder skip and upsampled decoder features, compresses them through two pointwise convolutions with an intermediate ReLU, and applies a channel-wise softmax to produce a per-pixel "heatmap of trust" that sums to unity at every spatial location, allowing the network to learn where each source is most trustworthy. The resulting fused features improve the model's ability to detect the minority "Dead" class, which in turn enhances the multi-class panoptic quality (mPQ) on the PanNuke dataset. SAF Gating is compared against six gating alternatives including no gating, attention gates, squeeze-and-excitation, CBAM, cross-attention, and attentional feature fusion on PanNuke and MoNuSeg datasets. SAF Gating achieves the highest mPQ (0.471), a gain driven primarily by a 14.5-point improvement in Dead-class F1 score compared to ungated CellViT baseline.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.27729v1' target='_blank'>PrintAnything: Learning an Intermediate Representation for 3D printing G-code Generation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Sangmin Hong, Daniel Sungho Jung, Heewon Kim, Kyoung Mu Lee</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-30 06:09:49</h6>
+<p class='card-text'>Point clouds are one of the most fundamental and widely used 3D representations, serving as the most basic geometric representation of 3D shapes. Nevertheless, most existing 3D printing pipelines require a watertight mesh as input, preventing the direct use of point clouds for fabrication. A common workaround is to reconstruct meshes from point clouds; however, the resulting meshes often contain geometric artifacts, such as incorrect faces or topological inconsistencies, that are difficult to repair and may lead to printing failures. To overcome these limitations, we propose PrintAnything, a novel framework that learns to produce executable 3D printing G-code directly from 3D point clouds without requiring mesh reconstruction. To enable point clouds to serve as direct input for slice-wise toolpath generation, we introduce a slice-wise point projection strategy that transforms unstructured 3D point clouds into slice-aligned 2D representations consistent with layer-by-layer nature of fused deposition modeling in 3D printing. To eliminate mesh dependency and provide a unified representation that bridges point clouds and G-code, we propose Geometric plan (G-plan) map, a compact 2D representation composed of occupancy, region, and flow maps that encode the geometric and extrusion properties required for toolpath synthesis in 3D printing. As a result, our proposed method accurately generates printable G-code directly from point clouds, enabling a practical and fully mesh-free pipeline for 3D printing. The code is publicly available at \href{https://github.com/Sangminhong/PrintAnything}{https://github.com/Sangminhong/PrintAnything}.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.27690v1' target='_blank'>LabEvolver: Training-Free Experience Evolution for Safe and Grounded Wet-Lab Agents</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jingya Wang, Yuyang Gao, Liuzhenghao Lv, Yonghong Tian, Yuyang Liu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-30 05:19:33</h6>
+<p class='card-text'>We introduce LabEvolver, a training-free framework that equips safe and grounded wet-lab agents with episodic memory from execution experience. LabEvolver couples a state-grounded inner trial loop for adaptive perception, online planning, and safety validation with an outer evolution loop that distills completed trajectories into reusable skill, strategy, and safety experience. On robotic solution-preparation tasks, LabEvolver demonstrates real-world feasibility, reducing pH-regulation completion time and safety-gate intercepts by 48.2% and 60.0%, respectively. On ALFWorld, it further improves cumulative success rate within 20 steps from 76.2% with ReAct to 91.4% over 500 continual tasks, showing generality beyond wet-lab settings. These results support learn-by-doing experience evolution as a feasible path toward closed-loop automated scientific discovery. The project page is available at https://github.com/AndyGao6186/LabEvolver.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.27627v1' target='_blank'>Arm2Air: Cross-Embodiment Skeleton Transfer for 3D Relay Formation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Dohun Lee, Kyeonghyun Yoo, Seokmin Kim, Byongho Lee, Seungjoo Oh, Hwangnam Kim</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-30 03:32:19</h6>
+<p class='card-text'>Unmanned aerial vehicle (UAV) relay networks can restore connectivity after communication infrastructure is damaged. Urban relay placement is difficult because line-of-sight blockage, communication range, altitude, and three-dimensional obstacles must be considered jointly. Arm2Air transfers obstacle-avoidance skeletons from robot arms to UAV relay placement through cross-embodiment transfer. Source-domain robot-arm motions from a pretrained Neural MP model are converted into ordered skeletons that pretrain a transformer-based transfer platform, which is then adapted to the UAV domain using limited target data and Low-Rank Adaptation. The transferred skeleton initializes a relay chain that is refined for connectivity, bottleneck capacity, delay, and movement cost. On nine held-out high-clutter 3D urban maps, Arm2Air reduced median end-to-end planning runtime by 64.9 percent relative to the fastest conventional planner. On the high-obstruction group of a separate 30-map dense urban holdout, it increased bottleneck capacity by 32.6 percent, reduced capacity variance by 74.7 percent, reduced maximum hop distance by 13.2 percent, reduced hop-distance variance by 75.2 percent, and reduced relay displacement by 16.9 percent relative to IMPC-MD. With only three target-domain training maps, Arm2Air reduced relay-position root mean square error by 53.6 percent relative to training from scratch while updating 0.134 million parameters, compared with 1.383 million for Scratch and Full Fine-tuning. These results demonstrate computationally and data-efficient UAV relay placement and suggest a broader principle for transferring ordered structural priors across heterogeneous embodied tasks.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.27599v1' target='_blank'>World Action Planner: Generalizable Decision-Making with Action-Conditioned World Models</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Xiangcheng Zhang, Yilun Du</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-30 02:41:52</h6>
+<p class='card-text'>Building generalizable agents for diverse applications remains a fundamental challenge. While imitation learning-based policies succeed in specific training environments, they often fail to generalize to novel scenes and tasks. In this work, we propose World Action Planner, a robot planning system that leverages the reasoning capabilities of Vision-Language Models (VLMs) and the physical grounding of a multi-task pose-image conditioned world model. Our system enables an agent to propose initial action plans and iteratively refine them via optimization and search, reasoning over imagined world model rollouts. We demonstrate that our approach achieves superior performance across compositional tasks, new layouts, and zero-shot generalization scenarios, significantly outperforming state-of-the-art end-to-end policy models such as VLAs and WAMs. Project website at worldactionplanner.github.io</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.27597v1' target='_blank'>A Systems Engineering Framework for Vision-Language-Enabled UAV Triage and Disaster Response</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Swapnil Saha, Bhuvan Rajanasiriyur Jagadeesha, Karishma Patnaik, Neelakshi Majumdar</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-30 02:35:39</h6>
+<p class='card-text'>Recent advances in Vision Language Models (VLMs) have created new opportunities for disaster response, where responders must interpret large volumes of sensor data under time pressure. Current VLM applications include social media monitoring for situational awareness, generation of draft action plans, and translation of technical alerts into public-facing messages. While these efforts can accelerate information flow, they remain largely limited to decision-support roles. Such approaches can increase operator burden because humans must still translate outputs into coordinated actions across teams and robotic assets. This study explores the viability of embedding VLMs as coordination agents within the human-UAV loop. The proposed architecture integrates natural language interaction, mission-level task coordination, software-in-the-loop implementation, and communication aligned with the Incident Command System (ICS). Rather than functioning solely as advisory tools, VLMs facilitate communication between human operators, mission control logic, and UAV task execution. The framework was developed using a Model-Based Systems Engineering (MBSE) approach, with use case and block definition diagrams representing system roles, internal structure, and component interactions. Three key elements, the VLM Coordinator Agent, UAV Mission Control, and Task Allocator, were implemented within an integrated simulation and control environment. A preliminary human-factors evaluation with seven participants showed reduced perceived workload across mental demand, effort, and frustration, along with high ratings for AI trust and communication clarity. By integrating MBSE, software-in-the-loop testing, and human-factors evaluation, this work advances scalable human-autonomy teaming for high-stakes disaster response, with broader implications for aerospace autonomy and civil safety.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2607.27556v1' target='_blank'>Evaluating Agentic Bioinformatics through Function, Evidence, and Validation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Phuc Pham, Truong-Son Hy</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-07-30 01:00:36</h6>
+<p class='card-text'>Large language model agents increasingly plan, execute, and interpret biological analyses, yet fluent responses, successful tool calls, and benchmark performance alone do not establish scientific credibility. Existing reviews primarily organize biological agents by application, architecture, and agentic capability, but do not jointly operationalize the accountability of agent-generated workflows. We address this gap by treating the inspectable workflow trajectory, rather than architecture or final output alone, as the primary unit of analysis. We introduce the Function--Evidence--Validation (FEV) framework, which separates demonstrated workflow operations, traceable support for actions and claims, and use-case-specific validation. Using FEV, we map 109 agentic or agent-adjacent systems and 28 benchmark or evaluation resources, representing 128 unique publications across genomics, single-cell and spatial omics, protein science, drug discovery, computational pathology, and general bioinformatics automation. Across domains, planning and tool-mediated execution have advanced more rapidly than replayability, provenance, robust scientific assessment, external validation, and prospective empirical testing. We therefore argue that agentic bioinformatics should be assessed through workflow correctness rather than final-answer correctness alone. FEV provides a practical basis for comparing systems and designing transparent, auditable, and scientifically accountable bioinformatics workflows.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js'></script>
+</body>
+</html>
