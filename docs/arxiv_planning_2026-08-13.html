@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>planning - 2026-08-13</title>
+<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap' rel='stylesheet'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css'>
+<style>
+body {
+font-family: 'Roboto', sans-serif;
+background-color: #f5f7fa;
+padding: 20px;
+}
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.card-title {
+    font-weight: 700;
+}
+.card:hover {
+    transform: scale(1.02);
+    transition: 0.3s ease-in-out;
+}
+</style>
+</head>
+<body>
+<div class='container'>
+<h1 class='text-center my-4'><i class='fas fa-book'></i>planning - 2026-08-13</h1>
+<div class='row'>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.12314v1' target='_blank'>StateFlow: Building, Evolving, and Accessing 3D World States for Previsualization</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yuyang Yin, Zixiang Li, Longxuan Deng, Hongkai Li, Shifang Zhao, Junnan Liu, Weirong Huang, Mengyu Wang, Tianxiao Fu, Yikai Wang, Peng-Shuai Wang, Xiaojie Jin, Yao Zhao, Yunchao Wei</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-12 17:58:07</h6>
+<p class='card-text'>Previsualization is an intermediate layer between ideas and production in film, games, architecture, and urban design. It lets creators iteratively refine scenes, actions, cameras, and spatial-temporal dynamics. Yet existing generative methods rely on simple prompts to jointly control all of these factors through one-shot image or video synthesis, offering weak controllability and limited support for iterative editing. Fundamentally, a world comprises multiple elements with geometry, appearance, and other attributes, together with cameras. Different frames are produced through local modifications or recombinations of this shared state, which is otherwise largely reused. Therefore, we argue that the missing component is an explicit and persistent working state. To address this, we present StateFlow, a state-centric framework for generative previsualization. Rather than generating videos in one shot, StateFlow uses an editable 3D world to organize scene structure, evolution, and cameras, while off-the-shelf video models enhance visual quality when higher fidelity is desired. This world is maintained as a persistent structured 3D state of scene elements and camera configurations, serving as the core working representation for previsualization. Built on this insight, StateFlow has three stages to construct, evolve, and access the world state. State construction lifts generated 2D content into a coherent 3D world through prior-guided, conflict-aware dual-view initialization, while State evolution translates user intent into structured state transitions while preserving world memory, avoiding full-scene regeneration for each edit. State access uses render-feedback reflection to refine camera plans into visually feasible trajectories, avoiding reliance on VLM semantics alone. Experiments show that StateFlow produces high-quality 3D worlds for video creation and game-like prototyping.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.12308v1' target='_blank'>DreamFly: Causal Memory and Receding-Horizon Diffusion Planning for Aerial Vision-Language Navigation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yan Deng, Fei Xu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-12 17:54:33</h6>
+<p class='card-text'>Aerial vision-language navigation (VLN) requires an embodied agent to integrate visual evidence over time, plan future actions, and determine when it has reached a navigation goal under partial observability. Although recent VLA models offer a promising perception-to-action paradigm, adapting them to aerial navigation remains challenging due to limited historical context, short planning horizons, and unreliable implicit termination. To address these challenges, we propose DreamFly, a diffusion-based aerial VLN framework built on Dream-VLA. DreamFly introduces a causally aligned historical memory that augments the current visual representation using only observations preceding the current decision step, enabling temporal reasoning without future information leakage. We further formulate navigation as receding-horizon diffusion planning, where the policy predicts a $K$-step action chunk but executes only the first action before replanning. This plan-$K$, execute-one strategy uses future actions as auxiliary planning targets while preserving closed-loop visual feedback. Finally, LiteStop estimates the stop probability directly from action logits at the initial all-mask state, decoupling explicit termination from action generation. Experiments on the OpenFly benchmark demonstrate consistent improvements in seen and unseen environments. DreamFly achieves 32.04%/29.46% SR and 28.22%/23.54% SPL on the test-seen/test-unseen splits, respectively, outperforming all compared methods on both metrics while attaining the lowest navigation error. These results demonstrate the effectiveness of jointly modeling historical context, future action structure, and explicit termination for aerial VLN.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.12277v1' target='_blank'>PACE-SIMS: Checkpoint-Gated Autonomous SIMS Characterization with AI-Agent Quality Control</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Anton V Ievlev, Heather Hare, Yiyang Li, Sergei V Kalinin</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-12 17:17:23</h6>
+<p class='card-text'>Time-of-flight secondary ion mass spectrometry (ToF-SIMS) is widely used for local chemical investigations across a broad range of materials and systems. However, its operation is expensive in expert time: a trained researcher must supervise acquisition throughout, dynamically tuning parameters throughout the experiment, often across a campaign spanning multiple days. Here, we present PACE-SIMS, an agentic workflow which runs a SIMS study as a human-AI collaboration. Here, the researcher specifies the scientific questions and quality requirements, and an AI agent builds the plan and, after approval, executes it autonomously, pausing at checkpoints to judge each measurement and to correct, retry, or escalate. To validate the approach, we applied it to a study of chemical composition in 18O-enriched WOx films. During this blind randomized, two-polarity study (8.1 hours, 35 measurements) the agent made three unscripted corrections a fixed script would have missed, and all four predictions held against the sealed ground truth. The same run returned transferable measurement science, including a composition calibration, a 5.3% isotope-reading offset between the two ion polarities, and the deposition's tracer-delivery mechanism, from less than two hours of researcher attention. The developed agentic architecture is not specific to SIMS and can be applied to other analytical techniques, with primary target being the destructive measurements for which optimization methods are poorly applicable.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.12274v1' target='_blank'>A Neighborhood Attention Transformer Network for Enhanced 3D Segmentation of the Left Anterior Descending Artery</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Rafi Ibn Sultan, Chengyin Li, Yiannos Demetriou, Ahmed I. Ghanem, Joshua P. Kim, Justine Cunningham, Hassan Bagher-Ebadian, Dongxiao Zhu, Kundan S. Thind</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-12 17:13:59</h6>
+<p class='card-text'>Background: Accurate segmentation of the Left Anterior Descending (LAD) artery in 3D free-breathing, non-contrast CT is critical for cardiac dose sparing in thoracic radiotherapy. The LAD is extremely small, has poor soft-tissue contrast, and varies substantially across patients; even manual contours show limited inter-observer agreement, underscoring the ambiguity of the vessel boundaries. Purpose: To develop a transformer-based framework that improves LAD delineation in low-contrast, imbalanced CT through local-global context modeling and uncertainty-guided optimization. Methods: We propose NA-UNETR, a 3D transformer-based segmentation model whose Neighborhood Attention (NA) and Dilated NA (DiNA) blocks jointly capture fine structural detail and long-range context. Given the scarcity of annotated LAD data, the model is pretrained on 1,000 CTA volumes of general coronary anatomy and fine-tuned with LoRA-based parameter-efficient adaptation on 20 free-breathing institutional CT scans. A composite Dice-Focal and Hausdorff loss, dynamically balanced via homoscedastic uncertainty, improves overlap and boundary accuracy. Results: NA-UNETR reached 45.64% Dice, 38.16 mm HD95, and 10.01 mm ASD, improving Dice by 3.10 percentage points over nnU-Net and reducing HD95 by 2.96 mm relative to Swin UNETR, with the strongest boundary accuracy among all models and improved centerline stability. On ImageCAS it achieved 79.49% Dice, 8.89 mm HD95, and 1.02 mm ASD. Ablations confirmed that residual blocks, variable kernels, and uncertainty-weighted loss each contributed. Conclusions: NA-UNETR balances local precision and global context for thin, low-contrast LAD structures, offering a computationally efficient framework for substructure-level cardiac segmentation in radiotherapy planning.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.12256v1' target='_blank'>SelectLight: Learning to Select Signal Plans Generated by Distributed Model Predictive Control for Urban Traffic Networks</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Lyuzhou Luo, Chaopeng Tan, Zhengyong Gao, Hong Zhu, Andrea D'Ariano, Keshuang Tang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-12 16:57:11</h6>
+<p class='card-text'>Coordinated traffic signal control across urban networks must adapt to changing demand while satisfying operational constraints. Multi-objective distributed model predictive control (DMPC) can construct feasible signal plans online, but prescribed rules for selecting among trade-off solutions cannot learn from realized closed-loop outcomes. We propose SelectLight, which implements post-optimization selection by allowing a multi-agent reinforcement learning (MARL) policy to choose directly from plans generated online by DMPC. At each control update, state-pruned multi-objective dynamic programming (SP-MODP) evaluates plans with a Newellian point--spatial queue model and returns a bounded set of mutually nondominated candidate signal plans for total queueing delay, peak queue accumulation, and total number of stops. A topology-aware attention policy trained with independent proximal policy optimization (IPPO) selects one unmodified plan from each variable-size set. This confines learning to candidate selection, preserves the prescribed signal timing constraints, and leaves the selected plan and its predicted objective trade-offs available for inspection. Experiments on two 28-intersection SUMO networks show that SelectLight achieves the best delay-related performance and that its advantage widens with demand. At twice the baseline demand, it reduces queueing delay and waiting time by 5.57% and 6.44%, respectively, relative to the strongest baseline. SelectLight also incurs the lowest transfer loss under every tested demand shift. With a 120 s prediction horizon, the per-intersection 99th-percentile SP-MODP solution time is 5.408 ms, well below the 5 s control interval.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.12198v1' target='_blank'>Learning-Based Behavior Planning for Automated Driving: Real-World Integration and Deployment</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jean-Pierre Busch, Guido Linden, Jan Bergmann, Lutz Eckstein</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-12 15:52:18</h6>
+<p class='card-text'>Recent research in machine and deep learning has shown the potential of learningbased motion planning approaches to improve the driving behavior of automated vehicles, especially in complex environments. However, their complex nature and lack of transparency can hinder explainability and trustworthiness and complicate safety assurance. Motivated by these challenges, we propose a hybrid planning architecture that combines the advantages of machine learning with the verifiability and the determinism of classical approaches. Specifically, we developed a deep neural network to interpret complex traffic scenes and propose driving behavior, while an optimization-based supervision layer validates this proposal and enforces explicit drivability and safety constraints. We evaluate the learned planner's driving behavior in open-loop studies on real-world urban data, discuss system integration aspects for stable closed-loop operation, and report results from real-world deployment on our research vehicle karl..</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.12078v1' target='_blank'>Better Slots, Better Worlds: Representation Quality & Robustness in Object-Centric World Models</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Shukrullo Nazirjonov, Sai Prasanna, Anna Manasyan, Georg Martius</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-12 14:02:36</h6>
+<p class='card-text'>Learning world models from offline trajectories enables agents to accomplish different tasks through planning. Object-centric (OC) representations, which decompose a scene into a set of slots that bind to its objects, have been proposed as an inductive bias for world models that are more sample-efficient and generalize better. Yet prior object-centric world models (OCWMs) take the slot encoder as given and evaluate only in-distribution, leaving open whether the object-centric bias actually delivers for planning and what within the OCWM drives it. We conduct a controlled study of OCWMs for visual model-predictive control along two axes: object-centric representation quality and generalization under distribution shift relative to scene-centric models. We find that (i) planning success correlates positively with unsupervised slot-quality metrics (FG-ARI, mBO), though the gains saturate at high slot quality; (ii) with well-bound slots, the auxiliary proprioception inputs and masking inductive bias that prior methods relied on become unnecessary; and (iii) under unseen distribution shifts, the OCWM with well-bound slots is more robust overall than the end-to-end trained scene-centric LeWM, while DINO-WM, built on similar frozen pretrained features, remains competitive -- pointing to pretrained features as a key contributor to robustness.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.12062v1' target='_blank'>Preference Tree Optimization: Enhancing Goal-Oriented Dialogue with Look-Ahead Simulations</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Lior Baruch, Moshe Butman, Kfir Bar, Doron Friedman</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-12 13:48:30</h6>
+<p class='card-text'>Developing dialogue systems capable of engaging in multi-turn, goal-oriented conversations remains a significant challenge, especially in specialized domains with limited data. This research proposes a novel framework called Preference Tree Optimization (PTO), designed to iteratively improve agent models in such dialogue systems, by generating preference data using a method called Preference Tree with Look-Ahead. Focusing on Motivational Interviewing (MI) -- a counseling technique aimed at facilitating behavioral change -- we leverage virtual patients and an oracle evaluator to simulate conversations and generate rich preference datasets. By combining this method with Direct Preference Optimization (DPO), we aim to enhance the agent's decision-making capabilities over iterative training cycles. The proposed framework addresses data scarcity and advances the development of more nuanced and effective dialogue systems in goal-oriented domains. Experimental evaluations demonstrate that the PTO framework enhances dialogue agents' performance in goal-oriented conversations within the domain of Motivational Interviewing (MI). Models trained with PTO consistently outperformed the baseline in key metrics such as session satisfaction and working alliance. Additionally, incorporating look-ahead simulations led to improved long-term planning and more effective conversational strategies, with deeper look-ahead configurations yielding the most stable and high-scoring results.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.12047v1' target='_blank'>Network Topology Reconfiguration: Optimal Transition Planning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Basel Morsy, Jochen Stiasny, Adolfo Anta, Jochen Cremer</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-12 13:28:34</h6>
+<p class='card-text'>Network topology reconfiguration (NTR) can reduce power system operating costs by co-optimizing generation dispatch and substation switching, but the reported savings describe a target operating point rather than a way to reach it. Reaching this operating point requires a sequence of intermediate operating points, each satisfying the AC power flow equations and thermal limits; because each topology admits its own feasible dispatch region, a naive transition that switches or redispatches first can drive intermediate flows past their thermal limits. Existing methods leave this gap open: snapshot NTR identifies a target but not a route. We formulate the Optimal Transition Planning (OTP) problem, co-optimizing the switching sequence and dispatch trajectory subject to AC feasibility at every intermediate point. We solve this problem with a receding-horizon framework: a DC planner proposes a trajectory that is certified against an AC feasibility filter, and infeasible topologies are excluded using reusable combinatorial cuts. Case studies on congested PGLib-OPF systems up to 1354-bus show that the method produces AC-feasible transitions that reduce operating cost by up to 18.4% compared to the no-switching ACOPF solution on commodity hardware.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.12001v1' target='_blank'>Remote Sensing and Machine Learning-Based Analysis of Land Use and Vegetation Change in Dhaka District, Bangladesh</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Muhammad Masud Tarek, Md. Alamgir Hossain, Md. Samiul Islam, Muntasir Hasan Kanchan</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-12 12:36:38</h6>
+<p class='card-text'>Rapid urbanization in Dhaka District, Bangladesh has triggered substantial alterations in land use and environmental conditions, necessitating systematic monitoring for informed urban planning and ecological sustainability. This study employs remote sensing data and machine learning techniques to analyze spatiotemporal changes in land cover and vegetation dynamics between 2019 and 2024. High-resolution satellite imagery from Sentinel-2 MSI and Landsat 8 was utilized to classify land cover types and compute spectral indices including the Normalized Difference Vegetation Index (NDVI), Normalized Difference Built-up Index (NDBI), and Normalized Difference Water Index (NDWI). A supervised machine learning approach incorporating Decision Tree, K-Nearest Neighbors (KNN), and Random Forest classifiers was applied using labeled geospatial training points within Google Earth Engine. Accuracy assessments were conducted using confusion matrices and kappa statistics. Results indicate a 59.5% increase in urban built-up areas and a significant decline in vegetation (-8.46%) and water bodies (-7.77%) over the five-year period. Land conversion from vegetated and aquatic areas to urban infrastructure was identified as a dominant trend. Among the models, Random Forest demonstrated the highest classification accuracy. These findings underscore the growing environmental pressures driven by unregulated urban expansion in Dhaka. The study highlights the potential of remote sensing and machine learning tools in providing timely, actionable data to support sustainable urban development, land-use regulation, and ecosystem conservation policies.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.11967v1' target='_blank'>LoongReflect: Boosting Long-Horizon Reflection in Search Agents via Global Perspective Distillation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Zhixin Zhang, Xinke Jiang, Zhibang Yang, Weixuan Xu, Guohong Qiu, Xu Chu, Junfeng Zhao, Yasha Wang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-12 11:56:03</h6>
+<p class='card-text'>Large language model agents increasingly rely on long-horizon reasoning to solve complex tasks involving planning, tool use, and memory. A critical capability in such settings is reflection: assessing trajectory progress, identifying missing evidence and unreliable intermediate states, and deciding whether to continue, revise, or abandon the current branch. Learning effective reflection, however, is challenging because reflection is performed locally within the current branch, whereas its utility can only be determined by its contribution to the final trajectory outcome. This local-global mismatch makes outcome-based reinforcement learning provide only local, sparse and delayed supervision for reflective decisions. To solve these, we propose LoongReflect, a training framework that formulates reflection as a memory-control policy. The agent operates over a reversible trajectory tree using explicit reflect and backtrack actions. Reflection consolidates verified facts, missing evidence, and branch-specific risks into working memory, while backtracking removes an unreliable branch from the active context and preserves a concise corrective lesson. To learn this policy, LoongReflect combines two complementary signals through a look-ahead, extragradient-style coordination mechanism. A fast channel distills globally informed reflective behavior from a privileged teacher, with supervision restricted to reflection and backtracking tokens. A slow channel optimizes complete trajectories using outcome-based GRPO, aligning local control decisions with final task success. Experiments on multi-hop retrieval-augmented generation and mathematical reasoning benchmarks demonstrate consistent improvements over outcome-only reinforcement learning and self-distillation baselines.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.11924v1' target='_blank'>Spark-to-Paper: End-to-End Research Paper Generation as a Composable Skill</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Zhuoyang Qian, Biao Wu, Yiran Wang, Chris D Yan, Desan Dai, Liangwei Zheng, Jin Jiang, Junsheng Zhang, Wenhao Wang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-12 11:11:07</h6>
+<p class='card-text'>Turning a research idea into a complete paper requires more than text generation: the system must retrieve literature, design and execute experiments, revise claims according to evidence, produce publication-ready figures, and maintain consistency across a long generation process. We present Spark-to-Paper, an end-to-end research paper generation system implemented as thirteen composable skills inside an existing coding assistant, without requiring a separate agent platform or orchestration service. Spark-to-Paper separates model-based judgment from deterministic operations that can be directly executed and checked. It further separates experiment planning from reporting, so that required evidence is specified before results are observed and manuscript claims are revised according to measured outcomes. To improve reliability over long research trajectories, the system combines deterministic integrity checks with self-critique and bounds a failure mode we call the Self-Refutation Loop, in which repeated experiments continue to reject the original research objective. Spark-to-Paper also produces editable vector figures through programmatic plotting for experimental results and code-based reconstruction for generated method diagrams. Across eight controlled research topics, Spark-to-Paper achieves 99.5% citation validity and 96.4% figure editability. A controlled ablation increases fabrication detection from 14% for a single-pass draft to 92% with the full integrity and review stack, while adversarial review achieves 74% precision. The full system uses 11.9M tokens, costs $8.1 per manuscript, and requires 3.2 hours on average. These results show that end-to-end research paper generation can be implemented as a lightweight, composable workflow inside existing coding assistants while keeping experimental evidence central to how claims are accepted, revised, or abandoned.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.11866v1' target='_blank'>Urban logistics dynamics: a user-centric approach to traffic modelling and kinetic parameter analysis</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Emilienne Lardy, Eric Ballot, Mariam Lafkihi</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-12 09:49:41</h6>
+<p class='card-text'>Efficient urban logistics requires a comprehensive understanding of traffic dynamics, particularly as it pertains to kinetic parameters influencing energy consumption and trip duration estimations. While real-time traffic information is increasingly accessible, current high-precision forecasting services embedded in route planning often function as opaque 'black boxes' for users. These services, typically relying on AI-processed counting data, fall short in accommodating open design parameters essential for management studies, notably within Supply Chain Management. This work revisits the modelling of traffic conditions in the context of city logistics, emphasizing its significance from the user's point of view, with two focuses. Firstly, the focus is not on the vehicle flow but on the vehicles themselves and the impact of the traffic conditions on their driving behaviour. This means opening the range of studied indicators, beyond vehicle speed, to describe extensively the kinetic and dynamic aspects of the driving behaviour. To achieve this, we leverage the Art.Kinema parameters designed to characterizing driving cycles. Secondly, this study examines how the driving context (i.e., exogenous factors to the traffic flow) determine the mentioned driving behaviour. Specifically, we explore how accurately the kinetic behaviour of a vehicle can be predicted based on a limited set of exogenous factors, such as time, day, road type, orientation, slope, and weather conditions? To answer this question, statistical analysis was conducted on real-world driving data, which include high-frequency measurements of vehicle speed. A Factor Analysis and a Generalized Linear Model have been established to link kinetic parameters with independent categorical contextual variables. The results include an assessment of the adjustment quality and of the robustness of the models, as well as an overview of the models' outputs.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.11793v1' target='_blank'>PolarSym: Polar Geometry-aware Attention for CAD Floorplan Parsing</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Kerui Chen, Yiqing Wang, Kangzhou Xin, Qinghan Zhang, Songyang Ding</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-12 08:34:32</h6>
+<p class='card-text'>CAD plan parsing is a fundamental task in Building Information Modeling (BIM), aiming to automatically extract architectural elements including walls, doors, windows, and furniture from 2D engineering drawings. Existing Transformer-based methods capture global semantic dependencies via self-attention, yet they infer spatial relationships merely from semantic features without explicitly characterizing the intrinsic geometric symmetry of building layouts. Such methods tend to produce mismatched correspondences in long-range matching and complex symmetric spatial layouts. To tackle this limitation, we propose PolarSym, a polar-coordinate geometry-aware attention framework for CAD plan parsing. The framework decouples geometric relationships of buildings into two complementary components, direction and distance, which are modeled independently. Structural consistency is strengthened by directional constraints, while long-range symmetric correspondences are built with distance constraints. A dynamic gating mechanism is adopted to synergistically fuse the two geometric information branches while maintaining the vanilla Transformer architecture. This design boosts geometric modeling capacity with negligible extra computation. Experiments on a public CAD plan parsing dataset show that PolarSym surpasses the reproduced SymPoint V2 baseline by 1.73% PQ, 1.54% RQ and 4.31% mIoU under identical training settings. PolarSym also converges faster and yields more stable optimization. Ablation experiments verify the complementary effects of direction and distance modeling. Our results reveal that PolarSym improves the geometric awareness of Transformers at low computational cost, offering an effective geometric modeling paradigm for CAD plan parsing.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.11692v1' target='_blank'>HUGIN: Enhancing Vision-Language Planning for Autonomous Logistics Sorting</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Xikai Sun, Cangtian Zhou, Kebin Liu, Ke Ma, Xu Wang, Zaishu Chen, Haotian Wang, Li Liu, Yunhao Liu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-12 06:04:27</h6>
+<p class='card-text'>Autonomous logistics sorting systems (ALSS) are an important industrial application of embodied AI, which requires joint planning over spatially disjoint camera views. We formulate this setting as Joint Multi-Scene Understanding (JMSU). With open-world visual understanding and task-planning capabilities, vision-language models (VLMs) are promising candidates for JMSU. However, directly applying existing VLMs to JMSU is non-trivial due to scarce cross-scene supervision and attention dispersion caused by long visual context in JMSU. To address these challenges, we propose HUGIN, a training framework with two complementary components. Endogenous Data Augmentation recombines verified atomic facts under operating constraints, while Global Context Ranking aligns the instruction representation more strongly with the complete visual context than with a partial visual context. To support ongoing research, we construct a high-quality industrial sorting dataset and benchmark named SortingBench from four layouts of autonomous logistics sorting systems. Across five open VLMs, HUGIN consistently outperforms matched baselines; for example, the accuracy on SortingBench of Qwen3-VL-8B increases from 63.6% to 78.8%. Additional experiments verify the effectiveness of each component and JMSU's spillover benefits in embodied tasks. Deployment tests involving more than 15,000 packages support the practical viability of VLM-based planning for autonomous logistics sorting.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.11671v1' target='_blank'>StellaVLA: In-Context Structured Demonstration for Generalizable Vision-Language-Action Models</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Siyu Xu, Yunke Wang, Zijian Wang, Dihao Zhu, Chenghao Xia, Chengbin Du, Daochang Liu, Tao Huang, Chang Xu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-12 05:30:53</h6>
+<p class='card-text'>Vision-Language-Action (VLA) models can follow instructions and manipulate objects, but their performance often collapses out of distribution (OOD), when the scene, viewpoint, or object differs from training. Adapting to each new situation typically requires collecting more data and fine-tuning. We present StellaVLA, a framework that instead adapts at test time by conditioning on a single retrieved demonstration. The key idea is to move beyond imitating what an expert did and instead convey why: an automated offline pipeline converts each raw trajectory into a structured demonstration, e.g., a task plan, sub-goal descriptions, and verbalized 3D motion, at zero human-annotation cost. Provided as in-context guidance, this structured demonstration lets the policy reason about the task rather than mimic a pixel trajectory, which also makes it transferable across embodiments (real-robot, human-hand, or XR demonstrations). A parallel dual-training design internalizes this reasoning during training through a joint action-and-language objective, while inference uses the action expert alone, preserving real-time, high-frequency control with no added latency. On the VLA-Arena leaderboard(Aug 1, 2026), StellaVLA ranks first with an overall score of 0.63, versus 0.44 and 0.22 for the strong prior models ($π_{0.5}$ and LingBot-VLA), and it further leads on LIBERO with 98.8% average success rate and LIBERO-Plus with 85.1% success rate. Our real-robot benchmark demonstrates that StellaVLA can use both human/robot demos and human-to-robot (XR) demos as in-context structured demonstration to help VLA model adapt to OOD tasks.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.11641v1' target='_blank'>Energy-Aware Wind-Resilient Routing for Truck-Assisted Multi-UAV Delivery under Wind Uncertainty</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Tianshun Li, Yanggang Sheng, Hongliang Lu, Zhongzhen Wang, Haoang Li, Xinhu Zheng</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-12 04:40:48</h6>
+<p class='card-text'>Energy feasibility under wind uncertainty is a critical safety issue for low-altitude air-ground delivery. In truck-UAV systems, UAVs complete assigned deliveries and safely return to a mobile truck or depot, while wind-induced propulsion costs vary online and are only partially observable. Existing routing methods often rely on static or deterministic energy models, which may underestimate headwind, crosswind, battery-voltage, and return-feasibility risks. This paper proposes Energy-Aware Wind-Resilient Routing (EWR), an online risk-sensitive planning framework for wind-aware and energy-safe UAV routing. The delivery environment is represented as a time-dependent directed energy graph whose edge costs are updated using delayed noisy wind estimates, payload states, and conservative uncertainty margins. Experiments using synthetic delivery graphs with replayed wind logs from a public truck-UAV delivery dataset show that EWR improves mission success rates and reduces wind-induced return failures.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.11477v1' target='_blank'>Stochastic Corridor Time Network Capacity Planning for Low Altitude Airspace Systems</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yipu Yao, Li Ding, Yanlu Zhao</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-11 22:31:41</h6>
+<p class='card-text'>Regulators in China, the United States, and the European Union now provide low-altitude airspace access as priced, time-windowed corridor authorizations, booked in advance and forfeited if unused. We ask how much capacity a UAV logistics planner should reserve on each corridor--time unit before demand is realized, to maximize expected profit net of reservation cost. Reserved capacity cannot be transferred across corridors or time windows and is consumed jointly along time-respecting paths, so reservations are coupled through the network in ways that models with exogenous airspace capacity cannot capture. We formulate a two-stage stochastic program whose recourse selects and routes accepted requests on a time-expanded network, prove its arc-based and path-packing forms equivalent, and solve it by Benders decomposition with column-generated subproblems. The decomposition operates on the LP relaxation, and all reported reservation and routing decisions are recovered as integer plans. Computational experiments achieve single-digit LP-Benders gaps on moderate-sized networks and extend to much larger instances through a truncated-path approach. A Shenzhen case study shows reservations concentrating on structurally central corridors, with demand level and reservation price having more influence on the quantity of capacity reserved than the selection of corridors.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.11405v1' target='_blank'>Predict-then-Optimize Framework for Public Transport Line Redesign under Fluctuating Traffic Conditions</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Zihao Guo, Andrea Araldo, Faycal Touzout, Mounim El-Yacoubi</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-11 20:10:28</h6>
+<p class='card-text'>Public Transport (PT) lines are traditionally designed to optimize performance under nominal traffic conditions. In practice, operating conditions frequently deviate from nominal ones, leading to substantial performance deterioration. Existing adaptation mechanisms typically rely on reactive interventions, such as stop-skipping, which are insufficient under large or recurrent traffic fluctuations. In such contexts, incremental adjustments may not suffice. This paper evaluates the potential of deeper structural redesigns to preserve performance.
+  We propose a method to proactively redesign appropriate parts of PT networks under high traffic fluctuations that would otherwise deteriorate operator and user performance. We adopt a predict-then-optimize paradigm in which PT lines are reconfigured based on traffic forecasts using the Non-dominated Sorting Genetic Algorithm III (NSGA-III).
+  To ensure operational feasibility and avoid excessive structural changes, we enforce high Jaccard edge overlap between the original and redesigned networks. To assess prediction inaccuracies, we construct a statistical model of errors from a well-established deep learning predictor, the Diffusion Convolutional Recurrent Neural Network, trained on real-world data.
+  Computational results on Mandl's benchmark and the large-scale Beijing network show that controlled PT line redesign yields substantial user-centric performance gains and operational cost reductions under high traffic fluctuations while limiting topological changes. On the Beijing network under high variability, average travel time improves by up to 25.8% while preserving over 85% line overlap. Unlike stop-skipping baselines, which break connectivity for many OD pairs, our redesign preserves full OD connectivity. These results support a shift from static planning toward continuous and adaptive PT network design.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.11371v1' target='_blank'>Do People Follow AI Advice? Evidence from a Pension Portfolio Choice Experiment</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Hongseok Choi, Jeongbin Kim, Matthew Kovach, Kyu-Min Lee, Euncheol Shin, Hector Tzavellas</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-11 19:27:41</h6>
+<p class='card-text'>We study how differences in AI-generated financial recommendations are transmitted into individual portfolio choices. In an experiment with 400 employed adults enrolled in workplace defined contribution pension plans in South Korea, participants allocate a hypothetical pension balance across eleven products and may revise it after receiving one of two fixed AI-generated recommendations. A $2 \times 2$ design randomizes recommendation content and whether the recommendation includes a short rationale. Approximately 37$\%$ of the experimentally induced difference between the aggressive and conservative recommendations passes through to final portfolios. This causal contrast changes expected portfolio return, volatility, allocations across risk grades, and the number of products held, but produces no detectable difference in computed Sharpe ratios. 81$\%$ of participants revise. Among revisers, 95$\%$ move toward the assigned recommendation and implement about half of the suggested adjustment. Rationales do not detectably alter pass-through. These results show that users partially and selectively transmit recommendation content into economically meaningful differences in risk exposure while retaining substantial weight on their initial choices.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.11175v1' target='_blank'>Risk-Aware Kinodynamic Motion Planning Under Uncertainty For Safe Navigation on Planetary Environments</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Sachin Sunil Kelkar, Tanmay Dokania, Yashwanth Kumar Nakka</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-11 17:34:56</h6>
+<p class='card-text'>For autonomous space exploration, robotic agents need to perform motion planning in which environmental interactions may be unknown. Learning these interactions, such as terrain mechanics for wheeled robots, can introduce uncertainties that lead to risky motion plans and potentially hazardous operations or mission failures. Moreover, uncertainties induced by perception-based systems can exacerbate the problem of safe motion planning. In this letter, we address the problem of performing cost-optimal kinodynamic motion planning with risk awareness. We approach this in two steps. First, a sampling-based planner (AO-RRT) generates a dynamically feasible, risk-aware, and asymptotically cost-optimal trajectory. Second, we formulate motion planning as a nonlinear optimization problem and solve it using sequential convex programming (SCP), using the AO-RRT trajectory as an initial solution. By quantifying risk using conditional value-at-risk (CVaR), we demonstrate a reduction in risk by over $\sim$97\% across trajectories in simulation and hardware experiments.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.11174v2' target='_blank'>VIScore: Diagnosing Planning-Relevant Quality in Latent World Models</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Haiyu Wu, Randall Balestriero, Morgan Levine</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-11 17:34:10</h6>
+<p class='card-text'>Regulating the latent space to an isotropic Gaussian distribution provides a stable and information-maximized landscape for world model planning. However, the latent space property and successful planning remain disconnected. We first study this by comparing SIGReg and VISReg, two regularization loss functions with the same distribution target but different properties. Compared with SIGReg, VISReg has more flexibility in controlling the weights of center, scale, and shape regularization, and a larger batch size brings a finer distribution approximation. We find that the former, despite being beneficial in self-supervised learning (SSL), does not help the planning, whereas the latter improves the planning success on out-of-domain (OOD) datasets. This motivates a deep understanding of the factors that correlate with the success rate. Unlike the previous metrics focusing on the encoded latent only, we propose the Veracity-Influence-Sobriety score (VIScore), a metric that quantifies the reachability and capacity of a predictor given the encoded feature, and the hallucination of the searching-based planner. Compared with straightness, physical-state probing, and empowerment, we show that, with the measurement covering encoder, predictor, and planner, VIScore explains the success rate better than the others, as reflected by a strong Spearman correlation. Specifically, VIScore consistently achieves a Spearman correlation over 0.75 on both seen and unseen models and datasets on the cross-task success rate pool. Moreover, VIScore is the only metric that has a calibration error below the constant fit across all testing scenarios, showcasing the importance of these three aspects in planning success. We hope this metric can help future studies on world model design and diagnosis.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.11083v1' target='_blank'>A Systematic Sample Size Analysis of ML-Based Path Loss Prediction for LPWAN</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Robert Bitterling, Christian Nettersheim, Jörn Hees, Michael Rademacher</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-11 15:48:54</h6>
+<p class='card-text'>Low Power Wide Area Networks like LoRa are increasingly deployed for smart city applications, requiring accurate path loss prediction for effective network planning. Traditional (empirical) propagation models often exhibit limited accuracy in these scenarios. We investigate machine learning models for LoRa path loss prediction, systematically analyzing how prediction accuracy scales with training set size using real-world measurements from an urban deployment. Our approach employs a Random Forest with LiDAR-derived terrain features and k-Nearest Neighbors with coordinate data, comparing their performance against established empirical models and specialized LPWAN models. Under random pooled splits, both ML models consistently outperform the considered baseline models across the evaluated training-set sizes. At maximum training size, they achieve RMSE values below 6.5 dB compared to 9.7 dB for the best baseline, indicating accurate within-deployment interpolation. A leave-one-gateway-out check qualifies this result: RF shows placement-dependent transfer to held-out gateways, with moderate degradation for several gateways but larger errors for others, whereas coordinate-only k-NN degrades substantially when the gateway location is unseen</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.11076v1' target='_blank'>Foundation Model-Enabled Efficient Data Sampling (FEEDS): A label-efficient training strategy for pan-cancer, multi-tracer PET/CT datasets</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Biratal Raj Wagle, Bashirul Azam Biswas, Grant Chau, Matthew E. Maeder, Muhammad Azeem Arshad, Michael S. Leapman, James B. Yu, Indrani Bhattacharya</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-11 15:38:44</h6>
+<p class='card-text'>Automated lesion segmentation in whole-body PET/CT imaging can assist clinicians with cancer detection, staging, and treatment planning across radiotracers and cancer types. However, training lesion segmentation models that capture variations in lesion size, distribution, and appearance requires large annotated datasets, whose creation is both time- and expertise-intensive. As a result, models trained on limited labeled PET/CT data often lack the accuracy and generalizability needed for clinical use. We present FEEDS (Foundation model-Enabled Efficient Data Sampling), a label- and compute-efficient learning strategy that uses vision foundation model embeddings to select the most informative and diverse unlabeled cases for expert annotation. Unlike unsupervised, semi-supervised, and active learning approaches, FEEDS is a one-step training paradigm requiring only a limited, representative training set, making it label- and compute-efficient. We train and validate FEEDS using the AutoPET-III dataset. We test its accuracy and generalizability on three held-out sets: AutoPET-III, DeepPSMA, and an internal Dartmouth-Hitchcock Medical Center dataset. We evaluate clinical utility at the voxel, lesion, and anatomic region level to assess performance in high-risk areas and treatment planning utility. FEEDS outperforms random-sampling-based labeling, pseudolabel-based semi-supervised learning, and training with limited labeled data alone. It generalizes across all three test sets, FDG and PSMA tracers, and multiple diseases, matching fully-labeled (100\%) training performance with 70\% less annotation burden. FEEDS addresses the challenge of label scarcity in an automatic lesion segmentation framework by providing a practical approach for constructing representative and diverse annotation queues from large, unannotated clinical repositories.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.10990v1' target='_blank'>On the Sequential topological complexity of directed (parametrized) motion planning algorithms</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Navnath Daundkar, Abhishek Sarkar, Ankur Sarkar</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-11 14:44:44</h6>
+<p class='card-text'>We introduce sequential analogues of directed (parametrized) topological complexity, in the context of motion planning problems requiring a system to traverse a prescribed sequence of intermediate states while respecting directed dynamics and varying external parameters. We develop their basic theory, establish fundamental properties, and compute them for several classes of examples. Our computations show, in particular, that distinct directed structures on the same underlying space can have different values of this invariant.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.10976v1' target='_blank'>XCoT-VLA: Executable Chain-of-Thought for Vision-Language-Action Driving</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Foundation Model Team, XPeng Inc</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-11 14:33:21</h6>
+<p class='card-text'>Vision-Language-Action (VLA) models can connect scene understanding, semantic reasoning, and trajectory generation for autonomous driving. However, verbose natural-language Chain-of-Thought (CoT) is poorly suited to real-time control because it is open-ended, costly to decode, and difficult to optimize as an action-facing representation. We propose XCoT-VLA, which replaces descriptive rationales with compact executable CoT tokens learned from automatically constructed Reason-Action supervision. Logged trajectories provide action evidence, while scene context supplies causal semantics. The predicted XCoT sequence remains in context and conditions fixed trajectory queries through shared multimodal self-attention. Deterministic token-function routing applies the Reason FFN to XCoT tokens and the Control FFN to trajectory queries for flow-matching trajectory generation. We further introduce XCoT Policy Optimization (XCPO) as an optional refinement extension in the same executable token space. XCoT-VLA reduces longitudinal ADE from 1.645 to 1.323 on a general-distribution set and lateral FDE from 1.616 to 0.648 in lane-change scenarios. By representing driving-oriented reasoning with only 2-6 executable XCoT tokens, our method substantially reduces autoregressive reasoning overhead and remains within the real-time planning budget. These results demonstrate that driving-oriented reasoning can be compact, executable, and directly connected to trajectory generation.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.10920v1' target='_blank'>IO Factory: Simulating AI-Enabled Influence Campaigns at Scale</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Lukasz Olejnik, Wenchao Dong, Jonas R. Kunst, Signe Riemer-Sørensen, Tobias Herb, Meeyoung Cha, Daniel Thilo Schroeder</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-11 13:43:48</h6>
+<p class='card-text'>We introduce IO Factory, an AI-driven framework for simulating information and influence campaigns as fully integrated, traceable processes. The threat of digital manipulation now extends beyond persuasive text from individual language models to AI swarms, i.e., persistent groups of coordinated agents that adapt to platform feedback and disguise organized campaigns as ordinary social interaction. Because such campaigns cannot be identified from isolated messages alone, they must be analyzed across a continuous spectrum of planning, platform action, exposure, interpretation, measurement, and adaptation. IO Factory represents this process inside a controlled simulated platform, linking actor roles, platform actions, exposure records, structured model-based evaluations, and configured changes in the simulated population. We implement the architecture and evaluate it across configurations of up to 100,000 agents. The results show that IO Factory executes campaign timelines at scale and produces inspectable evidence of exposure and measured movement in configured belief variables. By recording the actors, objectives, action constraints, exposure paths, and measurement rules used in each run, IO Factory supports reproducible research and red-team analysis of coordinated influence.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.10899v1' target='_blank'>Robust Unit Commitment in District Heating Networks: Chance-Constrained and CVaR Optimization Under Demand Uncertainty</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Annika Buchholz, Janina Zittel, Thorsten Koch</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-11 13:21:19</h6>
+<p class='card-text'>While district heating networks are a key component of the energy transition, their operational planning is challenging due to substantial uncertainty in heat demand. We address this volatility without compromising system reliability. By adapting chance-constrained programming (CC) and conditional value-at-risk (CVaR) optimization to the mixed-integer unit-commitment problem for district-heating networks, we can compute optimal unit-commitment schedules under demand uncertainty. We generate heat demand time series using a Bayesian model, which explicitly quantifies forecasting uncertainty and yields predictive distributions as input to the network optimization. To handle the inherent uncertainty in heat demand, we apply both robust optimization approaches: chance-constrained programming limits the probability of unmet demand, while CVaR optimization penalizes severe shortfalls in the tail of the distribution. We evaluate the approaches both on real-world data from the Berlin district heating network and on a benchmark set of synthetic, realistically parameterized instances of varying sizes. The results compare the two uncertainty-handling methods with respect to solution quality, risk exposure, and computational effort.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.10838v1' target='_blank'>PolyLayout: Hierarchical VLM-Guided Layout Generation Beyond Rectangular Rooms</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yutong Jiang, Zahra Atashgahi, Carlos Soto Garcia Delgado, Ruben Brokkelkamp, Davide Zanutto, Efşan Sökmen, Shahin Shahkarami</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-11 12:04:14</h6>
+<p class='card-text'>Generating physically plausible 3D room layouts is essential for home furnishing retail, enabling customers to visualize products in their own homes and confidently make purchasing decisions. However, a gap exists between academic research and real-world application: existing solutions primarily focus on algorithmic strategies for furniture placement, largely neglecting the non-rectangular geometries and strict door/window constraints prevalent in real homes. To bridge the gap, we introduce a hybrid, hierarchical framework tailored for retail, specifically designed to support scalable spatial planning applications. Our system decouples generation into three stages: (1) functional furniture clustering and fine-grained intra-zone placement; (2) macro-routing guided by a vision-language model (VLM) to anchor both these clustered zones and any remaining standalone furniture within diverse polygonal boundaries; and (3) rule-based optimization for collision-free micro-arrangements that respect architectural constraints. We evaluate our system on production-scale catalogs and a representative set of irregular real-world topologies. Our results show that our approach attains the highest perceptual plausibility while maintaining good geometric compliance at relatively low latency, and extends to irregular boundaries that existing methods do not natively support.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.10773v1' target='_blank'>The GenAI Catch-22: Use of Generative Artificial Intelligence in Norwegian Newsrooms During the 2025 Parliamentary Election</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Mari Reisjå, Anders Sundnes Løvlie</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-11 10:27:12</h6>
+<p class='card-text'>The increasing use of Generative Artificial Intelligence (GenAI) in journalism raises concerns about possible detrimental effects both on journalism and its democratic function. We explore these risks through a case study of GenAI in Norwegian Newsrooms during the 2025 parliamentary election campaign. Based on interviews with managers and journalists over a ten-month period, we analyse how ambitious visions fared in the face of technological and practical challenges. We highlight the risk of an internal threat stemming from the journalists' own use of AI, contrasting the dominant focus on external disinformation threats. We show how newsroom managers shared sociotechnical imaginaries resulting in unrealistically optimistic beliefs about the capabilities of the technology and the pace of development, leading to plans for audience-facing GenAI services collapsing and giving way to more mundane uses of GenAI tools internally in the newsrooms. Furthermore, we identify a vulnerability in the newsroom's resilience against GenAI influence: a GenAI Catch-22. In order to monitor the GenAI tools and prevent errors and undue influence, newsrooms rely on human expertise. But by using GenAI extensively, the newsrooms risk a deterioration of human expertise, preventing them from monitoring the GenAI systems adequately.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js'></script>
+</body>
+</html>
