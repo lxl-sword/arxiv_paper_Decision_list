@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>planning - 2026-08-19</title>
+<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap' rel='stylesheet'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css'>
+<style>
+body {
+font-family: 'Roboto', sans-serif;
+background-color: #f5f7fa;
+padding: 20px;
+}
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.card-title {
+    font-weight: 700;
+}
+.card:hover {
+    transform: scale(1.02);
+    transition: 0.3s ease-in-out;
+}
+</style>
+</head>
+<body>
+<div class='container'>
+<h1 class='text-center my-4'><i class='fas fa-book'></i>planning - 2026-08-19</h1>
+<div class='row'>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.18067v1' target='_blank'>Planning Against Learning in Rank-1 Games</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:William Overman</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-18 17:55:18</h6>
+<p class='card-text'>Learning algorithms are often used to make decisions in repeated multi-agent environments. When another player understands how a learner adapts from past experience, that player can plan strategically across rounds to influence the learner's future behavior. Recent work shows that optimizing against Replicator Dynamics, the continuous-time analogue of Multiplicative Weights Update, is tractable in zero-sum games but can be hard in unrestricted general-sum games. We study the first structured class beyond zero sum: bimatrix games satisfying $\text{rank}(A+B)=1$, for which Nash equilibria can be computed in polynomial time.
+  Our main result shows that this equilibrium tractability does not extend to planning against learning dynamics. Unless $\mathsf{P}=\mathsf{NP}$, approximating the optimizer's optimal continuous-time reward within a fixed additive constant is NP-hard even when $\text{rank}(A+B)=1$, the learner starts from the uniform state, and the optimizer is restricted to constant strategies. The hardness persists for bounded payoff matrices and polynomially bounded horizons. We complement this result with structural characterizations of several tractable special cases. Thus rank-one games already separate efficient equilibrium computation from strategic planning against a learning opponent.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.18035v1' target='_blank'>Plug-and-Play Traffic Element Awareness for End-to-End Autonomous Driving</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Zongzheng Zhang, Jijun Wang, Saining Zhang, Shuo Wang, Yiru Wang, Hai Yang, Yang Chen, Yuwen Heng, Hao Sun, Anqing Jiang, Hao Zhao</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-18 17:29:51</h6>
+<p class='card-text'>Traffic elements such as traffic lights and road signs play a fundamental role in human driving decisions and should naturally influence end-to-end driving performance. However, existing end-to-end driving research predominantly focuses on dynamic road participants (e.g., vehicles and pedestrians), while the role of traffic elements remains largely unexplored. The community still lacks a systematic study quantifying their impact, largely because public datasets rarely provide structured traffic-element annotations and modern driving systems vary widely in architecture and training paradigm. In this work, we present the first systematic investigation of traffic element awareness for end-to-end autonomous driving. We construct a unified research infrastructure by augmenting multiple public driving datasets with comprehensive traffic-element annotations. To support diverse model families, we adopt a minimal and universal integration design that incorporates traffic-element signals into existing pipelines in a plug-and-play manner with negligible architectural modification. We evaluate this design across modern paradigms, including perception-prediction-planning pipelines, vision-language-action models (VLA), regression-based planners, diffusion-based policies, and trajectory-scoring frameworks, on nuScenes, NAVSIM-v1, NAVSIM-v2, and Bench2Drive. Across all paradigms and datasets, this simple integration consistently improves driving performance, demonstrating that traffic element awareness provides a robust and generalizable signal for end-to-end driving systems. Notably, on the challenging NAVSIM-v2 benchmark, our approach significantly improves state-of-the-art architectures and data pipelines, establishing a new state of the art.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.18034v1' target='_blank'>Deep Academic Survey: Stateful Agentic Closed-Loop Paradigm for Academic Survey Automation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Zhikai Xu, Zhucun Xue, Teng Hu, Yabiao Wang, Yong Liu, Jiangning Zhang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-18 17:29:00</h6>
+<p class='card-text'>Academic surveys play a central role in organizing rapidly expanding scholarly literature, yet their construction requires extensive paper analysis, coherent knowledge organization, fine-grained citation support, and reliable manuscript assembly. Existing Deep Research and automated survey generation systems address parts of this process, but typically do not coordinate paper understanding, literature organization, evidence-grounded drafting, and manuscript validation through a shared, revisable state. We introduce DAS, a stateful agentic framework for generating publication-oriented academic surveys. Its key idea is to separate reusable paper analysis from topic-specific manuscript construction. DAS builds on DAS-2M, a dynamically updated metadata lake containing survey-oriented representations of approximately two million papers. Its agents maintain explicit literature, organization, writing, and finalization states through candidate-grounded taxonomy planning, reverse paper-to-section routing, and hierarchical claim and citation planning. Semantic review reactivates only the affected writing states for repair and reevaluation, forming a scoped closed loop with deterministic validation. We further introduce DAS-Bench, a 30-topic benchmark, together with DAS-Eval, which assesses scholarly citation quality, taxonomic synthesis, hierarchical discourse, and manuscript assembly reliability through 16 criteria. Among systems evaluated on all 30 topics, DAS achieves the highest average in all four dimensions, with an overall score of 4.34 compared with 4.03 for the strongest competitor, and the same ordering is preserved on the matched 21-topic CS subset. Blinded expert evaluation further prefers DAS to Naive RAG on 27 of 30 topics and to AutoSurvey on 19 of 21 shared CS topics. The project page is available at https://zhikaixu24.github.io/projects/DAS/.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.17970v1' target='_blank'>Quo Vadis? Scientific Discovery in the Age of Artificial Intelligence</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Petr O. Jedlicka</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-18 16:21:44</h6>
+<p class='card-text'>This paper examines the growing role of AI in scientific discovery. It first surveys the rapid rise of AI capabilities, especially in reasoning, abstraction, planning, and long-horizon task execution, before turning to scientometric evidence of AI's diffusion across the sciences. It then proposes a typology of AI systems used in research, ranging from specialized scientific AI through scientific AI assistants and agents to hybrid experimental systems that combine computation and physical experimentation. On this basis, it offers a selective overview of recent achievements in mathematics and computer science, physics, chemistry, the life sciences, and the behavioural and social sciences. It argues that, despite these advances, current systems remain constrained by important technical, epistemic, and institutional limitations, and that their growing use introduces both near-term and longer-term risks. The conclusion further suggests that the advancement of AI in science raises broader questions concerning the division of cognitive labour between human researchers and machines.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.17959v1' target='_blank'>Towards Zero-Shot Task Transfer with Neurosymbolic World Models</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Isidoro Tamassia, Lennert De Smet, Giuseppe Marra</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-18 16:12:40</h6>
+<p class='card-text'>State-of-the-art model-based reinforcement learning methods learn neural world models that allow policy improvement by planning in a latent space, without assumptions on the structure of the underlying environment. While expressive, these models are generally task-dependent: they learn uninterpretable latent representations that are tied to the training task and thus hard to generalize to new tasks. In this work, we present a novel world model formulation where the reward prediction only depends on a subset of structured, symbolic components of the whole latent state. Decoupling observation reconstruction and reward prediction allows us to learn world models that can adapt zero-shot, i.e. without further environment interactions, to new reward functions defined over the same symbolic state space. We discuss the main advantages and challenges of learning these neurosymbolic world models and demonstrate the strong generalisation properties of our approach over purely neural methods.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.17932v1' target='_blank'>Collective Counterfactual Planning: Coordination, Consent, and Verification under Representational Constraints</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Chainarong Amornbunchornvej</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-18 15:52:12</h6>
+<p class='card-text'>Groups routinely complete projects that no single member can plan, execute, or verify alone. We propose a formal model of this phenomenon, Collective Counterfactual Planning (CCP), in which the binding limitation on each agent is neither capability, knowledge, nor observability, but representational geometry: each agent perceives the state, conceives moves, consents to actions, and certifies goal requirements only through a projection onto an agent-specific subspace of a common task space. Four gates jointly determine whether a team can reach a conjunctive goal and legitimately recognize that it has done so: the exogenous implementation coalitions required to perform each action, together with three representational gates -- conception, consent, and task-relative verification qualification. We define the Collective Counterfactual Solvability (CCS) problem, separating geometric feasibility, executable attainment, and validated completion. The results expose a positive-negative duality. Iterated cross-agent relay can unlock a solution that no one-shot pooling of individual plans contains, but any goal requirement depending essentially on the subspace dark to the entire team is unverifiable and therefore not validly completable, even when the trajectory accidentally attains it. Memoryless and audited consent further constrain different objects -- action directions versus cumulative trajectory states -- and neither dominates the other. A four-step exhaustive horizon-bounded solvability scheme is sound and complete under exact representation of the relay closure; restricted implementations remain sound on returned plans but need not be complete. The model gives one geometry for sequential mutual enabling, competent execution of steps whose purpose is invisible to the executor, forced sub-teaming at expertise boundaries, and completion that cannot be validly declared.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.17928v1' target='_blank'>A Theoretical Framework for Parallel Lifelong MAPF Using Group Decentralized Planning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Alex DeWeese, Jiaoyang Li, Guannan Qu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-18 15:48:18</h6>
+<p class='card-text'>In the Lifelong Multi-Agent Path Finding (L-MAPF) problem, agents must repeatedly move from one destination to another while avoiding obstacles and inter-agent collisions. Widely regarded as one of the highest-performing solutions to this problem is the Rolling-Horizon Collision Resolution (RHCR) framework. However, commensurate with its quality solutions, it incurs a computational cost that limits its applicability to even modest agent counts. In this paper, leveraging theoretical methods from the Locally Interdependent Multi-Agent MDP literature, we first theoretically prove the near-optimality of RHCR in a discounted MDP formulation of the L-MAPF problem. Then, we leverage these results to naturally motivate an extended framework called Group Decentralized RHCR (GD-RHCR) which incorporates a group decentralized structure that partitions agents based on a transitive communication scheme and plans for each partition of agents in parallel. We show that both RHCR and GD-RHCR achieve similar exponentially close to optimal guarantees, establishing a theoretical duality between the time based restrictions performed by vanilla RHCR and the additional space based partitioning performed by GD-RHCR. Lastly, we show that across varying maps, GD-RHCR is able to attain high throughput that scales into higher agent counts while maintaining a significantly lower per plan cost.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.17906v1' target='_blank'>AutoResearch: Insight In, Hallucination Out</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yiming Ren, Xiang Liu, Qumeng Sun, Xiao Zhang, Jiahao Li, Haoyang Zhang, Junjie Wang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-18 15:38:26</h6>
+<p class='card-text'>Autonomous research systems are increasingly capable of executing long research workflows, yet automation alone does not ensure that the resulting process remains scientifically grounded. We introduce AutoResearch, a two-stage system that connects Idea Generation with Idea Execution to address both how research ideas are formed and how they are reliably established through experimentation. In Idea Generation, AutoResearch continuously integrates emerging research signals with accumulated domain knowledge, identifies transferable mechanistic insights, and uses multi-model generation and cross-review to produce grounded, testable research plans. In Idea Execution, coordinated agents decompose these plans into experiments, iteratively implement and diagnose them, and employ independent evidence-based review before accepting research conclusions. Across representative settings in cross-modal retrieval, systems optimization, and benchmark-driven machine learning, AutoResearch turns generated ideas into measurable progress, detects and corrects unreliable experimental results, and makes evidence-conditioned decisions to continue, revise, or terminate research directions. For example, on RSICD benchmark, an AutoResearch-generated idea improves mean Recall from 32.84 to 34.69, while recording only 5 audit-confirmed issue events compared with 11-27 for other autonomous research systems. These results demonstrate a research process in which meaningful insight is grounded before experimentation and conclusions are grounded before acceptance: Insight In, Hallucination Out.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.17904v1' target='_blank'>A higher-derivative model predicts a smoothness vs duration relationship in head-pointing movements</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:N. Boulanger, F. Buisseret, J. Burny, F. Dierick, W. Estievenart, A. Teregulov, O. White</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-18 15:36:33</h6>
+<p class='card-text'>Head movements require integration of visual, proprioceptive, vestibular, and cervical motor signals. The dynamical principles governing their temporal organization remain unclear. We tested whether a Pais-Uhlenbeck oscillator -- a higher-derivative model with one internal frequency parameter $ω$ -- can model head kinematics during virtual-reality-based head pointing. Our model predicts a parabolic relationship between movement duration ($T$) and smoothness (log-dimensionless jerk, $LDLJ$) that we have experimentally checked. Sixty-two healthy young adults performed horizontal and vertical head movements with an amplitude of 30°. Movement duration, endpoint accuracy, peak angular velocity, overshoot, and $LDLJ$ were extracted from headset kinematics. A mixed-effects parabolic regression confirmed the predicted $LDLJ$ vs $T$ parabolic relation ($R^2 = 0.851$). The quadratic coefficient was not significantly modified by direction or participant, but the intercept and linear coefficient differed between horizontal and vertical movements. As an internal consistency check of the model, we find that the parameter $ω$, as estimated from the regressions, gives time durations that closely match the measured ones. These findings outline a nonlinear temporal organization of head pointing modulated by direction-specific biomechanical constraints, and suggest that higher-derivative mechanics may provide a principled, non-invasive framework for quantifying cervical motor planning, warranting further validation in clinical populations.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.17834v1' target='_blank'>AdaLens: Interactive Storyline for Monitoring and Steering Long-Running Agentic Data Analysis</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yangtian Liu, Yan Miao, Shuhan Liu, Yunfan Zhou, Dae Hyun Kim, Di Weng, Yingcai Wu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-18 14:34:45</h6>
+<p class='card-text'>Large language models are pushing data science toward increasingly autonomous and agentic workflows, with recent systems already supporting multi-step and long-running analyses. As these workflows become more autonomous, conventional interfaces no longer provide adequate support for two critical requirements: observability for understanding an agent's evolving reasoning and evidence, and steerability for redirecting low-value directions or deepening promising ones during execution. Existing interactive approaches improve process visibility and open intervention points, but they remain largely designed for discrete, turn-by-turn exchanges rather than the parallel branches and evolving decision structures of long-running agentic analysis. We study this need as interactive oversight in long-running agentic data analysis and present AdaLens, an interactive system for monitoring and steering ongoing runs. AdaLens combines a storyline-based representation that unifies analytical plans, execution progress, intermediate findings, and data-column involvement with steering interactions grounded in these analytical elements for directional guidance and execution control. We evaluate AdaLens through two case studies and a user study, examining how it supports analysts in monitoring and steering long-running agentic data analysis.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.17831v1' target='_blank'>Simulation tools for realistic high-order wavefront correction with the Roman Coronagraph</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:A. Lau, A. J. Riggs, S. F. Redmond, E. Cady, J. Krist, I. Laginja, D. Sirbu, L. Delaye, R. Soummer, S. Noiret, J. C. Lambert, A. Bidot</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-18 14:29:38</h6>
+<p class='card-text'>The Roman Space Telescope Coronagraph Instrument (Roman CGI) will demonstrate high-contrast imaging from space using coronagraphic masks, deformable mirrors, and high-order wavefront sensing and control (HOWFSC). After the baseline technology demonstration, the Roman Coronagraph Community Participation Program (CPP) will pursue science and engineering studies that require realistic predictions of instrument behaviour, observing efficiency, and wavefront control performance. This paper describes \texttt{corgihowfsc}, a configurable simulation framework for repeatable Roman CGI HOWFSC studies. The framework preserves the Roman ground-in-the-loop (GITL) workflow represented by the NASA \texttt{cgi-howfsc} package, while allowing the images to be generated by the higher-fidelity \texttt{corgisim} model. In this configuration, \texttt{cgi-howfsc} remains the reference implementation for estimation, control, and compact-model Jacobian generation; \texttt{corgisim} can supply more flight-like images for studies of instrument performance and robustness. \texttt{corgihowfsc} also coordinates exposure planning, camera settings, expected iteration timing, and contrast normalisation of the HOWFSC loop through \texttt{cgi-eetc}, calibration-related workflows through \texttt{cgi-coralign}, structured diagnostics, and local or distributed execution. By exposing observing modes, image models, probe choices, estimators, controllers, deformable-mirror settings, and runtime options through reusable configuration files, \texttt{corgihowfsc} enables controlled comparisons between reference compact-model simulations and higher-fidelity HOWFSC studies.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.17820v1' target='_blank'>Machine learning assisted Bayesian calibration of an accelerator digital twin from orbit response data</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Christopher Kelly, Kevin A. Brown, Georg H. Hoffstaetter, Weijian Lin, Nathan M. Urban</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-18 14:20:03</h6>
+<p class='card-text'>Digital twins of particle accelerators are used to plan and control operations and to design data collection campaigns. Accurate modeling typically requires knowledge of quantities that are hard to measure directly, e.g., magnet alignments, transfer functions relating power supply currents to magnetic fields, magnet nonlinearities, and stray fields. In this work we introduce multiplicative parameters to the quadrupole transfer functions to parametrize these effects. We use Bayesian methods to probabilistically estimate these parameters and their uncertainties by calibrating the Bmad digital twin to beam measurements performed at the AGS Booster at Brookhaven National Laboratory. The inference is computationally accelerated using a machine learning emulator of the physical accelerator digital twin trained to a perturbed-parameter ensemble of Bmad simulations. The result is a joint posterior distribution over the parameters constrained by the data, taking into account beam monitor errors. Incorporating estimates of the parameters into the digital twin is shown to result in a significant improvement in the quality of the model and provides error bars on the model parameters and predictions.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.17733v1' target='_blank'>The Influence of Agent Models on the Complexity of Bus Routing</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Eva Deltl, Christian Komusiewicz, Jurek Rostalsky, Johannes Schröder, Luca Pascal Staus</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-18 12:58:26</h6>
+<p class='card-text'>In bus routing, the task is to plan a bus route in a network with several agents, each of whom wants to travel from a starting point to a destination. A bus route should account for several factors, including agents' cost for reaching the bus stops, their travel time, or the energy consumption of the buses. We study the complexity of several variants of this problem, focusing on how the objective function and the models for agents' walking costs influence the problem complexity. After observing that even the simplest agent cost model leads to hardness on general networks, we consider networks with tree structure. Our main findings are as follows. First, allowing agent-specific cost models leads to hardness even on extremely limited trees such as stars. Second, consistent agent models (where agents differ only in their starting points and destinations) make the problem easier in some cases. Finally, allowing agents to choose between using the bus and walking directly can make the problem considerably harder. Most of our hardness results show not only classical NP-hardness but also parameterized intractability for the natural parameter $k$, the number of bus stops.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.17703v1' target='_blank'>Dijkstra as an Oracle for Online Stochastic Shortest Path Navigation with Provable Guarantees</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Mansur M. Arief, Ali Akarma, Ahmad Alfan Alfian Irfan</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-18 12:26:17</h6>
+<p class='card-text'>Mobile robots that operate in side by side with humans and critical facilities must reach their goals at low cost, despite often unknown true traversal costs of the map apriori and imperfect actuation. Planners that solve the underlying stochastic shortest path problem exactly, such as value iteration, require computation that grows with the diameter of the map, whereas Dijkstra's algorithm is fast but is usually considered inexact once transitions are stochastic. This study shows that Dijkstra's algorithm can remain an exact planning engine under a condition that is much weaker than the causality condition often invoked in the literature, namely nonnegativity of a reduced cost defined on the determinized map. Building on this characterization, an online learner DORA (Dijkstra Oracle Reduced-cost Algorithm) is proposed for robot navigation that calls a shortest path oracle a fixed number of times per episode, never estimates a transition kernel, and adds a logarithmic survival weight when the probability of contact with a dynamic obstacle must stay within a budget. In the numerical experiments involving three other benchmarks that cover grid world navigation, directional drilling, and drone surveillance, the learner matches optimistic value iteration that is given the true transition kernel while performing 4.5 to 19.3 times less planner work, reduces contacts during learning by a factor of seventeen relative to determinize and replan, and keeps the contact rate within budgets that span two orders of magnitude. These results indicate that shortest path search supports safe and efficient online navigation and path planning tasks.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.17618v1' target='_blank'>From Student Risk Prediction to SC2R: Semantics-Constrained Counterfactual Recourse for Educational Decision Support</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Ngoc Luyen Le, Marie-Hélène Abel, Bertrand Laforge</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-18 10:33:21</h6>
+<p class='card-text'>Learning analytics models can identify students at risk of poor performance, but they do not directly indicate which interventions are feasible, actionable, and compatible with educational constraints. This paper introduces SC2R, a semantics-constrained counterfactual recourse framework for educational decision support. SC2R combines a calibrated predictive model, integer-programming-based recourse generation over discrete action variables, a lightweight RDF vocabulary for intervention-plan representation, and SHACL validation for enforcing timing, budget, immutability, and availability constraints. The framework is evaluated offline on the OULAD dataset using snapshots constructed relative to each assessment at two decision horizons. Results show that the predictive component provides strong performance, that compact intervention plans can be generated at scale, and that semantic validation reveals infeasible plans that lighter optimization-only settings would otherwise accept. Rather than claiming causal improvement in student outcomes, this work shows that counterfactual recourse becomes more operationally meaningful in education when recommendations are not only model-valid, but also semantically feasible and machine-checkable.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.17613v1' target='_blank'>Once Generated, Ranked: End-to-End Generative Slate Recommendation with Unified Semantic-Collaborative IDs</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yang Hu, Jiayi Guo, Jingui Ma, Ning Li, Jiangling Qin, Yanming Li, Yang Deng, Xiaoshuang Chen, Kaiqiao Zhan</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-18 10:24:09</h6>
+<p class='card-text'>Slate recommendation treats a slate rather than an individual item as the recommendation unit, requiring joint optimization of item interactions and slate utility. Existing approaches typically separate candidate generation from ranking and restrict optimization to retrieved candidates. Generative recommendation with Semantic IDs (SIDs) offers a path to end-to-end recommendation, but existing SID construction often lacks recommendation-aware semantics and effective local collaborative signals, while next-token prediction is misaligned with slate-level objectives. We propose OGR, an end-to-end framework that directly generates ordered slates-"Once Generated, Ranked." OGR first introduces TUSID, which adaptively fuses item-specific semantic and local collaborative information into hierarchical SIDs. It then uses list-wise preference planning and pipelined position-wise SID decoding to model global preferences and inter-item dependencies while generating ordered slates. We further propose SPA, a reward-guided conservative policy optimization method that aligns generated slates with user preferences beyond likelihood imitation. Offline experiments show that OGR outperforms representative baselines, with 48.2% and 27.2% relative NDCG@5 gains on industrial and public datasets, respectively. Online A/B testing on Kuaishou further yields a 1.120% improvement in Effective Views.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.17584v1' target='_blank'>HODAgent: Towards On-Demand, Responsive Humanoids for Physical World Human Interaction</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Wang Warren Chen, Jiahao Zhang, Zhenjiang Li, Mingxu Wang, Lei Yi, Yuchen Kang, Shuo Sun, Ziping Chen, Jie Chen</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-18 09:49:16</h6>
+<p class='card-text'>We propose HODAgent, a System-2 embodied agent for humanoid robots in service settings, addressing situated intent, responsive execution, task revision, and outcome verification. Its semi-duplex architecture integrates an Env-Interactor, Planner, Executor, and hierarchical Memory to maintain coherent interaction, planning, and task state during service episodes. This allows handling new requests during motion, retaining progress, revising actions, and grounding closure in execution outcomes. A shared interface connects simulation and physical robots (Unitree G1), isolating platform-specific control. In an interactive simulation with 164 cases, HODAgent achieves 84.8% and 91.5% Joint Success under two VLM backbones, outperforming baselines by 9.8 and 18.9 points. On physical robots, pass rates are 92% (atomic), 72% (composite), and 63.3% (complete tasks). On multiple embodied benchmarks, it improves over baselines by 0.7-9.0 points. Results show a unified System-2 agent enables adaptive humanoid service across simulation and reality.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.17542v1' target='_blank'>No Gaussian Required: Contrastive Inverse Dynamics for JEPA World Models</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jack Boylan, Chris Hokamp</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-18 09:03:35</h6>
+<p class='card-text'>Joint-Embedding Predictive Architectures (JEPAs) learn world models by predicting future embeddings, but the objective admits a trivial solution of a constant encoder, so every practical system adds an anti-collapse mechanism (LeCun, 2022; Assran et al., 2023; Bardes et al., 2022; 2024). LeWorldModel (LeWM) prevents collapse with SIGReg, a regularizer that forces the latent distribution to match an isotropic Gaussian: the representation is stabilized by prescribing what it must look like, independently of the environment it models. We argue that the anti-collapse pressure can instead come from the transition data itself. Action-Contrastive Masked Transition Modeling (AC-MTM) keeps LeWM's forward latent-prediction objective and adds a training-only inverse-dynamics head trained with Action-NCE: each latent transition must identify the action that produced it among the other actions in the batch, a discrimination task that a collapsed encoder provably fails. The inverse branch is discarded after training, leaving test-time encoding, forward prediction, planning, and compute identical to LeWM. On four standard pixel-control tasks under a matched planning protocol, AC-MTM trains stably from scratch and matches SIGReg on average. On the harder multi-object OGBench Visual Scene task, results are consistent with the prescribed geometry becoming a bottleneck: AC-MTM reaches 80.0$\pm$2.0% success versus 58.0$\pm$2.0% for SIGReg, improving by 20-24 points in each training seed. A single 50-episode random-policy run gives a 52% baseline estimate. Contrastive inverse dynamics thus provides a distribution-free anti-collapse signal that requires no target network, stop-gradient, pretrained encoder, or reconstruction objective, and we characterize the action-space and observability assumptions under which it holds. We make our code available at https://github.com/jackboyla/action-contrastive-jepa</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.17534v1' target='_blank'>ArborMem: Navigating Interaction States with Memory Forests</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Zongwei Lv, Yuemeng Xu, Yilun Yao, Siyi Ding, Xinyu Tan, Yaoming Li, Guangxiang Zhao, Weihong Lin, Lin Sun, Xiangzheng Zhang, Tong Yang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-18 08:54:55</h6>
+<p class='card-text'>Large language models increasingly serve as persistent conversational assistants, requiring memory that preserves relevant experience and maintains continuity across interactions. Existing methods improve access to conversational history through long-context processing, selective retrieval, and structured memory organization. However, most systems treat memory access as retrieving relevant past information without first determining which prior interaction state the current turn resumes. This limitation becomes particularly important when conversations interleave multiple tasks, people, and plans that may be interrupted and later revisited. We introduce ArborMem, an online memory framework that represents a long-running conversation as a navigable forest of interaction states. Each branch preserves a locally coherent trajectory, while the forest maintains multiple trajectories that may later be resumed. For each new input, ArborMem localizes the relevant state, restores its branch-local context, and augments it with reusable evidence retrieved across branches, preserving interaction continuity without conflating semantically related but structurally distinct trajectories. Existing long-term memory benchmarks cover diverse memory and reasoning capabilities but do not explicitly isolate branch-structured challenges. We therefore introduce BranchMemEval, a controlled diagnostic benchmark for interleaved and resumable interaction trajectories. Experiments on LongMemEval, LoCoMo, BEAM 100K, and BranchMemEval show that ArborMem outperforms the strongest baselines by 3.36 to 10.31 percentage points on the three established benchmarks and by 5.0 points on BranchMemEval. Its advantage grows under constrained read budgets, while complete memory queries remain below half a second.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.17512v1' target='_blank'>Embodied-Navigator: Point, Think, Memorize, and Align for Efficient Navigation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Hongyan Feng, Sunlai Chen, Xuanyu Liu, Miao Pan, Yangfan Xie, Yuxiang Cui, Zhongxiang Zhou, Rong Xiong, Wenqi Zhang, Jianwei Yin, Yueting Zhuang, Xuhong Zhang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-18 08:37:08</h6>
+<p class='card-text'>Although Large Vision-Language Models (VLMs) have significantly advanced embodied navigation, their direct deployment remains challenging, as existing methods often force VLMs into unnatural action spaces that misalign with their 2D pre-training priors, compounded by rigid reasoning schedules and inefficient memory management. To overcome these limitations, we propose TAMP-Nav, a unified framework for efficient embodied navigation. First, we introduce a Pixel-to-3D Action Formulation (Point) that reformulates navigation into 2D visual prompting. Specifically, the VLM merely selects 2D pixels, which are then projected into 3D coordinates for a low-level SLAM controller. This design naturally aligns embodied execution with the VLM's inherent 2D visual capabilities. Second, we propose an integrated Selective Reasoning and Anchor-Trajectory Memory mechanism (Think and Memorize), which dynamically triggers Chain-of-Thought and retains high-fidelity memory only at critical nodes, compressing redundant trajectories into lightweight Space-Time Indicators, thereby preserving critical historical information and enhancing spatio-temporal perception. Finally, we design an efficient Two-Level Alignment Paradigm (Align) via Group Relative Policy Optimization (GRPO). By superimposing global outcome rewards with fine-grained process rewards, this dense supervision tightly aligns the agent's cognitive planning with physical environmental feedback, endowing the model with adaptive reasoning capabilities. Experiments demonstrate that TAMP-Nav achieves state-of-the-art performance (e.g., 66.2% SR on R2R-CE) with high runtime and sample efficiency (requiring only 90k training trajectories).</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.17468v1' target='_blank'>SAGE: Self-Evolving Storyboard Skills via Attribution-Guided Rule Evolution</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Maolin Ran, Xiaoyang Lu, Jiaqi Liu, Jian Wang, Weiwen Liu, Jianghao Lin, Yong Yu, Weinan Zhang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-18 07:49:46</h6>
+<p class='card-text'>Storyboards turn screenplays into visual shot plans for automated short drama production. Professional storyboarding relies on tacit directorial expertise and remains an industrial bottleneck. Large language models can automate this step, but methods for supplying directing knowledge face three challenges: (1) Knowledge acquisition: the craft remains implicit in exemplars or must be written manually. (2) Knowledge refinement: authored knowledge is not evaluated against execution outcomes, and opaque generation prevents feedback attribution to the knowledge behind each decision. (3) Knowledge injection: injecting all knowledge exceeds usable context, while manual selection for every narrative group does not scale. We present SAGE (Skill with Attribution-Guided Evolution), a deployed framework that learns, attributes, evolves, and routes directing knowledge from expert demonstrations. SAGE derives rules that are independent of episode content by contrasting each training screenplay with its expert storyboard. During generation, the model records each narrative group's adopted rules. Combining these records with localized feedback enables targeted updates to individual rules. Evolved rules form scenario packages with a routing index, so each group retrieves only a bounded set appropriate to its situation without expert intervention. On 18 test episodes across three genres, SAGE scored 77.8 on a rubric validated by experts, versus 77.1 for professional directors. Deployed for 14 days on Virtual Film Studio, SAGE produced 1,344 narrative group outputs; 87.2 percent were accepted without substantive edits, and the production team recorded over 83 percent less authoring time per episode. We release PROSE, the first public dataset pairing screenplays with storyboards by professional directors across 68 episodes: https://github.com/creDreams/PROSE.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.17432v1' target='_blank'>UniReflex: Plug-and-Play Force Control for Pretrained Generative Policies via Fast-Slow Reflex</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yan Huang, Shoujie Li, Ziwu Song, Wenbo Ding</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-18 06:54:22</h6>
+<p class='card-text'>Generative imitation learning policies excel at trajectory planning but lack closed-loop force regulation, while directly incorporating force modalities often requires redesigning or retraining the network. We present UniReflex, a universal plug-and-play framework that equips frozen generative policies with variable impedance control (VIC) for contact regulation, guided by force-direction intent collected during demonstration, without further slow-backbone fine-tuning. By non-invasively intercepting deep latent representations from the action head, UniReflex drives a fast reflex network that decouples active force exertion from external interaction response. This scheme predicts normalized anisotropic stiffness directions for directional compliance allocation. Furthermore, UniReflex integrates an adaptive gating mechanism that enables seamless transitions between position-dominant planning and force-dominant execution. Real-world bimanual experiments demonstrate that UniReflex significantly improves contact stability and success rates while preserving original position accuracy. Our approach achieves 25-66x lower per-step backward latency relative to joint training strategies on the evaluated backbones.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.17416v1' target='_blank'>Bi-Layer Ant Colony Optimization for Multi-Robot Task Allocation and Routing in Delivery Applications</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Le Na Nguyen, Thanh Long Nguyen, Thanh Thao Ton Nu, Quan Le, Manh Duong Phung</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-18 06:36:20</h6>
+<p class='card-text'>This paper addresses the multi-robot task allocation (MRTA) problem, which is essential for delivery and logistics applications. Our approach first defines a new cost function that transforms the MRTA into a unified optimization problem capturing both task assignment and routing. A bi-layer ant colony optimization (ACO) algorithm is then introduced, integrating two interdependent decision layers within a single colony process to solve the problem. This hierarchical framework enables simultaneous optimization of task allocation and route planning across multiple robots. Comparative experiments with mixed-integer linear programming (MILP) and particle swarm optimization (PSO) demonstrate that the proposed bi-layer ACO achieves the shortest total travel distance and fastest completion time across all task sizes. Specifically, it reduces total travel distance by up to 17.7% and completion time by nearly 20% compared with baseline methods. These results confirm the efficiency, scalability, and reliability of the proposed bi-layer ACO for multi-robot delivery tasks.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.17381v1' target='_blank'>Leveraging generative hallucination and biophysics-informed modeling for unified biomolecular sequence-structure co-design</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Xuefeng Liu, Mingxuan Cao, Xiao Luo, Songhao Jiang, Tobin Sosnick, Jinbo Xu, Louis Maher, Rick Stevens</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-18 05:16:41</h6>
+<p class='card-text'>Biomolecular design underpins applications from molecular recognition to therapeutics and synthetic biology, yet de novo interaction design remains challenging-especially for DNA/RNA, underexplored non-protein modalities with scarce, heterogeneous complex data and sharper geometric and chemical constraints. We introduce MCTH (Monte Carlo Tree Hallucination), an inference-only framework that casts all-atom sequence-structure co-design as uncertainty-aware planning over hallucinated states from pretrained folding and inverse-folding models, with optional biophysical control within the same decision loop. MCTH treats these models as frozen black-box operators and uses Monte Carlo Tree Search to allocate a fixed inference budget across competing design trajectories, incorporating model confidence and uncertainty, as well as cross-expert consensus/disagreement when multiple predictors are available. Across protein-RNA, protein-DNA, protein-protein, and protein-ligand design, matched-budget experiments show that adaptive search improves over simpler sampling and cycling strategies, while held-out AlphaFold3 and Chai-1 evaluations demonstrate transfer beyond the search-time oracle. MCTH provides a shared planning layer across modalities while allowing task-specific folding, inverse-folding, and biophysical modules, requiring no fine-tuning or backpropagation through component models.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.17348v1' target='_blank'>The Roman Coronagraph Community Participation Program: early calibration plan and pilot observation of a companion</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Julien H. Girard, Eric Cady, Neil T. Zimmerman, Clarissa R. Do Ó, Jingwen Zhang, Guillermo Gonzalez, Bijan Nemati, Vanessa P. Bailey, Alexis Lau, Sophie Noiret, John Krist, Julia Milton, Marie Ygouf, Ramya M. Anche, Schuyler Wolff, Justin Hom, Amanda Chavez, Jason J. Wang, Maxwell A. Millar-Blanchaer, Jessica Gersh-Range, Matthias Samland, Macarena Vega-Pallauta, Wolfgang Brandner, Toshiyuki Mizuki, Masayuki Kuzuhara, Susan Redmond, Kevin Ludwick, Jaren N. Ashcraft, William O. Balmer, Rusland Belikov, Beth Biller, Sarah Blunt, Ellis Bogat, Oscar Carrión-González, Gael Chauvin, Alexandra Z. Greenbaum, Sebastiaan Haffert, Jim Ingalls, Brian Kern, Bertrand Mennesson, Laurent Pueyo, Dmitry Savransky, Dan Sirbu, Peter Williams, Chen Xie</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-18 04:11:50</h6>
+<p class='card-text'>Roman is set to launch in weeks! The Coronagraph Instrument - technology pathfinder for future direct imaging missions - is ready to fly too. According to predictions, laboratory tests and high fidelity simulations, it will open a new contrast regime enabling the imaging of mature, giant planets in visible reflected light. The Community Participation Program is responsible for preparing a comprehensive observing program with associated data processing software and calibrations. We give a brief update about the on-going "baseline" calibration plan for the first months. Additionally, we describe a pilot program aiming for the stellar companion HD 29992 B at moderate ~1e-5 to ~1e-6 Band 1 (575 nm) contrast, to be carried out as soon as the instrument is operational. The idea is to generate a canonical data set with a self luminous companion that is easily recoverable. This functional checkout will be precious to best prepare our community, exercise our calibration plan and suite of tools.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.17332v1' target='_blank'>The FLARE Facility</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Hantao Ji, Jongsoo Yoo, Peiyun Shi, Euichan Jung, Kush Maheshwari, Adam Robbins, Sunghyun Son, Adam Stanier, Yang Ren, Sayak Bose, Dylan Corl, Keith Corrigan, Robert Cutler, William Daughton, Robert Ellis, Geoffrey Gettelfinger, Ronald Hatcher, Philip Heitzenroeder, Frank Hoffmann, Jonathan Jara-Almonte, Michael Kalish, Thomas Kozub, Enrique Merino, Weiguo Que, Benjamin Smith, John Wallace, Xin Zhao, Sofia Avrutsky, Neal Crocker, Seth Dorfman, Yuka Doke, Corina Dunn, William Fox, Boting Li, Xiaocan Li, Clayton Myers, Shohgo Okazaki, Joshua Pawlak, Tongnyeol Rhee, Byonghoon Seo, Taiju Suzuki, Yang Zhang, Stuart Bale, Amitava Bhattacharjee, Troy Carter, Chuanfei Dong, James Drake, Jan Egedal, Erik Gilson, Michiaki Inomoto, Jonathan Menard, Yasushi Ono, Stewart Prager, John Sarff, Hiroshi Tanabe, Masaaki Yamada</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-18 03:44:31</h6>
+<p class='card-text'>The Facility for Laboratory Reconnection Experiments (FLARE) has been constructed to study magnetic reconnection in multiple X-line regimes relevant to space, astrophysical, and fusion plasmas. Building upon the successful design of the Magnetic Reconnection Experiment (MRX), FLARE features a larger physical volume, stronger magnetic fields, and an independent ohmic heating drive to significantly extend the accessible parameter space, targeting Lundquist numbers up to S ~ 10^5 and normalized system sizes up to λ~ 10^3. This paper details the facility's core engineering components, including the primary vacuum vessel, internal flux cores, highly segmented external coil systems, modular capacitor banks, and the safety interlock and control architecture. An initial diagnostic suite is presented, comprising high-resolution 2D magnetic probe arrays, triple Langmuir probes, a fully fiber-coupled interferometer, ion Doppler spectroscopy, and fast camera imaging. Initial operations demonstrate the device's experimental flexibility and reliability, successfully executing symmetric push-pull reconnection, spheromak merging, and asymmetric downstream configurations. Currently operating within "Stage 2.5" with S ~ 2,500 and λ~ 60 for anti-parallel reconnection, FLARE provides immediate access to the multiple X-line regimes. Planned hardware upgrades, advanced diagnostic additions, and integration with fully kinetic simulations will further expand its capabilities as it transitions into a collaborative user facility for the broader plasma science community.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.17324v1' target='_blank'>Reconfiguration-Complete Motion Primitives with Constructive Planning for Deformable Planar Modular Robots</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jie Gu, Tingting Wang, Hongrun Gao, Yirun Sun, Zhihao Xia, Chunxu Tian, Dan Zhang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-18 03:34:54</h6>
+<p class='card-text'>The continuously deformable geometry of modular robots makes it difficult to define a fixed representation for reconfiguration planning and analysis. This letter introduces a square-cell abstraction that maps deformable rhombus modules to fixed-size grid cells while retaining physically interpretable local motions through two primitives, pivoting and shearing. Under this abstraction, we prove that every non-straight edge-connected configuration with $N \geq 7$ can be transformed to a fixed canonical staircase using only admissible primitive motions. Since these motions are reversible, any two configurations in this class are mutually reconfigurable. The proof is constructive and directly yields a staircase-canonicalization planner that transports removable boundary modules while preserving connectivity. As a practical enhancement, we further introduce a boundary-to-delivery lookahead selector that ranks admissible high level choices without affecting the completeness guarantee. Experiments demonstrate the constructive reconfiguration process and show that the selector substantially reduces planning time, while reference comparisons indicate lower planning times than the prior framework over the shared module counts.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.17257v1' target='_blank'>The Roman Coronagraph Community Participation Program: corgisim - a simulation suite for the Nancy Grace Roman Space Telescope Coronagraph Instrument</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jingwen Zhang, Sophie Noiret, Maxwell A. Millar Blanchaer, Jason Wang, Alexis Lau, Neil Zimmerman, Jessica Gersh-Range, Eric Shen, Kevin Ludwick, Taichi Uyama, Chen Xie, Vanessa P. Bailey, John Krist, Elodie Choquet, Julien Girard, Alexis Bidot, Arthur Vigan</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-18 01:26:51</h6>
+<p class='card-text'>NASA's Roman Space Telescope will feature a pathfinder Coronagraph Instrument to demonstrate advanced high-contrast imaging from space, paving the way for future missions like the Habitable Worlds Observatory. The Coronagraph Instrument could obtain imaging, polarimetry and spectroscopy of Jupiter analogs in reflected visible light for the first time. We present the development of an open-source simulation package ``corgisim'' as part of the Roman Coronagraph Community Participate Program. Built on established optical propagation libraries including PROPER and CGISim, corgisim provides a user-friendly, publicly available Python framework for end-to-end simulations of the Coronagraph Instrument observations. The package produces high-fidelity, format-compliant data for pre-launch calibration, pipeline testing, and community applications such as target selection and observation planning. We will give an overview of corgisim's infrastructure, functionalities, and current implementation across planned imaging, polarimetry, and spectroscopy modes, including the ability to simulate host stars, injected companions, and extended disks. We will also highlight suitable applications of corgisim and provide guidance on how users can access and employ the software.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.17237v1' target='_blank'>Structural Plan-to-Model Conversion with Deterministic Geometry and Guarded Agentic Vision-Language Refinement</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Mohammad Talebi-Kalaleh, Qipei Mei</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-18 00:53:31</h6>
+<p class='card-text'>Converting structural framing plans into editable finite-element model drafts remains labor-intensive and prone to transcription error. Existing drawing-understanding systems for building components rely on task-specific trained neural detectors, and language-model agents in structural engineering operate on text or model data rather than the drawing itself. This paper presents, to the authors' knowledge, the first framework applying an agentic vision-language layer to structural component detection and model drafting from framing-plan PDFs, without task-specific detector training or fine-tuning. A deterministic stage extracts primitives, estimates scale by dimension-ratio consensus, recognizes five entity classes with a drafting grammar, and assembles an editable layout. The agentic stage proposes typed corrections constrained by deterministic candidates, operation-specific admission tests, change-level review, and fail-closed transactions. Evaluation used an author-generated benchmark of 100 plans: a development half that informed every rule revision, and a seed-disjoint held-out half generated after the rules froze, evaluated once. All reported scores are end-to-end results of the complete framework on the held-out half. Scale was estimated within 0.1% of the generator reference for every drawing. Recall and precision were 0.922/0.997 for columns, 0.886/0.990 for beams, 1.000/1.000 for walls, 1.000/1.000 for braces, and 1.000/0.964 for openings. A controlled study repeated two corruptions three times on three development drawings. Calibration passed all nine trials; member repair met every strict end-state predicate in five of nine. Guarded review corrected missed framing and false marks within explicit bounds. The held-out half shares the development generator, so the study excludes independently drafted plans, raster evaluation, analytical connectivity, and solver validation.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.17204v1' target='_blank'>On-sky demonstration of dual-field interferometry at the CHARA Array</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Narsireddy Anugu, John D. Monnier, Douglas R. Gies, Jeremy Jones, Robert Klement, Stefan Kraus, Rainer Köhler, Karolina Kubiak, Cyprien Lanthermann, Edgar R. Ligon, Denis Mourard, Gail H. Schaefer, Nicholas J. Scott</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-17 23:32:03</h6>
+<p class='card-text'>Dual-field interferometry uses a bright reference star for real-time fringe tracking, allowing a second beam combiner to record long coherent integrations on a fainter off-axis science target. At the Center for High Angular Resolution Astronomy (CHARA) Array, we implement this mode using the six-telescope MIRC-X and MYSTIC beam combiners in the H and K bands, respectively. We first demonstrated this capability in summer 2025 on the hierarchical triple $α$~Piscium. MIRC-X tracked component A in the $H$ band, while MYSTIC observed component B in the K band, resolving the 7~mas Ba--Bb subsystem and measuring the relative astrometry of the 1.85~arcsec A--B pair with an uncertainty of 234~$μ$as. Here, we describe subsequent phase-tracking testing, preliminary sensitivity simulations, and planned instrumental upgrades aimed at extending this mode to faint off-axis science targets.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js'></script>
+</body>
+</html>
