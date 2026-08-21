@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>planning - 2026-08-21</title>
+<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap' rel='stylesheet'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css'>
+<style>
+body {
+font-family: 'Roboto', sans-serif;
+background-color: #f5f7fa;
+padding: 20px;
+}
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.card-title {
+    font-weight: 700;
+}
+.card:hover {
+    transform: scale(1.02);
+    transition: 0.3s ease-in-out;
+}
+</style>
+</head>
+<body>
+<div class='container'>
+<h1 class='text-center my-4'><i class='fas fa-book'></i>planning - 2026-08-21</h1>
+<div class='row'>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.20336v1' target='_blank'>WithEveryone: Unified Planning and Identity Grounding for Group Image Generation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Hengyuan Xu, Qixun Wang, Yiji Cheng, Miles Yang, Zhao Zhong, Wei Cheng, Xingjun Ma, Yu-gang Jiang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-20 17:59:53</h6>
+<p class='card-text'>Identity-preserving image generation becomes increasingly unreliable when a scene must contain many specified people. Beyond retaining each identity, the model must bind every reference to a distinct person and location, while training-time identity losses must establish correspondence among several noisy predicted faces. We introduce WithEveryone, a unified framework for generating group images up to ten reference identities. WithEveryone injects each selected identity as an addressed token, predicts a structured identity--layout plan, and renders the plan as a visual condition. Its key objective, Layout-Grounded ID Loss, uses annotated face regions to supervise the intended identities directly, avoiding unstable embedding-based face matching; ID Representation Forcing additionally trains a prediction for each identity before image synthesis. On an identity-disjoint benchmark, WithEveryone achieves the highest target-context identity similarity, improving face similarity from 0.462 for GPT-Image-2 to 0.499, while reducing copy-paste artifacts from 0.169 to 0.055. It further covers 97.3\% of the requested identities with a duplicate rate of only 2.8\%. These results show that explicit identity--layout grounding enables identity-preserving generation to scale to larger groups without relying on direct reference-face copying.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.20284v1' target='_blank'>Towards Surgical World-Action Modeling: A Preliminary Joint Visual-Trajectory Forecasting for Surgical Motion Planning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Weiliang Huang, Huanrong Liu, Bob Zhang, Qi Dou, Zhen Chen, Yun Gu, Guy Rosman, Qingbiao Li</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-20 17:18:02</h6>
+<p class='card-text'>Reliable surgical planning requires models to anticipate not only how instruments will move, but also how the operative visual state will evolve together with such motion. Existing approaches typically treat future scene generation and instrument trajectory prediction as two separate tasks. Scene-only models cannot directly evaluate the accuracy of future instrument motion at the trajectory level, while trajectory-only models fail to capture the visual consequences of instrument movement, leaving the consistency between predicted trajectories and future scene evolution unaddressed. Jointly forecasting both provides a more complete account of surgical action-scene dynamics by enabling explicit trajectory-level evaluation while simultaneously modeling the corresponding visual evolution. To bridge this gap, we present a preliminary joint visual-trajectory world-action model that simultaneously forecasts future visual states and instrument trajectories from historical surgical observations. Specifically, we encode historical video frames and tool trajectories into latent representations, which are processed by a temporal-spatial encoder and subsequently decoded through separate visual-state and trajectory prediction heads. Based on this preliminary architecture, a chunked autoregressive rollout is repeatedly applied to predict fifteen future steps. The chunked strategy consistently outperforms direct one-shot prediction across all evaluated horizons, improving first-segment PSNR from 18.86 to 23.11 dB and reducing ADE from 45.77 to 22.22 pixels. These results demonstrate the initial feasibility of joint visual-motion forecasting. However, we observe progressive visual degradation and accumulated trajectory errors over longer prediction horizons, which remain important challenges for future surgical world-action modeling.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.20237v1' target='_blank'>Rule-Compliant Visual Spatial Planning for Multimodal Large Language Models</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yu Chen, Ting Lei, Yaoyi Li, Jia Cai, Zhecen Wu, Yang Liu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-20 16:28:28</h6>
+<p class='card-text'>Multimodal large language models (MLLMs) combine linguistic reasoning with visual perception, yet their ability to perform visual spatial planning under explicit or previously unseen rule constraints remains underexplored. This setting requires models to jointly understand spatial layouts, interpret natural-language rules, and plan valid actions accordingly. To address this gap, we introduce RuleMaze, a controllable benchmark in which MLLMs must navigate mazes while obeying natural-language rules of varying complexity. RuleMaze isolates rule-compliant spatial planning by requiring accurate perception, rule interpretation, and constrained action planning. To enable scalable and systematic rule construction, we propose Language-Logic-Function Hybridization, which automatically generates natural-language rules and translates them into logical representations and executable validators, eliminating manual rule engineering. To improve rule following and generalization, we introduce Disentangled Multimodal Planning (DMP), which separates perception, execution, and rule verification through interpretable reasoning primitives. By disentangling these components, DMP facilitates systematic generalization to more complex and previously unseen rules, while providing transparent intermediate planning traces. Experiments demonstrate that DMP substantially improves rule compliance and planning success compared to end-to-end textual planning baselines. Overall, RuleMaze establishes a principled benchmark for studying grounded and interpretable rule-based spatial planning in MLLMs. Code is available at https://github.com/oceanflowlab/RuleMaze.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.20236v1' target='_blank'>SPT-3G+: A Cosmic Microwave Background Experiment for the South Pole Telescope</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:T. Natoli, Z. Ahmed, H. Athreya, J. E. Austermann, K. Bae, A. Bapat, D. R. Barron, P. S. Barry, A. N. Bender, B. A. Benson, L. E. Bleem, J. E. Carlstrom, T. W. Cecil, C. L. Chang, S. Cisneros, A. Coerver, J. Cornelison, T. M. Crawford, R. Datta, K. R. Dibert, W. Dominguez, S. M. Duff, K. Fichman, J. P. Filippini, L. Gades, P. A. Gallardo, S. Galli, N. W. Halverson, Q. Hao, S. Henderson, R. Herbst, W. L. Holzapfel, A. Hryciuk, J. Hubmayr, D. Jones, V. Kabra, K. S. Karkare, C. King, M. A. Koc, A. M. Kofman, R. A. Lew, M. J. Link, T. J. Lucas, A. Mangu, E. S. Martsen, J. J. McMahon, J. Montgomery, J. M. Nagy, H. Nguyen, V. Novosad, S. Padin, T. Pinsonneault-Marotte, S. Raghunathan, A. S. Rahlin, C. L. Reichardt, L. Ruckman, J. E. Ruhl, M. S. Sarwar, S. Simon, R. Singh, J. A. Sobrin, A. A. Stark, Q. Taylor, C. Tucker, J. Ullom, J. Van Lanen, J. D. Vieira, A. G. Vieregg, M. R. Vissers, G. Wang, W. L. K. Wu, V. Yefremenko, E. Yilmaz, C. Yu, J. Zivick</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-20 16:28:19</h6>
+<p class='card-text'>SPT-3G+ is the next survey receiver planned to be installed in early 2029 on the 10-meter South Pole Telescope (SPT). This new receiver will feature 6,020 polarization-sensitive dichroic pixels with transition-edge sensors observing in frequency bands centered at 90 GHz and 150 GHz. The 24,080 detectors in the SPT-3G+ receiver will be cooled to 100 mK by a dilution refrigerator and read out using microwave SQUID multiplexing. The optical design of the receiver enables a 4 degree diameter field of view, which is broken up into 14 individual optics tubes each containing cryogenic alumina, silicon, and nylon lenses. These technology choices will allow the SPT-3G+ receiver to improve on the mapping speed of the currently operating SPT-3G receiver by nearly an order of magnitude. Once deployed, the SPT-3G+ receiver will observe for 6-years an area overlapping with the BICEP survey to achieve a combined (90 GHz and 150 GHz) CMB map depth of 0.5 uK-arcmin. Data from these observations will be used to create unprecedentedly deep CMB lensing maps, discover new galaxy clusters, and detect astrophysical transients. The lensing map produced by SPT-3G+ will be used to remove or "delens" foreground B modes, where large-scale structure gravitationally lenses the CMB and converts E modes into B-mode polarization, with the goal of revealing inflationary B modes. Together with data from the BICEP Array as part of the South Pole Observatory, SPT-3G+ data will be used to constrain the tensor-to-scalar ratio $r$ with a goal of achieving a measurement of $σ(r) = 0.001$</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.20164v1' target='_blank'>Architecture and Compilation Co-Design for High-Rate Quantum Product Codes on Neutral Atom Arrays</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Adrian Liu, Wan-Hsuan Lin, Daniel Bochen Tan, Qian Xu, Jason Cong</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-20 15:20:53</h6>
+<p class='card-text'>Achieving fault-tolerant quantum computing at a practical scale demands quantum error correction (QEC) codes with high encoding rates. Quantum low-density parity-check (qLDPC) codes emerge as a promising candidate, especially given the rise of neutral atom arrays that provide dynamic long-range connectivity via atom movements. In general, synthesizing valid and efficient physical execution plans for QEC is a provably hard combinatorial problem, forming a critical compilation bottleneck that worsens as code sizes grow. To overcome this complexity, we focus on an important product family of qLDPC codes with dimension-reduction properties, and propose ONEX. This framework decomposes complex 2D physical execution planning into independent 1D subproblems, each solved to optimal execution depth within practical compilation time. First, we formulate the 1D execution plan with an explicit satisfiability modulo theories (SMT) encoding. This protocol produces provably depth-optimal solutions with substantial duration reduction. Second, we develop a multi-stage compilation pipeline featuring anytime optimization, movement compaction, and iterative feedback. This pipeline maintains practical wall-clock times while providing progressive refinement and on-demand retrieval of quality solutions. Third, we evaluate ONEX in the application of hypergraph product (HGP) code memory mapped onto neutral atom arrays, achieving 3.7x to 6.1x and 29.8x to 42.1x higher clock rates than the constructive 1D algorithm and the general 2D compiler, respectively, while scaling efficiently to codes with 2,500 data qubits. Finally, we extend ONEX to zoned layouts, revealing architectural insights into the associated trade-offs, and demonstrate its applicability to the broader lifted-product (LP) code family through a representative example.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.20161v1' target='_blank'>DARS: Dual-Level Credit Assignment RL with Structured Reasoning for Instruction-Based Image Editing</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Haoxiang Cao, Jiajiong Cao, Xuanpu Zhang, Changqian Yu, Chaoqun Wang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-20 15:16:39</h6>
+<p class='card-text'>Instruction-based image editing uses a planner-renderer pipeline: a vision-language model (VLM) first converts the instruction into an edit plan, and a diffusion model then executes that plan. Training such systems with only final-image rewards is inefficient because a poor edit does not reveal whether additional optimization should place more emphasis on the planner or the renderer, and even planner-dominant cases remain difficult to localize within a free-form reasoning trace. We present DARS, a reinforcement learning framework for dual-level credit assignment in this two-stage setting. Across modules, multi-plan multi-render rollouts estimate between-plan and within-plan reward variability for soft module routing, while rollout mean rewards provide hardness estimates for an adaptive curriculum. Within the planner, a four-field structured reasoning output enables a prefix-gated reward and token-level advantage reweighting, turning outcome-level feedback into localized supervision. Experiments on five benchmarks show that DARS outperforms a Joint~RL baseline with the same backbone, data, reward model, and rollout budget, with the largest gains on reasoning-intensive edits.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.20126v1' target='_blank'>RMWorld: Task-Aware Radio World Models with Value-of-Information Guided Multi-Trial Learning for Multi-UAV Communication Control</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Xiucheng Wang, Nan Cheng, Junxi Huan</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-20 14:54:09</h6>
+<p class='card-text'>Reliable multi-UAV communication control depends on predicting which aerial links will serve traffic before measurements are available. Radio world models (radio WMs) make such planning tractable, but their errors are nonuniform: a globally accurate model may still fail along high-demand corridors or association boundaries where rate errors reverse control decisions. This mismatch creates a learning challenge. Link queries must reduce decision-relevant channel uncertainty, while counterfactual trials must be filtered so that biased rollouts do not corrupt the policy. Existing acquisition and model-based control treat these budgets separately, valuing uncertainty, coverage, or optimistic return rather than risk reduction. We present RMWorld, a task-aware radio-WM framework that couples value-of-information channel calibration with credibility-diversity multi-trial selection. A biased propagation formula is corrected by a Bayesian residual, and each link is valued by its exact one-label reduction in locally linearized task-integrated posterior rate variance. Counterfactual branches are selected by a task-gated log-determinant objective, followed by conflict projection and fixed-batch validation. We derive the variance-reduction identity, prove posterior task-risk equivalence and the submodular greedy guarantee, and establish a scoped first-order non-interference result. Across 100 paired 3GPP trials RMWorld reaches 0.949~bit/s/Hz task-weighted RMSE, and across 30 severe-load DeepMIMO trials it reduces median backlog by 0.967 versus Ensemble UCB at 37.5\% more offline rollouts.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.20111v1' target='_blank'>Planning-Oriented End-to-End Autonomous Driving: Architectures, Evaluation, and Emerging Paradigms</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yanchen Guan, Xingcheng Liu, Bin Rao, Chengyue Wang, Guofa Li, Yunjian Li, Lishengsa Yue, Zhiyong Cui, Chengzhong Xu, Zhenning Li</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-20 14:41:36</h6>
+<p class='card-text'>End-to-end autonomous driving has evolved from camera-to-control regression toward planning-oriented systems that use structured representations, trajectory-level outputs, and increasingly realistic evaluation protocols. This survey reviews this transition across behavior cloning, conditional imitation learning, privileged distillation, BEV and vectorized planning, unified perception-prediction-planning architectures, world-model-based planners, and vision-language-action systems. We argue that the key distinction in modern end-to-end driving is not whether intermediate representations are used, but whether they are learned, supervised, and evaluated to support safe, feasible, and route-compliant planning. To organize the literature, we synthesize existing methods along four axes: input representation, planning output, supervision signal, and evaluation protocol. We further examine the benchmark shift from open-loop trajectory matching to closed-loop simulation, non-reactive real-log evaluation, long-tail testing, and human-preference-aware metrics. Our analysis highlights that architectural progress is difficult to interpret without benchmark-consistent evaluation, and that displacement-based open-loop metrics alone provide limited evidence for safe and human-aligned driving. We conclude with open challenges in uncertainty-aware planning, learner-expert mismatch, runtime safety assurance, language-action grounding, world-model validation, and reproducible benchmarking.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.20087v1' target='_blank'>Towards Professional Tennis Styles for Humanoid Robots with Adaptive Motion Planning and Tracking</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Tao Huang, Ruofei Liu, Xuchen Tang, Xinyin Zhang, Junli Ren, Huayi Wang, Feiyu Jia, Yukai Qi, Kangning Yin, Weishuai Zeng, Lipeng Chen, Xi Li, Ting Wu, Kailin Li, Ruoli Dai, Jingbo Wang, Lei Han, Jiangmiao Pang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-20 14:19:36</h6>
+<p class='card-text'>Humanoid robots have recently demonstrated promising capabilities in real-world ball sports. However, achieving professional motion styles while maintaining strong task performance remains challenging. In this work, we propose AdaPT, an Adaptive Motion Planning and Tracking framework that learns professional tennis serving and rally styles directly from broadcast videos. This hierarchical design is motivated by the key insight that the planner generates stylistic kinematic motions, while the tracker executes them with minimal interference with planning. Despite its effectiveness in simulation, a substantial sim-to-real gap emerges: tracking performance inevitably degrades on real robots, and this degradation is partially overlooked by autoregressive planning and further compounded by noisy perception. To address these issues, our adaptation mechanism improves tracking robustness by learning to track randomized execution speeds, while conditioning the planner on a learned motion-speed adapter to mitigate compounding errors. Real-world experiments on the Unitree G1 demonstrate the effectiveness of our adaptation mechanism in bridging the sim-to-real gap. We further deploy AdaPT policies on the full-size Dobot Atom humanoid robot (1.7m) and demonstrate in-the-wild serving without motion capture. Beyond these results, our real-world experiments reveal both algorithmic and engineering insights for future humanoid ball-sports systems. Videos and code are available on our \href{https://humanoidtennis.github.io/AdaPT/}{project website}.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.20084v1' target='_blank'>Evidence-Gated Task and Motion Planning with Vision-Language Models</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Tsunehiko Tanaka, Matthew Stephenson, Alistair Macvicar, Edgar Simo-Serra</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-20 14:17:52</h6>
+<p class='card-text'>Robots executing long-horizon manipulation tasks from natural-language instructions must reason about both semantic task structure and geometric feasibility. However, under partial observability, the availability of goal-relevant objects may be uncertain. In such cases, approaches that combine Vision-Language Models (VLMs) with Task and Motion Planning (TAMP) may generate subgoals that rely on the VLM's prior knowledge without observational support, leading to execution failures or unintended outcomes. We propose Evidence Acquisition and Feasibility Gating (EAFG), a framework that acquires visual evidence through VLM-generated exploratory subgoals and TAMP-based execution. EAFG then applies a feasibility gate to decide whether to proceed with task planning, acquire further evidence, or halt. Our experiments show that, in cooking tasks with ambiguous object use, EAFG improves recipe completion by discovering task-relevant objects before planning. For instructions requiring an absent object, EAFG promotes appropriate halt decisions and reduces repeated attempts to manipulate that object.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.20065v1' target='_blank'>Orthogonal JEPA: Factorized Predictive States for Latent World Models</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Taoyong Cui, Pheng Ann Heng, Wanli Ouyang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-20 13:59:57</h6>
+<p class='card-text'>World models construct latent states that support prediction, planning, and reasoning about an underlying system. Joint-embedding predictive architectures (JEPAs) offer a direct way to learn such states by predicting targets in representation space instead of reconstructing every detail of the observation. Standard JEPAs, however, organize all predictable content through one target embedding and one prediction pathway. In complex systems, this monolithic state can allocate redundant capacity to dominant signals while providing weak or conflicting gradients to less dominant predictive structure. We introduce \method, a latent world-modeling framework based on orthogonal predictive factorization. Learned basis matrices analyze each target state into multiple components, and a dedicated prediction branch estimates each component from a shared context representation. Predictive regression preserves the factor magnitudes required for state synthesis, an orthogonality objective discourages repeated directions, factor-activity regularization maintains variation in projected targets, and online variance regularization discourages coordinate-wise encoder collapse. Predicted components are synthesized into a complete latent state that can be used by a readout, decoder, planner, or autoregressive rollout. The same predictive-state mechanism applies when the target is temporally future, spatially hidden, or another partial observation of the same system. Experiments on controlled vision, single-cell transcriptomics, longitudinal health records, continuous control, and molecular dynamics evaluate representation quality, forecasting, planning, and long-horizon stability.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.20026v1' target='_blank'>From Street View Imagery to Street Quality Indicators: Vision Language Inference for the Suburban 15-minute City</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Joan Perez, Giovanni Fusco</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-20 13:34:48</h6>
+<p class='card-text'>Streetscape quality has become a central concern in contemporary urban planning, particularly within the framework of the pedestrian-friendly 15-minute city, where walkability and public-space quality are increasingly recognized as key determinants of urban performance. However, assessing streetscape qualities across large suburban and peri-urban territories remains challenging due to the time and resource demands of conventional field surveys. This paper presents a planning-oriented assessment of streetscape qualities in the north-eastern periphery of Nice (France) using the latest release of SAGAI (Streetscape Analysis with Generative AI), an open-source workflow that leverages vision-language models (VLMs) for large-scale streetscape analysis from Google Street View imagery. The new release addresses limitations of the original framework through improved image acquisition, geographically consistent view generation, support for multiple VLM architectures, consensus-based inference, and an integrated analytical environment. The workflow is applied to several thousand street-level observations to evaluate qualities relevant to pedestrian-friendly urban environments: sidewalk presence, pedestrian entrance density, and vegetation. The resulting maps reveal that the desired streetscape qualities characterize only a fraction of today's suburban streetscapes, mainly in compact developments and traditional suburban faubourgs, while they are particularly lacking on residential hills. The analysis demonstrates the potential of contemporary VLMs to support urban diagnostics in extensive suburban territories where fieldwork would be prohibitively time-consuming. Beyond the case study, the paper illustrates how recent advances in vision-language models can contribute to evidence-based planning by enabling scalable, flexible, and interpretable assessments of urban public-space quality.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.20024v1' target='_blank'>Systematic Evaluation of TabPFN-TS for Zero-Shot Probabilistic Heat Load Forecasting in District Heating Networks</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Ben Spoek, Karim K. Ben Hicham, Kai Derzsi, Philipp Althaus, Alexander Mitsos, Dirk Müller</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-20 13:33:37</h6>
+<p class='card-text'>District heating energy hubs require reliable heat load forecasts for efficient operational scheduling. Conventional forecasting workflows train system-specific models on historical data, which can become burdensome when networks change through new consumers, retrofits, or changing operating regimes. Zero-shot time-series foundation models and in-context forecasting offer a promising alternative: they can adapt at inference time from recent observations rather than by repeated retraining. This study systematically evaluates TabPFN-TS against time-series foundation models and trained machine-learning baselines for probabilistic heat load forecasting in district heating networks. Unlike foundation models pretrained on large collections of real time series, TabPFN-TS relies on synthetic pretraining data, which avoids direct pretraining-test overlap but raises the question of whether the learned prior captures district heating dynamics. We analyze covariate choice, context length, temporal resolution, and prediction horizon on representative operating weeks, validate the selected configuration over a full year, and test transferability on a second network. The results identify hourly 24-hour forecasting with a 12-week rolling context and ambient temperature as a parsimonious high-performing configuration; longer context windows do not improve accuracy. TabPFN-TS remains close to Chronos-2 in deterministic accuracy, reaching CVRMSE values of 13.06% versus 12.48% on the main dataset, and lies within the critical-difference threshold in the daily-rank comparison. Although Chronos-2 achieves the lowest aggregate full-year error, TabPFN-TS shows better empirical calibration. Finally, the diagnostic findings motivate a Multi-Resolution Residual-Correction Forecaster that combines a low-frequency Base Forecaster with a short-horizon Residual Forecaster to improve longer-horizon planning accuracy.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.19964v1' target='_blank'>G-MARK: Grounded Multi-Agent Reasoning for Cooperative Driving via Knowledge Graphs</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Bhavya Gupta, Onat Gungor, Tajana Rosing</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-20 12:35:12</h6>
+<p class='card-text'>Autonomous driving systems must operate under partial observability, where safety-critical objects may be occluded or visible only to neighboring connected vehicles. Vehicle-to-vehicle cooperation can reduce this uncertainty, but existing cooperative driving methods often compress multi-agent evidence into latent features or hidden multimodal states. As a result, they obscure which agent observed each object, whether the object is visible to the ego vehicle, and how conflicting evidence affects downstream decisions. We propose G-MARK, a grounded multi-agent reasoning framework that converts cooperative object-centric observations into explicit provenance-aware knowledge graphs (KGs). The resulting KGs preserve object hypotheses together with their source attribution, ego-versus-partner visibility, uncertainty, conflicts, spatial relations, and planning-relevant context. G-MARK then derives a shared feature representation from these KGs, enabling lightweight task heads to support object reasoning, motion prediction, control selection, and trajectory forecasting. Compared with the state-of-the-art baseline, GMARK improves occlusion reasoning accuracy by 42.2%, reduces control-selection error by 13.1%, and achieves comparable trajectory-planning accuracy with a 25.6x smaller structured communication payload. Our code is available at https://github.com/bhavyagupta98/g-mark.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.19952v1' target='_blank'>New Complexity Results for Fair Repetitive Scheduling</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Moran Koren, Michael L. Pinedo, Dvir Shabtay</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-20 12:17:42</h6>
+<p class='card-text'>We revisit the problem of finding fair solutions to repetitive scheduling problems with a single machine. In this problem, we are given a set of $n$ clients and a planning horizon consisting of $q$ periods (days). Each day, every client submits a single job that must be processed by the machine. The objective is to construct a set of $q$ schedules, one for each day, such that the quality of service (QoS) received by each client meets a predefined threshold. The QoS measure may be any standard scheduling criterion, such as the total waiting time or total completion time of a client's jobs over the entire planning horizon. This problem has been studied in the literature, with previous works providing complexity classifications and approximation algorithms for various QoS measures. Nevertheless, several important questions remain open. In this paper, we resolve three of these questions and identify several additional directions for future research.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.19907v1' target='_blank'>Spike-based Belief Propagation in Nonlinear Dynamical Systems</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Sepideh Adamiat, Hongye Wang, Wouter M. Kouw, Bert de Vries</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-20 11:20:22</h6>
+<p class='card-text'>This paper presents a Bayesian control framework that integrates spike-based dynamics with probabilistic inference for adaptive control. Bayesian inference is widely regarded as a core computational principle of brain function, providing a normative framework for perception, decision-making, and learning under uncertainty. By combining a biologically inspired spiking neural model with Bayesian inference principles, we propose a brain-like control algorithm capable of operating in uncertain environments. We use the mountain car parking problem as a benchmark with non-linear dynamics. Our results demonstrate that the proposed controller can successfully update states in real time and generate goal-directed action plans through spike-driven dynamics. The results highlight the proposed model's potential as a bridge between computational neuroscience and probabilistic control theory.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.19877v1' target='_blank'>Developing a Compact SWIR Imaging Spectrometer for CO2 and CH4 Retrieval Using Photonic Crystal Filters</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Marijn Siemons, Brecht Simon, Irina Malysheva, Ralf Kohlhaas</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-20 10:37:33</h6>
+<p class='card-text'>The need for atmospheric measurements with higher spatial and temporal resolution is driving the development of satellites and satellite constellations to complement existing flagship missions. We are developing an instrument concept based on photonic crystal filters with tailored spectral transmission for trace gas retrieval. These filters can be integrated directly with the detector module, enabling a highly compact system architecture.
+  In this work, we present performance simulations for methane and carbon dioxide retrieval in the 1.6 um SWIR band for a medium-resolution global coverage mission with an approximately 250 m spatial resolution and a 150 km swath. We furthermore introduce an improved retrieval algorithm that substantially reduces retrieval bias. These results demonstrate the potential of the proposed architecture for medium-resolution global greenhouse-gas mapping, with retrieval performance comparable to state-of-the-art global mapping missions such as the planned CO2M mission at substantially finer spatial resolution. This measurement approach also inherently compresses the acquired spectral information, reducing the need for high downlink data rates. In the coming year, these filters will be fabricated by NIL Technology, followed by mechanical integration and experimental validation in a breadboard system.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.19854v1' target='_blank'>Repo0: Design-Driven Zero-to-All Code Generation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Silin Chen, Haoyi Teng, Xiaodong Gu, Yuling Shi, Jiale Huang, Yongpan Wang, Hongyu Zhang, Haibing Guan</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-20 10:03:14</h6>
+<p class='card-text'>Large language model agents have made substantial progress in code generation, yet most existing systems assume a predefined repository architecture. This assumption does not hold in zero-to-all code generation, where an agent must construct an entire software project directly from natural-language requirements while maintaining a modular repository architecture throughout development. We present Repo0, a continuous structural evolution framework for zero-to-all code generation. Repo0 maintains an explicit architectural state instantiated as a Dual-Directed-Acyclic-Graph (Dual-DAG), consisting of a requirement-level DAG, a component-level DAG, and their alignment relation. Starting from natural-language requirements, it iteratively evolves component boundaries through structural actions guided by modularity metrics until structural convergence, after which the converged architecture guides test-driven development code generation. We evaluate Repo0 on six real-world repositories from RepoCraft using GPT-5 mini and DeepSeek V3.2. Repo0 achieves the highest Functionality Coverage and Pass Rate across all settings. Compared with RPG, the strongest repository-planning baseline, Repo0 improves Functionality Coverage by up to 20.08 percentage points and Pass Rate by up to 29.74 percentage points. Ablation and structural-evolution analyses further demonstrate the importance of the Dual-DAG architectural state, modularity-guided structural evolution, and explicit structural convergence.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.19783v1' target='_blank'>Coupled Optimal Transport with Landmark Constraints</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Xiang Gu, Jian Sun, Zongben Xu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-20 08:28:13</h6>
+<p class='card-text'>Existing optimal transport (OT) models primarily seek an OT map or plan between distributions by minimizing a prescribed transport cost or distortion. However, minimizing transport cost or distortion alone may fail to identify a geometrically meaningful transformation between the two distributions. To address this limitation, this paper proposes a novel coupled OT framework that leverages a small number of annotated landmarks to guide the recovery of an underlying deformation governing the distribution transformation. The coupled OT framework integrates the optimization of the transport plan and the deformation field into a unified model, where the landmark-guided deformation field and the cost-driven transport plan are coupled through a mutual-consistency constraint. As a result, the deformation is jointly determined by the annotated landmarks and cost-driven distribution matching. The proposed framework provides a principled connection between landmark-based registration and transport-based distribution matching, enabling the recovery of transport maps from sparse geometric supervision. We establish the well-definedness of the proposed model in a general variational setting and develop a finite-element-based numerical algorithm for computation whose convergence properties are systematically analyzed. The practical effectiveness of the proposed approach is verified in shape matching.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.19769v1' target='_blank'>AsymFeX: A Symmetry-Driven Framework for Ischemic Stroke Segmentation Across Imaging Modalities and Stroke Stages</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Maunil Shah, Vaanathi Sundaresan</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-20 08:12:31</h6>
+<p class='card-text'>Fast and accurate segmentation of Acute Ischemic Stroke (AIS) lesions is essential for stroke prognosis and treatment planning. Non-contrast CT (NCCT), the first-line imaging modality for diagnosing ischemic infarcts, exhibits subtle infarct contrast, making manual delineation slow and labor-intensive. Motivated by this, and by the clinical practice of comparing brain hemispheres to localize infarcts, we propose a two-stage, nnU-Net-compatible 3D segmentation method. The first stage corrects head tilt to align each scan to its true anatomical mid-sagittal plane; the second applies a novel Asymmetric Feature Extraction (AsymFeX) module, comparing each voxel to its true contralateral counterpart within a local 3 x 3 x 3 neighborhood via cross-hemispheric attention, feature disparity estimation, and dual-scale gating to capture both large and small infarcts. On AISD, our method achieves 0.6796 Dice, 23.53 mm HD95, and 7.69 mL AVD, significantly outperforming existing state-of-the-art methods, with clinically relevant volumetric analysis at the 70 mL thrombolysis-eligibility threshold. Proof-of-concept evaluation on ATLAS v2.1 and ISLES'24 demonstrates that the same symmetry-driven design generalizes across imaging modalities and stroke time points without architectural changes, further supported by an uncertainty analysis assessing reliability under clinical deployment. Code is publicly available at https://github.com/biomedia-lab/AIS-detection.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.19743v1' target='_blank'>Gallileo-4D: Frozen Backbone Ensemble for Dynamic 4D Reconstruction</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Nicolò Savioli</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-20 07:42:51</h6>
+<p class='card-text'>We describe our entry to the PhysAI Dynamic 4D Reconstruction Challenge, which placed third of 27 teams at 0.58356 APD on the final leaderboard, without a single gradient update. This was not the plan: of thirteen fine-tuning configurations of a pre-trained 4D backbone, twelve degraded the challenge score, and eleven of those twelve improved local validation at the same time. We trace this inversion to the structure of the benchmark: only 25% of the evaluation set belongs to the data variant released for training, so updates that fit the available data damage the pre-trained features the remaining 75% relies on. Our system therefore freezes the backbone and spends its budget at inference time, fusing three decoding configurations -- temporal stride-3, horizontal-flip test-time augmentation, and dense stride-1 -- under a convex weighting. The ensemble recovers +0.041 APD over the frozen baseline, more than any training run achieved, at zero training cost.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.19740v1' target='_blank'>Keeping the Franka Emika Panda alive: a ROS 2 stack with a reliable position interface</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Antonio Langella, Davide Risi, Vincenzo Petrone, Enrico Ferrentino, Pasquale Chiacchio</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-20 07:37:48</h6>
+<p class='card-text'>This paper presents an open-source software stack that restores ROS 2 support for the Franka Emika Panda robot while resolving the long-standing unreliability of its external position control interface. We first analyze the root causes of unstable position control and show that the observed vibrations and protective stops arise from the timing of the external control loop and sampling jitter, rather than from limitations of the robot itself. Building on this analysis, we introduce an asynchronous hardware interface that decouples real-time communication from the ROS 2 control loop, a rate-matching mechanism for slower command sources, and a position-domain reference generation strategy that produces reliable, smooth position commands. Experimental validation shows that the proposed architecture reliably tracks velocity references by reducing motion artifacts introduced by the official implementation, and the stack is validated across motion planning, compliance control, position-controlled manipulation, and haptic teleoperation on two independent Panda platforms. By restoring a modern, reliable, and open ROS 2 ecosystem for the Panda, this work lowers the barrier to developing safe, responsive, and reproducible human-robot collaboration applications that integrate planning, perception, interaction, and shared autonomy. Code and videos are available on our website at https://sites.google.com/view/fer-ros2/.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.19705v1' target='_blank'>Automated Estimation of MBIST Area and Test Time in Heterogeneous Memory IPs via Stacked Ensemble Framework</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Chee Jin Teoh, Ab Al-Hadi Ab Rahman, Johnny Kee Hui Wong, Premkumar A/L Kesavan Prabagaran, Muhammad Nadzir Marsono, Nuzhat Khan</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-20 07:06:15</h6>
+<p class='card-text'>Embedded memories occupy a large portion of modern System-on-Chip (SoC) designs, especially in high-performance applications such as artificial intelligence and edge computing. Memory Built-In Self-Test (MBIST) is commonly used to ensure memory reliability, but it introduces additional area and test time overhead. Accurate early estimation of these overheads is important during design planning, yet conventional methods rely on full Register Transfer Level (RTL) synthesis and test pattern generation, which are slow and resource-intensive. This study proposes a supervised learning framework that predicts MBIST area and test time directly from RTL-level design parameters without synthesis. A dataset of 4,470 samples for area and 624 for test time was generated using Synopsys Design Compiler and MINT, an Intel-enhanced MBIST tool. Input features include memory count, word width, address depth, port configuration, and clock domains. For area prediction, the features are processed through polynomial expansion, log transformation, and scaling, followed by a stacked ensemble model using XGBoost, LightGBM, and a Neural Network with Gradient Boosting as the meta-learner. For test time, XGBoost and LightGBM are combined using Ridge Regression, with hyperparameters tuned through a 100-trial Optuna search. The models achieved 90.68% accuracy for area and 96.80% for test time within a +/-10% margin, improving over baseline methods by 8.53% and 48.80% respectively. The results show that this approach enables faster estimation of MBIST costs and supports more efficient design decisions in memory IP development.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.19671v1' target='_blank'>SAGE: Ergodic Control for Autonomous and Adaptive Inspection of Subsea Infrastructure</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Markus Buchholz, Ignacio Carlucho, Yvan R. Petillot</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-20 06:06:40</h6>
+<p class='card-text'>Subsea Christmas Trees (XTs) are underwater structures that use valves for directing oil flow, needing constant inspection. But not every valve carries the same risk at the same time: a valve with a suspected leak needs to be revisited far more often than one with a clean history, and that risk picture changes during the mission as new leaks are found. To handle this, we present SAGE (Semantic and Adaptive Generative Ergodicity), an ergodic-control architecture that allocates vehicle time in proportion to a live, sensor-derived risk distribution rather than a scripted route. We study a two-XT scenario, with five valves in total, and compare a fixed-loop A* tour against SAGE. Both methods can be tuned to spend similar total time near a high-risk valve, but only ergodic control also checks it more often: in simulation, a dominant-risk valve was revisited every 5.8 s under ergodic control against a fixed 8.1 s for every valve under A*, regardless of risk, so a leak can go unnoticed for barely two-thirds as long. Because the tracked distribution is recomputed rather than planned once, a newly detected leak shifts vehicle behavior on the next control cycle with no explicit re-planning step and no operator in the loop, which a fixed tour cannot do without a discrete re-route. We derive the ergodic control law behind this behavior and report simulation results on the five-valve scenario.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.19669v1' target='_blank'>Scaffolding Minds: Optimizing Latent Visual Target Representations for Multimodal Reasoning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Haoqiang Kang, Yinpeng Chen, Luyang Liu, Jesper Sparre Andersen, Abhijit Ogale, Baochen Sun, Lichan Hong, Ed H. Chi</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-20 06:04:28</h6>
+<p class='card-text'>Latent reasoning has advanced multimodal reasoning through a two-stage training paradigm: (1) a helper image is encoded into latent tokens to teach visual chain-of-thought during a supervised fine-tuning (SFT) stage, and (2) these latent tokens are further refined with reward feedback during a reinforcement learning (RL) stage. In this paper, we identify two key limitations of this framework, one in each stage. First, the SFT stage typically relies on an off-the-shelf vision encoder to encode the helper image, yielding suboptimal latent representations that may not be well aligned with the downstream reasoning task. Second, existing RL methods treat the latent component only through deterministic regularization, which constrains policy drift but does not create alternative latent trajectories for exploration. To address these limitations, we propose Scaffolding Minds. Our approach learns a dedicated scaffolding encoder that provides an optimized target in latent space, and learns both the mean and variance of the RL sampler. We further show that these two improvements are complementary, together yielding substantial gains over strong baselines. Empirically, our method improves over the strongest latent-reasoning baseline by +9.5% on FrozenLake spatial planning, with the gain widening to +19% at 32x32 grid map, and by +5.2% on average across nine visual-centric reasoning benchmarks.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.19666v1' target='_blank'>MUST-PET: MUltimodal Self-supervised learning across Tracers for whole-body PET/CT-based lesion segmentation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Bashirul Azam Biswas, Amartya Bhattacharya, Biratal Raj Wagle, Matthew E. Maeder, James B. Yu, Indrani Bhattacharya</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-20 06:02:54</h6>
+<p class='card-text'>Deep learning-based whole-body PET-CT lesion segmentation can support cancer staging, treatment planning, and response assessment, but generalization is limited by scarce annotations and domain shifts. Self-supervised learning (SSL) can address these challenges but remains underexplored in pan-cancer, multi-tracer PET-CT. In this work, we propose MUST-PET (MUltimodal Self-Supervised learning across Tracers), a multimodal, multi-tracer SSL framework for generalizable whole-body PET-CT lesion segmentation. MUST-PET is trained and validated on a diverse, multi-institutional collection of pan-cancer PET-CT scans acquired with FDG and prostate-specific membrane antigen (PSMA)-targeted radiotracers. MUST-PET uses context-aware masked reconstruction, where one modality is partially masked and reconstructed using complementary information from both PET and CT. The pretrained model is subsequently fine-tuned with labeled samples and evaluated for reconstruction quality, lesion segmentation, label efficiency, and generalizability across independent held-out datasets. MUST-PET reduces reconstruction error, improves lesion segmentation over training from scratch, and performs well with limited labeled data and on unseen external datasets, demonstrating the potential of multi-tracer SSL for label-efficient, generalizable whole-body PET-CT. segmentation.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.19574v1' target='_blank'>HiTac-WAM: A Hierarchical Tactile World Action Model for Contact-Rich Robot Manipulation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Chao Xue, Chaofan Zhang, Wenxuan Ma, Guocai Yao, Shaowei Cui, Shuo Wang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-20 02:28:25</h6>
+<p class='card-text'>World action models jointly predict future visual observations and actions, whereas existing tactile-aware variants typically represent future touch as an image or latent stream without modeling the physical dependencies that organize tactile states hierarchically. We present HiTac-WAM, a hierarchical tactile world action model that forecasts a sequence of future tactile states for each candidate action chunk before execution. The forecast factorizes into contact state, a 3D deformation field, and slip risk, organized as a directed hierarchy in which each downstream stage is conditioned on stop-gradient signals from preceding stages. A directed attention mask allows tactile queries to attend to the video-action context of each candidate while preventing video and action queries from attending to tactile tokens. For planning, HiTac-WAM ranks candidate action chunks using tactile forecasts and task-progress estimates. For execution, the selected tactile forecast is retained as a reference; persistent discrepancies between predicted and observed tactile states trigger corrective replanning. HiTac-WAM achieves a mean contact F1 of 0.921; under matched training budgets, the directed hierarchy reduces 3D displacement L2 error by 17.6% relative to the deformation-only predictor and improves slip AUPRC by 60.4% relative to the slip-only predictor. Across chip grasping, blackboard erasing, and USB insertion, selection guided by the hierarchical forecasts increases the average real-robot success rate from 31.1% to 61.1%, while the full system attains 72.2%.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.19537v1' target='_blank'>Multimodal Trajectory Planning for Surface Vehicles using Turning Circle-based Control Barrier Functions</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Changyu Lee</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-20 01:18:07</h6>
+<p class='card-text'>This paper presents a guide path-free multimodal trajectory planning framework for autonomous surface vehicles operating in dynamic environments. The proposed method integrates model predictive control (MPC) with a turning circle-based control barrier function (TC-CBF). Unlike conventional Euclidean distance-based CBFs (ED-CBFs), which evaluate safety solely based on proximity, the TC-CBF accounts for the nonholonomic motion and finite turning capability of a surface vehicle. Its geometric formulation identifies feasible avoidance regions according to the vehicle's turning circles and generates distinct left- and right-turning avoidance modes. These modes allow the optimization solver to explore and select topologically different trajectories without relying on globally planned guide paths, as required by many conventional multimodal planning approaches. By embedding the avoidance direction directly into the safety constraint, the proposed framework alleviates the local-minimum and deadlock problems of single-mode MPC while maintaining computational efficiency. Extensive simulations involving multiple moving vessels demonstrate that the proposed method achieves higher success rates, fewer safety violations, and smaller residual violations than single-mode baselines across all tested traffic densities.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.19453v1' target='_blank'>When Automata Meet Streams: Temporal Logic Compilation for Stream-Based Robotics Task and Motion Planning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Sayem Nazmuz Zaman, Cyrus Neary</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-19 21:12:29</h6>
+<p class='card-text'>Stream-based robotics Task and Motion Planning (TAMP) integrates discrete symbolic planning with dynamically generated continuous geometric parameters, such as poses, grasps, and trajectories. However, stream-based planners typically reason only about goal reachability, whereas long-horizon tasks also demand adherence to temporal specifications, such as safety-critical ordering, invariance, and liveness constraints. No methods currently exist to enforce such temporal constraints for stream-based solvers because streams generate an expanding geometric object set via iterative stream refinement loops during planning, rendering existing temporal-logic compilation techniques incompatible. We therefore present Synchronous Action Monitoring with Token Destruction (SAM-TD), a compilation method that enforces arbitrary Linear Temporal Logic over finite traces ($\textrm{LTL}_f$) specifications in stream-based TAMP. SAM-TD translates arbitrary $\textrm{LTL}_f$ constraints into automata and embeds regressed automaton guards into action schemas, which are pre-specified before planning begins. By doing so, SAM-TD can handle objects generated by streams during planning, thus circumventing the need to enumerate a fixed object set or modify the underlying planner. During search, SAM-TD synchronously updates automaton states and uses a validity token shared across all automata to prune constraint-violating branches. We show that SAM-TD supports dynamically generated stream objects from iterative stream refinements during plan search. Experimental results provide the first ever demonstration of stream-based TAMP under $\textrm{LTL}_f$ constraints in three robotics PDDLStream environments. Furthermore, on standard discrete PDDL benchmarks, SAM-TD is competitive with state-of-the-art temporal-constraint compilation methods.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.19143v1' target='_blank'>Network-Scale Road Disruption from Liquefaction in Cascadia Subduction Zone Earthquakes</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:M. D. Sanger, O. Blaze-Smith, B. W. Maurer, L. Wotherspoon, M. O. Eberhard, J. W. Berman</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-19 17:31:23</h6>
+<p class='card-text'>This paper presents a mechanics-informed, data-driven framework for modeling liquefaction-induced disruption of roadway networks following a magnitude-9 earthquake on the Cascadia Subduction Zone (CSZ). Liquefaction hazard is predicted using a geospatial liquefaction model trained on more than 37,000 cone penetration tests (CPTs) and conditioned on spatial data describing geomorphology, hydrology, climate, and surficial geology. Ground motions are derived from physics-based ensembles of CSZ rupture scenarios. Segment-level probabilities of closure and service degradation are estimated using empirically derived fragility relationships and propagated through the National Highway System using spatially correlated Monte Carlo simulation. Results indicate strong concentration of impacts in coastal lowlands, estuaries, and river valleys, with pronounced exposure along U.S. Route 101. Focused analysis in Pacific and Grays Harbor Counties, Washington, shows elevated probability of healthcare isolation. Compared with prior statewide assessments based on geologic screening, predicted bridge closures due solely to liquefaction are an order of magnitude lower, reflecting improved representation of subsurface conditions and damage mechanisms. Despite uncertainties, the framework provides a defensible tool for transportation resilience planning and asset prioritization in Cascadia.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js'></script>
+</body>
+</html>
