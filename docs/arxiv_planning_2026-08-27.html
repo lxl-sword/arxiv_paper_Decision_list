@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>planning - 2026-08-27</title>
+<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap' rel='stylesheet'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css'>
+<style>
+body {
+font-family: 'Roboto', sans-serif;
+background-color: #f5f7fa;
+padding: 20px;
+}
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.card-title {
+    font-weight: 700;
+}
+.card:hover {
+    transform: scale(1.02);
+    transition: 0.3s ease-in-out;
+}
+</style>
+</head>
+<body>
+<div class='container'>
+<h1 class='text-center my-4'><i class='fas fa-book'></i>planning - 2026-08-27</h1>
+<div class='row'>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.26091v1' target='_blank'>PlanSightRAG: A Visual-First Multimodal RAG for Automating Question Answering and Compliance Checking for Civil Standard Plans</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Nabaraj Subedi, Shuvo Dip Datta, Ahmed Abdelaty, Shivanand Venkanna Sheshappanavar</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-26 17:54:24</h6>
+<p class='card-text'>Civil infrastructure compliance checking has long relied on engineers manually reading legacy 2D plans; however, OCR-based automation strips away the geometry and layout essential for interpreting these plans. We present a Visual-First Multimodal Retrieval-Augmented Generation (RAG) framework called PlanSightRAG. It indexes and reasons directly over plan imagery, integrates a ColNomic-3B multi-vector retrieval, an agentic Planner-Retriever-Auditor-Synthesizer, and MaxSim heatmaps as an evidence trail. We introduce a 4,056-pair benchmark from five state Departments of Transportation (DOT) standard plans (1,898 pages). PlanSightRAG achieves 91.47% Recall@5 on zero-shot retrieval, while on a held-out Michigan DOT corpus, it achieves 91.40%. On synthetic, parametrically-generated compliance drawings, our Qwen2.5-VL-72B pipeline reaches 100% verdict accuracy only when supplied a pre-resolved rule threshold, a controlled ceiling that a non-VLM OCR baseline already reaches at 76.4%. Finally, we demonstrate autonomous visual rule-grounding by extracting numeric limits directly from a specification corpus without any human-supplied rules.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.26086v1' target='_blank'>TraceML: An Empirical Analysis of Human-Agent Planning in Machine Learning Development</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jiarui Yan, Weiwei Sun, Sijie Li, Wenhan Li, Yiming Yang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-26 17:50:13</h6>
+<p class='card-text'>Large language models write correct code for isolated problems but remain far weaker at autonomous machine-learning development, where an agent must revise data pipelines, models, and validation over hours of feedback, and on most competitions still finishes below strong human competitors. Outcome-based benchmarks record this gap but not its cause, because they grade the final submission and discard the development process behind it. We introduce TraceML, which pairs human and agent work on the same competitions under one version-level schema: 4,465 human Kaggle trajectories across 134 competitions, seven of which are also worked by two agent scaffolds, giving 430 paired human and 207 agent trajectories. Every code version carries its score, its timestamp, and labels for the action taken, its intent, the edit size, and the score effect. Read this way, the gap becomes concrete. Experts alternate data work, validation, model changes, and ensembling, and return to approaches they had set aside. Each agent scaffold instead collapses into a narrow loop: Codex spends its steps re-weighting ensembles and tuning submissions, MLEvolve mutates its model in place, and neither pivots at the human rate nor reopens abandoned work. A short planning prompt distilled from human practice moves the behaviors it names toward the human profile and lifts scores, but the effort profile stays agent-shaped: instruction closes only the part of the gap that reduces to instructions. We release the corpus, the schema, the labelers, and the extraction pipeline at https://huggingface.co/datasets/jerryyan/TraceML.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.26074v1' target='_blank'>Gating Before Commitment: Anticipating Intent Divergence to Prevent Post-Interaction Decision Failures in Autonomous Driving</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Cong Xu, Ravi Sankar</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-26 17:42:03</h6>
+<p class='card-text'>Intent misinterpretation during vehicle interactions causes recurring planning failures. We study a decision layer in which a language-guided intent module reads structured descriptors, computes a smoothed intent-geometry divergence score, and gates the planned maneuver before commitment, upstream of a corridor envelope. On a replayed off-road departure and four crash clips under a frozen, disclosed implementation, gating is the only layer that repairs the plan: on the main case it fires 72 ms after the drift onset but 161 ms before the corridor exit, keeping the trajectory in the corridor in all ten replays. The first calibration draws nine false triggers in 5.9 minutes, each from scoring uncertainty as half a conflict; a preregistered redesign treating uncertainty as abstention cuts this to 0.341 per minute. Two ablations bound the model's contribution: the full score detects fastest on four of five failures under the deployed eligibility, three of five against the unvetoed rule (000871 by one cycle; 000228 by a pre-onset fire on an uncertain stretch that five clips cannot classify as signal or coincidence; dropping the confidence term costs two detections), while on in-domain tracks at equal false positives the geometric rule more than triples its detection. The evidence supports the gating mechanism; the model's demonstrated roles are the fastest detection on these failures and an uncertainty veto on the geometric rule.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.26009v1' target='_blank'>Imitation Learning for Connection-Tableau Construction</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Fredrik Rømming, Mantas Bakšys, Martin S. Fixman, Sean B. Holden</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-26 16:53:25</h6>
+<p class='card-text'>An automated theorem prover builds a proof step by step, choosing at each point what to add and what to remove. We cast this construction as a policy acting in a transition system induced by a formal calculus, which fixes which steps are sound: for clausal connection tableaux, leanCoP-style search and plCoP/rlCoP-style planning then become stateful policies over one interface, and policy-learning methods apply directly. We equip such policies with a graph neural network that scores proof edits from structure that transfers across problems, train it by imitation learning from found proofs, and measure how performance holds as we remove search scaffolding, from full symbolic backtracking to a policy the network drives alone. Within a fixed step budget on M2k, MPTP2078-bushy, and TPTP v9.2.1, learned policies solve up to 46% more problems than leanCoP, and reach proofs in an order of magnitude fewer steps.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.25936v1' target='_blank'>One Symptom, Three Levers: A Critical Review of On-Policy Self-Distillation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Justin Robert, Raheel Qader</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-26 15:52:19</h6>
+<p class='card-text'>On-policy distillation trains a language model on its own generations while a teacher scores them token by token. It combines the dense supervision of imitation learning with the on-policy sampling of reinforcement learning. But it requires a second, larger model to act as teacher. On-Policy Self-Distillation (OPSD) removes that cost. The teacher is the model itself, conditioned on privileged information the student will not have at test time, such as a reference solution, a plan, or environment feedback. The teacher is no stronger than the student, only better informed. Early results were promising, with accuracy comparable to reinforcement learning at a fraction of the generated tokens. But the same asymmetry that produces the signal also biases it. One failure mode now dominates the field: collapse, the progressive narrowing of the set of reasoning paths the model can produce. Collapse is not specific to OPSD, though privileged information aggravates it. This review treats collapse as a symptom governed by three levers: (i) where the signal is applied, that is, how tokens are weighted; (ii) what the teacher is shown, that is, the nature of the privileged information; and (iii) when the signal changes, that is, the teacher's dynamics and the decay of guidance. We restrict our scope to mathematical reasoning, where the method originated and where its failure modes are best documented. We report no new experiments. The contribution is structural: a shared vocabulary for phenomena named differently across papers, and a clear line between what is settled and what is still disputed.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.25863v1' target='_blank'>LP-Infinity: overcoming limits to the number of lifetime positions in the COS FUV channel</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:David J. Sahnow, Christian I. Johnson</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-26 14:37:15</h6>
+<p class='card-text'>Since the Cosmic Origins Spectrograph (COS) was installed on the Hubble Space Telescope (HST) in 2009, thousands of spectra have been collected with the Far Ultraviolet (FUV) channel. Due to the gain sag inherent in the cross delay line detector, regular adjustments to the positions of the spectra have been made, with the seventh and eighth becoming available to Guest Observers in October 2025. Recent improvements to models of the FUV channel, including more extensive optical modeling and better prediction and accommodation of detector gain sag, have allowed us to identify previously excluded locations on the detector for future use, thus requiring additional Lifetime Positions (LPs) to be defined. Since the onboard flight software limited the number of Lifetime Positions to eight, we developed a new method for implementing additional LPs to avoid dealing with the complications of reassigning previously used LPs. This novel strategy, dubbed LP-Infinity, allows an effectively unlimited number of LPs that is now constrained only by the available detector real estate, allowing COS to continue obtaining high-quality FUV spectra well into the 2030s. We discuss the conception, development and implementation of LP-Infinity, its initial use in Cycle 33, and the plans for future LPs starting in 2027.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.25845v1' target='_blank'>THA-Flow Generative Model: Prosthesis Geometry Prediction from Preoperative CT</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yiping Wang, Jie Li, Jingyu Shen, Liao Wang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-26 14:22:06</h6>
+<p class='card-text'>Preoperative planning for total hip arthroplasty (THA) is commonly framed as selecting a single prosthesis configuration and placement for a patient's osseous anatomy. In practice, however, the same anatomy may admit several clinically reasonable solutions, making planning inherently a one-to-many problem that is better represented by a conditional probability distribution. We present THA-Flow, a conditional flow-matching model that generates three-dimensional prosthesis geometry directly from preoperative CT. Separate AutoencoderKL models compress preoperative bone anatomy and prosthesis geometry, while a three-dimensional UNet learns a rectified flow from Gaussian noise to the prosthesis latent space under spatial bone conditioning and optional structured prosthesis parameters. The retrospective cohort comprised 1,355 hips from 1,149 patients undergoing primary THA. Following rigid registration of postoperative CT to preoperative CT, the actual postoperative prostheses were transformed independently according to the pelvic and femoral registrations and represented as a dual-channel truncated signed distance field. The prosthesis autoencoder achieved a peak signal-to-noise ratio of 47.11 dB and a structural similarity index of 0.9964 on the validation set. Complete acetabular and femoral geometries were generated across seven major stem models representing 93.4% of the cohort. Repeated bone-conditioned sampling preserved component position, alignment, and the principal bone-prosthesis interfaces while allowing limited local geometric variation. To our knowledge, THA-Flow represents the first application of generative AI to three-dimensional surgical planning for THA.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.25836v1' target='_blank'>Socialized Detector Learning: Trajectory-Guided and Reciprocal Distillation for Heterogeneous Object Detectors</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Weihao Li, Yunqi Zhu, Zhihe Fan, Ruipu Zhao, Boan Tao, Xinjie Yao, Yan Fan, Pengfei Zhu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-26 14:14:31</h6>
+<p class='card-text'>Object detection knowledge is fragmented across independently trained, heterogeneous detectors with complementary category supports. In socialized learning, this knowledge resides in a society, and learning aims to evolve the society collectively through exchange. However, aggregation-based socialization does not explicitly plan transfer order, whereas progressive multi-teacher distillation considers order but remains a one-way student enhancement in a shared category space. Building on Socialized Learning, we formulate Socialized Detector Learning (SDL) for heterogeneous, category-specialized object detectors and propose Trajectory-Guided and Reciprocal Distillation (TGRD).TGRD estimates directed operational Inter-Detector Transfer Difficulty (IDTD) from held-out feature-alignment residuals, precomputes a fixed score table, and greedily constructs a carrier trajectory. Along the trajectory, knowledge is progressively consolidated into a union-category carrier and then returned to experts through reciprocal transfer. A conditional proxy-certificate analysis shows that, under stated assumptions, the progressive certificate is no larger than an aggregated-target counterpart. On MS COCO with four heterogeneous experts and two carrier initializations, final carriers outperform epoch-matched simultaneous aggregation controls by 2.6 AP in both settings. Reciprocal detectors attain 20.8--28.4 AP on previously unsupported categories while remaining within 1.3 AP of original expert-specific performance. These results support order-aware progressive consolidation followed by reciprocal transfer as a viable mechanism for detector-society evolution.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.25830v1' target='_blank'>Anytime Global Tensor Motion Planning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Sai Coumar, An T. Le, Zachary Kingston</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-26 14:08:22</h6>
+<p class='card-text'>Global Tensor Motion Planning (GTMP) solves motion planning with batched tensor operations over a layered multipartite graph. We generalize GTMP so that adjacent-layer edges are realized by any black-box local planner (e.g., linear interpolation, splines, sampling-based planning, trajectory optimization, or generative sampling). We provide two anytime policies on top of this generalization: Anytime GTMP with random restarts at a fixed budget, which covers every homotopy class almost surely, and AO-GTMP with informed expansion with growing budgets, which converges to the optimal cost. We prove that a single sampled graph covers every endpoint-fixed homotopy class admitting a \(δ\)-clear representative of bounded length. We also prove that additional samples per layer reduce the per-layer miss probability exponentially, whereas stronger local planners reduce the required layer count only sublinearly. On manipulation benchmarks the method matches state-of-the-art performance, and on 2D navigation it returns batches of topologically diverse solutions, while the informed baselines concentrate on one or two classes.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.25826v1' target='_blank'>Unfolding Scientific Papers into Multi-Turn Generation Trajectories for Continued Pre-Training</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Qiankai Xu, Qiguang Chen, Zixin Su, Wenhao Huang, Yue Gao, Jiaheng Liu, Ge Zhang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-26 14:06:29</h6>
+<p class='card-text'>A recent line of synthetic-data work reconstructs the thinking behind existing text rather than rewriting the text itself, but it operates on short web passages, recovers only local thoughts, and leaves the structure of whole documents untouched. Scientific papers are written to a clear and largely uniform structure and make a natural substrate for lifting this paradigm to the document level. We present a pipeline that unfolds each paper into a multi-turn generation trajectory in which a teacher model reconstructs the writing process of the whole paper: a writing request, a global plan, and pre-writing deliberation for each section. All section texts and the abstract are kept verbatim from the source paper. We apply the pipeline to quality-filtered arXiv papers and obtain a corpus for continued pre-training (CPT) that is roughly twice the size of the source text. The same reverse construction extends to instruction data and evaluation. Treating real paper text as the answer yields an SFT dataset. Anchoring tasks in held-out papers yields PAW-Bench, an academic-writing benchmark whose tasks carry their own rubrics and checklists. In controlled experiments CPT on our corpus followed by supervised fine-tuning on public datasets improves writing benchmarks broadly while preserving general reasoning and improving long-document reading. The writing gain persists even when every model is fine-tuned on a dedicated writing SFT dataset. Mixing our SFT data into that recipe lifts academic writing further.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.25819v1' target='_blank'>Steer the Sampling, Not the Kernel Grid: Geometry-Guided Sampling Operator for Volumetric Segmentation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Sizhe Wang, Himashi Peiris, Zhaolin Chen</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-26 14:01:36</h6>
+<p class='card-text'>Accurate 3D segmentation is central to quantitative lesion assessment and anatomy mapping for clinical planning and follow-up. Thin, elongated, and fine anatomical/pathological structures (e.g., vessels) are a particularly challenging case: a one-voxel boundary error can disconnect a branch and change clinically relevant topology. In encoder-decoder networks (e.g., U-Net), repeated downsampling and fixed-grid convolution blur or alias fine structures and weaken orientation cues, so early mistakes propagate across scales. We propose a geometry-guided local operator that steers where features are sampled, rather than deforming convolutional kernels, under a single formulation for both feature refinement (stride 1) and resolution reduction (stride > 1). At each voxel, it predicts a local orientation and bounded step sizes, samples symmetrically along these directions, and transforms paired samples into compact geometric and boundary cues with lightweight mixing; a cross-scale consensus aligns encoder and decoder features at skip connections to reduce geometric mismatch. Replacing all stride 1 and stride 2 operators in a 3D U-Net yields consistent improvements on BraTS, MSD Hepatic Vessel, and TDSC-ABUS, with notably better boundary metrics (e.g., BraTS Dice 86.1 to 88.9, HD95 7.1 to 6.2; TDSC-ABUS HD95 39.1 to 27.8) while reducing parameters from 2.3M to 0.8M. We further demonstrate that the operator can be integrated into other backbones (e.g., nnU-Net, Swin-UNETR, and MedNeXt) without changing their macro-architectures while providing consistent performance gains.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.25799v1' target='_blank'>AGRO-Nav: Autonomous Graph-based Orchard Navigation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Ho Young Yun, Jaemin Yu, Duksu Kim</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-26 13:50:04</h6>
+<p class='card-text'>Orchards form semi-structured environments in which parallel tree rows create natural driving corridors, yet narrow inter-row clearance and dense foliage lead geometry-agnostic grid planners to drift off the row center and risk trunk or canopy contact. We present AGRO-Nav, an automated framework for static graph-based global planning in orchards. From tree-row lines fitted to trunk clusters in a SLAM point cloud, it builds, without any manual waypoints, a sparse topological graph of intra- and inter-row connectivity; a global route is then found by Dijkstra search on this graph, connected to the start and goal by any-angle Theta* segments, and smoothed with a cubic B-spline. In real-orchard trials, AGRO-Nav follows the row center with a mean error of about 0.08 m, far below the A* (0.31 m) and Theta* (0.43 m) shortest-path baselines, while planning roughly four to five times faster. In Isaac Sim, it attains the lowest error among A*, Theta*, and a reproduced RANSAC midline baseline and remains stable as tree density drops to 70%, where the RANSAC baseline degrades. The resulting trajectories---straight row-centered segments joined by controlled turns---suit differential-drive and four-wheel-steering platforms.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.25777v1' target='_blank'>LocalLSTC: A Long Short-Term Control Architecture for Locally Deployed GUI Agents</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Weiming Li, Helen Paik, Yulei Sui</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-26 13:20:27</h6>
+<p class='card-text'>Modern GUI-agent frameworks achieve strong desktop task performance with frontier API models, yet persistent control information often remains implicit in growing interaction trajectories. At each step, the planner reconstructs the active task stage, accumulated evidence, and runtime feedback before deciding the next action. This dependence becomes more pronounced under weaker local reasoning backbones. Across four representative state-of-the-art frameworks, replacing GPT-5 with Qwen3.5-9B reduces average OSWorld SR-100 from 60.9\% to 37.7\%. Trajectory annotation further identifies at least one control failure in 91.6\% of failed trajectories. To address this problem, we introduce LocalLSTC, a training-free architecture that organizes control by temporal scope, maintaining persistent cross-step state to guide short-term execution commitments. Long-Term Control maintains the active subgoal, subgoal-aligned evidence, and runtime feedback across interactions, while Short-Term Execution realizes bounded commitments for the current step. Long-to-Short Planning forms each commitment from persistent state, and Short-to-Long Control integrates execution outcomes back into that state for progress assessment, recovery, and termination. With Qwen3.6-27B, LocalLSTC reaches 64.7\% SR-100 on OSWorld and 65.3\% on WindowsAgentArena, outperforming the strongest prior local results on both benchmarks. Ablations further support contributions from mechanisms on both sides of execution. These findings identify temporal organization of control information as a distinct architectural dimension for locally deployed GUI agents.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.25723v1' target='_blank'>It's a matter of timescale: non-linear utility in successor features and multi-objective planning and learning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Liam P. H. Mertens, Lucas N. Alegre, Florent Delgrange, Diederik M. Roijers, Ann Nowé, Peter Vamplew</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-26 12:39:10</h6>
+<p class='card-text'>Time is of the essence when dealing with multiple reward signals and non-linear utility. In this paper we argue that the current main approaches in multi-objectiveRL (SER and ESR), and successor features, are insufficient. While each approach deals with non-linear effects on user utility on different timescales, none of them take into account that different effects happening on different timescales can happen within the same decision problem. We motivate that this can indeed be the case by an example, both intuitively and numerically, leading to a new perspective, and a significant and non-trivial gap in the literature.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.25690v1' target='_blank'>Trust-Aware Sequential Decision Making and Rollout Planning for Resilient Multi-Robot Systems</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Roee M. Francos, Daniel Garces, Orhan Eren Akgün, Nathaniel D. Bastian, Stephanie Gil</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-26 12:09:08</h6>
+<p class='card-text'>Sequential decision-making in multi-robot systems typically assumes that planning information is reliable and that agents execute the actions anticipated by the planner. Compromised agents can violate both assumptions, creating a mismatch between the planning model and physical execution. We study this problem in online multi-robot routing under localization spoofing. We introduce a distance-constrained spoofing model for monitor-aware adversaries, together with a tiered bipartite matching strategy that maximizes assignment influence while limiting spoofing magnitude. To mitigate such attacks, we develop a trust-aware monitor that combines probabilistic localization trust, calibrated using real GPS spoofing data, with behavioral evidence from task execution to classify agents and remove detected adversaries from subsequent planning. We further show that undetected adversaries can cause rollout to lose its expected cost-improvement behavior by violating planner-execution consistency. Trust-aware removal restores this consistency after detection, enabling stable routing and recovery of rollout's empirical advantage over the base policy. Experiments using real GPS spoofing datasets and San Francisco taxicab demand demonstrate effective detection and resilient routing across varying spoofing capabilities, adversarial fleet sizes, adaptive attacks, monitoring configurations, and rollout horizons.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.25666v1' target='_blank'>PRISM: Projection-Integrated Sampling-Based MPC with Bayesian Cost Tuning for Bimanual Manipulation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Alinjar Dan, Iryna Hurova, Karl Kruusamäe, Arun Kumar Singh</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-26 11:47:12</h6>
+<p class='card-text'>Bimanual manipulation in cluttered, contact-rich environments remains challenging because it requires coordinated motion generation, interaction-aware planning, and reliable execution under tight kinematic constraints. We present PRISM, a projection-integrated sampling-based Model Predictive Control (MPC) framework that uses a GPU-accelerated physics simulator as an online world model for complex dual-arm manipulation.
+  The main algorithmic contribution is a QP-guided control sampling strategy that decouples trajectory exploration from kinematic feasibility. At each MPC step, sampled joint-velocity trajectories are projected onto the set of motions satisfying joint position, velocity, acceleration, and jerk bounds, together with an initial-velocity boundary condition, before rollout evaluation. This enables broad yet feasible exploration of coordinated bimanual behaviors. To support efficient online execution, we derive a custom ADMM/Bregman-splitting QP solver that exploits joint-wise separability and reusable matrix factorizations. We further use Bayesian optimization to tune task-cost weights offline, reducing manual parameter selection.
+  We evaluate PRISM on challenging variants of PerAct$^{2}$ tasks, including obstacle-constrained ball transport, tray transport, cube handover, and box lifting. Experiments show improved robustness and task success relative to representative sampling-based baselines, while maintaining real-time or near-real-time execution. We also demonstrate successful sim-to-real transfer on dual UR5e manipulators, highlighting the practical potential of physics-based online planning for contact-rich bimanual manipulation. Project details, including code and supplementary videos, are available at \href{https://sites.google.com/view/prismbimanual}{\texttt{https://sites.google.com/view/prismbimanual}}.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.25641v1' target='_blank'>Leveraging Inter-object Affordances for Efficient Planning in Contact-rich Tasks</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Pouya P. Niaz, Justus Piater, Alejandro Agostini</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-26 11:12:46</h6>
+<p class='card-text'>Traditional task-and-motion planning (TAMP) approaches primarily focus on defining sequences of actions along with the necessary geometric and kinematic constraints to execute long-horizon tasks. However, their applicability in real-world settings is limited, as they typically assume simplified object models that overlook key physical properties critical for the successful execution of contact-rich tasks. Moreover, they often use sub-symbolic reasoning during motion planning, which drastically increases planning time and decreases overall success rates. We propose a method that leverages a TAMP approach, defining object-centric abstractions of execution constraints, called Unified TAMP (U-TAMP), to execute robotic tasks involving interactions among objects with heterogeneous shapes, sizes, and materials. Using a Vision-Language Model (VLM), we generate abstractions of inter-object affordances for characterizing physical interaction constraints between objects in contact-rich tasks, such as grasp and support constraints. These constraints are used to enrich the U-TAMP planning domain to deal with objects with variable physical properties. We perform experiments in simulated kitchen table organization scenarios and compare our results with those of the original U-TAMP, as well as a state-of-the-art VLM-based planner that leverages common sense knowledge of objects' affordances for plan generation. Our approach achieves significantly higher planning success rates and improves planning times by one to two orders of magnitude compared to other methods.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.25622v1' target='_blank'>Plans You Can Check: Verifier-Grounded Learning of an Open-Weight Planner for Executable Video-Editing</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Haoyu Wang, Cheng Feng, Liuyang Bian, Ruiyang Huang, Lei Wei, Yafei Wen, Xiaoxin Chen, Xiaoying Tang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-26 10:43:26</h6>
+<p class='card-text'>Practical video editing is not only pixel generation: an editor must turn a brief, a clip pool, music metadata, and hard constraints into an executable timeline. We study this decision layer as \emph{executable video-editing planning} and introduce RefineCut, which, unlike workflow systems that wrap a prompted frontier model, trains a compact open-weight planner for it. The planner edits a typed timeline through structured patches covering clip selection, trimming, ordering, transitions, and duration and music alignment; a deterministic verifier applies each patch and checks it against an explicit constraint ledger. Because editing has no single ground-truth repair, we do not imitate teachers directly: RefineCut replays every multi-teacher branch through the verifier and keeps verifier-best repairs as supervision. A second stage, RefineCut-Evo, lets the student score its own repairs with the verifier and a task rubric and trains on high-margin preference pairs, so the final $8$B planner runs in a closed verifier loop with no teacher calls at inference. On RefineCut-Bench ($3{,}578$ tasks, $7{,}971$ captioned clips, $499$ music tracks, explicit ledgers), verifier-replayed distillation lifts the planner from $0.620$ to $0.858$ on the protocol-specific Video-Editing Score and RefineCut-Evo reaches $0.924$; the gain transfers to Llama-3.1-8B and GLM-4-9B, and in the same closed loop the $8$B planner matches or exceeds its frontier teachers. Code and RefineCut-Bench are publicly released; see the Data Availability statement.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.25608v1' target='_blank'>When Should a Network Emit Geometry, and When Should It Detect It? Readout, Reconciliation, and Representation in Floorplan Vectorization</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:He Zhang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-26 10:25:09</h6>
+<p class='card-text'>A network trained to recover the walls, openings, and rooms of a rasterized floorplan can produce its output in two ways: by emitting the geometry as an autoregressive coordinate sequence, or by detecting it on dense junction and centerline heatmaps and assembling a graph. We compare the two readouts on the same trained network. On real scans (CubiCasa5K) detection is better on every wall measure (+2.7 wall F1 at tolerance 0.05, +5.1 at 0.015; paired bootstrap intervals exclude zero), and reading an opening heatmap the decoder never used raises opening F1 by 2.6x without retraining. Within real scans the readout's advantage grows with plan size and reverses on small plans; on clean vector renders sequence decoding is better by 5 to 8 points where its training covered the render style, while under full domain shift the readout, given calibrated thresholds, stays ahead; neither ink density nor plan size explains the reversal. With matched data and recipe, a room-centric system with a reconciliation step and a wall-first sequence model reach comparable wall quality, so the output representation matters less than is usually assumed. A prior from the other family helps at the output but not at the input: deterministic fusion of the two outputs raises wall F1 by 7 points, whereas conditioning one model on the other's output gives no gain in three forms, including two ground-truth-content controls. We also provide an edit-cost metric that scores a draft by the human work needed to correct it, corrected CubiCasa5K annotations, and ResPlan-FP, a CC BY 4.0 benchmark of 16,998 plans with frozen splits and three baseline tracks. Code, the benchmark, and the corrected annotations are available at https://github.com/Cyprinus12138/fpvec-lab</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.25572v1' target='_blank'>ConfAL-WM: Confidence-Guided Active Learning for Action-Conditioned World Models</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Xiang Liu, Sen Cui, Changshui Zhang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-26 09:29:08</h6>
+<p class='card-text'>Action-conditioned world models have become an important foundation for embodied prediction, planning, and synthetic data generation, but their errors under new task and scene distributions are often concentrated in localized spatiotemporal regions such as robot arms, manipulated objects, contact areas, and occluded objects. This paper presents ConfAL-WM, a confidence-guided active learning framework for post-training embodied world models. Built upon EVAC, we attach a lightweight confidence probe to UNet decoder features and predict dense confidence maps in the latent space. These maps are aggregated into task-, frame-, and patch-level scores, enabling both efficient data selection and localized training enhancement. Our pipeline first retrains the confidence probe and warms up EVAC with a small subset of target-domain data, then performs task-level prescreening to allocate sampling budgets, and finally applies selected-data retraining with optional frame or patch weighted data enhancement. Experiments on RoboTwin2.0 show that confidence-guided selection improves post-training efficiency, while dense frame and patch weighting further enhances prediction quality and embodied trajectory consistency compared with scalar reward, progress, and judge-based scoring baselines. A quick visual overview of this work is available at https://ConfAL-WM.github.io.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.25457v1' target='_blank'>MACGen: Toward Functionally Correct and Secure Code Generation via Multi-Agent Collaboration</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Miseon Yu, Jaehoon Choi, Younghan Lee, Yunheung Paek</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-26 07:21:56</h6>
+<p class='card-text'>Despite their strong ability to generate code, large language models often fail to produce secure code, as their outputs frequently contain security vulnerabilities. Secure code generation is inherently challenging because it requires solving a multi-objective problem: functional correctness and security. Existing approaches address this challenge by injecting external security knowledge or by using agentic feedback and iterative refinement. However, guideline retrieval often leaves the generator to translate generic advice into task-specific secure implementations, while shared-dialogue multi-agent feedback can blur role boundaries and suffer from context bloat.
+  We present MACGen, a multi-agent framework that integrates planning, security analysis, code synthesis and refinement to jointly optimize security and functionality. A planner constructs a step-by-step plan to satisfy functional requirements. A security advisor identifies likely CWEs and synthesizes task-specific guidelines, a coder then generates code grounded in these artifacts, and a reviewer issues perspective-separated feedback. Rather than sharing full dialogue histories, each agent receives only structured artifacts from upstream stages, enforcing role specialization and reducing uncontrolled context growth. On CWEval and BaxBench, MACGen improves F&S@1 over direct prompting by 19.61 and 10.57 percentage points (pp) on average, respectively.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.25417v1' target='_blank'>Paint What You See: Benchmarking Dexterous Visual Tool Use in Multimodal Agents</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Shudong Liu, Dongyang Chen, Enci Zhang, Jinwei Liang, Zheng Ma, Lewei Lu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-26 06:19:28</h6>
+<p class='card-text'>Evaluation is shifting from static QA toward agentic settings where models act through external tools. We identify a critical yet underexplored capability within this space - dexterous visual tool use: fine-grained, closed-loop parameterized visual action in which models infer tool parameters from visual evidence, and those parameters directly govern the final result. Existing benchmarks cover web navigation, GUI operation, and software engineering, but rarely target this coupling between visual evidence and execution precision. We propose EASEL, a benchmark evaluating a controlled instance of dexterous visual tool use that adopts reference-guided visual reconstruction as its primary proxy task: the agent incrementally paints a canvas to match a reference image. EASEL additionally includes semantic tasks spanning region annotation, handwriting, and path planning. We further provide EASEL-Data, a 440k-sample two-stage curriculum dataset for trajectory supervision, and EASEL-9B to investigate its effect on this capability. Evaluation of 25 models reveals that current multimodal agents systematically struggle on EASEL. Reconstruction similarity bottlenecks at low levels (0.40-0.54), while trajectory diagnostics expose severe closed-loop instability - models typically saturate early or degrade post-peak. Semantic tasks reveal sharp capability boundaries in precision annotation and path planning. EASEL-9B, trained on EASEL-Data, surpasses the base model by a relative 6.3%, ranking third among all evaluated models.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.25376v1' target='_blank'>GPU-Accelerated Quantum Annealing-Inspired UAV Path Planning for Smart Agriculture</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Maho Hirahara, Aohan Li</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-26 04:58:50</h6>
+<p class='card-text'>Traditional path planning methods are often constrained by local optima, limited scalability, and slow convergence, which significantly restrict their effectiveness in solving large-scale problems. To address these limitations, this paper shifts the problem-solving paradigm from algorithmic refinement to parallelization of computational architecture. We propose a novel optimization framework utilizing a Graphics Processing Unit (GPU)-parallelized Ising solver. Our method mimics the operational principles of quantum annealing on GPU hardware, enabling rapid search for the minimum-energy state of Ising models. Unlike physical quantum devices, which are often constrained by the number of qubits, our approach leverages the Fixstars Amplify (FA) platform to perform parallel annealing on highly parallelized GPUs. This enables the simultaneous evaluation of thousands of potential path candidates and vast state transitions. By leveraging large-scale parallel processing, the core strength of this framework lies in minimizing computation time even as the problem scale increases. Furthermore, to solve the path planning problem using the FA platform, we formulate the problem as a Quadratic Unconstrained Binary Optimization (QUBO) model. This formulation converts the objectives of flight constraints and operational time minimization into an energy state, enabling problem processing via the Ising-based architecture. Simulation results demonstrate that our proposed method consistently identifies superior flight paths while maintaining stable computational performance compared with the genetic algorithm and simulated annealing method. These findings highlight its potential as a robust, scalable real- time solution for next-generation large-scale smart agriculture.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.25366v1' target='_blank'>RAEM: Robust Autonomous Exploration for Multi-Floor Environments with a Quadruped Robot</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Zikang Yuan, Yuan Ren, Yian Wang, Yixue Wang, Enze Fang, Xuewei Zhang, Junda Cheng, Chi Chen, Chin-Pang Ho, Lijun Zhu, Shaohang Xu, Kwang-Ting Cheng, Xin Yang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-26 04:40:34</h6>
+<p class='card-text'>In this paper, we propose RAEM, a robust autonomous exploration framework for quadruped robots operating in multi-floor environments. Most existing ground-robot exploration approaches rely on planar traversability representations, which cannot adequately represent the overlapping structures and cross-floor connectivity of multi-floor buildings. Although tomography-based representations provide effective traversability modeling for multi-floor navigation, maintaining a global tomography map incurs substantial computational overhead for online exploration with frequent replanning. Moreover, sparse and fragmented LiDAR observations in stairwells can degrade local traversability estimation, leading to irregular viewpoint placement and temporary topological disconnections. To address these challenges, RAEM adopts a hybrid local-global traversability representation, in which a local tomography map and an explicitly categorized local 3D grid map are used for online terrain analysis and connectivity evaluation, while an elevation-aware global topological graph is incrementally constructed from these local spatial representations for efficient cross-floor exploration planning. We further introduce a staircase center alignment strategy to reduce abrupt yaw variations during climbing and a dual path searching mechanism to recover guidance paths when the global topology is locally disconnected. Extensive simulation and real-world experiments demonstrate robust and computationally stable autonomous exploration across multi-floor structures, including continuous exploration of a five-floor stairwell.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.25361v1' target='_blank'>Toward a Threat Actor Profiling Taxonomy for Pre-Release Risk Management of Open-Weight Frontier Models</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:James Zhang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-26 04:34:11</h6>
+<p class='card-text'>Pre-release risk management for frontier AI misuse risks routinely leaves threat actor assumptions implicit, inconsistently specified, or ungrounded. This capstone argues that explicit adversary characterization should be regarded as a prerequisite for evaluations that are interpretable, comparable, and faithful to the risks they target. We propose a six-attribute taxonomy (covering technical sophistication, prior domain knowledge, organizational capacity, operational infrastructure, financial capacity, and time horizon) with empirically grounded tiers derived from existing terrorism, biosecurity, and cybersecurity literature. The taxonomy is designed to function as research infrastructure: a common language for pre-specifying adversary assumptions before evaluations are conducted, analogous to pre-analysis plans for randomized controlled trials (RCTs) in medicine and economics. Its application is particularly urgent for open-weight model developers, for whom release decisions are irreversible and must anticipate adversarial reasoning.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.25178v1' target='_blank'>Lightweight Machine Learning-Driven Monocular Sidewalk Path Extraction for Embedded Micromobility Navigation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Lkhanaajav Mijiddorj, Yang Yan, Tyler Beringer, Bilguunzaya Mijiddorj, Alex N. Ho, Bin Xu, Binbin Weng</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-25 21:49:18</h6>
+<p class='card-text'>Sidewalk-scale path extraction demands perception and planning that run reliably on compact, low-power hardware in cluttered, map-sparse environments. We present a monocular vision pipeline for sidewalk path extraction in micromobility systems that progresses through three design iterations, from a skeleton-graph baseline through distance-transform corridor planning to a lightweight image-space architecture, and provides a systematic comparison of five path-planning methods across both bird's-eye-view (BEV) and image-space domains. A compact SegFormer-B0 student model, trained with a semi-supervised teacher-student framework using OneFormer Swin-L pseudo-labels, achieves a hand-annotated IoU of 0.946 at 11.7 ms per frame, improving over the baseline checkpoint (IoU 0.758, 18.9 ms). In a controlled planner comparison on 32 hand-labeled frames, image-space midpoint planning achieves the lowest lateral center error (14.3 px) at 2.2 ms, a 421x speedup over BEV distance-transform planning (926.8 ms, 65.0 px center error), while maintaining comparable mask-path alignment (98.5% versus 98.6%). A full-video replay across six campus sequences (22,679 frames) confirms that the improved segmentation reduces temporal instability from 1.46% to 0.33% and increases template-path availability from 73.7% to 79.3%. We further show that BEV-only path extraction is fragile in monocular settings: in one profiled run, 99.3% of frames produced no valid BEV path. The final recommended architecture, image-space midpoint primary, image-space distance-transform fallback, and BEV reserved for visualization, runs the full perception-to-path stack in under 50 ms per frame on CPU, making it suitable for embedded pedestrian-speed micromobility systems.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.25175v1' target='_blank'>Optimization of Closed-Loop Pumped-Storage Hydropower Siting</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Luiz Rodolpho Albuquerque, Rafael Kelman, Tarcisio Castro, Ana Petrungaro, Tiago Andrade</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-25 21:45:36</h6>
+<p class='card-text'>Accelerating variable renewable energy integration introduces substantial operational challenges to modern power grids. Frequent curtailment of surplus renewable generation highlights the pressing need for long-duration energy storage capable of shifting generation to high-demand periods while providing essential ancillary services and grid inertia. Socio-environmental constraints increasingly limit conventional hydropower development; however, closed-loop pumped-storage hydropower (PSH) presents a viable alternative because its off-river reservoirs avoid natural watercourses. This paper introduces HERA-S, a computational modeling framework developed by PSR (supported by EDF, CTG, Brookfield, and Rio Light) to streamline and standardize regional PSH site prospecting. HERA-S automates spatial screening, dam optimization, cost estimation, and socio-environmental impact scoring. Applied to a case study in Rio de Janeiro, Brazil, the framework employs an integer programming model to optimize dam-fill and excavation mass balances against inter-reservoir distance, significantly improving pre-feasibility planning agility.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.25163v1' target='_blank'>Bayesian Flow Networks for Offline Trajectory Planning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Ludvig Killingberg, Helge Langseth</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-25 21:19:35</h6>
+<p class='card-text'>Offline reinforcement learning (RL) leverages static datasets to learn decision policies without real-time environment interaction. While recent sequence-modeling approaches rely on continuous diffusion models for trajectory synthesis, applying these methods to discrete planning tasks requires a categorical formulation rather than the standard Gaussian construction. We present BFN-RL, a unified generative modeling framework for offline RL based on Bayesian Flow Networks (BFNs). By iteratively evolving distribution parameters rather than noisy data instances, BFN-RL natively models both discrete and continuous trajectory spaces within a single probabilistic formulation. The categorical planner generates future state sequences, and a learned inverse-dynamics model converts consecutive generated states into actions. Evaluations in discrete planning and continuous control show that BFN-RL can generate effective trajectories across both categorical and continuous state spaces. Our results establish BFNs as a versatile generative foundation for offline trajectory planning across data modalities.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.25117v1' target='_blank'>Teaching Geometric Proof with Tech: Pitfalls and Possibilities</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Hwei-Shin Harriman, Wode Ni, Yuchen Jin, Dominik Moritz, Joshua Sunshine</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-25 20:12:20</h6>
+<p class='card-text'>Geometric proof is a foundational yet challenging topic in mathematics, requiring students to integrate visual, logical, and notational skills. While technology has enhanced learning in other mathematical domains, its impact on geometric proof remains limited. To investigate this gap, we interviewed 18 geometry teachers to establish the technical requirements of educational proof tools. These requirements inform our review of 33 commercial and research tools. Our findings reveal a critical mismatch: while teachers value certain digital tools for initial planning and exploration activities, they revert to pen-and-paper for formal proof because it supports diagram annotation and provides space for multiple approaches to proof-solving. Annotating the diagram is a key component of the proof-solving workflow that existing tools do not support. We propose four technical and human-centered design guidelines for educational proof tools to meet teacher needs at scale: integrating diagram and proof, generating problems and feedback automatically, supporting multiple proof formats, and reducing accidental complexity in the user experience.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.25111v1' target='_blank'>CCAT: The Prime-Cam Instrument for the Fred Young Submillimeter Telescope -- Overview and Status</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Eve M. Vavagiakis, Yuhan Wang, Lawrence T. Lin, Manuel Aravena, Jason E. Austermann, Frank Bertoldi, James Burgoyne, Victoria Butler, Scott Chapman, Steve K. Choi, Dongwoo Chung, Abigail Crites, Ankur Dev, Cody J. Duell, Michel Fich, Laura Fissel, Rodrigo G. Freundt, Eliza Gazda, Anthony I. Huber, Doug Johnstone, Ben Keller, Paul Malachuk, Alicia Middleton, Jenna Moore, Michael D. Niemack, Thomas Nikola, Yoko Okada, Darshan A. Patel, Tilak M. Patel, Dominik A. Riechers, Douglas Scott, Gordon J. Stacey, Benjamin J. Vaughan, Samantha Walker, Ruixuan, Xie</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-25 20:05:55</h6>
+<p class='card-text'>Prime-Cam is a first-generation science instrument for the CCAT Observatory's six-meter aperture Fred Young Submillimeter Telescope (FYST), under construction at an elevation of 5600 m on Cerro Chajnantor in Chile's Atacama Desert. Prime-Cam will deliver over ten times greater mapping speed at submillimeter wavelengths than current facilities for unprecedented broadband and spectroscopic measurements in windows between 1.4 -- 0.3 mm (220 -- 850 GHz). When fully populated, Prime-Cam will field over 100,000 kinetic inductance detectors across seven independently optimized instrument modules. With Prime-Cam, the CCAT Collaboration will address a suite of science goals, from Big Bang cosmology, to galaxy evolution and star formation over cosmic time. Prime-Cam is scheduled for integration in FYST in late 2026, followed by a year of early science observations with the 280 and 350 GHz instrument modules. We discuss the design and in-lab testing of the 1.8-m diameter Prime-Cam receiver and 280 GHz instrument module, and give an update on deployment status and early science plans.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js'></script>
+</body>
+</html>
