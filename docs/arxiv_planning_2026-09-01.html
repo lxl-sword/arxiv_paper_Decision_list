@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>planning - 2026-09-01</title>
+<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap' rel='stylesheet'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css'>
+<style>
+body {
+font-family: 'Roboto', sans-serif;
+background-color: #f5f7fa;
+padding: 20px;
+}
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.card-title {
+    font-weight: 700;
+}
+.card:hover {
+    transform: scale(1.02);
+    transition: 0.3s ease-in-out;
+}
+</style>
+</head>
+<body>
+<div class='container'>
+<h1 class='text-center my-4'><i class='fas fa-book'></i>planning - 2026-09-01</h1>
+<div class='row'>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.31167v1' target='_blank'>SUN: Persistent Programs For Language-Grounded Control-to-Learning-to-Real Policies</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Weiqi Wang, Zhi Li, Yudong Lei, David Martinez, Xiaofeng Gao, Yuxin Jiang, Chenfanfu Jiang, Yingnian Wu, Demetri Terzopoulos, Ran Gong</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-31 17:59:16</h6>
+<p class='card-text'>Bridging model-based control and learned policies in long-horizon manipulation has harbored a silent disagreement: control executes specified objectives, learning amortizes that behavior into a reactive policy, yet existing protocols discard task semantics, leaving rewards hand-crafted and behavior drifting from what control verified.We introduce Semantically UNified (SUN) Programs, typed executables where geometric and contact relations are defined once and compiled into aligned Model Predictive Control (MPC) costs, satisfaction predicates, RL rewards, transition guards, and diagnostics. Our system, Kuafu, driven by large vision language systems, automatically synthesizes SUN Programs from language and scene semantics, screens feasibility via MPC, and retains semantics while training stage-conditioned policies. Across nine tasks, Kuafu achieves 82.03% macro-success, outperforming sparse-reward (35.67%) and Stage-BC (24.75%) baselines. At 8192-way scale, it generates 10.57x the successful trajectory time per hour of human teleoperation. With 500 trajectories per task, Kuafu data trains DP3 policies to 46.0% simulation success (vs. 22.4% for alternatives) and 34.7% on physical Franka and Kinova robots. These results establish that simulation-screened task semantics can effectively amortize control into robust policies, without demonstrations or manual dense rewards, unifying symbolic planning and data-driven execution.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.31160v1' target='_blank'>Ad Astra White Paper: A Pitch for the Next 25 Years of NASA's Physics of the Cosmos Program</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Eric Burns, Ivan Agullo, Igor Andreoni, Catherine M. Deibel, Christopher L. Fryer, Natasha Latouf, M. Coleman Miller, Jillian C. Rastinejad, Breann N. Sitarski, Zorawar Wadiasingh</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-31 17:57:00</h6>
+<p class='card-text'>Astrophysical observations of our universe have been key to our understanding of how the universe works. Shortly after the turn of the millennium, the National Research Council delivered \textit{Connecting Quarks with the Cosmos: Eleven Science Questions for the New Century}. In the subsequent quarter-century, we have made substantial progress in answering each question. These advancements have, in part, arisen because of the success of major US facilities across several domains of physics, guided by long-term planning documents which still largely focus on these questions. This report seeks to provide a status update on each question, and to outline what space-based facilities are crucial for future progress, intended to guide NASA's preparatory work for the Astro2030 Decadal.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.31119v1' target='_blank'>PaperGym: Rubric-Centered Evolution for Research-Plan Generation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yuhan Wang, Zhengxi Lu, Yuchen Yan, Kaitao Song, Wenqi Zhang, Weiming Lu, Jun Xiao, Yueting Zhuang, Yongliang Shen</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-31 17:31:18</h6>
+<p class='card-text'>Research planning is the decisive capability of AI scientists. Yet a research plan admits no verifiable answer, so reinforcement learning lacks the environment it requires: tasks paired with a critic. Rubrics extracted from scientific papers can supply the critic. Existing pipelines, however, draw the question and the criteria from the same content, so the reward can be earned by paraphrase. The rubric is further compressed into a single scalar per rollout. We introduce PaperGym, a unified framework that turns each research paper into a complete training environment. PaperGym exploits the structure of a paper: the question is synthesized from the research goal and background, while the criteria are derived from the method and experiments. The criteria span methodological innovation and experimental design, and criterion leakage falls to 3.7%, versus 11.90% to 34.10% in existing datasets. Training uses the rubric twice: first as privileged context for OPSD's self-teacher, then as the reward for GRPO. Across Qwen3-1.7B/4B/8B, this schedule outperforms supervised fine-tuning, either stage alone, and the reverse ordering, improving five-benchmark averages by +5.6, +5.0, and +4.8 points. With the recipe held fixed, models trained on PaperGym-20k win 58.1% of three-way comparisons, against 28.2% for RubricHub Science. The trained Qwen3-8B reaches 73.48 on ResearchQA, above the far larger Kimi K2.6. We release the pipeline, the 20,000-instance corpus PaperGym-20k, and the benchmarks PaperGym-Innov and PaperGym-Design.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.31029v1' target='_blank'>Driving on Memory</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Christian Löwens, Thorben Funke, Alexandru Paul Condurache</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-31 16:10:04</h6>
+<p class='card-text'>End-to-end autonomous driving models plan future trajectories from raw sensor input. While earlier driving benchmarks often measured deviation from the human trajectory, current benchmarks such as NAVSIM and Bench2Drive evaluate models with richer simulation-based metrics intended to capture safe and compliant driving. A high benchmark score should reflect that a model can understand the scene in front of it and act accordingly. But how much of that score specifically comes from reacting to the dynamic part of that scene?
+  To probe this, we remove a model's camera input and replace it with memories from prior drives at the same location. The retrieved memories can provide persistent scene information, including road layout and location-conditioned regularities, but not the current traffic state. Surprisingly, memory is nearly sufficient on NAVSIM, reaching or even exceeding the performance of leading end-to-end methods without actually observing the evaluated scene. Our results suggest that a high NAVSIM score does not require a planner to react to the current traffic scene and should be treated with caution. This effect is benchmark-dependent: driving from memory causes substantially larger performance drops on Bench2Drive and RealEngine. We provide our code at https://github.com/boschresearch/MemoryDrivoR .</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.31021v1' target='_blank'>Semi-Autonomous Prosthesis Control Empowered by 5G and Mobile Edge Computing</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Ozan Karaali, Hossam Farag, Strahinja Dosen, Cedomir Stefanovic</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-31 16:03:46</h6>
+<p class='card-text'>Prosthetic hands equipped with cameras can use computer vision to plan grasps automatically, reducing cognitive effort. However, running modern vision models on wearable devices is impractical due to power and processing constraints. We present the first prototype of a 5G-connected mobile edge computing (MEC)-enabled semi-autonomous prosthetic hand, which streams RGB-D images to an edge server for real-time grasp planning. Thirteen able-bodied participants performed pick-and-place tasks under six conditions: manual EMG control, on-device inference, wired Ethernet connectivity, and three 5G connectivity configurations (private 20 MHz network, private 100 MHz network, and a commercial 5G link) to the server. All network-based conditions performed similarly, achieving task times around 8.6 s (34% faster than manual control), failure rates of 20-38%, and 62% lower overall workload. On-device processing performed the worst with 10.3 s task time and a 76% failure rate due to slow embedded inference (3 fps vs. 6-20 fps over the network). Network latencies remained below 180 ms for private 5G and 270 ms for commercial 5G. All 5G configurations, including bandwidth-constrained and commercially variable networks, matched wired Ethernet performance while significantly outperforming both manual control and local processing, establishing 5G edge-offloading as a practical path to deploying compute-intensive prosthesis control.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.30995v1' target='_blank'>Constraining equation of state of neutron star using neutron star-black hole mergers</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Vasudev Dubey, Rahul Kashyap, Yugesh Bhoge</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-31 15:46:53</h6>
+<p class='card-text'>In this work, we study tidal effects that can be observed in gravitational wave transient from neutron star-black hole (NSBH) mergers. It has been well known that neutron star's tidal deformation has imprint of equation of state and hence composition of neutron star matter. Compared to binary neutron star mergers, where we observe a combined effect of two neutron stars by measuring the parameter known as lambda tilde. In neutron star black hole mergers, we measure the tidal deformability of the neutron star component clearly. In this work, we study the feasibility of measuring the bare tidal deformability of a neutron star with planned gravitational detectors in the near and far future. We use the parameter estimation computation framework, Bilby is used to perform Bayesian inference for hundreds of NSBH mergers in current and future GW detector networks and obtain the posterior probability distribution functions of binary parameters. We find that we need at least 20 events to clearly distinguish the equation state of neutron stars in future detectors, including the Einstein Telescope and Cosmic Explorer.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.30988v1' target='_blank'>METIS high-contrast imaging simulations: From instrument modelling to science readiness</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Gilles Orban de Xivry, Olivier Absil, Iain Hammond, Thomas Bertram, Roy van Boekel, André Boné, Gaël Chauvin, Valentin Christiaens, Denis Dolkens, Gilles Otten, Prashant Pathak, Nuño Pereira</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-31 15:44:13</h6>
+<p class='card-text'>The Mid-infrared Extremely Large Telescope (ELT) Imager and Spectrograph (METIS) instrument, expected to see first light in early 2030, aims to detect and characterise exoplanets and circumstellar disks through high- contrast imaging (HCI) and spectroscopy. The High-contrast End-to-End Performance Simulator (HEEPS), initially developed to support the design of the METIS HCI modes, has evolved into a crucial tool for the METIS science team to prepare and optimize observations. HEEPS is an open-source Python-based software with a modular architecture, integrating the wavefront Fresnel propagation package PROPER, and HCI image processing with the Vortex Image Processing (VIP) package. Though designed for METIS, its modularity has been applied to other HCI instruments as well. This work presents recent updates to HEEPS, including modelling of the final METIS pupil and Lyot stops, revised quasi-static non-common path aberrations (NCPA) and Talbot effect simulations informed by as-built optical surface errors, and updated METIS Single Conjugated Adaptive Optics (SCAO) simulations. We also discuss advancements in NCPA control strategies focusing on framerate, latency and sensing performance optimization, particularly for mitigating water vapor seeing effects using the asymmetric Lyot wavefront sensor (ALF) algorithm. With these refinements, we present a comprehensive grid of HCI performance simulations for METIS, covering a range of magnitudes in the L, M, and N-bands, and several HCI observing modes. These simulations produce updated 5-sigma sensitivity contrast curves and mock HCI observations, providing key insights on HCI performance for instrument optimization and science observation planning. Our results underscore the key role of end-to-end simulations in bridging instrumental design and scientific readiness in the ELT era.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.30955v1' target='_blank'>Learning Action Models with Conditional and Quantified Effects via Uncertainty-Guided Exploration</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jeffrey Jewett, William Solow, Sandhya Saisubramanian</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-31 15:23:43</h6>
+<p class='card-text'>Accurate action models are critical for effective planning. Existing action-model learning methods largely assume simple action representations or become computationally intractable when learning conditional and quantified effects. We present Online Hypothesis-Driven Conditional Action Model Learning (OHCAM), an online approach for learning action models with conditional and quantified effects from limited interactions with the environment. OHCAM maintains a belief over hypothesized action models and actively selects informative actions to reduce uncertainty by maximizing disagreement among competing hypotheses, while being robust to noisy observations. To enable scalability, OHCAM begins with a small set of simple action model hypotheses and expands to more complex conditions only when the current hypotheses become inconsistent with the data. Experiments on six benchmark planning domains demonstrate that OHCAM is sample efficient in learning action models that solve substantially more tasks than baselines, even with observation noise. We validate OHCAM on two tasks using a Kinova Gen3 robot, demonstrating the real-world applicability of our approach.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.30939v1' target='_blank'>Finite Element Model Updating-based Load Rating of Bridges with Incomplete As-Built Information</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Mehrdad S. Dizaji, Devin K. Harris, Mohamad Alipour, Abdou Ndong, Osman Ozbulut, Abdollah Bagheri</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-31 15:11:43</h6>
+<p class='card-text'>Load rating is the engineering process of determining the safe load-carrying capacity of an existing bridge structure often through analysis of its load-bearing members and their cross sections. However, when structural drawings and details of the structure are missing or insufficient for such calculations, alternative solutions must be used to infer the capacity. This study proposes a rational and consistent engineering solution for capacity inference based on structural identification (St-Id). The proposed approach uses finite element model updating (FEMU) to estimate the unknown characteristics of structures for use in an analytical load rating, which requires the development of an initial model developed in ABAQUS that can be updated based on experimental test data. ABAQUS allowed for the development of an interface with MATLAB, which facilitated the integration of an automatic iterative parameter optimization algorithm. The optimization algorithm developed in this investigation incorporated the features of a genetic algorithm (GA) and a gradient-based scheme to iterate on the unknown parameters. The proposed approach was evaluated on four in-service highway bridges including two concrete slab and two T-beam structures in varying deterioration condition states, which had sufficient plans available but were treated as having varying degrees of unknown details. The results illustrated that the finite element (FE) model updating approach generated load ratings that were within 0-17% of the target load ratings while alleviating the main challenges of the existing alternatives.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.30916v1' target='_blank'>Selection-Aware Stress Testing for Interactive Agents</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yang Xu, Chenang Li, Jiefu Zhang, Haixiang Sun, Zhou Li, Vaneet Aggarwal</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-31 14:58:04</h6>
+<p class='card-text'>Agent evaluations often use one benchmark to choose a workflow and then search for task types where its advantage weakens, so both conclusions are selected from the same data. We introduce Selection-Aware Semantic Stress Testing (\SASST{}), which learns a task reweighting from pre-execution features on discovery tasks and evaluates the same paired comparison on separate confirmation tasks. The protocol checks support and stability, uses joint bounds for all planned claims, and can return no claim. We prove conditional asymptotic validity under stated cluster assumptions. A forty-cluster audit finds Gaussian undercoverage and conservative Bonferroni $t$ bounds. In one 480-episode $τ$-bench study, a $3.75$ point discovery gain vanished on confirmation. A second-model study likewise confirmed neither a workflow benefit nor a stable stress rule.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.30890v1' target='_blank'>Ray Tracing-Based LoRaWAN Gateway Placement for Reliable Connectivity in Amazonian Regions</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Cláudio Modesto, Lucas Mozart, Cleverson Nahum, Bruno Castro, Aldebaro Klautau</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-31 14:44:23</h6>
+<p class='card-text'>Network planning is an important task in wireless communications, as it helps network operators avoid unnecessary costs. In the context of the internet of things, using long-range wide-area network technologies in the Amazon rainforest, a key challenge is ensuring reliable communication between end-devices and gateways (GWs). In this sense, this reliability is strongly affected by channel conditions. Thus, during the planning phase, choosing the appropriate channel model is an important decision for accurate simulations. Given this motivation, in this work, we propose an optimization model to evaluate the impact of different types of channels on coverage and packet delivery ratio in a forest scenario. We used channels from ray tracing, empirical, and stochastic approaches to assess how decisions made during the network planning phase, in terms of the channel used, affect GW placement and, specifically, the percentage of end-devices covered and the reliability of the communication system. Our results show that GW placement based on site-independent channels can overestimate the number of GWs required to meet the network requirements, whereas using site-specific channels allows us to satisfy the same requirements with fewer GWs.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.30825v1' target='_blank'>Real-Time Reference Shaping for Servo Systems</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Zehui Lu, Yebin Wang, Go Sato, Fujita Tomoya</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-31 14:05:04</h6>
+<p class='card-text'>This paper addresses real-time motion planning for servo systems subject to nonlinear, state-dependent actuator constraints. A reference reshaping method is proposed that combines analytical optimality with high computational efficiency. Using Karush-Kuhn-Tucker conditions, the problem structure is explicitly characterized, and it is shown that the optimal solution lies within a finite set of candidate points. The complete solution set is constructed via closed-form expressions and a small-scale eigenvalue problem, yielding a deterministic algorithm that recovers the exact optimal solution without iterative optimization or root-finding. To address kinematic mismatch induced by aggressive commands, a real-time trajectory compensator is introduced to correct accumulated position error while preserving feasibility. Simulation results demonstrate significant computational speed improvements over existing methods, enabling real-time implementation at frequencies approaching 100 kHz.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.30760v1' target='_blank'>PRACTICE: From Experience to Expertise in Self-Evolving Embodied Agents</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Ziyi Bai, Siqi Li, Tinglei Huang, Börje F. Karlsson</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-31 13:26:16</h6>
+<p class='card-text'>Recent studies have shown that multimodal large language models (MLLMs) can serve as embodied agents, translating language instructions and visual observations into executable plans. However, building agents that can continually improve through interaction and rapidly adapt to their environments remains challenging. Summing up experience from past interaction trajectories provides a promising solution, but existing experience-based methods often rely on manually designed prompting workflows to extract and update skills. Such fixed procedures may struggle to learn updated skills from new and diverse experiences. We introduce PRACTICE, which trains a skill learner to discover and maintain a persistent skill library from past interaction trajectories while keeping the task executor frozen. Given the historical accumulated skills and incoming trajectories, the skill learner produces structured batch-edits that add, refine, merge, or remove skills, and then hierarchical consolidate all collected edits into a consistent updated skill library. We train the learner with a two-stage curriculum. First, it learns basic skill generation and library maintenance from oracle trajectories. Then, by contrasting successful and failed trajectories from heterogeneous executors on the same tasks, it learn to identify invalid action patterns and recovery strategies. Finally, we apply online skill-edit distillation to align the skill learner with a stronger teacher on its current edit distribution to further improves the policy. Experiments demonstrate that a compact skill learner delivers consistent performance improvements across successive library-update rounds for multiple frozen executors. On EB-ALFRED and EB-Habitat, PRACTICE further outperforms the strongest experience-based baselines. Project resources are publicly available at: https://baai-agents.github.io/PRACTICE</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.30709v1' target='_blank'>RailSyn: Diagnosis-Guided Image Generation for Traceable Data Completion in Railway Foreign Object Detection</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Quan Hao, Chenxi Zhang, Ziyang Tao, Yuyuan Zhou, Yudong Wang, Rui Shi, Lechuan Xu, Changhao Liu, Liguo Zhang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-31 12:47:28</h6>
+<p class='card-text'>Railway foreign object detection (RFOD) is critical to safe railway operation, yet scarce real positive samples incompletely represent task-relevant variations in object scale, intrusion relation, railway scene, illumination, and adverse weather. Existing synthetic augmentation can improve RFOD detection, but its gains lack an explicit account of the task-relevant deficiencies complemented by the generated data. We therefore introduce RailSyn, a diagnosis-guided framework comprising a real-referenced Inspector and a requirement-aligned Generator. The Inspector constructs a variable-radius empirical cover from finite real observations to localize candidate completion regions and profile synthetic pools. The resulting audit identifies railway-context, intrusion-semantic, and visual-consistency requirements; the Generator addresses them through domain adaptation, agent-planned placement and physical contact relations, and plan-consistent conditional refinement. Using the Inspector, we further trace representation-space changes across generation variants; the complete system attains a local-shell occupation of $C_{gap}$ to 13.64%, which measures generated coverage of real-derived completion regions. Extensive experiments show AP50--95 gains of up to 4.9 points and consistent improvements across nine mainstream detectors, demonstrating broad cross-architecture utility.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.30572v1' target='_blank'>Practical Implementation Report on Introducing Spec-Driven Development Using AI Agents in Software Development PBL</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Hidetake Tanaka, Hiroshi Igaki, Kazumasa Shimari, Kiyoshi Honda, Naoki Fukuyasu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-31 10:47:29</h6>
+<p class='card-text'>In recent years, autonomous AI agents such as GitHub Copilot and Claude Code have been rapidly gaining popularity. This study reports on the practical implementation of Spec-Driven Development, a software development methodology premised on AI agents, within a Software Development Project-Based Learning (SDPBL) course for third-year undergraduate students. We defined a workflow consisting of four phases, namely investigation, planning, implementation, and review. We also established an environment tailored for the SDPBL course where AI agents generate documentation and code during each phase. We analyzed the results from three perspectives, namely students' subjective AI usage, implementation throughput, and code comprehension. The analysis reveals that AI usage patterns varied across development phases and teams. Moreover, while AI agent utilization increased implementation throughput, it also tended to encourage students to proceed with development without fully understanding the code. This study demonstrates that regular verification of code comprehension by instructors and appropriate feedback are essential for maintaining educational effectiveness when introducing SDD into SDPBL.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.30508v1' target='_blank'>UTILMEM: Benchmarking Evidence Utilization in Long-Term Conversational Memory</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Peijun Qing, Fobo Shi, Soroush Vosoughi</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-31 09:41:26</h6>
+<p class='card-text'>Long-term memory is increasingly important for conversational agents, yet existing benchmarks primarily measure memory through pointwise factual recall: whether a system can recover isolated facts or event-level details from prior interactions. Real-world memory use, however, often requires a more demanding capability: integrating distributed, implicit, and noisy evidence across extended interaction histories into coherent, task-oriented outputs. We call this capability memory utilization. Here, we introduce UtilMem, a diagnostic benchmark comprising 1,717 instances across five domains, designed to evaluate four underexplored aspects of memory utilization: reasoning over dense histories, identifying implicitly relevant memories, synthesizing distributed evidence into summaries, analyses, or plans, and resisting interference from semantically similar distractors. Evaluating a diverse set of retrieval-based and memory-augmented systems, we find that strong performance on conventional factual-memory benchmarks does not reliably translate into effective memory utilization. Moreover, retrieval alone is insufficient: even when relevant evidence is successfully recovered, systems frequently fail to integrate information across sessions or to distinguish useful evidence from plausible distractors. These findings expose a substantial gap between accessing stored information and using it effectively, and suggest that progress in long-term conversational memory will require architectures that explicitly support evidence integration and robustness to retrieval interference. Code is available at https://github.com/peijunallin/UtilMem.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.30495v1' target='_blank'>In-situ suppression of surface radon emanation using an HDPE barrier at the Stawell Underground Physics Laboratory (SUPL)</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:R. R. Marcelo Gregorio, K. Mintern-Lane, S. Rushbrook, A. G. McLean, L. J. Bignell, J. M. C. Brown, G. J. Lane, N. J. C. Spooner</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-31 09:25:49</h6>
+<p class='card-text'>Radon-induced backgrounds remain a limiting factor in low-background experiments conducted in underground laboratories. The enclosed nature of these laboratories can result in elevated radon levels, with emanation from the surrounding rock representing the primary source of radon. In this work, we present an in-situ study of radon emanation from the floor of the main experimental hall at the Stawell Underground Physics Laboratory (SUPL) and investigate the use of a high-density polyethylene (HDPE) barrier to suppress emanation. Surface emanation was measured using an AIRTHINGS Corentium Pro passive detector before and after installation of the barrier. The equilibrium radon concentration within the surface emanation setup was reduced from 5840 $\pm$ 50 Bq m $^{-3}$ to 259 $\pm$ 3 Bq m$^{-3}$, corresponding to a suppression of $\sim$96%. These results demonstrate the potential to retrofit radon barriers to suppress surface emanation under realistic underground conditions, supporting their use in planned low-background infrastructure at SUPL and future applications at other underground laboratories.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.30458v1' target='_blank'>Federated Multi-Task Learning for Bladder Tumor Segmentation and MIBC Classification Using a Hybrid CNN-Transformer Architecture</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Malhar Udmale, Divyanshu Dwivedi, Aarohi Dhand, Sachin Dudda Nagaraju, Mayank Rai, Bagesh Kumar</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-31 08:45:05</h6>
+<p class='card-text'>Accurate bladder tumor segmentation and assessment of mus- cle invasion from T2-weighted MRI are important for treatment plan- ning, but developing robust models across institutions is challenging be- cause patient data cannot be centrally pooled and imaging characteristics vary across scanners and acquisition protocols. We propose a federated multi-task learning framework for joint bladder tumor segmentation and MIBC/NMIBC classification across four clinical centers. The proposed Swin Hybrid model combines a ResNet-34 branch for local texture and boundary information with a Swin-Tiny Transformer for global anatomi- cal context. A segmentation-guided classification mechanism further uses tumor localization information to support MIBC prediction. We also investigate several augmentation strategies under both centralized and federated training to improve robustness to multi-center variability. Ex- periments on the FedBCa dataset show that the Swin Hybrid provides the best overall balance between segmentation and classification among the evaluated architectures. Under federated training, Geo+Elastic aug- mentation achieved a DSC of 0.8100 and a patient-level AUC of 0.8931, yielding the highest combined score of 0.8474. These results demonstrate that joint segmentation and classification can be effectively performed across multiple institutions using federated training without centralizing patient data.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.30412v1' target='_blank'>Power and sample size calculations for causal mediation analysis with a binary mediator in randomized trials</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Bosen Cui, Yuhong Yang, Fan Yang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-31 08:09:06</h6>
+<p class='card-text'>Mediation analyses are increasingly conducted in randomized trials, but a sample size adequate for the total treatment effect may leave the natural indirect effect (NIE) or natural direct effect (NDE) substantially underpowered. Randomization does not extend to the mediator, so precision depends on the conditional mediator distribution and the mediator-outcome association, neither of which enters a total-effect calculation. Planning outside linear structural equation models is largely based on simulation under a fully specified data-generating mechanism rarely available at the design stage. This paper develops analytic power and sample size formulas for the NIE and NDE with a binary mediator and a continuous or binary outcome. Under standard identification assumptions, we focus on the ratio-of-mediator-probability weighting (RMPW) estimator that does not require an outcome model for effect estimation. We decompose the oracle variances of the RMPW estimators into components capturing mediator-probability-ratio variability, outcome variation, and their association, with an additional shared-arm covariance term for the NIE. Under a probit latent-index mediator and a working outcome model, these components are determined by a small number of interpretable design inputs rather than by the full joint distribution of covariates, mediator, and outcome. Simulations show that the analytic sample sizes closely match simulation-based benchmarks, attain the target power, and maintain type I error near the nominal level. An ACTG175 illustration shows how pilot data can calibrate the inputs.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.30406v1' target='_blank'>Locally-Guided Actor-Critic: Training a Goal-conditioned Actor with a Subgoal-aware Critic</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Olivier Serris, Stéphane Doncieux, Olivier Sigaud</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-31 08:00:40</h6>
+<p class='card-text'>Goal-conditioned reinforcement learning struggles with long horizons when rewards are sparse. While a planner can provide subgoals to guide a low-level policy, its use at test time may introduce practical subgoal management difficulties. An alternative paradigm utilizes a high-level planner to assist learning, while the policy remains conditioned only on the final goal, enabling planner-free deployment. Among these methods, Reinforcement Learning with Imagined Subgoals (RIS) introduces a regularization term that encourages the policy to take the same actions for the final goal as it does for an intermediate goal. This regularization, however, may lead to goal-chaining issues when intermediate goals are low-dimensional. Potential-based reward shaping (PBRS) translates plans into an additional reward while ensuring that the optimal policy remains unchanged. Yet, it can generate deceptive rewards in terminal states. We study these failure cases and first propose an alternative reward shaping method (RS) that removes these deceptive rewards at the expense of theoretical guarantees of PBRS. Similar to this RS variant, we then propose another method named Locally-Guided Actor Critic (LG-AC) that rewards the agent for reaching intermediate goals. Unlike RS, where intermediate rewards are implicit in the shaping signal, we explicitly condition a value estimator on the full sequence of intermediate goals but represent the value function as a sum of subgoal-conditioned value functions, enabling dense hindsight relabeling. We evaluate all these methods in tasks with challenging goal-chaining requirements and empirically highlight specific cases in which either action regularization or reward shaping yield low performance, while LG-AC achieves the best overall performance across tasks.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.30396v1' target='_blank'>Scaffolding Foundation Models into Physical-World Agents Pushes the Frontier of Long-Horizon Navigation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Zixing Lei, Gengze Zhou, Xiong-Hui Chen, Jiazhao Zhang, Yiyang Huang, Hang Yin, Haoqi Yuan, Qi Wu, Weixin Li, Siheng Chen</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-31 07:50:16</h6>
+<p class='card-text'>Long-horizon physical-world agents must reason over distant goals while grounding decisions in reliable closed-loop behavior. Today's foundation models split these capabilities: vision-language models (VLMs) infer missing information and adapt high-level plans but remain brittle and inefficient at repeated navigation grounding, while navigation foundation models (NFMs) robustly execute semantic goals but operate as bounded episodes without persistent task-level reasoning. We introduce NavMCP, an agentic scaffolding framework that couples a VLM reasoning agent with an NFM executor for long-horizon exploration. The VLM decides what evidence to seek, where to search, and when to stop, while the NFM grounds each semantic sub-goal into closed-loop navigation. Three channels structure their collaboration: intent translates evidence needs into navigation calls, observation converts rollouts into source-grounded trajectory evidence, and memory accumulates findings, negative evidence, and unresolved goals across calls. This design turns isolated navigation rollouts into persistent embodied interaction without retraining either model. On Embodied Question Answering, NavMCP achieves state-of-the-art results on HM-EQA, MT-HM3D, and EXPRESS-Bench. Under matched agent and executor backbones, it outperforms an episodic interface by 14.9 percentage points on HM-EQA. On a Unitree Go2, NavMCP reaches 78.3% success, with its margin over the strongest baseline growing from 10 to 45 points as the task horizon increases. These results demonstrate the potential of scaffolding complementary foundation models into long-horizon physical-world agents.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.30307v1' target='_blank'>ScenePilot: Grow-and-Repair Policy for Text-Driven 3D Indoor Scene Generation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jiawei Zhang, Hongsong Wang, Pan Zhou</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-31 06:22:11</h6>
+<p class='card-text'>Text-driven 3D indoor scene generation has advanced from dataset-bound layout modeling to open-vocabulary synthesis with large language and vision-language models. Yet existing methods remain limited: one-pass generators often yield geometrically invalid layouts, heavy post-hoc optimization is costly and unstable, and prompt-only planners lack reusable layout priors for functional grouping and object relations. We propose \textbf{ScenePilot}, a retrieval-augmented \textbf{Grow-and-Repair} framework that formulates scene generation as prior-guided incremental growth with learned rectification. Given a prompt, the Hierarchical Retrieval-Augmented Planning (HRAP) module retrieves room-, group-, and anchor-level layout priors to support functional group planning. A text-driven base generator then inserts object groups sequentially, while the Reinforcement Multimodal Repair (RMR) module performs lightweight local correction after each insertion and a final global repair after completion. To train this policy, we construct \textbf{SceneReverse-17k}, a repair-trajectory dataset built by perturbing high-quality 3D scenes in position, rotation, and scale, then using inverse operations as executable rectification targets. The policy predicts structured \emph{move--rotate--scale} actions from rendered views, scene state, retrieved priors, and edit history. By combining HRAP with RMR, ScenePilot offers an efficient alternative to one-shot generation and heavy full-scene optimization, improving physical plausibility, functional coherence, and controllability while preserving diversity.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.30242v1' target='_blank'>CanonNav: Disentangling Navigation Behavior from Camera Geometry in Cross-Platform Visual Navigation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Dong-Wook Kim, Ji-Hoon Hwang, E-In Son, Mintaek Oh, Seung-Woo Seo</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-31 04:52:54</h6>
+<p class='card-text'>While visual navigation has advanced through imitation learning from cross-platform demonstrations, fully leveraging such data remains challenging. First, directly learning from image-trajectory pairs entangles navigation behavior with platform-dependent camera geometry. This hinders consistent learning by forcing the policy to implicitly infer camera geometry from visual observations, an inherently ill-posed problem. Second, imitation learning from demonstrated trajectories captures the expert's chosen motion but leaves the intermediate decisions underlying that motion implicit. To address these issues, we propose CanonNav, a visual navigation framework that disentangles navigation behavior from camera geometry and incorporates complementary planning supervision into learning from cross-platform demonstrations. CanonNav introduces camera geometry canonicalization, which transforms visual observations and trajectories into a camera-consistent representation space. Building on this representation, we derive safety and local-progress supervision using pseudo-labels from an offline traversability estimator. Safety supervision penalizes unsafe trajectories, while local-progress supervision guides where the robot should advance. Experiments across diverse camera configurations and environments show that, despite using only RGB at inference, CanonNav consistently outperforms RGB-based baselines and even surpasses RGB-D-based methods in challenging scenarios.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.30199v1' target='_blank'>A High-Resolution Synthetic EV Charging Dataset for Cold-Climate Distribution Grid Impact Analysis: Trondheim, Norway (2020-2030)</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Hanieh Taraghi Nazloo, Petr Musilek</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-31 03:29:40</h6>
+<p class='card-text'>This data article presents a high-resolution, long-term synthetic electric-vehicle (EV) charging dataset for Trondheim, Norway, spanning February 2020 to December 2030. Empirically grounded in 14 months of historical charging logs from December 2018 to January 2020, the dataset captures session-level behavioral patterns, including delivered energy, plug-in duration, connection schedules, user categorization (private vs. shared), seasonal variations, public-holiday effects, and daily ambient temperature dependencies. To model future electrification dynamics, the synthetic generation pipeline integrates historical session records, calendar and weather features from MET Norway, annual EV-adoption growth multipliers derived from Statistics Norway (SSB) registration trajectories, a daily session-count model, a Conditional Tabular Generative Adversarial Network (CTGAN), seasonal Kernel Density Estimation (KDE), and post-generation physical charger-power feasibility correction. Under a standardized 7.2 kW AC charging constraint, the resulting medium EV-adoption scenario dataset contains 76,993 hourly charging-activity records. The hourly profile is activity-based rather than a complete continuous hourly time series; hours with no allocated EV charging energy are not included. The records provide total hourly charging energy, equivalent average charging power, active session counts, private/shared user load breakdowns, ambient temperature features, and calendar indicators. The dataset provides a validated cold-climate benchmark for distribution-grid impact assessment, transformer-loading analysis, EV charging-demand forecasting, charger-capacity planning, energy-management optimization, and the development of data-driven smart-charging control strategies.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.30137v1' target='_blank'>Enhancing Interpretability of Stochastic Programming Solutions: A Multiparametric Approach</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Parth Brahmbhatt, Styliani Avraamidou</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-31 01:44:46</h6>
+<p class='card-text'>Stochastic programming (SP) is a powerful framework for decision-making under uncertainty, but its practical adoption in industry is often hindered by the difficulty in understanding the causal relationships that drive optimal solutions. In the two-stage SP, strategic first-stage decisions are coupled with operational second-stage recourse decisions. When the number of scenarios under consideration is large, understanding the direct link between the uncertainty realization and optimal recourse strategy becomes computationally and cognitively demanding. Common approaches to improve interpretability include trained classification trees or scenario reduction, replacing the large scenario set with a representative subset. This is often achieved through post-hoc clustering (e.g., k-means) based on uncertainty realizations or optimal recourse decisions. While useful, these methods only provide a statistical approximation of the solution space and may fail to reveal the underlying structural properties of the recourse problem that drive optimal first-stage decisions. This work introduces a novel, deterministic approach to explainability using multiparametric programming (mp) within a Benders decomposition framework. We reformulate the recourse subproblem as a multiparametric linear program, generating an explicit map of Critical Regions (CRs), which are polyhedral partitions of the uncertainty space. This allows us to cluster scenarios analytically rather than statistically. We demonstrate this methodology on a supply chain planning under demand uncertainty. Our results show that 100 stochastic scenarios map to exactly six critical region clusters. This mapping allows us to explain optimal capacity planning decisions as a precise trade-off between specific operational modes, providing a fully transparent interpretation of the stochastic solution.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.30125v1' target='_blank'>VIBE: Video Instruction-aligned Background music gEneration</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Aryan Vijay Bhosale, Vaibhavi Lokegaonkar, Vishnu Raj, Gouthaman KV, Sreyan Ghosh, Ramani Duraiswami, Lie Lu, Dinesh Manocha</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-31 01:19:55</h6>
+<p class='card-text'>Current video-to-music (V2M) models lack semantic control and fail to penalize instruction violations, largely due to their reliance on reconstruction objectives and the representational bottleneck of static cross-modal conditioning in Diffusion Autoregressive (DAR) architectures. To resolve this, we introduce VIBE, a novel text-and-video-to-music (T+V2M) generation model that leverages: (1) Conditioning Connection, a depth-wise cross-layer conditioning mechanism that dynamically bridges the planning and diffusion refinement heads and (2) a comprehensive reward modeling taxonomy, optimizing for both hard, verifiable constraints (e.g., tempo, key) and soft, subjective qualities (e.g., musicality, multimodal alignment) with a structured 5-stage training curriculum. Upon evaluation using audio-visual alignment, instruction following, and audio quality metrics, along with a subjective human evaluation study, we observe that VIBE demonstrates enhanced controllability and instruction adherence while performing comparably to most evaluated baselines on generation fidelity and multimodal alignment.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.30094v1' target='_blank'>A Hybrid State-Space Approach for Census-Tract Population Estimation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jackson R. Ye, Alexandre V. Morozov</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-30 23:43:06</h6>
+<p class='card-text'>Sequence models---the architecture family behind large language models and, increasingly, state-of-the-art image recognition---have redefined how machines learn from high-dimensional data. Yet population estimation from satellite imagery, a task that underpins infrastructure planning, public health, and disaster response, has scarcely benefited: leading systems still bind population to a uniform raster, disaggregating census counts onto grid cells through weighting surfaces built from ancillary data (e.g., in WorldPop and LandScan), which can introduce systematic spatial bias, and predicting population per grid cell with convolutional neural networks. In this approach, the administrative-unit structure in which the census was actually collected is discarded. We close this gap with MambaPop, which renders each administrative unit as a single polygon-masked satellite image and treats tract-level population estimation as a sequence-modeling problem over its image patches, pairing each tract image directly with its population label and eliminating the disaggregation step entirely. Built on the hybrid state-space--attention MambaVision backbone, MambaPop is, to our knowledge, the first method to learn population directly from an administrative unit's own image as well as the first to apply a state-space based (Mamba) hybrid architecture to the population estimation task. Across all $\sim$84{,}000 contiguous-US census tracts of the 2020 census, MambaPop attains a mean absolute error (MAE) of $1{,}141$ persons per tract, matching the strongest convolutional baseline (YOLOv11, MAE $1{,}122$).</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.29998v1' target='_blank'>The Intervention Gap in Latent World Models</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Donna Vakalis</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-30 19:47:51</h6>
+<p class='card-text'>Planning-time intervention fidelity is a distinct, measurable property of a learned world model: whether the model's own open-loop transitions move task variables the way matched environment interventions do. In the settings we test, it is neither revealed by reward fit nor ensured by task-anchored training. Across released TD-MPC2 checkpoint sizes, episode return falls as an operator-error diagnostic on task observables grows, while reward-prediction error stays small and nearly flat, and a self-supervised world model trained without task signal preserves the same operator substantially better than a task-anchored model on the shared task. A capture-gated matched-intervention audit then localizes what fails. On Cheetah, three LeWorldModel checkpoints capture the current task query and support decodable real intervention effects; however, their imagined five-step effects are worse than predicting no effect and worse than an environment-endpoint oracle. The failure is task-direction rotation with excess gain, not feature collapse. This severe pattern is conditional: five PreJEPA seeds retain an oracle-relative deficit without it, Finger Spin experiments extend the deficit beyond locomotion with heterogeneous severity across seeds, and shared-bank effect geometry is both candidate- and support-dependent. We also test practice-side questions. In DreamerV3 the posterior distribution, not its sample, carries the current query; ensemble disagreement ranks error only near training support; and a frozen support-aware score degrades held-out error ranking in both tested transfer directions while native disagreement remains informative in both. We conclude that intervention fidelity must be audited directly, capture-first, on the model's native interface.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.29949v1' target='_blank'>Integrated Transmission and Distribution Expansion Planning Considering Customer Actions and Distributed Energy Resources</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Abhinav Ayri, Haotian Yao, Mostafa Farrokhabadi, Hamidreza Zareipour</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-30 18:20:58</h6>
+<p class='card-text'>The continued integration of distributed energy resources (DERs) motivates research into integrated system planning. While existing literature shows that DERs can reduce system costs, it often overlooks customer behaviour, particularly DER adoption driven by cost savings and incentives. System cost allocation can influence these decisions, affecting DER uptake, grid injections, and overall system efficiency. Therefore, integrated system planning should consider both system- and customer-level benefits of DERs. This paper proposes a multi-step framework that combines an integrated planning model with cost allocation and retailer business models. The integrated planning model minimizes total system costs subject to network constraints, while the cost allocation and retailer models capture customer responses to costs and DER opportunities. By coordinating these models, the framework represents how customer behaviour influences planning outcomes. The proposed approach is demonstrated on a 36-bus system, with results showing that incorporating customer decision-making reduces overall system costs, lowers reliance on transmission-connected generation, and supports more realistic system planning.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2608.29944v1' target='_blank'>On the Role of MRI Sequences in Cross-Dataset Generalization for Brain Tumor Segmentation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Henrique Zan Grande, João G. Pitol, Lucas B. Schuck, Rafael V. Serenato, Rayson Laroca, Andre Gustavo Hochuli</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-08-30 18:17:18</h6>
+<p class='card-text'>Brain tumor segmentation in magnetic resonance imaging (MRI) is a critical task for diagnosis and treatment planning. Despite the success of deep learning architectures such as U-Net and its variants, performance degradation across datasets remains a major challenge, particularly under domain shift and limited annotated data. To address this issue, this study systematically evaluates how individual MRI sequences influence model robustness across two well-known datasets. A ResUNet-based framework is employed, where each modality is trained independently to isolate its effect under a controlled cross-dataset evaluation protocol with tumor size stratification, without target-domain training, or with limited domain adaptation. Results show that the T2f/FLAIR sequence achieves the best cross-dataset performance, with Dice scores exceeding 75%. It consistently outperforms other modalities across most tumor size ranges, while multi-sequence training further improves performance. Additionally, even limited target-domain adaptation yields rapid initial gains, reducing the need for extensive annotations and costly retraining. Our source code is publicly available at https://github.com/henrique-zan/brain_tumor_segmentation/.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js'></script>
+</body>
+</html>
