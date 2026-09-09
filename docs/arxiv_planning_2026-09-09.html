@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>planning - 2026-09-09</title>
+<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap' rel='stylesheet'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css'>
+<style>
+body {
+font-family: 'Roboto', sans-serif;
+background-color: #f5f7fa;
+padding: 20px;
+}
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.card-title {
+    font-weight: 700;
+}
+.card:hover {
+    transform: scale(1.02);
+    transition: 0.3s ease-in-out;
+}
+</style>
+</head>
+<body>
+<div class='container'>
+<h1 class='text-center my-4'><i class='fas fa-book'></i>planning - 2026-09-09</h1>
+<div class='row'>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2609.09158v1' target='_blank'>TANGO: Humanoid Navigation in Cluttered Environments with a Whole-Body Vision-Language-Action Model</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Anqi Li, Yuxin Chen, Zhaobo Li, Zhuo Cao, Junli Ren, Masayoshi Tomizuka, Dhruv Shah</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-09-08 17:59:55</h6>
+<p class='card-text'>We study the problem of navigating cluttered indoor environments with a humanoid robot. Unlike conventional methods that model navigation as a 2D path planning problem, humanoid traversal in cluttered environments requires continuous geometry-aware whole-body adaptation, including coordinated arm placement, torso adjustment, and gait modulation for collision-free movement through complex 3D spaces. We introduce TANGO, the first whole-body vision-language navigation framework for language-conditioned humanoid traversal in cluttered environments. Given a natural-language instruction and egocentric RGB observations, TANGO directly predicts 29-DoF joint-space actions for downstream whole-body control. We train TANGO entirely in simulation by synthesizing diverse collision-free traversal behaviors via global path planning, kinematic whole-body motion generation, obstacle-aware motion editing, and RL-based tracking. This pipeline provides dynamically feasible action supervision for learning language-conditioned whole-body policies. In extensive simulation experiments, TANGO demonstrates state-of-the-art performance in vision-language navigation, while outperforming strong modular baselines in navigating challenging scenes requiring obstacle negotiation. Lastly, we deploy TANGO zero-shot on a Unitree G1 humanoid robot, and observe robust language-guided traversal in cluttered real-world scenes without training on any real-world navigation data.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2609.09156v1' target='_blank'>ReCite: Agentic Reasoning for Faithful Citation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yuyang Huang, Bobo Li, Jiajia Song, Yuzhe Ding, Chong Teng, Fei Li, Donghong Ji</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-09-08 17:59:50</h6>
+<p class='card-text'>Accurate citations are the foundation of academic writing, tracing intellectual origins and substantiating core claims. However, manually navigating the growing volume of scientific literature is increasingly difficult, prompting reliance on automatic citation recommendation. While modern retrieval-augmented architectures have largely mitigated the fabrication of non-existent papers, current systems relying on semantic similarity struggle with misattribution, often citing authentic papers that fail to logically support the author's claim. To address this challenge, we argue that accurate citation requires a shift from similarity-based search to active, claim-level reasoning. We propose ReCite, a decoupled agentic framework that orchestrates location perception, intent-aware query planning, and reflective verification. Trained on synthesized reasoning trajectories, our agent verifies claim-evidence consistency and triggers self-correction loops when retrieved candidates lack logical support. Experiments demonstrate that our lightweight framework outperforms state-of-the-art massive generative models in strict citation accuracy. By grounding literature matching in verifiable logic rather than semantic overlap, ReCite establishes a reliable foundation for automated academic writing.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2609.09134v1' target='_blank'>Co-Evolving Harnesses and Models: On-Policy Correction Helps Weaker Models Catch Up Where Imitation Fails</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Zhou Yu, Bin Bi, Shiva Kumar Pentyala, Shubham Mehrotra, Sougata Chaudhuri, Shilpa Bhagavath, Zeyuan Chen, Ran Xu, Phil Mui, James Zhu, Sitaram Asur</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-09-08 17:53:49</h6>
+<p class='card-text'>Agent harnesses (the system prompt, tool set, execution hooks, and context-management scaffolding around a model) are a critical determinant of agentic task success. Automated harness evolution can enable smaller models to perform well on domain-specific tasks at a fraction of frontier-model cost. Since both the harness and model weights shape behavior, we ask how harness evolution and lightweight fine-tuning should be combined. Across seven enterprise agent tasks, we first evolve a harness with the weaker model, then find that a stronger expert often uses it more effectively, suggesting expert supervision could close the remaining gap. However, training the weaker model on the expert's complete trajectories under the evolved harness backfires: performance regresses on all seven tasks by 4 to 30 points across Qwen3-Coder and Gemma 4, even though the same procedure helps under the unevolved harness. Our analysis shows that imitation transfers knowledge and increases scaffold usage, but disrupts model-harness fit: the weaker model adopts the expert's planning strategy without the competence to execute it and no longer matches the harness evolved around its native planning style. We therefore develop an on-policy expert-correction pipeline, automated by a meta-level MLE agent, that localizes the failing turn in the weaker model's own rollout and asks the expert to rewrite only that turn. This preserves the model's planning style and combines the gains of harness evolution and model adaptation. Our results identify and resolve a source of contention between harness and weight updates, yielding a compatibility-preserving recipe for economical co-evolution on domain-specific enterprise tasks.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2609.09073v1' target='_blank'>Online, Reachability-Aware, Sampling-Based Motion Planning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Brendan Gould, Zhiyuan Zhang, Panagiotis Tsiotras, Samuel Coogan</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-09-08 17:27:25</h6>
+<p class='card-text'>Sampling-Based Model-Predictive Control (MPC) algorithms are a flexible class of controllers used for navigation on a wide range of robotic systems. Historically, such approaches have lacked hard safety guarantees, a shortcoming which we remedy in this work by computing guaranteed reachable-set overapproximations online with a fast, interval-based pipeline. We show that our method achieves similar performance to a state-of-the-art reachability-based planner without the need for the expensive pre-computation step, and can be scaled to systems that are infeasible using existing approaches. Finally, we demonstrate that our technique reduces safety violations by over 99% in a racing simulation and successfully controls a model racecar on real hardware experiments without crashes.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2609.09069v1' target='_blank'>Rethinking Learned Occupancy in Autonomous Active Mapping with Observation-Gated Filtering</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jiahui Zhang, Bonian Han, Gongbo Liang, Yu Zhang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-09-08 17:23:37</h6>
+<p class='card-text'>Autonomous 3D active mapping requires a space robot to choose where to sense while building the geometry needed for navigation. Learned occupancy completion extends spatial context beyond the current field of view, but one predicted map often serves two planning roles: it scores expected surface gain and constrains collision-free motion. Unsupported occupancy can therefore distort both where the robot looks and where it believes it can travel. We study this coupled interface in a controlled closed-loop benchmark by holding the active-mapping system fixed and varying only its planner-facing occupancy across observation-only, learned, oracle-corrected, and ground-truth conditions. Improving occupancy accuracy does not monotonically improve closed-loop coverage: across 25 starts, planning with ground-truth occupancy reaches 70% of the learned baseline's final coverage 12.7 steps earlier on average, while increasing final coverage by only 0.031. Guided by this diagnosis, we introduce an observation-gated filter that retains completion in insufficiently observed regions and suppresses predictions only after repeated frustum exposure without nearby RGB-D support. The filter improves both targeted failure-prone starts without retraining or ground truth. These results motivate online revision of planner-facing geometry during autonomous intervals between communication windows. The current study assumes benchmark RGB-D observations and sufficiently accurate pose estimates; planetary sensing conditions and accumulated localization drift remain to be evaluated.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2609.09060v1' target='_blank'>Efficient Quantile-Resolved Hosting Capacity Assessment on Nodal Level for Low-Voltage Grids</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Maximilian Köhler, Edwin Mora, Mathias Duckheim, Stefan Niessen</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-09-08 17:16:23</h6>
+<p class='card-text'>Hosting capacity - the maximum additional capacity a network can accommodate without violating operational limits - is a key metric in distribution system planning and operation. Decisions on grid reinforcements and the deployment of flexibility management require not only the worst-case HC but also an understanding of the distribution of HC under different likelihoods in load and generation patterns. Quantile-resolved HC distributions provide this view by expressing HC as a function of an acceptable operational limit exceedance likelihood. Monte Carlo sampling is the established approach for computing such distributions but demands large computational resources. Approximations sacrifice either accuracy, the ability to capture uncertainty correlations, or scalability when assessing real-world networks. This paper introduces a computationally efficient method for calculating distributions for quantile-resolved HC. It uses a representation of load samples as multivariate normal distribution, propagated through a linearized power flow model. This allows for leveraging a re-parametrized AC-OPF problem for each hosting capacity quantile. Benchmarking against Monte Carlo-based methods on realistic LV networks demonstrates that the proposed method achieves comparable accuracy with a mean deviation of approx. 3%, while reducing computational time by orders of magnitude. For the exemplary networks the computational time decreases from 11 min to 2 s, and 38 h to 50 s, respectively. The method's scalability is also suitable for recalculation in 15-minute cycles encountered in DSO practice for e.g., real-time grid management.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2609.09010v1' target='_blank'>A Joint 2D-3D Statistical Shape Model for Orthopedic Reconstruction</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Florence Dell'Aniello Picard, Pranav Poudel, Nairouz Shehata, Frédéric Lavoie, Herve Lombaert</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-09-08 16:46:30</h6>
+<p class='card-text'>Three-dimensional femoral reconstruction from radiographs supports surgical planning, implant sizing, and post-operative follow-up, but remains ill-posed as X-ray projections discard depth information. Existing methods often incorporate a 3D statistical shape model (SSM) as a shape prior to guide reconstructions toward anatomically plausible shapes, relying on iterative 3D-to-2D projection matching. Yet, these approaches are computationally expensive and constrain their SSM to a single dimensionality, leaving the statistical relationship between 2D observations and 3D geometry largely unexploited and unexplored. We instead propose a joint 2D-3D SSM that explicitly captures the co-variation between 2D and 3D segmentations in a shared latent space. During training, 2D and 3D segmentations are registered to a common 3D template and its corresponding 2D projections, and the resulting stationary velocity fields are jointly decomposed using principal component analysis (PCA). This joint modeling allows the 2D-to-3D mapping to be learned directly from data rather than computing correspondences at inference time. For unseen subjects, the 3D shape is recovered directly by lifting the 2D latent coordinates to the 3D PCA subspace, thereby eliminating the need for iterative 3D-to-2D projection. Experiments on NMDID demonstrate that the proposed joint 2D-3D SSM outperforms a widely-used 3D-only SSM baseline while achieving inference approximately 4 times faster, at under 3 seconds per subject. The code is available at: https://github.com/florence-dellaniello-picard/joint2d3d-ssm.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2609.08958v1' target='_blank'>Model Predictive Control of Tensegrity Robots via Contact-Aware Graph Neural Dynamics Model</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Nelson Chen, Patrick Meng, Charles Tang, Angelina Degay, Zachary Brei, Rebecca Kramer-Bottiglio, Kostas E. Bekris, Mridul Aanjaneya</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-09-08 16:14:25</h6>
+<p class='card-text'>Tensegrity robots offer lightweight, compliant mobility over challenging terrain but remain difficult to model and control due to complex contact-rich dynamics and partial observability. This work presents a model predictive path integral (MPPI) controller for a three-bar tensegrity robot driven by a learned graph neural network (GNN) dynamics model. This work first extends prior GNN-based models with a differentiable contact detection module. The extension allows the dynamics model to reason over non-horizontal planar terrains, obstacles, as well as self-collisions. Then, the learned dynamics model and the MPPI controller operate in a closed data-collection loop, iteratively improving model accuracy and control performance. This work further introduces a hybrid MPPI strategy that combines MPPI with turning motion primitives to improve maneuverability. Experiments are performed in MuJoCo across five navigation tasks, which include, wall obstacles, inclines, narrow corridors, low-clearance structures, and a composite 3D obstacle course. The experiments demonstrate that the hybrid MPPI controller operating over the learned GNN dynamics model improves predictive accuracy over a flat-ground baseline model and achieves superior navigation performance compared to $A^*$-based re-planning and MPPI-only variants. Results show that the contact-aware learned dynamics combined with the sampling-based model predictive control enable robust tensegrity navigation in complex, contact-rich environments.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2609.08946v1' target='_blank'>ContinuumBench: Benchmarking Joint Autoscaling and Placement Across Evaluation Regimes in the Cloud-Edge Continuum</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Lanpei Li, Antonino Vaccarella, Vincenzo Lomonaco, Massimo Coppola</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-09-08 16:05:08</h6>
+<p class='card-text'>Cloud-edge controllers coordinate service placement, replica scaling, and resource pre-warming to keep end-to-end latency within application deadlines. But evaluations often obscure the source of a reported gain: placement and scaling are studied separately; workload, connectivity, and calibration assumptions remain implicit; and metrics over completed tasks hide unfinished work. We present ContinuumBench, a benchmark that controls these factors. Its completion-aware accounting treats late, unfinished, and discarded tasks as deadline misses. A common protocol compares placement-only and scale-capable controllers under declared regimes and stressors. Built on the ECLYPSE simulator, ContinuumBench adds arrivals, worker elasticity, intermittent transport, buffering, and failures to close the control loop. We evaluate nine controllers across four scenarios and two regimes. The studied regimes are capacity-bound: elastic capacity, not placement sophistication, drives completion, and once capacity suffices, the choice of autoscaling policy decides how much of that work arrives on time. Placement re-planning has no measurable effect without relocation, while cost-free migration defines the observed exception. Consequently, scale-capable controllers approach an over-provisioned reference while placement-only controllers degrade with load; and placement quality separates controllers only once capacity is exhausted. Finally, the accounting choice itself changes the reported result: completion-only and completion-aware scoring can rank controllers differently.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2609.08853v1' target='_blank'>CAST: Alternating State-Value Targets and Expanded Policy Gradients for Model-Based Reinforcement Learning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Pietro Noah Crestaz, Mohamed Yassine Kabouri, Nicolas Mansard, Andrea Del Prete</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-09-08 15:05:16</h6>
+<p class='card-text'>Model-based reinforcement learning (MBRL) is a family of RL methods that learn a model of the environment and use it for action selection, making it well suited to robotics due to its sample efficiency. Combining learned models with online planning can further improve action selection, as the planner can exploit the model to find better actions than the learned policy alone. Recent methods combining learned policies with online planning typically learn the value of the policy rather than the stronger planner-guided behavior. We present CAST (Critic with Alternating State-value Target), which uses planner-guided behavior to improve value learning while regularizing the value estimate with the current policy. CAST replaces the action-value critic with a state-value critic, trained using a target that combines a real planner-guided transition and an imagined transition under the current policy. The resulting value function corresponds to an alternating process between planner-guided behavior and the current policy, allowing it to benefit from the stronger planner behavior while being regularised by the policy being learned. We evaluate CAST on the DeepMind Control and HumanoidBench Suites against several state-of-the-art methods, and demonstrate successful transfer to a physical Unitree Go2 quadruped performing a dynamic handstand.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2609.08669v1' target='_blank'>Learning to build covering structures with continuous adjustments</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Gabriel Vallat, Maryam Kamgarpour, Stefana Parascho</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-09-08 12:32:42</h6>
+<p class='card-text'>Robotic construction offers the potential to use materials more efficiently and create complex geometries, but current methods rely on rigid, high-precision plans that cannot accommodate the tolerances, inaccuracies, and unexpected changes inherent in physical fabrication. In this work, we introduce a reinforcement learning approach that forgoes predefined plans entirely, instead generating construction sequences adaptively as the structure is built. Our method operates on graph-structured state representations and a mixed (parameterized) action space, requiring both discrete block selection and continuous placement parameters. Because the stability simulation of a structure is computationally heavy, we develop an efficient exploration strategy by incorporating unilateral edges into graph neural networks, extending soft actor-critic (SAC) to this hybrid setting. We evaluate our algorithm, HSAC, against the prior method hybrid-PPO (HPPO), demonstrating significantly higher asymptotic performance and good sample efficiency. We also demonstrate HSAC's robustness to hyperparameter choices and its exploration capability, handling up to 10 discrete actions without performance degradation. Finally, we validate our approach on a physical two-robot setup, successfully building a spanning arch with 3D-printed blocks in closed-loop execution, confirming that policies trained in simulation transfer to real hardware.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2609.08627v1' target='_blank'>SynthRCT: Scalable Conditional Deformation Synthesis for Synthetic Repeat CT Generation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Tomas Guija-Valiente, Blanca Rodriguez-Gonzalez, Norberto Malpica</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-09-08 12:00:28</h6>
+<p class='card-text'>In proton therapy, plans are typically optimized on a single planning CT, making robustness evaluation essential under anatomical changes. However, current scenarios often rely on simplified perturbations that poorly capture complex, patient-specific variability. We propose SynthRCT, a scalable conditional generative framework for 3D anatomical deformation synthesis. Based on a conditional variational autoencoder, SynthRCT learns a latent deformation space and decodes sampled latent codes into local stationary velocity fields conditioned on an input anatomy. Local fields are assembled into coherent full-volume transformations, enabling memory-scalable generation for large field-of-view CT data. We validate the approach on respiratory 4DCT data with multiple breathing-phase anatomies per subject. SynthRCT enables patient-specific sampling of plausible anatomical transformations beyond predefined robustness scenarios. Code available at: https://github.com/TomasGuija/SynthRCT.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2609.08606v1' target='_blank'>Neptune: An AI model for Global Ocean Subseasonal Prediction</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Davide Donno, Italo Epicoco, Massimo Cafaro, Gabriele Accarino, Mohammad M. Amirian, Viviana Acquaviva, Paola Nassisi, Doroteaciro Iovino, Annalisa Bracco, Simona Masina, Pierre Gentine</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-09-08 11:42:25</h6>
+<p class='card-text'>Subseasonal-to-seasonal (S2S) forecasting is societally critical, supporting decision-making in sectors ranging from water and agricultural management to disaster risk reduction, energy planning, and insurance. Achieving reliable predictions at these timescales requires representing the ocean and its dynamics, but traditional physics-based Ocean General Circulation Models (OGCMs), are computationally expensive and difficult to develop and improve because of the code complexity. In this work, we propose Neptune, an end-to-end data-driven framework for global ocean and sea-ice components emulation tailored for S2S timescales, up to 60 days. Neptune combines Convolutional Neural Networks (CNNs) and Spherical Fourier Neural Operators (SFNOs) to effectively capture local features and global cross-scale interactions, thereby obtaining a coherent representation of the ocean state. Forced by prescribed daily atmospheric fields, Neptune emulates ocean state variables, from temperature and salinity, to zonal and meridional currents, from sea surface height to sea ice thickness and concentration, with daily outputs at the ocean surface and through the water column. Specifically, we propose two variants of Neptune, Neptune-1 and Neptune-025, capable of emulating the ocean state at 1° and 0.25° resolution, respectively. Evaluated against a suite of metrics, including statistics (RMSE, CRPS and ACC), physical coherency (Ocean Heat Content, Eddy Kinetic Energy and Ice Brier Score) and climate indices (ENSO and Z20 metric, IOD), Neptune successfully reproduces the spatio-temporal evolution of the oceanic fields up to 60 days, and is stable over long timescales. Neptune provides compelling evidence that end-to-end data-driven ocean emulators can become a powerful component of next-generation S2S forecasting systems, emulating ocean state at high spatio-temporal resolution.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2609.08602v1' target='_blank'>CLAMP: Constrained Decoding for Vision-Language Embodied Planning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Tianyi Ma, Parisa Kordjamshidi</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-09-08 11:38:09</h6>
+<p class='card-text'>Embodied planning increasingly relies on vision-language models (VLMs) to translate instructions and visual observations into executable action sequences. However, fluent plans are not always executable. A VLM may refer to objects that are not visually observed, select actions whose required affordances are unavailable, or violate syntax and action constraints. We introduce CLAMP, a multimodal constraint-grounding framework that turns scene evidence into decoding-time constraints for a frozen VLM planner. CLAMP uses the initial observation to restrict object references to those supported by the scene, while a provided symbolic action model specifies state transitions and goals. During decoding, hard masks eliminate invalid next-token candidates, while a Hidden Markov Model (HMM)-based world-state lookahead module reweights the probabilities of the remaining feasible candidates based on action preconditions and goal reachability. This allows the planner to retain the VLM's language prior while preventing visually unsupported, unsafe, or infeasible candidates from entering the plan. For unseen tasks and environments, CLAMP adapts the HMM at test time using label-free continuations sampled from the frozen VLM. Experiments on VLABench, SafeAgentBench, and TaPA show that scene-grounded constraints improve object grounding and safety, while most remaining failures stem from perception errors or misaligned constraint specifications.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2609.08560v1' target='_blank'>Evaluating Efficiency of Platform Trials Under Delayed Outcomes Using Treatment Throughput</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Aritra Mukherjee, James M. S. Wason</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-09-08 10:50:31</h6>
+<p class='card-text'>Background: Platform trials improve efficiency by enabling early stopping of ineffective arms, shared controls, and addition of new treatments without compromising statistical properties. However, delays in observing primary outcomes may reduce these benefits. Investigators must either pause recruitment, delaying identification of effective treatments, or continue recruitment, potentially enrolling participants who cannot benefit from interim decisions. We assess the impact of outcome delay on platform trial efficiency using a novel metric.
+  Methods: We propose Expected Throughput (ET), defined as the expected number of treatment arms evaluated per 1000 participants. ET accounts for participants recruited while awaiting outcomes. We consider a multi-stage sequential design for each treatment arm and assess ET across different outcome delays, assuming uniform patient accrual.
+  Results: Outcome delays substantially reduce platform trial efficiency, with the impact dependent on recruitment rate and delay length. At a recruitment rate of 10 patients per month, severe losses occur when delays exceed 12 months. When outcome delay exceeds two-thirds of the time required to recruit a single arm, substantially fewer treatment arms are evaluated than anticipated.
+  Conclusion: Outcome delay can markedly reduce platform trial efficiency. Recruitment rates and expected outcome delays should therefore be considered during trial planning.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2609.08527v1' target='_blank'>CleanCity-BinSense: An IoT-Enabled Smart Waste Management System with Configurable Real-Time Fill Monitoring and Nearest-Neighbor Route Optimization</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Mohammad Adnan Kabir, Intifad Muhammad Sayeed</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-09-08 10:16:51</h6>
+<p class='card-text'>CleanCity-BinSense addresses inefficiencies in urban waste management in developing cities, where fixed-schedule collection routes lead to overflowing bins and wasted fuel. This paper presents CleanCity-BinSense, a low-cost, end-to-end IoT-enabled smart waste management system for scalable real-time waste monitoring and demand-driven collection. The system integrates a solar-powered sensor node with an ultrasonic sensor for real-time bin fill-level monitoring. A key contribution is a configurable sensing model based on two calibration parameters, FULL_DISTANCE and EMPTY_DISTANCE, enabling deployment across bins of varying sizes and geometries without firmware modification. Fill percentage is computed using a geometry-configurable linear normalization algorithm, validated through hardware experiments with a mean absolute error (MAE) of 0.38 cm, within the manufacturer-specified sensor tolerance. Sensor readings are transmitted via Wi-Fi to a centralized web platform providing role-based dashboards for administrators, operators, and drivers, along with a public real-time bin-status map. The system also incorporates a lightweight nearest-neighbor route planning algorithm using SQL Server's spatial function to generate proximity-based collection routes with low computational overhead. Experimental evaluation shows an average end-to-end system latency of 5.3 seconds, dominated by the sensing interval rather than network overhead, while route generation for typical urban collection zones completes in under 100 ms. These results demonstrate the feasibility of a low-cost, configurable, infrastructure-light smart waste management system for heterogeneous urban waste networks in resource-constrained environments such as Dhaka, Bangladesh.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2609.08493v1' target='_blank'>AURORA: Active Uncertainty-Driven Re-Orientation for In-Hand Reconstruction</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Feiyu Zhao, Yuetong Li, Chenxi Xiao</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-09-08 09:35:01</h6>
+<p class='card-text'>Observing objects grasped by a robot hand is challenging due to severe visual occlusions. Although in-hand manipulation can expose hidden surfaces, existing approaches often rely on predefined or open-loop reorientation strategies that do not explicitly target under-observed regions. We propose AURORA, an active 3D reconstruction framework that closes the loop between online object-centric reconstruction and in-hand reorientation. At its core, Ray-GPIS estimates direction-wise reconstruction uncertainty along candidate viewing rays and selects next-best-view targets using an uncertainty--novelty objective, which are realized through an axis-conditioned in-hand rotation policy. The resulting RGB-D observations are fused incrementally using CAD-free 6D pose tracking and lightweight geometric reconstruction. Experiments demonstrate that AURORA improves reconstruction quality and information-acquisition efficiency over non-active rotation strategies, while Ray-GPIS also outperforms active view-planning baselines in reconstruction performance, action-ranking quality, and planning efficiency. Targeted ablations further validate its robustness to hand occlusion and pose errors. The project webpage is available at https://aurorahand.github.io/</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2609.08482v1' target='_blank'>A Foundation Model for Large-Scale Wireless Network Planning , Operation and Optimization</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Xinyu Qin, Wenqiang Pu, Hongcheng Dong, Bingsheng Peng, Ye Xue, Linzhi Shen, Qi Yan, Tsung-Hui Chang, Zhi-Quan Luo</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-09-08 09:25:57</h6>
+<p class='card-text'>Wireless cellular networks provide critical infrastructure for communication, transportation and industry, making reliable connectivity essential to modern society. Delivering this connectivity requires accurate models of the radio environment shaped jointly by network infrastructure and their surroundings. Such models underpin base-station deployment, network operation and parameter optimization, yet city-scale radio environments remain difficult to capture. Physics-based tools require detailed site descriptions and computation, whereas task-specific models need dedicated measurements and transfer poorly across deployments. Here we introduce ChaRT, a foundation model that learns transferable radio representations from measurement reports routinely generated by operational cellular networks. These reports provide abundant joint observations across multiple cells and beams without additional measurement campaigns. ChaRT incorporates beam-level angular structure, network hierarchy and propagation-regime diversity into its architecture, and is pretrained through context-aware masked beam modelling and self-distillation. We train ChaRT on more than one billion reports comprising 18.2 billion beam-level observations from 3,503 cells in one city. With a single set of weights, ChaRT reconstructs radio environments in unseen cities and transfers to new-site prediction, radio map construction and network parameter tuning. With only 1% of labelled data, it supports user localization, beam prediction, propagation scenario classification and estimation of the signal-to-interference-plus-noise ratio. The learned representation further enables beamspace clustering for reusable radio-grid construction. These results establish operational measurement reports as a scalable data foundation for transferable cellular-network intelligence.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2609.08481v1' target='_blank'>An Evidence Model for Agentic Processes: Evidence Claims, Trust Assumptions, and Policy Assessment</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Arslan Brömme</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-09-08 09:25:28</h6>
+<p class='card-text'>Agentic AI systems increasingly exchange messages, invoke tools, request approvals, hold structured decision sessions, and modify shared artifacts. Logs and anchors can make selected records tamper-evident, but they can also mislead if their evidentiary meaning is implicit: a hash does not establish semantic truth, a signature does not establish authorization, and an external anchor does not establish capture completeness. This paper proposes an evidence claim model for agentic processes. It distinguishes artifact integrity, temporal existence, provenance, approval evidence, declared ordering, capture claim, relevance claim, deliberation traceability, monitoring claim, anchoring authorization claim, policy assessment claim, risk treatment claim, mitigation implementation claim, and management response claim. Semantic validity is treated as a recurring limitation. The model maps these claims to mechanisms, assumptions, limitations, and threats, and situates them in an agent organization with functional CEO agent, executive, operational, evidence, and audit roles, plus a plan-do-check-act-inspired management response loop. The contribution is conceptual: it does not validate a particular implementation, prevent all failures, or automate legal compliance. It provides a vocabulary for stating which claims an agentic black box can support, which claims it cannot establish, and which controls are required around it.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2609.08473v1' target='_blank'>Thermal response of an in-situ STEM MEMS chip under rapid pulse heating</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Phillip Dumitraschkewitz, Thomas Kremmer</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-09-08 09:17:48</h6>
+<p class='card-text'>In-situ rapid solidification studies demand measurements of thermal histories with high temporal resolution. We present a simple, effective setup to quantify the cooling response of an uncoated commercial Protochips Fusion MEMS chip in an in-situ scanning transmission electron microscopy (STEM) context. We drive user-defined temperature programs via an arbitrary waveform generator (AWG), while recording the voltage drops across a series shunt to reconstruct chip resistance and temperature at sub-millisecond resolution. We confirm the response times inferred from the current; however, the temperature obtained from the physically linked resistance, $T(R)$, evolves more slowly. Analysis of the maximum cooling step reveals an exponential-like relaxation with time constant $τ=1.80$ ms, consistent with reported thermal lag constants for fast scanning calorimetry. From the time to reach $95\%$ of the temperature difference $ΔT$, we measure an average cooling rate of $\approx 7.9\times 10^{4}$ K/s. Robustness checks include repeated $R(T)$ measurements (revealing a modest downward drift approaching an asymptote), a 10 k$Ω$ test load, and characterization of small off-duty arbitrary waveform generator leakage/offsets. These findings define practical bounds on achievable thermal-path rates when planning in-situ electron microscopy experiments with this chip platform.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2609.08472v1' target='_blank'>Beyond Agent Harnesses: Cross-Substrate Authority for Multi-Agent Systems</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yang Li, Sergey Volkov, Hai Liu, Zongsi Xu, Xiyu Chen, Tuo Zhou, Dian Shao, Hao Sun, Ye Lu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-09-08 09:11:53</h6>
+<p class='card-text'>Agentic systems persist model-visible memory while mutating workspaces, while a runtime, registry, or approval service may hold authority state outside both. Identical final files can then require opposite safe actions. We call this the cross-substrate authority gap: decision- relevant authorization information resides outside the planner-visible workspace or memory state. Across two controlled mini-benchmark families, three experiments compare planner-observation augmentation with an execution-time authority check using real Git lineage, durably recorded agent execution attempts, deterministic oracles, and two model routes. Experiment 1 is a 128-cell controlled evidence ablation: authority-blind candidate evidence obtains 0/32 final semantic success, while raw receipts and a typed relation both obtain 32/32. The missing authority fact accounts for the gain; typed packaging provides no observed planning-accuracy gain over equal raw information. Experiment 2 uses 96 planning calls: workspace-visible evidence yields 12/16 unsafe publication decisions, and planning with the typed relation remains unreliable (15/32 first actions correct; 11/32 invalid or absent). Experiment 3 replays the same 32 fixed model-generated first-action intents with zero additional model calls; a deterministic execution guard prevents all six unsafe intents from becoming effects and permits all 12 valid authorized publish intents. These results position authority enforcement at the mutation boundary as the operational endpoint of memory governance.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2609.08442v1' target='_blank'>AirAnchor: Bridging Local and Global Spatial Information for Zero-Shot Aerial Vision-and-Language Navigation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Shanwei Fan, Bin Zhang, Zhiwei Xu, Yingxuan Teng, Siqi Dai, Lin Cheng, Guoliang Fan</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-09-08 08:47:54</h6>
+<p class='card-text'>Aerial Vision-and-Language Navigation requires drones to follow natural-language instructions and navigate through complex urban environments. Accurate navigation relies on both local and global spatial information, which support immediate action grounding and long-horizon path planning, respectively. However, existing zero-shot methods typically operate at a single spatial scale, relying either on local representations constructed online from current observations or on global memories built offline from historical experience. To address this limitation, we propose AirAnchor, a new paradigm that bridges local and global spatial information through spatial anchors and integrates both into a shared navigation framework, enabling comprehensive spatial grounding for decision-making. AirAnchor consists of three core components: (1) Query-Driven Spatial Anchor Grounding, which identifies decision-relevant anchors from visual observations and organizes them into local spatial representations; (2) Persistent Object Spatial Memory, which incrementally maintains an object knowledge base as persistent global spatial memory and retrieves landmark-related spatial priors; and (3) a Spatially-Informed Navigation Agent, which explicitly integrates both local and global spatial information into an agentic framework for decision-making. Extensive experiments on AerialVLN demonstrate that AirAnchor substantially outperforms existing zero-shot baselines, validating the effectiveness and efficiency of the proposed paradigm.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2609.08422v1' target='_blank'>Beyond Localisation Accuracy: Sensorimotor Effects of HRTF Individualisation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Fulvio Missoni, Katarina C. Poole, Tim Murray-Browne, Andrea Canessa, Lorenzo Picinali</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-09-08 08:30:17</h6>
+<p class='card-text'>Everyday listening requires the brain to integrate cues from the body, environment, other senses, and movement, continuously translating auditory information into action. Yet HRTF individualisation is still commonly assessed through localisation accuracy, which may not fully capture its effects on this sensorimotor process. Here, we investigate whether these effects can instead be revealed through behaviour in a more ecologically valid listening task. We used an aurally guided visual search paradigm in which listeners located a visual target using a co-located virtual sound while moving freely, comparing individualised and non-individualised HRTFs under anechoic and reverberant conditions. Performance was assessed through response times and measures of movement organisation. In anechoic conditions, individualised HRTFs produced faster responses than non-individualised HRTFs, with an average reduction of approximately 200ms and the clearest benefit for front-back source locations. This advantage was expressed primarily in movement initiation, whereas overall movement extent was only weakly affected. Under reverberant conditions, HRTF-dependent differences disappeared. These results suggest that HRTF individualisation can influence how listeners plan and initiate orienting actions even when differences in conventional localisation outcomes are limited. Assessing sensorimotor behaviour alongside localisation performance may therefore provide a more sensitive and ecologically relevant account of the perceptual benefits of HRTF individualisation.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2609.08409v1' target='_blank'>Coverage Path Planning for Redundant Manipulators using Generalized Spanning Trees</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Raksi Kopo, Kostas J. Kyriakopoulos</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-09-08 08:17:49</h6>
+<p class='card-text'>Surface coverage with task-redundant manipulators is challenging because each surface point may admit multiple inverse kinematics (IK) solutions, and configuration choices strongly affect motion quality. This paper extends the classical Spanning Tree Coverage (STC) method to redundant manipulators through offline and online Joint Spanning Tree Coverage (JSTC) algorithms. Offline JSTC samples multiple Inverse Kinematics (IK) solutions per grid cell and formulates the problem as a Generalized Minimum Spanning Tree (GMST), selecting one configuration per cell and tracing the resulting tree to obtain a non-revisiting coverage path. Online JSTC incrementally expands and backtracks a spanning tree with feasibility and cost evaluation while handling dynamic grid updates. Simulation results show that offline JSTC reduces computation time, reconfigurations, and joint motion compared to other methods, while online JSTC achieves fast per-step planning in dynamic scenarios.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2609.08366v1' target='_blank'>Reachability-Certified Subteam Decomposition for Locally Interacting Multi-Agent MDPs</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Xiangwu Wang, Chengwei Cao, Hongyuan Tang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-09-08 07:35:00</h6>
+<p class='card-text'>Persistent communication limits force a multi-agent system to decide which agents may coordinate throughout a rollout. Current proximity alone is insufficient: separated agents may interact later, whereas a large pair reward may remain unreachable until it is heavily discounted. We introduce Reachability-Certified Subteam Decomposition (RCSD) for finite multi-agent Markov decision processes with factorized physical dynamics, finite-range ordered pair rewards, and almost-sure motion bounds. RCSD combines a speed-limit lower bound on pairwise contact time with a reward envelope to form a current-state affinity. For any capacity-valid persistent partition, the sum of cut affinities bounds the reward-deletion error of every unchanged stationary Markov state-feedback policy. A product of team-optimal policies for the resulting cut MDP incurs at most twice this certificate in regret against the centralized optimum. Both bounds are worst-case tight. On a controlled five-agent family, RCSD-Exact reduces aggregate normalized execution regret by 56.0%, 28.8%, and 25.3% relative to uniform, distance-only, and envelope-only partitions. A separate stochastic two-dimensional study finds no bound violation over 384 exact-partition and 1,440 restricted-controller evaluations. Exact four-agent evidence favors RCSD over uniform and distance-only grouping; raw evidence for current contact is borderline and envelope-only is unresolved. Across balanced 8-20-agent strata, controller-library utility is mixed: pointwise paired intervals favor RCSD over distance and current contact, include zero for uniform, and favor envelope-only and Value-MIP over RCSD. Partition construction remains subsecond in median up to 100 agents; this last result does not include affinity formation or MDP planning.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2609.08338v1' target='_blank'>A Multi-Modal Perception Pipeline for Object Detection and Tracking in Autonomous Racing</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Davide Malvezzi, Michele Pestarino, Vittoria Cavicchioli, Valentina La Gamba, Silvia Severi, Fabio Bagni, Luca Bartoli, Massimiliano Bosi, Francesco Gatti, Micaela Verucchi, Ayoub Raji, Marko Bertogna</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-09-08 07:11:38</h6>
+<p class='card-text'>Object detection and tracking are fundamental components of perception systems for autonomous driving. Achieving robust performance under adverse conditions such as limited visibility, sensor noise, and failures remains an open challenge, particularly in autonomous racing, where vehicles operate at very high speeds, experience strong vibrations, and interact under small safety margins. This paper presents a multi-modal late-fusion perception pipeline for object detection and tracking in the autonomous racing domain. The proposed system extends previous work by exploiting all onboard sensors through a late-fusion approach and a dedicated multi-object tracking framework. Independent detections from cameras, LiDARs, and RADARs are combined to provide timely and robust state estimates of surrounding vehicles. The tracking method explicitly compensates for detection delays and embeds in its model prior knowledge of vehicle dynamics and track layout. Experimental evaluation on real-world data across diverse critical scenarios, representative of challenging edge cases also in urban driving, confirms the effectiveness of the proposed pipeline and its suitability to support safe and adaptive planning decisions.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2609.08275v1' target='_blank'>Beyond Coherence: Benchmarking Professional Editing-Technique Execution in Multi-Shot Audio-Video Generation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Tianyi Zeng, Junchao Liao, Yujie Wei, Ziying Zhang, Litao Li, Tianyi Wang, Zhichao Wei, Shuyao Xu, Wenwen Qiang, Siyu Zhu, Zhenghao Zhang, Long Qin</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-09-08 05:35:58</h6>
+<p class='card-text'>Recent multi-shot audio-video generators can produce increasingly coherent and cinematic outputs, but coherence does not imply the ability to execute editing techniques. Professional editing depends on shot structure, transition grammar, audio-video cut relations, and montage, yet existing benchmarks largely rely on proxies such as content quality, synchronization, or physical plausibility, systematically missing whether such editing instructions are actually executed. We introduce CutCraft, the first benchmark for editing-technique execution in multi-shot audio-video generation. CutCraft extends structured multi-shot prompts with explicit editing specifications and is paired with a hierarchical hybrid evaluation framework that combines shot-structure alignment, expert-model metrics, tool-grounded multimodal judgment, and rubric-based question answering. Beyond evaluation, we design an agentic editing baseline that decomposes generation into planning, shot-level synthesis, and post-hoc composition, explicitly realizing editing semantics such as J-cuts, L-cuts, and transition timing. Across 13 state-of-the-art closed- and open-source models, CutCraft reveals a consistent gap between coherence and editing-technique execution: current systems often produce plausible multi-shot videos yet fail to execute editorial instructions reliably. We find unstable shot structures, weak control of transition execution, and sharp degradation on higher-order montage, while aesthetic quality is only weakly correlated with editing-technique compliance. The benchmark and metrics, and the editing agent baseline are available at https://github.com/AlibabaResearch/cut-craft-bench.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2609.08231v1' target='_blank'>SemBridge: Compiling Consumer Observations into Cross-Stack Communication Plans</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Genlang Chen, Junyi Zhu, Yuanshan Lin</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-09-08 04:23:21</h6>
+<p class='card-text'>Distributed-tensor systems specify where values reside, while collective systems optimize how requested operations execute. At a boundary between vendor runtimes that cannot share a native communicator, neither abstraction states what a remote consumer must observe. SemBridge fills this gap by compiling graph and runtime facts into a typed contract for the consumer-visible result and its delivery obligations. The contract captures provenance, substitutability, completion, authority, demand, and native-domain locality. A deterministic lowerer constructs backend-neutral communication plans, and a symbolic checker validates each plan before execution across CUDA/NCCL and CANN/HCCL. An independent layout-only planner handles all 72 structural transitions but establishes only 54 complete obligations; a byte-only minimizer proposes 40 semantically invalid candidates, all rejected by SemBridge. On nine real edges, SemBridge produces distinct observation-aware plans that reduce startups on all nine and payload bytes on the three result edges. A live CUDA/CANN run derives and executes full-logit reconstruction, source projection, and owner-token delivery from log-probability, token-only, and owner-scoped requests. On a measured two-host 1-GbE capacity-spillover deployment, source projection cuts result traffic by more than 99.97% and increases throughput by 8.92-80.20% across Dense, MoE, and MiniMax workloads. All 18 MiniMax restart pairs at concurrency 1, 8, and 16 favor source projection. A Qwen3-14B MLP slice additionally verifies bitwise activation-shard delivery and HCCL completion of row-parallel partials. These results establish consumer observation as a semantic layer between placement and collective execution.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2609.08155v1' target='_blank'>SciFigure2Code: An AI-Reconstructed Benchmark for Scientific Figure-to-Code</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Wentao Li, Yibo Wu, Yizhe Chen, Ruixuan Chen, Jiangjie Qiu, Yijun Li, Zhao Leyi, Xiaonan Wang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-09-08 02:39:02</h6>
+<p class='card-text'>Scientific figures are the interface through which research claims are inspected and reused, but final published panels rarely expose the data or plotting code that produced them. Recovering this hidden provenance from pixels is therefore underdetermined. We introduce SciFigure2Code, an AI-reconstructed benchmark that instead evaluates presentation recovery: generating editable Python programs that preserve how a scientific panel is arranged and read. Role-specialized Codex agents generate, execute, visually refine, and audit silver-standard presentation programs that capture geometry, visual hierarchy, encodings, annotations, and typography without claiming to recover original measurements or author source code. This reconstruction-and-audit protocol turns final published panels into auditable reference packages; the resulting resource contains 6,740 reviewed panels and SciFigureBench, a balanced 337-panel test set across 31 chart subtypes, five domains, and three complexity levels. Across 14 zero-shot models in image-only and caption-assisted settings, execution, multi-component layouts, axes, legends, and scientific labels remain weak. Claude Opus 4.7 achieves the highest image-only Overall score, Claude Opus 4.6 leads caption-assisted reconstruction, and two-stage plan-then-code prompting improves Overall for all four tested models. SciFigure2Code provides an auditable testbed for agents that construct editable, visually faithful scientific figure presentations.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2609.07954v1' target='_blank'>Support Topology and Gradient Mixing in Sinkhorn Layers</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Dylan Forde</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-09-07 20:18:56</h6>
+<p class='card-text'>Sparse Sinkhorn layers use a fixed support graph to restrict transport between tokens. How does this graph control gradient propagation through the scaling iterations. We develop a fixed-support calculus showing that each row-column cycle induces a row-stochastic operator on column-potential perturbations modulo constants. Its transpose propagates zero-mass reverse-mode cotangents. The finite-cycle operator uses two distinct half-step transport plans; at a balanced fixed point it reduces to a two-step walk determined by a single plan. We derive the accompanying score and marginal source terms and use Dobrushin contraction and minorization to bound homogeneous and source-driven tail cotangents. Our main result characterizes when support and marginals guarantee one-step contraction uniformly over finite scores: every feasible face of the transportation polytope must have pairwise two-hop column overlap. Otherwise, suitable score directions make the contraction coefficient arbitrarily close to one. We extend this analysis to ordered support schedules and derive certificates for partition heat-bath layers, coordinate sweeps, forced shared mass, and register-augmented supports. These results provide mathematical criteria for support design in differentiable transport layers, with guarantees restricted to the fixed-support quotient-gradient component.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js'></script>
+</body>
+</html>
