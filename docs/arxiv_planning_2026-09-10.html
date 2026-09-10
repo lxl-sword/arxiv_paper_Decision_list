@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>planning - 2026-09-10</title>
+<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap' rel='stylesheet'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css'>
+<style>
+body {
+font-family: 'Roboto', sans-serif;
+background-color: #f5f7fa;
+padding: 20px;
+}
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.card-title {
+    font-weight: 700;
+}
+.card:hover {
+    transform: scale(1.02);
+    transition: 0.3s ease-in-out;
+}
+</style>
+</head>
+<body>
+<div class='container'>
+<h1 class='text-center my-4'><i class='fas fa-book'></i>planning - 2026-09-10</h1>
+<div class='row'>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2609.10506v1' target='_blank'>DUET-DINO: Simultaneous Cross-View World Modeling for Latent Planning in Robot Manipulation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Nisarga Nilavadi, Ralf Römer, Moritz Reuss, Michael Krawez, Tobias Jülg, Angela P. Schoellig, Rudolf Lioutikov, Wolfram Burgard</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-09-09 17:41:38</h6>
+<p class='card-text'>Action-conditioned latent world models predict future visual representations, enabling zero-shot goal-conditioned robot planning and control. However, their predictions for fine-grained spatial and rotational actions are unreliable for full 7-DoF end-effector control. To address this gap, we introduce DUET-DINO, a simultaneous cross-view latent world model that jointly learns action-conditioned predictions from static side- and wrist-camera observations through cross-view conditioning. By exploiting complementary global scene and gripper-centric information, DUET-DINO enables latent planning over the full 7-DoF action space. Across spatially diverse reach, orientation-intensive angled-reach, and multi-goal grasp-and-lift tasks, DUET-DINO consistently outperforms single-view and independent dual-view baselines, achieving 92% success on reach, 72.5% on angled-reach, and 60.0% on lift tasks. DUET-DINO is trained from scratch on DROID and RoboArena datasets and generalizes robustly under visual distribution shifts. We further show that while V-JEPA 2 wrist-view predictions underestimate visual dynamics induced by fine-grained actions, DINOv3 predictions better capture action-conditioned scene changes, leading to stronger downstream planning. The code and model checkpoints will be open-sourced. Project page: https://utn-air.github.io/DUET-DINO</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2609.10473v1' target='_blank'>Assessing flood-conditioned power dependency of urban rail transit and its effects on resilience under climate change</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Wei Bi, Bryan T. Adey, Jürgen Hackl</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-09-09 17:14:55</h6>
+<p class='card-text'>Urban rail transit (URT) faces increasing flood risk while relying on traction power systems whose failures can trigger cascading disruption. Existing studies on URT flood resilience often oversimplify power dependency by overlooking traction power redundancy and rarely consider flood-conditioned cascading impacts, providing limited insight into how flood-induced traction power failures propagate through operations and affect system resilience. This study marks the first quantitative assessment of flood-conditioned power dependency of URT and its effects on system resilience. The methodology integrates a double-layer URT network model, spatial flood exposure assessment, service disruption simulation, a flood-conditioned power dependency index, and a journey-based performance metric that captures resilience properties of robustness and redundancy. It is applied to the London rail transit network under surface water flood scenarios across current and RCP8.5 climate conditions, two traction power feeding mechanisms, and four substation flood-failure thresholds. Results show that traction power redundancy fundamentally shapes the severity of cascading impacts. Under double-end feeding, power-attributable performance loss remains minimal, whereas single-end feeding leads to substantially greater loss and is highly sensitive to substation failure thresholds. The proposed dependency index is strongly correlated with dependency-related performance loss, supporting its use as a proxy for dependency-induced additional consequences in strategic planning.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2609.10464v1' target='_blank'>Semigroup-JEPA: Latent Dynamics Consistency for Zero-Shot Physics Generalization</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Andy Zeyi Liu, Haoran Sun, Lucas Baker, Randall Balestriero, John Sous</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-09-09 17:08:13</h6>
+<p class='card-text'>Joint-Embedding Predictive Architecture (JEPA) world models learn a compact latent representation of the world that supports prediction and planning, but their capability to learn physics and generate physically realistic dynamics remains hitherto untested. In this work, we introduce SemiGroup-JEPA (SG-JEPA), which extends the LeWorldModel framework by supplying the parameter governing the physics to the temporal model via action-conditioning and jointly training an encoder and predictor through an autoregressive latent rollout. To evaluate the model's ability to generalize out of distribution, we design dynamical tasks under different gravitational fields that, despite obeying the same physical law, exhibit qualitatively different dynamics, ranging from floating motion in weak gravitational fields to rapid bouncing in strong ones. In contrast to DINO-WM, SG-JEPA reduces open-loop prediction error by up to 2 times on two-dimensional datasets, and increases control success rate up to 2.5 times for three-dimensional robotic datasets, for which we train independent diffusion policies. To explain this advantage, we develop a linear feature model that separates local law-conditioned error from its recursive amplification under rollout. Guided by this model, we find that back-propagating the multi-step rollout loss into the representation trains the encoder to keep the features that the predictor can carry forward, and that those are the features the dynamics depend on, so most of the gain comes from the encoder learning better features rather than from the predictor learning better dynamics. See project page at https://sg-jepa.github.io.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2609.10457v1' target='_blank'>MotionCanvas: Learning Implicit Motion Planning from Composable Kinematic Cues</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Zeyu Ling, Di Kang, Qing Shuai, Yuxin Wen, Jing Li, Zhanke Wang, Heng Li, Changqing Zou, Chunchao Guo, Linchao Bao</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-09-09 17:06:18</h6>
+<p class='card-text'>Professional character animation requires both natural motion and precise, versatile control. For example, it is common for the creators to define the timing of a specified action, to control the motion range of the character's arm swing, and the route the character walks through, like specifying various kinematic motion cues on a ``motion canvas''. This motivates us to propose MotionCanvas, a model that supports \emph{cue-conditioned implicit motion planning} to faithfully and coherently connect all cues, dense or sparse, full or partial, into one full-body motion sequence. Specifically, MotionCanvas represents heterogeneous kinematic cues on a shared motion canvas, where position and rotation values are specified across body joints and time. A shared flow-matching model generates motion conditioned on this canvas, with optional language and input motion; cue imputation keeps the specified canvas values fixed in both training and sampling. To learn coherent completion across different cue sets, we train with a compositional cue sampler that varies when cues are applied, which positions or rotations are specified, and how they are combined.
+  Together, these designs enable a single generator to synthesize globally coherent actions that jointly satisfy compatible heterogeneous cues. We test this planning ability with temporal, root, and body-part cues---alone and in combination---and language-guided editing. We naturally extend this evaluation to sequential generation and motion repair, since both require the same ability to organize coherent motion from kinematic cues. Across these evaluations, MotionCanvas establishes state-of-the-art results in controlled-motion quality, mixed-cue adherence, sequential generation, instruction editing, and motion repair while preserving its text-to-motion capability.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2609.10435v1' target='_blank'>Assessing extreme flood impacts on urban rail transit: A passenger-oriented, resilience-informed framework</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Wei Bi</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-09-09 16:48:28</h6>
+<p class='card-text'>Urban rail transit systems (URTSs) are increasingly exposed to extreme floods following heavy precipitation, yet passenger travel impacts are often assessed through delay-based indicators that overlook infeasible journeys under large-scale disruptions. This study develops a passenger-oriented, resilience-informed framework for assessing flood impacts on URTS journeys from disruption onset to recovery completion. The framework presents a novel six-category classification of journey impacts, explicitly considering rerouting, alternative station use, and a delay threshold. It is demonstrated through hourly dynamic simulations of 15 London URTS lines under 30-year, 100-year, and 1,000-year flood risk scenarios. Results indicate that severe flood disruptions lead to substantial unsatisfied demand, driven primarily by unavailable routes rather than unacceptable delays. Compared with finer behaviour adjustments, rerouting dominates travel impacts. These findings highlight the significance of moving beyond delay-based assessment and provide valuable evidence on essential behavioural mechanisms for strategic-level stress testing intended to inform URTS flood resilience intervention planning.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2609.10388v1' target='_blank'>Economic Evaluation of V2G-Enabled Fast Charging Stations Under Endogenous EV Adoption Dynamics</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Mingjian Tuo, Jie Zhou, Yao Yan, Cunzhi Zhao, Long Wang, Mulan Zhang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-09-09 16:11:09</h6>
+<p class='card-text'>Building fast charging stations (FCSs) is crucial for transportation electrification, but there exists an indirect network effect: while the increasing number of electric vehicles (EVs) decides the FCS capacity expansion, the spatial locations of these facilities strongly influence drivers' willingness to adopt EVs. Ignoring this interaction can lead to bad capital investments and exacerbate power grid vulnerabilities during tidal traffic peaks. Therefore, we explicitly model the EV adoption dynamics as decision-dependent uncertainties (DDUs) in a new multi-period collaborative planning framework. This framework evaluates the economic viability of V2G-enabled FCSs across both transportation and distribution networks. To simplify the complex calculation, we introduce an aggregated fleet virtual battery model to catch macroscopic vehicle-to-grid (V2G) flexibility. This successfully circumvents the dimension curse inherent in tracking microscopic state-of-charge. To further guarantee calculation speed, the nonlinear infrastructure exposure is transformed into a mixed-integer program by using Special Ordered Set type 2 (SOS2) variables and Second-Order Cone Programming (SOCP) relaxations for grid limits. Finally, numerical studies on a coupled Sioux Falls and IEEE 33-bus testbed prove that our framework achieves superior expected social welfare. Also, macroscopic V2G aggregation is highlighted for its capability to mitigate distribution grid congestion penalties.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2609.10385v1' target='_blank'>MOONWALK: Mediating Operations with Intent-Evidence-Action Alignment Across Junior-Supervisor Review Workflows in Animation/VFX Pre-Production</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Shih-Yu Lai, Wen-Fan Wang, Sai Ling, Shaune Jan, Bing-Yu Chen, Xiang Anthony Chen</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-09-09 16:10:29</h6>
+<p class='card-text'>Animation and VFX pre-production review requires teams to translate loosely specified creative intent--briefs, evolving specifications, heterogeneous references, and verbal decisions--into revisions that junior artists can execute without repeated clarification. In practice, criteria drift across iterations, review judgments lose their evidential basis, and the reasoning behind a request rarely survives the senior-junior handoff. We contribute a design framework for intent-evidence-action alignment: intent is articulated into a shared project record, judgments are anchored to grounded evidence, and authorized decisions are converted into clear revision tasks tied directly to reference notes. We instantiate this framework in MOONWALK, a professional pre-production review system comprising a shared intent record, reference/specification anchoring, structured work-in-progress comparison, and supervisor-authorized action planning. In this workflow, AI handles administrative coordination--flagging missing context and organizing notes--while artists retain full creative direction. An in-studio study with professional practitioners compares MOONWALK with a chat-only (chatbot) interface using matched production materials, while participants' existing workflows provide a retrospective ecological baseline. Results indicate stronger intent alignment, decision traceability, and checklist executability, while also showing that aesthetic authority and final prioritization must remain with practitioners. The evaluation establishes the value of the integrated structured workflow over unstructured conversational AI chatbot. Code: https://github.com/Akinesia112/Moonwalk/tree/english-version</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2609.10380v1' target='_blank'>High Volume Low Complexity Surgical Hubs in England: Can They Improve Physician Productivity?</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Zecharias Anteneh, Adriana Castelli, Peter Sivey, Andrew Street, Jinglin Wen, Joy Adamson</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-09-09 16:06:21</h6>
+<p class='card-text'>Whether organisational separation of elective and emergency care improves physician productivity remains an open question. Most existing evidence relies on cross-sectional comparisons or volume-based outcomes that cannot isolate efficiency gains from input expansion or provider selection. In contrast, this paper exploits the staggered rollout of NHS England's surgical hub programme, a set of dedicated ring-fenced elective facilities introduced as part of its Elective Recovery Plan, to provide causal estimates of the effect of elective-emergency separation on physician productivity. Using this rollout to implement a heterogeneity-robust difference-in-differences design, we estimate the impact of hub adoption on physician productivity measured as cost-weighted elective output per unit of salary-weighted physician input. We find that hub adoption increases physician productivity by 14.5% relative to the no-hub counterfactual, accompanied by a 10-day (7.6%) reduction in average patient waiting times. The size of these gains depends on how completely elective care is insulated from emergency pathways. Standalone hubs situated on dedicated elective-only sites achieve relatively larger productivity gains than integrated hubs located within main acute hospital sites. Moreover, operating multiple hubs yields gains more than double the overall average, whereas a single hub shows no statistically significant effect. For health systems seeking to raise physician productivity and address elective backlogs, these findings suggest that how separation is implemented, not simply whether it is adopted, shapes the productivity gains it delivers.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2609.10377v1' target='_blank'>Data-Driven Risk Fields for Safer End-to-End Autonomous Driving</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yuanxin Tian, Zhiyuan Liu, Jinhao Li, Zhenhua Xu, Wenhao Yu, Jianqiang Wang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-09-09 16:05:17</h6>
+<p class='card-text'>Safety is a fundamental requirement for autonomous driving, yet existing end-to-end driving models still lack explicit risk-aware learning capacities. Existing rule-based risk models provide interpretable safety priors, yet their absolute risk scores depend on handcrafted functions, coefficients, and thresholds. Learning-based risk representations reduce part of this manual design, but their supervision often relies on occupancy-derived labels or heuristic cost values, which may not capture ego-conditioned planning risk. In this paper, we propose DRiF, a data-driven risk-field framework for safer end-to-end autonomous driving. DRiF learns a shared BEV feature with static map segmentation, dynamic risk prediction, and vehicle planning. For dynamic risk learning, DRiF converts rule-based safety priors into pairwise risk labels, and trains the risk field to preserve relative risk ordering instead of regressing handcrafted absolute scores. Experiments on Bench2Drive show that DRiF achieves competitive overall performance, with consistent improvements in driving score, success rate, and collision-related metrics. These results establish relative risk supervision as an effective way to connect explicit safety structure with end-to-end planning. The data and code will be publicly available.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2609.10370v1' target='_blank'>Gradient-Enhanced Proximal Algorithms for Mean Field Planning on Surfaces</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Chengrun Jiang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-09-09 16:01:41</h6>
+<p class='card-text'>Mean field planning on a surface prescribes initial and terminal densities and minimizes a transport energy subject to the continuity equation. Proximal algorithms for this problem repeatedly solve a time--space Poisson equation, whose temporal derivative and surface gradient determine the density and momentum corrections. We study a gradient-enhanced approximation of this constraint projection using finite differences in time, surface finite elements in space, temporal polynomial preserving recovery, and spatial parametric polynomial preserving recovery. The same construction is incorporated into ISTA, FISTA, and Douglas--Rachford splitting. We distinguish the recovered update from an exact discrete projection and derive residual identities and conditional finite-iteration perturbation bounds that retain data, boundary, and linear-solver errors. Existing derivative-recovery estimates identify a higher-order contribution under suitable regularity and mesh assumptions; they do not by themselves establish convergence of the outer optimization iteration. Available numerical illustrations on the sphere and a more complicated algebraic surface are discussed together with the limits of the recorded refinement data.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2609.10308v1' target='_blank'>Deformable Object Manipulation under Partial Observability via Real-Time Full-Shape Estimation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Kosar Behnia, Ville Kyrki, Gokhan Alcan</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-09-09 15:17:30</h6>
+<p class='card-text'>Manipulating deformable objects (DOs) is challenging due to their high-dimensional state space, underactuated dynamics, and partial observability. In this paper, we propose cRVAE, a lightweight conditional recurrent variational autoencoder that estimates the full DO state from only partial corner-node observations during inference. The resulting model is used as the forward model in a receding-horizon optimal control framework for obstacle-aware collaborative DO manipulation. In simulation on rope and fabric, cRVAE estimates the full DO state from the available corner-node measurements alone, matching the accuracy of a parameter-identified XPBD model. At inference it uses no physical parameters as model inputs and performs no online parameter identification. It also runs approximately 350 times faster on the rope and over 1500 times faster on the fabric per forward pass, keeping horizon-based planning within the 100 ms control budget where XPBD exceeds it already at short horizons. Full-shape estimation from corner sensing at in-loop speed is what makes the model deployable on hardware, which we demonstrate on a Unitree Go2 robot.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2609.10185v1' target='_blank'>From Laboratory Aging Studies to Field Predictions: Quantifying Uncertainty in Battery Storage Lifetime Predictions</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Melina Graner, Jan Figgener, Andreas Jossen, Holger Hesse</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-09-09 13:53:28</h6>
+<p class='card-text'>Predicting how long a battery energy storage system will last is critical for warranty design, maintenance planning and investment decisions, yet degradation models are mostly deterministic and rarely validated against real field data. We apply an open-source probabilistic degradation framework, combined with a cell-to-system approximation, to bridge the gap between cell-level laboratory aging models and system-level field predictions for residential battery energy storage systems with quantified uncertainty. The framework predicts cell-level state-of-health to within 0.4 % mean absolute error, roughly half the error of prior models for this dataset. When applied to field operation data, the framework's predictions are consistent with all three available system-level capacity measurements - a benchmark rarely available for open probabilistic degradation models. Cell-level heterogeneity is approximated by two bounding stress scenarios differing only slightly (a 5 % spread in temperature and a 9 % spread in current). The mean degradation trajectories of the two scenarios reach end-of-life 10 months apart, while the full predicted end-of-life range across both scenarios spans approximately three years, about a third of the expected system lifetime. We link this uncertainty to two drivers. One is a systematic mismatch between laboratory test conditions and field-representative operating stress. The other is variability in the training data itself. These insights translate into concrete, resource-efficient recommendations for future aging study design, supporting more confident predictions of battery lifetime under real-world conditions.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2609.10179v1' target='_blank'>A Note on the Point-Clothoid Distance Algorithm</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Haibin Ye, Hao Ge, Gong Cheng</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-09-09 13:49:56</h6>
+<p class='card-text'>Computing the closest point on a clothoid is a recurring task in geometric design, road and railway alignment, and path planning. The efficient algorithm of Frego and Bertolazzi addresses this problem, but its candidate-selection analysis assumes at most one local minimum per search interval. We exhibit admissible configurations with two local minima, raising the question of whether the existing strategy accounts for every possible minimum. Using the geometry of the clothoid evolute, we prove that, for any query point and any proper no-inflection planar clothoid segment with tangent-angle variation at most $2π$, the squared-distance function has at most three stationary points; if all three are local extrema, their order is min-max-min. This establishes the completeness of the original candidate-selection logic beyond the one-minimum premise. It also shows that no interior search is needed when neither endpoint derivative test is active, allowing unnecessary midpoint searches to be omitted while retaining numerical fallback. Numerical experiments demonstrate reductions in iteration count and evaluation time.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2609.10169v1' target='_blank'>Multi-Robot Scanner for Automated Full-Body Dermoscopic Imaging</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Valerio Franchi, Rafael Garcia, Nuno Gracias, Ricard Campos, Josep Quintana, Sandra González-Villà, Mark Ventura, Nuria Ferrera, Clément Lenoir, Josep Malvehy</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-09-09 13:41:37</h6>
+<p class='card-text'>This paper outlines the specifications and design approach used to construct a full body imaging scanner capable of capturing skin lesions at a dermatoscopic level using cameras mounted on the end-effectors of four UR10 manipulators. The system possesses a view-planning algorithm capable of appropriately selecting the best camera position to acquire images of moles, a high-level controller to allow the manipulators to work simultaneously and a collision-detector that halts the manipulators when they make contact with an object or a person. We evaluate the system through real-patient full-body scans, comparing acquired images against contact dermoscopy and an existing total-body photography system (Vectra) across clinically relevant lesion features, and quantify true optical resolving power using a USAF 1951 resolution target, yielding a smallest resolvable feature size of 22.1 microns for our scanner compared to 8.8 microns for contact dermoscopy. Results show the scanner consistently outperforms Vectra across most clinically relevant features and achieves comparable performance to contact dermoscopy for the majority of features assessed. By acquiring dermatoscopic-quality images automatically and without contact, and without requiring a separate manual dermoscopic examination, the scanner closes part of the gap between total-body photography and handheld dermoscopy, suggesting potential for future integration into screening workflows.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2609.10166v1' target='_blank'>Future-Aware Flow Planning for Safe UAV Target Following</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Boning Feng, Haoran Zhang, Xiaowen Bi, Yanzhen Zhang, Xiaodan Shi</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-09-09 13:40:09</h6>
+<p class='card-text'>UAV target following in cluttered environments is inherently predictive: current-state followers can lag behind turns, choose blocked corridors, or trade tracking for unsafe near-horizon motion. We propose a future-aware flow planning framework for state-informed UAV target following. Predicted target futures guide clean UAV trajectory generation as horizon-aligned residual signals, while risk-scored executable-prefix repair is embedded inside the sampling loop. On fixed ID/OOD receding-horizon benchmarks, the planner improves the intended safety--tracking trade-off rather than dominating every metric: it matches zero measured ID collision rate with the highest ID safe-tracking time, and gives the lowest OOD macro collision rate and final tracking error among the displayed methods, while Future-MPC remains smoother and stronger on some thresholded OOD success metrics under its hand-designed objective. Ablations show that future adaptation improves candidate generation before safety repair, and simulator-facing stress tests probe interface, sensing, and controller-execution effects. These results support horizon-aligned future adaptation and embedded prefix repair as complementary ingredients for safe UAV target following under the tested simulation conditions.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2609.10050v1' target='_blank'>Grounding Generated Video Plans in Simulation Towards Versatile Dexterous Controllers</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Tianyue Wu, Boyuan An, Shuqi Zhao, Heyu Guo, Wanli Xing, Yi Ma, Kaifeng Zhang, Ruihai Wu, Masayoshi Tomizuka</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-09-09 11:26:25</h6>
+<p class='card-text'>Generated hand-object interaction (HOI) videos provide a controllable way to propose manipulation motions. Simulation-based HOI tracking can translate such kinematic references into feasible low-level control, but its scalability is limited by the lack of reliable reference motions. We therefore combine generated videos with simulation-based HOI grounding: during training, generated videos provide diverse motion references for learning a multi-object, multi-trajectory HOI tracker, and at deployment, the video model produces motion plans that are executed by the learned tracker. In particular, we propose a method that enables scalable reference generation by HOI reconstruction with minimal manual intervention and successfully grounds more than 1,500 generated videos in simulation, achieving success rates over 25 percentage points higher than those of baselines during simulation-based training. In real-world closed-loop experiments, it achieves diverse grasps, including functional grasps, non-prehensile manipulation, and post-grasp object-pose tracking. Videos and code are available at https://boyuan-an.github.io/GALATEA/.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2609.10033v1' target='_blank'>What Symmetry Buys a Learned Motion Planner</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Andrea Emir Sevincel</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-09-09 11:05:24</h6>
+<p class='card-text'>Learning-based motion planners pay at training what classical planners pay per query. Trained in world coordinates, they relearn the same motion at every position and orientation. Existing work restores the missing rigid-body equivariance in the training data, in the inference operator, or in the weights, and each carries a cost. We ask how much of that equivariance the planning query supplies for free.
+  A start s and a goal g determine a frame in closed form, with origin at their midpoint and first axis along g-s. Expressing trajectory and obstacles in that frame removes three translations and two rotations of SE(3), at initialisation, for one cross product per query and with no constraint on the architecture. A single rotation about the start-goal axis remains, and no continuous rule removes it. On a cluttered 3D benchmark, holding architecture, data and budget fixed, the frame raises the held-out collision-free rate from 14.60% to 51.10%, where a straight segment from start to goal scores 15.6% and the world-frame model does not beat it. We build all three mechanisms for the residual rotation and each is worth under a point, though the equivariant backbone reaches any given level two to three times sooner. What the representation supplies therefore dominates what any mechanism enforces, and the standard diagnostic does not see the difference: two models with indistinguishable non-equivariance residuals differ by 28 points. Calibrated against a non-symmetry intervention, the frame is not even the largest effect available, since local geometry is worth +40.0 where the frame is worth +36.5.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2609.09992v1' target='_blank'>Review on State-of-the-art Energy Systems in Arctic</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Bilal Babar, Sabrina Sartori</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-09-09 10:17:16</h6>
+<p class='card-text'>The Arctic regions remain heavily dependent on fossil fuels for energy generation. At the same time, the Arctic is warming at a rate considerably faster than the global average, increasing the need for low-carbon and climate-resilient energy systems. This review documents the current energy systems and assesses state-of-the-art energy solutions applicable to Arctic and cold-climate regions, as well as the future direction of these emerging energy systems, and analyses the role of energy storage, heating requirements, and advanced energy solutions. A total of 88 research articles were systematically reviewed. The reviewed studies indicate the potential for wind and solar to reduce dependence on fossil-fuel based energy generation. For energy storage, the reviewed solutions include hydrogen for long-term storage, battery-based system for short-term storage and regulation, and thermal storage using boreholes to meet heating demand. Where a fully renewable system cannot provide the required reliability, diesel can serve as back up generation. Some barriers to widespread adoption are technological, such as the need for specialized planning tools and equipment resilient to harsh weather, and social and institutional, such as the need for governmental support, subsidies, and appropriate legal frameworks.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2609.09987v1' target='_blank'>Beyond Repository Boundaries: Cross-Repository Graph Retrieval for Code Generation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Minh Le-Anh, Nam Le Hai, Quyen Tran, Anh Nguyen Hoang, Linh Ngo Van, Bach Le, Nghi D. Q. Bui</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-09-09 10:14:14</h6>
+<p class='card-text'>Repository-level code generation requires generated code to be compatible not only with the target repository but also with its dependency environment. Existing retrieval-based methods mainly retrieve context from the local repository, leaving external API usage dependent on the model's pretrained knowledge, which can be insufficient for unseen or version-specific APIs. Moreover, current retrieval strategies largely focus on one-hop evidence and overlook the structural relationships among code components. We propose CrossCoder, a cross-repository code generation framework that explicitly incorporates external libraries into the retrieval context through a unified knowledge graph over repository and library entities. CrossCoder identifies important nodes via planning and semantic retrieval, then selectively expands neighboring nodes to retrieve richer multi-hop contextual evidence for generation. To further evaluate dependency-version compatibility, we introduce VersionExec, an execution-based benchmark derived from BigCodeBench that evaluates generation under different dependency versions. Experimental results on RepoExec, DevEval, and VersionExec demonstrate that CrossCoder consistently improves both functional correctness (up to 6.3% on pass@1) and robustness to dependency-version changes.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2609.09947v1' target='_blank'>SpeechAnnotator: A Context-Aware Multi-Agent Framework and Benchmark for Multidimensional Speech Annotation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Qirui Zhan, Shuiyuan Wang, Jingbin Hu, Haoyu Zhang, Xiaming Ren, Jinrui Liang, Chaoren Yu, Bengu Wu, Yunxiang Chen, Houdun Liu, Su Feng, Liumeng Xue, Lei Xie</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-09-09 09:37:29</h6>
+<p class='card-text'>Recent controllable speech generation requires training data with fine-grained annotations of speaker traits, prosody, emotion, paralinguistic cues, acoustic scenes, and context. Existing workflows often rely on manual correction, paid hosted multimodal services, or fixed processing chains, which limits large-scale data processing through annotation cost, external-service dependence, or weak cross-stage recovery. We introduce SpeechAnnotator, a locally deployable, context-aware multi-agent framework built entirely from open-source models and tools. Supporting frontend modules first obtain speaker-aware segments and final segment transcripts, while prior evidence extractors attach heterogeneous segment-level cues. Three specialist agents then collaborate through shared state: the Planning Agent converts local audio evidence, speaker history, neighboring segments, and recording-level context into field-specific contracts; the Labeling Agent performs contract-guided multimodal prediction for directly observable attributes; and the Review Agent runs a bounded review loop that checks evidence support and cross-segment consistency, triggering relabeling only for unsupported or inconsistent fields. To address the fragmentation of existing evaluation resources across isolated tasks and narrow-domain test sets, we introduce SpeechAnnotator-Bench (SA-Bench), containing 8.87 hours of human-annotated audio across nine source formats, together with SpeechAnnotator-Eval (SA-Eval), which separates Timeline-Eval for speaker-aware timeline recovery, Closed-Eval for finite-set attributes, and Open-Eval for open-ended attributes. Experiments and ablations show that SpeechAnnotator provides a locally deployable alternative to commercial audio-capable systems, while the bounded review loop improves multidimensional annotation through evidence- and context-aware field-level recovery.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2609.09801v1' target='_blank'>Morphological Decoupling-Based Skeletal Classification for Clinical Assessment of Malocclusion</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Zhichun Jin, Zhicheng He, Hao Xu, Dongyang Li, Lin Wang, Hongliang Ren, Long Bai</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-09-09 06:52:56</h6>
+<p class='card-text'>Malocclusion skeletal grading is a fundamental task in orthodontics, critical for diagnosis and treatment planning. Traditionally, cone-beam computed tomography (CBCT) is used for visual measurement, and the reconstructed lateral cephalograms are handed over to expert dentists for diagnosis. However, manual review is time-consuming, labor-intensive, and subject to inter-operator variability. Therefore, an automatic CBCT-based system is needed for reliable malocclusion skeletal grading. In this case, we develop TeethGNN, a novel graph-based framework designed to combine CBCT image features with morphological information for accurate and efficient malocclusion grading. TeethGNN utilizes a decoupled learnable decoder to directly predict key morphological indicators from CBCT images, eliminating the need for manual measurements. These morphological features are then fused with image features using a graph neural network (GNN), which effectively models the relationships between the modalities. To further enhance robustness and calibration, we introduce a collaborative calibration strategy. This strategy combines multi-scale graph adversarial perturbation for explicit calibration and nonlinear topological graph calibration for implicit confidence adjustment. Extensive experiments and ablation studies on our collected clinical dataset demonstrate that our malocclusion measurement system achieves 77.08\% in accuracy and 89.61\% in AUC, outperforming the compared state-of-the-art methods. These results validate the effectiveness of graph-based multimodal fusion and collaborative calibration in improving malocclusion grading performance. Our system shows strong potential for advancing computer-aided orthodontic diagnosis, providing an accurate and reliable solution for vision-based clinical measurement and diagnosis.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2609.09745v1' target='_blank'>PccDiffuser: Multi-solution Motion Planning for Continuum Robots</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Ke Qiu, Sifan Chen, Si Wang, Rong Xiong, Yue Wang, Haojian Lu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-09-09 05:41:27</h6>
+<p class='card-text'>We present the PccDiffuser, a conditional diffusion framework for continuum robots that learns a multimodal distribution over complete configuration-space paths and samples multiple candidate solutions in parallel, which are subsequently converted into an executable trajectory by time allocation considering actuator constraints. Under the piecewise constant-curvature model, we use exponential co-ordinates to describe the robot kinematics, and use graph neural network to encode a variable number of environment obstacles. Analytical differential kinematics is incorporated in the denoising process to improve terminal accuracy and whole-body clearance. On a mixed test set comprising workspace with zero to four obstacles, PccDiffuser achieved a success rate of 91\%. Compared with existing sampling- and optimisation-based benchmarks, it delivered both a higher success rate and greater computational efficiency, with the latter advantage becoming more substantial when sampling more candidate solutions. Experiments on a three-section tendon-driven continuum robot further demonstrate consecutive planning, multi-solution planning, and whole-body obstacle avoidance.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2609.09738v1' target='_blank'>Intermittent continuous-time random walks under renewal reset mechanism</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Guohua Li, Hong Zhang, Yuexiong Liu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-09-09 05:27:11</h6>
+<p class='card-text'>Stochastic resetting as a practical and efficient search strategy in complex and disordered environments has long been a topic of interest to researchers. Based on the competition between jumping and resetting, this article proposes and investigates intermittent continuous-time random walks (CTRWs) under stochastic resetting, using the smaller waiting time for jump and reset as the renewal time, where the waiting times for both jump and reset can have arbitrary distributions. After each renewal event, the system will proceed with new waiting times for jump and reset regardless of their previous histories. We study the governing equation and Montroll-Weiss equation with renewal resetting, as well as the Markovian resetting for intermittent CTRWs. We prove the existence of non-equilibrium stationary states within the renewal reset mechanism when the jump and reset waiting times follow any exponential and power law distributions. For exponential and Gaussian distributed jump lengths, we examine the mean square displacements (MSDs) of particles to determine their monotonicity and asymptotic stability. Moreover, we calculate the first-arrival time to quantify search efficiency, and validate the intermittent CTRWs under renewal resetting lead to a finite mean first-arrival time (MFAT) to any fixed position for exponential jump and reset waiting time distributions (WTDs), power-law jump and exponential reset WTDs, as well as exponential jump and power-law reset WTDs. However, the MFAT diverges for power-law jump and reset WTDs. The intermittent CTRW model, which is based on the competition mechanism, can be applied to many physical scenarios, such as the foraging strategy of animals that return to their nests after an unsuccessful foraging attempt, or the work planning of intelligent robots that return to energy replenishment points after prolonged operation.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2609.09728v1' target='_blank'>EEGBind: Detecting Source-Level Interictal Epileptiform Discharges via EEG-Centric Multimodal Binding</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Muchen Li, Anglin Liu, Xuetian Gao, Ruijian Xu, Jintai Chen</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-09-09 05:15:22</h6>
+<p class='card-text'>Source-level analysis of interictal epileptiform discharges (IEDs) is relevant to presurgical evaluation and treatment planning because it helps characterize where epileptiform activity is likely to arise. Beyond detecting whether an IED is present, this setting requires assigning IED-positive activity to clinically meaningful brain-region categories. This setting is challenging because source-region evidence in short electroencephalography (EEG) windows can be subtle, partial, and affected by subject variability, class imbalance, and imperfect multimodal context. We present EEGBind, an EEG-centric multimodal binding framework for five-class source-level IED classification. EEGBind treats EEG as the primary modality and binds synchronized video-context features around an EEG-centric representation. Instead of relying on early or overly strong multimodal fusion, which may perturb the source-sensitive EEG representation, EEGBind uses video context as auxiliary evidence for robust classification. A view-consistent repair stage is further used to improve hidden-set robustness while preserving the learned source-class boundary. On the NeuroMM 2026 Grand Challenge Track 3 NMM-Source-IED benchmark, EEGBind achieves 0.8395 on weighted-F1 and outperforms strong competitors. These results support EEG-centric multimodal binding as a practical strategy for source-level IED classification. The open-source code is available at https://github.com/HKUSTGZ-ML4Health-Lab/NeuroMM2026_IED_Detection.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2609.09677v1' target='_blank'>X2-NativeCursor: Native-Token Text Progress Tracking for Incremental-Text Streaming Codec TTS</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Zehan Liu, Carl Chen, Rime Wen, Kaiqi Fu, Altman Lin, Shawn Qin, Lights Shi, Roy Gan, Hao Wang, Qian Wang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-09-09 03:46:14</h6>
+<p class='card-text'>Incremental-text streaming text-to-speech (TTS) needs online text progress tracking for synchronized highlighting, interruption handling, and dialogue-history updates. Input text arrives before it is spoken, so text arrival alone cannot indicate speech progress. Existing waveform-based alignment requires complete audio or adds acoustic processing during streaming. We propose X2-NativeCursor, a lightweight observer that tracks progress from native speech tokens before waveform decoding without changing the TTS generator. Its normalization plan links spoken labels to their original-text spans. Text and native-token encoders feed a local matcher that estimates the current label position. A separate output rule converts revisable position estimates into a cursor that never moves backward. Mean absolute error against an automatic reference is 0.151 Chinese characters with 80-ms lookahead, versus 1.253 characters with 320-ms lookahead for an online waveform baseline. Alignment real-time factor also decreases from 0.3598 to 0.0180 relative to this baseline. Lower tracking error is retained under a second automatic alignment reference. We evaluate X2-NativeCursor on Qwen3-TTS and validate its adaptation to CosyVoice2 by training a separate observer for each backbone. Code is publicly available at https://github.com/X-Square-Robot/X2Streaming-TTS.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2609.09671v1' target='_blank'>Introducing Consort: A Spec-First Agent Framework for Enforced, Test-Driven Development on Live Database Branches</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Kevin Hartman</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-09-09 03:38:38</h6>
+<p class='card-text'>When an agent writes code, the development framework becomes the control system for a non-deterministic worker. Spec-first, agent-driven frameworks have gained rapid traction since 2025; the installable ones, GitHub Spec Kit, obra/superpowers, BMAD, and GSD, and our own, all capture intent through a specification or durable planning artifacts. Since they agree on capturing intent up front, what separates them is how each enforces the engineering discipline that keeps agent-written code clean, correct, and maintainable. Every framework enforces that discipline somehow; they differ in how. We characterize three modes: enforcement by persuasion (prompt discipline the model may ignore), by front-loaded structure (strong specs, then a trusted build), and through controls the agent cannot edit (a deterministic orchestrator, human-approved gates, immutable tests, and a green result that must pass against a live, branched database). We introduce Consort, a spec-first, test-driven agent framework built on the third, enforcing that discipline through controls the agent runs inside but cannot bypass, in which a deterministic orchestrator drives separate role agents through a spec-first design lane and a test-driven build lane on a live database branch. We argue that enforcing the tests and gates in code keeps agent-written code honest and verifiable, while its specialized roles, like the human roles before them, are what make it maintainable, claims we frame as a pre-registered, testable hypothesis.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2609.09627v1' target='_blank'>Seven Sources of Physical AI Capability Formation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Gang Chen</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-09-09 02:38:44</h6>
+<p class='card-text'>Capabilities relevant to Physical AI can arise from materially different formation histories, yet existing taxonomies organized by morphology, architecture, learning algorithm, task, or domain do not directly answer what gives rise to a capability. We define a capability-formation source as a factor materially contributing to capability formation, distinct from components or construction steps. We identify seven non-exclusive sources: Recorded-Experience (RE), Predictive-Modeling (PM), Evaluative-Interaction (EI), Surrogate-Environment (SE), Mechanism-Grounded (MG), Embodied-Coupling (EC), and Evolution-Driven (ED) Formation. Using reconstructive induction with theoretical saturation, we traced a research matrix to primary studies, deduplicated the literature, set coding rules, and conducted three rounds of maximum-difference and negative-case sampling. Challenges included curriculum and self-supervised learning, active inference, open-ended and developmental learning, planning and search, neuro-symbolic architectures, digital twins, generative physical world models, and morphology-control co-design. Within the scope and criteria fixed as of September 4, 2026, all 49 evidence records were explainable by the seven sources individually or in combination. No R1-R3 challenge produced an irreducible eighth source, and R3 required no new core definition or substantive boundary rule. We therefore claim theoretical saturation within the stated scope, not logical completeness or exhaustive future coverage. The framework distinguishes similarity in observed capability from similarity in how it was formed, supporting analysis of explanation, transfer, replication, dependencies, governance evidence, and geoeconomic foundations.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2609.09584v1' target='_blank'>Mechanics Cognitive Diagnostic: Testing Fine-Grained Learning Objectives in Introductory Physics</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Vy Le, Jayson M. Nissen, Jason W. Morphew, Hua Hua Chang, Ben Van Dusen</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-09-09 01:14:21</h6>
+<p class='card-text'>Physics courses use research-based assessments (RBAs) such as the Force Concept Inventory (FCI), Force and Motion Conceptual Evaluation (FMCE), and Energy and Momentum Conceptual Survey (EMCS) to measure learning in introductory mechanics, but their fixed-length, pretest-posttest design makes them retrospective: posttest scores summarize completed instruction and arrive after a course ends. We are developing the Mechanics Cognitive Diagnostic (MCD), a cognitive diagnostic computerized adaptive test that reports students' mastery of fine-grained learning objectives (LOs) throughout instruction. Using evidence-centered design, we defined 14 LOs from introductory mechanics textbooks and AP Physics standards, mapped FCI, FMCE, and EMCS items onto them with a Q-matrix, and refined the mapping with the deterministic inputs, noisy "and" gate (DINA) model, using posttest responses from 24,394 students in 807 courses across 79 institutions through LASSO. The FCI and EMCS achieved good DINA model fit; the FMCE showed marginal fit. Classification accuracy for most LOs met or exceeded benchmarks for low-stakes formative assessment. RBA items, though not developed for LO-level diagnosis, support it reliably, giving the MCD a working 14-LO item bank built from RBAs that physics courses already use. As data accumulate, we can revise or retire weak LOs and items and add new items through online calibration without interrupting testing. We plan to expand the MCD to 35 LOs, two per week, to cover a typical introductory mechanics course.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2609.09538v1' target='_blank'>Central limit theorems and bootstrap for sparse regularized multimarginal optimal transport and barycenters</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Pengtao Li, Alberto González-Sanz, Xiaohui Chen</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-09-08 23:39:16</h6>
+<p class='card-text'>Wasserstein barycenters are a fundamental tool for the analysis of distribution-valued data, but their computation and statistical analysis become challenging in high-dimensional and multi-sample settings. The unregularized barycenter problem is computationally demanding and suffers severely from the curse of dimensionality, making regularization essential in many applications. While regularized optimal transport methods are widely used, approaches based on entropic penalization tend to overspread mass and may blur the geometric structure of the solution. Motivated by barycenter estimation, we propose a more general methodology based on sparse regularized multimarginal optimal transport (RMOT). Our formulation creates sparse transport plans and is designed to avoid this overspreading effect. We establish consistency, central limit theorems, and bootstrap validity for the optimal potentials and couplings for the empirical RMOT problem. Specializing to sparse regularized barycenters, our results yield a uniform weak limit and bootstrap consistency. Numerical simulations show that sparsity plays a fundamental role in preserving the structure of the solution and avoiding the overspreading behavior typical of entropic regularization.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2609.09477v1' target='_blank'>LeCor: Learning to Be Corrected by Meta-Learned Test-Time Training for Interactive 3D Lung-Tumour Segmentation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yi Luo, Yike Guo, Wenxuan Li, Zongwei Zhou, Rui Zhang, Kai Ding</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-09-08 21:49:56</h6>
+<p class='card-text'>Delineating lung tumours on computed tomography (CT) takes a considerable share of the time spent on radiotherapy planning, and a contour proposed by a model can be refined interactively by the clinician. Promptable foundation models such as SAM 3 support this workflow by writing each correction into a session memory that conditions the remaining slices, while the model weights stay fixed. On 690 test cases from five public CT cohorts, fine-tuning SAM 3 on lung tumours raises the Dice obtained from a single point prompt from 0.298 to 0.757, and seven rounds of corrections raise it further to 0.765, but under memory conditioning alone the accuracy on slices the annotator has not touched stops improving after six rounds. We therefore treat each correction as a training signal and propose LeCor, which performs test-time training on a small set of case adapters that are reset for every case and meta-learned such that a single gradient step driven by a click improves the slices that were not clicked. On the 133 test cases that span at least eight slices, LeCor raises the Dice reached after seven correction rounds from 0.787 with the fine-tuned model to 0.827, reduces the number of cases that never reach a Dice of 0.80 from 47 to 27, and reaches in three correction rounds the accuracy that the fine-tuned model attains in seven.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js'></script>
+</body>
+</html>
