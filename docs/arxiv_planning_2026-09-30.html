@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>planning - 2026-09-30</title>
+<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap' rel='stylesheet'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css'>
+<style>
+body {
+font-family: 'Roboto', sans-serif;
+background-color: #f5f7fa;
+padding: 20px;
+}
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.card-title {
+    font-weight: 700;
+}
+.card:hover {
+    transform: scale(1.02);
+    transition: 0.3s ease-in-out;
+}
+</style>
+</head>
+<body>
+<div class='container'>
+<h1 class='text-center my-4'><i class='fas fa-book'></i>planning - 2026-09-30</h1>
+<div class='row'>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2609.38113v1' target='_blank'>IMPACT: Modeling Socially Interdependent Movement in a Generative Multi-Agent Simulation of a Pompeian Household</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Tianqi Liu, Nayoung Kim, Julia Sebastien, Kathryn Gleason, Caitlín Eilís Barrett, Andrea Stevenson Won</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-09-29 17:49:21</h6>
+<p class='card-text'>Simulations of archaeological sites can make interpretations of past cultural practices observable and examinable. Generative multi-agent simulations offer a bottom-up approach to modeling how people collectively moved through and used historical spaces. However, current agents designed to simulate everyday life often plan and act independently, limiting their ability to capture how movement depends on others' actions. We introduce IMPACT (Interdependent Movement Planning through Inter-Agent Constraints and Triggers), an architecture that uses culturally specific roles and obligations to define dependencies among agents' activities and guide coordination. IMPACT connects socially gated milestone planning, wait-or-prompt resolution, structured directive issuance, and directive integration. These mechanisms determine whether and when activities can begin or change as social conditions evolve, producing socially constrained and prompted movement as their primary observable outcome. We instantiate IMPACT in a five-hour simulation of a Pompeian dinner involving ten agents across interdependent roles. Analysis of five simulation runs shows how social roles, responsibilities, and status relations shape household activities and spatial practices, as reflected in patterns of co-location, asymmetric waiting, co-movement, and social directives. In a controlled ablation evaluation, thirty-seven participants rated the complete architecture's behavior as more socially coherent and believable than that of two reduced architectures. Interviews with six archaeology experts highlighted historically plausible movement patterns and the simulation's potential to support archaeological interpretation, while identifying areas requiring stronger historical grounding for future work.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2609.38107v1' target='_blank'>Correct Answers, Invalid Traces: What Verifiable Grade-School Math Reveals About Chain-of-Thought Traces</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Ratish Puduppully, Pranabendu Misra, Paarth Iyer, Durgesh Kalwar, Vardhan Palod, Subbarao Kambhampati</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-09-29 17:46:55</h6>
+<p class='card-text'>Chain-of-thought traces are widely read as records of how models reach their answers, informing debugging, agent auditing, and claims about reasoning. Testing this interpretation is difficult because natural-language thinking traces are rarely mechanically verifiable. We revisit it in iGSM, a synthetic grade-school mathematics benchmark designed to study thinking traces and used to support claims of learned reasoning and planning. Crucially, iGSM exposes the exact quantities and dependencies that a correct solution should use, allowing generated traces to be checked programmatically step by step and enabling us to test whether correct answers are reliably accompanied by valid traces. We first evaluate models trained exclusively on valid, minimal traces. Answer correctness and trace validity nearly coincide in distribution but decouple out of distribution: on the hardest instances, 31.6% of correct answers have invalid traces, over half of which pass all syntactic and arithmetic checks but fail semantic dependency checks. We then intervene on trace supervision. Non-minimal training traces induce non-minimal outputs, while re-asking the same problem with a different query reveals computations inherited from the original query, weakening minimality as evidence of selective planning. Shuffling tokens in 10% of training trace sentences preserves near-clean accuracy even out of distribution despite no trace passing verification. Swapped training traces likewise retain high in-distribution accuracy. We discuss the implications of these findings for chain-of-thought monitoring and interpretation in the context of AI safety.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2609.38105v1' target='_blank'>FORM: Robot Manipulation through Direct Material Law Identification</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Stepan Tretiakov, Ruihan Zhao, Cheng-Hsi Hsiao, Xingjian Li, Adam Thorpe, Hassan Iqbal, Sandeep Chinchali, Ufuk Topcu, Krishna Kumar</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-09-29 17:46:40</h6>
+<p class='card-text'>When interacting with an unfamiliar deformable material, a robot lacks prior knowledge of its physical properties and how it will respond to applied forces and motion. Rapid online identification is therefore essential for reliable manipulation. We present FORM (From Observed Response to Material laws), which identifies material properties from a single robot interaction and reuses the recovered model to plan manipulation under new actions and geometries. We use weak-form momentum balance to convert observed material motion and contact forces into linear equations in the unknown material parameters. These equations are assembled using the same material point method discretization as the forward simulator, so identification reduces to linear least-squares solves whose solutions can be used directly for prediction without refitting or conversion. Across four material classes, FORM reduces identification time from roughly 10--25 minutes for iterative baselines to 2--5 seconds, while maintaining competitive accuracy on new motions, initial conditions, and geometries. We demonstrate our approach in simulation and on hardware across four manipulation tasks: elastic rod insertion, golf putting with an elastic club, elastoplastic shaping, and target-volume pouring. In each task, the model identified from a single interaction is reused to plan new motions or manipulate a different geometry. FORM estimates elastic properties within 3.4% and elastoplastic properties within 2%, achieves 72.4--77.8% IoU in dough shaping, and keeps mean pouring error at 3.8 mL across target volumes of 60--160 mL.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2609.38059v1' target='_blank'>WorldLine: Action-Driven Visual Simulation for Robotic Manipulation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Shenghe Zheng, Wenbo Li, Jiyao Zhang, Bin Xia, Haoyang Huang, Nan Duan, Jiaya Jia</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-09-29 17:26:22</h6>
+<p class='card-text'>Real-world robot learning is constrained by the cost of collecting experience and evaluating candidate behaviors. Video generation models offer a scalable foundation for visual simulators that predict action outcomes before physical execution. Yet they often favor visual plausibility over accurate action following and coherent robot--object dynamics, while action-conditioned simulators depend on scarce, embodiment-specific data that are difficult to share across incompatible control spaces. We introduce WorldLine, an action-driven visual simulator that decouples transferable dynamics learning from heterogeneous action grounding. WorldLine learns manipulation dynamics from more than 10,000 hours of action-free robot videos and grounds them using over 2,000 hours of action trajectories across more than ten embodiments. An image-space action representation provides a shared control interface across embodiments, while multi-view and failure-enriched training with relational regularization improves interaction-sensitive prediction. Robot-focused few-step distillation enables efficient causal rollout while preserving action-critical motion. Across held-out and out-of-domain settings, WorldLine maintains strong visual quality and robot-motion agreement; on failed trajectories, it improves robot-mask IoU by 0.1626 over the strongest baseline. It predicts trajectory success with 74% mean accuracy across RoboTwin and AgiBot, one percentage point above the strongest baseline. Without RoboTwin training or adaptation, its rollouts improve task success by up to 21.4 percentage points over direct policy execution. Together, these capabilities make WorldLine a scalable and efficient visual simulator for policy evaluation and embodied planning. More results are available at \href{https://zhengsh123.github.io/WorldLine/}{project page}.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2609.38028v1' target='_blank'>doPlan: A Variable-Horizon Dataset for Multi-Stage Language-Conditioned Planning in Autonomous Driving</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Parthib Roy, Yash Tandon, Marcus Blennemann, Giovanni Tapia Lopez, Angel Martinez-Sanchez, Mohan M. Trivedi, Ross Greer</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-09-29 17:08:01</h6>
+<p class='card-text'>Autonomous vehicles interacting with passengers through natural language must reason beyond immediate commands. Passenger intent may span multiple stages of behavior, depend on future events, refer to surrounding agents or landmarks, and remain relevant as driving conditions evolve. Existing language-enabled driving datasets largely focus on short, localized interactions, leaving these longer-horizon forms of passenger intent comparatively underexplored. We introduce doPlan, to our knowledge the first publicly available, human-annotated real-world dataset designed to study passenger language as persistent task context. Built on nuPlan, doPlan contains 5,154 human-written passenger instructions spanning 169.1 hours of cumulative instruction-aligned context over 50.9 hours of unique driving, with annotation windows ranging from 30.0 to 508.8 s. The annotations capture immediate, deferred, event-conditioned, persistent, and multi-stage passenger intent. The dataset, annotation interface, and supporting resources are publicly available at https://github.com/Mi3-Lab/doPlan. We evaluate four language-conditioned driving models and find that sensitivity to passenger language does not reliably translate into behavior consistent with the requested direction. More broadly, among 2,161 examples with a matched future maneuver, the first associated maneuver occurs a median of 24.6 s after the evaluation point, and only 9.8% occur within the models' common 5 s prediction horizon. These findings highlight the need to connect persistent passenger intent with successive planning decisions. doPlan provides a setting for studying how unresolved goals can be retained, grounded in evolving scenes, and tracked across multiple stages, including how a planner determines when a future goal becomes relevant to the current plan.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2609.37970v1' target='_blank'>PhysWAM: Physically Consistent World Action Model for Autonomous Driving</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Dhruv Parikh, Fengcheng Yu, Quankai Gao, Jiawei Yang, Junjie Ye, Maulik Bhatt, Thang Vu, Charles Ochoa, Rowan McAllister, Igor Vasiljevic, Rajgopal Kannan, Viktor Prasanna, Vitor Guizilini, Yue Wang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-09-29 16:38:13</h6>
+<p class='card-text'>World-action models (WAMs) jointly predict how a scene will evolve and how an agent should act, however joint generation alone does not necessarily impose a shared geometric constraint on these predictions. We present PhysWAM, a unified world-action model for autonomous driving that co-denoises multiview video, metric depth, and ego motion within a single flow-matching transformer. To ground world and action generation in measured scene geometry, we introduce Coupled Point Projection (CPP) that unprojects the generated depth into 3D points, transforms them using the generated $\mathrm{SE}(3)$ ego motion, and minimizes their distance to LiDAR points transformed using the recorded ego motion. This geometric constraint promotes physical consistency with the measured scene by jointly supervising generated depth and motion alongside their standard flow-matching objectives. At inference, trajectory selection relies only on a simple label-free consensus rule, with no learned scorer or simulator feedback. We evaluate PhysWAM across NAVSIM v1 and v2 planning, zero-shot closed-loop transfer, and future video and metric-depth prediction. Despite PhysWAM's simple selection procedure, it achieves strong planning performance and transfers zero-shot to unseen driving environments. It also generates accurate metric depth and temporally coherent video, with CPP improving both planning and depth prediction. Together, these results demonstrate that the geometric relationship between scene depth and ego motion provides a direct way to couple world and action generation within a simple unified model.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2609.37924v1' target='_blank'>Time-Anchored Diffusion Language Models: Latent-Space Caching for Fast Generation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Joel Anto Paul, Litu Rout, Aditya Akella, Sanjay Shakkottai</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-09-29 16:16:26</h6>
+<p class='card-text'>Recent work on anchored diffusion language models improves denoising by shaping an intermediate latent space with supervised important-token targets. In this work, we introduce time-based (self-supervised) anchoring, which learns and reuses latent anchors without requiring such targets. Our key observation is that anchors encode persistent properties of the clean sequence, such as its semantic intent, global structure, or intermediate plan. Although their hidden representations become stale as the token canvas evolves, their semantic content remains useful across nearby diffusion times. This is implemented through a two-stage architecture consisting of a relatively expensive anchor network that generates the latent cache state and a lightweight denoising network that intelligently combines the cached latent state with the current state at each reverse step using a fusion module. This gives anchoring a latent-space caching interpretation: the anchor network is evaluated periodically, while its cached representation is reused across multiple reverse steps. We instantiate this framework as TADM:Post-train, which time-anchorizes pretrained DLMs, and TADM:Pretraining, which learns time-based anchors during pretraining. Applied to DiffusionGemma-26B, TADM:Post-train improves throughput by approximately 49% to 79% on several math, code, and STEM benchmarks (GSM8K, AIME26, GPQA-Diamond, LiveCodeBench-v6, HumanEval, MMLU-Pro). TADM:Pretraining reduces Transformer-layer computation by up to 38% relative to a standard single-stage DLM, achieves up to 73% higher measured throughput than ADLM.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2609.37871v1' target='_blank'>ExceptionDrive: A Planning-Oriented Counterfactual Corner-Case Benchmark for Autonomous Driving</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Ziyi Luo, Zhe Sun, Yehao Lu, Lei Zhou, Lisheng Wu, Xuewei Li, Zequn Qin, Xi Li</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-09-29 15:48:16</h6>
+<p class='card-text'>Average performance on routine driving benchmarks does not establish planner reliability under rare, safety-critical hazards. We proposed ExceptionDrive, a counterfactual planning benchmark that uses VLM-assisted screening, localized multi-view editing, and quality auditing to insert hazards into real nuScenes scenes while preserving their context. Its 21 tasks span six safety families and define hazard or conflict regions, local safety constraints, and acceptable responses. Because hazard insertion can invalidate the recorded human trajectory, our reference-free protocol evaluates edited predictions using Unsafe Rate (UR), Hazard Clearance Compliance (HCC), Hazard Proximity Response (HPR), and Counterfactual Trajectory Shift (CTS), which measure core-region intrusion, clearance compliance, clearance relative to a prescribed margin, and counterfactual trajectory change. Seven representative planners frequently intrude into hazard regions or provide insufficient clearance. We also develop a Reminder Agent that, without sample-specific task labels, converts visual evidence and the shared taxonomy into structured records of hazard presence, type, and a recommended high-level strategy. The agent neither predicts trajectories nor controls the vehicle; its records guide a VLM-based decision agent. In zero-shot experiments, the reminders improve strategy accuracy and reduce under-warning.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2609.37818v1' target='_blank'>Thinking in Depth, Speaking Directly: Recurrent Latent Reasoning for Paralinguistically Grounded Spoken Dialogue</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Shengbo Cai, Yuxiang Wang, Jingran Xie, Zhisheng Zhang, Shun Lei, Di Cao, Teddy Sun, Zhiyong Wu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-09-29 15:28:13</h6>
+<p class='card-text'>Empathetic spoken dialogue requires models to use both what is said and how it is said to decide how to respond. Explicit CoT can improve paralinguistic perception and make acoustic cues more explicit in replies, yet does not ensure their effective use in response planning. We call this mismatch the perception-reasoning gap. In addition, CoT may not fully capture acoustic cues in words, and generating it adds inference latency. To address these limitations, we introduce LoopSLM, which builds on looped Transformers for latent reasoning, reusing a decoder block to refine hidden states with acoustic grounding at every pass. Its two-stage training further narrows the perception-reasoning gap by separating learning to reason from learning to respond, enabling direct inference without CoT. On EchoMind, LoopSLM improves paralinguistic understanding, reasoning, and reply quality over Qwen2.5-Omni-7B. Against the CoT-SFT baseline, LoopSLM gains over 20 points in reasoning accuracy while generating 64.5% fewer tokens at half the latency. It also outperforms Qwen3-Omni-Thinking on most empathetic reply metrics with 34x lower latency. Despite training only on dialogue data, LoopSLM improves accuracy on general audio benchmarks.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2609.37734v1' target='_blank'>Recompositional Robotics: Cross-Domain, Open-set, and Lifelong Modularity Beyond Morphology</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Steven Swanbeck, Jonathan Salfity, Corrie Van Sice, Robert Blake Anderson, Mitch Pryor</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-09-29 14:54:09</h6>
+<p class='card-text'>Research in modular robotics has produced capable approaches allowing a robot's morphology to change online, with recent efforts also developing approaches to decide which morphology to assume and automatically propagate that decision into the robot's motion planning and control. These approaches are powerful and increase adaptability in the field. However, an alternative objective is not to build robots whose structures can change, but robots whose fundamental capabilities can change, where capability is a joint function across several domains, including kino-dynamics, perception, compute, and high-level coordinating behaviors. A robot designed to be reconfigured across these domains has a greater capacity to alter its capability than one that can be reconfigured in a single domain. We refer to this cross-domain reconfigurability as integration span, and recognize a complementary measure of the resistance to reconfiguration, which we refer to as integration inertia. Current modular robots have reduced integration inertia in the structural domain while it remains high in the other domains that contribute to integration span. We assert that the systems that can provide the most utility through reconfiguration in practice are those maximizing span and minimizing inertia and call this general problem recompositional robotics: adaptation over a heterogeneous set of modules including hardware, software, compute, and behavior that abstracts each component by the interfaces it requires and provides such that they can be reasoned over holistically. We define the problem, ground it in two deployed systems and active research efforts, and pose open questions about the future of recompositional robotics.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2609.37681v1' target='_blank'>ProAct-VLM: Pre-Failure Vision-Language Task Replanning with Continuous Perception Feedback</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Ahmed Nader Ahmed, Omar Moured, Mughni Irfan Mohammed Abdul, Muhayy Ud Din, Irfan Hussain</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-09-29 14:30:35</h6>
+<p class='card-text'>Long-horizon robotic tasks are vulnerable to unexpected environmental changes that can render planned actions ineffective or unsafe. To address this, robots must detect such changes as they occur, interpret their impact, and adjust their actions accordingly. Traditional rule-based decision-making pipelines are brittle in open-world conditions, as they are hand-tuned for specific scenarios and lack generalization. Vision-Language Models (VLMs) offer a promising alternative as they combine broad world knowledge with unified visual--text reasoning, enabling them to generalize across diverse scenarios and generate accurate, grounded task plans. However, for effective deployment in dynamic real-world settings, VLMs must be embedded into frameworks capable of handling uncertainty and environmental changes. Existing frameworks broadly address this reactively, triggering replanning only after execution failures or post-task checks, risking failed actions. Some methods verify conditions before actions, but these discrete checks miss changes occurring during execution. To address this, we present ProAct-VLM, an adaptive, physically grounded task planning framework that integrates VLMs within a real-time perception--feedback loop. ProAct-VLM continuously monitors the environment and re-plans as soon as relevant changes are detected, enabling adaptation before failure occurs. Evaluations against multiple baselines and across different VLM backbones show that our framework improves both success rates and efficiency in dynamic, long-horizon manipulation tasks. Project page: https://github.com/moured/ProAct-VLM</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2609.37666v1' target='_blank'>Semantic Map Sharing and Capability-Aware Coverage Planning for AI-Native 6G Robotic Coordination</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Abdulqader Dhafer, Qi Wang, Zhou Daniel Hao</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-09-29 14:23:23</h6>
+<p class='card-text'>Search and Rescue (SAR) operations increasingly deploy heterogeneous teams of aerial and ground robots. However, conventional coverage methods typically do not translate perceived terrain into platform-specific reachability, while continuous image exchange imposes a high communication cost. We propose an edge-centric, semantic-aware coverage planning framework that integrates aerial terrain perception, robot-specific traversability reasoning, and payload-efficient semantic state sharing. Aerial observations are converted into compact semantic grid maps, enabling reachability-constrained area decomposition and capability-aware coverage paths that assign only regions admitted by each robot's capability profile. The resulting perception-sharing-planning loop feeds semantic corrections into traversability reasoning and replanning, forming an application-level mechanism motivated by AI-enabled goal-oriented communication envisioned for AI-native 6G networks. For the high-update case, transmitting semantic corrections reduces the application payload by a factor of approximately $82$ relative to periodic full-map sharing. Across matched benchmark scenarios, the proposed method achieved $91.5\%$ coverage with no capability-infeasible allocations, compared with $78.8\%$ coverage and a $21.5\%$ capability-infeasible allocation rate for LS-MCPP. Semantic corrections update the shared planning state without requiring repeated transmission of the complete map.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2609.37660v1' target='_blank'>Nonpreemptive Scheduling While Learning Context-Dependent Service Rates</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Wansoo Choi, Seoungbin Bae, Dabeen Lee</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-09-29 14:20:41</h6>
+<p class='card-text'>We study nonpreemptive contextual queueing bandits in a single-server system. Each job is represented by a $d$-dimensional context vector; in each round, a job may arrive with its context drawn from an unknown distribution $\mathcal{D}$, and its departure probability is determined by a logistic model of that context vector with an unknown parameter $θ^*$. The server learns from service outcomes while deciding which waiting job to serve and whether to idle, aiming to minimize queue-length regret, the gap between its expected terminal queue length and the minimum achievable by an admissible policy. Once selected, a job must be served until completion, and we refer to this as the nonpreemptive setting. A central challenge is that, even with full model knowledge, the optimal policy cannot in general be characterized by a simple myopic rule, since the optimal action can change with the remaining horizon at the same queue state. Nevertheless, when the model and horizon are known, the optimal action can be obtained through a finite-horizon Bellman recursion. Motivated by this, we propose Learn--Clear--Plan (LCP), which estimates the system and uses the resulting Bellman recursion to make horizon-dependent decisions. LCP achieves $\widetilde{O}(\sqrt{d/T})$ queue-length regret, while a lower-bound construction gives $Ω(\min\{1/\sqrt{d},\sqrt{d/T}\})$ regret for every learning policy on some instance, establishing optimality up to polylogarithmic factors when $T\ge d^2$. When the horizon is unknown, no horizon-independent policy achieves vanishing regret against the finite-horizon optimum. We therefore use SEPT, the policy that serves a waiting job with the highest probability of departure, as a fixed reference, and suggest an estimated-SEPT algorithm that achieves a tracking error of $\widetilde{O}(\sqrt{d/t})$ without knowing the model.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2609.37644v1' target='_blank'>Beyond a single latent space: a dual-latent world model for long-horizon planning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Delin Zhao, Zhengrong Yue, Shaobin Zhuang, Junlin He, Xiaoyu Chen, Zikang Wang, Yuxin Liu, Limin Wang, Yali Wang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-09-29 14:12:33</h6>
+<p class='card-text'>Latent world models often struggle with long-horizon planning despite accurate short-term predictions. Recursive rollouts accumulate errors, while distance concentration in high-dimensional latent spaces can weaken goal discrimination. We introduce the Dual-Latent World Model (Dual-WM), which separates local execution and long-range planning through distinct state representations and dynamics models. The low-level model predicts action-conditioned transitions, while the high-level model uses learned macro-actions to plan over longer temporal spans. We also propose Long-Horizon Representation Learning with Weighted Rollout (LoRe), which supervises self-generated predictions at both levels. An analysis of recursive error propagation motivates exponential horizon weights with separate decay rates for the two temporal scales. During planning, the high-level model generates latent subgoals that the low-level model refines into actions for precise execution. We evaluate from-scratch Dual-WM on five goal-conditioned visual control tasks against the task-wise strongest baselines without actor-guided proposals. At goal offsets of 50 and 100 environment steps, mean success increases from 75.9% to 84.4% and from 61.4% to 69.5%, respectively. At offset 100, Dual-WM outperforms these baselines on all five tasks and improves mean success over LeWM by 30.8 percentage points. Ablations and supporting analyses provide evidence of more informative representations for goal evaluation and greater consistency under recursive prediction. These results highlight the value of separating temporal roles and training across multiple horizons for reliable latent planning. Our core implementation is available at https://github.com/DeLin1001/Dual-WM-Official.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2609.37612v1' target='_blank'>Cascaded consensus splitting for multi-branch contingency games</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Bastien Lechardoy, Pau de las Heras Molins, Thibault Lahire, Laurent Pautet, David Filliat, David Fridovich-Keil, Georgios Bakirtzis</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-09-29 13:56:58</h6>
+<p class='card-text'>Contingency games enable agents to anticipate and plan for other agents' hypothetical intents by constructing trajectories with a shared prefix and intent-dependent branches. While contingency games capture intent uncertainty, existing formulations rely on a single branching time, oversimplifying interactions in which different agents' intentions are revealed at different times. Moreover, the computational cost of such problems grows rapidly with the number of agents and intents, as all scenario-dependent best responses must be solved jointly. We introduce a multi-branch contingency architecture in which sources of intent uncertainty can be resolved progressively at different branching times, allowing the planned trajectories to adapt to the asynchronous revelation of intents. We also develop an ADMM-based solver that exploits scenario-level parallelism. Experiments on tightly coupled three-agent interactions support that the proposed architecture outperforms the conventional single-branch while achieving a lower mean receding-horizon solve time.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2609.37588v1' target='_blank'>Rational Clarification by Assistive Agents via Value-of-Information Reasoning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:T. Duy Nguyen-Hien, Yee Whye Teh, Wee Sun Lee, Tan Zhi-Xuan</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-09-29 13:44:20</h6>
+<p class='card-text'>Users of language-based assistive agents often make ambiguous requests. In response, an assistant can either directly act on its interpretation of the request --- risking misalignment with the user --- or ask a clarifying question. Which option is the most safe and helpful? A common approach is to ask questions that minimize uncertainty about the user's intent until a threshold is reached. However, this neglects the impact of uncertainty reduction on downstream performance, the costs of asking versus acting immediately, and the possibility that users may provide corrections without being asked. To navigate these trade-offs, we introduce Rational Enquiry via Value-of-Information Reasoning (REVOIR). REVOIR makes clarification decisions via inference-time reasoning about the value-of-information of a question, which captures the expected improvement in task reward due to the answer received. In two assistive tasks --- ambiguous question answering (CondAmbigQA) and preference-aligned household task planning (ADAPT) --- we show that REVOIR achieves greater success with fewer questions than approaches based on prompting, chain-of-thought, fine-tuning, or information gain, improving preference satisfaction on ADAPT by 13-15% over a fine-tuned clarification policy while requiring no training and asking five times fewer questions. Furthermore, when the assistant can receive cheap user corrections after acting, REVOIR naturally infers that asking questions is not always efficient, demonstrating the adaptivity of our approach. In contrast, we find that vanilla reasoning agents fail to adaptively clarify user requests, and request fewer clarifications as reasoning effort increases.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2609.37441v1' target='_blank'>Anisotropic Representations Improve Planning in JEPA World Models</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Mingu Kang, Yoori Oh, Sookyung Kim, Joonseok Lee</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-09-29 13:00:37</h6>
+<p class='card-text'>Latent world models learn action-conditioned dynamics in representation space and often score candidate actions by Euclidean distance to a goal representation. Joint training typically regularizes the representation to prevent collapse, but the resulting representation geometry also determines how terminal errors are weighted during planning. We show that accurate prediction and noncollapsed representations do not guarantee a task-aligned latent planning cost: isotropic Gaussian regularization can induce a geometry that ranks feasible outcomes differently from the task cost. To address this mismatch, we introduce AnisoWM with $Λ$Reg, which replaces the fixed isotropic Gaussian target with a learnable diagonal covariance under fixed-trace and anisotropy constraints. The prediction objective, predictor architecture, and Euclidean planner remain unchanged; the target is used only during training. Our analysis characterizes the prediction-driven allocation of target variance, its dependence on the training distribution, and the conditions under which the induced metric reduces planning regret. Across four visual control environments, AnisoWM improves planning success over LeWorldModel in all four. Its latent planning cost also shows better agreement with task outcomes. Project website: https://rkdrn79.github.io/AnisoWM-page/</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2609.37432v1' target='_blank'>Looped Actor: Depth-Recurrent Reasoning Models for Reinforcement Learning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:T. Konstantin Rusch, Tim Seyde, Jared Boyer, Zach J. Patterson, Daniela Rus</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-09-29 12:57:04</h6>
+<p class='card-text'>Looped reasoning models repeatedly apply a shared set of parameters, enabling more computation without increasing the model size. These models also support input-dependent computation by dynamically deciding when to stop looping. Motivated by the recent success of looped transformers in language modeling and reasoning, we investigate whether dynamic looping can similarly benefit sequential decision-making. We provide a complexity-theoretic motivation for this approach by showing that there exist Markov decision processes in which a state-adaptive policy achieves the optimal return with asymptotically less expected computation than any optimal fixed-runtime policy. To learn compute-adaptive policies in practice, we introduce Looped Actor, a transformer-based policy that repeatedly refines a latent representation toward a fixed point using a shared computational block. This allows the model to allocate computation adaptively by varying the number of loops based on the current state. We evaluate Looped Actor on 22 tasks across six environments, ranging from combinatorial puzzles to robotic manipulation and spanning online and offline reinforcement learning (RL) with discrete and continuous actions. Looped Actor matches or exceeds the performance of an untied baseline with 16$\times$ more parameters, with the largest gains in environments where action selection requires substantial multistep planning. For the Boxoban environment, we find that the computation allocation is structured: the number of loops increases with the number of remaining pushes and future optimal pushes become increasingly predictable from the latent state over successive loops. Together, these results highlight actor looping as a simple and efficient way to equip RL agents with adaptive computation and improve their planning capabilities. Code is available at https://github.com/camail-official/LoopedActor</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2609.37419v1' target='_blank'>Towards Spatial Perception for Heterogeneous Robot Collaboration in Subterranean Mining Environments</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Mario Alberto Valdes Saucedo, Akash Patel, Christoforos Kanellakis, George Nikolakopoulos</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-09-29 12:49:00</h6>
+<p class='card-text'>The autonomous extraction of deep mineral deposits in abandoned underground mines is fundamentally a multi-agent integration problem. No single platform simultaneously offers the mobility to traverse kilometers of degraded drifts and the sensing payload required to characterize an ore body. This article presents the onboard perception pipeline that bridges two heterogeneous agents within the PERSEPHONE autonomous mining mission. Which consist of a lightweight Explorer robot that maps an unknown mine and generates a 3D scene graph of inspection targets, by running a zero-shot, vision-language semantic segmentation stack that detects mineral deposits directly from natural-language prompts. The map and the graph are then handed to a second Inspector robot, which carries an advanced sensing payload and uses them to plan close-range inspection viewpoints. We detail the complete pipeline, with emphasis on the geometric abstraction that turns raw detections into actionable inspection targets, spanning per-view bounding-box generation, cross-view box merging, plane fitting, and polygon extraction, and we report an extensive field validation in a subterranean test facility and in an active magnesite mine, covering both iron-vein and magnesite mineralization under realistic, perceptually degraded conditions.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2609.37386v1' target='_blank'>Anatomy-Aware Prediction of Bronchoscopic Accessibility from 3D CT</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Linkai Peng, Cuiling Sun, Bin Wang, Jamie Rowell, Catherine Gao, Oyku Ikizgul, Eminenur Sentasci, Andrea Bejar, Halil Ertugrul Aktas, Gorkem Durak, Momen Wahidi, Christopher Kapp, Ulas Bagci</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-09-29 12:34:02</h6>
+<p class='card-text'>Pre-operative planning for bronchoscopy is critical for the diagnosis of lung lesions. Current accessibility assessment relies on subjective manual inspection of CT scans, which is time-consuming and prone to inter-observer variability. In this paper, we formalize bronchoscopy accessibility prediction as a novel supervised learning task and present the first end-to-end framework to address it. We propose an Anatomy-Aware Mixture-of-Experts (MoE) model that integrates specialized modules: a CT Expert for local morphological features, a Lobe Expert for anatomical priors, and a Path Geometry Expert that encodes the sequential constraints of the bronchial tree. To support this task, we curated the first clinical dataset of 438 cases with pre-operative CT scans and documented procedural outcomes. Experimental results demonstrate that our method achieves an AUROC of 0.8052, significantly outperforming both state-of-the-art baselines and experienced human experts. This work establishes a new benchmark for computer-aided interventional planning in pulmonary medicine. Our data and code will be publicly available at https://nubagcilab.github.io/BronchoAccess/.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2609.37348v1' target='_blank'>DROM: A Language-Guided Diffusion Framework for Multi-Skill Robotic Manipulation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Vincenzo Pomponi, Rocco Felici, Paolo Franceschi, Stefano Baraldo, Oliver Avram, Loris Roveda, Luca Maria Gambardella, Anna Valente</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-09-29 12:15:48</h6>
+<p class='card-text'>Learning robust manipulation policies for diverse, long-horizon tasks from limited demonstrations remains a fundamental challenge in robotics. We present DROM, a language-guided diffusion framework that enables robots to learn, represent, and compose multiple manipulation skills within a single generative policy. DROM leverages Dynamic Movement Primitives (DMPs) to augment a small set of expert demonstrations into expressive multi-skill datasets, substantially reducing data collection while improving spatial generalization beyond the demonstrated workspace. Building upon Motion Planning Diffusion (MPD), we extend the diffusion architecture to support language-conditioned multi-skill trajectory generation through cross-attention, allowing a single model to generate skill-consistent motions for a diverse set of manipulation primitives, including orientation-sensitive behaviors that are difficult to design using conventional motion planning or hard-coded controllers. For long-horizon manipulation, a large language model decomposes high-level operator requests into executable sequences of skills, enabling natural language interaction and autonomous task execution. We validate DROM on a Franka Emika Panda robot, a FANUC CRX25ia robot, and in MuJoCo simulation across a wide range of manipulation tasks. Experimental results demonstrate that DROM outperforms Motion Planning Diffusion and Behavior Cloning baselines, achieves robust multi-skill generalization, and composes learned skills to reliably execute long-horizon manipulation tasks from natural language instructions using only a limited number of human demonstrations. Datasets, simulation environments, and more at https://github.com/automation-robotics-machines/drom.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2609.37295v1' target='_blank'>From Demand to System Co-Shaping: A Review of User Roles in Transportation Systems</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Fangting Zhou, Balazs Kulcsar, Jelena Andric</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-09-29 11:35:48</h6>
+<p class='card-text'>Users are central to transportation systems, yet their roles are often simplified in transportation modeling and decision-making. Conventional approaches primarily represent users through demand-related inputs, such as trip flows, delivery requests, and charging loads. However, digital, electrified, and platform-based services create more direct user-system interactions, with users responding to prices, incentives, service availability, and information in ways that can influence operational and planning decisions. This review develops a concept-oriented, taxonomy-based synthesis of how user-related information is represented and used in transportation decision-making. Rather than organizing the literature primarily by transport domain, we distinguish three user roles: passive demand, operational agents, and system co-shapers. Drawing on studies across transportation electrification, urban logistics, shared mobility, multimodal transport, and Mobility-as-a-Service (MaaS), the review examines how user preferences, flexibility, willingness to pay, acceptance, participation, and feedback are incorporated into modeling and decision frameworks. The synthesis shows that progress has been made in measuring and predicting user behavior, but user-related variables are still often used mainly for behavioral analysis rather than as actionable inputs to system decisions. Their integration into operational decision-making remains incomplete, and systematic feedback from operational user responses and outcomes to long-term planning is even more limited. Key challenges include closing the loop between operation and planning, modeling heterogeneous and strategic users, integrating optimization with user acceptance, and ensuring privacy, equity, and deployability. Together, these findings point toward a shift from user-behavior analysis to user-informed and user-driven transportation system design.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2609.37291v1' target='_blank'>Learning Universal Costs via Multi-Observation Inverse Optimal Transport</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Chenglong Bao, Zanyu Li, Defeng Sun</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-09-29 11:31:53</h6>
+<p class='card-text'>Classical Inverse Optimal Transport (IOT) typically infers a cost function from a single observed transport plan, which may be sensitive to noise and observational biases in practice. To address this limitation, we propose the Multi-Observation Inverse Optimal Transport (M-IOT) framework, which learns a universal cost function from multiple transport plans. We reformulate the resulting bilevel optimization problem into a tractable single-level convex program and characterize the existence and geometric structure of the optimal solution set. Moreover, we propose a Block Coordinate Descent with Anderson-type Extrapolation (BCDwAE) algorithm and establish its Q-linear convergence. Extensive experiments on synthetic data, urban mobility flows, and e-commerce recommendations demonstrate that M-IOT reduces recovery error compared to single-observation baselines and extracts robust structural patterns from noisy multi-view data.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2609.37156v1' target='_blank'>Lucid Dreaming for World Models: Learning to Doubt Imagination and Decide by Trust</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Ziqi Wen, Ting Xu, Lianyu Wang, Xian Lin, Yanda Meng, Huazhu Fu, Meng Wang, Ching-Yu Cheng</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-09-29 09:46:19</h6>
+<p class='card-text'>World models enable agents to learn and plan in imagination, but predictions beyond their experience can become unreliable and mislead decisions. Existing uncertainty estimates derived from predictions can remain overconfident on unfamiliar state-action pairs. We propose the Lucid World Model (LucidWM), which learns doubt from experience and propagates trust through imagination. By integrating Subjective Logic into categorical latent transitions, LucidWM distinguishes predicted outcomes from their evidential support and assigns each transition a degree of doubt. The complement of this doubt defines transition-level trust, which accumulates multiplicatively along imagined trajectories to reweight returns for policy learning and guide action selection. Uncertainty estimation requires no additional parameters or forward passes. Evaluated on four base world models against seventeen uncertainty readouts, LucidWM detects environmental changes and signals uncertainty during action-corrupted rollouts. In a controlled navigation case study, acting on trust reduces the number of steps required to reach the goal from 362 to 190. Fifteen demonstration videos show how LucidWM doubts its dreams and acts on that doubt. Videos are available at https://lucidwm.github.io.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2609.37117v1' target='_blank'>Input to the SCAC Facilities Subcommittee from the U.S. Muon Collider Collaboration</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:S. Jindariani, T. Holmes, P. Meade, K. DiPetrillo, K. Kennedy, L. Lee, S. Pagan Griso, D. Stratakis</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-09-29 09:27:59</h6>
+<p class='card-text'>This document presents input from the U.S. Muon Collider Collaboration to the SCAC Facilities Subcommittee. It outlines the scientific motivation for a future Muon Collider, the R&D and demonstration program needed to establish its feasibility, and its relevance to U.S. facilities planning for 2026-2036. It also discusses opportunities for leveraging existing U.S. capabilities, developing the accelerator workforce, and building synergies with other DOE programs and international efforts.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2609.37098v1' target='_blank'>V2X-WAM: A Cooperative World Action Model for End-to-End Autonomous Driving</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Junwei You, Weizhe Tang, Can Wang, Yan Zhao, Jun Hua, Haotian Shi, Wei Zhang, Lin Wang, Bin Ran</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-09-29 09:20:07</h6>
+<p class='card-text'>Vehicle-infrastructure cooperation can complement onboard sensing with broader and more informative observations of the traffic environment, providing valuable support for end-to-end autonomous driving. However, existing cooperative driving methods mainly exploit roadside information to enhance the representation of the current scene, while the future consequences of prospective driving actions are rarely modeled explicitly. This limits the ability of the planner to anticipate how its decisions may interact with the evolving traffic environment. To address this issue, we propose V2X-WAM, a cooperative world action model that tightly couples cooperative scene understanding, action generation, and future-world reasoning. V2X-WAM constructs a reliability-aware spatiotemporal representation from vehicle- and infrastructure-side observations, while compressing infrastructure information into a compact quantized message for efficient communication. Based on the resulting cooperative representation, a multimodal planner generates prospective trajectories, which explicitly condition future occupancy and dynamic-flow prediction. The predicted world consequences are then fed back to refine the planned trajectory, forming a closed interaction between action and future-world evolution. Experiments on a large-scale real-world cooperative driving dataset demonstrate that V2X-WAM consistently improves planning accuracy and safety over representative end-to-end cooperative driving methods, while achieving stronger future-world prediction and substantially lower communication overhead. Ablation studies further validate the effectiveness of the proposed design.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2609.37067v1' target='_blank'>FACT: Fidelity-Aware Construction of Articulated Twins</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Kuixiang Shao, Chuansen Nie, Yinuo Bai, Jiayuan Gu, Jingyi Yu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-09-29 09:04:34</h6>
+<p class='card-text'>Visually plausible articulated assets may still fail during contact interactions or exhibit inaccurate motion. We present FACT (Fidelity-Aware Construction of Articulated Twins), an agentic framework that progressively constructs articulated twins to improve geometry, contact, and dynamic fidelity. The agent drives an evidence--diagnosis--revision loop on a shared editable representation, selecting measurements and model edits using quantitative feedback, while numerical tools execute and validate the updates. It reconstructs editable articulated geometry from images through feature planning, targeted measurements, and diagnostic refinement. On this reference, it repairs collision proxies through task-aware local repartitioning before fidelity-constrained compression. Finally, it constructs response models from passive-response videos, using simulation residuals to guide model revision and constrained physical parameter fitting. Experiments show that FACT improves geometric reconstruction over baselines, enables more reliable interaction with simpler collision proxies, and better reproduces held-out physical responses than direct parameter inference.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2609.37046v1' target='_blank'>Speed in the Blind Spot: An Interpretability Analysis of Dynamic Perception in VLMs for Autonomous Driving</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Katharina Winter, Stefan Englmeier, Fabian B. Flohr</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-09-29 08:54:45</h6>
+<p class='card-text'>Vision-Language Models are increasingly used in autonomous-driving systems, yet their ability to recover dynamic physical state from visual input remains insufficiently characterized. We study velocity understanding as a controlled diagnostic across three tasks: surrounding-agent speed, current ego speed, and short-horizon future ego-speed proposal. On nuScenes, we evaluate open-weight general-purpose and PhysicalAI VLMs, together with the driving-oriented Alpamayo-1.5 Vision-Language-Action model, using multiple input and output formulations. We combine verbal evaluation with temporal perturbations, counterfactual ego-speed hints and linear probes of hidden representations. The tasks exhibit distinct failure modes. Surrounding-agent speed is weakly encoded in an agent-specific form, whereas current ego speed is often internally accessible but poorly verbalized: continuous probes achieve 4.7-5.8 km/h MAE compared with 10.2-16.8 km/h MAE for verbal outputs. Multiple frames provide inconsistent verbal gains to single frame inputs, and frame order is rarely exploited. Under non-optimized QLoRA, task-specific adaptation improves both task-relevant latent speed representations and verbal readout, but continuous surrounding-agent speed estimation remains weak, while most future-speed gains survive frame shuffling, indicating limited temporal grounding. Driving specialized Alpamayo-1.5 shows stronger latent representations for surrounding-agent and future ego speed, while current ego-speed decodability is comparable and substantial probe-verbal gaps remain. Thus, driving specialization can strengthen motion representations but does not guarantee stronger encoding across both scene and ego states or reliable readout. The results show that plausible planning outputs do not necessarily imply reliable recovery or temporal grounding of the underlying dynamic state.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2609.36927v1' target='_blank'>Neuro-Symbolic Computer Use: Learning Reusable Policies for Reliable and Efficient Execution</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Hyewon Suh, Thanh Minh Nguyen, Chih-Lun Lee, Darrow Hartman, Lizhao Liu, Xin Eric Wang, Ang Li, Jiachen Yang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-09-29 07:44:22</h6>
+<p class='card-text'>Many computer tasks recur: the same workflow runs many times, with new inputs and from different starting states. Current computer-use agents re-plan every step of every run, which makes them costly and unreliable on such tasks. We introduce neuro-symbolic computer use, in which a recurring workflow is executed by a learned policy rather than re-derived by an agent on each run. The policy fixes the decisions that are stable across runs (ordering, variables, loops, and branches) in executable code, and delegates observation-dependent decisions, such as grounding and state checks, to neural models. We learn these policies with neuro-symbolic policy iteration: starting from one agent trajectory, it executes the policy, diagnoses failures with task-completion and step-level judges, and revises the code with a coding model informed by an agent's continuation from the point of failure, without access to the benchmark evaluator. Iterating on generated parameter and initial-state variants makes the policy reusable, and a pre-action verifier guards each state-mutating step at deployment. On OSWorld-Verified and ScienceBoard, the learned policies achieve the highest Pass^3 of all methods in all four settings, 3.6-15.8 points above the base agent, while cutting per-run cost by 15-217$\times$ and latency by 3.4-5.1$\times$. On OSWorld-Verified, policies built only on variants transfer to the held-out original tasks, exceeding AutoRPA by 8.6-17.5 points in Pass^3.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2609.36896v1' target='_blank'>HorizonFlow: Variable-Length Planning for Offline Goal-Conditioned RL</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:JunHyeok Oh, Zian Jang, Byung-Jun Lee</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-09-29 07:23:00</h6>
+<p class='card-text'>Recent advances in generative planning have made trajectory inpainting a promising approach to offline goal-conditioned reinforcement learning. However, these methods typically specify the planning horizon before generating plan content, even though the appropriate horizon depends on the route itself. A horizon that is too short can force infeasible transitions, whereas one that is too long can introduce redundant motion. We introduce HorizonFlow, a hierarchical planner that treats plan length as an output of generation rather than a prescribed input. Its subgoal route planner guides its action-prefix controller through a sequence of latent subgoals. Both components combine insertion-based generation with flow matching to jointly generate continuous plan content and length, using the partially generated plan to guide token insertion. HorizonFlow reuses the resulting length information to select candidates and steer generation toward shorter plans without a separate learned value model. Across Maze2D, Multi2D, and OGBench navigation and visual manipulation benchmarks, HorizonFlow achieves the highest average performance among the compared methods.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js'></script>
+</body>
+</html>
