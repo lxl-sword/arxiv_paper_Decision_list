@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>planning - 2026-10-04</title>
+<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap' rel='stylesheet'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css'>
+<style>
+body {
+font-family: 'Roboto', sans-serif;
+background-color: #f5f7fa;
+padding: 20px;
+}
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.card-title {
+    font-weight: 700;
+}
+.card:hover {
+    transform: scale(1.02);
+    transition: 0.3s ease-in-out;
+}
+</style>
+</head>
+<body>
+<div class='container'>
+<h1 class='text-center my-4'><i class='fas fa-book'></i>planning - 2026-10-04</h1>
+<div class='row'>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.02193v1' target='_blank'>Hierarchical Continuous Diffusion Language Models</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Hui Ren, Zihan Li, Chang Liu, Huidong Liu, Alexander Schwing</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-01 17:59:39</h6>
+<p class='card-text'>Discrete diffusion language models offer a compelling alternative to autoregressive generation for tasks demanding bidirectional reasoning and global constraint satisfaction. Yet they share a structural bottleneck: when decoding in parallel, each token is sampled independently from its marginal, severing the statistical dependencies among the tokens decoded together. Continuous diffusion language models avoid this by denoising a shared continuous state, but their denoiser sees only that state, so nothing ties it to a valid token configuration until it is finally decoded. To address this, we propose Hierarchical Continuous Diffusion Language Models (HC-DLM), which couple discrete token generation with a continuous latent trajectory in a single, principled denoising process, whose training objective is derived from a variational bound on the token likelihood. In contrast to recent methods that attach continuous context to a self-contained discrete chain, HC-DLM makes the latent the only persistent generative state: tokens are read out from it at every step and feed back as a scaffold for the next latent update. On structured reasoning (Sudoku), mathematical planning (Countdown) and language modeling (LM1B), HC-DLM improves over discrete and continuous diffusion baselines at matched model size, in puzzle accuracy on Sudoku and Countdown and in generative perplexity on LM1B. Project page: https://hc-dlm.github.io/.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.02161v1' target='_blank'>DuoMind: Enabling Distributed Multi-Robot Coordination with Semantic Communication</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Hanchu Zhou, Dechen Gao, Hang Wang, Brendan Lynch, Boqi Zhao, Qiyao Ma, Raman Goyal, Junshan Zhang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-01 17:53:09</h6>
+<p class='card-text'>Vision-language models (VLMs) and vision-language-action models (VLAs) have recently driven rapid progress in general-purpose robots, yet most progress has focused on single-robot settings. Extending these capabilities to multi-robot systems remains challenging because robots must coordinate long-horizon behaviors while maintaining reliable, fine-grained execution. We introduce DuoMind, a distributed hierarchical framework for multi-robot coordination through semantic communication. Each robot uses a VLA-based action model for low-level execution and a VLM-based orchestrator for high-level reasoning and inter-agent coordination. At each planning step, the orchestrator at each robot reasons over the task instruction, local observations, and messages received from other robots. It then generates low-level instructions for the action model and semantic messages for peer robots. This architecture exploits the complementary strengths of pretrained models by combining the semantic reasoning capabilities of VLMs with the precise action-generation capabilities of VLAs. To address the scarcity of benchmarks for multi-robot coordination, we further develop RoboPoly, a benchmark comprising long-horizon manipulation tasks that require coordinated, closed-loop execution under distributed control. Experiments on RoboPoly and RoboTwin demonstrate that DuoMind improves multi-robot task performance, while ablation studies confirm the contributions of hierarchical orchestration and semantic communication. More details are available on our project page.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.01985v1' target='_blank'>H-SPAR: Hydrodynamic-aware Simulation for Particle Transport and Autonomous Robots</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Navid Zarrabi, Nariman Yousefi, Sajad Saeedi</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-01 16:26:17</h6>
+<p class='card-text'>Environmental robotic sampling requires considering the dual influence of water currents on robotic motion and particle transport. Existing marine robotics simulators generally model flow, autonomy, and sampling targets separately, limiting joint evaluation of mission cost and sampling performance. H-SPAR integrates spatially and temporally varying velocity fields, Lagrangian particle transport, probabilistic sampling, and ROS 2/Gazebo-based uncrewed surface vehicle (USV) autonomy. In this work, shared precomputed flow fields drive particle advection and current-induced forces during closed-loop vehicle execution. Path-planning experiments show that the existing current-aware planner SVF-RRT* achieves 69.4% lower upstream cost than conventional RRT* at the planning level, but this reduction falls to 41.7% during execution under time-varying currents, reflecting temporal flow variation, vehicle motion constraints, and path deviation omitted during planning. Coverage experiments show that sweep orientation changes the particle-sampling rate by up to 22.2% under the complete H-SPAR configuration. These findings highlight the importance of evaluating planning, vehicle execution, particle transport, and sampling together under consistent hydrodynamic conditions. The project webpage is available at https://sites.google.com/view/h-spar, and the open-source code is available on GitHub at https://github.com/naviiidz/h-spar-sim.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.01972v1' target='_blank'>BLT*: Informed Belief Localization Trees for Uncertainty-Aware Planning on Digital Twins</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Elliot Preston-Krebs, Abhishek Goudar, Timothy D. Barfoot</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-01 16:21:29</h6>
+<p class='card-text'>We present Informed Belief Localization Trees* (Informed BLT*), a sampling-based belief space planning (BSP) algorithm that scales to large outdoor digital twins with point-cloud observations. We adapt RRT* and Informed RRT* to belief space using the $2$-Wasserstein ($W_2$) metric. Assuming isotropic Gaussian beliefs, sampled belief states can be connected efficiently while accounting for available information and probabilistic collision constraints. This enables steering and rewiring without repeatedly propagating observations, and allows previously computed measurement information to be reused. We present a framework to generate semantically labelled digital twins for planning in real-world environments with point-cloud-based localization. Experiments in simulated environments and digital twins show faster initial solution discovery in most maps with competitive cost convergence.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.01959v1' target='_blank'>Training-Free Diffusion Planning with Analytical Local Scores</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Michael Y. Fatemi, Jinhao Liang, Ferdinando Fioretto</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-01 16:15:15</h6>
+<p class='card-text'>Path finding and multi-robot motion planning require trajectories that are smooth, goal-directed, and collision-free in environments with complex geometric constraints. Recent diffusion-based planners have shown that trajectory generation can be cast as iterative denoising which has opened the doors to learning-based approaches that can handle multi-modal trajectory distributions and refine entire trajectories. However, a key limitation is that diffusion planners require training on large collections of feasible trajectories, rendering them map-specific, and difficult to deploy when high-quality demonstrations are unavailable. This paper introduces a training-free diffusion-based motion planner that replaces learned global trajectory scores with analytical local scores derived from obstacle, smoothness, velocity, and inter-agent feasibility terms. The proposed idea relies on a key observation: the score of a trajectory can be reconstructed by considering only local interactions between neighboring waypoints and nearby constraints. This structure exploitation yields a decomposed denoising procedure that retains the optimization structure of classical trajectory methods while inheriting the iterative refinement behavior of diffusion models. Experiments on a large collection of complex environments and large multi-agent planning tasks show that the proposed analytical score produces smooth and feasible trajectories within limited computational costs, for example in generating feasible paths for 300+ agents in environments containing 100+ obstacles in under 6 seconds on a GPU, outperforming strong learning-based and optimization baselines, while avoiding the data requirements of learned diffusion planners.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.01910v1' target='_blank'>Robot Learning on Discrete Surfaces: Theory and Applications</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Matteo Dalle Vedove, Fares J. Abu-Dakka, Luigi Palopoli, Daniele Fontanelli, Matteo Saveriano</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-01 15:53:39</h6>
+<p class='card-text'>All the objects composing our world are enclosed within surfaces. Yet, most robot learning and motion generation frameworks treat surfaces as constraints ignoring their intrinsic geometry. This gap is acute for polyhedral meshes--the standard output of CAD and 3D reconstruction--whose discrete geometric structure remains unexploited. In this paper, we propose a unified discrete Riemannian framework that enables robot learning directly on polyhedral surface meshes. Using discrete differential geometry, we define logarithmic and exponential maps, parallel transport, and ambient-space projections that remain well-defined across faces, edges, and vertices. We instantiate the framework in three learning paradigms: (i) Dynamic Movement Primitives (DMPs), an improved exponential-map computation and a fixed-tangent-cone forcing-term encoding with parallel transport yield better cross-surface generalisation and stability over prior mesh-based approaches. (ii) Gaussian Process (GP), a geodesic-based kernel with practical admissibility control, enables regression at arbitrary mesh locations without smoothness assumptions. (iii) Riemannian Flow Matching (RFM), mesh-native operators improve generative quality over spectral baselines while reducing training time. The framework is validated in simulation against state-of-the-art methods and demonstrated on two real-robot scenarios: generalising user-drawn trajectories across different surfaces and planning polishing motions on RGB-D-reconstructed surfaces.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.01884v1' target='_blank'>Memory-Guided B-Roll Generation from User Video Collections</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Cusuh Ham, Fabian Caba Heilbron, Josef Sivic, Bryan Russell</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-01 15:37:17</h6>
+<p class='card-text'>We introduce an approach for collection-grounded B-roll sequence generation. Given a user's video collection, a directive given in natural language, and a target duration, the goal is to produce a multi-shot sequence that complements the user's primary footage (A-roll) while preserving the collection's characters, settings, objects, and style. This task is challenging as one must choose the visual evidence from hours of captured footage that should guide the generation of each shot in the sequence. We address this challenge with MemComposer, a three-stage system that turns raw footage into a structured memory with visual references (characters, settings, objects, and style) and uses it to plan, retrieve, and generate grounded B-roll sequences. First, in a one-time offline stage, MemComposer constructs an entity-centric memory from raw video. Second, it uses the memory and user directive to plan a grounded sequence and retrieve conditioning frames for each shot. Third, it iteratively generates and critiques the sequence to enforce identity, setting, and sequence-level consistency. We evaluate MemComposer in a user preference study along two dimensions: prompt adherence and visual alignment to the user's collection. Against an ungrounded text-to-video planner, MemComposer wins 60.0\% of prompt-adherence and 92.8\% of visual-alignment comparisons, showing the grounding benefit of collection memory and reference retrieval. Against retrieval-only sequences assembled from captured footage, MemComposer wins 94.5\% of prompt-adherence comparisons, showing the value of generating missing shots, while retrieval-only sequences are preferred for visual alignment in 58.2\% of comparisons.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.01842v1' target='_blank'>On the Divergence of Accuracy and Mechanism Consistency in Time Series World Models</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Haochen Zhang, Jiaheng Guo, Zhen Xu, Zachary Plotkin, Nicholas Konz, Zhen Tan, Tianlong Chen</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-01 15:10:09</h6>
+<p class='card-text'>A time series world model (TSWM) predicts a controlled system's state from its observed history and planned actions and exogenous inputs. Current approaches build forecasters with actions as covariates, trained and evaluated on prediction error under the executed plan. Yet world models compare unexecuted plans, but their responses to changed plans remain untested. We ask which design choices matter and whether accurate forecasters respond to changed plans as real systems do. We address both with a formalization and benchmark. The formalization separates state, actions and exogenous inputs, distinguishes continuous, mode and event actions, and introduces mechanism consistency, a metric built on declared action-state relations with known directions, such as a vasopressor raising blood pressure: it checks whether shifting an action moves the forecast in the declared direction. The benchmark consolidates eight public datasets with real actions from engineered infrastructure and clinical care, varying prediction space, plan fusion and plan encoding across seven backbones and five seeds. First, a frozen latent prediction space lowers MAE by 9.9% over observation space and gated output fusion lowers it by 12.7% over input concatenation on average, with both improving all eight datasets; temporal plan encoding changes average MAE by at most 2.2%. Second, prediction error and mechanism consistency diverge: the lowest-error configuration is at or below chance in consistency on four of five datasets with declared mechanisms, and no design choice avoids this. Finally, directional supervision, a loss penalizing the wrong-signed part of the response to a shifted action, significantly raises consistency on penalized mechanisms with no change in MAE. Together they give TSWMs a recipe: a frozen latent space and output-side fusion for accuracy, and a training objective for mechanism consistency.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.01746v1' target='_blank'>End-to-End Learning vs. Modular Architectures: Comparative Insights into Autonomous Driving Systems</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Kartik B. Kapse</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-01 14:15:06</h6>
+<p class='card-text'>Autonomous driving systems have become a central focus of intelligent transportation research, with End-to-End Learning and Modular Architectures offering two prominent design paradigms for their implementation. E2E Learning uses deep learning algorithms to map raw sensory inputs directly to driving actuators, providing a streamlined and adaptable solution. while Modular Architectures employ a pipeline-based approach, dividing the system into distinct subsystems for perception, cognition, planning, and control. This paper presents a comprehensive comparative analysis of these paradigms, focusing on their strengths, limitations, and trade-offs to provide insights into their suitability for various autonomous driving applications. The study evaluates key factors such as interpretability, scalability, robustness, and real-world applicability. While End-to-End Learning emphasizes simplicity and adaptability in dynamic environments, it lacks transparency and is highly dependent on large datasets. Conversely, Modular Architectures offer superior interpretability and task-specific optimization, but face challenges related to integration complexity and scalability. To address these limitations, hybrid approaches that combine the strengths of both paradigms have emerged, offering a promising direction for overcoming these challenges. Beyond this comparative synthesis, following work proposes a Four-Dimensional Architecture Selection Framework, comprising twelve binary criteria across safety, operating environment, data/computational resources, and deployment context, and validate it against ten published autonomous driving systems, correctly recommending 7/10 deployed architectures. This work synthesizes existing literature to highlight key trade-offs between the paradigms and identifies hybrid architectures as a promising direction for future research.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.01716v1' target='_blank'>Architecture Without an Architect? Global Governance of Artificial Intelligence in a Divided World</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Simon Chesterman</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-01 13:56:15</h6>
+<p class='card-text'>Artificial intelligence presents an unusually difficult problem for global governance. The technology develops rapidly, crosses borders easily, and is shaped by actors whose resources and capabilities may rival those of states. Yet international responses remain fragmented, unevenly representative, and overwhelmingly non-binding. The challenge is therefore not simply to identify appropriate rules or institutions, but to understand who has the capacity and incentive to create, enforce, and adapt them.
+  This review essay examines these questions through Matthijs Maas's Architectures of Global AI Governance. Maas offers an ambitious framework for thinking about AI governance through the lenses of sociotechnical change, governance disruption, and regime complexity. His account usefully resists both technological determinism and the search for a single institutional blueprint, emphasizing instead the possibilities of a fragmented and evolving governance architecture.
+  The essay argues, however, that institutional design cannot be separated from the distribution of power. Maas frequently invokes what "we" should do about AI, but that collective subject obscures important differences among states, international institutions, and technology companies. States retain formidable powers over markets, infrastructure, strategic inputs, and firms themselves. At the same time, many consequential decisions about frontier AI - what is built, how quickly, with what safeguards, and when it is released - are concentrated within a small number of private companies. The central problem of global AI governance may therefore be less architecture without an architect than an emerging architecture shaped by multiple actors possessing different forms of power, divergent incentives, and no common set of plans.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.01614v1' target='_blank'>Oneira: From Open-Ended Generation to Open-World Interaction in Video World Models</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Xindi Yang, Baolu Li, Liam Lee, Zhenfei Yin, Songxin Zhang, Zhuoyang Song, Xu Jia, Jianfei Cai, Tien-Tsin Wong, Bingyi Jing, Mengyue Yang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-01 12:52:47</h6>
+<p class='card-text'>Generative video world models can now synthesize open-ended environments that agents can navigate and interact with in simple ways. Yet open-ended generation does not imply full interaction: as a generated world expands, newly created content through navigation should expand what the agent can act upon, and as the agent changes the world, those changes should become persistent parts of the environment rather than transient visual effects. We characterize these two requirements as Open-World Interactivity, where newly generated or encountered entities are incorporated into the actionable world, and Persistent State, where interaction outcomes are committed to the world state and continue to influence subsequent observations and interactions. We present Oneira, an interactive video world model that closes the loop between generation and interaction through an explicit, extensible world state managed by a coding agent. Given the current observation and an action or high-level goal, the agent reads the world state, grounds the relevant entities, plans the interaction, and writes its outcome back into a world state table. When exploration reveals new objects, the agent incorporates them from generated observations, allowing the interaction space to expand with the generated world. Meanwhile, previously induced state changes are carried across video segments, making the consequences of interaction persistent parts of subsequent world evolution. The updated world state is rendered along the camera action trajectory into a coarse conditioning video, from which a video generator fills in the appearance, motion, and interaction details not represented in the state. Experiments show that Oneira enables direct and consistent interaction with newly generated objects, while preserving the effects of prior interactions over long horizons. Project page: https://madaoer.github.io/projects/oneira</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.01612v1' target='_blank'>ReCo: Response-Consistent Locomotion with Policy-Aware MPC for Legged Manipulation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Kuankuan Sima, Yichao Gao, Chenxi Gu, Kefan Zhao, Lin Zhao</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-01 12:51:34</h6>
+<p class='card-text'>Continuous legged manipulation requires accurate end-effector tracking while the base keeps walking. Combining reinforcement learning (RL) with model predictive control (MPC) suits this task: the learned policy provides robust locomotion, while MPC coordinates the base and arm to compensate for tracking errors. However, MPC can compensate only for base motion that it can predict, and a learned policy's command response varies with gait phase, contact, and payload. We present ReCo, a framework that couples response-consistent locomotion with policy-aware MPC for legged manipulation. Response shaping trains the policy to respond to commands consistently and repeatably across randomized dynamics. An identified closed-loop response model then lets MPC jointly plan locomotion commands and arm motion. On the simulation benchmark, ReCo reduces position and orientation root-mean-square error (RMSE) by 28.7% and 27.4% relative to the best baseline for each metric. Real-world experiments demonstrate onboard continuous legged manipulation with coordinated base and arm motion.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.01566v1' target='_blank'>Towards Optimal Policy Improvement</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yaniv Oren, Viliam Vadocz, Wiktor Zabka, Thomas Evers, Jan Robine, Wendelin Böhmer, Matthijs T. J. Spaan, Martha White, Hendrik Baier, Fenghui Yu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-01 12:29:34</h6>
+<p class='card-text'>Practical Reinforcement Learning (RL) algorithms learn to solve Markov Decision Processes (MDPs) through iterative policy improvement in the presence of approximate evaluation. We study policy improvement from first principles, defining optimal policy improvement as producing the best policy attainable in a single update under specified constraints. We show that optimal improvement restricted to a set of states is equivalent to solving an induced MDP, characterizing planning with an explicit or implicit model as a path towards optimal policy improvement. Because practical methods commonly solve such induced problems through iterative improvement in the form of greedification, we take steps towards optimal greedification under the central practical constraint of approximate evaluation. We formulate greedification under this constraint as probabilistic decision-making under uncertainty and derive a novel operator that is optimal with respect to the resulting objective. Empirically, the operator and its practical gradient-based approximations improve aggregate performance across GumbelAlphaZero, SAC, ReBRAC and Generalized Policy Iteration, in experiments spanning discrete and continuous actions, model-based and model-free, online and offline RL.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.01505v1' target='_blank'>OpenSpace Lab Solution to the IROS 2026 Indoor Exploration Competition</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yuxuan Zhang, Dong Li, Zezhou Sun, Yuxuan Xu, Siyu Teng, Yuchen Li, Jianjian Yang, Long Chen</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-01 11:43:27</h6>
+<p class='card-text'>This report presents the \textbf{OpenSpace Lab}'s solution to the Competition on Intelligent Information Gathering for Single and Multi-Robot Systems Workshops, organized as part of the IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS) 2026. Our team reached 1st place in the Single-Robot Public Track and 3rd place in both the Single- and Multi-Robot Private Tracks. The single-robot framework utilizes pre-trained map completion predictions for global planning to prioritize unexplored areas. To reconcile map coverage with limited operation time, we introduce a remaining-time-based exploration strategy that integrates homing constraints into the decision-making process. For multi-robot exploration, we utilize a utility-driven target selection strategy that balances observation gains, movement costs, and budget constraints, leveraging shared map and intent data to eliminate redundant search and maximize coordination efficiency. Our solution reached a 61.04\% coverage rate in the Single-Robot Public Track, while reaching 39.53\% and 39.91\% coverage in the Single- and Multi-Robot Private Tracks, respectively. An extended full-length paper based on this report is currently being prepared for submission, and the source code will be released upon acceptance of the full manuscript at https://github.com/OpenSpace-Lab/Indoor-Exploration-IROS2026.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.01489v1' target='_blank'>Building Seasonal Highways for Residential Energy Hubs: Sizing, planning and operating thermal energy storage</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Dario Slaifstein, Mohammad Khosravi, Gautham Ram Chandra Mouli, Laura Ramirez-Elizondo, Pavol Bauer</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-01 11:30:32</h6>
+<p class='card-text'>The operation of residential energy hubs with multiple energy carriers (electricity, heat, mobility) poses a significant challenge due to the energy storage differences in time-constants, round-trip efficiencies and self-discharge rates. Usually, thermal storage exhibits flexibility in yearly planning optimizations or long-term scenarios. However, as optimization horizons shrink (1-48hs) so does their supplied value due to the lower round-trip efficiencies. To avoid this early depletion during operation this paper proposes a data-driven highway to steer the short-term daily control towards long-term optimality. The proposed methodology also presents how to optimally size the thermal storage and avoid yearly simulations and how all of this is related to nonlinearities in the daily operation. The presented framework links seasonal and daily optimizations through dynamic terminal sets and value functions. The seasonally-aware nonlinear economic model predictive controller achieves the most balanced performance, with the second best mean grid cost of all MPCs at -\texteuro 209. It also achieves better battery degradation control than its linear counterparts (between 26-34%) and the best thermal comfort of the nonlinear benchmarks. Nevertheless, the data-driven seasonal highway restrains the ability to control battery degradation and slightly increases computational time.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.01461v1' target='_blank'>NextMe-800: Anticipating Personal Behavior from Months of Egocentric Video</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Zhaoxu Meng, Yiming Sun, Mingyuan Gao, Jiachang Zhang, Zhuhan Dai, Yipeng Du, Zheng Lian, Jian-Qiao Zhu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-01 10:55:18</h6>
+<p class='card-text'>We often plan ambitiously yet act habitually and wonder, in retrospect, whether we would have planned differently had we known what we would actually do. Hindsight offers a valuable perspective on past decisions, although we often wish we could have simulated hindsight at the moment of choosing. If a system could generate plausible trajectories from one's personal history, such previews might help people formulate more realistic plans and make better informed decisions. We introduce NextMe-800, an approximately 800-hour first-person dataset from one volunteer over 126 days with 1 Hz images, gaze, and audio, captioned at five hierarchical abstraction levels from atomic actions to major activities. We formulate personalized action anticipation as open-vocabulary K-step sequence prediction and construct NextAct, a 1,500-point benchmark combining NextMe-800 with the multi-person EgoLife dataset. Using an embedding-based soft edit distance as the metric, we evaluate how well different models can anticipate personal behavior across abstraction levels and prediction horizons. NextMe-800 and NextAct provide a months-long resource and evaluation framework for studying how far ahead personal behavior can be anticipated from egocentric observation.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.01382v1' target='_blank'>Gacha Decoding: Eliciting Diverse Generations Through Instruction Following</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Scott Geng, Yufei Zhang, Joseph Lee, Jerry Li, Marjan Ghazvininejad, Pang Wei Koh</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-01 09:48:48</h6>
+<p class='card-text'>We introduce Gacha Decoding, an inference-time method for eliciting diverse language model generations that scales with model capability. Across open-ended domains (in-the-wild chat, creative writing, planning for image generation, and protein design), Gacha Decoding significantly outperforms existing generation diversity approaches at equal quality (up to 2.4x Vendi over the next-best prior approach), reaching the same number of high-quality modes with over an order of magnitude fewer samples (11.0x) and discovering novel modes that no other approach surfaces. Our key insight is to treat diversity as an instruction-following problem: rather than relying on the LM's token entropy, we combine its instruction-following capability with randomness from an external RNG tool to scalably identify and realize distinct modes of the response space. This approach of "planning with dice" enables Gacha to invert the long-observed tension between diversity and model capability. As the underlying LM becomes a better instruction follower, diversity under Gacha Decoding consistently improves--even as its token entropy and diversity under prior approaches decline. Together, our results highlight that instruction following, rather than token entropy alone, can drive generation diversity.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.01373v1' target='_blank'>Learning Commute-Time-Preserving World Models for Planning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Michael Hauri, Peter Buttaroni, Fabian A. Mikulasch, Friedemann Zenke</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-01 09:42:42</h6>
+<p class='card-text'>World models allow agents to plan in latent space by choosing a sequence of actions that most reduces the distance to a given goal state. Thus, planning can benefit from latent representations whose distances mirror commute-times in the environment. The spectral embedding space of the graph Laplacian provides such a representation, if it obeys a specific eigenvalue-dependent scaling. Unfortunately, instantiating the graph Laplacian is intractable in large, continuous environments. Self-supervised learning offers a natural route to such commute-time-preserving embeddings at scale. However, here we show that existing methods, which commonly encourage isotropic representations to prevent representational collapse, tend to degrade the "correct" eigenvalue-dependent scaling, leading to an inaccurate representation of commute times. To address this problem, we introduce Commute-Time-Preserving World Models (CTWMs), combining a latent displacement predictor and a log-determinant regularizer that prevents collapse, which provably recover the correctly scaled Laplacian representation under reversible deterministic dynamics and at the predictor's fixed point. In numerical simulations, CTWM matches or outperforms LeWM, a task-agnostic baseline, on several complex, continuous goal-reaching benchmarks, while using half the parameters.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.01348v1' target='_blank'>Verify Claims, Not Scores: Evidence-Based Verification of Modular Agents</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Ali Atiah Alzahrani</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-01 09:17:47</h6>
+<p class='card-text'>When developers change one component of an agent, such as its controller, a learned model or its verifier, they usually judge the change by an aggregate task score. That score cannot tell whether improvement was attainable, which component lost value, or what the agent's own checks certify. We introduce a claim-specific verification audit for modular agents that plan, act, check and refine. Instead of scoring the agent, the audit scores the evidence: each conclusion is recorded with the evidence behind it, one of four verdicts (supported, unsupported, unresolved or not evaluated) and the boundary within which it holds. Three tools supply that evidence. Oracle policies measure attainable improvement under an explicitly stated action set, so that a low value can be traced to the evaluation rather than to the environment. Replacing one component at a time with a perfect counterpart locates lost value, with null results read as unresolved whenever a downstream component could mask them. A separate test asks whether the verifier's score identifies the quantity it is read as bounding. Applied to a constrained portfolio-allocation agent in a synthetic market with known hidden regimes, the audit shows that the value of perfect regime information depends on the action set used to measure it, that the scenario generator discards most of the regime signal while better local fidelity does not improve decisions, and that the runtime verifier can be bypassed with no visible change in outcomes. The contribution is the protocol and the evidential distinctions it enforces; the empirical findings are specific to the agent and environment studied.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.01310v1' target='_blank'>Ex vivo breach detection using electrical conductivity during robotic pedicle drilling in the spine</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jorge Andrés Pérez Velásquez, François Teyssere, Thibault Chandanson, Quentin Grimal, Brahim Tamadazte</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-01 08:42:23</h6>
+<p class='card-text'>Purpose: Pedicle screw placement is technically demanding in scoliosis treatment. High precision is required due to limited visibility, anatomical variability, and the risk of complications. Although robotic systems assist CT-based planning and execution, they still rely on ionizing intraoperative imaging and complex registration. This study proposes robotic pedicle drilling with real-time preventive breach detection using electrical bioimpedance sensing.
+  Methods: We developed a robotic approach combined with a pedicle-drilling tool equipped with a proprioceptive electrical bioimpedance sensor developed by SpineGuard. A real-time detection algorithm was designed to analyze the electrical bioimpedance signal during drilling and identify abrupt changes in conductivity associated with potential breaches towards the spinal canal. The method operates without external devices or sensors.
+  Results: The ex vivo experiments showed that the proposed method prevented breaches in 100 of the 51 drilling cases. These findings demonstrate the system's ability to detect potentially hazardous events during drilling and to stop the procedure before. The ex vivo experiments demonstrated that the proposed method prevented breaches in all 51 drilling cases.
+  Conclusions: This work demonstrates the feasibility of robotic pedicle drilling with electrical bioimpedance sensing for real-time breach prevention. Using only the tool signal, the method eliminates the need for external sensing systems and supports safer pedicle screw placement.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.01278v1' target='_blank'>SCOPE-AD: Sequential cost-aware ordinal-belief planning with energy-based models for diagnostic agents</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Ziwen Yu, Ivan Koychev, Elizabeth Coulthard, Ting Zhou, Bolin Chen, Dian Hong, Zinuo You, Yujiao Wang, Anthony Mulholland, Qiang Liu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-01 08:16:07</h6>
+<p class='card-text'>Alzheimer's disease (AD) diagnosis requires sequential evidence acquisition under heterogeneous test costs and patient burden. Fixed-modality predictors do not jointly decide which test to acquire or when the available evidence is sufficient for diagnosis. We propose SCOPE-AD (Sequential Cost-Aware Ordinal-Belief Planning with Energy-Based Models for Diagnostic Agents) for cost-aware classification of cognitively normal (CN), mild cognitive impairment (MCI), and AD cases. A mask-aware ordinal model represents uncertainty along the ordered CN--MCI--AD continuum. Retrospective training records provide sampled Bellman targets for an energy-based teacher, whose action distributions are distilled into a Qwen policy. At deployment, the agent selects acquisition or diagnosis actions under availability and budget constraints without access to unacquired values. After each acquisition, the evidence and ordinal belief are updated before the next decision. On ADNI, SCOPE-AD achieves 77.70\% Macro-F1 at an average acquisition cost of \$50.46, exceeding the strongest evaluated baseline by 9.34 percentage points. Full-modality evaluation raises Macro-F1 by only 1.89 points while increasing acquisition cost by 116.7 times. These results support selective acquisition for cost-effective diagnosis.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.01224v1' target='_blank'>Supervise What Decides Success: Criterion-Aligned Auxiliary Losses for Latent World-Model Planning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Takumi Hara, Kanata Suzuki</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-01 07:27:10</h6>
+<p class='card-text'>Latent world models plan by scoring candidate action sequences with distances in latent space. However, task success is judged by physical quantities, which we call the success-criterion quantities. In all four latent world models we examine, the end-effector position is encoded in the latent state with an error larger than the success criterion allows. Such a latent state cannot separate successful candidates from failing ones. We propose an auxiliary loss that uses success-criterion quantities as training targets, whereas existing latent world models take them only as inputs. During training, a linear head on the encoder and predictor outputs regresses the success-criterion quantities, and the regression error is added to the training loss. The head is discarded after training, so the model, its cost, and its inputs at test time are unchanged. This loss alone improves the success rate on PushT and cube by 3.5% and 3.4% (absolute), respectively, and both improvements are statistically significant. A success criterion thus specifies what a world model must retain in its latent state, and we show that it can serve directly as a training target.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.01201v1' target='_blank'>iSEE: Object Permanence Through Self-Supervision</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Pramish Paudel, Ajad Chhatkuli, Luc Van Gool, Danda Pani Paudel</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-01 07:12:08</h6>
+<p class='card-text'>Object permanence, keeping track of an object's identity and position while it is occluded, is central to video representations that track, predict and plan. Trackers that achieve it learn from boxes, track identities and visibility labels. On the other hand, self-supervised object-centric methods discover objects without labels: through slot attention, it represents a video as slots that bind to objects and follow them across frames. However, these slots are lost under occlusion, making the desired permanence impossible. Reasoning permanence is a hard problem because it requires to detect when an object becomes occluded, re-identify when object reappears, and keep the object's hidden position continuous, using reapperance as the only learning cue. To address this, we propose iSEE, a novel framework that offers all three aforementioned requirements, without any labels whatsoever. We built iSEE using the following three proposed components: (i) Object evidence modelling: a slot's attention, compared with its own past, reveals when its object is hidden. (ii) Appearance-position separation: two slot streams let the appearance be held for re-identification while the position keeps changing. (iii) Permanence from reappearance: a walker follows the hidden object's position, trained only on where the object reappears. On LA-CATER static, iSEE returns a reappearing object to its own slot after 86% of occlusions, against 32% for SlotContrast, and localises it while hidden within 4.1 mAP of the label-trained SoTA RAM. The two streams also allow downstream planning, with the position stream as the action of a world model. Project page: https://insait-institute.github.io/iSEE/</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.01185v1' target='_blank'>AFD-CAMLs: Agile Force-Distribution-Aware Planning and Control for Cable-Suspended Aerial Multi-Lifting Systems</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Antreas Kourris, Sihao Sun</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-01 07:01:10</h6>
+<p class='card-text'>Multiple UAVs can cooperatively transport heavy payloads while controlling their position and orientation. Trajectory-based methods offer high agility while satisfying system constraints, but can produce uneven force distributions when the tension-to-wrench allocation is redundant or ill-conditioned, particularly under geometric mismatch and low-level tracking errors. We propose a hybrid planning-and-control framework to address this problem. A global planner generates payload trajectories and cable-force references by exploring the allocation null space under a prescribed internal-force setting. These references augment the cost of a centralized local planner, promoting feasible force distributions while generating trajectories for all UAVs. An admittance filter then compares the planned forces with onboard cable-tension estimates and adjusts the kinematic references to improve force tracking in degenerate or near-degenerate configurations. Simulations and experiments involving four to ten UAVs demonstrate more balanced tension distributions during both hovering and demanding agile maneuvers, without compromising agility or payload-tracking performance.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.01162v1' target='_blank'>PhysicsLENS: Diagnosing Physical Property Blindness in Video Generation Models</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Isaiah Milkey, Som Sagar, Aditya Taparia, Xinyuan Liu, Jiqing Wen, Ransalu Senanayake</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-01 06:42:07</h6>
+<p class='card-text'>Reliable video world models could provide scalable predictive environments for robot learning, planning, and evaluation. However, generated robot videos can violate physical principles and complete tasks through physically implausible behavior, limiting their reliability for robot learning and planning. Current video-generation benchmarks exclude physics that are inherently hidden by visuals (e.g., weight, viscosity, friction). Due to this, video models are evaluated on the fidelity of physics, not the underlying accuracy of physics. We introduce PhysicsLENS, a dataset and benchmark for evaluating plausibility of physical properties grounded in robotics. PhysicsLENS uses matched scenario pairs that hold the same conditioning frame and task, while varying underlying physics in the scene description. Scenarios are curated from public robot video sources and annotated across seven physical domains: collision, gravity, momentum, friction, deformation, fluid, and causality. We evaluate across four video generation models, producing over 400 human-annotated labels. Results show that plausible-looking videos often ignore the stated property (34 of 47), and that stating the property lowers plausibility only slightly and not significantly.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.01092v1' target='_blank'>Ego2Act: Evaluating Goal-Directed Manipulation in Egocentric Video Generation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Patrick Amadeus Irawan, Iskandar Muda Rizky Parlambang, Rava Maulana, Qinrong Cui, Erland Hilman Fuadi, Zayd M. K. Zuhri, Nanda Ryaas Absar, Ahmed Elshabrawy, Wilfried Ariel Mulyawan, Shoubin Yu, Yue Zhang, Mohit Bansal, Alham Fikri Aji</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-01 05:35:29</h6>
+<p class='card-text'>Video generation models are increasingly being explored as world simulators for embodied planning and learning. To do so effectively, these models must not only generate visually appealing frames, but also predict how environments dynamically evolve when executing goal-directed actions. While evaluating these capabilities is crucial, existing benchmarks focus mainly on single short actions or step-by-step instructions. This leaves multi-step physical reasoning underexplored, especially in egocentric video generation that requires planning to simulate proper execution to accomplish high-level goals by carrying out multiple real-world manipulations. We introduce Ego2Act, a goal-directed benchmark featuring 2,640 videos from 110 real-world tasks across day-to-day settings, varying object clutter and multi-step complexity. Given an initial scene image and a high-level goal, Ego2Act evaluates whether video generation models can produce realistic egocentric videos of a hand manipulating objects to carry out the task. To support scalable evaluation, we also introduce Ego2ActJudge, a reference-free evaluation pipeline that achieves better task completion and physics plausibility evaluation alignment with human consensus compared to relevant baselines. Our findings reveal that models' generated simulations often skip or partially execute steps, leaving later steps missing dependent states, which leads to unfulfilled goal. Furthermore, models consistently fail at fine-grained physical dynamics, particularly during complex object manipulation and persistent world modeling. We hope Ego2Act provides a rigorous testbed for advancing video models toward physically plausible, goal-directed simulation.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.01067v1' target='_blank'>Online Planning for Sparse Ground Target Search from a High-Altitude UAV under Partial Observability</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Ashik E Rasul, Hyung-Jin Yoon</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-01 05:06:04</h6>
+<p class='card-text'>Unmanned aerial vehicles (UAVs) searching for ground targets from a high altitude face a unique challenge, particularly when the target is already within the field of view but effectively unobservable because of its small apparent scale. Standard object detectors often underperform in such scenarios because of resolution downscaling and limited context. In contrast, active object search frameworks address this challenge by directing the agent to a suitable pose to gather richer visual information. However, flight regulations in urban airspace often restrict such physical movements for UAVs. As an alternative active sensing approach, the UAV can leverage the pan-tilt-zoom (PTZ) mechanism of the onboard camera to dynamically adjust its field of view and sequentially gather enhanced visual information from specific regions of interest. Once the candidate locations of the target are identified, it can deploy more expensive object detection schemes, such as an ensemble of multiple models, to get better reasoning at a fixed scale. In this work, we formulate the sequential exploration with PTZ operation as a partially observable Markov decision process (POMDP), in which the agent maintains a belief state over the target's true location. To solve the POMDP, we deploy partially observable Monte Carlo planning (POMCP), where we condition the sensing reliability on target object scale and deploy selective ensemble detection as an additional reasoning step.
+  We validate our methodology with experiments in a photorealistic simulator under different environmental conditions and vehicle states, showing detection of ground targets at variable scales with significantly fewer steps and minimal dependence on sensor resolution compared to baseline methods.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.00991v1' target='_blank'>Adapter Thickets: Splitting an RLVR Budget Beats Concentrating It</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jonathan Williams, Esin Tureci Karthik R. Narasimhan</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-01 03:25:40</h6>
+<p class='card-text'>Majority voting over sampled completions is the workhorse of test-time scaling, and reinforcement learning with verifiable rewards (RLVR) is the workhorse for making each completion better. The standard pipeline composes the two: train one policy with RLVR, then sample it many times and vote. We show that this composition is lossy. A vote can only overturn mistakes that its voters do not share, and RLVR sharpens a policy so that its samples increasingly make the same mistakes. With every method drawing exactly $160$ completions per problem, training a single LoRA adapter on the full RLVR budget raises single-sample accuracy on every model we test ($1.5$B-$8$B). Yet on three of four models it leaves the majority vote below that of the untrained base model, by up to $4.8$ points. The damage builds during training: voter errors grow steadily more correlated, and the majority vote accuracy peaks early before falling by up to $7.0$ points. The cause is concentration, not RLVR itself. We split the same data and training budget across $K$ LoRA adapters, each trained on its own random disjoint shard, and call the result an adapter thicket. Thickets out-vote the fully trained adapter in all $16$ (model, $K$) settings, and for $K{\geq}4$ they stay within $0.8$ points of the base model or above it. A single adapter stopped early, at a thicket member's step count, is a strong control that matches thickets for small $K$. For $K{\geq}8$, thickets keep more of RLVR's single-sample gain and out-vote this control in six of eight settings. The cost of concentration also grows with the number of votes: from $16$ to $160$ votes, the thicket's lead over the fully trained adapter widens from $1.3$ to $3.3$ points. When the plan is to sample and vote, an RLVR budget is better spent broad than deep.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.00976v1' target='_blank'>Variational Streaming Flow: Probabilistic Forecasting in Physical Time</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Hans Hao-Hsun Hsu, Minseon Gwak, Soon Hoe Lim, Pan Li, N. Benjamin Erichson</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-01 03:10:43</h6>
+<p class='card-text'>Probabilistic forecasting is important for predicting complex dynamical systems because intrinsic randomness and incomplete observations can cause the same observed state to evolve into multiple plausible futures. While flow matching is a flexible approach for probabilistic forecasting, it is computationally expensive. Streaming flow (SF) reformulates this approach to model temporal evolution efficiently by learning a continuous velocity field directly in physical time. However, SF learns a deterministic velocity field. Thus, it provides only a single future trajectory for a given fixed initial state and observation history. To overcome this limitation, we introduce Variational Streaming Flow (VSF). Our approach learns a latent distribution that is conditioned on the dynamics of interest. In turn, this enables probabilistic forecasting. Importantly, we retain the computational efficiency of SF by generating in physical time. Across deterministic and stochastic dynamical systems, VSF demonstrates superior predictive accuracy and distributional fidelity. We demonstrate the advantage for both long-horizon rollouts exceeding 1,000 steps, and settings with bifurcating dynamics. Moreover, VSF can be integrated into existing Joint-Embedding Predictive Architecture (JEPA)-based world models as a plug-and-play predictor to improve temporal dynamics and goal-directed success rate in navigation, motion planning, and manipulation.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.00971v1' target='_blank'>The Other Half of Workflow Portability: Evidence-Backed HPC Site Profiles with Agentic Discovery</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Md Saiful Islam, Douglas Thain</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-01 03:01:31</h6>
+<p class='card-text'>Moving a workflow developed and tested at one HPC site to another rarely succeeds without some amount of trial and error. Package managers rebuild software environments, containers ship whole filesystems, and workflow specifications such as backpacks package a workflow with its software, data, and resource requirements. These approaches address one half of workflow portability: what a workflow needs. But none describes how a given HPC site must be used, and that missing half is why even a portable workflow requires manual adjustment at each new site. That gap includes the site's resource shape, storage configuration, network permissions, and operating policies. This information may be explicit in the batch system, hidden in the prose of documentation, or buried deep within a router's configuration, making it difficult for an automated deployment tool to turn site knowledge into useful deployment decisions. We propose the HPC site profile, a structured, evidence-backed document that makes this knowledge actionable. We automatically construct it in three steps that mirror where the information lives: measuring the login node, extracting typed fields from documentation with a bounded language-model agent, and submitting pilot jobs for eligible unresolved fields. Every field is verified against its evidence or discarded, so a rule, not the model, decides what enters the profile. The profile then preflights a workflow into an execution plan or an early, explainable failure. We build profiles at Purdue Anvil, TACC Stampede3, and Notre Dame CRC and present a case study of preflighting a real workflow.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js'></script>
+</body>
+</html>
