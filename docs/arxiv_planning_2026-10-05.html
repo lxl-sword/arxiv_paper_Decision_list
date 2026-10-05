@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>planning - 2026-10-05</title>
+<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap' rel='stylesheet'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css'>
+<style>
+body {
+font-family: 'Roboto', sans-serif;
+background-color: #f5f7fa;
+padding: 20px;
+}
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.card-title {
+    font-weight: 700;
+}
+.card:hover {
+    transform: scale(1.02);
+    transition: 0.3s ease-in-out;
+}
+</style>
+</head>
+<body>
+<div class='container'>
+<h1 class='text-center my-4'><i class='fas fa-book'></i>planning - 2026-10-05</h1>
+<div class='row'>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.03695v1' target='_blank'>Language Models that Play Chess and Explain Their Moves</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Adithya Bhaskar, Jeffrey Cheng, Danqi Chen</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-02 17:54:22</h6>
+<p class='card-text'>Modern chess engines are silent experts: they play at a superhuman level, but do not offer explanations for their play. On the other hand, language models (LMs) can generate plausible-sounding explanations, but their weak playing strength limits the utility of their explanations. We introduce Queen, a 4B-parameter chess-language model that can explain its moves and plans while playing at the level of a typical Grandmaster. Our novel framework enables domain-specific reasoning through complementary components: an encoder-decoder architecture and an iterative distillation algorithm. This architecture integrates a silent expert chess encoder with an instruction-tuned LM through cross-attention, which we train via a question-answering curriculum to extract chess concepts from the encoder's representations. Building on this domain-adapted model, we iteratively improve its explanations with a natural-language analog of the Bellman update: the model analyzes the positions after its top candidate moves and consolidates them into an explanation of the current position, which is then distilled back into the model. Over seven iterations, our model gains over 900 Elo points (1782 to 2697), substantially surpassing all frontier models on both playing strength and puzzle accuracy, despite containing three orders of magnitude fewer parameters. Furthermore, LM-based evaluations show that our explanations are fluent and approach GPT-5.6-Sol (high) in coherence. The generality of our architecture and training procedure suggests a recipe for applying language models to domains where silent expert encoders are available, like games, robotics, and computer use.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.03615v1' target='_blank'>Bridging Frontier Reasoning and Robot Execution: From Autonomous Demonstration Generation to Dense Language Supervision</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Bosung Kim, Alexander Trevithick, Ruiyi Wang, Prithviraj Ammanabrolu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-02 17:12:29</h6>
+<p class='card-text'>Recent advances in frontier models enable robot manipulation from only a few demonstrations, but high inference latency limits their use for real-time robot control. To bridge this gap, we study two complementary approaches that connect frontier reasoning with low-latency local execution. First, we use a frontier model to autonomously generate demonstrations that supplement human demonstrations for training a fast local policy. We augment its in-context examples with corrective demonstration segments that show how to recover from physical errors, improving generation reliability. Generation time and cost decrease as successful examples accumulate in context, suggesting a path toward more efficient data collection. At deployment, a harness combines frontier-generated instructions with a fast local policy, enabling efficient execution while preserving the frontier model's ability to guide and correct actions. With low-latency execution delegated to the local policy, the bottleneck shifts to its capacity to reliably follow the frontier model's diverse instructions. Our second bridge introduces dense language supervision across three nested granularities---primitive, atomic, and composite---with multi-aspect descriptions at each level. Across long-horizon tasks in RoboCasa 365 and BEHAVIOR-1K, where instructions change as execution progresses, the combined supervision achieves the highest performance under both oracle and frontier-model instructors, demonstrating more reliable instruction following through the policy's language interface. Finally, we evaluate both bridges together on a crossword task that combines semantic planning and manipulation within a fixed time budget. These results support autonomous demonstration generation and dense language supervision as complementary components for connecting frontier reasoning to low-latency local execution.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.03587v1' target='_blank'>AVL-JEPA: Preventing Causal Dynamics Information Collapse In Joint Embedding Predictive Architecture World Models</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yikang Qiao, Ling Zhang, Ziying Song, Duan Huang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-02 16:56:15</h6>
+<p class='card-text'>Joint embedding predictive architectures (JEPAs) predict future latent representations without reconstructing observations, enabling world models to focus on high-level semantic dynamics. However, a JEPA can preserve high dimensional visual information while discarding information about the physical consequences of actions. We call this failure mode causal dynamics information collapse and propose action-grounded vision-invariance latent (AVL) to prevent this collapse. We first use the executed action as an auxiliary dynamics anchor that encourages the model to preserve dynamics information, and then use a vision-invariance pathway which aligns perturbed and clean latent predictions without discarding dynamics information, forcing the model to fully understand and utilize causal dynamics information. We validate AVL on four robotic control tasks (TwoRoom, PushT, OGBench Cube, and Reacher), showing that it substantially improves success rates under visual perturbations while preserving clean-environment performance. We further evaluate physical consequence alignment, clean-noisy dynamics consistency, and the causal effect of targeted transition subspace erasure. Collectively, these results indicate that dynamic information causally relevant to planning is preserved from collapse under AVL.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.03559v1' target='_blank'>Grid Theory and Polynomiality in Dynamic Lot-Sizing</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:El-Mehdi Mehiri, Nabil Absi, Elodie Suzanne</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-02 16:39:38</h6>
+<p class='card-text'>Why are some dynamic lot-sizing problems polynomial? We address this question by introducing Grid Theory, a structural framework based on cumulative production and the additive structure of production bounds. For a general single-item dynamic lot-sizing model with lower and upper production bounds, there exists an optimal extreme solution in which, within each regeneration interval, all but at most one production quantity lie on a boundary value. This induces additive grids, and the Main Grid Theorem establishes that an optimal cumulative production trajectory can be restricted to these discrete sets. Although the resulting grids may be exponentially large, we introduce the notion of additive dimension to capture production-bound profiles whose boundary sums admit a low-dimensional representation. We show that bounded additive dimension yields a polynomially constructible grid envelope and a polynomial time grid-based dynamic programming algorithm. The framework extends to separable concave costs and establishes polynomial solvability of several families, including constant capacities, minimum order quantities, a fixed number of capacity levels, fixed-degree polynomial capacities, periodic capacities, and piecewise polynomial capacities. In particular, polynomiality may hold even when the number of distinct capacity values grows with the planning horizon. Grid Theory thus identifies additive structure, rather than the number of distinct resource values, as a sufficient mechanism for polynomial solvability.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.03530v1' target='_blank'>DR-IPC: Disturbance-Resilient Integrated Planning and Control for LiDAR-Based Quadrotor Navigation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Peng Liu, Jingyan Wang, Qipeng Ye, Wen Li, Jinya Su, Zuo Wang, Shihua Li, Yunda Yan</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-02 16:16:43</h6>
+<p class='card-text'>LiDAR-based quadrotor navigation in cluttered environments remains challenging under external disturbances, particularly when obstacle-aware motion generation and disturbance-rejection control are handled in separate layers. This article presents disturbance-resilient integrated planning and control (DR-IPC), which combines lightweight path guidance with nonlinear model predictive control (NMPC) to directly generate angular velocity and thrust. An interconnected extended Kalman filter and nonlinear disturbance observer jointly provide filtered state estimates and reconstructed disturbances for NMPC prediction. The resulting formulation unifies nonlinear quadrotor dynamics, actuator constraints, local motion generation, and penalised safe-flight-corridor residuals without requiring a separate trajectory-optimization stage. Gazebo and MARSIM simulations, together with indoor and outdoor experiments, validate DR-IPC under wind, suspended payloads, narrow passages, ball impacts and reactive avoidance of a dynamic obstacle. In multi-goal navigation with disturbances, DR-IPC increases the number of completed missions from 1/10 to 9/10 in Gazebo and reduces the altitude RMSE from 0.34 to 0.01 m in experiments. The complete system operates onboard at 100 Hz. Supplementary videos are available on the project page https://drpp316.github.io/DR-IPC-Page/, and the source code will be released.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.03506v1' target='_blank'>Optimality of delayed reward attainment under uncertainty</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Chuwei Wang, Alexander Vladimirsky, Anastasia Bizyaeva</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-02 16:03:32</h6>
+<p class='card-text'>Decision making under uncertainty requires balancing the value of additional information against the cost of delaying the decision until that information becomes available. This challenge is especially prevalent for embodied decisions such as those faced by animals moving between food sources and robots selecting navigation targets, where movement through space shapes both the quality of information and the cost of acting. We consider a version of this problem, where the decision is on choosing among rewards of uncertain value, and those rewards can only be attained through changing the decision maker's state sufficiently. Our focus is on interactions between reward learning and state evolution, restated as a deterministic optimal control problem with two terminal alternatives, one with a known reward and the other learned gradually through noisy observations. We demonstrate that delayed reward attainment is often optimal in a variety of systems, especially so when the alternatives are initially difficult to distinguish and the cost of waiting is relatively low. For a subset of problems, we also derive sufficient conditions that allow shortening the planning horizon a priori, guaranteeing that further observations would not affect the value function. Finally, when observation quality depends on the state, we show that it is often optimal for a controller to evolve the state strategically toward more informative sensing locations before making a decision, in line with the behavior broadly observed in biological and engineered systems.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.03476v1' target='_blank'>MobiAgent: Dual-Loop Recursive Policy Self-Improvement for Long-Horizon Mobile Manipulation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Chenzhi Liu, Yue Zhang, Jiehong Lin, Jianan Wang, Bo Wang, Zhongrui Wang, Xiaojuan Qi</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-02 15:48:23</h6>
+<p class='card-text'>Long-horizon mobile manipulation presents significant challenges due to compounding execution errors and capacity interference between locomotion and arm control. While recent Vision-Language-Action models excel at short-horizon tasks, they lack the hierarchical reasoning required for multi-stage objectives. Furthermore, existing hierarchical agents suffer from rigid sub-task mapping, inflexible replanning, and a lack of continuous learning. To address these limitations, we introduce MobiAgent, a dual-loop agentic framework that bridges robust deployment execution and recursive policy self-improvement. During deployment, the Inner Loop decouples high-level reasoning from low-level control through highly composable atomic skills. It employs Vision-Language models for receding-horizon planning and visual reflection, dynamically composing skills to ensure robust error recovery. These skills are executed by specialized flow-matching experts that share a unified VLM backbone, maximizing reusability while mitigating capacity interference. Concurrently, the Outer Loop drives automated lifelong learning by autonomously segmenting and verifying deployment rollouts, clustering them to discover atomic skills, and continuously fine-tuning the skill library without human annotations. Evaluations on RoboCasa, BEHAVIOR-1K, and real-world tasks demonstrate the effectiveness of MobiAgent. It outperforms $π_{0.5}$-TA by 22.5 percentage points on BEHAVIOR-1K and enables robust recovery from execution failures. Through autonomous data recycling, success improves from 7.50% to 27.50% on RoboCasa and from 32.5% to 57.5% on Astribot S1.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.03444v1' target='_blank'>Electronic Density versus Geometry for Machine-Learned Molecular Absorption Spectra</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Siddharth Dhanpal, Peter Elliott, Paolo Emilio Trevisanutto, Alin M. Elena, Gilberto Teobaldi</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-02 15:26:08</h6>
+<p class='card-text'>Molecular optical absorption spectroscopy provides a direct probe of electronic structure and is widely used for molecular identification, interpretation of photophysical behaviour, and planning of spectroscopy experiments. Calculating the absorption spectra using first-principle excited-state methods, however, is computationally demanding, at least compared to ground-state calculations, which limits their routine application across large molecular sets. Machine-learning (ML) surrogates can reduce this cost and allow rapid spectral prediction. However, their performance depends strongly on how molecular information is represented. Here, we compare using the ground-state electron density versus the molecular geometry as inputs to a ML model for predicting absorption spectra, for a training set of 6874 molecules selected from the QM7 dataset. For each of these molecules, the density was calculated using density functional theory (DFT) and the absorption spectrum was calculated using linear-response (LR) time-dependent DFT (TDDFT). Utilizing the ground-state density as the input to the ML model is motivated by the Hohenberg-Kohn and Runge-Gross theorems, and the fact that the ground-state density encodes information about bonding, charge localisation, and electronic delocalisation. Hence, it may be a more judicious starting point for the ML model compared to the geometry, as it effectively decouples the chemistry of the ground-state. The question we test is whether the benefits of using the density outweigh the (notprohibitive) penalty of requiring an additional single-point DFT calculation for the density. We find that the density-based convolutional neural network achieves a validation correlation of 0.9926, compared with 0.9795 for the best geometry-based graph model, reducing the residual decorrelation, by approximately 64%.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.03395v1' target='_blank'>Bidirectional Voronoi-biased Exploration Curriculum for Reinforcement Learning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Juri Pfammatter, Kaixian Qu, Clemens Schwarke, Victor Klemm, Marco Hutter</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-02 14:44:33</h6>
+<p class='card-text'>Long-horizon tasks with sparse rewards pose an exploration bottleneck for goal-conditioned reinforcement learning: a policy started from the initial state rarely reaches the goal and receives no learning signal. Reference motions, hand-designed curricula, and shaped rewards supply this signal but require demonstrations or task-specific engineering; automatic start-state and goal curricula avoid this but typically expand from one side only, so the full distance to the target must be covered from that side. We propose the Bidirectional Voronoi-biased Exploration curriculum for Reinforcement learning (BVER), which expands from both ends at once. Inspired by bidirectional RRT planning, BVER grows start states outward from the goal and goals outward from the initial state distribution, biases both toward unexplored task space, and steers them toward each other, training one goal-conditioned policy on both. On point-mass mazes, quadrupedal box climbing, and robot-arm ring-on-peg transfer, BVER learns faster than all compared reference-free curricula. On box climbing, it reaches 95% success on a 0.4 m box in roughly 65% fewer iterations than the best of them, is the only one of them to learn to climb a 0.7 m box, and yields a policy robust to start, goal, and yaw variation. Without a demonstration, it approaches the sample efficiency of reference-based curricula on the 0.4 m box and on ring-on-peg transfer. Ablations show that expanding from both ends outperforms either direction alone.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.03392v1' target='_blank'>The Plan Language of a Curriculum: A Formal Model and the Complexity of Degree Planning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Sherzod Turaev, Mary John, Mamoun Awad</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-02 14:41:05</h6>
+<p class='card-text'>We model an academic curriculum as a generator of a language of feasible study plans: prerequisites are monotone Boolean formulas in conjunctive normal form, degree requirements are credit-threshold covering constraints, and a study plan is a sequence of terms bounded by a per-term credit capacity. Within this model, we settle the complexity of the two natural planning objectives, the number of terms to a degree and the total credit load, and we isolate the structural commitment responsible for each source of hardness. Time to degree is polynomial whenever the per-term capacity is unbounded, for arbitrary disjunctive prerequisites and arbitrary electives, so disjunction never contributes to its hardness, yet it becomes strongly NP-hard as soon as capacity binds, even without any prerequisite. Load is complementary: disjunction and overlapping electives are each strongly NP-hard in isolation and their complexity does not depend on capacity, while load is polynomial on the conjunctive, mandatory fragment. The two objectives therefore have disjoint sources of hardness. We show that the delay-factor component of the standard curricular-complexity metric is a polynomially computable upper bound on time to degree, exact on the conjunctive fragment and loose elsewhere by a quantity we name the disjunctive slack, and we prove that program subsumption is coNP-complete and consensus prerequisite recovery is NP-complete. Instantiating the model on a corpus of twenty-two universities, we find that 88 percent of prerequisite-bearing courses are purely conjunctive and that capacity, not prerequisite logic, is the operative constraint on time to degree. The curriculum corpus is openly available (https://doi.org/10.5281/zenodo.22334674), and the analysis and figure-generation code accompany the paper.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.03372v1' target='_blank'>SCAD: Structured Credit Assignment and Distillation for Long-Horizon Agents</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Shangyang Wu, Shuai Zhao, Ziyue Zhu, Jinyang Wu, Anh Tuan Luu, Haoran Luo</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-02 14:29:42</h6>
+<p class='card-text'>Training long-horizon agents to solve complex tasks requires effective supervision over extended interaction sequences. However, sparse terminal rewards obscure intermediate contributions, while on-policy distillation can lose informative teacher guidance as student-generated histories grow. To address this problem, we introduce SCAD, which organizes interactions into planning and bounded subtask execution, distills execution in local contexts, and refines planning credit through cross-rollout subtask prefix trees, with planning receiving full terminal credit and execution receiving positive terminal credit and teacher guidance. Across all evaluated benchmarks, SCAD improves macro-average accuracy over the strongest training baseline by 4.48 percentage points for text tasks and 4.19 points for multimodal tasks. SCAD effectively combines outcome-based credit assignment with teacher-guided distillation to improve planning and execution in long-horizon agents.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.03334v1' target='_blank'>A population-level assessment framework for flood-related wellbeing from public discourse in Ireland</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Róisín Luo, Karyn Morrissey</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-02 14:06:39</h6>
+<p class='card-text'>\ textbf{Background.} Ireland's position on the eastern North Atlantic exposes it to moisture-laden westerlies and frequent low-pressure systems, generating abundant precipitation and substantial pluvial and fluvial flood risk. Climate change is intensifying heavy rainfall and compound flood risk, with consequences extending beyond physical damage and conventional economic indicators.
+  \ textbf{Method.} We present a framework for assessing flood-related wellbeing from unobtrusive public discourse over time. The framework develops an assessment instrument comprising three complementary constructs: \emph{distress}, \emph{functional disruption}, and \emph{institutional alienation}, capturing flood-related impacts on affective appraisal, daily functioning, and social and institutional connectedness. To enable population-scale analysis of complex cognitive and psychological responses, we develop a dedicated flood-related wellbeing reasoning model (\textsc{Wellbeing-Former}) that reads evidence of flood-related wellbeing, assigns evidence-grounded scores, and produces transparent rationales.
+  \textbf{Data, Results \& Implications.} Using the research platform \textsc{MCL} (Meta Content Library), we construct a flood-related discourse dataset by querying posts from Ireland containing the terms \emph{flood}, \emph{rain}, and \emph{storm}. The resulting dataset comprises approximately \textbf{$224{,}000$} posts produced between 2012 and 2016. We apply the resulting \textsc{Wellbeing-Former} to this dataset to conduct a population-level analysis. This approach provides temporally sensitive evidence of experienced and anticipated flood impacts, complements survey-based assessment, and supports a multidimensional understanding of wellbeing under climate-related hazards for policy development, adaptation planning, public communication, and decision-making.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.03312v1' target='_blank'>Optimal Planning in a Dynamic World</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Devin Wild Thomas, Solomon Eyal Shimony, Wheeler Ruml, Erez Karpas, Shahaf S. Shperberg, Andrew Coles</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-02 13:50:36</h6>
+<p class='card-text'>Background: We address the problem of planning when the set of feasible states or actions changes over time. For example, in the problem of path planning among moving obstacles (sometimes known as SIPP), the feasibility of being at a particular location can change as the obstacles move. Or, the action of boarding a particular train is feasible only while it is stopped at the station. This dynamism means that the optimal plan and its duration can change depending on when execution begins. In practice, execution start time is often unknown until planning has completed or another agent gives the go-ahead. However, most prior planning work either ignores dynamism or assumes a known start time. This makes it straightforward to assess state and action feasibility but is impractical for some applications. Objectives: In this paper, we relax the assumption of a known start time. We define the setting of {\em any-start-time planning} and provide algorithms for it. Methods: We present a data structure called a compound arrival time function (cATF) that compactly encodes the optimal plan as a function of start time. We provide general-purpose planning algorithms, based on heuristic graph search, that assemble cATFs by propagating functions along edges instead of scalar costs. Results: We prove that the size of a cATF is at most linear in the problem size. An experimental evaluation of an implementation for the specific problem of SIPP shows that, on difficult problems, agents that rely on replanning often fail, while any-start-time algorithms using cATFs can quickly look up the optimal plan once the execution start time is known. Conclusions: By enabling efficient representations and reasoning for time-dependent plans, this work provides a foundation for planning in dynamic worlds.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.03275v1' target='_blank'>How suboptimal is my stochastic network controller allowed to be? Completion certificates with application to power grids hosting AI data centers</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Michael Chertkov</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-02 13:17:30</h6>
+<p class='card-text'>Power grids are beginning to host AI data centers whose demand can change abruptly and in a correlated way, and operators and planners must decide whether existing controllers can absorb the resulting transients and where new flexibility is worth installing. We cast this as a question in stochastic control: how far from optimal is an implementable controller? For controlled diffusions with affine, state-independent actuation, additive and possibly degenerate noise and quadratic control cost, any Hamilton-Jacobi-Bellman (HJB) subsolution bounds the optimal cost from below and simulation bounds the deployed cost from above, so their gap certifies the permissible suboptimality. We construct subsolutions from path-integral control by completing the control geometry: enlarging the control Gramian until it matches the physical noise makes the problem linearly solvable, and its Feynman-Kac value is an automatic lower bound whose HJB residual is exactly the energy of the fictitious control. A dual noise-deflation construction can be tighter but requires a curvature condition. The geometry yields planning rules: price control authority in proportion to local noise variance, and use shadow values to guide sparse reinforcement. For nonlinear stochastic swing dynamics of the IEEE 118-bus system after a severe load loss, a simple generator controller is certified within 2.8% of optimal under homogeneous forcing; under heterogeneous forcing the gap is 39% with uniform prices and 1.2% once the same total authority is repriced, before any hardware is added.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.03174v1' target='_blank'>FinNextAssist: Towards Professional Financial Deep Research Assistant</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Xiangyu Li, Fengbin Zhu, Xuan Yao, Siyu Liu, Xiaoluan Liu, Chao Wang, Huanbo Luan, Xiaofen Xing, Xiangmin Xu, Ke-Wei Huang, Richang Hong, Tat-Seng Chua</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-02 11:52:01</h6>
+<p class='card-text'>Deep Research (DR) agents have demonstrated strong capabilities in complex, research-oriented tasks through autonomous planning, iterative retrieval, multi-step reasoning, and structured reporting. However, adapting DR agents to finance introduces unique challenges: financial analysis demands the joint completion of heterogeneous sub-tasks spanning diverse data types, tools, and analytical workflows. We identify three key requirements for a professional financial DR agent: integration of authoritative, heterogeneous financial data sources; specialized analytical tools and skills; and dedicated sub-agents for domain-specific sub-tasks. Building on these principles, we propose FinNextAssist, an end-to-end deep research framework designed for professional financial analysis. FinNextAssist decomposes the research process into four stages: Task Planner, Evidence Compiler, Reasoning Engine, and Report Assembler, and introduces two novel lightweight sub-agents: TabAgent, for cross-market financial table understanding, and HeteroAgent, for cross-modality heterogeneous financial data interpretation. Extensive experiments on FinDeepResearch, the Finance Agent Benchmark, and FinTMMBench-Web show that FinNextAssist substantially outperforms both strong proprietary and open-source DR agents, with ablation studies confirming the contribution of each component across diverse markets and languages.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.03140v1' target='_blank'>Tracking State Footprints: How Agents Can Transact</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Oto Mraz, Rares Şerban, Kyriakos Psarakis, Burcu Kulahcioglu Ozkan, Asterios Katsifodimos</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-02 11:06:29</h6>
+<p class='card-text'>Can AI agents transact? We argue that they must: as multi-agent systems (MASs) increasingly write code, deploy infrastructure, modify databases, and call web services, lost updates or stale reads can be catastrophic. Although MASs increasingly execute plans in parallel, current orchestrators do not track the state that agents read and write. As a result, concurrency anomalies manifest even in simple coding tasks. We frame MAS coordination as a data management problem and propose to describe agents by their state footprint: the state they read and write across their own local context and state, as well as the state of the orchestrator and external systems. We posit that MASs require guarantees similar to those of databases, but providing them raises new challenges and opportunities: unlike database transactions, agents do not read from a fixed schema or an isolated snapshot, and cannot be replayed deterministically upon failure. They can, however, resolve conflicts semantically instead of aborting, enabling new forms of concurrency control and conflict resolution. Towards agents that can transact, we outline a vision for next-generation agent orchestrators and transactional interfaces for external systems to participate in agentic transactions.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.03137v1' target='_blank'>Keeping JEPA World Models Plannable When Little of the Frame Moves</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Florian Strohm, Patrick Wagner, Jannik Schwab, Marco Huber</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-02 11:02:39</h6>
+<p class='card-text'>Specifying a goal in language rather than as a goal frame is a natural interface for planning with a latent world model, but testing it needs scenes in which language must discriminate between several objects. We build SLIM, a pushing benchmark with several small objects and paired visual and language goals on identical scenes. On SLIM a LeWM world model that solves PushT succeeds on under 1% of trials, although a scripted controller with simulator state solves every tier. Probes locate the failure in the encoder: its latent is nearly action-insensitive, neither pusher nor object positions can be decoded from it, and rollouts are no better than copying the current latent forward. One inverse-dynamics auxiliary loss, applied to encoder latents and to predicted latents through a shared head discarded at test time, restores every probe and raises success from 0.003 to 0.35 (0.16 on the hard pushing tier, where a goal-agnostic policy scores zero), and improves PushT at twice the trained horizon. Controls attribute the repair to the gradient into the encoder, and a response sweep shows that the vanilla model plans once enough of the frame responds to actions. A cheap action-sensitivity probe, computable without environment access, acts as an empirical necessary condition: all configurations below its threshold failed to plan. On the repaired latent, a small language-goal head plans from sentences without retraining the world model: it reaches 0.84 on navigation (visual-goal oracle 1.00), follows the named zone when it is swapped with a decoy, and degrades gracefully to unseen nouns. A single goal sentence rarely completes a push, but given the push as a sequence of stage sentences the head raises success on the medium and hard pushing tiers from 0.04 to 0.25, on par with the goal-frame oracle, also when the switch between stages is read from the latent alone.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.03132v1' target='_blank'>Safe Streaming Flow Planning by Aligning Sampling Dynamics with Execution Dynamics</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Seunghwan Jang, Jeongyong Yang, Siddharth Ancha, SooJean Han</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-02 10:52:47</h6>
+<p class='card-text'>Generative planners based on diffusion/flow matching can learn to synthesize long-horizon trajectories from demonstrations. However, real-world deployment requires (i) enforcing safety constraints during execution and (ii) tight online replanning at fast execution rates. Prior safe diffusion/flow planners generate the agent's full trajectory at once, while repeatedly perturbing intermediate states to satisfy safety constraints. This approach is not only computationally intensive, but also introduces distribution shift since the learned sampling dynamics is distinct from the system's execution dynamics. We propose SafeStreamingFlow, a goal-conditioned planner that aligns flow sampling dynamics with execution dynamics by sequentially integrating a learned state vector field with hierarchical state prediction. Importantly, we need to enforce safety constraints only for the executed step via high order control barrier functions. Across navigation, racing, and locomotion benchmarks, SafeStreamingFlow reduces planning latency and improves safety compared to existing methods, while maintaining competitive goal-reaching success.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.03065v1' target='_blank'>Learning Transferable Policies from Action-free Time Series Through Dynamical Embeddings</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Niklas Emonds, Georgia Koppe</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-02 09:47:36</h6>
+<p class='card-text'>Learning control from action-free recordings is challenging because intervention effects are unobserved and policies may exploit errors in reconstructed dynamics. We present a hierarchical model-based reinforcement learning framework that uses shared structure across related systems to learn system-specific control policies from action-free recordings. A hierarchical dynamical system reconstruction model captures shared dynamics and individual variation through low-dimensional embeddings. These embeddings are then reused to parameterize shared policy and value networks, linking differences in reconstructed dynamics to differences in control. Policies are trained entirely via simulation under an explicit intervention model with additive latent perturbations. Piecewise-linear recurrent neural networks enable mechanistic analyses of the controlled dynamics, while decoder-based constraints make the immediate effects of interventions interpretable in observation space and permit interventions on one modality while protecting another from direct manipulation. On Lorenz-63 and double-pendulum systems, hierarchical policies improve transfer over independently trained policies. On Lorenz-63, they also achieve a higher mean reward than repeated planning with the same reconstructed models, perform comparably to methods trained with controlled interactions, and generalize to systems absent from policy training after embedding inference alone. Applications to neural-behavioral recordings demonstrate suppression of predicted movement under constrained neural perturbations. Together, these findings show how shared dynamical representations support transferable control and mechanistic hypothesis generation from action-free recordings.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.02969v1' target='_blank'>Profile-Aware Trustworthy Recipe Generation with Planner-Critic Agentic Remediation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Shanhong Liu, Pai Chet Ng, Konstantinos N. Plataniotis</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-02 08:05:57</h6>
+<p class='card-text'>Recipe generation from food images has practical value for intelligent cooking assistance, but traditional one-pass generation often overlooks user-specific safety requirements such as allergies, dietary restrictions, and preparation constraints. We propose PCAR, a Planner-Critic Agentic Remediation framework for trustworthy recipe generation. PCAR separates recipe planning from safety verification: a Planner Agent extracts ingredients and generates recipe drafts conditioned on the user profile, while a Safety Critic Agent audits each draft and provides structured feedback for remediation when violations are detected. This remediation loop enables unsafe recipes to be revised rather than directly returned or discarded. We evaluate PCAR on real food images with 100 benchmark user profiles across four backbone models, including proprietary and locally served open-source models. Results show that PCAR achieves strong safety and generation performance with capable backbone models, while preserving practical recipe quality.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.02945v1' target='_blank'>Continual Graph Memory for Mathematical Research Agents</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Junyi Zhang, Jinxi Yu, Eric Hanchen Jiang, Jiachen Lu, Zhi Zhang, Xinjie He, Hyunsik Chae, Ethan Ji, Alexander K Taylor, Vigyan Sahai, Yiwen Kou, Kai-Wei Chang, Raghu Meka, Nanyun Peng, Amit Sahai, Terence Tao, Wei Wang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-02 07:38:09</h6>
+<p class='card-text'>Using frontier agent harnesses to tackle mathematical research problems has emerged as an effective means of advancing mathematics. However, solving frontier problems in mathematics may require a massive number of agents working in parallel for extended periods to construct proofs, thereby generating an enormous volume of intermediate proof results. Organizing these intermediate results throughout a long-horizon proof-search process and reusing knowledge gained from prior explorations remain major challenges. We present Ansatz, a mathematical research agent built around Continual Graph Memory, a graph-based, evolvable, cross-problem mathematical research memory system that explicitly organizes the entire proof search process and reuses information from exploration trajectories of previous problems. Specifically, we develop a unified graph memory that represents all intermediate exploration results, including facts, plans, and counterexamples, together with edges that explicitly represent the relationships among them; dependency-aware retrieval supplies precisely targeted local context; an evidence-sensitive curator updates the research frontier and distills lessons from prior attempts; and scoped recall surfaces earlier statements and negative findings for local re-proving rather than uncritical reuse. Experiments cover runs across all ten First Proof Second Batch problems, together with four component studies. Ansatz reports closure on all ten research tasks, demonstrating its ability to sustain and resume long-horizon mathematical search. Beyond these problems, Ansatz also produces solutions to the Jamison caterpillar conjecture and Erdős Problems 289, 348, and 488 without human intervention, and makes partial progress on several open problems, illustrating its strong ability to solve open mathematical research problems.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.02869v1' target='_blank'>AgentTrap: Stateful Feedback Deception against Autonomous Penetration Testing Agents</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yuelin Wang, Jiongchi Yu, Yanbang Sun</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-02 06:07:37</h6>
+<p class='card-text'>Autonomous penetration testing agents conduct multi-step attacks by continuously adapting their plans and actions to target responses. As a common defense, honeypots can be deployed to divert these agents from real assets by presenting decoy services, while also supporting attack tracing and active counterattacks. However, conventional honeypots rely primarily on static artifacts and predefined responses, leaving them unable to adapt to the evolving attack strategies of autonomous penetration testing agents. To this end, we present AgentTrap, the first closed-loop honeypot tailored for autonomous penetration testing agents. AgentTrap uses sentinel endpoints to avoid benign interference, stateful deception grounded in the protected application, and behavior-guided escalation to sustain engagement and collect agent-side behavioral evidence with controlled disclosures.
+  We evaluate AgentTrap against eight autonomous penetration-testing agents in a deployed web application containing a real application endpoint and a separate honeypot endpoint configured under three defense strategies. Compared with no defense, AgentTrap reduces the aggregate real-target attack success rate from 95.8% to 79.2% and successfully elicits attacker API keys in 18.8% of the runs, outperforming static deception and fixed escalation. Furthermore, trace analysis shows that resistance to such counterattacks depends jointly on model-level recognition of deceptive requests and architecture-level isolation of sensitive resources.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.02801v1' target='_blank'>VIGOR: Zero-Shot Visual Generalization via Latent-Space Consistency in Model-Based Reinforcement Learning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Mingyu Park, Samyeul Noh, Hyun Myung, Donghwan Lee</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-02 04:46:58</h6>
+<p class='card-text'>Model-based reinforcement learning (MBRL) achieves strong sample efficiency by planning within learned latent dynamics, yet its performance degrades substantially under unseen visual distractions such as background variations, lighting changes, or camera shifts. Unlike model-free RL, where encoder perturbations affect only single-step predictions, MBRL suffers from a two-level vulnerability: visual distractions first push encoder outputs out of distribution, and these errors then compound through recursive latent rollouts over the planning horizon. We propose visual generalization via latent-space consistency in model-based RL (VIGOR), a framework that enables zero-shot generalization to unseen visual distractions while retaining the sample efficiency of its MBRL backbone. VIGOR integrates three interdependent components: (i) asymmetric weak-to-strong augmentation, which pairs weak-only and weak-to-strong latent views within a single batch; (ii) dynamics-level consistency, which enforces augmentation-invariant transition predictions through direct latent regression; and (iii) encoder-level stabilization, which prevents encoder drift under the cross-augmentation supervision imposed by dynamics-level consistency. Evaluations on the DeepMind Control Suite (DMC) and Robosuite show that VIGOR outperforms state-of-the-art model-free and model-based baselines, surpassing the second-best baseline by 3.4% on DMC and 43.6% on Robosuite. Ablations further show that VIGOR's robustness is augmentation-agnostic: replacing the default augmentation with alternatives from distinct perturbation families preserves strong generalization, confirming that latent-space consistency, not the augmentation choice, drives robustness.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.02765v1' target='_blank'>Localized Conformal Safety Monitoring with Vision-Language Models for Autonomous Driving</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Luís Marques, Rong Fang, Disha Kamale, Dmitry Berenson</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-02 03:46:07</h6>
+<p class='card-text'>Monitoring planned driving trajectories requires accurately estimating the collision likelihood with actors whose motion is itself impacted by the ego motion. Existing classical approaches are often limited by the quality of their forecasting model. Vision-language models (VLMs) have shown promise in reasoning about the consequences of high-level actions, yet their approximate predictions are unsuitable for safety-critical applications such as autonomous driving. Conformal prediction (CP) has emerged as a data-driven framework for quantifying the uncertainty of black-box model predictions. We propose Split Label-Localized Conformal Prediction (SLLCP), a post-hoc calibration layer over frozen VLMs that transforms their unreliable predictions into probabilistically calibrated safety prediction sets. We consider how the ability to estimate safety can depend on the observed driving scene and introduce a localized procedure that upweights relevant past experience when calculating uncertainty thresholds. We provide label-conditional finite-sample distribution-free coverage under exchangeability. Evaluated over 15k CARLA trajectories from unseen scenarios, SLLCP correctly flags 89.6% of collision-causing trajectories with a Qwen backbone and 88.4% with a Cosmos backbone, while the base VLMs only flagged 4.6% and 39.1% of the collision-causing trajectories, respectively. These results indicate that local, label-conditional calibration can reduce missed unsafe trajectories.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.02759v1' target='_blank'>Proprioceptive Sketches as Long-Horizon Intent for Generative Action Policies</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Fangyuan Wang, Songhao Huang, Haoxiang Sun, Shipeng Lyu, Chengyang He, Anqing Duan, Peng Zhou, David Navarro-Alarcon</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-02 03:40:32</h6>
+<p class='card-text'>Generative robot policies predict short action chunks but lack explicit long-horizon intent. Recent methods expose longer-horizon structure through language plans, subgoal images, or video forecasts, which are costly to generate and still need to be translated into robot motion. Predicting future robot motions avoids this translation, but a dense, time-indexed trajectory requires numerous parameters to cover the full remaining task, and over a short horizon it largely repeats the action chunk and adds little guidance for action generation. We propose Proprioceptive Action Models (PAM), which jointly generate a compact, timing-free sketch of the robot's remaining joint-space path and a dense executable action chunk within a single transformer denoiser. The sketch parameterizes the path by arc length rather than time, capturing geometric intent invariant to execution timing. Block-causal attention and a staggered denoising schedule maintain directed sketch-to-action dependence, ensuring the action tokens condition on a progressively cleaner sketch throughout sampling. In simulation, PAM improves over its action-only counterparts on Push-T and LIBERO-Long; on four real-world bimanual tasks, it raises success from 47.5% to 75.0%. Project page: https://nicehiro.github.io/pam_dp/</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.02739v1' target='_blank'>Beyond Correctness: Resolving Underspecification in Agentic Text-to-SQL</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Wen-Zhi Li, Yue Gong, Konstantinos Kanellis, Balakrishnan Murali Narayanaswamy</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-02 03:10:55</h6>
+<p class='card-text'>Agentic Text-to-SQL systems can interact with users to clarify underspecified queries before generating SQL. However, a correct execution result does not necessarily imply that the agent has adequately resolved the underlying underspecification: the agent may silently make unverified assumptions that happen to match the intended answer. We show that this behavior is driven in part by premature clarification termination. Although forcing an agent to ask more questions improves execution accuracy, ambiguities are concentrated in earlier interactions, making brute-force questioning inefficient. More importantly, even when explicitly prompted to plan its clarification process, the agent frequently abandons questions that it has already identified as relevant. To address this failure mode, we introduce PlanPool, which externalizes the clarification plan as a mutable question pool. Every planned question must be explicitly asked or dropped before submission, while newly discovered ambiguities can be added during interaction. Across three benchmarks derived from BIRD-Interact and Spider, PlanPool consistently improves ambiguity coverage and reduces silent failures over unconstrained and prompt-based alternatives, while maintaining competitive execution accuracy. Our results highlight an important distinction in agentic reasoning: identifying missing information is not sufficient, and the agent must also reliably maintain and resolve it before committing to an answer.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.02715v1' target='_blank'>Ego2World: Compiling Egocentric Cooking Videos into Executable Worlds for Belief-State Planning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Qinchuan Cheng, Zhantao Gong, Pengzhan Sun, Angela Yao, Shijie Li</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-02 02:51:03</h6>
+<p class='card-text'>Egocentric videos capture how people carry out everyday activities, yet testing an agent requires evaluating the consequences of actions it chooses itself. We introduce Ego2World, a benchmark that turns annotated cooking activities into executable planning environments under partial observation. Its compiler links source steps and objects to symbolic action rules, persistent world states, and explicit task conditions, so researchers can execute an agent's proposed actions and check their outcomes. World state and agent belief are maintained separately, enabling controlled studies of planning and information reuse across continuing tasks. Evaluating six planners on 105 tasks shows that accepted operations often leave task goals unmet. Execution traces and condition checks distinguish interrupted runs, partial attainment, and completed execution without goal attainment. In a separate paired Qwen-Plus study, persistent belief improves action validity by 4.15 percentage points and reduces visual-query attempts by 90.27%, with higher token use and no detected completion gain. Ego2World provides a reusable testbed for tracing how planning and memory choices affect execution, observation demand, and task attainment, connecting recorded human activity to the development and evaluation of interactive agents.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.02691v1' target='_blank'>DeltaWorld: Physically Consistent Interactive World Simulators via Action-Conditioned Latent Increment Learning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Boyuan Hou, Xiaoge Cao, Chaofan Zhang, Shuo Wang, Shaowei Cui</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-02 02:14:47</h6>
+<p class='card-text'>Interactive world simulators can provide scalable environments for robot planning, policy training, and evaluation by predicting action consequences while reducing reliance on repeated physical rollouts. To serve these applications, they must generate future image sequences that respond faithfully to robot actions and preserve the dynamics of robot-object interactions over long horizons. However, existing world models typically predict the entire next latent state and often fail to capture subtle changes induced by robot actions. Such omissions can produce physically implausible outcomes, including object interpenetration and excessive deformation. To address this limitation, we propose DeltaWorld, a physically consistent interactive world simulator for robotic manipulation. Our method introduces the Delta Latent Transition Model (Delta-LTM), which predicts action-induced latent feature changes and adds them to the current latent state to obtain the next state, rather than predicting the next latent state directly. To mitigate object interpenetration and excessive deformation in predicted future frames, Interaction-aware Latent Alignment is introduced to construct counterfactual interaction regions and supervise interaction-related latent changes. DeltaWorld is evaluated on the IWS manipulation benchmark and a self-collected cross-robot dataset covering multiple robot embodiments and manipulation tasks. On the cross-robot dataset, DeltaWorld reduces FVD by 46.6% and LPIPS by 31.1% relative to the IWS baseline. These results highlight the potential of DeltaWorld for long-horizon action-conditioned video prediction in robotic manipulation.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.02688v1' target='_blank'>Lessons from Trauma-Informed Training on Technology-Facilitated Abuse for Gender-Based Violence Advocates</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Naman Gupta, Connie W. Chau, Sophie Stephenson, Kate Walsh, Rahul Chatterjee</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-02 02:07:57</h6>
+<p class='card-text'>Technology-facilitated abuse (TFA) is an emerging gendered public health crisis affecting millions of people across the globe. TFA coincides with other forms of gender-based violence (GBV), such as emotional, psychological, and physical abuse by an intimate partner. Survivors often seek support from GBV advocates who specialize in helping survivors navigate abusive situations and potential pathways for healing and remediation. With the rise in TFA, however, survivors and GBV advocates experience barriers and gaps in knowledge in identifying and mitigating this newer, ever-evolving form of abuse. To address this, we developed trauma-informed training as a critical capacity-building intervention to improve GBV advocates' knowledge and skills for responding to survivors and to encourage multi-stakeholder collaboration toward a structural response. We facilitated 8 training workshops at local, state, and national US-based GBV organizations. Our study demonstrates that the trainings increased advocates' perceived understanding of TFA abuse vectors and their impacts on survivors, along with advocates' confidence in providing support, safety planning, and referrals through collaboration with community stakeholders. We then conducted retrospective reflections through autoethnography to surface key lessons, contestations, and tensions that emerged from our experiences in designing and coordinating trainings with host GBV organizations. Our analysis of autoethnographic notes revealed three key design decisions: coordinating logistics flexibly, reducing reflexive distance from host organizations and attendees, and using our field experience to tailor content for accessibility. We contribute a concrete checklist to guide future HCI scholars in conducting training interventions for stakeholders in high-stakes contexts.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.02674v1' target='_blank'>Generation and Transmission Expansion Planning with BESS-Based Virtual Transmission Lines</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Qiushi Wang, Xingpeng Li</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-02 01:56:59</h6>
+<p class='card-text'>This paper proposes a mathematical model for long-term Generation and Transmission Expansion Planning (GTEP) that integrates a relaxed Virtual Transmission Line (VTL) as a Storage in Place of Transmission Asset (SIPTA) strategy to address challenges posed by transmission capacity shortages and system congestion in deregulated power markets, particularly under the rapid growth of renewable energy resources and integrated data centers. The proposed VTL formulation coordinates the operation of the two battery energy storage systems (BESSs) forming a VTL pair by preventing them from charging or discharging simultaneously, thereby providing additional congestion relief without introducing an explicit congestion cost into the objective function. Base case studies on a revised IEEE 24-bus system demonstrate that VTL reduces system congestion compared with the standalone BESS case, achieving a 12.3% reduction in weighted total congestion and up to approximately 67% reduction in congestion on individual transmission branches, with only a 0.3% increase in total planning cost. Furthermore, improvements across multiple congestion metrics indicate that the benefits of VTL extend beyond reducing congested line-hours to reducing congestion rent and N-1 transmission violations in the base case. These results demonstrate the potential of VTL to provide congestion mitigation that complements standalone BESS applications.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js'></script>
+</body>
+</html>
