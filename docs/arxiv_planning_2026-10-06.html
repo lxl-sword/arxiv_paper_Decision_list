@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>planning - 2026-10-06</title>
+<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap' rel='stylesheet'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css'>
+<style>
+body {
+font-family: 'Roboto', sans-serif;
+background-color: #f5f7fa;
+padding: 20px;
+}
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.card-title {
+    font-weight: 700;
+}
+.card:hover {
+    transform: scale(1.02);
+    transition: 0.3s ease-in-out;
+}
+</style>
+</head>
+<body>
+<div class='container'>
+<h1 class='text-center my-4'><i class='fas fa-book'></i>planning - 2026-10-06</h1>
+<div class='row'>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.06805v1' target='_blank'>H-JEPA: End-to-End Learning of Hierarchical World Models for Visual Planning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Wancong Zhang, Basile Terver, Michael Rabbat, Yann LeCun, Randall Balestriero</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-05 17:53:34</h6>
+<p class='card-text'>Long-horizon planning with latent world models requires reasoning across timescales and levels of abstraction. Existing task-agnostic JEPA world models predict and plan at a single timescale or with multiple horizons in one shared latent space. We introduce H-JEPA, an end-to-end recipe for training a hierarchy of action-conditioned JEPAs in which each level predicts farther ahead in its own learned latent space. Planning proceeds top-down: the top level optimizes progress toward the goal, and each level's predictions become subgoals for the planner below it. When factors in the data evolve at separated timescales, higher levels discard fast, unpredictable detail and retain slower task-relevant state. Across four simulated navigation and manipulation environments, hierarchical planning improves over a flat JEPA; on Visual AntMaze, a three-level hierarchy raises success from 18% to 73% using less planner compute. Ablations attribute these gains to both temporal decomposition and higher-level goal representations. With inverse-dynamics supervision, the approach extends to diverse real-robot videos from DROID, where hierarchy improves offline planning fidelity at lower planner compute.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.06778v1' target='_blank'>IdeaLens: Detecting AI Ideas in Long-form Writing</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Rishanth Rajendhran, Minjoon Choi, Jenna Russell, Ramya Namuduri, Deniz Bölöni-Turgut, Marzena Karpinska, John Wieting, Mohit Iyyer</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-05 17:43:33</h6>
+<p class='card-text'>While modern AI detectors identify who wrote the words, emerging policies on AI use increasingly hinge on a different question: who came up with the ideas? We introduce IdeaLens, a detector that identifies whether a document's ideas came from a human or AI (idea provenance), regardless of who wrote its words. To focus IdeaLens on ideas rather than prose, we represent documents as outlines: lists of items that each pair a discourse role with a brief, paraphrased description of the content, minimizing word-level overlap with the raw text. We train IdeaLens on 1M FineWeb documents with silver labels from Pangram, a prose provenance detector. Since the outlines are largely stripped of surface-level information, the labels must be fit mainly through the ideas. In a controlled study, IdeaLens's AI flag rate drops from 95% to 7% as models write from increasingly detailed human plans, while Pangram 4 still flags 92%; from AI-derived plans, IdeaLens stays above 96%. Conversely, on a new dataset of 50 stories that human authors wrote from AI-generated plans, IdeaLens flags 68% of the stories as AI, compared to 8% for Pangram 4. On a comprehensive suite of 19 existing detection benchmarks, we show that IdeaLens maintains strong detection rates at low false positive rates, suggesting that ideas themselves provide a powerful discriminative signal, and its performance holds across domains, formats, and languages. Finally, we examine 90K predictions from IdeaLens to characterize systematic differences between human and AI ideation. We release our models and labeled datasets to facilitate future research on idea provenance detection.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.06641v1' target='_blank'>Physics Residual Dynamics and Reduced Order Whole-Body Planning for Obstacle Aware Human Robot Cloth CoTransportation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Moein Forouhar, Kosar Behnia, Anirvan Dutta, Hamid Sadeghian, Ville Kyrki, Sami Haddadin, Gokhan Alcan, Eckehard Steinbach</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-05 16:26:31</h6>
+<p class='card-text'>Human--robot co-transportation of deformable objects requires predicting object deformation during motion, since obstacle clearance depends on both the grasp points and the unactuated interior. We present a hierarchical planning framework that combines a learned cloth model with a reduced-order whole-body model of a dual-arm mobile manipulator. A physics-residual conditional recurrent variational autoencoder (p-cRVAE) predicts the full cloth configuration from grasp-point observations by learning a residual correction to a computationally efficient linearized physics model, limiting error accumulation over 40-step planning horizon. The predicted cloth dynamics are embedded in a model predictive path integral (MPPI) planner using a reduced-order representation of a dual-arm mobile manipulator that preserves the non-holonomic base constraint and arm workspace limits. An MPC layer subsequently refines the sampled motion into smooth, executable references for whole-body control. The reduced-order formulation achieves tracking performance comparable to the full 17-DoF model while reducing computation time by approximately 80%. Across four co-transportation scenarios and two carrying speeds, the proposed framework maintains cloth-obstacle clearance where a corner-following baseline results in collisions, while whole-body refinement reduces final cloth deformation from 0.93\,m to 0.28\,m.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.06582v1' target='_blank'>Mind the Execution Gap: Action-Semantic Mismatch in World-Model Control</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Shengtao Wen, Xiang Chen, Yu Tian, Lingbing Guo, Lina Gong, Sheng-Jun Huang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-05 15:59:49</h6>
+<p class='card-text'>World-model controllers rely on action-conditioned dynamics for prediction and planning, yet real control systems often execute commands asynchronously due to communication delay, packet loss, reordering, and actuator buffering. We study how asynchronous execution changes the action semantics assumed within world-model controllers, rather than treating it only as an external control disturbance. Through controlled interventions, we identify two architecture-dependent failure modes: planning-based controllers such as TD-MPC2 suffer from a future-action timeline mismatch between imagined and executed action sequences, while recurrent world models such as DreamerV3 can attribute observed transitions to commands that were not actually applied. Our analysis shows that TD-MPC2 requires the correct future action sequence during latent dynamics rollout, whereas DreamerV3 requires timely attribution of each transition to the action that generated it. Based on these findings, we introduce two lightweight execution-consistent interfaces, Future-Sequence for TD-MPC2 and Applied-Action Feedback for DreamerV3, that correct these mismatches without modifying the pretrained world models. Experiments across delays, packet loss, reordering, multiple control domains, measured network traces, and a process-separated asynchronous stack consistently support both diagnoses and the corresponding architecture-specific corrections.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.06539v1' target='_blank'>Preference-Adaptive Control in Autonomous Driving</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Zhongyu Mo, Shanting Wang, Huaijin Hu, Andreas A. Malikopoulos</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-05 15:37:50</h6>
+<p class='card-text'>In this paper, we present a preference-adaptive receding-horizon control framework for autonomous driving that accounts for passenger preferences and motion-sickness susceptibility. We formulate a finite-horizon optimal control problem with adaptive weights for speed, acceleration comfort, and motion sickness, while maintaining a fixed weight for collision risk. We predict motion sickness online using an individualized model on the Motion Illness Symptoms Classifi- cation (MISC) scale and update the preference weights offline from emotion-derived pairwise comparisons using Bayesian inference. A deterministic safety supervisor checks the planned trajectory and modifies the control command when necessary. We evaluate the framework using three simulated passenger profiles under three motion-sickness susceptibility levels. The learned weights yield distinct closed-loop behaviors, and the mean evaluation emotion score improves in seven of nine scenarios. No collisions occur in the full-method experiments, while the safety supervisor intervenes in 1.621% of the learning frames.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.06504v1' target='_blank'>Retirement Planning with Minimum Guarantees for Both Beneficiaries and Fund Managers</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Zhaojie Ren, Sheng Wang, Tak Kwong Wong, Sheung Chi Phillip Yam</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-05 15:22:44</h6>
+<p class='card-text'>This article studies a retirement planning problem from a new perspective in which a retiree delegates an initial lump sum to a professional fund manager. The fund is managed dynamically to deliver lifelong benefits while satisfying a guarantee that, at all times, wealth remains above a prescribed solvency level and the benefit rate remains above a minimum level. We formulate this problem as a continuous-time stochastic control model, in which the controls are the benefit rate and the portfolio allocation, and the objective incorporates general utility functions over benefits, management fees, and terminal bequest. Conventional approaches such as standard viscosity solution and martingale methods are not immediately applicable here due to the simultaneous influence of (i) the control variable nature of the benefit rate; (ii) the guarantee constraints; and (iii) the running wealth-dependent utility. We develop a new approach that deals directly with the associated fully nonlinear Hamilton-Jacobi-Bellman equation and establish the unique existence of a classical solution. One particular trick for resolving this equation is to apply an intricate transform that diverts the former to a semilinear auxiliary equation. A major contribution is to establish the existence of the solution to the auxiliary equation and characterize its precise growth, derivative, and boundary behavior. These results are crucial for establishing the verification theorems and deriving the optimal strategy. Besides, numerical experiments indicate that guarantee constraints induce more conservative policies, particularly at low wealth levels, while providing effective downside protection for both wealth and benefits. The associated well-being loss relative to the unconstrained framework remains small, suggesting that incorporating guarantees into retirement products is practically appealing.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.06502v1' target='_blank'>NeuroCBIR: A Fast and Accurate Image Retrieval System for Whole-Brain and Region-Specific MRI</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Felix Nieto-del-Amor, Jingru Fu, J. -Sebastian Muehlboeck, Eric Westman, Daniel Ferreira, Rodrigo Moreno</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-05 15:22:09</h6>
+<p class='card-text'>Content-based image retrieval (CBIR) in neuroimaging enables the identification of structurally similar brain scans, supporting diagnosis, prognosis, and treatment planning; however, existing methods are often limited to small datasets, single brain regions, or coarse class labels, thereby restricting their clinical utility and generalizability.
+  Here, we present NeuroCBIR, a framework for fast and flexible retrieval of both whole-brain and region-specific 3D T1w MRI scans. A total of 103 cortical and subcortical regions are extracted to enable both whole-brain and region-level queries.
+  NeuroCBIR leverages latent representations learned by a variational autoencoder (VAE) combined with contrastive learning, producing scan-specific embeddings that capture anatomical patterns. These embeddings were evaluated for subject re-identification, zero-shot age prediction, and zero-shot multi-class pathology stratification. Re-identification performance was high across both whole-brain and brain-region levels (mean average precision across the top-5 retrieved images (mAP@5) >= 98.4%), with robust generalization across datasets and acquisition conditions. While NeuroCBIR is not trained for age prediction or pathology stratification, zero-shot evaluations for these two tasks demonstrate that the embeddings encode meaningful information for downstream tasks.
+  Embedding extraction on a 4-core CPU required approximately 18.7 s per scan, whereas similarity search was effectively instantaneous (less than 0.01 s).
+  NeuroCBIR is publicly available for brain MRI with more than 26,000 precomputed T1w MRI embeddings. It supports reproducible research, region-specific flexibility, and clinically meaningful personalized diagnostic support. The software is available at https://github.com/minnelab/NeuroCBIR.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.06494v1' target='_blank'>Topology-Informed Prompt-Conditioned Universal Segmentation of Uterine Structures from Ultrasound and MRI</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yongheng Sun, Yuexi Gu, Jingwen Sun, Maureen Kohi, Mingxia Liu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-05 15:15:21</h6>
+<p class='card-text'>Multi-structure segmentation of the uterus is important for computer-assisted screening, diagnosis, and treatment planning of uterine diseases, where ultrasound and MRI provide complementary clinical information. However, developing a unified model across these modalities is challenging due to their substantially different image appearances, anatomical contexts, spatial resolutions, and label spaces. Moreover, existing datasets often define different segmentation targets, making joint learning challenging and potentially leading to negative transfer across heterogeneous tasks. To this end, we propose a Topology-informed Prompt-conditioned Universal Segmentation (TPUS) framework for segmenting multiple uterine structures across ultrasound and MRI. TPUS introduces a graph-based multi-dataset backbone comprising modality-specific stems and a modality-shared graph-based encoder-decoder to support modality-sensitive input adaptation, structural feature reasoning, and joint representation learning across heterogeneous uterine segmentation tasks. In addition, TPUS uses task-aware class prompts to condition the segmentation process for different datasets and label spaces, a dynamic convolutional adaptation module to generate task-specific output responses, and a topology-informed loss to encourage anatomically consistent predictions. Experiments on a uterine ultrasound dataset and a T2-weighted uterine myoma MRI dataset demonstrate that TPUS achieves Dice scores of 0.898 and 0.693 on the two held-out test sets, respectively, outperforming several generic and universal segmentation baselines. Source code can be accessed at https://github.com/YonghengSun1997/TPUS.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.06487v1' target='_blank'>Traversability-Aware Cooperative Path Planning for Human-UGV Casualty Evacuation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Kristian Dalland, Prithvi Poddar, Souma Chowdhury, Karthik Dantu, Ehsan T. Esfahani</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-05 15:12:03</h6>
+<p class='card-text'>Heterogeneous multi-robot path planning is a well-studied problem in which agents with disparate kinematic and dynamic models must coordinate to achieve shared objectives. These formulations, however, treat all agents as robotic-their cost models are mechanical and their traversability is sensor-derived. In human-robot teaming, the human partner remains relegated to command and supervisory roles rather than being modeled as a physical co-navigator with distinct mobility constraints and dynamic energy reserves. This work investigates joint path planning for a two-agent human-UGV team in search-and-rescue casualty retrieval scenarios. We model the human agent using the Pandolf-Santee metabolic cost model with fatigue-modulated speed, and the UGV using a rolling-resistance energy model with terrain-dependent speed limits. By exploiting the complementary traversability of each agent-the human's ability to traverse dense vegetation and shallow water versus the UGV's superior speed on open terrain and roads-we optimize casualty transfer locations, termed switch points, to minimize total mission time. Evaluated across multiple synthetic 1km2 environments with procedurally generated elevation and land-cover data, the optimized strategy reduces mean mission time by 5.3% relative to a human-only baseline and by 7.0% relative to a naive human-UGV strategy without switch point optimization, while reducing human energy expenditure by 17.8% relative to baseline. Notably, the naive strategy reduces human energy expenditure by a larger margin (22.4%) but incurs a 2% increase in mission time relative to baseline, illustrating that switch point optimization is necessary to realize time savings from human-UGV teaming.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.06476v1' target='_blank'>Evaluating LiDAR Data Sources, Predictor Resolution, and Spatial Random Effects in Bayesian Change-of-Support Models for Forest Inventory</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Arthur Spitta, Andrew O. Finley, Christoph Gollob, Ralf Kraßnitzer, Tim Ritter, Andreas Tockner, Arne Nothdurft</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-05 15:04:48</h6>
+<p class='card-text'>Forest managers require timely stand-level information for operational planning. Model-based estimation combines sparse field samples with remotely sensed auxiliary data to estimate growing stock volume (GSV) for small-area units. This is particularly relevant in mixed-species and structurally heterogeneous forests, where timely structural information can support management decisions under climate change and associated disturbance pressures. Uncrewed aerial vehicle laser scanning (ULS) provides flexible access to high-resolution LiDAR data, but its benefits over conventional airborne laser scanning (ALS) for model-based inference remain insufficiently understood. We compared public ALS and new ULS data using Bayesian change-of-support models to estimate GSV in a mixed-species forest in north-eastern Germany. We assessed the effects of distributional LiDAR metrics and spatial random effects. ULS models consistently outperformed ALS models, with cross-validated root mean squared prediction errors (RMSPEs) of 68.5 m^3/ha and 79.5 m^3/ha , respectively, a 13.8 % reduction in prediction error. Distributional metrics benefited ULS models more than ALS models, reducing RMSPE by up to 10.1 %, whereas spatial effects yielded minor improvements at greater computational cost. ULS models also exhibited lower stand-level predictive uncertainty for latent stand-mean GSV. This advantage may partly reflect closer temporal alignment with field data and finer-scale predictor information. These findings suggest that timely, information-rich LiDAR data may be more beneficial for stand-level GSV estimation than increasingly complex spatial model structures. ULS is promising where timely acquisition and high-resolution canopy characterization are operationally feasible. Controlled comparisons with temporally matched ALS and ULS data are needed to distinguish platform effects from temporal mismatch.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.06469v1' target='_blank'>Odyssey: A Closed-Loop Benchmark for Long-Horizon Real-World Driving with Explicit Navigation Routes</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jungho Kim, Hongjae Shin, Seunghoon Yu, Heecheol Yoo, Myeongjun Kim, Jiyong Oh, Donghyuk Kwak, Seunghyeop Nam, Haesung Oh, Hyunju Kim, Hyungchan Cho, Jaehyun Park, Soo Won Seo, Jun Won Choi</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-05 15:00:18</h6>
+<p class='card-text'>Closed-loop evaluation of end-to-end driving requires continuous rollouts that reveal how earlier decisions affect subsequent driving. However, existing benchmarks evaluate only short segments and fail to capture later consequences. Ambiguous directional commands also obscure the intended navigation objective. We introduce Odyssey, a closed-loop benchmark for long-horizon driving comprising 100 scenarios, each reconstructed from a 100-second nuPlan driving log to preserve the context of navigation maneuvers and traffic interactions. To provide a consistent navigation objective, Odyssey replaces directional commands with explicit standard-definition (SD) map routes that specify which roads to follow, while sensor-based planning determines local driving actions. Throughout these rollouts, diffusion-based refinement of 3DGS-rendered images reduces rendering artifacts along the ego trajectory. To assess how effectively planners follow these routes and prepare for upcoming maneuvers, we introduce SD Route Compliance and Pre-Lane Change Score. These assessments are complemented by RouteDS, which extends the Driving Score with penalties for SD-route deviations and failed lane preparation. We adapt state-of-the-art planners, including vision-language-action (VLA) models, and evaluate their navigation performance using these metrics. Odyssey highlights open questions in route representation and integration for E2E driving. Benchmark code and adapted baselines will be released publicly.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.06377v1' target='_blank'>Calculating the Expected Value of Sample Information for Observational Studies affected by Confounding</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Luca Benetti, Gianluca Baio, Anna Heath</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-05 14:07:56</h6>
+<p class='card-text'>Background: The Expected Value of Sample Information (EVSI) quantifies the value of collecting additional evidence to inform a health economic model. Existing EVSI methods typically assume idealized data collection mechanisms, most commonly randomized controlled trials (RCTs). However, in many realistic contexts, additional evidence comes from observational studies, which are subject to confounding or other bias. In this work, we define a methodology to calculate EVSI when additional data are observational and confounded. Methods: First, we define a simulation-based framework in which confounded observational data are generated through Inverse Target Trial Emulation (ITTE), a methodology that generates observational data with controlled levels of confounding starting from initial level data or prior information on population structure. Then, we apply inverse probability weighting (IPW) to obtain an adjusted summary statistic of the data targeting the corresponding randomized estimand. EVSI is finally computed using a regression based approach. Moreover, we propose a computationally efficient method to determine the sample size required to recover the EVSI achievable under an idealized randomized design. Results: We apply the methodology to two health economic models: a Normal Normal conjugate model and a chemotherapy treatment model combining a decision tree and Markov structure. We show that EVSI computed from observational data, even after adjustment, is lower than EVSI based on randomized data. The loss in EVSI increases with the level of induced confounding. Conclusions: This methodology extends EVSI when future evidence is expected to be observational and affected by confounding, enabling value-of-information analysis in more realistic and feasible data collection scenarios. It also provides a principled approach to sample size planning when observational evidence is anticipated.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.06290v1' target='_blank'>GAMBIT: Learning to Plan Continuous Multi-Robot Trajectories</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Rishabh Jain, Akmaral Moldagalieva, Lorenzo Magnino, Michael Amir, Keisuke Okumura, Ajay Shankar, Wolfgang Hönig, Amanda Prorok</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-05 13:14:57</h6>
+<p class='card-text'>GAMBIT is an opening chess move in which a player sacrifices a piece, typically a pawn, to gain a positional advantage later in the game. Analogously, in multi-robot coordination, individual robots may need to forgo locally reward-maximising behaviours to improve overall team performance. Such self-sacrificial behaviours are difficult to capture with manually designed heuristics, particularly in dense, interaction-rich environments. Focusing on double-integrator continuous dynamics, this work studies how to learn such coordinated heuristics over motion primitives for multi-robot trajectory execution. Our framework, GAMBIT, first learns coordinated motion-primitive selection through imitation learning and subsequently fine-tunes the policy through reinforcement learning. We further introduce a safeguarded rollout mechanism with backup trajectories that guarantees collision-free execution at all times. Experiments demonstrate that GAMBIT substantially outperforms a range of baselines, including centralised motion planners and decentralised reactive planners, while exhibiting strong scalability. In particular, it coordinates over a thousand robots with planning latency below a few hundred milliseconds in continuous domains.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.06278v1' target='_blank'>Design and development of the PRIMAger instrument for PRIMA</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Anne Costille, Fabrice Madec, Johan Floriot, Tony Pamplona, Thomas Prouv{é}, Laure Ciesla, Marc Sauvage, Willem Jellema, Lorenza Ferrari, Jochem Baselmans, Florent Canourgues, Renaud Goullioud, Carole Tucker, C. Darren Dowell</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-05 13:08:46</h6>
+<p class='card-text'>PRIMA (PRobe far-Infrared Mission for Astrophysics) is an infrared space observatory designed to operate over the next decade. Equipped with a 1.8 m telescope actively cooled to 4.5 K, the project is currently in the concept study phase as part of the NASA Probe Explorers program. PRIMA will carry two instruments: FIRESS and PRIMAger. PRIMAger will offer two observation modes: hyperspectral imaging and polarimetric imaging. Both channels will use ultra-sensitive kinetic inductance detector (KID) arrays, covering wavelengths from mid-infrared to far-infrared. A European consortium will develop the cold unit of the PRIMAger instrument while the Readout Electronics and Continuous Adiabatic Demagnetization Refrigerator (CADR) will be provided by Goddard Space Flight Center (GSFC) and shared between the 2 instruments. The hyperspectral mode will cover the 24-84 $μ$m range with a spectral resolution of R $\ge$ 8, ensured by a linear variable filter placed in front of the detector. The polarimetric mode will provide polarimetric imaging in four broad bands from 92 to 235 $μ$m, using KIDs with three polarization orientations. The main structure of the instrument is the optomechanical assembly, cooled at 1K. It supports at first the two focal plane array assemblies incorporating 0.125K detector stages. In addition, the main structure is providing the interfaces for the 0.125K thermal link, the readout cables and the filters. This paper presents the technical requirements and expected performance of the instrument, as well as the associated design of the sub-systems ensuring compliance. A major challenge will be in-flight performance verification. We will also detail the development strategy, including the planned verification and test program.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.06264v1' target='_blank'>Suppressing Frequency Collisions in a Quantum Processor</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Kuljeet Kaur, Xuexin Xu, Mohammad H. Ansari</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-05 12:59:48</h6>
+<p class='card-text'>Frequency crowding, the close spacing of qubit transitions, limits superconducting quantum processors through crosstalk, leakage, and spectator dependent errors. We introduce a Hamiltonian based framework that maps two- and three-body collision mechanisms onto a Max-k-Cut problem on qubit frequency allocation. In order to make larger lattices tractable, we introduce a cluster-stitching protocol that decomposes larger lattices into overlapping subgraphs and reconciles their local frequency assignments into globally consistent configurations. We tested our proposed framework across multiple qubit architectures to suppress dominant collision penalties by revealing a hardware residual crosstalk. We benchmark digitized counterdiabatic QAOA (DC-QAOA), standard QAOA, and simulated annealing. Counterdiabatic terms improve QAOA optimization near steep collision penalties, while simulated annealing achieves the lowest costs on the tested instances. These results indicate that our hardware-aware optimization connects microscopic interaction physics to processor-level frequency planning. These results enable a systematic solver for benchmarking of scalable software hardware co design.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.06250v1' target='_blank'>Generative World Models Enable Predictive Control of Laser Melt Pool Dynamics</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yiyang Yan, Markus Bambach, Mohamadreza Afrasiabi</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-05 12:47:44</h6>
+<p class='card-text'>World models, which learn how environments respond to actions, are emerging as a powerful paradigm for planning through imagined futures, transforming decision-making across games, robotics and autonomous driving. Bringing this capability to manufacturing could enable process decisions on timescales inaccessible to high-fidelity simulation. Here we introduce a generative world model for localized highly dynamic laser melt pool that predicts evolution from histories of temperature and phase morphology under candidate actions. Its generative latent dynamics capture the effects of unresolved melt flow, enabling more accurate recursive rollouts than deterministic regressors under transient laser inputs. Because the learned dynamics are differentiable, the model can serve directly as a predictive control plant. Gradients through imagined futures optimize laser schedules that regulate melt-pool depth over previously unseen geometry, path, initialization. We further distil this optimization into an amortized policy that produces control actions in a single forward pass, providing a proof of concept for real deployment on machines.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.06234v1' target='_blank'>Joint Class-Time Learning for Video Classification with Multi-Instance Partial-Label Learning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Lingyu Shen, Wei Tang, Fakhri Karray, Min-Ling Zhang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-05 12:37:18</h6>
+<p class='card-text'>Multi-instance partial-label learning (MIPL) addresses inexact supervision in both the instance and label spaces, which can be applied to video classification. However, bag-level labels do not explicitly supervise the correspondence between candidate classes and temporal evidence. We propose {\ours}, which couples label disambiguation with temporal evidence allocation through a joint class--time assignment. Occupancy-regularized spherical matching associates contextualized video features while learning nonuniform temporal mass and discouraging excessive concentration. During training, candidate-restricted inference recomputes the assignment within the candidate label set. A dual-marginal KL projection then constructs a structured teacher that incorporates momentum-refined class beliefs while preserving the proposal's temporal occupancy. A single plan-level KL objective aligns the full-space predictor with this teacher. Our analysis characterizes when candidate re-solving differs from masking and shows that, under the stated construction, the joint objective decomposes into class-marginal and class-conditional temporal supervision. We construct VCMIPL benchmarks from Breakfast, DoTA, and FineAction using model-generated candidate labels and evaluate the method across four feature representations. Extensive experimental results demonstrate that PIVOTMIPL outperforms existing MIPL algorithms in both effectiveness and efficiency.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.06232v1' target='_blank'>AUTOPILOT An Advanced Perception, Localization and Path Planning Techniques for Autonomous Vehicles Using YOLOv7 and MiDaS</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Harshkumar Devmurari, Gautham Kuckian, Prajjwal Vishwakarma</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-05 12:36:18</h6>
+<p class='card-text'>Self driving vehicles have emerged as a reliable technology that has the capability to transform transportation and mobility. The development of self driving cars requires significant advances in a number of areas, including perception, localization, decision making, and control. This research paper is based on the project implementation of the combination of object detection using YOLO (You Only Look Once), depth sensing using MiDaS for the localization and perception of obstacles, perspective transform, and decision making for path planning in self driving cars. The contemporary state of the technology for object detection, depth sensing, localization, and path planning evaluates the performance of the combined system through simulations and experiments. The results show that the combination of YOLO and MiDaS provides a new robust system for object detection and depth sensing. This research paper contributes to the advancement of self driving car technology and provides new and innovative approaches to the perception and localization of obstacles in the environment. Keywords: YOLO, MiDaS, perception, localization, decision making</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.06160v1' target='_blank'>Expanding Neutron Capacity at the ESS through Symbiotic Instruments: SLEIPNIR & Remora</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Nicolai Lindaa Amin, Mohamed Aouane, Peter Kjær Willendrup, Jörg Voigt, Gregory S. Tucker, Robert Georgii, Ellen Fogh, Niels Bech Christensen, Rasmus Toft-Petersen</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-05 11:30:06</h6>
+<p class='card-text'>The long pulse of the European Spallation Source (ESS) offers unique opportunities to host more than one neutron instrument on a single beam-port. Here, we present two symbiotic instrument concepts designed for previously unexploited neutrons, without imposing significant perturbation on existing or planned beamlines. The first concept employs a doubly focusing dual-monochromator system to vertically translate the neutron beam, enabling compact instruments to be stacked within spatially constrained beam ports inaccessible to conventional instruments. The second extracts excess spectral bandwidth from an existing guide via Bragg reflection upstream of the flagship instrument's chopper system, feeding a second instrument. Both concepts are optimized using gradient-descent Monte Carlo ray-tracing simulations in McStas and benchmarked against existing productive instruments at other sources. Despite operating under significant geometric and flux constraints, the resulting instruments demonstrate performance comparable to well-established reference instruments at the ILL. The two concepts together illustrate a modular and cost-effective route to expanding ESS scientific capacity, using the facility's resources that would otherwise go unused.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.06153v1' target='_blank'>Talk, Render, Act: Integrating Social Gesture and Digital Face with Synchronized Speech for Conversational Humanoid Robot</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jin Jiang, Kun Li, Jiancong Ma, Shengcai Liao</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-05 11:28:11</h6>
+<p class='card-text'>Expressive humanoid interaction requires speech, facial animation, and body gestures to form a coherent response. However, many full-body humanoid robots produce speech and gestures without a visually expressive face, while talking-face animation and robot gesture generation are typically developed separately. We present Talk, Render, Act (TRABot), an agent-based framework comprising specialized agents for motion-atom construction, dialogue generation, motion planning, and facial animation. First, to produce natural and semantically meaningful gestures, we construct Robot-Ready Semantic Motion Atoms by segmenting long-form, G1-retargeted BEAT2 motion into units with natural gesture boundaries, human-verified communicative functions, and feasible trajectories. Second, to preserve semantic order and coordinate body motion with the spoken response, we introduce a Semantic-Conditioned Compositional Planner. Given an ordered semantic function sequence and an estimated response duration, the planner selects approved atoms to realize the longest feasible action sequence while accounting for transitions and neutral recovery. Finally, we deploy a Streaming Face-Speech-Body Integration system on a physical G1 humanoid, combining streaming dialogue audio, audio-driven facial animation, and semantically planned body motion in a unified real-time interaction loop. Quantitative and qualitative experiments demonstrate that TRAbot achieves the best overall performance among all compared conditions in terms of naturalness, expressiveness, and multimodal coherence.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.06129v1' target='_blank'>I-BFM: Reward-Conditioned Robust Humanoid Interaction via Unsupervised Reinforcement Learning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Ziqi Han, Yitang Li, Junhan Sun, Fanrong Dong, Yaojie Shen, Lei Ye, Zetong Jing, Yongqi Zhang, Yiming Zhang, Xue Wang, Hao Zhao</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-05 11:01:59</h6>
+<p class='card-text'>Behavioral foundation models (BFMs) have recently shown that a single humanoid policy can support diverse whole-body control, but extending such generality to physical interaction remains challenging. We introduce I-BFM, to our knowledge the first BFM for humanoid-object interaction. Rather than relying on task-specific policies or reference tracking, I-BFM learns a shared representation of the coupled dynamics among the humanoid, objects, and their contacts using forward-backward representations and unsupervised reinforcement learning. Given a downstream task reward, the same policy can be directly conditioned on a latent command to execute closed-loop interaction without task-specific policy optimization. To improve interaction control over different time scales, we further train the policy with both short-horizon interaction targets and longer-horizon goal targets. A single I-BFM policy performs carrying, pushing, and kicking, while also supporting goal reaching, motion tracking, stylistic control, and long-horizon task chaining. More importantly, it remains effective after large deviations from nominal execution: on Carry, I-BFM achieves 94.3% nominal success and retains 89.3% success after robot falls, compared with 1.3% for a planning-based baseline. Real-world experiments on a Unitree G1 further demonstrate diverse loco-manipulation behaviors, rapid recovery from interaction failures and external disturbances, and task chaining without task-specific retraining.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.06122v1' target='_blank'>Benchmarking Jailbreak Guardrails for Embodied Agents</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Xunguang Wang, Qingyue Wang, Yuguang Zhou, Zongjie Li, Wenxuan Wang, Shuai Wang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-05 10:56:18</h6>
+<p class='card-text'>Embodied agents powered by large language models and vision-language models are increasingly deployed in physical environments, but jailbreak attacks can induce these agents to perform physically harmful actions. A growing number of guardrail methods have been proposed to intercept dangerous behavior before it is executed, yet existing safety benchmarks evaluate the embodied models themselves, leaving it unclear how well these guardrails actually defend an embodied agent in practice. We present the first systematic evaluation of jailbreak guardrails for embodied agents. To compare guardrails under identical conditions, we build a pluggable evaluation framework that treats the embodied agent as a fixed backend and each guardrail as a module that can intervene at the perception, planning, or control stage. We subject six representative guardrails to template-based and automated jailbreak attacks as well as safe instructions, and assess them at the system level along three dimensions: defense effectiveness, measured by the bypass rate and the hazard success rate in the simulator; usability, measured by the false-positive rate and the task completion rate on safe instructions; and efficiency, measured by the latency overhead added at runtime. Experiments on guardrails that span different intervention stages, decision mechanisms, and input modalities reveal a clear trade-off among the three dimensions, and show that no single guardrail dominates in all settings. We further analyze how intervention stage, decision mechanism, and input modality shape safety outcomes, and we offer practical guidance for selecting and designing guardrails for embodied agents.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.06121v1' target='_blank'>Radar2Plan: Benchmarking 4D Radar for End-to-End Open-Loop Ego-Trajectory Planning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Ling Yao, Yichun Xiao, Jin Jin, Yihan Zhang, Fangqiang Ding</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-05 10:52:08</h6>
+<p class='card-text'>Adverse weather and poor illumination remain major challenges for robust ego-trajectory planning in mobile autonomy. 4D radar offers reliable sensing under adverse conditions and direct radial-velocity measurements. However, sensing robustness does not necessarily translate into robust downstream planning, while existing 4D radar benchmarks focus primarily on perception rather than trajectory planning. We present Radar2Plan, a modular benchmark for open-loop ego-trajectory planning using real-world 4D radar data. Radar2Plan connects sensor encoders, scene representations, and planning heads through common interfaces, enabling controlled comparisons between different sensor and planner configurations. Using DSERT-RoLL and MAN TruckScenes, we evaluated seven combinations of camera, 4D radar, and LiDAR in four representative planning baselines and 12 weather and illumination conditions under a unified protocol. To our knowledge, Radar2Plan is the first benchmark dedicated to evaluating real-world 4D radars for autonomous driving planning. Experiments show that 4D radar alone supports competitive ego-trajectory planning and robust performance under adverse conditions. Sensor-configuration comparisons further demonstrate its complementary value to other modalities, while revealing dependencies on sensor combination and planning architecture. The modular design also supports additional datasets, sensing modalities, and planners, providing a flexible foundation for future research on radar-based autonomous driving planning.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.06103v1' target='_blank'>Propagating Elevation-Map Uncertainty Through the Contact Maximum in Closed Form</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Aleš Kučera, Karel Zimmermann</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-05 10:35:55</h6>
+<p class='card-text'>Risk-aware planners score paths on uncertain elevation maps using the path cost's mean and standard deviation. Modeling rigid contact, however, requires computing a maximum over several uncertain cells. First-order propagation loses accuracy here by differentiating at only a single cell, while Monte Carlo sampling requires a full path evaluation per draw. We compute the moments of that contact maximum in closed form using Clark's pairwise recursion. By tracking each contact's covariance against the shared map cells, we propagate the smooth remainder using exact Gaussian quadratic-form identities. A contest-depth calibration, fitted once on two design traverses, closes the aggregate standard-deviation shortfall that remains. On 317 held-out rover path segments, scored against a Monte Carlo reference from the same belief, every pre-registered criterion was met. The corrected Clark fold cuts the median error of the mean from linearization's 2.3% to 0.19% and attains the lowest error in the conditional value at risk (CVaR) at the 90% level of every method tested. A benchmark plan costs just 5.5 microseconds on a GPU. These accuracy gains concentrate at contested contacts. While they seldom change which path is chosen on this terrain, the fold still selects the reference-best path in 98% of decisions against linearization's 93 to 96%. On a second dataset the mean transfers, though the risk number does not.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.06097v1' target='_blank'>A Differentiable Brain Tumor Mass Effect Solver</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Marco L. Wittrich, Michal Balcerak, Lucas Zimmer, Ivan Ezhov, Björn Menze, Marie-Christin Metz, Nicole Tueni, Benedikt Wiestler, Jonas Weidner</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-05 10:30:12</h6>
+<p class='card-text'>A growing brain tumor mechanically deforms the surrounding healthy brain through mass effect. This compression and displacement of tissue affects both patient prognosis and treatment planning, so biophysical models of tumor growth must account for this deformation. Established mass-effect models are partial differential equation (PDE) solvers that couple growth to elasticity and calibrate parameters per patient, at substantial implementation, runtime, and calibration cost. We ask how much of this deformation a fully differentiable energy-based model can recover, and introduce a potential-spring model: a regular grid over the brain is driven outward by a tumor-concentration potential and held by an elastic spring lattice with tissue-specific stiffness. It shares the tumor-gradient driving force of continuum elasticity but uses a single global parameter and no per-patient inversion, minimized end-to-end by gradient descent. We benchmark it against established solvers by applying each displacement field to a healthy atlas and measuring tissue overlap with the patient's own segmentation on 134 BraTS patients. Our model yields the largest overall local overlap improvement at up to 100$\times$ shorter computation time, establishing a lightweight, differentiable solver for tumor mass effect. Because our model obeys mechanical laws and reflects the tumor-induced tissue loading, it remains physically plausible, a prerequisite for clinical use.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.06094v1' target='_blank'>Anatomy-preserving unpaired cone-beam CT refinement for image-guided radiotherapy using pseudo-label guided diffusion</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Qi Lai, Yutong He</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-05 10:27:57</h6>
+<p class='card-text'>Cone-beam computed tomography (CBCT) is widely used in image-guided radiotherapy, but scatter, beam hardening, noise, truncation, and other artifacts limit image quality and CT number accuracy. Paired CBCT and CT data are difficult to obtain clinically because of motion, anatomical changes, and acquisition mismatch. We present RefineCBCT, an unpaired CBCT refinement framework that uses pseudo-label guidance and short-step diffusion to reduce artifacts while preserving patient-specific anatomy. RefineCBCT was trained and evaluated on unpaired CBCT and planning CT data from public LUNG TCIA and PELVIC TCIA datasets and compared with representative GAN and diffusion based methods. On LUNG TCIA, it achieved the best results across all metrics, with MAE 19.411, RMSE 62.758, PSNR 30.845 dB, and SSIM 0.931. On PELVIC TCIA, it achieved the best MAE, PSNR, and SSIM, with values of 14.905, 36.671 dB, and 0.876. The refined images showed fewer streaking and shading artifacts, clearer anatomical boundaries, and improved soft tissue uniformity, with line profile and ROI analyses showing closer agreement with planning CT. These results suggest that RefineCBCT provides efficient and effective CBCT refinement under clinically realistic unpaired training conditions and may support more reliable CBCT use in image-guided radiotherapy workflows. Code is publicly available on GitHub, and the evaluated datasets are available from The Cancer Imaging Archive.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.06044v1' target='_blank'>RocketAgent: A Long-Horizon Engineering Agent for Multidisciplinary Design of Liquid-Rocket Thrust Chambers</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Junxiang He, Runze Mao, Kun He, Teng Zhang, Liming Zheng, Ke Xiao, Zhi X. Chen</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-05 09:41:58</h6>
+<p class='card-text'>Liquid-rocket thrust-chamber design involves interdependent analyses in which downstream constraints can require earlier design decisions to be revisited. Managing these dependencies across heterogeneous tools requires consistent design information and coordinated updates throughout the workflow. We present RocketAgent, a long-horizon engineering agent for multidisciplinary preliminary design of liquid-rocket thrust chambers. A single plan-owning Coding Agent coordinates engineering skills for performance sizing, subsystem optimization, geometry generation, and multiphysics assessment. A provenance-aware knowledge graph supports method selection, while a typed Design Intermediate Representation maintains shared parameters, artifacts, and decisions. Revision-aware checks invalidate affected results and block superseded inputs, with consequential changes subject to engineering approval. In a representative simulation-based design, RocketAgent continued from an infeasible cooling search through an engineer-authorized operating-point revision, identified feasible subsystem designs, and coordinated subsequent geometry generation and multiphysics assessment to support final configuration selection. Separate module tests assessed surrogate predictions and nozzle adaptation. A two-configuration comparison across three controlled scenarios verified the expected dependency invalidations and superseded-input blocking before solver execution. The representative case demonstrates sustained coordination across a multidisciplinary design workflow, while the controlled tests establish the behavior of the revision mechanisms supporting that execution.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.06031v1' target='_blank'>LightMTP: Lightweight Latent Multi-Token Prediction</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Tamara Czinczoll, Julie Kallini, Gerard de Melo, Chen Shani</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-05 09:30:30</h6>
+<p class='card-text'>Next-token prediction (NTP) is the standard pretraining objective for large language models, yet it provides an explicit training signal only for the immediate next token, which can lead models to exploit local patterns instead of capturing longer-range structure and ideas. Multi-token prediction (MTP) addresses this by training models to predict several future tokens. However, existing MTP methods often introduce a large number of new parameters with limited improvements in downstream performance. Latent MTP approaches address this efficiency issue by encoding future tokens into a vector representation. However, these approaches usually rely on external helper models for future token encoding. We propose LightMTP, a lightweight, i.e., parameter-efficient, latent MTP approach that bootstraps the future token representations from the model's own hidden states. Our two LightMTP variants extend supervision to more future tokens without requiring the additional computational overhead of conventional MTP nor the external supervision latent MTP normally relies on. LightMTP adds at most 1% extra parameters, retains better performance on general language modeling benchmarks, and achieves similar gains in planning, coding, and reasoning.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.06008v1' target='_blank'>Ultrasound Operator Guidance Using World Modeling and Retrieval Based Action Planning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Noortje I. P. Schueler, Hans van Gorp, Ruud J. G. van Sloun</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-05 09:05:30</h6>
+<p class='card-text'>Ultrasound is widely used, but acquisition quality is heavily dependent on the operator's knowledge and expertise. With demand for examinations outpacing the supply of trained sonographers, operator-guidance systems aim to close this gap by instructing a less trained user how to move the probe toward a target view. In this paper, we propose a retrieval-induced latent transition model for ultrasound acquisition dynamics, formulating ultrasound operator guidance as multi-step planning and retrieval in a world model. Using a V-JEPA 2.1 backbone, observations are first encoded into a latent space where anatomically related views lie close together. We then retrieve similar views from a reference database containing encoded latent states and corresponding probe positions and orientations. Rather than learning a parametric transition function, we directly use physically executed transitions from the database to establish our nonparametric, retrieval-induced transition model that supports receding-horizon planning. At deployment, guidance is generated from the live ultrasound image feed alone, without any probe tracking hardware. Applied to carotid ultrasound, the proposed planner reaches the target view in 86% of retrospective closed-loop episodes, versus 52% and 43% for representative baselines, outperforming both on every target view, including the challenging longitudinal internal and external carotid artery views. A prospective feasibility study on unseen volunteers, run in real time on a CPU using distillation, reaches 83% target-view reachability. Because planning is driven by proximity to any encodable goal latent, the same world model can navigate back to any previously acquired, patient-specific frame, supporting reproducible longitudinal imaging for e.g. perioperative or follow-up monitoring.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.06004v1' target='_blank'>Experimentation Practices in Indie Game Startups</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Elizabeth Bjarnason, Johan Linåker, Fabian Fagerholm</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-05 09:01:11</h6>
+<p class='card-text'>Small independent (indie) game startups face fierce competition when developing games with limited time, budget, and resources. Continuously testing and experimenting with new ideas, features, and content is essential to validate and guide development toward a viable and successful game. Such continuous experimentation (CE) requires access to users and user data, which is often very limited in the early stages of development, both in general and, in particular for indie game companies. We provide insights and recommendations on how to perform experimentation and game testing in pre-release stages of indie game development based on an exploratory interview survey with 10 independent game developers from different companies. We provide a framework for CE that highlights key parts to consider when planning and implementing an experiment. Current practices for experimentation within indie game development are also described for the early development stages of ideation, preproduction, feature production, and content production. Our empirical findings offer insights and recommendations into how to conduct experiments during pre-release stages of game development, specifically for Indie game companies. Other software startups, particularly those with a value proposition centred around interactive and satisfying user experiences, can also benefit from our research.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js'></script>
+</body>
+</html>
