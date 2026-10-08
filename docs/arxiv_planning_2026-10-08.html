@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>planning - 2026-10-08</title>
+<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap' rel='stylesheet'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css'>
+<style>
+body {
+font-family: 'Roboto', sans-serif;
+background-color: #f5f7fa;
+padding: 20px;
+}
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.card-title {
+    font-weight: 700;
+}
+.card:hover {
+    transform: scale(1.02);
+    transition: 0.3s ease-in-out;
+}
+</style>
+</head>
+<body>
+<div class='container'>
+<h1 class='text-center my-4'><i class='fas fa-book'></i>planning - 2026-10-08</h1>
+<div class='row'>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.10528v1' target='_blank'>Long-WAM: Scaling the Context of World-Action Models</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Wei Huang, Bohan Zhang, Chenzhi Liu, Isabella Liu, Shuai Yang, Weian Mao, Luozhou Wang, Yicheng Xiao, Weifeng Lin, Qixin Hu, Bryan Chu, Sifei Liu, Linxi Fan, Xiaojuan Qi, Song Han, Yukang Chen</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-07 17:58:04</h6>
+<p class='card-text'>Real-time robot control demands enough visual history to infer motion and task progress, but processing that history can delay action. We present Long-WAM, a model-system framework for scaling the context of causal world-action models under real-time control constraints. Our central finding is that access to history is not the same as using it: longer histories pay off far more when the video foundation is pretrained autoregressively (AR). We first learn causal prediction from robot and egocentric videos without action labels, then preserve this history-to-future structure during world-action adaptation. On RoboCasa GR-1, increasing context from 0.0 to 19.2 seconds raises success from 63.3% to 78.7%, whereas a bidirectionally pretrained initialization shows no net gain; robot-domain AR pretraining further raises peak success on GR-1 and LIBERO-Long. Long-WAM also achieves the best results among compared methods on LIBERO-Long, RoboTwin 2.0, and DOMINO. Streaming observation encoding, asynchronous execution, and hardware-specific acceleration enable deployment on RTX 5090, DGX Spark, and Jetson AGX Thor without dropping future prediction; on RTX 5090, each action chunk, including future-video latent prediction, takes 107.4 ms. Real-time deployment on Unitree G1 and YAM supports dynamic and long-horizon manipulation, including 95% success on dynamic cup stacking, where Pi0.5 and Fast-WAM succeed in none of 20 trials. As a memory-informed executor, Long-WAM also complements higher-level planning in composite tasks.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.10515v1' target='_blank'>RoboJEPA: Scaling Robotic Latent World Models</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Artem Zholus, Nicolas Beltran-Velez, Jianhao Yuan, Sarath Chandar, Tushar Nagarajan, Daniel Severo, Koustuv Sinha, Michal Drozdzal, Adriana Romero Soriano, Jeannette Bohg, Nicolas Ballas, Mahmoud Assran</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-07 17:54:42</h6>
+<p class='card-text'>Latent world models have shown a remarkable ability to predict future states and to plan in the real world. In practice, however, we lack a principled way to estimate how their capabilities scale with model size, data, and compute, an open problem that slows progress in the field. In this work we present RoboJEPA, a world model based on the Joint Embedding Predictive Architecture (JEPA) and trained on a large-scale dataset spanning 12 robotic embodiments. We show that RoboJEPA's imagination error, the error of its latent rollouts, follows a second-order power law in compute, allowing us to predict model quality well beyond the scale at which the law is fit. We further show that downstream robotic planning performance improves predictably with compute, and that imagination error is strongly correlated with it, making it a reliable proxy for real-robot evaluation. Finally, we demonstrate that latent world models can be deployed zero-shot as robotic agents, planning toward a single goal image to solve tasks requiring long-horizon planning on real hardware. We release all model checkpoints together with our training and robot deployment code. To our knowledge, this is the first work to establish scaling laws for multi-embodiment robotic world models trained on real robot data, and RoboJEPA, at 8B parameters, is the largest JEPA predictor model trained to date.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.10470v1' target='_blank'>CMP-IRRT*: A Perception-Assisted Height-Adaptive Planner for Quadruped Robots</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Mingfan Zhao, Wendong Mao, Zhongfeng Wang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-07 17:33:31</h6>
+<p class='card-text'>Quadruped robots can traverse low obstacles, but many 2D planning pipelines still model obstacles as binary occupied regions and rely on sampling-based search that can be inefficient under a limited budget. We propose a perception-assisted height-adaptive planning framework based on CMP-IRRT*, a Channel Mamba PointNet-guided Informed RRT* planner. Given a calibrated top-view RGB observation, the perception module estimates obstacle regions and converts depth predictions into a ground-relative height map. The planner then performs height-conditioned collision checking, treating high obstacles as blocked while allowing low obstacles to be traversed, and uses the CMP guide to bias sampling toward promising regions while retaining standard free-space and informed sampling fallbacks. Experiments on 2D planning benchmarks show that CMP-IRRT* reduces explored nodes and iterations compared with classical and neural-guided baselines, and a controlled ablation supports the contribution of the Mamba-based guide. In constructed traversability-aware scenarios, the proposed planner reduces path length by up to 16.3% when low obstacles are traversable, and a Unitree Go2 demonstration further shows executable bypassing and traversal behaviors. Our code is publicly available at https://github.com/MingfanZhao/height-adaptive-planner.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.10465v1' target='_blank'>LLA-MPPI: Rapidly Adaptive Whole-body Control of Legged Robots with GPU-Accelerated Parallel Simulations</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Sebin Jung, Maitham F. AL-Sunni, Juan Alvarez-Padilla, Zachary Manchester, Changliu Liu, John M. Dolan</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-07 17:30:13</h6>
+<p class='card-text'>Real-time whole-body controllers for legged robots typically plan through a fixed nominal model and degrade when the deployed dynamics change. Adaptive methods typically require a model structure that contact dynamics do not provide, or they need offline training for each anticipated condition. We present Look-back and Look-ahead Adaptive Model Predictive Path Integral control (LLA-MPPI). The method converts whole-body adaptation into selection over a bank of GPU-batched contact simulators with different physical or structural parameters. Windowed prediction errors select the simulator that best explains recent motion. A whole-body MPPI planner optimizes controls through the selected model. The framework requires no offline training, and its selected hypotheses are physically interpretable. Across four simulated tasks, it achieves 97.5% success while the strongest baseline reaches 74% and an oracle with the true model reaches 98.5%. Hardware validation on a Unitree Go2 shows the robot walking under a payload added mid-run, walking after one leg is disabled, and pushing a box to its goal while increasing its mass on the fly. Code, videos, and project details are available at: https://lla-control.github.io</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.10421v1' target='_blank'>AirGroundVLN: A Large-Scale Benchmark for Goal-Oriented Air-Ground Collaborative Vision-and-Language Navigation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Zhenxuan Zeng, Qingle Wu, Wei Suo, Maojia Wu, Bairong Zhang, Hangzheng Yu, Peng Wang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-07 17:01:20</h6>
+<p class='card-text'>Goal-oriented Vision-and-Language Navigation (VLN) requires agents to locate and reach targets described in natural language without prescribed routes. Air--ground collaboration is valuable for tasks requiring both wide-area search and fine-grained localization. However, systematic study of goal-oriented air--ground collaborative VLN remains limited by the lack of large-scale, diverse benchmarks and two core challenges: 1) substantial differences between aerial and ground views, together with useful observations becoming unavailable as navigation proceeds, make it difficult to maintain spatially consistent context across platforms and over time; and 2) asymmetric spatial observability makes ground perception locally detailed but spatially limited and aerial perception broad but locally coarse, limiting the reliability of single-platform planning. To address these limitations, we introduce AirGroundVLN, a benchmark containing 10,281 navigation episodes and 955 target instances across 19 Unreal Engine environments, with seen/unseen splits and an aerial-visibility protocol for systematic evaluation. Alongside the benchmark, we propose AG-CoNAV, a trainable reference framework comprising two key components: Spatiotemporally Anchored Collaborative Memory (SACM) and Aerial-Guided Regional-to-Local Planning (AGRLP). SACM maintains and retrieves spatially consistent historical context across aerial and ground observations. Meanwhile, AGRLP combines regional aerial guidance with fine-grained ground navigation. Extensive experiments demonstrate the effectiveness of AG-CoNAV and establish AirGroundVLN as a comprehensive benchmark for future exploration.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.10393v1' target='_blank'>Safe Meta-Policy Design with Risk Control</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Wenbin Zhou, Michael Lingzhi Li, Shixiang Zhu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-07 16:48:38</h6>
+<p class='card-text'>Models can be retrained as new data arrive, but deploying every new version risks replacing a good policy with a worse one. We study how to plan policy updates (i.e., meta-policy) before future candidates are trained, balancing the benefits of improvement against the risk of performance regression. Our offline meta-policy maximizes expected cumulative value subject to a budget on the expected number of updates that perform worse than the policies they replace. We estimate the value and risk of possible switches from historical learning trajectories, represent an update schedule as a path in a directed acyclic graph, and select a schedule using dynamic programming. A leading-order analysis identifies the signal-to-noise ratio of policy improvement as a key driver of update frequency, waiting times, and risk allocation: clearer improvements support earlier, more frequent updates, while noisier improvements call for longer waits or greater risk expenditure. Their asymptotic rates also reveal a diminishing marginal cost of achieving greater safety over time. Experiments on synthetic and clinical trial data illustrate the performance--risk tradeoff and compare our method with alternative baselines.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.10390v1' target='_blank'>Explicit Geometric Chain-of-Thought for Vision-Language-Action in Autonomous Driving</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Xingtai Gui, Yucheng Zhou, Dongqian Guo, Jiahao Gong, Feiyang Tan, Jianbing Shen</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-07 16:47:17</h6>
+<p class='card-text'>Vision-language-action~(VLA) models have emerged as a promising paradigm for autonomous driving. However, existing VLA models still suffer from a fundamental mismatch: driving actions require precise 3D geometric cues, while visual-language understanding and reasoning are largely conducted in a 2D semantic space. In this paper, we propose GeoCoTDrive, an explicit geometric chain-of-thought framework that grounds geometry in a planning-oriented manner. GeoCoTDrive follows a think with 2D first, drive with dedicated 3D priors paradigm. It first grounds 2D regions corresponding to decision-critical cues, and then retrieves localized 3D priors by sampling features from a geometric foundation model within the grounded regions. These localized geometric features are interleaved into the autoregressive context to support the trajectory generation. To supervise this process, we introduce planning-relevant grounding, a new region-level grounding task that focuses on local spatial cues directly affecting ego planning decisions, and construct the PlanningGrounding dataset to endow VLAs with planning-oriented grounding capability. Experiments across multiple end-to-end autonomous driving benchmarks show that GeoCoTDrive consistently improves safety-critical planning performance, demonstrating the effectiveness of the explicit geometric chain-of-thought process for VLA-based planning.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.10367v1' target='_blank'>Temporally Interpretable Differentiable Decision Trees</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Eisuke Hirota, Aarav Sane, Rohan Paleja</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-07 16:35:17</h6>
+<p class='card-text'>Interpretability offers a solution to safe autonomy by providing transparency into an agent's underlying decision-making model. Within sequential-decision making tasks, differentiable decision trees (DDTs) are one approach to such interpretability, maintaining automatic-differentiable policies while providing humans with a discrete tree-based visualization. Nonetheless, current implementations of DDTs are not well-suited for sequential-decision making domains, as there exists an inherent mismatch between a tree's single-timestep behavior and a human's multi-timestep planning. Our work thus introduces time as a new dimension of interpretability, coined as temporal interpretability, and demonstrates how temporal abstractions via action chunking improve it. We achieve this by first introducing two novel policy gradient algorithms that incorporate action chunking. Additionally, to maintain parameter-efficient trees, we develop an information-theoretic tree restructuring algorithm that modifies the tree during training. Across four simulation environments, we find that warm-starting action chunked DDTs from a distilled action chunked policy is the most effective way to obtain temporally interpretable trees: they match neural network policies in three of the four domains while using up to 80$\%$ fewer parameters. Our code is available at https://github.com/ei5uke/temp-interp.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.10321v1' target='_blank'>Estimating Uncoded Crash Factors with Tabular Foundation and System One Models: Kumo Tabular and Jev</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Amir Rafe, Subasish Das</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-07 16:12:08</h6>
+<p class='card-text'>Road safety programs count the coded fields of police crash records, while the officer's narrative, which often records factors the fields omit, is rarely read. A safety office thus cannot tell how much its counts miss or where to review. This study develops and evaluates a system that joins both views of the 5,601,890 Texas crashes from 2017 to 2025 into population estimates with stated validity. An in-context tabular foundation model, Kumo Tabular, reads the coded record of every crash, a calibrated System One model, Jev, reads the narratives of two probability samples, and human judgments recalibrate its probabilities. A multiwave predict-then-debias estimator joins the three tiers, and a second human tier drawn with recorded probabilities checks the estimates by design. For hydroplaning, medical episodes, fatigue, animals, and phone use, the narrative documents more injury crashes than the coded field, 15,074 against 7,340 for phone use, and the human check agrees with all fifteen estimates within its margin. A re-read list ranked by Kumo Tabular finds confirmed discordance 7 to 58 times as often as random reading. At the planning cost of human coding, one further round of human judgments would cut the root mean square relative half-width from 22.0 to 16.2 percent, against 21.2 for reading every narrative. Two calibrated readers of different views, joined by a sampling design, give a safety office counts, a discordance map, a validated re-read list, and a reading budget, with Kumo Tabular reading the table at 15 times the speed of TabPFN 3.5.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.10275v1' target='_blank'>Active Inference for Interaction-Mediated Control of a High-Dimensional Robotic Arm</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Fraser C. Paterson, Sebastian Stein, Markus Klar, John H. Williamson, Roderick Murray-Smith</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-07 15:42:01</h6>
+<p class='card-text'>We propose interaction-mediated control via Active Inference as a general architectural approach to high-dimensional control problems in Human--Computer Interaction (HCI). This architecture recasts user interaction as the provision of evidence about a latent task objective, rather than the direct specification of plant-control inputs. The mediating function is distributed between an interaction broker, which selects informative user queries and performs Bayesian inference over user preferences, and an Active Inference controller, which autonomously plans and acts under the resulting preference information to control the plant. This division of labour decouples the semantics of user interaction from those of low-level plant control. We instantiate the architecture in a simulated, multi-link robotic arm to perform a simultaneous whole-arm target-coverage task. A simulated user communicates exclusively through a clutch-style binary evaluative channel, without specifying joint-torque commands. Across increasing arm dimensionalities, the architecture achieves successful interaction-mediated control, although task success is lower than when the controller receives the true target preferences directly. Exact target-subset identification also remains imperfect, highlighting the distinction between preference inference and successful task completion. The experimental findings provide an initial computational demonstration of the proposed architecture under controlled, matched-model assumptions and motivate its further investigation in broader HCI applications.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.10274v1' target='_blank'>Sparse Planning in Visual World Models via Cost Gradients</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yingchen Xu, Edward Grefenstette</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-07 15:40:52</h6>
+<p class='card-text'>Token-based world models enable fine-grained latent planning, but repeatedly processing large spatial token grids makes action search expensive. We introduce COSTGRAD, a training-free, goal-conditioned selector that ranks spatial tokens by the gradient norm of the planning cost with respect to each input token. By deriving importance from the downstream control objective, COSTGRAD targets tokens that matter for planning rather than merely for prediction. On AdaLN-conditioned predictors at $50\%$ sparsity, COSTGRAD matches or exceeds full-token planning on three of four continuous-control benchmarks, while giving a measured $2.6\times$ wall-clock speedup per environment planning step. Combining token sparsity with reduced CEM search increases this to a $\sim 5\times$ total speedup while still exceeding the full-token baseline. We also identify an architecture-dependent failure mode: in a matched AdaLN-vs-concat comparison, concat maintains comparable full-token performance but pure COSTGRAD loses its advantage over random selection. This difference tracks action-pathway drift: gradient-selected removal produces less drift than random removal on AdaLN, but more on concat. These results highlight selector-architecture compatibility as a design axis for sparse world-model planning. Project page and demos: https://ycxuyingchen.github.io/costgrad/</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.10260v1' target='_blank'>PairAudit: Guiding Human Review with Graph Tokens under Distribution Shift</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jiran Tao, Binyan Jiang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-07 15:35:02</h6>
+<p class='card-text'>Intrusion detectors can confidently misclassify attacks that were not seen during training. Human review can correct these errors, but only a limited number of cases can be checked. Uncertainty-based review may overlook confident errors, while anomaly scores alone do not show whether changing the review plan will correct more errors. We introduce PairAudit to find overlooked errors and improve review under a fixed budget. Its graph tokens capture prediction patterns across connected nodes. Rather than building another predictor through feature aggregation, PairAudit uses unusual relational patterns to uncover potential errors in existing predictions. Human feedback then helps decide whether these findings justify changing review priorities. Experiments across security tasks show that PairAudit corrects more errors on average than uncertainty-based review, including more errors on unseen attacks. These gains account for all review costs and do not require retraining the detector.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.10201v1' target='_blank'>GAGR-Lab: Evaluating Joint Spatial-Geometric and Analytic Function Reasoning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jingyao Zhang, Yun Li, Lu Han</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-07 15:01:54</h6>
+<p class='card-text'>Joint spatial-geometric and analytic function reasoning requires translating a perceived spatial configuration into a symbolic function whose executed curve satisfies geometric constraints. We present GAGR-Lab, a framework for measuring this capability through Cartesian game scenes, explicit function semantics, and authoritative Rust trajectory execution. It distinguishes spatial perception, metric grounding, geometric relations, function interpretation, function construction, and constrained synthesis. We specify four configurable scene-difficulty presets and a prospective 24-cell diagnostic design, while reporting only the subset actually evaluated. A bounded pilot of one hosted model (Llama 3.2 11B Vision Instruct) using two API credentials as execution replicas yields 72 balanced games with 432 attempts, 429 valid provider responses, and no target hits; exploratory ordinary-function prompt variants also fail to hit, while the structured localization interface yields no scoreable outputs. A privileged analytic search control independently succeeds on 600 directional cases from 300 generated scenes, with exact repeatability and 1,200 successful vertical-reflection or translation checks. The framework separates serving reliability, symbolic compliance, and geometric success, and preserves exact model-visible inputs and realized paths. A staged protocol outlines diagnostic calibration, held-out replication, multi-model comparison, and paired robustness tests. The contribution is an operational research framework with an executed pilot and a clearly identified prospective study plan; the full difficulty matrix and comparative model results remain untested.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.10100v1' target='_blank'>The Cost of Classical Multi-Agent Path Finding</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Alvin Combrink, Sabino Francesco Roselli, Martin Fabian</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-07 13:54:58</h6>
+<p class='card-text'>Multi-Agent Path Finding (MAPF) is the problem of planning conflict-free paths for multiple agents in a shared space, each from its start to its goal. Classical MAPF has been the dominant formulation for many years, with its assumptions of discrete time and graph-based conflicts presumably easing the search for solutions. These assumptions limit the physical environments and agents for which a solution is truly collision-free, and also place an upper bound on solution quality that no algorithmic improvements can lift. This work investigates how much solution quality, and in what contexts, the classical MAPF formulation forfeits. Continuous-time MAPF (MAPF$_R$) relaxes these assumptions, making it a natural counter-formulation to compare against across various agent counts and sizes, and graph connectedness, topologies, and resolutions. We find that continuous time and agent shape consideration are worth relatively little on their own; their value comes from enabling an expanded range of move actions, on average improving solution quality by at least $5\%$ on narrow and constrained maps and $17\%$ on maps with open spaces. In some cases, the improvements exceed $20\%$. Doubling the map resolution with classical MAPF recovers less than $3\%$, meaning that little of what is forfeited can be bought back through more compute. This work therefore provides insight on when classical MAPF is a reasonable simplification, and when MAPF$_R$ unlocks significantly higher-quality solutions.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.10065v1' target='_blank'>Distributed Motion Planning for Multi-Robot Systems under Topological Constraints</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Gianpietro Battocletti, Dimitris Boskos, Dimos V. Dimarogonas, Bart De Schutter</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-07 13:31:20</h6>
+<p class='card-text'>Efficient and distributed coordination of mobile robots is one of the main challenges in multi-robot systems. Topological constraints, often expressed as topological braids, are a popular tool to encode complex coordination patterns between multiple mobile robots, as they offer a compact and abstract representation of the desired qualitative relation between the space-time trajectories of the robots. However, execution of joint motion plans encoded as braid-based topological constraints via distributed controllers is challenging, with existing approaches, generally based on the execution of one braid generator at a time, producing slow and suboptimal trajectories. We propose a distributed controller based on Model Predictive Control (MPC) to efficiently execute braid-based topological specifications. Rather than directly tracking the braid specification, we propose to use winding numbers, which are topological invariants for braids, as a proxy. This has the twofold benefit of converting braids into a continuous function, which can be easily tracked by an MPC controller through an appropriate term in the cost function, and of decoupling the global braid specification into a set of pairwise specifications, which can be tracked distributedly through the solution of only local MPC problems. To maintain global coordination, we propose a consensus-based progress estimation approach, which allows the robots to synchronize their motion toward the desired specification. We validate the proposed approach in simulation and in real-world experiments, where we demonstrate the effectiveness of the proposed approach and the improvement over existing approaches in terms of execution speed and control effort.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.10062v1' target='_blank'>Loud Failures, Quiet Failures: Fault Detection and Recovery in Tool-Using Language Model Agents</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Obada Kraishan</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-07 13:29:59</h6>
+<p class='card-text'>Tool-using agents are usually scored on whether they finish a task while the tools work. Deployments are less forgiving: services time out, endpoints disappear, parameter names change, and results come back well formed but wrong. Prior work has shown that language models over-trust tool outputs that fail silently; we ask how that over-trust plays out across the stages of failure handling in multi-turn agents. Wrapping the executable environments of an established function-calling benchmark in a fault-injection layer, we inject one of four typed faults at a controlled point in the trajectory and record whether the agent notices, changes plan, recovers the task, or repeats itself. Six models from three families, half of them reasoning variants, ran 1,920 trials over 24 multi-step tasks. Agents treat a failure as a problem in 91.3% of trials when the tool returns an explicit error, but in 58.8% of trials when it returns a plausible wrong value, against a 26.8% rate of reporting problems when nothing was wrong. Reasoning models are not better placed: paired against instruct siblings, they notice less (-9.3 points, p < .001) and change plan more (+10.4 points, p < .001), and recovery is unchanged (p = .512). Because agents are stochastic, two fault-free runs of the same task end in the same state only 63.3% of the time; against that baseline, only a missing tool clearly lowers recovery (39.9%), while timeouts, schema drift, and corruption stay within run-to-run variation. After a fault, agents return to the same tool three or more times in a row in up to 22.2% of trials, though strictly identical repeats are rare. A prompt line asking the agent to check each result did not move detection. Agents respond to the error channel rather than to the content of what a tool returns, so failures that stay inside the expected format pass through.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.10047v1' target='_blank'>AdSpark: A Large-Scale Dataset and Benchmark for Product-Centric Advertisement Video Generation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Zhifei Yang, Zhao Jiang, Keyang Lu, Honghe Zhu, Zheng Zhang, Jingjing Lv, Changping Peng, Ching Law, Zhen Xiao</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-07 13:23:24</h6>
+<p class='card-text'>Product-centric advertisement video generation aims to create promotional videos that preserve fine-grained product identity while presenting selling points through coherent multi-shot narratives. However, this emerging task remains underexplored due to the lack of large-scale advertisement-specific datasets and comprehensive evaluation frameworks. To address this gap, we introduce \textbf{AdSpark}, a large-scale dataset and benchmark for product-centric advertisement video generation, based on data from a major e-commerce platform. \textit{AdSpark-300K} contains approximately 300K reference image--prompt--video triplets, comprising a real-world subset and a synthetic subset. Each sample provides structured advertisement annotations, including product identity annotations, selling-point descriptions, creative plans, and aligned audio scripts, enabling models to learn product preservation and advertisement-oriented visual storytelling. We further propose \textit{AdSpark-Bench}, a diagnostic benchmark that evaluates generated advertisements across six dimensions, including visual quality, product fidelity, instruction adherence, temporal coherence, audio alignment, and advertisement effectiveness. Based on AdSpark-Bench, we evaluate representative models, revealing key challenges in product preservation, multi-shot storytelling, and selling-point visualization. Experiments with AdSpark-300K-finetuned models further validate the effectiveness of our dataset. AdSpark provides a unified dataset and benchmark for future research, and we will release the dataset upon acceptance.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.09995v1' target='_blank'>Designing Collaborative AI-Driven Workflows for Scientific Software Engineering</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Akash Dhruv, Max Knobbe, Pedro Machado, Anshu Dubey</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-07 12:55:07</h6>
+<p class='card-text'>Agentic artificial intelligence systems can carry out a broad range of tasks in software engineering and scientific research, from writing and translating code to running workflows for data analysis and visualization. In scientific computing, the difficulty is verifying that agent-generated code is both correct and understandable to teams whose members bring different areas of expertise. We therefore argue that these systems are best used within collaborative team structures rather than as full automation. In the workflows we propose, domain experts write the specification and plan, and agents operate under a deterministic orchestration pattern to write the target code. Each stage ends with a numerical comparison against the reference code and requires human review and approval before the next begins. We evaluate these workflows on the translation of a large high-energy physics application from Fortran to C++, running the same task under different orchestrators, design patterns, and models. Across fourteen experiments, a simple author--reviewer loop with enforced limits completed a comparable number of files to a multi-agent workflow at about one-third of the cost per file.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.09903v1' target='_blank'>ERP Event Logs: A Canonical Form for KPI Time-Series Extraction and Characterization</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Sherri Hadian, Adrian Rebmann, Atacan Korkmaz, Gregor Berg, Ulf Brackmann</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-07 11:58:50</h6>
+<p class='card-text'>Enterprise resource planning (ERP) systems record operations as transactions spread across hundreds of normalized relational tables. Extracting an operational key performance indicator (KPI) from this schema requires a separate, bespoke join for almost every metric. We show that an event log, a canonical (case, activity, timestamp) representation derived from the same tables, collapses this heterogeneity into one flat structure, from which KPI families reduce to reusable operations after a one-time mapping. Using standardized event logs built from hundreds of SAP S/4HANA customers under a shared activity ontology, we define three families of process-derived KPIs (volumes, durations, and rates) and extract them uniformly across customer systems for two common end-to-end organizational processes, order-to-cash and procure-to-pay. We normalize rates and screen series for minimum coverage to support comparison across customers of very different sizes. We then characterize heterogeneity across industries and tenants using descriptors derived directly from the canonical form, before analyzing the resulting KPI time series. The same process executes heterogeneously across customers and industries, yet this shared representation enables direct comparison of sales- and procurement-side signals, including lead times and order arrivals. Using this shared representation, we characterize which KPI families are forecastable and find a recurring ordering from volumes through durations to rates across both processes and a highly heterogeneous customer base; a pretrained time-series foundation model (Chronos) is competitive with classical baselines such as ARIMA and ETS on rate and duration series, while classical models retain an edge on volumes.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.09894v1' target='_blank'>QCATS: Query Context-Aware Transformer Slicing for Efficient Predictive Query Processing</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yueying Li, Zhongle Xie, Ke Chen, Lidan Shou</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-07 11:52:57</h6>
+<p class='card-text'>In-database predictive query processing increasingly applies Transformer-based models within relational pipelines. However, existing in-database inference typically exposes only tuple-level model inputs to the inference runtime, leaving relational predicates and metadata statistics invisible to neural execution planning. In this paper, we propose QCATS, a query context-aware transformer slicing framework that enables efficient sparse inference inside database systems. QCATS executes at query granularity: instead of routing individual tokens or tuples during inference, it uses query predicates and metadata statistics to pre-select context-aligned FFN slices before model execution. The framework comprises offline expert construction and lightweight query-level routing that dynamically selects experts during execution. QCATS further introduces system optimizations, including asynchronous CPU-GPU pipelines and routing-aware batching. Experiments on four predictive-query workloads with BERT-base and Qwen-0.6B show that QCATS achieves up to 4.42x latency reduction while preserving prediction accuracy comparable to dense baselines.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.09798v1' target='_blank'>Quantum Optimization of the Color-of-Money Problem on IBM Quantum Hardware: A Proof-of-Concept Study</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Rahul Rana, Suman Kumar Roy, M Girish Chandra</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-07 10:13:11</h6>
+<p class='card-text'>The Color-of-Money (CoM) problem is a financial optimization challenge in which enterprises must determine how to allocate and route funds across multiple accounts, currencies, and time periods while satisfying regulatory, operational, and liquidity constraints. As the number of assets, obligations, and planning periods increases, the decision space grows rapidly, making large-scale optimization increasingly challenging for classical approaches. In this work, we present a proof-of-concept quantum implementation of the CoM problem using IBM Quantum hardware. The original optimization problem is formulated as a constrained Mixed-Integer Linear Programming (MILP) problem and transformed into a Quadratic Unconstrained Binary Optimization (QUBO) representation suitable for quantum execution. We employ a Variational Quantum Algorithm (VQA) with Pauli Correlation Encoding (PCE), a qubit efficient encoding technique and apply error-mitigation technique to improve solution fidelity on noisy quantum hardware. A prototype instance consisting of 3 assets, 3 obligations, and 2 time periods was executed on real IBM quantum hardware and benchmarked against classical exact solver SCIP. The quantum approach successfully reproduced the same optimal solution obtained classically, validating the correctness and feasibility of the proposed methodology. While current noisy quantum hardware does not outperform classical optimization on the evaluated small instance, the results demonstrate the feasibility of executing treasury optimization workloads on current quantum hardware and provide a foundation for future investigations.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.09785v1' target='_blank'>UltraWorld: Learning Interactive Ultrasound World Models from Untracked Clinical Videos with Acoustic Sampling Map</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Keke Yang, Erqi Wang, Sainan Guan, Hongliang Ren</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-07 10:02:28</h6>
+<p class='card-text'>World models can enable autonomous ultrasound scanning by predicting the outcomes of probe motions from local observations. Learning this action--observation relationship typically relies on synchronized video--pose pairs, which are costly to collect at scale and largely unavailable in routine clinical recordings. Reliable action following further requires modeling ultrasound's cross-sectional sampling geometry. We present UltraWorld, a self-distillation recipe that transfers priors from clinical ultrasound videos into interactive world models without real action annotations. Starting from clinical videos, we adapt a video foundation model into an ultrasound generator conditioned on reference images and anatomical masks. Anatomical masks sampled along programmable trajectories through 3D anatomy provide spatial guidance for synthesizing action--video pairs. We then use these synthetic pairs to self-distill the generator into a world model that predicts future observations from local observations and actions, without requiring anatomical masks or other 3D assets at inference time. To further improve action following, we introduce the Acoustic Sampling Map (AsMap), which represents probe poses and imaging settings as pixel-wise 3D sampling positions, beam directions, and depths. Experiments demonstrate improved prediction fidelity and action following. Across nine simulated closed-loop local planning episodes, UltraWorld reduces the mean final distance to the goal and orientation error by 29\% and 38\%, respectively, compared with visual servoing. Project Page: https://ultraworld-project.github.io/.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.09784v1' target='_blank'>CIRSeg: Coarse-to-Fine Intensity-Robust Liver Segmentation with Source-Free Continual Test-Time Adaptation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Ruoshi Xu, Mingqi Gao, Shengda Luo, Jingkun Chen</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-07 10:02:27</h6>
+<p class='card-text'>Reliable liver segmentation in contrast-enhanced MRI is essential for quantitative hepatic assessment, treatment planning, and longitudinal disease monitoring. However, limited annotated data and scanner- or vendor-dependent intensity variations can cause overfitting and poor generalization to unseen acquisition domains. Moreover, simultaneously achieving robust global localization and precise boundary delineation remains challenging, while predictions may contain isolated false-positive regions outside the main liver component. To address these challenges, we propose CIRSeg, a coarse-to-fine, intensity-robust liver segmentation framework based on nnU-Netv2. CIRSeg combines 3D CutMix with stochastic intensity transfer using either Nyul augmentation or histogram matching to improve robustness to heterogeneous MRI intensities. Its cascaded architecture decouples low-resolution anatomical localization from full-resolution boundary refinement. At inference, source-free test-time adaptation based on confidence-filtered predictions and probability-prior regularization further improves robustness to out-of-distribution inputs. As a final deterministic post-processing step, largest connected component filtering removes isolated false-positive regions. On the CARE 2026 test set, CIRSeg achieves Dice scores of 97.13\% and 97.93\% on the in-domain and unseen-domain subsets, with corresponding HD95 values of 20.18 mm and 11.30 mm, respectively. These results demonstrate consistently accurate segmentation across both in-domain and unseen acquisition settings. The code is available at https://github.com/jingkunchen/MICCAI_CARE_2026</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.09781v1' target='_blank'>End-to-End Autonomous Generation of Human Assembly Plans</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Faustin Arion von Arx, Millicent Schlafly, Mark D. Fuge</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-07 10:01:01</h6>
+<p class='card-text'>Turning a CAD design into an assembly plan is still largely done by hand, requiring engineers to reason about geometric feasibility, tool access, stability, and the ergonomics of human assembly. In this work, we encode long-established design for assembly (DfA) principles into a contained, end-to-end approach for generating assembly plans. Our approach takes only a mesh assembly and produces either a step-by-step assembly manual or a structured failure report, requiring no joint metadata, fastener annotations, or additional information. Four major components of a manufacturing plan are addressed autonomously: an assembly tool list, the assembly sequence and subassemblies, an assembly manual, and design feedback for improving assemblability. For determining the sequence plan, we systematically disassemble the object in a physics simulator and apply a cost function that encodes DfA principles. Manual generation, tool labelling, and assembly feedback rely primarily on multimodal large language models. Compared with a baseline that always removes the outermost part first from Tian et al., DfA-aware sequence planning reduces simulated assembly time, measured with a robot-arm assembly-time proxy, by 35% on 136 assemblies of 5 to 30 parts. The correct tool is selected for 88.6% of assembly steps. A vision-language model judge compares the generated manuals against ablated variants, identifying which page elements carry the information a reader needs. The presented approach and open-source code are available for use by engineers or AI agents looking to rapidly accelerate the creation of manufacturing plans for a given product design.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.09702v1' target='_blank'>Latent Watermarks under Generative Editing: A Benchmark and Analysis of Detection Survival</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Sung Ju Lee, Nam Ik Cho</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-07 09:01:05</h6>
+<p class='card-text'>Ordinary prompt-based editing can cause latent watermark detection to fail without explicitly targeting the watermark. We benchmark eight watermark methods against five editors across four generative backbones, four editing strengths, and five semantic categories, with edit-validity and threshold checks. Separating editing from seven subsequent distortions reveals that editing alone primarily distinguishes Tree-Ring, while added distortions expose a broader spectrum of detection survival. Sequential edits reveal a second hidden difference: score separation can decline while detection rates remain near their ceiling. Across methods, standardized clean score separation ($d'$) organizes composite-survival tiers, whereas spatial overlap adds little to predicting edit-only survival beyond clean detectability. Embedding-strength interventions in two methods link higher clean separation to higher post-edit separation. In HSTR, the margin contrast is positive, while the angular layout contrast at matched clean separation remains unresolved. Together, outcome decomposition and continuous separation expose differences hidden by aggregate TPR. Method tiers are stable under threshold recalibration at the main operating points and alternative composite weights. Clean $d'$ is thus a useful empirical diagnostic within this benchmark, with mixed transfer to unseen methods. Code and supporting artifacts are planned for a separate release.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.09695v1' target='_blank'>Do Better Visual Representations Always Lead to Better End-to-End Autonomous Driving?</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Zihao Zhang, Haochen Tian, Tianyu Li, Changhui Jing, Jingliang He, Naisheng Ye, Ziyuan Pu, Zhenjie Yang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-07 08:54:13</h6>
+<p class='card-text'>Visual foundation models (VFMs) are increasingly integrated into end-to-end autonomous driving for their powerful representations, yet it remains unclear when these representations improve driving performance. To investigate this question, we introduce ViRA, a planner-agnostic visual representation alignment framework that keeps the planner architecture and inference cost unchanged. Our study reveals three findings: (1) VFM-guided visual representations consistently improve driving performance across diverse end-to-end planners, with gains extending to zero-shot closed-loop evaluation. (2) The choice of VFM target matters for planning performance, and alignment to a different VFM can further benefit planners with pre-trained VFM encoders. (3) Auxiliary perception supervision reduces sensitivity to VFM target selection, narrowing the EPDMS spread across five targets from 2.7 to 0.5 points and potentially compensating for less effective VFM targets. Guided by these findings, we develop ViRA-Diffusion, a diffusion-based planner trained without auxiliary perception supervision, which achieves 92.3 EPDMS on NAVSIM v2 navtest, outperforming recent methods in our comparison by at least 1.9 points. The results motivate jointly considering target selection and planner supervision when integrating VFMs into end-to-end autonomous driving. The results and demo are available at https://github.com/OpenDriveLab/ViRA.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.09683v1' target='_blank'>System Switch: When Should a Fast Decision Model Stop and Think?</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Gian Luca Bailo</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-07 08:44:47</h6>
+<p class='card-text'>Dual-process agents pair a fast policy with a slow deliberative model. In real-time settings the slow model usually runs continuously; in turn-based agents and robot planners it is invoked on events such as uncertainty or a detected failure. We study a fast learned actor that takes every decision and hands control to a reasoning vision-language model only when a gate opens, while the game keeps running. We use closed-loop Doom and the new open "System One" typed-decision models, served through a common llama.cpp interface. On 900 held-out questions, (i) zero-shot decision models from 0.15B to 9B parameters choose to collect items 1.6-1.8 times more often than chance among their errors, in any option order, although the order changes some models' accuracy; (ii) accuracy, calibration and sensitivity (how well confidence separates right from wrong answers) are distinct: models of similar accuracy differ widely in AUROC, and the confidence of the most sensitive one tracks which kinds of situation it fails, not which answers are wrong; (iii) offline, deferring the least confident 30% of decisions to a reasoning model gains over random deferral in proportion to the actor's AUROC (rank correlation 0.87); with actor and rate chosen on held-out games the gain is +0.13 [0.08, 0.18] with doomLaya's option order and +0.08 [0.02, 0.14] with shuffled options, and reasoning carries about half of it; (iv) in closed loop (33 games, three seeds) no variant reaches the exit. Committing to plans, the reasoner's or a fixed explore rule's, opens more doors and makes an actor that stands still play; with the rule the agent dies more often. Told that some doors need keys, the reasoner takes ordinary doors for locked ones, which the state cannot tell apart; without that knowledge it goes back to collecting. We release code, prompts, data and logs.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.09652v1' target='_blank'>MeshSIPP: Efficient Lattice Planning in Dynamic Environment</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Marat Agranovskiy, Konstantin Yakovlev</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-07 08:24:28</h6>
+<p class='card-text'>Autonomous navigation in dynamic environments requires computing spatiotemporal trajectories that satisfy non-holonomic motion constraints. When the trajectories of the moving obstacles are predictable or known, a promising approach is to rely on the combination of state lattices constructed from precomputed feasible motion primitives and Safe Interval Path Planning -- a search-based algorithm with strong theoretical guarantees. While this approach yields feasible paths, the rich primitive sets needed for smooth navigation induce a large branching factor, which becomes costly when coupled with time-dependent obstacle intervals. To this end, we present MeshSIPP, an efficient planner that removes the computational bottleneck by exploiting the fact that many primitives sweep the same regions and can therefore be validated together. MeshSIPP propagates primitives as spatial bundles, screens them with lightweight bounding-interval checks, and defers the expensive exact departure-time search until a primitive reaches its terminal state. A time-aware pruning rule additionally discards redundant space-time branches early in the search. We prove that the resulting search is complete and optimal. Extensive experiments over more than 6,000 benchmark instances and real-time ROS~2 simulations show that MeshSIPP achieves up to a 3$\times$ speedup over state-of-the-art spatiotemporal planners.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.09633v1' target='_blank'>Coding-Agent Benchmarks Should Match Their Users' Task Flows</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Igor Slinko, Yaroslav Golubev, Sergey Titov</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-07 08:08:39</h6>
+<p class='card-text'>The evaluation of coding agents generally strives to be as realistic as possible. In our study, we collect 4,782 agent sessions of real software engineers in JetBrains IDEs, which we call Production Sessions. Since our subject is interactive agents, we study the sessions with at least three user messages (33% of the sample). These long sessions differ from issue-derived benchmark tasks in two ways: (i) user requests span a far wider mix of task types - questions about the project's code, planning, review, refactoring, execution - and (ii) users switch between types throughout a session. Long-session samples from three public interaction corpora exhibit markedly different Task Flows (the distributions of session lengths, task types, and type-to-type transitions), so no single interaction distribution is universally realistic: benchmarks should name a target use case and calibrate to measurements from it. We present SWE-TaskFlow, an approach for transforming any issue-derived benchmark: it preserves the verified tasks and tests while steering the interaction toward a target Task Flow through prompt splitting and verifiable repository QA, with a TaskFlow Alignment Score (TFAS) for selecting among generated trajectories. In a pilot on 700 SWE-Bench Pro tasks, solving the task sequentially in several steps approximately doubles agent cost without a stable change in resolve rate: the interaction protocol itself is an important dimension of evaluation.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.09579v1' target='_blank'>Gradient-Based Trajectory Optimisation over Continuous Poses for Sparse-View Cone-Beam CT</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Linda-Sophie Schneider, Simon Wittl, Gabriel Herl, Andreas Maier</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-07 07:23:46</h6>
+<p class='card-text'>Trajectory optimisation for cone-beam computed tomography (CT) determines which information sparse-view scans acquire. Fixed candidate pools prevent off-grid refinement and require new object-specific precomputation for each acquisition manifold. We make every source pose an individual continuous variable and move all poses jointly by gradient ascent on the scanner's kinematic manifold. The objective combines soft-Tuy plane coverage, continuous View Covariance Loss, and an analytic attenuation-aware ray-bundle penalty. The same optimiser handles circular, limited C-arm, two-axis, and freesphere parametrisations. On a Defrise flange, continuous selection recovers laminar defects invisible to a circular orbit, matches discrete swap search on the free sphere at the sparser budget, and leads at the denser one, with the same objective evaluated in every arm. A moderate elevation band already recovers most of the free-sphere gain at the defects, so the same optimiser transfers to bounded scanner envelopes. Photon noise preserves the ordering on the flange and compresses it on a dense fuel nozzle. Sparseprescan planning benefits from matching prescan and planned acquisition manifolds. Selection takes seconds rather than minutes without an object-specific reconstruction basis. Prescan-planned poses were executed on a robot CT bench and reconstructed in a common frame, demonstrating feasibility but no consistent metric gain over uniform band sampling. Continuous pose optimisation incorporates attenuation and scanner constraints directly into sparse-view acquisition design.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js'></script>
+</body>
+</html>
