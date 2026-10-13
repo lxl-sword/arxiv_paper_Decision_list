@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>planning - 2026-10-13</title>
+<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap' rel='stylesheet'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css'>
+<style>
+body {
+font-family: 'Roboto', sans-serif;
+background-color: #f5f7fa;
+padding: 20px;
+}
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.card-title {
+    font-weight: 700;
+}
+.card:hover {
+    transform: scale(1.02);
+    transition: 0.3s ease-in-out;
+}
+</style>
+</head>
+<body>
+<div class='container'>
+<h1 class='text-center my-4'><i class='fas fa-book'></i>planning - 2026-10-13</h1>
+<div class='row'>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.13912v1' target='_blank'>RSI-Anything: Unlocking Recursive Self-Improvement with World Models</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Taoyong Cui, Pinxian Zeng, Wanghan Xu, Hao Xiao, Shuhan Xue, Qiang Gao, Wanli Ouyang, Pheng Ann Heng, Zhenfei Yin, Yingcheng Wu, Ling Yang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-09 17:50:30</h6>
+<p class='card-text'>Recursive self-improvement (RSI) aims to transform interaction experience into persistent improvements, yet external feedback is costly and world-model predictions may become unreliable as policies evolve. We introduce RSI-Anything, a domain-general framework built on JEPA-Anything that uses predictive world models to guide action and learning-data selection. Observed feedback drives policy or workflow improvement and conditional world-model adaptation, while component and compatibility checks govern the retention of updated policy-model pairs. Across diverse computational and scientific domains, RSI-Anything demonstrates substantial gains. In code repair, with the coder fixed, success increases from 26.3% with a static verifier to 29.2% through predictive selection and 31.2% after world-model adaptation, at comparable test usage. Graphical user interface (GUI) evaluations showed higher task completion, while average actions decrease by 39.4%. Across five successive policy versions, laboratory-planning scores more than double from 21.80% to 46.01%. In reaction optimization, RSI-Anything achieves 96.15% mean best observed yield versus 82.16% for Bayesian optimization under the same 40-experiment budget. An end-to-end immune-science application further connects workflow evolution and predictive modeling with therapeutic hypothesis generation. These results demonstrate how predictive world models and retained system updates enable recursive improvement across diverse environments.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.13894v1' target='_blank'>Nimbus Studio reproduces reference BCI decoding pipelines: a validation study on public benchmarks across protocols and paradigms</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Sergey Musienko</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-09 17:39:55</h6>
+<p class='card-text'>Nimbus Studio is a visual pipeline platform for brain-computer interface (BCI) experiments: researchers assemble preprocessing, feature extraction, decoding, and evaluation over public benchmark datasets or their own recordings, with cross-validated evaluation protocols (including leave-one-subject-out), BIDS export, and bring-your-own Python model classes. Whether its numbers can be trusted is a fair question for any such platform. We answer it with a parity study: six standard BCI decoding pipelines (CSP+LDA, Riemannian MDM, tangent-space logistic regression through the platform's bring-your-own-code node, P300 xDAWN+LDA, and the deep ShallowConvNet and EEGNet) were evaluated on three public datasets (motor-imagery BNCI-2014-001/004; P300 BNCI-2014-009) under two protocols (per-subject session holdout and pooled leave-one-subject-out cross-validation via the platform's planned-CV driver), once through Nimbus Studio's execution engine and once through independent, hand-written reference implementations built directly on MNE-Python, scikit-learn, pyriemann, and braindecode. Every deterministic pipeline matched the reference exactly (0.00 points maximum difference across all 54 session-holdout subject-runs and all CSP/MDM grouped-CV folds), including pipelines through the bring-your-own-code node and the CV orchestration; the remaining grouped-CV cells agree to floating-point precision (worst case 0.06 points, about one trial per fold). The stochastic deep models agreed within seed-to-seed training variability, estimated with multi-seed reruns on each side. The platform's execution engine therefore computes the same science as the reference stack across protocols, paradigms, and extensibility surfaces. The platform is available at https://studio.nimbusbci.com/, and the complete harness and per-subject results accompany this paper for independent verification.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.13849v1' target='_blank'>HorizonNav: Geometry-Guided Video Diffusion for Anticipatory 3D Robot Navigation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Hajira Amjad, Valerii Serpiva, Viacheslav Liubimov, Didar Seyidov, Dzmitry Tsetserukou</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-09 16:57:08</h6>
+<p class='card-text'>We present HorizonNav, a video diffusion-based framework for anticipatory robot navigation that transforms a single RGB image and a text prompt into a geometrically aligned representation of plausible surrounding 3D space. Given the initial observation and a textual description of the reconstruction objective, a vision-language model, guided by designed instructions, interprets the scene and constructs structured prompts for a video diffusion model. The resulting video sequence provides plausible future observations of the environment, which are subsequently processed using monocular ORB-SLAM3 for camera pose estimation and Video Depth Anything for dense depth prediction. Our central contribution is a geometry-guided depth alignment stage that combines the estimated camera poses with triangulated visual landmarks to constrain dense depth predictions across multiple views. This alignment improves the geometric consistency of the reconstructed 3D environment, addressing inconsistencies that temporal coherence of the generated video alone cannot resolve. The experimental evaluation of navigation in imagined 3D environment shows that across a 19-scene horizon study, planning-feasible scenes increase from 13/19 at P20 to 15/19 at P81, while successful RRT trials increase from 62/90 to 75/90. In a separate corridor study, 6 of 25 evaluable generated-camera trajectories violate the reconstructed collision constraints; RRT planner recovers feasible alternatives in 5 of those 6 cases. A larger archive contains 58 usable reconstructions from 67 attempted cases, of which 36 support a downstream plan and 22 do not, exposing reconstruction and free-space failure modes rather than hiding them without lidar. Across 15 corridor reconstructions, the mean reconstruction error is approximately 0.30 m at matched structural landmarks.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.13832v1' target='_blank'>SpatialASM: Internalizing Active Mentalization for Spatial Reasoning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yuhong Liu, Shenxi Wu, Junyi Chi, Beichen Zhang, Xuanlang Dai, Jiaqi Wang, Yuhang Zang, Dahua Lin</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-09 16:39:50</h6>
+<p class='card-text'>When solving complex spatial reasoning tasks, ordinary humans naturally revisit the scenes from task-relevant viewpoints and mentally reconstruct the spatial layouts from those viewpoints. But can Large Vision-Language Models (LVLMs) proactively think in the same way? We term this ability Active Spatial Mentalization (ASM), an intrinsic component of visual intelligence that remains substantially underdeveloped in current LVLMs. To bridge this gap, we introduce SpatialASM, a scalable framework to internalize ASM into LVLMs through training-time spatial simulation. SpatialASM employs an allocentric novel-view generator to ground hypothetical viewpoints in visual evidence and produces two complementary forms of supervision: i) explicit ASM trajectories that teach LVLMs when and how to adaptively invoke view planning and imagination during spatial reasoning, and ii) automatically-constructed perspective-taking tasks that further strengthens viewpoint-conditioned scene imagination. On seven benchmarks spanning relatively perception-oriented spatial understanding to more challenging tasks requiring multi-image, cross-view and viewpoint-transformation reasoning, SpatialASM yields performance gain on LVLMs of four LVLM backbones in spatial reasoning while retaining their original general vision capabilities. The experimental results demonstrate that our approach improves average accuracy across the seven spatial benchmarks. And the synthesis of ASM trajectories provides a scalable pathway to alleviate the scarcity of spatial Chain-of-Thought (CoT) supervision for eliciting active viewpoint exploration and mental scene simulation.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.13805v1' target='_blank'>Warm-IP: A Path-Following ADMM Warm Start for Interior-Point Quadratic Programming</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Babak Aslani, Mojtaba Tefagh, Gourav Jhanwar, Masoud Zarepisheh</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-09 16:18:34</h6>
+<p class='card-text'>Interior-point (IP) methods are powerful second-order optimization algorithms but can make slow progress during early iterations. We propose Warm-IP, a hybrid framework that combines a path-following variant of the alternating direction method of multipliers (ADMM) with a primal--dual IP method. The ADMM phase generates a warm start that remains close to the central path, enabling the subsequent IP phase to rapidly refine the solution to high accuracy. We evaluate Warm-IP on a diverse collection of real-world and synthetic quadratic programming (QP) instances and compare it with leading commercial solvers (MOSEK and Gurobi) and open-source solvers (Clarabel, PIQP, and OSQP). We also curate and release a new benchmark of large-scale QPs from cancer radiotherapy treatment planning, built from real patient data and provided in canonical QP form, with instances containing hundreds of thousands of constraints. Warm-IP substantially outperforms existing solvers on large-scale problems. On the large-scale radiotherapy benchmark comprising 60 lung cancer cases, for example, Warm-IP solves an instance in 47 seconds on average with no failures, while the strongest competitors, MOSEK and Gurobi, average 55 seconds with failures on 23\% of the cases and roughly 240 seconds with no failures, respectively. To support reproducibility and future benchmarking, we publicly release the implementation and benchmark data through a \href{https://github.com/Radiotherapy-Optimization/Warm-IP}{GitHub repository}. These results demonstrate that appropriately warm-started IP methods can combine the rapid initial progress of first-order methods with the high-accuracy convergence of second-order methods.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.13781v1' target='_blank'>SimVTA: Simulation-Grounded Video-Trajectory Alignment for Driving World Action Models</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Changhui Jing, Haochen Tian, Hongchen Li, Tianyu Li, Caojun Wang, Zihao Zhang, Yanhao Liu, Chengen Xie, Bailin Li, Hao Zhao, Zhenjie Yang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-09 16:01:09</h6>
+<p class='card-text'>Driving world action models (WAMs) learn from paired trajectories and future observations. Post-training with reinforcement learning allows the policy to explore alternative trajectories and improve planning using driving rewards. However, driving logs contain future videos only for the recorded trajectories, leaving these alternatives without corresponding visual supervision. Thus, we introduce SimVTA, a simulation-grounded post-training framework that combines trajectory optimization with video supervision. First, we sample candidate trajectories for each observation and use a real-world simulator (e.g., World Engine) to render future videos for high-reward candidates in real-world scenes reconstructed with 3D Gaussian Splatting (3DGS). This provides trajectory-matched supervision independent of the model's own predictions. Under a limited rendering budget, we prioritize video supervision for higher-error futures among these rendered candidates. Finally, we optimize trajectory planning with Group Relative Policy Optimization (GRPO) and use a flow-matching loss on the matched videos to update shared representations. At inference time, the model predicts trajectories directly, without simulator calls. On NAVSIM v1, applying SimVTA to a WAM initialization improves PDMS from 86.2 to 91.3 (+5.1). It achieves 88.2 EPDMS on NAVSIM v2 and an average HD-Score of 38.8 in closed-loop evaluation on HUGSIM. Ablations show that updating shared representations with video supervision improves planning, while prioritizing higher-error futures among high-reward trajectories further improves performance.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.13686v1' target='_blank'>Assessing PLATO's Discovery Potential across Different Observing Strategies</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yoshi Nike Emilia Eschen, Michelle Kunimoto, Juan Cabrera, Adrien Leleu, Thomas G. Wilson, Heike Rauer, Alex Romanec, François Bouchy, Magali Deleuil, Nicholas Jannsen, Don Pollacco, Toby Rodel, Sophia Sulis, Stéphane Udry</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-09 14:51:19</h6>
+<p class='card-text'>The PLATO mission, planned to launch in spring 2027, will observe a fixed Southern field, LOPS2, for at least 2 years with the goal of discovering and deriving precise parameters for planets as small as Earth around FGK dwarfs and sub-giants. Afterwards, PLATO could continue to monitor the same field or move to a Northern field, LOPN1, overlapping with the Kepler field. We assess these two observing strategies in terms of sensitivity of detecting small and long period planets, and subsequently we estimate yields for both observing strategies. Within this we account for including the Kepler data in the LOPN1 field, monitoring of up to 8 years of the LOPS2 field, and the sensitivity improvement from combining TESS and PLATO data since both fields have been and will be continued to be observed with TESS. We find that by monitoring both fields, and hence more stars, the total number of newly discovered planets is maximised. However, to optimise the number of discovered small and long periods planets, long-term monitoring of one field produces the best results. The combination of Kepler and PLATO data improves detection sensitivities; however, as this only covers a fraction of the LOPN1 field and stellar sample, it improves the yields of small and long period planets only marginally. Hence, to detect and characterise small and long period planets in this sparsely explored exoplanet parameter space, a longer continuous observation of the LOPS2 field is best.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.13639v1' target='_blank'>RetroTAC: Learning Route-Derived Synthetic Accessibility for PROTACs</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Stefano Ribes, Jia Xin, Zhu Zhu, Tingting Mo, Lukáš Hudec, Kostas Papadopoulos, Atanas Patronov, Rocío Mercado</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-09 14:18:03</h6>
+<p class='card-text'>Proteolysis-targeting chimeras (PROTACs) enable targeted protein degradation, expanding therapeutic opportunities beyond conventional inhibition. However, assembling their large, multifunctional structures creates synthetic challenges that hinder their discovery. Traditional synthetic-accessibility scores can overestimate this difficulty by penalizing PROTACs' molecular complexity while overlooking modular assembly from accessible building blocks. In contrast, retrosynthesis planning tools provide explicit routes but are computationally expensive, particularly for large molecules. Here, we introduce a human-interpretable, PROTAC-oriented route-derived score that rewards short synthetic depth and balanced joining of molecular fragments, and RetroTAC, a machine-learning surrogate that predicts this score directly from molecular structures. RetroTAC combines complementary models in an ensemble, achieving a root mean squared error of 0.13 and an $R^2$ of 0.65 on held-out molecules. We further evaluate its utility on PROTACs enumerated by recombining warheads, linkers, and E3-ligase ligands, followed by retrosynthetic planning and route analysis. Candidates selected for high predicted scores achieve a mean route-derived synthesizability of 0.73, compared with 0.31 for low-score candidates; 98.75% versus 51.00% are fully resolved under the tested search settings. These results support RetroTAC as a fast prioritization tool for virtual PROTAC libraries, connecting molecular screening with interpretable route characteristics while reserving explicit planning for selected candidates.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.13502v1' target='_blank'>Stride: Scale-Aware Multi-Agent Evolutionary Refinement for Infographic Generation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yan Zhou, Yang Yang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-09 12:29:50</h6>
+<p class='card-text'>Infographic generation challenges text-to-image models because a single image must satisfy numerous visual, textual, and semantic constraints. Iterative agentic refinement with a multimodal verifier is a natural remedy, but existing methods face a scale mismatch: local edits cannot correct global composition errors, while full regeneration may destroy already-correct regions. We introduce Stride, a constraint-grounded multi-agent framework that treats refinement over any frozen generator as a history-aware evolution strategy. Stride separates constraint evaluation - whether each requirement is satisfied - from visual grounding - where and how it is violated. It then routes global revisions to a composer subagent and local corrections to a retoucher subagent. Each subagent conducts internal planning and generates multiple candidates, while Stride accepts a candidate only when it improves the verifier score, reducing regression across iterations. Because stochastic generators and imperfect verifiers make any single step unreliable, it is this combination of scale-aware routing, per-step redundancy, and monotonic acceptance that yields stable improvement across iterations. With fully open-weight generator-verifier systems, Stride outperforms proprietary systems including Nano-Banana-2.0 and Seedream-5.0-Pro on BizGenEval, matches GPT-Image-2.0 and surpasses Seedream-5.0-Pro on IGenBench, and achieves a new state-of-the-art score on WISE, while substantially outperforming existing agentic methods across all evaluated benchmarks.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.13472v1' target='_blank'>How Many Significant LISA?: A multiple testing correction</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Giuseppe Arbia, Francesca Cardile, Vincenzo Nardelli, Niccolò Salvini</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-09 12:09:41</h6>
+<p class='card-text'>In spatial data analysis, global measures of spatial correlation provide useful insights into the general spatial patterns, but fail to capture local variations. Local Indicators of Spatial Association (LISA) address this limitation by identifying local clusters and spatial outliers, offering valuable applications in many fields of research such as public health, urban planning and environmental monitoring, to name only a few. However, the application of LISA tools in hypothesis testing is undermined by the presence of the multiple testing problem which dramatically increases the risk of committing Type I errors especially when dealing with very large datasets. Standard corrections procedure (like, e. g., Bonferroni and Benjamini-Hochberg procedures) fail to consider the spatial dependence among the various LISA tests and, furthermore, they are overly conservative. This paper proposes an adjustment that, by incorporating the notion of the "effective sample size", improves statistical inference balancing false discovery rate control and statistical power.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.13453v1' target='_blank'>Reflect-VLA: Internalizing Reflective Guidance via Dual-Path On-Policy Self-Distillation for Autonomous Driving</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yuechen Luo, He Chong, Fang Li, Shaoqing Xu, Hexin Zhang, Ruiqi Zhang, Ziying Song, Lei Yang, Zhi-Xin Yang, Fuxi Wen</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-09 11:52:17</h6>
+<p class='card-text'>Reinforcement Learning (RL) substantially improves planning performance in autonomous-driving Vision-Language-Action (VLA) models. However, existing RL methods rely on scalar trajectory rewards that measure overall quality but fail to identify specific planning errors or provide actionable correction signals. In long-tail scenarios, errors in scene understanding, behavior selection, and trajectory execution are compressed into a single score. We observe that Reflective Guidance turns trajectory evaluation into explicit diagnoses and corrective instructions, substantially improving planning accuracy. Yet such guidance requires an initial prediction and its evaluation results, making it unavailable for direct single-pass inference. We propose Reflect-VLA, which treats Reflective Guidance as training-time privileged information and internalizes its planning benefits through Dual-Path On-Policy Self-Distillation (Dual-OPSD). Unlike scalar-reward optimization, Dual-OPSD uses the driving score only to route student-generated trajectories. It distills dense token-level corrective distributions from the teacher for risky trajectories while applying self-imitation to preserve reliable ones. To provide reliable corrective distributions on student rollouts, the teacher is progressively constructed through Driving-Knowledge Pretraining, Planning-and-Refinement SFT, and Self-Refinement Rejection Sampling. At inference time, Reflect-VLA generates trajectories in a single pass without explicit guidance or iterative refinement. Experiments on NAVSIM v1/v2 and Bench2Drive demonstrate competitive planning performance while reducing training time by over 90% compared with RL.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.13409v1' target='_blank'>ManeuverFlow: Maneuver Hypothesis Generation with Future Evidence for Trajectory Evaluation and Refinement in End-to-End Autonomous Driving</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yuhao Wei, Yong Chen, Chen Yang, Yingchen Wang, Delin Ouyang, Lingfeng Qi, Qi Lan, Zhanhua Zhang, Jie Li, Guofa Li</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-09 11:20:55</h6>
+<p class='card-text'>End-to-end planning in complex scenes must model diverse driving intentions and select the most appropriate trajectory using scene context and future risks. However, multi-query regression may collapse to one mode, while anchor-based and generative planners share a scaling bottleneck: small candidate sets limit maneuver coverage or discovery of high-quality trajectories, whereas large sets increase generation and scoring costs. We propose ManeuverFlow to generate trajectories for distinct intentions in one step and evaluate and refine them using current and future evidence. The model selects relevant maneuver modes, draws corresponding noise from the Gaussian mixture prior, and maps it to intention-specific trajectories through a maneuver-routed mixture-of-experts MeanFlow field. Current features and future features predicted by the world model are aggregated along each candidate path into trajectory-specific evidence for PDM-factor prediction. Using the same evidence, the refiner predicts local Frenet residuals for selected candidates; refined and retained candidates are then jointly re-scored for selection. With a lightweight TransFuser-style ResNet-34 backbone, ManeuverFlow achieves 90.6 PDMS and 90.1 EPDMS on NAVSIM v1/v2 navtest, respectively. On WorldEngine's recent 3DGS closed-loop benchmark, it attains the highest listed PDMS$^\ast$ scores of 75.19 and 74.58 under logged and IDM-controlled traffic, respectively. Code: https://github.com/wyh-autonomy/maneuverflow.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.13396v1' target='_blank'>ShoreKeeper: Accelerating Iterative Data Analytics in the Cloud via Distributed Recovery-Cost-Aware Caching</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jongseop Lee, Minsu Sun, Xinyue Ma, Atul Sandur, Myeongjae Jeon</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-09 11:10:24</h6>
+<p class='card-text'>Large-scale data-intensive workloads powered by iterative graph or machine learning processing have an insatiable demand for memory due to the continuous generation of new intermediate data. Although existing caching strategies strive to keep performance-critical data in memory, they often fail in practice because they are limited to node-local memory management and assume high node availability. In this paper, we introduce ShoreKeeper, a framework that maximizes execution efficiency by treating cluster-wide memory as a unified, elastic pool. ShoreKeeper employs a global optimization model that maps distributed dataflows into a single graph abstraction to minimize the recovery cost of data evicted from cache across the cluster. To handle memory working sets and cluster capacities that fluctuate over time, ShoreKeeper employs a graph-pruning technique that permits the fast refinement of the caching plan. These optimizations allow ShoreKeeper to work seamlessly whether deployed on highly available VMs or cost-effective preemptible instances in the cloud. Our experiments show that ShoreKeeper consistently outperforms state-of-the-art systems.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.13372v1' target='_blank'>Towards Safe World Models: Risks, Defenses, and Evaluation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Xiaoma Wang, Litian Zhang, Xinze Shi, Zhengxuan Hu, Zihan Yang, Mingqi Ren, You Wu, Bingyu Yan, Zelong Yu, Zhenjie Su, Yuming Shang, Xi Zhang, Chaozhuo Li, Philip S. Yu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-09 10:45:59</h6>
+<p class='card-text'>World models support planning, control, learning from imagined experience, and model-mediated evaluation by predicting action-conditioned consequences. Their safety cannot be inferred from predictive accuracy alone: errors in observations, state and memory, dynamics, evaluation, execution, or feedback can propagate into unsafe decisions and persist through updates. This work organizes the literature on world-model safety around a six-stage lifecycle covering data and observations, state and memory, dynamics and imagination, evaluation and planning, action and control, and feedback and update. We synthesize non-adversarial failures, attacks, defenses, evaluation protocols, benchmarks, and deployment conditions, and distinguish evidence directness from outcome level. The current evidence corpus contains 163 cited works. We use the framework to identify where claims are supported, where attribution remains unresolved, and which measurements are needed to connect model-level behavior to closed-loop and operational safety.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.13354v1' target='_blank'>AlphaNIST: Emergent Assembly Skills from Binary Task Rewards</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Octi Zhang, Iretiayo Akinola, Rosario Scalise, Mateo Guaman Castro, Patrick Yin, Tobias Widmer, Miles Macklin, Chris Amevor, Dylan Turpin, Dirk Van Gelder, Jan Carius, Ankur Handa, Gavriel State, Yunrong Guo, Yashraj Narang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-09 10:29:21</h6>
+<p class='card-text'>The NIST Assembly Task Board #1 remains a challenging benchmark for learning-based methods in robotic manipulation. Over short horizons, it demands precise, contact-rich control of small, tight-fitting parts. Over long horizons, it requires recovery and coordination across extended action sequences. Demonstrations, task decomposition, and dense progress rewards have enabled research advances by providing guidance on how to assemble. But how much of the strategy must be specified? The progression from AlphaGo to AlphaGo Zero showed that RL at scale can discover superhuman strategies without prescribing how to win. AlphaNIST asks whether a sparse binary task reward and task diversity admitted by this task-agnostic reward can similarly let a robot discover how to assemble. In simulation, we train a single policy from scratch across all 20 assembly tasks on the NIST Assembly Task Board #1, reaching 98.2% overall training success without demonstrations, progress shaping, scripted primitives, or per-task tuning. The framework also trains policies to complete ten assembly pairs in a single episode without a prescribed order, with task success rewarded only when all ten pairs are simultaneously complete. The learned policies discover dexterous and planning-like behaviors: choosing grasps for later assembly, using surrounding geometry to reorient parts, and preparing one part, assembling another, then returning to finish the first without an explicit planner. For videos, see our website: https://alpha-nist.github.io/</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.13330v1' target='_blank'>Masked Diffusion Language Agents for Tool-Integrated Chemical Reasoning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Mengdi Liu, Chenghao Jia, Hong Chang, Shiguang Shan</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-09 10:07:37</h6>
+<p class='card-text'>Designing tool-integrated reasoning agent systems for complex chemical tasks remains a fundamental challenge. Although recent chemical agents have demonstrated promising performance through the integration of external tools, they are still built on the autoregressive paradigm, which is inherently constrained by causal attention and left-to-right generation. As a result, they often struggle with bidirectional molecular understanding, global coordinated tool planning and multi-source evidence integration. To address this challenge, we introduce ChemDiffAgent, the first masked diffusion language agent for tool-integrated chemical reasoning. It reformulates chemical reasoning as iterative denoising over interleaved reasoning and tool-use trajectories, enabling tool-use decisions to be jointly determined under full-trajectory context and thereby better aligning the agent's decision boundary with its knowledge boundary. We further analyze how this paradigm benefits agentic reasoning through harder infilling subproblems during training and flexible arbitrary-order decoding during inference. Then we develop a two-stage post-training framework, comprising agentic supervised fine-tuning and variance-reduced preference optimization, to enhance tool-use and reasoning capabilities. We also construct a comprehensive benchmark covering six chemistry tasks across both single-turn and multi-turn tool-use scenarios. Under matched budgets and evaluation, ChemDiffAgent consistently outperforms autoregressive agents, achieving an overall improvement of approximately 20%. Notably, our 8B model achieves performance comparable to, in some cases surpassing, significantly larger frontier models, such as GPT 5.5 and Claude Opus 4.7. Code is available at https://github.com/bilemond/ChemDiffAgent.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.13249v1' target='_blank'>CALQA: Conformal Screening of Forecast-Ensemble Configurations from One Mergeable State</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Xiufeng Liu, Ruyu Liu, Yusen Liu, Huan Huo, Per Sieverts Nielsen</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-09 08:57:26</h6>
+<p class='card-text'>AutoML systems fit ensemble weights over model libraries; a search can score, per category, market or time pane, thousands of weightings of the quantile-averaged (Vincentized) ensemble for the narrowest conformally calibrated interval; exact calibration scores a group's rows per candidate. We present CALQA, a fixed-size integer aggregate per group and pane that stores histograms of normalised block scores at a net of weight vectors. One GROUP BY builds it; it merges by addition, retracts deletions by subtraction and scores any candidate without reading a row. We prove that its score never falls below the exact split-conformal shift and exceeds it by at most the net distance plus a grid gap; that coverage carries over to each fixed weight vector and, for i.i.d. blocks and up to a union-bound slack, to a searched weight vector deployed with the state's shift; and how small any such state can be. The state is thus a screen: it ranks all candidates, and exact recomputation re-checks the top 100. On five public panels (604 groups, 10,000 candidates each) this two-stage plan matches exact search on held-out blocks (99.95% of its Winkler score), 1.3-59 times faster. On two real panels of about $10^8$ rows (smart meters, retail sales) it is 44-54 times faster at 99.98-100.01% of that score and beats sample screens with the same re-check in regret at less total time. Picks deployed with their exact shift need a held-out coverage check. The state does not pay off for small or greedy searches, off-net weights at ample memory or full twelve-member support.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.13195v1' target='_blank'>PATACON: GPU-Parallel Tangent-Bundle RRT-Connect for Constrained Motion Planning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Gahyun Oh, Junho An, Suhyun Jeon, Suhan Park</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-09 08:13:29</h6>
+<p class='card-text'>Fast whole-body motion planning enables continuous replanning for humanoid robots in dynamic environments while satisfying collision avoidance and kinematic constraints. However, constrained motion planning incurs substantial computational cost due to repeated constraint projection in addition to collision checking and nearest-neighbor search. Recently, GPU-based massively parallel planners have been proposed to reduce computational cost. Nevertheless, these planners still steer in the ambient configuration space, so projecting candidates that deviate from the manifold remains a significant source of overhead, particularly in highly constrained, high-dimensional problems. In this work, we introduce PATACON, a GPU-parallel bidirectional planner that explores tangent space to exploit the local manifold geometry induced by known constraint functions. Experiments on dual-arm closed-chain and humanoid whole-body constrained planning tasks show that PATACON outperforms the prior work as configuration-space dimension and constraint codimension grow, achieving up to an 11.25 times speedup. These results suggest that GPU-parallel tangent-space exploration brings constrained whole-body motion planning closer to real-time performance.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.13190v1' target='_blank'>Prediction-Informed Landing Window Planning for UAV Landing on USV in High Sea States</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Kaizhen Li, Xi Zhou, Dan Zhang, Xiaowei Li</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-09 08:12:13</h6>
+<p class='card-text'>Autonomous landing of unmanned aerial vehicle (UAV) on unmanned surface vehicle (USV) is difficult in high sea states. Existing hierarchical landing methods often infer future USV motion only implicitly from short observation histories, which limits their ability to adapt to severe and rapidly changing sea conditions. This paper presents a prediction-informed hierarchical control framework. A pretrained model is developed to explicitly predict the USV attitude during high-level landing decisions. The prediction helps identify suitable landing windows and choose the right touchdown time, while a conventional low-level flight controller maintains UAV stability and tracks motion commands. To evaluate the framework under realistic disturbances, a real-sim validation setup is constructed in which USV-motion data collected in real sea conditions are transferred to a MuJoCo USV. The experiments demonstrate the feasibility of using explicit attitude prediction to improve landing-window selection and support timing-aware UAV landing planning in rapidly varying marine environments.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.13167v1' target='_blank'>Modelling the Nordic power system expansion with PyPSA-Eur: a comparison with the Nordic Grid Development Perspective 2025</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Leonardo Rydin Gorjão, Heidi S. Nygård</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-09 07:56:07</h6>
+<p class='card-text'>We compare the Nordic Grid Development Perspective 2025 (NGDP) with a least-cost transition pathway for the Nordic power system obtained with PyPSA-Eur for the period 2025-2050 under a net-zero CO$_2$ constraint. The model co-optimises generation, storage, and transmission expansion with hourly system operation while constraining the Nordic generation mix to remain consistent with NGDP milestone ranges. Overall, the optimised capacity pathways reproduce the broad NGDP expansion of wind and solar power, with Denmark emerging as the main locus of offshore wind and solar deployment, Finland as a major site for onshore wind expansion, and Norway and Sweden relying more strongly on existing hydropower and nuclear capacity. The main discrepancy between the two pathways does not lie in the broad build-out of variable renewables, but in the timing and role of hydrogen. Whereas the NGDP treats hydrogen as an early and steadily increasing component of industrial demand and system development already from 2030, PyPSA-Eur delays substantial hydrogen deployment until 2045-2050, when it becomes cost-effective primarily as a flexibility and seasonal storage option in a strongly variable-renewable-energy-dominated system. This contrast suggests that early hydrogen build-out in the Nordics is not a robust outcome of cost optimisation alone, but depends strongly on assumptions regarding industrial demand growth, sector coupling, and anticipatory infrastructure planning. We therefore argue that hydrogen remains the principal strategic uncertainty in the Nordic transition, with the NGDP representing a more anticipatory planning perspective and PyPSA-Eur a more conservative least-cost timing of deployment.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.13161v1' target='_blank'>Configuration Migration Planning through Decoupled Modeling and Searching</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Dan Wang, Peng Zhang, Ratul Mahajan</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-09 07:51:18</h6>
+<p class='card-text'>Executing large network configuration changes, called migrations, is slow and error-prone today; operators must manually devise a safe order for updating devices that does not disrupt traffic and meets operational intents (e.g., low total time). We develop Smoothie, a versatile migration planning framework that, unlike existing tools, can support diverse operational intents. Inspired by automated planning, it achieves versatility by decoupling the encoding of network safety and intents from the search for a viable plan. Smoothie uses symbolic simulation for general and scalable safety encoding, after which it can use a range of planners, including existing off-the-shelf planners and a new one we developed for optimized parallel plans. We demonstrate Smoothie's versatility and benchmark its performance using diverse migration scenarios on many topologies. It finds both sequential plans and parallel plans, and the parallel ones compress up to thousands of configuration updates into no more than 3 steps. Its versatility does not come at the expense of performance: finishing most planning tasks in less than 1 hour.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.13158v1' target='_blank'>Low-Latency Mapless ESDF Queries for MAV Reactive Collision Avoidance</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Leonard Freißmuth, Cedric Le Gentil, Helen Oleynikova, Stefan Leutenegger</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-09 07:48:39</h6>
+<p class='card-text'>Reactive collision avoidance in unknown, cluttered environments must perceive obstacles and correct motion within milliseconds. Existing methods rely on maps for high-rate collision queries, but their acceleration structures require pre- processing. That cost is amortized in long-horizon planning, where a map serves millions of queries; reactive planning, however, is a near-field, short-horizon problem with potentially only hundreds of queries per measurement, where building a map may not pay off. We propose a mapless, Graphics Processing Unit (GPU)-accelerated Euclidean Signed Distance Field (ESDF) query with negligible pre-processing that operates directly on posed depth images, with resolution set by pooling the image rather than by a voxel size. On an embedded GPU it is simultaneously more accurate and lower in total latency than every voxel-grid configuration we measured between 2 cm and 20 cm, at one to two orders of magnitude less memory at matched resolution. With our query integrated into a Model Predictive Controller (MPC), simulated runs in laser-scanned forests at up to 9 m/s collide in 0.4 % through dense branches, against 5.9 % with the best voxel grid and 5.5 % with the best mapless baseline at our resolution, whose failures we attribute to voxel resolution and total latency respectively. We deploy the system onboard at two forest sites and fly at commanded speeds of up to 4 m/s.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.13131v1' target='_blank'>Looking Ahead and Back: Anticipatory Generative Modeling for Road-Network Trajectories</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Zhenhao Huang, Li Sun, Philip S. Yu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-09 07:23:32</h6>
+<p class='card-text'>Trajectory generation underpins urban applications such as traffic management and urban planning. Within road networks, vehicle movement along road segments is largely deterministic, whereas transitions at intersections are critical--multiple outgoing paths may appear equally plausible, yet they can lead to substantially different downstream routes. Existing generative methods such as diffusion models simulate location sequences and fail short of next transition selection, even producing trajectories that drift off the road network. To fill this gap, we advocate a fundamental shift: moving beyond location simulation toward behavior modeling on the road network. In this paper, we revisit trajectory generation through the lens of generative route planning, and introduce a new graph-constrained generative paradigm, Anticipatory Generative Modeling, which resolves next transition selection by incorporating the Anticipation of how the future route may unfold toward the destination. Concretely, we propose a novel generative model named Foresight that formulates a probabilistic model for an "anticipate--select--update--re-anticipate" loop that enables longer-term foresight while continuing sequential generation along the historical trajectory. Extensive experiments demonstrate that Foresight wins state-of-the-art baselines.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.13093v1' target='_blank'>ReAT: Residual Action Tokenization for Autoregressive Robot Policies</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Dijia Zhan, Zhuo Li, Xuemiao Xu, Sun Zheng, Jinyi Li, Wenjun Wang, Jie Tang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-09 06:45:35</h6>
+<p class='card-text'>Autoregressive robot policies rely on action tokenizers to convert continuous action chunks into compact sequences of discrete prediction targets. Existing tokenizers can reconstruct action chunks from discrete codes, but often leave implicit what each individual token contributes to the reconstructed action. We introduce Residual Action Tokenization (ReAT), which gives each token an explicit role in refining the current action reconstruction. It uses the decoded reconstruction as feedback to construct the next token from the remaining action error. This closes the loop between encoding and decoding, making each new token responsive to the errors left by the actual decoded prefix. Across 19 manipulation tasks spanning three simulation benchmarks and real-world settings, 8-token ReAT policies outperform the evaluated baselines in task success; on LIBERO, even 4-token ReAT surpasses the evaluated 8-token action-tokenization baselines at half the token budget. These results suggest a path toward action tokenization that supports self-corrective policy learning, helping autoregressive policies learn to progressively refine their own action plans.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.13087v1' target='_blank'>Belief-Overlap Partial Inversion: Object-Centric Flow Replanning for Humanoid Loco-Manipulation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Chen Yu, Sudarshan S Harithas, Juan Borbon, Dingqi Zhang, Jiuguang Wang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-09 06:40:27</h6>
+<p class='card-text'>People often learn how an unfamiliar object moves through a small exploratory push, using its response to guide their next motion. Inspired by this behavior, we study humanoids pushing carts whose mass and caster stiffness are initially unknown. Our object-centric framework closes online estimation, flow-based planning, and whole-body control into a loop, creating a tension: replacing the plan whenever the belief shifts disrupts the maneuver under way, while keeping it strands the robot on a path its evidence has ruled out. Belief-Overlap Partial Inversion (BOPI) scales revision to agreement, inverting the flow under the old belief only as far as the beliefs disagree before reconstructing under the new one. Across 18 simulated goals it lowers pooled final position and yaw error by roughly 33% and 47% against fixed-depth replanning, and on hardware it translates and turns a non-holonomic cart.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.13086v1' target='_blank'>Safety Graph: When Safety Responses Become Attack Surfaces in Cyber-Physical Systems</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Rakesh Podder, Philip D. Hopkins, Sarath Sreedharan, Indrakshi Ray, Indrajit Ray</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-09 06:40:17</h6>
+<p class='card-text'>Modern industrial control systems (ICS) are susceptible to cyber attacks triggering safety failures in the operational technology (OT) layer. The traditional way to mitigate any failure in OT is to implement safety responses. However, we show in this work that these responses can open up new attack surfaces, thereby vastly expanding the scope of lateral movement. Existing frameworks model cyber-to-physical escalation but provide no mechanism to reason about how these safety responses to OT-failures can trigger new cascading cyber attacks in the Information Technology (IT) layer. To enable such reasoning, we introduce Safety Graph (SG), a formal framework unifying three paradigms - Attack Graphs (AG), Fault Trees (FT), and Event Trees (ET) - over a shared propositional state space, capturing the full bidirectional IT-OT cascade. We provide a sound and complete compilation of SG to a classical AI planning problem, performing plan search using A* to find cross-layer cascade paths. Through a Web3D modeling and simulation of the Tennessee Eastman chemical process plant, which is a widely used chemical engineering benchmark serving as a standard for testing control, monitoring and fault propagation, we demonstrate that the planning compilation of SG automatically discovers safety-response-induced lateral movements, and identifies the responsible barriers that are unidentifiable under existing models. A complexity and scalability analysis characterizes how the planning compilation of SG scales with model size and cascade depth. To the best of our knowledge, SG is the first framework to formally model IT-OT attacks and enable operators to explore the problem of cyber attacks triggering cascading failures in ICS.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.13077v1' target='_blank'>Towards Safer Cities: A Design Process for Perception Datasets in Urban Driving Scenarios</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Alexander Kroth, Cristian Martinez, Steven Peters</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-09 06:34:17</h6>
+<p class='card-text'>Urban environments present significant challenges for the perception systems of automated driving due to their high complexity, characterized by dense traffic, diverse obstacles, or a wide range of possible scenarios. While numerous automotive datasets exist, few focus on urban settings, and the majority are acquired exclusively on passenger cars and overlook other transport modalities such as heavy-duty trucks, busses and trams. In contrast to passenger vehicles, these platforms operate under different geographical and operational constraints; including traversing pedestrian zones or platform-specific tasks such as movement of trailer or winter service. In this work a method is proposed for a guided dataset creation based on an analysis of existing datasets using user-generated map data. Furthermore, representative truck-specific use cases are identified and exemplified to demonstrate the applicability of the proposed methodology and to support targeted acquisition planning.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.13061v1' target='_blank'>Capturing Electrical Windows Through Reconfigurable Optical Networks: Transfer-aware Scheduling of Multi-Region AI Data Centers</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Xi Tong, Zijian Li, Xiaoyi Fan, Cong Zhang, Ershun Du, Qin Wang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-09 06:18:35</h6>
+<p class='card-text'>Artificial-intelligence data centers (AIDCs) can provide spatiotemporal load flexibility by migrating training workloads in response to regional electricity prices and renewable-energy (RE) availability. However, transfer-blind scheduling may overestimate migration benefits by overlooking transfer time or prevent training from resuming within renewable-rich or low-price windows when considering transfer time. This paper proposes a transfer-aware compute-electricity-network scheduling framework that coordinates training placement, checkpoint transmission, and optical circuit switching (OCS) to improve local RE utilization and reduce grid-purchase cost. A compact compute-electricity master problem generates candidate schedules using estimated transfer delays. The framework then schedules optical circuits, verifies checkpoint delivery under shared-link capacity constraints, and revises infeasible schedules using updated delay estimates. It integrates day-ahead planning, event-triggered intraday updates, and real-time dispatch. In a five-AIDC benchmark with equal completed work and network resources, the proposed method reduces the real-time grid purchase cost by 12.50% and increases the local RE utilization by 2.724 percentage points relative to static optical operation. Sensitivity and ablation analyses indicate that OCS is particularly beneficial when renewable-rich or low-price windows shift across sites and network bottlenecks hinder timely checkpoint delivery.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.13032v1' target='_blank'>Virtual Transmission Lines from Data Center Workload Migration: Coordinated Multi-Year Transmission Expansion Planning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Mengxin Zhu, Qian Kai, Yadong Liu, Yingjie Yan, Haoyu Zhao</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-09 05:44:30</h6>
+<p class='card-text'>The rapid growth of electricity demand from AI data centers is creating a dual mismatch in power systems: a temporal mismatch between fast-rising demand and slow transmission expansion, and a spatial mismatch between concentrated data-center loads and geographically dispersed renewable resources. These mismatches can exacerbate transmission congestion, resulting in unserved data-center load and renewable-energy curtailment. This study models geographic workload migration as a virtual transmission line (VTL) that changes nodal data-center demand without transferring physical electricity. A mixed-integer linear programming model is then developed to co-optimize multi-year candidate-line construction and workload migration, subject to construction delays, renewable-energy curtailment, unserved data-center load, workload-balance requirements, communication-bandwidth constraints, and link-latency limits. The model is evaluated over an eight-year planning horizon on a modified IEEE 14-bus system. The results show that coordinating VTL with physical transmission expansion reduces total system cost, unserved data-center load, and renewable-energy curtailment while alleviating transmission congestion. VTL-aware planning also requires one fewer candidate line than build-only planning. However, VTL alone cannot meet system demand and does not eliminate the need for physical transmission reinforcement. Sensitivity analysis indicates that VTL provides the greatest value when transfer capacity is tight, construction costs are high, load growth is rapid, and data-center flexibility is greater. Additional validation on the IEEE 118-bus system over a five-year planning horizon shows that coordinated planning retains its cost and reliability benefits while reducing physical expansion requirements.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.13011v1' target='_blank'>ASKAP Monitoring of the Rubin Deep Drilling Fields</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Dougal Dobie, James Freeburn, Iris de Ruiter, Katie Auchettl, James Coulson, Brent Miszalski, Anais Möller, Nikhil Sarin</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-09 05:16:25</h6>
+<p class='card-text'>In the past decade, time domain astronomy surveys across the multi-messenger spectrum have developed "alert streams" which circulate observational information in real-time to the wider astronomical community. Despite this being standard practice for optical, gamma-ray and gravitational wave time domain astronomy for several years now, this kind of infrastructure has not yet been deployed at-scale for radio telescopes. We are conducting a long-term monitoring program that targets the Rubin Deep Drilling Fields using the Australian SKA Pathfinder (ASKAP). The primary goal of this program is to provide serendipitous radio observations of all objects of interest in these fields, and circulate that information in as close to real-time as possible. In this manuscript we outline the survey plans and status, the infrastructure we have developed to disseminate this information and an initial data release comprising 5 months of ASKAP observations of each field (although only 3 months overlaps with Rubin) conducted on an approximately 10 day cadence with a noise level of $\sim 60\,μ$Jy. As part of this data release, we present updated high-cadence radio light curves to the tidal disruption event AT2018hyz and the supernova SN2024abfo along with the discovery of two new radio variables, a possible tidal disruption event ASKAP J095711.5+051205 and an in-progress extreme scattering event ASKAP J005026.4-422958. The scientific results from this program along with the infrastructure developed to acquire them will lay the foundation for the integration of future radio imaging surveys into the broader multi-messenger alert stream, leading the way for major facilities such as the Schmidt Observatory System and the SKA.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js'></script>
+</body>
+</html>
