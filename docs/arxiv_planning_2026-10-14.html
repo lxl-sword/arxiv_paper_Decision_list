@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>planning - 2026-10-14</title>
+<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap' rel='stylesheet'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css'>
+<style>
+body {
+font-family: 'Roboto', sans-serif;
+background-color: #f5f7fa;
+padding: 20px;
+}
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.card-title {
+    font-weight: 700;
+}
+.card:hover {
+    transform: scale(1.02);
+    transition: 0.3s ease-in-out;
+}
+</style>
+</head>
+<body>
+<div class='container'>
+<h1 class='text-center my-4'><i class='fas fa-book'></i>planning - 2026-10-14</h1>
+<div class='row'>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.18867v1' target='_blank'>EmbodiedEvo: Self-improving Coding Agents for Physical Intelligence</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Wenyi Li, Yizhe Chi, Youjie Zheng, Chunyu Liu, Xiaoqiu Wang, Mingju Gao, Zheng Jiang, Deyao Hong, Calvin Xiao, Kaisen Yang, Qinhuai Na</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-13 17:59:51</h6>
+<p class='card-text'>Bringing general-purpose agents into the physical world calls for an executable representation of physical intelligence. Compared with vision-language-action (VLA) models, which map observations and language instructions directly to actions, code makes control logic explicit and reusable. Code can serve not only as a policy representation but also as the workspace in which the agent solves a task. Rather than following a prescribed workflow of planning, execution, and verification, the agent can autonomously inspect the state, revise and execute code, and use feedback to choose the next step. The success of this SWE-style loop in digital environments motivates its extension to physical tasks. Yet physical execution remains prone to recurring failures. To retain and refine experience for later scenes, we introduce EmbodiedEvo, where a coding agent evolves reusable Skills and Lessons through feedback on a single Playground scene, then freezes the resulting harness for diverse new scenes. On RoboDojo-Sim, EmbodiedEvo achieves an average score of 44.48 and a success rate of 37.82\%, surpassing all officially verified results. Paired tests show the largest gains on memory-dependent tasks and successful reuse of coordinated procedures, while fine contact control remains difficult. Experience from stronger models also improves weaker executors: Astra's experience raises Sol and Luna's success rates by 8.86 and 5.50 percentage points over no experience. Compared with raw interaction history, Skills and Lessons achieve comparable task performance at 53.0\% lower execution cost.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.18865v1' target='_blank'>PLAYGROUND: Progressive Layout Generation with Render-Grounded Planning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jaeho Lee, Junhwan Heo, Junghyun Park, WonJun Moon, Eunju Yang, Seungho Jang, Seongchan Kim, Seungryong Kim</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-13 17:59:50</h6>
+<p class='card-text'>Generating editable graphic designs requires arranging visual and textual elements into a coherent composition while preserving their content and editability. Although recent MLLM-based approaches employ iterative generation and visual refinement to reflect the real-world design workflows, their high-level plans are predetermined prior to execution, limiting their adaptability as the design evolves. To address this limitation, we propose PlayGround, a progressive layout generation framework that dynamically adapts to the current rendered canvas. PlayGround establishes a progressive design loop comprising a Progressive Planner, a Layout Generator, and a Visual Verifier, guided by a Structure-Aware Retriever. Given an initial set of unordered elements, the Structure-Aware Retriever initially infers a coarse layout structure to retrieve structurally similar reference designs. Subsequently, at each turn, the Progressive Planner examines the current rendered canvas alongside the remaining elements, forms the next functional group, and plans its composition. The Layout Generator then predicts editable layout attributes, while the Visual Verifier evaluates rendered candidates and provides feedback when refinement is necessary. To train the Progressive Planner with step-wise supervision, we construct a two-stage data generation pipeline that extracts functional groups and turn-level planning trajectories from completed designs. Experiments on Crello and LICA demonstrate the effectiveness of PlayGround over existing methods. Our code and weights will be publicly released.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.18866v1' target='_blank'>AutoAgent0: An Agentic Runtime for Safe Closed-Loop Driving</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jiageng Liu, Seth Z. Zhao, Zewei Zhou, Alejandro Huerta, Aidan Bayer-Calvert, Yuxin Bao, Haotian Lin, Robert Spataru, Zijun Cui, Yining Hong, Bolei Zhou, Jiaqi Ma</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-13 17:59:50</h6>
+<p class='card-text'>Safe autonomous driving requires more than accurate planning at a single frame: it demands reliable closed-loop execution in dynamic environments. Although end-to-end driving policies have advanced rapidly, the accumulated closed-loop errors, especially in unseen scenarios, can push vehicles into states from which the same policy struggles to recover. We address the challenge by treating closed-loop driving safety as a test-time execution problem. We introduce AutoAgent0, an agentic runtime and harness framework that augments existing driving experts with complementary detection skills, rule-based action verification, and feedback-driven recovery. To address inaccurate scene perception, an independent detection module constructs scene context using complementary perception skills, and a rule-based verifier checks proposed trajectories against this context before execution. When the nominal trajectories are unreliable, the orchestrator of the runtime activates Recovery Planning, where an agentic loop constructs alternative action proposals from action primitives and iteratively refines them using verification feedback. This design combines independent scene assessment with feasibility checks and online recovery, addressing both perception errors and the limited recovery capabilities of individual experts. Evaluations on Fail2Drive and NavSafe-$\infty$ demonstrate improved closed-loop robustness over single-expert execution in long-tail and safety-critical scenarios. These results demonstrate that runtime supervision can improve closed-loop robustness across multiple driving experts without retraining the underlying policies.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.18860v1' target='_blank'>AesCode: Aesthetic Code Generation with Decoupled Cross-Modal Rewards</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Xin Gao, Yifan Yang, Xin Li, Pan Wang, Yan Li, Muzhao Tian, Mingxi Cheng, Bei Liu, Kai Qiu, Qi Dai, Dong Chen, Yue Dong, Leandros Tassiulas, Rex Ying, Ji Li, Chong Luo</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-13 17:59:31</h6>
+<p class='card-text'>Generating information-rich visual artifacts such as slides, posters, and dashboards as code is appealing because the outputs are structured, editable, and verifiable. Yet code models cannot see how their choices of layout and color come together on the canvas, often limiting spatial planning and aesthetic quality. Image generators excel at visual design but can misrender requested content, making their outputs unreliable targets for direct reproduction. We therefore introduce AesCode, which generates code grounded in the content prompt while using an image generated from the same prompt as an aesthetic guidance. To do so, AesCode represents the target as a design graph that describes the whole canvas and makes each property attributable. From this graph, we derive complementary cross-modal rewards: deterministic verifiers score properties parsable from code and rendering, while a VLM judge assesses the non-parsable ones with a sample-specific Visual Graph Rubric (VGR) tied to graph elements and relations. We optimize these decoupled rewards through reinforcement learning with per-channel normalization to jointly improve spatial planning, aesthetic quality, and verifiable correctness. To evaluate this setting, we build a benchmark that scores verifiable correctness and visual quality separately, with visual scores highly consistent with human judgments. We find that reference images substantially improve the visual quality of code generated by existing models, and ablations show that AesCode benefits from references both as model input and as a source of visual rewards. Relative to same-scale Qwen3-VL baselines given the same references, AesCode-8B and AesCode-32B improve visual quality by 31.1 and 22.4 percentage points, reaching scores comparable to those of closed-source frontier models such as GPT-5.5 and Claude Opus 4.8.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.18850v1' target='_blank'>Collaborative Planning for UAV-UGV Teams under Operational Constraints via Masked Error-bounded Neuro-Symbolic Diffusion</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Zihao Deng, Qianhuang Li, Maggie Wigness, John Rogers, Donghyun Kim, Hao Zhang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-13 17:58:37</h6>
+<p class='card-text'>Collaborative planning under operational constraints is essential for heterogeneous robot teams in large-scale missions. Unmanned Aerial Vehicles (UAVs) provide rapid area coverage but are limited by onboard energy, while Unmanned Ground Vehicles (UGVs) can serve as mobile recharging stations yet are constrained by road-network traversability. Effective collaboration must enforce operational constraints during execution while enabling parallel, coordinated actions. Masked Diffusion Models (MDMs) have shown promise through token unmasking but have two key limitations: entropy-guided scheduling assumes distributional alignment and reliance on differentiable constraints for diffusion-time optimization. We propose Masked Error-bounded Neuro-Symbolic Diffusion (MEND), which formulates collaborative planning as a conditional masked generative process to generate context-aware action sequences for UAV-UGV teams. MEND introduces a neuro-symbolic diffusion paradigm that constrains conditional masked diffusion policies at execution by reweighting the learned action distribution with a logic-induced admissibility indicator, thereby enforcing compliance with operational constraints. MEND introduces an error-bounded inference scheduling at execution that constructs the unmasking schedule by selecting positions with minimal predictive entropy over the constraint-aware action distribution, enhancing collaborative planning optimality under operational constraints. Extensive experimental results in simulation, on real-world maps, and with physical robot teams demonstrate that MEND advances UAV-UGV collaborative planning under operational constraints.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.18836v1' target='_blank'>Plan-Bench: Can Existing VLMs Go Well Beyond Perception to Reason and Plan in Embodied Worlds?</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Juntong Feng, Qingan Liu, Jingru Dong, Yue Zhu, Weiming Zheng, Yujie Cheng, Xinzhe Han, Shuai Hao, Yunzhi Zhuge, Haiwen Diao, Huchuan Lu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-13 17:55:20</h6>
+<p class='card-text'>Vision-Language Models (VLMs) have achieved strong performance in visual perception and spatial reasoning, leading to growing interest in using them as high-level planners for embodied AI. However, physical tasks require models to integrate spatial information, reason over temporal states, and generate multi-step plans under various constraints, raising the question of whether current VLMs can reliably support such reasoning and planning independently of execution. We introduce Plan-Bench, a benchmark for evaluating the high-level reasoning and multi-step planning capabilities of VLMs relevant to embodied worlds, while isolating the influence of action execution. It covers three complementary dimensions, spanning 16 subclasses and 699 curated samples. Extensive evaluation of 28 VLMs reveals room for improvement, with even the strongest model achieving only 75.0% accuracy. We further find that model scaling generally improves these capabilities. Ablation studies also indicate larger models show increasing potential as high-level planners. Overall, Plan-Bench provides a lightweight probe for evaluating VLMs' reasoning and planning capabilities relevant to embodied environments and assessing their potential as decision makers for physical tasks. Our benchmark and code are available at https://github.com/MinneFeng/Plan-Bench.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.18834v1' target='_blank'>Game2Real-Bench: Do Toy Games Reveal and Transfer to Real-World Visual Reasoning?</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Qingan Liu, Juntong Feng, Yue Zhu, Yujie Cheng, Xinzhe Han, Shuai Hao, Yunzhi Zhuge, Haiwen Diao, Huchuan Lu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-13 17:55:10</h6>
+<p class='card-text'>Visual reasoning is an important capability for vision-language models (VLMs) to understand visual evidence, spatial structure, constraints, and state changes. Existing evaluations mainly rely on real-world data or procedurally generated tasks. Real-world data preserve natural complexity, while procedural games provide controllable generation and verifiable solutions. However, it remains unclear whether abilities measured in toy games correspond to real-world visual reasoning and whether game examples can support transfer. We introduce Game2Real-Bench, a benchmark that studies these connections across four capability groups, including fine-grained perception, spatial reasoning, constraint reasoning, and sequential planning. We construct 1,000 procedurally generated game samples with executable verification and curate 400 real-world samples aligned by shared reasoning requirements rather than visual similarity. We evaluate 25 representative VLMs and observe strong game-to-real consistency, with Pearson and Spearman correlations of 0.935. We further study one-shot game-to-real transfer on four models. Constraint reasoning improves for several models, while fine-grained perception declines with game demonstrations. We also construct Game2Real-Dataset with nearly 24K verified game samples across 18 tasks and 65 QA families. Our benchmark, dataset, and code are available at https://github.com/QingAnLiu/Game2Real-Bench.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.18781v1' target='_blank'>Designing for Prediction: Planning Formulas for Expected Out-of-Sample $R^2$ and $r$</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Elizabeth Tipton</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-13 17:34:48</h6>
+<p class='card-text'>Design calculations let researchers gauge, before data is collected, whether a planned study is likely to detect an effect. In this paper, we develop such calculations for predictive models using ordinary least squares and ridge regression under leave-one-out cross-validation. To do so, we derive closed-form expressions relating the expected out-of-sample $R^2$ and the expected correlation between observed and predicted outcomes to four design-stage quantities: sample size, number of predictors, an assumed population $R^2$ ($ρ^2_{in}$) and a design efficiency factor $D^*$ (which summarizes how leverage is distributed across observations). Unlike the classical shrinkage formulas, which depend only on sample size and dimension, these are sensitive to how covariates are arranged -- to imbalance and skew. A simulation study assesses the accuracy of the formulas against realized values under a variety of data generating mechanisms. We apply the methods to a published study predicting personality from smartphone behavior and show that the design formulas would have indicated, before any analyses were run, that least squares could not be expected to beat the sample mean while ridge could. An R package, predpower, implements the calculations.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.18682v1' target='_blank'>Physics-Informed Deep Learning in Oncology</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Scindhiya Laxmi, Vivek S. Yadav, Ameya D. Jagtap</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-13 16:38:59</h6>
+<p class='card-text'>Deep learning has enabled substantial advances in oncology, including cancer detection and diagnosis, medical image analysis, tumor characterization, treatment planning, response assessment, and outcome prediction. However, conventional data-driven models often require large annotated datasets, exhibit limited generalization across heterogeneous clinical settings, and lack explicit mechanisms for incorporating the physical, physiological, and biological principles underlying cancer development and treatment. Physics-informed deep learning (PIDL) integrates governing physical laws, mechanistic models, physiological constraints, and domain knowledge into deep learning frameworks, providing a principled approach for learning from sparse, noisy, and heterogeneous oncological data. This review presents a task-oriented synthesis of PIDL methods across oncology, encompassing neural networks, Kolmogorov-Arnold networks, convolutional and vision architectures, neural operators, generative models, and hybrid physics-data-driven frameworks. Their applications are examined across cancer detection and diagnosis, image reconstruction and analysis, tumor characterization, quantitative imaging, tumor progression, treatment response, radiation therapy, treatment planning, and multimodal clinical modeling. Based on the synthesized methodological and application-level evidence, we develop task-optimized PIDL workflows that align the clinical task with appropriate data representations, physical constraints, model architectures, and validation strategies. We further analyze key challenges, including physical-model fidelity, computational scalability, uncertainty quantification, domain generalization, standardized benchmarking, and clinical validation.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.18677v1' target='_blank'>Model-Based Online Decision Making via Generative Trajectory Planning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Haldun Balim, Yilun Du, Na Li</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-13 16:35:13</h6>
+<p class='card-text'>Online decision-making faces a tension between efficient inference and long-horizon reasoning. Value-based methods rely on short-horizon bootstrapping that limits the propagation of long-term information, while trajectory optimization methods plan explicitly but must solve a high-dimensional optimization problem at every decision step. We propose Generative Trajectory Planning (GTP), a model-based framework that addresses this tension by learning a generative model as a proposal distribution over action sequences. Instead of optimizing sequences from scratch, GTP samples candidate sequences from a diffusion prior and refines them using learned dynamics, reward, and value models, enabling efficient trajectory-level reasoning. Across continuous control and long-horizon manipulation tasks, GTP matches or exceeds state-of-the-art model-free, diffusion-policy, and model-based baselines, and remains stable in regimes where strong baselines degrade. Our results suggest that generative models are best understood not as policies, but as structured proposal distributions for planning, offering a new perspective on how to integrate generative modeling with model-based decision-making.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.18664v1' target='_blank'>PlanPath: Exploration-Guided Orchestration for Patient-Level Pathology Reasoning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jiusong Ge, Mingzhao He, Qidong Liu, Chunbao Wang, Chunze Yang, Di Zhang, Jiashuai Liu, Mireia Crispin-Ortuzar, Huazhu Fu, Chen Li, Zeyu Gao</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-13 16:25:58</h6>
+<p class='card-text'>A patient's pathology case spans tens of slides from distinct specimens and anatomical sites, each carrying non-redundant, site-specific evidence. Forming a patient-level conclusion therefore requires locating the slides relevant to a given question and integrating complementary findings across them. However, existing pathology agents analyze one slide at a time and describe morphology rather than measure it, leaving evidence acquisition across a patient's specimens and patient-level quantification underexplored. To address this gap, we propose PlanPath, an agentic framework for patient-level pathology visual question answering (VQA). PlanPath turns the question into an exploration plan that specifies the evidence required, routes to the slides likely to carry it, and drives coarse-to-fine acquisition from tissue architecture down to individual cells. Tissue- and cell-level tools supply the counts, proportions, and extents, which PlanPath aggregates across slides into a traceable answer. To enable evaluation, we build two patient-level VQA datasets for renal and gastric cancer, averaging 15 WSIs per patient, with pathologist-verified question-answer pairs derived from diagnostic reports. Experimental results show that PlanPath outperforms the strongest baseline by 9.4% and 12.1% in overall accuracy on the two datasets and further improves existing slide-level agents when plugged into our framework. The dataset and code are available at: https://github.com/JSGe-AI/PlanPath_1.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.18570v1' target='_blank'>Order-Consistent Latent Geometry for Reliable Short-Horizon Planning in World Models</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Junlin Wu, Wen Fan, Dandan Zhang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-13 15:38:45</h6>
+<p class='card-text'>Latent planners often rank candidate action sequences by terminal Euclidean distance to a goal latent. Exact agreement with transition distance would make this score ideal, but is stronger than planning requires: along a transition-shortest rollout, the essential requirement is that latent distance does not reverse true transition progress. We show that this pathwise no-reversal requirement is precisely the classical self-approaching condition. To the best of our knowledge, we are the first to identify self-approachingness as a planner-facing compatibility condition for terminal Euclidean latent planning and to connect its violation to an exact finite-horizon candidate-order reversal. Because visual world models predict discrete latent sequences, we analyze their polygonal interpolation. We prove that an acute bend creates a nonempty region in which terminal Euclidean distance ranks a transition-worse candidate ahead of one that makes genuine progress, even under exact rollouts. We further interpret latent dimension as angular capacity through a classical spherical-code bound. A controlled six-branch experiment, including a zero-padded three-dimensional baseline, validates the predicted ordering failure and separates angular arrangement from ambient dimensionality.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.18568v1' target='_blank'>WAVE-0: Bridging VLA Policies and WAMs with Lightweight Latent Future Prediction</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Haomin Wang, Anqiong Ji, Ke Wang, Zhongshan Liu, Ru Ying, Ran Zheng, Zhipeng Zhang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-13 15:37:50</h6>
+<p class='card-text'>Vision-language-action (VLA) policies excel at generalist robotic manipulation but generate actions without explicitly modeling their environmental consequences. World action models (WAMs) incorporate future prediction, yet most rely on costly video generation, while latent alternatives either use predicted futures only as auxiliary targets or infer latent actions from suboptimal visual transitions through costly large-scale video pretraining. We introduce WAVE-0 (World-model-Augmented VLA Execution), a framework that bridges VLAs and WAMs through a lightweight latent world model. By connecting the semantic understanding of pretrained VLAs with explicit future prediction, WAVE-0 allows anticipated action consequences to directly guide action generation. Built on a pretrained VLA, its 257M world model translates VLM-generated latent action plans into predicted future representations that condition the action expert, unifying latent planning, future prediction, and action generation. The world model is trained directly on ground-truth robot actions with a counterfactual ranking objective, requiring neither pixel reconstruction nor large-scale video pretraining. WAVE-0 achieves success rates of 91.47% on RoboTwin 2.0 and 98.7% on LIBERO, along with 88.0%, 61.4%, and 75.0% on LIBERO-Plus, LIBERO-Pro, and LIBERO-Para, respectively. On real-world tasks, it improves the success rate of $π_{0.5}$ from 38.3% to 73.3%. These results demonstrate strong manipulation performance and generalization across diverse distribution shifts.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.18523v1' target='_blank'>APTree: Extended Behavior Trees for Adaptive and Scalable Automated Robotic Task Planning in Construction</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Shermin Sherkat, Thomas Wortmann, Andreas Wortmann</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-13 15:12:13</h6>
+<p class='card-text'>Task planning for robots in off-site construction prefabrication is primarily manual, leading to planning inefficiencies and reluctance to adopt robotic solutions. Existing approaches provide limited support for scalable, modular automated task planning and localized runtime replanning. This paper proposes APTree, a model-driven framework that integrates automated task planning with modular task execution using behavior trees as the execution model. APTree repeatedly applies and coordinates heterogeneous symbolic planners to automatically generate and compose modular task plans at runtime. To support this approach, we develop a domain-specific language for the formal specification and validation of task plans, together with a compatible execution engine. We evaluate APTree on the real-world livMatS Biomimetic Shell pavilion, where it models the construction robotic fabrication domain, detects injected specification and planning errors at design time and runtime, and automatically generates large-scale task plans by coordinating three symbolic planners across numerous planning modules. A machine-checked formal analysis further shows that composed execution and local replanning are safe under explicitly stated assumptions, including planner soundness and non-interference of generated plans, providing practitioners with explicit conditions for dependable plan composition. APTree thus enables construction practitioners to leverage automated task planning without requiring detailed knowledge of symbolic planning techniques or APTree's internal implementation.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.18467v1' target='_blank'>Ushering in high angular resolution observatories in the far-infrared: The case for a double-Fourier interferometer</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:C. S. Benson, M. Bonato, T. A. Davis, T. Essinger-Hileman, D. Farrah, W. Grainger, D. Leisawitz, H. Matsuo, B. Matthews, P. Pokorny, S. E. Ragan, B. V. Ricketti, G. Savini, J. P. Scott, L. D. Spencer, C. M. Urry, D. Wilner</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-13 14:31:47</h6>
+<p class='card-text'>A far-infrared (far-IR) interferometer from a space-based platform would bring about a transformational improvement in the spatial detail of astronomical observations that are inaccessible from ground-based observatories. This orders-of-magnitude improvement would significantly advance studies of newly formed and mature exoplanetary systems and their potential for supporting life, the earliest stages of star formation, and the evolution of galaxies up to the peak of the Universe's star formation activity and beyond. In this work, we discuss the potential for such an instrument and the science it enables in complement to current long-term plans of the global astronomical community and in preparation for the next generation of observatories. We also outline notable far-IR mission concepts, pathfinder instruments, and technology development platforms that have been studied and developed throughout the past few decades and briefly discuss key enabling technologies.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.18385v1' target='_blank'>Impact of Data Center Load on Co-Optimized Generation and Transmission Expansion Planning with Embedded Unit Commitment</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Haoxiang Wan, Xingpeng Li, Jonghwan Kwon</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-13 13:36:11</h6>
+<p class='card-text'>The rapid growth of hyperscale data centers challenges grid expansion planning, yet existing studies focus largely on operational flexibility rather than long-term investment decisions. This paper examines how large data center loads sited at multiple buses affect co-optimized Transmission Expansion Planning (TEP) and Generation Expansion Planning (GEP). The problem is formulated as a multi-year, Unit Commitment (UC)-embedded mixed-integer linear program on the modified IEEE 24-bus Reliability Test System (RTS-24) with Electric Reliability Council of Texas (ERCOT)-calibrated renewable energy profiles. A 500 MW data center load, about 17.5% of the base-year peak, is allocated across four buses by voltage level, generation headroom, renewable co-location, and network connectivity. Integrating this load raises the 15-year net present value of total system cost by 1,794 million USD (+61.6%) and the system-average locational marginal price (LMP) by 45.2%, with operating cost dominating capital investment (84.2% versus 15.8%). Renewable curtailment remains negligible: existing renewables are already near full utilization, so the added demand is served almost entirely by incremental thermal generation. Most notably, the load shifts the optimal plan from transmission-only to generation-only, replacing the base-case 230 kV reinforcement with a new 400 MW combined-cycle gas turbine and showing that strategically sited generation can substitute for network reinforcement.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.18355v1' target='_blank'>ABot-ER: Unified Embodied Reasoning through Agentic Data-Model Co-Evolution</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Qiuyu Ding, Heng-Da Xu, Changda Xia, Jiajun Shen, Zihao Guan, Zhengchen Yuan, Jianfang Zhang, Di Yang, Jiayi Tian, Yuting Xu, Fei Wang, Shiao Liu, Wei Zhang, Xiaolong Wu, Wenbin Tang, Zedong Chu, Mu Xu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-13 13:21:56</h6>
+<p class='card-text'>We introduce \textbf{ABot Embodied Reasoning (ABot-ER)}, a unified embodied reasoning foundation model that breaks the tension between breadth and depth in embodied reasoning. Embodied intelligence demands the joint mastery of perception, planning, and execution, yet reconciling generality with specialization across this spectrum remains an open challenge. Within a single unified model, ABot-ER commands specialist-level depth across all three competencies, spanning spatial, scene, and temporal reasoning in perception; long-horizon action organization in planning; and point grounding and affordance in execution. The \textbf{Agentic Data-Model Self-Evolution Engine} continuously adapts data strategies to the model's evolving capability state. The \textbf{Task-Conditioned Adaptive Training Strategy} uses task tokens to activate lightweight low-rank residuals over a shared backbone, separating updates from heterogeneous output formats while retaining shared embodied knowledge. Across a systematic evaluation on twelve benchmarks covering three core competencies and five capability dimensions, ABot-ER achieves \textbf{state-of-the-art overall performance} across perception, planning, and execution within a unified parametric framework, demonstrating that breadth and depth can coexist in unified embodied reasoning.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.18352v1' target='_blank'>Let the Mind Conceive, Let the Hand Achieve: Following Multimodal Instructions for Long-Horizon Robotic Manipulation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Youpeng Wen, Gang Wang, Tianyu Huang, Weiwei Zhang, Zhijian Huang, Wei Chen, Xieyuanli Chen, Yunhui Liu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-13 13:20:59</h6>
+<p class='card-text'>A robot following a multi-step instruction needs to act on the right objects in the right order, even as the scene changes. It must also maintain awareness of task progress and determine when to advance. To address these challenges, we introduce Orchestra, an agent harness that separates task planning and execution management from action generation. Orchestra decomposes a complete multimodal instruction into ordered subtasks, tracks completed steps, and updates the locations of relevant objects and destinations during execution. It maintains a shared context containing the active subtask, spatial grounding, and recent observations. An action policy uses this context to generate actions, while a separately trained progress evaluator estimates when to advance to the next subtask. To evaluate whether robots trained on atomic instructions and short trajectories can execute longer subtask sequences, we introduce a benchmark named RMBench-Compose. Orchestra achieves a mean success rate of $68.22\%$ across nine RMBench tasks, outperforming Mem-0 by $26.22$ percentage points. On RMBench-Compose, it achieves an Average Success Length (ASL) of $7.35$ subtasks, $2.46$ times that of HarnessVLA. Across four real-world multi-step tasks, it improves mean ASL by $25.0\%$ over Orchestra using the base $π_{0.5}$ policy. These results show that Orchestra helps robots carry out longer sequences of subtasks while preserving the requested subtask order and acting on the specified objects. Our code and project page are available at https://youpengwen.github.io/Orchestra.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.18342v1' target='_blank'>CityCode: Building Agent-Operable 3D Cities from Sparse Aerial Observations</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jiahui Sun, Ran Bi, Yifei Liu, Xiaolong Zhou, Yishuo Xu, Yuanqi Li, Congcong Zhu, Lei Yang, Yanwen Guo, Zhihang Zhong, Hongjie Zhang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-13 13:14:17</h6>
+<p class='card-text'>Urban spatial intelligence calls for 3D cities that agents can measure, interpret, and modify across successive tasks. Maintaining such cities as persistent, code-based states requires lightweight acquisition and support for consistent state updates without repeated dense reconstruction. We therefore formulate a new setting for grounded urban world construction: generating large-scale, instance-level parameterized 3D cities from one low-altitude aerial RGB image per region and known camera parameters, while recovering metrically scaled buildings and explicit road geometry and connectivity. We introduce CityCode, an agent-operable representation that unifies metric geometry, urban topology, visual semantics, and 3D assets through persistent entity identities, with dependency-aware versioned execution for validated updates and historical restoration. We further develop Air2Code to construct this representation by combining visual structure extraction with adapted metric depth estimation. To address occlusion and incomplete coverage, recovered structure and observed appearance guide generative completion and subsequent structure-aware 3D generation for buildings and backgrounds. Experiments on CitySample-Aerial and UrbanScene3D demonstrate substantially more accurate metric structure recovery and superior visual fidelity to the target cities compared with the evaluated baselines. Across 50 task chains of 50 steps each, CityCode supports continued querying, editing, planning, and historical restoration over evolving city states. Together, CityCode and Air2Code turn sparse aerial observations into persistent, agent-operable urban worlds for long-horizon urban spatial intelligence.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.18321v1' target='_blank'>CoSMO: Conformal Semantic Mapping for Open-World Safe Robot Navigation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Shuqi Wang, Yiwei Zheng, Pingrui Zhang, Yue Gao, Xiang Yin</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-13 13:01:20</h6>
+<p class='card-text'>Safe autonomous navigation requires not only geometric obstacle avoidance but also semantic awareness. Different object categories demand different safety clearances, and the set of relevant categories may expand as the robot explores novel environments. Vision-language models (VLMs) offer rich semantic representations for building maps of unknown scenes, yet their confidence scores are poorly calibrated, making raw predictions unreliable for safety-critical planning. Conformal prediction (CP) can provide coverage guarantees, but existing methods assume a fixed label set and stationary data, limiting their use in open-world settings. We propose Conformal Semantic Mapping for Open-World Safe Robot Navigation (CoSMO), a semantic safety mapping framework that transforms VLM embeddings into calibrated coverage sets and safety-aware obstacle dilations over a dynamically expanding hazard vocabulary, even under distribution shift. Experiments on the Matterport3D (MP3D) dataset show that CoSMO reduces semantic collisions by 61.6% relative to a geometry-only baseline, while maintaining formal coverage guarantees even under delayed expert feedback. Real-world experiments on a quadruped robot further demonstrate generalization by achieving long-run empirical coverage of 90.73% against the 90% target. Project website: https://yangming911.github.io/cosmo-page/.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.18290v1' target='_blank'>On Over-Conservatism Under Low-Probability Extreme Events: A KL-Regularized Wasserstein Distributionally Robust Planning Method</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Xinda Shen, Yifan Su, Bo Hu, Yanbo Chen, Changzheng Shao, Tao Wu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-13 12:39:04</h6>
+<p class='card-text'>The increasing penetration of renewable energy makes power systems more vulnerable to low-probability extreme events, elevating system planning to a critical role in ensuring reliability. Distributionally robust optimization (DRO) based on the Wasserstein distance is widely used to address this challenge. However, we find that the conventional Wasserstein ambiguity set tends to excessively amplify the probabilities of low-probability extreme events, leading to over-conservative investment decisions. To mitigate this over-conservatism, this paper proposes a novel ambiguity set that modifies the Wasserstein distance with a Kullback-Leibler (KL) divergence regularization term. By leveraging the KL divergence's sensitivity to relative probability changes, the proposed set effectively curbs the unrealistic magnification of low-probability events. A two-stage distributionally robust planning model built upon this new ambiguity set is developed to optimize the installed capacity of photovoltaic, wind, and energy storage. The complex model is then reformulated as an equivalent exponential cone program with strict theoretical proofs, making it computationally tractable. Numerical results on the PJM 5-bus and IEEE 118-bus systems reveal the over-conservatism of standard Wasserstein DRO under low-probability extreme events and validate the effectiveness and efficiency of the proposed planning model and solution algorithm.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.18274v1' target='_blank'>Fast Analytical Method for Resource Adequacy Assessment in Renewable-Rich Power Systems</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Seyed Amir Hosseini, Mohammad Reza Karimi Gharigh, Antonello Monti, Peter Palensky, Saeed Peyghami</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-13 12:30:18</h6>
+<p class='card-text'>This paper proposes a novel analytical method for resource adequacy assessment in renewable rich power systems. The approach begins by applying the stress strength method to estimate two key resource adequacy indices: loss of load expectation (LOLE) and expected energy not supplied (EENS). This method requires defining the probability distribution functions (PDFs) for both the generation side and the load side. The load is assumed to follow a normal probability distribution, while the generation side probability distribution is derived from the combined PDFs of conventional, wind, and solar power sources. The approach models the cumulative impact of uncertainties on resource adequacy using the central limit theorem (CLT), and improves accuracy with a cumulant based Gram Charlier expansion when the CLT alone is insufficient. The effectiveness of the proposed method is validated through Monte Carlo simulations conducted on the IEEE single area and multi-area RTS-96 test systems. The results demonstrate that the proposed method achieves a substantial reduction in computational time, which is crucial in the context of operational planning, without sacrificing accuracy. Furthermore, its performance improves as renewable penetration increases, making it particularly suitable for future power systems operation and planning.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.18272v1' target='_blank'>JevGPT: Thinking Fast and Slow in Autonomous Research</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yasheng Sun, Yanning Dai, Yimeng Chen, Nanbo Li, Firas Laakom, Yifan Xu, Piotr Piękos, Mateusz Ostaszewski, Wenyi Wang, Cheng Luo, Yuhui Wang, Jürgen Schmidhuber</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-13 12:29:13</h6>
+<p class='card-text'>Autonomous research agents must acquire and reason over evidence within a limited budget. Yet relevant sources can remain uninspected or unused, leaving a gap between retrieval coverage and the evidence that informs research. The challenge is to align fast local judgments with changing evidence needs and feed their findings back into research decisions. We introduce JevGPT, a dual-system architecture for autonomous research that couples fast evidence processing with deliberative research planning. System Two sets evidence objectives and integrates findings, while System One locates support, assesses relevance, and guides further inspection. Independent source judgments run in parallel; selected original passages inform the next research step. Experiments on fixed-corpus question answering and document ranking show that JevGPT achieves leading task performance, with faster completion and lower cost than comparably effective research agents. Evidence analysis shows broader source inspection and greater coverage of supporting documents in the research loop, highlighting efficient evidence processing as a route to more capable autonomous research.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.18188v1' target='_blank'>OneDemo: Unified Policy Learning and Data Generation from a Single Demonstration</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Ying Qian, Jianshu Hu, Han Fang, Shuguang Li, Yutong Ban</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-13 11:27:39</h6>
+<p class='card-text'>Learning robot policies from demonstrations is often limited by the cost of collecting diverse, high-quality expert data. While an appealing alternative is to expand a single successful demonstration into a diverse set of successful trajectories, existing augmentation methods typically rely on manually designed transformation rules or complex trajectory planning, requiring substantial task-specific engineering and human effort. We introduce OneDemo, a reinforcement learning framework that learns to edit a single successful demonstration for new task configurations. We formulate demonstration editing as a structured reinforcement learning problem, in which an editor learns, from sparse task-success rewards, both when to transition between object-centric trajectory segments and how to geometrically adapt each segment. The learned editor serves both as a task policy and as a reusable demonstration generator. Across 15 Meta-World tasks, OneDemo reaches a 92.7% success rate within 53.7k environment interactions on average. Across 9 DexMimicGen tasks, it generates successful demonstrations with a 98.4% average success rate, and BC-RNN policies trained on the generated data achieve 99.6% average success at matched dataset scale. These results show that learning to edit a single successful demonstration provides a structured and effective basis for both policy learning and scalable demonstration generation.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.18167v1' target='_blank'>Beyond Planning: Differentiable Control-in-the-loop End-to-End Autonomous Driving</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Zhidong Wang, Zirui Li, Zitong Shan, Zhiqi Mao, Qihang Huang, Zhan Chen, Jingsong Liang, Han Yu, Chen Lv</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-13 11:12:38</h6>
+<p class='card-text'>End-to-end autonomous driving has achieved remarkable progress by planning trajectories directly from raw sensor data. Yet the step from planning to control still relies on hand-tuned tracking controllers that block the gradient path from vehicle motion back to the network. This gap stems from non-differentiable vehicle dynamics, aliased supervision from coarsely sampled expert labels, rate mismatch between high-rate control and low-rate re-planning, and vehicle model discrepancies between training and deployment. This paper proposes DIVA (Differentiable Identified Vehicle dynamics for end-to-end Autonomous driving) to close this gap. An identified actuator-level vehicle model is embedded in the training loop of the end-to-end driving network, forming a differentiable chain from perception to vehicle states. A learning-based control decoder replaces the external controller and is supervised on the rolled-out vehicle states, bypassing the aliased control-input labels. A rate-consistent control-input parameterization reconciles the heterogeneous sampling rates and enables asynchronous execution with a 3.8 ms control-only cycle. On-policy re-identification and an online disturbance observer address training-time distribution shift and deployment-time model mismatch respectively. On the closed-loop Bench2Drive benchmark, DIVA achieves a driving score of 86.7, surpassing the widely adopted state-of-the-art approach by 3.3 points while nearly halving mean jerk and reducing brake switching by 64%, and maintains superior path tracking accuracy under significant vehicle model mismatch at deployment.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.18135v1' target='_blank'>SkipWorld: Latent Skip Planning with Distilled World Models for Efficient Visual Navigation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yifei Yang, Zehua Fan, Zike Yan, Zhongyu Li, Yan Wang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-13 10:44:59</h6>
+<p class='card-text'>World-model-based visual navigation enables action planning by predicting future states under candidate trajectories. However, long-horizon rollout remains challenging: models are often trained with ground-truth visual histories but deployed in closed-loop prediction, and evaluating many candidates with step-by-step rollout is computationally expensive. We propose SkipWorld, a latent skip planning framework for efficient visual navigation. SkipWorld introduces three components: (i) Latent AutoRoll, which trains a world model to recursively roll out future states in latent space, reducing the mismatch between training and closed-loop inference; (ii) SkipDistill, which distills the latent autoregressive model into a skip world model that directly predicts long-stride future latent states; and (iii) Skip-then-Refine Planning, a dual-model coarse-to-fine planner that first filters candidate trajectories with the skip model and then reranks selected candidates with the stronger autoregressive model. This design preserves accurate trajectory evaluation while reducing redundant rollout computation. Experiments on RECON, HuRoN, SCAND, and TartanDrive show that, compared with NWM, SkipWorld reduces the average ATE by 4.2% and RPE by 2.7%, while decreasing planning time by 62.4% with a 2.7-fold speedup.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.18093v1' target='_blank'>LynxScenes: A Large-Scale Real-World Benchmark for Outdoor Wheel-Legged Robot Perception, Navigation, Imagination and Reconstruction</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jun Tian, Hao Wu, Ruo Chen, Yili Liao, Hongyi Lin, Jincheng Yu, Chao Li, Yingjie Niu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-13 10:12:55</h6>
+<p class='card-text'>Wheel-legged robots operating in outdoor spaces shared with humans require accurate perception, socially compliant navigation, future-scene reasoning, and scene reconstruction. However, existing datasets typically support these capabilities in isolation and rarely provide dense spatial and behavior-level supervision on real wheel-legged platforms. We introduce LynxScenes, a large-scale real-world dataset and benchmark collected with a LYNX M20 wheel-legged robot. It contains approximately 100K 30-s navigation clips spanning 833.6 h and 3,294.7 km, with 3.0M annotated frames. The synchronized recordings include four fisheye cameras, dual LiDARs, IMU, odometry, and robot states. Annotations comprise 20.82M oriented 3D boxes across 27 categories, 13.89M road-structure annotations, and 20 navigation instructions organized into three layers and aligned with continuous future trajectories. LynxScenes supports four complementary tasks: instruction-conditioned trajectory prediction, BEV-based perception of 3D objects and road structures, future scene prediction, and multi-view scene reconstruction. For trajectory prediction, we further introduce a log-replay-based pseudo-closed-loop evaluator that measures safety, progress, and instruction compliance beyond trajectory imitation. Extensive evaluations across representative navigation, perception, world-model, and reconstruction methods reveal substantial remaining challenges in close-range outdoor robot navigation. The dataset and evaluation toolkit are planned for public release.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.18088v1' target='_blank'>ResearchFlow-Eval: Tracing the Execution Gap in End-to-End Multi-Claim Autoresearch</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Peng Jiang, Dongyang Li, Quanying Liu, Xiaoxuan Jia</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-13 10:09:15</h6>
+<p class='card-text'>Autoresearch systems increasingly undertake entire research projects. In practice, scientific research requires systems to pursue multiple interdependent claims through a continuous, multi-stage workflow and revise experiments as evidence accumulates. Existing evaluations of autoresearch systems, however, typically score isolated tasks or final artifacts, leaving these process-level capabilities largely unmeasured. We therefore introduce ResearchFlow-Eval, a fine-grained framework for assessing continuous scientific execution and iteration at both the stage and claim levels. Each evaluation is grounded in a published anchor paper, from which we derive stage-specific rubrics that decompose each research stage into dimensions and separately scored rubric items. Using these rubrics, we score each research stage and examine experimental execution in detail, focusing on multi-claim completion and revisions across attempts. We apply the evaluation framework to general-purpose agent harnesses, skill-augmented harnesses, and systems with research-specific orchestration. Across all evaluated systems, experimental execution consistently lags behind design and planning. Within execution, systems struggle to produce high-quality results and meet claim requirements, and repeated attempts rarely yield measurable improvements. Moreover, neither skill augmentation nor research-specific orchestration reliably yields higher scores. ResearchFlow-Eval thus extends autoresearch evaluation beyond isolated, single-objective runs to continuous workflows in which systems pursue multiple claims and refine their work across iterations.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.18053v1' target='_blank'>LADDER: A Long-Horizon Robot Manipulation Benchmark</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Petko Petkov, Giuliano Albanese, Nikolay Nikolov, Luc Van Gool, Jonathan Tremblay, Danda Pani Paudel</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-13 09:42:04</h6>
+<p class='card-text'>General-purpose robot manipulation policies learn short-horizon skills effectively, but degrade rapidly on long-horizon tasks. Existing benchmarks cannot isolate failures because task horizon is either too short or entangled with scene and object variations. We propose LADDER, a long-horizon robot manipulation benchmark scaling from 1 to 10 subgoals within the same environment over three suites (SimplerEnv-Long, RobotArena-$\infty$-Long, and RoboLab-Long), 145 tasks, eight categories, two embodiments, and 2,024 simulated episodes per system. We evaluate two orchestration paradigms: text subgoals for learned low-level policies (VoLo) and tool selection orchestration (CaP-X, GPT-Policy, PSP-Agent, TiPToP). Given the full instruction directly, low-level policies achieve 85.4% on single-subgoal tasks, but drop to near zero on extended tasks. While orchestration remedies this, it remains bounded by physical execution errors of the low-level policy rather than high-level planning and achieves only ~25%. Tool selection orchestration with GPT-Policy on GPT-6 Astra significantly outperforms learned-policy methods, but incurs significant time and cost budget and succeeds only ~62%. Real-world experiments across two embodiments confirm the collapse of the low-level policy and the gain from orchestration. Project website: https://ladder.insait.ai</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.17963v1' target='_blank'>Better Capturing Interactions Between Products in~Retail: Revisited Negative Sampling for~Basket Choice Modeling</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jules Désir, Vincent Auriau, Martin Možina, Emmanuel Malherbe</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-13 08:41:22</h6>
+<p class='card-text'>Brick-and-mortar retailers face many different challenges that involve understanding thoroughly its products catalog and customer preferences. In particular, assortment optimization - proposing the ideal mix of products - and promotion planning hold a pivotal role in their strategy. By leveraging sales data, retailers can make informed decisions on which products to sell and how to manage inventory, based on customer preferences as well as regional and seasonal trends. It is especially crucial to capture interactions between products, in order to minimize the number of items that cannibalize each other's sales and to ensure that complementary products, which are often purchased together, are conjointly available and sold across all stores. In this paper, we propose a model of shopping basket that learns embeddings to represent interactions between products, prices and stores. Our model is built to uncover sales patterns from very large transaction datasets. In particular, the optimization loss is computed with random negative samples in order to overcome the computational bottlenecks that arise with large number of items. Our experiments on synthetic data show the efficiency of drawing such negative samples based on the actual assortment of available products, with better results than approaches from the literature. We also validate our approach by training and evaluating our model on a dataset composed of millions of transactions from Fortenova Group, one of the leading retail company in Southeast Europe. Our model showcases promising applications in the sector of retail, with enriched interfaces to efficiently support category managers.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js'></script>
+</body>
+</html>
