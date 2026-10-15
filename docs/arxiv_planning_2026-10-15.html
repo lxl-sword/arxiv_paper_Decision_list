@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>planning - 2026-10-15</title>
+<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap' rel='stylesheet'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css'>
+<style>
+body {
+font-family: 'Roboto', sans-serif;
+background-color: #f5f7fa;
+padding: 20px;
+}
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.card-title {
+    font-weight: 700;
+}
+.card:hover {
+    transform: scale(1.02);
+    transition: 0.3s ease-in-out;
+}
+</style>
+</head>
+<body>
+<div class='container'>
+<h1 class='text-center my-4'><i class='fas fa-book'></i>planning - 2026-10-15</h1>
+<div class='row'>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.20476v1' target='_blank'>Tiered-Resolution Volumetric Mapping for Real-Time Simultaneous Planning and Mapping on Natural Outdoor Environments</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Afonso E. Carvalho, David Portugal, Paulo Peixoto, George Kantor</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-14 16:51:35</h6>
+<p class='card-text'>Real-time volumetric mapping for a planning robot is dominated by the cost of integrating and storing information at the finest resolution, yet only a small fraction of any map ever lies on or near a path the planner actually considers. We exploit this with a tiered-resolution mapping mechanism that integrates LiDAR into a single map structure at two resolutions simultaneously: fine inside a corridor around the robot's current plan, and coarse everywhere else. As opposed to traditional navigation pipelines where path planning uses the mapping result and provides no feedback, we propose a feedback loop where planning also informs mapping to dynamically integrate information at different leaf resolutions. Across two real-world teleoperated datasets, replayed and scored offline against an independent full-resolution map, the tiered maps are 13-15x smaller and require 6-8x less integration CPU time than a uniform fine map, while producing paths at a similar cost per meter as the ones generated from fine resolution maps on both scenarios. A uniform coarse map reaches the same size savings but its path quality collapses (+210% cost per meter) on the harder scenario, because it over-discretizes terrain the robot must traverse. Tiering approximates the coarse map's cheapness without its failure mode.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.20465v1' target='_blank'>vst-bench-ml: Auditable Dataset Generation for Audio Plugins</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Youssef Hemimy</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-14 16:46:39</h6>
+<p class='card-text'>Generating datasets with audio plugins requires preserving how each audio observation was produced. vst-bench-ml is a Python package that samples plugin parameters, coordinates rendering through a separately installed host, and records software identities, rendering settings, and output hashes for later verification. A sealed manifest binds this evidence and supports offline integrity checks without loading the plugin. A companion repository provides a sample-free VST3 test plugin, a deterministic offline host, and additional checks linking rendering attempts to recorded outputs. On a pinned macOS arm64 and Python 3.12 stack, functional validation of the pre-release versions reproduced package and host tests. Two runs in fresh processes reproduced the same render-plan hash and all eight expected output hashes, covering four sampled parameter configurations and two fixed MIDI signals; 12 negative cases also passed. Later licensed 0.1.0 release candidates passed producer-run continuous integration and local validation. Version 0.1.1 adds public Git source repositories, package-index installation, and user documentation; a separate release check reproduced the expected plan and output hashes. These checks establish integrity and repeatability within the tested setup; they do not establish portability, scientific suitability, or perceptual quality.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.20460v1' target='_blank'>DD-GBP: Anytime Multi-Arm Planning and Continuous Execution via Distributed Dynamic Gaussian Belief Propagation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Zhao Jin, Fengyi Dai, Yuetong Yin, Yunan Wang, Wenjie Chen, Chuxiong Hu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-14 16:43:32</h6>
+<p class='card-text'>Safely executing long-horizon multi-arm tasks online in complex dynamic environments remains challenging. We propose a new distributed dynamic Gaussian belief propagation (DD-GBP) method that directly plans joint-space trajectories through parallel local inference. A unified Gaussian-process (GP) parameterization connects adaptive planning horizons, interpolation-time factors, and continuous execution. Each robot maintains a local tree-structured factor graph and exchanges messages asynchronously over active inter-arm links. Dynamic subnet reconstruction and event-triggered updates reduce communication and inference costs while responding to moving obstacles. We also provide theoretical analyses of local inference accuracy, anytime early stopping, triggered-replanning consistency, and GP-consistent execution.
+  In 50 long-horizon, multi-target four-arm scenes with moving obstacles, DD-GBP achieves $92.5\%$ collision-free all-target completion and the highest success rate among six representative baselines. Scenario ablations demonstrate long-horizon safety and robustness to communication impairment and extreme conditions; success remains $86.0\%$ under $90\%$ packet loss. Execution results further show substantially suppressed extreme velocity and acceleration peaks relative to Syn-GBP. On one workstation, obstacle-free tests with 30 coexisting arms retain $99.87\%$ success and a $15.80$ ms mean warm solve, exceeding 60 Hz and outperforming the compared methods in scalability. Dual-arm transport experiments under dynamic interference demonstrate online response and practical deployability. To the best of our knowledge, these results establish a new state of the art for online long-horizon multi-arm planning in dynamic scenes.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.20442v1' target='_blank'>Towards Agentic Robots: Model, Data, Environment, and Harness</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Chonghan Qin, Dongming Wu, Kaituo Feng, Jiaxu Wang, Xinlei Yu, Peiwen Sun, Yijia Fan, Xilin He, Bingao Chen, Weitong Lian, Ryan Ji, Wenqi Ren, Xiaobin Hu, Dahua Lin, Yu-Gang Jiang, Xiangyu Yue</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-14 16:32:22</h6>
+<p class='card-text'>Foundation models are driving a paradigm shift in robotic intelligence, moving beyond low-level action prediction to goal-directed orchestration of data collection, model training, task planning, and real-world execution. We characterize this emerging paradigm as an agentic robots, in which agents reason over human instructions, interact with robotic environments, rectify execution errors autonomously, and dynamically adjust operational strategies. Although this field develops fast, current studies are not well connected. Researchers have no consistent view of how to combine different agentic functions into a complete robot system. This paper provides a unified overview of existing research on agentic robots. We first trace the development from robot policies to agentic systems, covering vision-language-action models, world models, and world-action models. We then clarify the definition and scope of agentic robots and organize existing research into seventeen categories across four functional domains: Model, Data, Environment, and Harness. Across these domains, we examine how agents shape model learning and robot decisions, collect and curate robot data, construct worlds, tasks, and tests for learning and evaluation, and organize capabilities for robot use. Finally, we discuss open challenges and outline directions for future research. Looking forward, we hope this work contributes to a clearer understanding of agentic robots and supports new approaches to making them more capable, reliable, and adaptive.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.20409v1' target='_blank'>Hyperspherical Contrastive Representations Unlock Planning and Exploration</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jonghae Park, Sungil Son, Jonghun Shin, Junseo Lee, H. Jin Kim, Benjamin Eysenbach</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-14 16:08:28</h6>
+<p class='card-text'>We develop a self-supervised reinforcement learning algorithm that learns to build towers of up to eight cubes from scratch, without prior data, rewards, demonstrations, or pretrained models. Our method, Contrastive Planning via Spherical Linear Interpolation (C-Slerp), uses contrastive representations as reusable building blocks and repeatedly composes them to infer a sequence of intermediate waypoints. Under our hyperspherical parameterization, the learned representations allow intermediate waypoints to be inferred in closed form through spherical linear interpolation, without training a separate high-level policy or performing graph search. Importantly, the representation geometry also tells us how to adjust the number of waypoints based on the difficulty of each goal-reaching problem. Experiments show that our method succeeds on long-horizon navigation and robotic manipulation tasks, including settings where strong baselines fail to achieve a single success. Ablations further show that using a fixed number of waypoints substantially degrades performance, highlighting the importance of adapting the plan to task difficulty.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.20333v1' target='_blank'>VIGOR-MPC: Vision-Guided Objective Regulation MPC</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jelena Trisovic, Rahel Rickenbach, Marek Landert, Panagiotis Minos, Melanie N. Zeilinger</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-14 15:15:32</h6>
+<p class='card-text'>Controlling an agent in an environment solely perceived through onboard vision is challenging: perception yields noisy, variable-length, and partially occluded context, while onboard compute is shared between perception and control, limiting the planning horizon executable in real time. We propose VIGOR-MPC, a modular student-teacher framework, agnostic to the perception pipeline, which addresses reference tracking across navigation tasks by distilling a privileged, field-of-view-aware long-horizon MPC into a computationally lightweight short-horizon MPC whose cost parameters are determined online from vision. The teacher operates in simulation with full state knowledge and a multi-trajectory formulation that guarantees the agent can stay within its field of view. The student observes only the noisy, occluded context produced by a perception module and learns, via a multi-level recurrent mapping, to infer cost parameters that aim to recover the teacher's behavior despite missing information. We evaluate VIGOR-MPC on vision-based autonomous racing in simulation and on hardware. Using only onboard perception of the track, VIGOR-MPC generalizes to tracks unseen during training and approaches the lap times of the privileged long-horizon teacher while reducing per-step computation by over 90%.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.20312v1' target='_blank'>Reflect After Failure: Brain-Inspired Self-Evolving Agents for Embodied Spatial Intelligence</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Xin Li, Xiaohuan Gu, Yifan Wang, Shaobin Ling, Tianli Shi, Jingao Xu, Zhimeng Yin, Dapeng Wu, Yun Wang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-14 14:59:04</h6>
+<p class='card-text'>Vision-Language Models (VLMs) have made substantial progress in spatial reasoning, and self-evolving agents further extend these capabilities to embodied environments by learning from interactions. However, current self-evolution remains particularly challenging in embodied spatial tasks, complex and multi-step decisions from partial visual evidence making it difficult to determine why an execution fails. The failure may stem from misperception, insufficient exploration, or incorrect planning, yet execution feedback alone rarely reveals which component is responsible. As a result, simply accumulating interaction experience can reinforce ineffective strategies. To address this, we propose HiMeco, a brain-inspired self-evolving agent for embodied spatial intelligence, inspired by metacognitive monitoring and hippocampal memory consolidation. Through Hippocampal-Metacognitive Reflection, HiMeco diagnoses failures in perception-exploration-planning (PEP), then compares execution attempts to derive reusable strategies and guidance for avoiding recurring errors. It also abstracts interaction programs into parameterized skills, using evidence contracts and execution-based validation to determine their retention and reuse. These strategies and skills guide subsequent interactions, with memory updated only between rounds and model parameters kept frozen. HiMeco achieves state-of-the-art performance on ESI-Bench, and it also improves accuracy on EmbSpatial-Bench by 3.94 percentage points without evolution.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.20280v1' target='_blank'>Learning-Based Adaptive MPC for Magnetorquer-Only Satellite Attitude Control</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Patrick Schwartz, Abhishek Cauligi</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-14 14:38:38</h6>
+<p class='card-text'>Nanosatellites (e.g., CubeSats) have the potential to carry out useful science and exploration activities for outer solar system exploration, but their small size leads to tradeoffs between attitude control and science capabilities. Magnetorquers offer a unique compromise as compact actuators that enable three-axis attitude control, but suffer from a loss of control authority and require full knowledge of the planetary magnetic field. In this work, we present a learning-based adaptive model predictive control (MPC) algorithm that plans rotational trajectories for the satellite while accounting for this loss of control authority. Key to our approach is the inclusion of a learned magnetic field model that is trained in simulation using low-fidelity magnetic field data. Using measurements collected online, our proposed algorithm adapts this learned magnetic field model using a simple last-layer update scheme, allowing the MPC controller to quickly adapt to the true planetary magnetic field model and more effectively plan attitude trajectories. We demonstrate the results of our proposed approach for two use cases, (1) Earth-orbit and (2) Uranus-orbit, and show that our learning-based adaptive MPC algorithm improves controller success for these system simulations by 5% and 61%, respectively.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.20244v1' target='_blank'>FPTAS for Polygonal Multi-Robot Motion Planning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Sayan Bandyapadhyay, William Lochet, Saket Saurabh, Jie Xue</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-14 14:19:02</h6>
+<p class='card-text'>We study multi-robot motion planning in a polygonal environment with polygonal robots. The setting of the problem consists of a polygonal domain $\mathcal{W}$ with $n$ vertices and $k$ robots $R_1,\dots,R_k$ translating in $\mathcal{W}$ each of which is represented by a polygon of constant complexity. Given a source configuration $\mathbf{s}$ and a target configuration $\mathbf{t}$ of the robots in $\mathcal{W}$, the goal of the problem is to find a collision-free motion plan from $\mathbf{s}$ to $\mathbf{t}$ that is shortest with respect to some cost function. We present the first fully polynomial-time approximation schemes (FPTAS) for motion planning with any fixed number $k$ of robots, under the min-sum objective, the min-max objective, and the min-makespan objective. Here, the min-sum variant aims to minimize the total traveling distance of all robots, the min-max variant aims to minimize the maximum traveling distance of a single robot, and the min-makespan variant aims to minimize the total time cost under the assumption that all robots move with a maximum speed $1$. The algorithm directly generalizes to the problem in any fixed dimension $d$, with a polytope environment and polytope robots. Our result settles an open question of Agarwal, Halperin, Sharir, Steiger [SODA'24] and Agarwal, Holmgren, Steiger [SODA'26], who gave an FPTAS for $k=2$ unit-square robots and a bicriteria-approximation algorithm for a fixed number $k$ of unit-square or unit-disk robots, respectively. Compared to the previous results, our algorithm is substantially simpler.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.20236v1' target='_blank'>Physics with Radioactive Ion Beams at the Nuclear Science Laboratory</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:W. S. Porter, D. W. Bardayan, M. Brodeur, C. Dembski, P. D. O'Malley, F. Rivero, W. W. von Seeger, C. Boomershine, O. Bruce, S. R. Carmichael, S. Coil, A. M. Houff, J. J. Kolata, D. Schroeder, A. A. Valverde, R. Zite</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-14 14:16:11</h6>
+<p class='card-text'>The University of Notre Dame is home to a rich history of nuclear science efforts, including some of the earliest developments in the production and creation of radioactive ion beams (RIBs). The resulting TwinSol facility stands as the longest continuously-operating RIB facility in the United States, and has enabled a wide range of experimental efforts in nuclear structure, astrophysics and fundamental symmetries through in-flight RIBs one to two nucleons from stability. A recent upgrade to TwinSol via a third solenoid constituted the founding of the TriSol facility, which provides cleaner, better-focused RIBs to downstream experiments. In this paper, we present a summary of RIB science at the Nuclear Science Laboratory (NSL) with both TwinSol and TriSol and discuss recent upgrades and future experimental plans at the facilities.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.20143v1' target='_blank'>R&D activity in INAF on light instrumentation for continuous optical turbulence monitoring</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Camilo Weinberger, Elena Masciadri, Luca Carbonaro, Marlene de Sepibus, Fernando Pedichini, Ciro Del Vecchio, Christian Veillet, Sam Ragland</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-14 13:04:15</h6>
+<p class='card-text'>Measurements of optical turbulence are essential in both ground-based astronomy and free-space optical communication systems contexts for multiple reasons including supporting and optimizing Adaptive Optics. Similarly, forecasting these parameters is highly valuable for planning observational campaigns; however, it requires at least two years of continuous data to generate a reliable training dataset. The most commonly used instruments to monitor continuously the optical turbulence include DIMM, MASS, SLODAR, RINGSS sensors. The Arcetri team is leading two operational forecast systems for two different Observatories: ALTA above LBT, and FATE above VLT. Both systems are in continuous evolution and obviously forecast performances depend also on available measurements. Our long-term goal is to develop our own instruments to obtain continuous measurements directly from local observations. In this work, we present an automated system designed for continuous seeing measurements using multiple sensors. This portable station integrates a Cyclope, a RINGSS unit, a scintillometer which operate together to provide comprehensive night-time atmospheric information. We will compare the performance of low-cost sensors, such as the Cyclope and the scintillometer, with that of the RINGSS turbulence profiler, which has been fully installed and programmed by our team in collaboration of LBT team. A dedicated insturment for night and day-time measurements is planned for near future. This system incorporates a fully automatic on-site system that monitors operational status, delivers real-time information on sensor conditions and measurements, and manages synchronization with the data storage unit. The system's real-time acquisition capability enables continuous turbulence analysis, supports R&D activities, facilitates local data generation, and allows on-site testing of forecasting methodologies.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.20100v1' target='_blank'>Task-State Governance: A Virtual Machine for Verifiable and Recoverable GUI Agent Execution</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Wenkui Yang, Yiming Hao, Kai Zhou, Chengyu Pu, Yuzhe Zhang, Jie Cao, Jin Huang, Shuai Ma, Feng Tian</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-14 12:35:59</h6>
+<p class='card-text'>Graphical user interface (GUI) agents now execute workflows across real applications, but when execution drifts, users must determine what changed, what should have remained untouched, and what can still be recovered. Plan-centric interfaces leave users supervising procedure, but users live with changes to application state. We introduce task-state governance, an interaction paradigm that represents a task as an editable contract linking desired outcomes, facts that must be preserved, and observed application state. We instantiate this paradigm in TaskVM, which projects live state into editable task controls, executes user edits as genuine interface actions, verifies outcomes through independent observation, and marks each action as reversible, compensatable, or irreversible. Across an automated contract benchmark, a controlled user study, and an open live-model exploration, the paradigm strengthened contract compliance and users' recovery control and trust, while execution outcomes were held constant. Task contracts open a design space for governable agent interfaces.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.20080v1' target='_blank'>Routes planning in a condominium company using mathematical optimization</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Lara Rocha, Pedro Martins</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-14 12:20:31</h6>
+<p class='card-text'>This work focuses on planning daily routes for a group of employees of a condominium company. Given a set of employees and a set of customers with pre-scheduled visits, we want to build doubly-open routes to guarantee visits to all customers, ensuring that each customer is visited by an employee with the appropriate skills to carry out the required activity. The travel times between customers and the service time in each customer are known. The problem includes time windows for visiting customers, each employee has a maximum working time, and the daily working period is between 9 AM and 6:30 PM. The routes respect the lunch break period if they extend from morning to afternoon, which means that lunch break can be avoided if the route is fully completed in the morning or in the afternoon. The aim is to minimize the distance covered by all routes with a penalty for including lunch breaks. The distances and times between customers are collected via an API to Microsoft Azure; and the solutions are then displayed on Bing Maps. The results obtained show the operational advantages of an efficient and effective vehicle routing planning in a specific condominium management company. The model can be extended to other service provider companies.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.20074v1' target='_blank'>Feasibility of a Patient-Specific Digital Twin for Ventriculoperitoneal Shunt Trajectory Planning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Kritsanavis Chongsrid, Vich Yindeedej, Supaporn Konmun, Xulei Yang, Si Yong Yeo</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-14 12:12:56</h6>
+<p class='card-text'>Catheter obstruction is the commonest cause of shunt failure; freehand insertion at Keen's point leaves the tip free in cerebrospinal fluid in only one case in ten. We built a digital twin that reconstructs skull, scalp, ear and ventricles from preoperative CT by deterministic geometry, searches every entry around Keen's point for the perpendicular trajectory with the longest intraventricular length under safety constraints, and returns the plan as two ruler measurements from the ear and two depths. Executed freehand in 11 consecutive adults (IDEAL Stage 2a), it achieved Hayhurst Grade 1 placement in 10 of 11 against 22 of 213 historically (p = 9 x 10^-9), median entry and angular deviations 2.5 mm and 5.9 degrees, 1.4 cm more intraventricular catheter than Keen's point, and no intraoperative complication. The technique was unchanged; the gain came from choosing entry and depth per patient. Whether it lowers revision is the next stage's hypothesis.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.20012v1' target='_blank'>ChemArgus: Automated Scientific Diagnostics for Lab-Grade Multimodal Chemistry Reasoning: A Frontier Benchmark</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Hanyao Guo, Mo Cui, Zihan Tan, Leixin Sun, Yichun Wang, Yinan Shen, Guojun Zhu, Jia Jiang, Erhao Chen, Zui Chen, Wenzhe Gao, Zhihao Yu, Qijun Wang, Yetian Zhu, Jiande Chen, Chuhang Pei, Yao Jiang, Yichen Fan, Pinhan Wang, Xiaorui Pan, Qianyi Zhu, Yang Liu, Mang Ye, Guancheng Wan</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-14 11:24:56</h6>
+<p class='card-text'>Chemistry evaluation has moved past multiple-choice probes toward open-ended expert problems, yet the benchmarks that define the current frontier still score answer endpoints alone. Such scoring conflates memorized facts with stepwise derivation, treats visual and textual inputs as interchangeable, and confounds long-horizon planning with stepwise execution. These blind spots prevent any diagnosis of where the reasoning chain breaks in a model. We present ChemArgus, a competition-level chemistry benchmark drawn from chemistry competition material, textbooks, and research papers, whose scoring replaces the answer endpoint with three measurement properties. Fine-grained scoring grades every subquestion point by point with partial credit, so a score lands at the level of the step rather than the outcome. Multimodal capability is priced on every problem containing a real image, paired with a controlled text description, so visual understanding is measured against text on identical tasks. Diagnostic attribution reads paired metrics that share one scoring unit and differ only in context construction, so a gap between two scores isolates a single cause, namely integration, propagation, or local reasoning. GPT-5.6-Sol scores 23.2% on unassisted whole-problem solving against 28.8% and 30.4% under the two sequential metrics, a gap measuring the integration burden. Through rubric partial credit and these cause-isolating score gaps, ChemArgus shows not only whether a model answers chemistry correctly but where its reasoning chain fails, so that every score it reports doubles as a diagnosis, a readout of the chain rather than a verdict, aiming to guide language models step by step on their path toward chemistry expertise, one corrected step at a time, each step priced by the rubric, point by point.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.19955v1' target='_blank'>Neurosymbolic Learning of Interpretable World Models</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Riccardo Andreoni, Massimiliano Ronzani, Chiara Ghidini, Alessandro Daniele, Emile van Krieken</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-14 10:38:30</h6>
+<p class='card-text'>World models aim to learn compact representations of an environment from observations, enabling agents to predict future states and plan their behaviour. However, most existing approaches learn black-box representations, with limited ability to incorporate prior knowledge about the world. We introduce Concept-Grounded World Models (CGWMs), a neurosymbolic world model design that instead learns interpretable concept representations. We learn these concepts from observations using explicit and complete knowledge, expressed in temporal logic, that specifies the valid world states and the temporal relations governing their dynamics. Furthermore, we directly use this knowledge by formulating planning as differentiable reasoning, optimising the agent's actions by gradient ascent to satisfy a goal. We experimentally compare CGWM with a purely neural baseline and a neurosymbolic baseline on two game environments. We find that CGWMs ground concepts much more accurately, even over long horizons, resulting in significantly more robust planning both in and out of distribution.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.19864v1' target='_blank'>Euler: Towards Human-Centered Multi-Agent Mathematical Discovery</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Qiuyu Chen, Qi Wang, Liang Xu, Xin Jin, Baao Xie, Wenjun Zeng</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-14 09:27:36</h6>
+<p class='card-text'>Mathematical research drives scientific discovery, and recent advances in AI for mathematics have shown that language-model agents can solve challenging problems and develop substantial mathematical proofs. Yet much of today's AI-for-mathematics work centers on obtaining a final answer. This emphasis leaves the exploration behind a result difficult for researchers to understand, while long-running investigations face fragmented context and the risk of unsupported claims propagating across reasoning steps. We present Euler, a human-centered mathematical research system built around a shared, structured representation of the research process. Euler organizes mathematical statements, assumptions, proof dependencies, alternative approaches, failed attempts, and verification evidence into connected research graphs. This representation allows researchers to trace how results are developed and supplies agents with persistent, task-relevant knowledge for planning, collaboration, and verification across sessions. Researchers can also select a graph node linked to a saved team state, revisit the agents' earlier reasoning, and explore alternative directions through continued interaction. We illustrate Euler's capabilities through three mathematical research case studies and describe the implemented system and its software validation.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.19849v1' target='_blank'>DeltaStreamer: Towards Human-Like Agentic Streaming Video Understanding</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Boyuan Sun, Deshui Miao, Wenzhao Gao, Shaoyong Jia, Shaohui Jiao, Chi Liu, Yan Shu, Derek Li, Bryan Dai, Shengsheng Qian, Qibin Hou</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-14 09:19:15</h6>
+<p class='card-text'>We propose DeltaStreamer, a novel agentic framework for streaming video understanding inspired by how humans observe, remember, and investigate. Streaming video understanding requires a system to retain evidence before knowing which details future queries will need. Existing approaches often obscure event transitions and omit relevant details when compressing video history, and cannot recover missing visual evidence. DeltaStreamer addresses these limitations by combining change-aware memory with query-driven planning and targeted evidence gathering with replay. Before a query arrives, it continuously observes the stream and explicitly records visual changes in structured memory, preserving how events unfold rather than only what is present. When a query arrives, a query-driven planner identifies the required evidence and guides memory retrieval and targeted replay. By revisiting historical frames, the agent can recover visual details omitted during observation and ground its answer in evidence beyond the retained descriptions. This connects continuous observation with active investigation tailored to each question. Experiments on OVO-Bench and StreamingBench demonstrate improvements over representative streaming video understanding methods, with overall scores of 66.07% and 59.53%, respectively.
+  Project page: https://bbbbchan.github.io/DeltaStreamer/</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.19840v1' target='_blank'>GPU-Accelerated Preprocessing for Large-Scale Linear Programming</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Kaihuang Chen, Jiawei Lu, Defeng Sun, Yancheng Yuan, Guojun Zhang, Xiangyu Zhang, Xinyuan Zhao</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-14 09:11:40</h6>
+<p class='card-text'>GPU-accelerated first-order methods are increasingly effective for solving large-scale linear programs (LPs), yet LP preprocessing remains predominantly CPU-based and can become costly. A key challenge is that dependencies among presolve reductions and frequent modifications to sparse LP data make efficient GPU parallelization difficult. To address this challenge, we develop GPU-Preprocessor, a GPU-native LP preprocessing framework that integrates folding and presolve. To efficiently implement folding on GPUs, we adapt a randomized partition refinement algorithm to LP folding, using sparse matrix-vector products and parallel sorting to construct stable row and column partitions. For presolve, we introduce a new piecewise-linear reformulation rule that exploits underlying convex piecewise-linear structure to obtain sparser LP representations. We also develop a framework that combines phase scheduling with a Scan-Plan-Apply design to coordinate presolve rules and reduce sparse-matrix reconstruction overhead through batched updates. Numerical experiments on three LP benchmark sets show that GPU-Preprocessor achieves greater average problem-size reductions than PSLP and Gurobi Presolve, with SGM10 preprocessing-time speedups of up to $43.9\times$ and $677.7\times$, respectively. Here, SGM10 denotes the shifted geometric mean with a 10-second shift. On the largest tested quadratic assignment problem LP relaxation, these speedups reach $126.3\times$ and $2{,}207.9\times$. When integrated with the GPU-accelerated LP solver HPR-LP, GPU-Preprocessor achieves SGM10 speedups of $2.5\times$ to $5.0\times$ in combined preprocessing and solving time over HPR-LP without preprocessing. The code is available at https://github.com/PolyU-IOR/GPU-Preprocessor.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.19815v1' target='_blank'>Learning from Demonstrations meets Symbolic Control - A Supervisory Control Architecture for Formal Certification of Learned Motion</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Ashok Kumar, Mahathi Anand, Angela Schoellig, Abdalla Swikir</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-14 08:57:20</h6>
+<p class='card-text'>Dynamical system (DS)-based learning from demonstration generates flexible robot motions, but existing guarantees rely on certificate generation to obtain formal guarantees of safety and goal convergence. We propose a symbolic supervisory control architecture that automatically generates a fail-safe backup plan, certifying safety, reachability, and actuator feasibility directly from the robot's dynamics, independent of the learned DS. A nominal controller tracks the learned DS, while the supervisory controller monitors safety and target convergence, providing non-conservative intervention when the nominal controller violates necessary constraints. Experimental results include simulations and real robot deployment with various 2D and 3D datasets, including handwriting datasets, validating the effectiveness of our approach in providing formal guarantees with learned motion even in complex, dynamic environments.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.19790v1' target='_blank'>One Agent per Zone: Decentralised Active Inference under Partial Observability for Multi-Zone HVAC Control on Edge Hardware</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Panagiotis Kasnesis, Lazaros Toumanidis, Christos Chatzigeorgiou, Amalia Contiero Syropoulou, Miguel De Prado</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-14 08:36:32</h6>
+<p class='card-text'>Multi-zone HVAC control is a shared-resource problem: zones on a floor share one fan and cooling coil, so each zone's demand affects its neighbours and the building's peak power. One controller per zone scales well and isolates faults, but each controller then observes only its own zone, not the shared air loop. In this work, we present a decentralised controller that assigns each zone an independent active-inference agent, which plans by minimising expected free energy and learns its zone dynamics online. The agents exchange no messages, so none depends on peers or a coordinator; each accounts for the unobserved coupling through a latent disturbance and a congestion signal derived from the metered power of the other floors. Fifteen agents are evaluated in EnergyPlus on a Sinergym office building against three rule-based controllers and three MADDPG fleets, one given the same floor meters. On five noisy weather years unseen during training, the fleet attains the lowest mean building peak (88.3 kW, 3 to 17 % below the baselines) and staggers the floor peaks better than any baseline, with a coincidence factor (building peak over the sum of the floor peaks) of 0.929 versus 0.936 to 0.994. Compared with a reactive rule at similar comfort (0.912 versus 0.916), it lowers the sum of monthly peaks, on which demand charges are billed, by 33 kW (4 %) in every year, at the cost of about 10 % more energy. It costs 9% less per year than the proactive rule (at lower comfort) and 1% less than the MADDPG fleet given the same floor meters, in every test year. The whole fleet runs on a single low-cost Raspberry Pi 5, closing the observation-to-action loop over MQTT in 442 ms at p95, far below the 15-minute control step.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.19714v1' target='_blank'>Uncertainty-Driven Self-Play for Robust Multi-Agent Driving Policies</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Sajad Marvi, Julian Schmidt, Alessandro Canevaro, Julian Jordan, Abhinav Valada</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-14 07:40:27</h6>
+<p class='card-text'>Learning robust driving policies that generalize beyond their training domain remains a central challenge in motion planning. We propose an uncertainty-driven self-play scheme, in which half of the agents are rewarded for increasing their neighbors' epistemic uncertainty, while the other half learn to drive safely as the exploring agents continuously seek out their weaknesses. Epistemic uncertainty indicates where the policy is least confident and serves as an automatic proxy for scenario difficulty. Exploring agents use this signal to seek out hard cases, generating a challenging curriculum without manual scenario design. The resulting policy outperforms standard self-play, achieving best-in-class zero-shot transfer to nuplan Val14 (99.12% vs. 97.97%) and Argoverse 2 (82.39% vs. 78.03%) without fine-tuning, while also improving performance over standard self-play on Waymo. Our diversity-driven approach achieves 85% higher LSTM hidden-state coverage than the baseline, indicating a much richer set of behaviors. Further analysis shows that epistemic uncertainty serves as a calibrated difficulty detector, with highest-uncertain agents exhibiting 14.8 times the combined failure rate across collision, off-road, and DNF, of lowest-uncertain agents, enabling automatic prioritization of challenging scenarios without ground-truth labels.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.19683v1' target='_blank'>Enhancing Latent World Models with Associative Memory</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yuwei Sun, Siyu Zhu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-14 07:08:02</h6>
+<p class='card-text'>World models trained via latent dynamics offer a scalable path for embodied planning, yet existing methods suffer from representational collapse, computational overhead, and limited long-horizon capability. We introduce a memory-enhanced latent world model that augments JEPA-style prediction with a content-addressable memory bank. Our approach learns high-level representations directly from observations, operating at multiple temporal scales within a shared latent space, and conditions predictions via adaptive layer normalization. To prevent collapse and ensure effective memory usage, we design two complementary losses that encourage slot diversity and balanced temporal utilization. Experiments on PushT, Tworoom, Reacher, and OGBCube demonstrate that our method achieves state-of-the-art performance with a lightweight architecture, outperforming conventional latent world models on long-horizon planning tasks.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.19650v1' target='_blank'>AWARE-RG: Abstraction Aware Explanation of Resiliency Graphs for Cyber Physical Systems</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Shadaab Kawnain Bashir, Rakesh Podder, Philip D. Hopkins, Sarath Sreedharan, Indrakshi Ray, Indrajit Ray</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-14 06:17:50</h6>
+<p class='card-text'>Understanding the security posture of cyber physical systems (CPS) requires reasoning across both information technology (IT) and operational technology (OT). However, a security analyst often holds an incomplete, role-specific view of the underlying system which has most likely resulted from their knowledge limited by a need-to-know framework. Such an incomplete view can potentially lead them to incorrectly assess if a cyber attack produces an untoward physical consequence resulting in making uninformed decisions about system resilience. In this work, we present AWARE-RG (Abstraction Aware Explanation of Resiliency Graphs), a semi-automated, human-in-the-loop framework that provides an analyst with a role-bounded, need-to-know explanations of resiliency paths in a CPS. The AWARE-RG abstraction structure is derived using Formal Concept Analysis over MITRE ATT&CK for ICS tactics, ordered by the ICS Cyber Kill Chain. For valid attack-fault queries, plan repair and backward means-end analysis identify the missing dependencies, explain why the physical hazard is reachable, and suggest defensive strategies. For invalid attack-fault queries, AWARE-RG localizes the first abstraction level at which the path fails, and reports confirmed blocking conditions as hardening pointers.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.19625v1' target='_blank'>DAGFormer: Global Topology Prediction for Transformer Cross-Layer Connections</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Xiaocong Yang, Yuren Hao, ChengXiang Zhai</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-14 05:50:21</h6>
+<p class='card-text'>We propose DAGFormer, a Transformer language model whose cross-layer connections are planned by a jointly trained topology predictor. Beyond the residual connections in a standard Transformer, DAGFormer adds direct connections from earlier layers to later ones, and the predictor controls the strength of every connection based on input tokens. Unlike existing cross-layer routing architectures, which set each layer's connections separately, DAGFormer plans the routing of the whole model at once. On matched OLMo-2 pairs from 75M to 1B parameters, DAGFormer lowers WikiText-2 perplexity by 17% to 25% over the vanilla Transformer, and a 1B DAGFormer trained on 5B tokens outperforms the vanilla model trained on 10B. Against four routing baselines with the same data and budget, it reaches the lowest perplexity at 75M, 300M and 1B. The gain carries over to 13 commonsense, science, reading and math evaluation tasks (2.0 to 2.5 points higher mean accuracy at 300M and 1B) and to instruction finetuning (63% to 70% AlpacaEval win rate against the vanilla Transformer, leading every routing baseline), and under structured pruning DAGFormer degrades the least in five of six settings.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.19608v1' target='_blank'>Twenty Days Later: A Pre-Registered Test of History-Based Forecasts of Brand Mentions in Gemini Answers</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Dmitrij Żatuchin</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-14 05:30:43</h6>
+<p class='card-text'>Counts of which brands a large language model names are useful only if they hold long enough to act on. We test this with a pre-registered replication. The same 162 requests (54 questions in English, Estonian and Finnish about three software categories, four of twelve candidate brands per question, three repeats) were sent to gemini-3.1-pro-preview in three waves within about ten hours on 22 and 23 September 2026, and again on 13 October 2026, 20.3 days after the third wave, with identical request bodies. The plan and its decision rule were frozen, hashed and registered on OSF before the first call. The outcome is a lexical mention label per answer and brand, 648 per wave. The primary forecast, each brand-and-question cell's mention rate over the nine earlier answers, scored Brier 0.0281 and log loss 0.126, against Brier 0.0259 for the six-answer forecast of the 8-hour wave and a registered ceiling of 0.0559. It beat brand history (0.104), the overall rate (0.234) and a constant 0.5 (0.250) on both scores and in all nine question families (exact sign-flip p = 0.0039), so durability holds under the registered rule. A forecast frozen from the first wave alone scored 0.0599, 0.0587 and 0.0604 at horizons of 1.5 hours, 9.6 hours and 20.7 days. Of the 202 cells unanimous in the 8-hour wave, 194 were unchanged at D1 and none reversed. The latest wave alone was nearly as accurate as the pooled history (Brier 0.0292; pooled lower in 5 of 9 families, p = 0.28). Every answer reported the requested model version, and none issued a search query although search was enabled. A blind human check of 96 labels agreed with the rule on 94; both disagreements were adjudicated as rater omissions, so after adjudication the rule matched on 96 of 96. The test covers one model, one interval and twelve known brands, and estimates no decay rate.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.19600v1' target='_blank'>Cracking Mobile Manipulation: From Failure Diagnosis to Agentic Robot System</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Zixuan Wang, Jia-Ning Li, Yinzhou Tang, Yanzhao Yu, Biao Wu, Meng Fang, Xin Li, Yiwu Zhong</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-14 05:18:16</h6>
+<p class='card-text'>Recent vision-language-action (VLA) models have shown strong performance on local robot manipulation, yet their success does not readily translate to long-horizon mobile manipulation. In our experiments, a pretrained subtask VLA achieves 80% success rate on atomic manipulation tasks but only 19% when these skills are composed into mobile manipulation. We argue that this gap stems from failures across the execution process rather than from local manipulation capability alone. To uncover these bottlenecks, we systematically diagnose failures in long-horizon mobile manipulation and identify three dominant regimes: task planning, navigation and base positioning, and local manipulation. Based on this diagnosis, we develop failure-guided agentic intervention that augments a fixed subtask VLA with demonstration-based planning guidance, adaptive visual memory, accessibility-aware base adjustment, and local end-effector adjustment. On RoboCasa365, these interventions progressively improve task success from 19% to 47%, with the finalized system reaching 49% on held-out episode seeds, compared with 18% for the baseline. The same design improves performance from 14% to 37% on BEHAVIOR-1K and from 5/20 to 13/20 on real-robot tasks. These results suggest that reliable mobile manipulation can be advanced by diagnosing and intervening on the current bottleneck, rather than uniformly scaling the underlying policy. Our code will be released at https://github.com/PKU-VaLuE-Lab/Cracking-Mobile-Manipulation.git.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.19579v1' target='_blank'>Back on Track: Deployment-time Policy Improvement via World Model Planning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Colton Crosby, Hao Wang, Mac Schwager, Somil Bansal</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-14 04:48:08</h6>
+<p class='card-text'>State-of-the-art visuomotor policies are increasingly capable of executing complex tasks, yet can fail during deployment in ways they cannot predict or recover from on their own. Improving their performance and robustness typically requires collecting more data, retraining, or modifying the policy architecture, all of which are time- and resource-intensive in practice. We instead propose an offline-trained monitoring-and-intervention framework that improves a policy during deployment using only black-box query access. From a limited set of labeled on-policy rollouts, we learn a policy-conditioned liveness value that measures the nominal policy's progress toward task completion; we additionally train a compact latent world model using these rollouts together with play data. At deployment, the liveness value continuously monitors execution. When it detects a loss of progress, a short-horizon planner searches the world model for corrective actions using the same value as its planning objective, after which control returns to the nominal policy. We evaluate our method on the LIBERO-Goal task suite and on a Franka Panda manipulator, using the vision-language-action model $π_{0.5}$ and a diffusion policy as nominal policies, and demonstrate significant improvements in task success rates, while supporting real-time control. Additional results and videos are available on the project website (https://policy-improvement-wm.pages.dev/).</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.19527v1' target='_blank'>Dual-arm Cooperation for Tabletop Wiping with Temporal Object Removal</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Pengqi Zhang, Longchang Yu, Daohan Li, Liang Yan, Hangxin Liu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-14 03:45:19</h6>
+<p class='card-text'>We devise a dual-arm cooperative planning framework for wiping table surface in the presence of scattered objects. Unlike conventional surface-cleaning strategies that only cover free areas and detour around obstacles, our framework explicitly assigns one arm to rearrange objects while the other performs coverage wiping, thereby enabling access to previously obstructed regions. Specifically, we first construct a set of wiping and object-rearrangement action primitives. Based on these primitives, we introduce Geo-MILP, a geometry-aware task planner formulated as Mixed-Integer Linear Programming (MILP). By integrating Logic-Based Benders Decomposition (LBBD), Geo-MILP iteratively optimizes action sequencingand timing to resolve geometric conflicts, promoting efficient cooperation between wiping and object rearrangement. We then employ K-Order Markov Optimization (KOMO) to generate smooth, collision-free motions to ensure feasible execution. Simulation and physical experiments demonstrate that the proposed framework not only increases reachable coverage by enabling access to obstructed areas, but also significantly improves time efficiency compared to Task and Motion Planning (TAMP) baselines, reducing planning time by up to 9 times and execution makespan by approximately 40%.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.19524v1' target='_blank'>HankelKANet: Lightweight Path Loss Estimation via Physics-Inspired Hankel Convolution</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yue Ruan, Xiaoxiao Cheng, Yunan Zhu, Wenlong Huang, Meng Hua</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-14 03:42:08</h6>
+<p class='card-text'>Accurate path loss (PL) estimation is essential for wireless network planning and optimization. This paper proposes HankelKANet, a lightweight physics-inspired network for PL estimation that structurally embeds electromagnetic propagation characteristics into the neural architecture. Built on a single residual UNet backbone, the proposed model integrates urban layout features with a convolutional Kolmogorov-Arnold network(KAN). Specifically, the convolutional kernels are parameterized by the radial amplitudes of the zeroth- and first-order Hankel functions. This formulation acts as a physics-inspired nonlinear distance encoding, enabling the network to capture dominant attenuation characteristics directly without requiring additional physics-based loss terms. Experimental results demonstrate that HankelKANet achieves state-of-the-art accuracy and efficiency on both the simulated RadioMapSeer dataset and the real-world Huawei RSRPSet. Compared with the leading baseline, PEFNet, it reduces the parameter count by 78% and lowers the RMSE by 16.96% on the simulated data, while further exhibiting robust cross-dataset transferability and high data efficiency during target-domain adaptation. To interpret these empirical gains, we mathematically establish a parameter-conditional spatial gradient bound. Using discrete Dirichlet energy (DDE) and Jacobian sensitivity heatmaps, we empirically verify that this physical encoding intrinsically constrains the network's spatial derivatives. This structural smoothness effectively eliminates non-physical spatial ripples, preventing overfitting to simulator artifacts and serving as the fundamental driver for robust real world generalization.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js'></script>
+</body>
+</html>
