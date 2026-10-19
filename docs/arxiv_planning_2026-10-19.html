@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>planning - 2026-10-19</title>
+<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap' rel='stylesheet'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css'>
+<style>
+body {
+font-family: 'Roboto', sans-serif;
+background-color: #f5f7fa;
+padding: 20px;
+}
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.card-title {
+    font-weight: 700;
+}
+.card:hover {
+    transform: scale(1.02);
+    transition: 0.3s ease-in-out;
+}
+</style>
+</head>
+<body>
+<div class='container'>
+<h1 class='text-center my-4'><i class='fas fa-book'></i>planning - 2026-10-19</h1>
+<div class='row'>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.23851v1' target='_blank'>Bad Diagnosis: Analyzing Consent and Data Collection Practices of Mobile Medical Apps</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Ethan Myers, Lorenzo De Carli, Shantanu Sharma, Ritwik Banerjee, Joel Reardon, Indrakshi Ray</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-16 17:58:51</h6>
+<p class='card-text'>Mobile health (mHealth) apps collect personally-identifiable information while handling uniquely sensitive medical data, ranging from mental health records to real-time glucose or heart rate monitoring -- yet they remain poorly understood at scale. We present the first comprehensive analysis of consent and data collection practices across 10,000+ mHealth apps on the Google Play Store, combining static analysis and privacy policy examination. We develop a rigorous operational definition to distinguish health apps from general wellness programs, and design a measurement framework to detect misuse of permissions and violations of consent. Our analyses reveal a troubling ecosystem: 69.15% of apps request at least one permission unrelated to their stated purpose, with over 52.9% apps requesting location data, and 50.5% and 34.9% apps requesting camera and microphone access, respectively -- despite no functional justification based on app descriptions and stated purposes. Most alarmingly, nearly 93% of apps fail to provide users with a consent form, directly violating regulatory requirements such as GDPR; and even among the remaining 7%, 1 in 14 demonstrate a gap between the obtained consent and collection of personally identifiable information. These findings demonstrate an urgent need for stronger enforcement of privacy regulations in mHealth apps. We plan to release our dataset and measurement tools for continued monitoring of this critical space.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.23804v1' target='_blank'>Jarvis: Coordination Deserves a Brain of Its Own in Agentic Interactive Models</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yuxiang Wang, Shengbo Cai, Zhixian Zhao, Yingda Shen, Yuancheng Wang, Xueyao Zhang, Liqiang Zhang, Teddy Sun, Steve Yves, Zhizheng Wu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-16 17:29:10</h6>
+<p class='card-text'>Interactive models increasingly hand complex reasoning and tool use to a slow brain in the background, leaving a realtime front model free to sustain full-duplex dialogue. Yet the user may refine, cancel or replace a request while its task runs, so a plan or result that made sense a moment ago goes stale. Each new utterance must therefore be read against the work in flight, but the front model follows only the conversation and the back end sees only its own task. Coordination deserves a brain of its own, one that sees both. We introduce Jarvis, a coordination harness where models judge and code enforces. Its typed decision model, JEV, reads each turn against the live tasks and picks among operations built from a versioned task record. Code checks every choice against the current state before applying it, so no decision can act on a task version the user has replaced. Jarvis also rechecks plans before they execute and results before they are spoken, and counts an answer as delivered only once the user has heard it in full. We build two instances of this design. Jarvis-Audio runs unchanged on three full-duplex speech models. Jarvis-Omni adds vision and rechecks the evidence behind an answer before and during playback, since a scene can change while nobody speaks. With the front model and back end held fixed, replacing Qwen Audio Agent with Jarvis raises tau-Voice task success more than sixfold, from 29 to 192 of 278 tasks, and the gains hold on every benchmark and front model. Against published systems, Jarvis-Audio reaches 69% Pass1 on Full-Duplex-Bench v3 with an open 9B front model, versus 60% for GPT-Realtime. These results suggest that how the two brains are coordinated matters as much as how strong they are.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.23662v1' target='_blank'>Learning Robot Metareasoning: Adaptive Computation Budgets for Real-Time Control</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Lorenzo Magnino, Antonio Marino, Michael Amir, Daigo Shishika, Amanda Prorok</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-16 15:55:39</h6>
+<p class='card-text'>Planning while moving faces an historical trade-off between deliberation and reactivity. A planner running concurrently with execution needs time to compute, so the robot must commit to an open-loop action chunk for that duration: a longer commitment buys a better plan at the cost of feedback frequency. Existing controllers fix this action commitment, and consequently the computation budget, before deployment. However, the optimal computation time is highly state-dependent (due to factors such as unmodeled dynamics, safety constraints, and marginal optimisation gains), i.e. dynamic, therefore offline static tuning risks leaving systems blind during critical maneuvers or unable to find global effective solutions. We cast the identification of the optimal computation budget as a semi-Markov decision process (SMDP) in which a single decision defines both the robot action commitments and the time allocated to the solver. To solve this, we train a reinforcement-learning policy conditioned on the current state, the executing plan, and inexpensive planner statistics. Across ground-robot navigation, agile quadrotor flight, and contact-rich manipulation, the learned policy changes its budget with the demands of the scenario, discovering efficient reasoning patterns that outperform fixed-budget baselines. https://lorenzomagnino.github.io/learning-robot-metareasoning-review/</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.23615v1' target='_blank'>Beyond Action Prediction: Learning Search-Free Planning in Latent Space</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Guanchen Du, Jinhao Du, Yanpeng Sun, Shan Zhang, Na Zhao, Zechao Li</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-16 15:26:24</h6>
+<p class='card-text'>Latent world models learn action-conditioned state transitions in a compact representation space, providing a predictive model for visual planning and control. However, planning with these models typically requires costly test-time optimization over action sequences. We propose to replace this online search with a goal-conditioned inverse model that directly predicts actions from current and goal observations. A key challenge is that action prediction alone neither ensures that goal representations encode action-relevant information nor that predicted actions are consistent with the learned latent prediction model. We introduce Hindsight Inverse JEPA Planning (HIJP), a search-free framework that addresses both aspects during training. HIJP relabels future observations along offline trajectories as goals, providing action supervision across multiple temporal horizons. By retaining gradients through the goal representations, this supervision directly shapes the visual representation. HIJP further feeds predicted actions into the latent predictor model and aligns the resulting next-state representations with encoded successor observations, enforcing action-transition consistency. At inference time, the inverse dynamics model and latent predictor models are applied alternately to generate multi-step action sequences without online search. Across four visual control tasks, HIJP achieves 86.8% overall success and a 1.9-16.5x planning speedup over search-based planning.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.23565v1' target='_blank'>Beyond Expected Values: Risk-Sensitive Planning with Distributional Monte-Carlo Tree Search</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Quynh Trinh, Trung Nguyen, Nam Nguyen, Tuan Dam</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-16 14:51:28</h6>
+<p class='card-text'>Monte-Carlo Tree Search (MCTS) typically stores only scalar mean estimates, which makes it poorly suited for tail-risk objectives such as conditional value-at-risk (CVaR). We introduce Categorical Thompson Sampling with Optimism (CATSO) and Particle Thompson Sampling with Optimism (PATSO), two distributional MCTS algorithms that maintain finite-support empirical backup laws at Q-edges. CATSO represents Q-edge laws with categorical atoms and Dirichlet Thompson sampling, while PATSO represents them with adaptive particles. Both algorithms select actions using the CVaR of a Thompson-sampled Q-edge law plus a polynomial optimism bonus, and propagate scalar continuation values through visit-weighted averages of child Q-edge CVaR scores. For the finite-depth nested CVaR planning target, we prove an $O(n^{-1/2})$ bound on the root value error after $n$ rollouts, which upper-bounds the risk-sensitive simple regret. CATSO adds a fixed-grid discretization bias, while capped PATSO adds a tunable Wasserstein compression bias. Experiments on stochastic planning benchmarks show that distributional Q-edges improve lower-tail return and reduce catastrophic outcomes when mean-optimal and risk-sensitive behavior differ.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.23551v1' target='_blank'>Embodiment-Aware Planning for Heterogeneous Bimanual Manipulation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Sukhvansh Jain, Anurag Maurya, Shivam Vats, Narendra Kumar Dhar, Ravi Prakash</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-16 14:41:33</h6>
+<p class='card-text'>Many manipulation tasks that are effortless for dexterous human hands remain challenging for robotic systems equipped with simple, task-specialized grippers. Industrial platforms commonly rely on end-effectors such as suction cups or parallel-jaw grippers, yet no single mode can reliably satisfy the diverse constraints encountered across different phases of complex manipulation tasks, including pickup, reorientation, insertion, and constrained placement. In this work, we investigate whether complementary simple grippers within a heterogeneous bimanual setup can collectively realize tasks that exceed the capability of any individual gripper alone. Given a single human demonstration specifying the desired object motion, we formulate embodiment-aware execution as a finite-horizon optimization over arm-trajectory assignments. At each segment, the planner determines whether single-arm manipulation or a coordinated dual arm handover is required, jointly reasoning over heterogeneous grasp feasibility, motion constraints, manipulability, and cross-gripper compatibility. Exploiting this formulation, we compute globally consistent assignments with explicit switching regularization. Experiments on a dual Franka FR3 platform equipped with suction and parallel-jaw grippers demonstrate improved feasibility and reliability in tasks that are infeasible under single-gripper execution.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.23519v1' target='_blank'>Diversifying Moving Target Defense Against Adaptive Attacks Through Factorized Diffusion</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Chenhan Xiao, Yang Weng</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-16 14:22:38</h6>
+<p class='card-text'>Proactive defense offers a means to enhance power-system cybersecurity through controlled modifications of system configurations. One example is moving target defense (MTD), which uses distributed flexible AC transmission system (D-FACTS) devices to perturb transmission-line reactances against stealthy false data injection attacks. Existing MTD methods primarily rely on deterministic optimization, producing a single perturbation plan for each operating condition. However, repeated or highly correlated plans may expose predictable system configurations that attackers can learn and exploit. To address this limitation, this paper reformulates MTD as a conditional generative problem that produces diverse, secure, and physically feasible perturbation candidates. Learning such a distribution is challenging because MTD decisions jointly involve selecting branches, determining perturbation magnitudes, and coordinating adjustments across the network. To make this problem tractable, we factorize the decision distribution into three sequential conditional stages: branch selection, magnitude allocation, and continuous refinement. Graph-conditioned diffusion models are employed to capture the discrete and continuous decisions while accounting for network dependencies. Furthermore, a - objective is incorporated into diffusion training to favor candidates with desirable defense effectiveness and operational costs. Numerical studies on the IEEE 118- and 300-bus systems show that the proposed framework achieves AC feasibility comparable to that of optimization-based MTD baselines and higher - values, while reducing online computation time by an order of magnitude. The generated candidate pool remains effective under changing operating conditions and device availability, providing diverse high-value alternatives for flexible online cyber defense.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.23465v1' target='_blank'>S-GAP: Stealthy Graph Attack Primitives for Graph Large Language Models</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Wenda Li, Tongya Zheng, Shunyu Liu, Hanyang Yuan, Kaixuan Chen, Yu Wang, Yuchen Ying, Haoze Jiang, Huan Li, Gang Chen, Zujie Ren</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-16 13:45:23</h6>
+<p class='card-text'>Graph Large Language Models (GraphLLMs) enable powerful semantic understanding and reasoning over Text-Attributed Graphs (TAGs), while their semantic reasoning may exhibit vulnerabilities to perturbations in node text and graph structure under adversarial attack evaluation. Existing attacks typically construct textual and structural perturbations in separate stages guided by distinct realization intents. However, this separation results in attack-intent fragmentation, causing semantic incoherence between the two perturbation types, thereby undermining attack stealth and making them easier for GraphLLMs to identify and disregard, ultimately weakening attack effectiveness. To avoid attack-intent fragmentation, we propose the Graph Attack Primitive (GAP), an atomic semantic representation that unifies textual and structural perturbations under a coherent attack intent. By carefully calibrating the semantic composition of a GAP, we can achieve strong attack effectiveness while maintaining sufficient attack stealth. Furthermore, we introduce S-GAP (Stealthy GAP), a multi-agent framework that iteratively refines the semantic content of the GAP. The framework unifies GAP planning and realization and continuously refines this process through surrogate evaluation and textual feedback. Extensive experiments across four datasets, three GraphLLMs, and two attack settings show that S-GAP improves ASR over the strongest baselines by 7.02% on average while producing more relationally plausible perturbations, exposing critical vulnerabilities in current GraphLLMs and motivating more robust defenses.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.23396v1' target='_blank'>AWAM: Active Trajectory-Conditioned View Imagination for Robust Robot Manipulation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jiawei Geng, Zhenyang Liu, Yuzheng Wu, Yanwei Fu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-16 12:53:08</h6>
+<p class='card-text'>Rapid progress in embodied intelligence has enabled increasingly capable robots to follow language instructions and manipulate diverse objects. However, strong results in structured environments do not automatically transfer to open-world conditions, where clutter, occlusion, and changing viewpoints can obscure the spatial relationships required for action. To address this perceptual gap, a virtual active-perception paradigm is introduced. AWAM, an Active World-Action Model actively plans where to observe and imagines what will be seen along the planned trajectory before acting. Task-related virtual camera motion is predicted and used as a structured query into a geometry-conditioned world model, producing a reusable spatial prior for manipulation, which is later compressed into a fixed memory and fused with live observations through cross-attention for diffusion-based action prediction. AWAM achieves competitive success rates with 75.9% on LIBERO-Occ, 62.4% on LIBERO-Plus, 76.5% on RLBench-OG Occlusion1, and 94.4% in real-robot trials. These results support improved robustness to the evaluated occlusions and distribution shifts, addressing part of the gap between structured manipulation and less controlled environments.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.23391v1' target='_blank'>Input-output analysis with a sphere packing approach</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Munkhbayar Byambadash, Tumendelger Lkhagvasuren, Enkhbat Rentsen</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-16 12:50:04</h6>
+<p class='card-text'>Input-output analysis with linear programming is widely used in the planning of national economies. However, linear programming attains its optimum at a vertex of the feasible set, and a small deviation of the optimal plan in some direction violates a constraint. So far, little attention has been paid to finding sets of production plans which guarantee both the supply-demand balance of an economy and a given level of its gross domestic product (GDP), and the sphere packing approach cannot be applied directly, since the balance equations define a set with an empty interior. In this paper, we introduce the set of $(\varepsilon,δ)$-solutions, in which GDP may be smaller than its optimal value by at most $\varepsilon$ and supply may differ from demand by at most $δ$, and we find a sphere with the maximum radius inscribed into this set by solving a linear programming problem. We prove that the optimal radius is positive for positive tolerances, that it is non-decreasing, concave and piecewise linear with respect to the tolerances, and that it is bounded by the narrowest balance constraint, which is determined by a sales-concentration index of sectors. The approach is applied to the official input-output tables of Mongolia for 2010-2019 and 2024. The classical optimal plan has zero robustness, while the robust plan keeps 99.73% of the maximal GDP and, in a Monte Carlo simulation, tolerates independent deviations of all outputs and final demands of up to $\pm$0.30%. The margin of robust plans is limited by sectors with concentrated sales, mainly education and, increasingly, export-oriented mining, which indicates that a diversification of the users of mining output widens the set of robust plans.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.23334v1' target='_blank'>LAW: Unifying Language, Action, and World Modeling for Agentic Physical Intelligence</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jiajun Cao, Kai Tang, Bohua Zhang, Zezhong Qian, Ying Li, Xiaozhu Ju, Xiaobao Wei, Jiaming Liu, Yang Ding, Sixiang Chen, Yiding Sun, Siyuan Qian, Tinghao Wang, Jixian Wu, Yichen Guo, Yi Zhang, Shilong Zou, Yong Dai, Jian Tang, Shanghang Zhang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-16 11:39:21</h6>
+<p class='card-text'>World-action models jointly predict actions and future world states, but long-horizon manipulation further requires language reasoning to plan subtask objectives, assess execution progress, and guide action selection. We present LAW, a closed-loop VLM--WAM framework that unifies language reasoning, action generation, and world modeling through semantic subtask progress. Within the LAW agent, a hybrid-expert vision-language model plans the remaining subtasks, estimates the values of and fuses actions proposed by a world-action model, and asynchronously assesses execution status to support continued execution and subtask transitions. Within the world-action model, Mixture-of-Transformer Experts integrates modality-specific and shared computation for joint video--action modeling. Dual-stream hierarchical visual memory maintains temporal context for both models, while subtask-local value learning aligns action evaluation with semantic objectives and preserves supervision from successful prefixes of failed trajectories. LAW achieves 94.21% average success across 50 RoboTwin tasks. Replacing the WAM backbone with OpenWAM-$alpha$ further raises the average success rate to 95.56%, establishing a new open-source state of the art on RoboTwin. Despite having only 2B parameters, our VLM also outperforms variants using Embodied-R1.5 and GPT-5.5 High. On three long-horizon real-robot tasks, LAW achieves 65% average success, compared with 28.33% for $pi_{0.5}$ and 25% for Fast-WAM.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.23303v1' target='_blank'>MobileJailBench: Red Queen Jailbreak Benchmarking for Mobile Agents</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Songping Wang, Borui Li, Qinglong Liu, Yueming Lyu, Yi Huang, Fengting Li, Chao Feng, Caifeng Shan</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-16 11:06:37</h6>
+<p class='card-text'>MLLM-based mobile agents are rapidly gaining autonomy in perception, planning, and closed-loop execution in dynamic mobile environments. However, this autonomy also broadens the attack surface and amplifies the risks of malicious misuse, including privacy leakage, device compromise, and large-scale phishing. Existing jailbreak evaluations leave three critical gaps for mobile agents: they focus on conversational attacks instead of mobile workflows, use static task sets with fixed difficulty, and rely narrowly on attack success rate rather than comprehensive security assessment. To close these gaps, we present MobileJailBench, the first evolving jailbreak benchmark for mobile agents, comprising three key components: (1) a benchmark comprising 520 tasks spanning three jailbreak paradigms and 14 risk categories, built on a high-fidelity mobile sandbox that we construct, enabling realistic workflows across over 20 widely used apps; (2) Dual-Dynamic Evolution, which combines Failure-Distilled Jailbreak Evolution with Weakness-Driven Benchmark Expansion; and (3) Stratified Adjudication Framework for assessing security awareness, execution behavior, and risk consequences. Extensive experiments show that current mobile agents are particularly vulnerable to implicit jailbreaks, as their safety alignment remains largely superficial and fails to generalize from conversational refusal to dynamic mobile interactions. Moreover, our dynamic evolution mechanism sharpens practical threat boundaries by continually uncovering new vulnerabilities, reaching a 100% ASR on Qwen3.5-122B. MobileJailBench provides a reproducible, continuously evolving framework for tracking the true security boundaries of mobile agents.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.23299v1' target='_blank'>Optimist Deep Research: An Iterative, State-Centric Agent for Autonomous Literature Research</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Gihan Panapitiya</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-16 11:04:43</h6>
+<p class='card-text'>Most retrieval-augmented systems treat literature search as a single retrieval step followed by summarization. Real literature research works differently: the investigator's understanding of the question changes as they read, new subquestions appear, and evidence is weighed, not just collected. We present Optimist Deep Research, an open-source agent that runs literature research as an iterative evidence-acquisition process over an explicit, mutable research state. A research question is broken into a tree of subquestions, each served by search intents that are translated into source-specific queries over arXiv, OpenAlex, Crossref, PubMed, Semantic Scholar and the web. Results are merged into a canonical, provenance-preserving document registry through a conservative four-tier deduplication hierarchy. The registry is expanded by citation snowballing until a saturation criterion is met, and then screened, ranked and allocated to subquestions round-robin. Documents are read in parallel into a structured evidence store of claims with support, location, type and strength. A critic reviews the state along eight dimensions and returns research actions rather than a binary verdict: it can add, split, rephrase, deprioritize or close subquestions, so the research plan is an output of the investigation as well as an input. The final report is written section by section from the evidence store, and every citation resolves to a retrieved document. We describe the design, the deterministic machinery that keeps a language-model pipeline auditable, and a case study that read 28 of 237 retrieved documents in about three and a half minutes. We also report weaknesses the case study exposed.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.23262v1' target='_blank'>Expand-and-Prune: Test-Time Candidate-Space Adaptation for End-to-End Autonomous Driving</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Fabian Schmidt, Karol Fedurko, Markus Enzweiler, Abhinav Valada</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-16 10:34:12</h6>
+<p class='card-text'>Candidate-based end-to-end driving planners reason over a finite set of trajectory hypotheses. However, for sparse planners, a limited candidate set may provide insufficient support for scene-relevant maneuvers, while fixed downstream candidate budgets do not account for prediction uncertainty. To address these challenges, we introduce Expand-and-Prune, a test-time framework that jointly adapts candidate support and capacity without updating learned parameters. The framework expands the native candidate set using semantic driving intent and temporally propagated predictions and then uses uncertainty in intermediate trajectory scores to adaptively prune the resulting candidates. Across four heterogeneous candidate-based planners and four benchmarks, Expand-and-Prune consistently improves planning performance. It achieves state-of-the-art results on LangAuto, increasing the Driving Score from 68.2 to 75.9, while providing further improvement on Bench2Drive, Fail2Drive, and NAVSIMv2, with particularly strong improvements in out-of-distribution scenarios. Moreover, in its full instantiation, 72.5% of selected trajectories originate from the newly introduced intent-guided or temporal candidates, confirming that candidate-space expansion provides useful hypotheses beyond those generated natively by the planner. The code is available at https://github.com/iis-esslingen/Expand-and-Prune.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.23253v1' target='_blank'>Critical-state algorithms for lot sizing with all-units discounts and variable inventory bounds</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Kleitos Papadopoulos</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-16 10:26:16</h6>
+<p class='card-text'>We study deterministic single-item lot sizing with all-units quantity discounts, linear holding costs, and time-varying end-of-period inventory bounds. Unit prices may vary arbitrarily over time. For one common positive discount threshold, we give an exact algorithm requiring $O(n^3)$ arithmetic operations and $O(n^2)$ working space, including recovery of an optimal purchase plan. The method combines a critical-state theorem in cumulative-purchase coordinates with two prefix-minimum scans per dynamic-programming layer. The structural argument accommodates downward price discontinuities and distinguishes prescribed from free terminal inventory. With a fixed global set of $m$ positive threshold values, the bounds become $O_m(n^{m+2})$ time and $O_m(n^{m+1})$ space. Period-specific thresholds admit the same exact construction, but its state set can be exponential. For commensurate flow data, an inventory-lattice implementation takes $O(PW)$ time, where $P$ is the total number of price tiers and $W$ is the largest inventory-lattice width. We also derive a conditional optimality certificate from a monotone one-threshold relaxation; this certificate does not imply a near-linear worst-case algorithm for arbitrary prices. Exact-arithmetic implementations are checked against exhaustive inventory dynamic programs and tier-enumeration linear programs. An illustrative timing study identifies settings in which the lattice implementation is preferable.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.23179v1' target='_blank'>An Embedded Industrial Irrigation System with Weather-Integrated Intelligent Scheduling</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Kiarash Zangooei, Arya Masoodpay, Hamid Reza Ghaeini</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-16 09:14:24</h6>
+<p class='card-text'>Efficient irrigation management requires timely responses to soil moisture conditions and anticipated weather changes. This article presents an embedded, weather-based irrigation system that integrates soil moisture monitoring using multiple sensors, edge-based decision-making, automated pump control, and local data management. Four capacitive soil moisture sensors are connected to an STM32F103C8T6 microcontroller for data acquisition, while a BTT Pi V1.2 platform evaluates the sensor data, retrieves short-term weather forecasts, makes irrigation decisions, manages a graphical user interface, and stores operational data locally. Individual sensor readings serve as the basis for zone-level irrigation decisions, while the median of four time-averaged readings supports monitoring and analysis. Forecasted precipitation is taken into account as effective precipitation to reduce the calculated irrigation requirement before the pump is activated. The system was evaluated as part of a one-month cultivation trial with radishes, during which a total of 38,112 data points from measurement cycles were recorded. The median value of normalized soil moisture averaged 47.93\% and remained predominantly within the configured control range. Three irrigation events with a planned total irrigation volume of 26.68 L were recorded. Finally, we demonstrate the technical feasibility of integrating sensors, weather data, local data processing, automated control, and data collection into a scalable platform for precision irrigation.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.23116v1' target='_blank'>Fast BSS Transition for Multi-PSK Community Wi-Fi in MDU Networks: Fragmented RADIUS Key Delivery, Server-Derived PMK-R0/PMK-R1 Distribution through a Cloud Management API, and Lease-Driven Key Revocation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Azif Abdul Salam Kolisam Beevi, Anil Kumar Reddy</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-16 08:25:03</h6>
+<p class='card-text'>Multi-dwelling-unit (MDU) properties increasingly deploy one community-wide SSID on which every unit or resident has its own pre-shared key, mapped to its own VLAN so that each unit is a separate network. Vendors name this capability differently (ePSK, iPSK, MPSK, DPSK, PPSK); we call it multi-PSK (mPSK). When the keys are held in an external RADIUS server or a cloud controller, the access point (AP) must ask the key server to identify a client's key. Enabling IEEE 802.11r Fast BSS Transition with WPA2-PSK (FT-PSK), which large properties need for roaming voice and video, breaks this exchange in three ways. First, the server must identify the key from an FT handshake whose MIC depends on the FT key hierarchy. Second, the RADIUS messages no longer fit: EAPOL-Key message 2 and the key material the AP needs both exceed the 247-octet value capacity of a RADIUS vendor-specific attribute (VSA). Third, the AP a device roams to needs a PMK-R1 for that device, and all key material must disappear when the resident leaves. We present FT-mPSK. The key server identifies the PSK, derives PMK-R0 and PMK-R1, and returns the serving AP's keys in a two-fragment Key-Bundle VSA that the AP reassembles and authenticates before decryption. It then calls one POST API on the cloud management system, which pushes PMK-R0 to the primary AP. On a roam, the target AP obtains PMK-R1 from the primary AP, located by the R0KH-ID in the FT Authentication Request, or from the key server. When the Property Management System reports a move-out or lease end, the key server issues the same POST as a delete keyed by the resident's mPSK username, and every AP purges that username's PSK, PMK, PMK-R0 and PMK-R1. We specify the external-RADIUS and cloud-controller methods, the attribute and fragment formats, the API, algorithms, size budgets, complexity, security properties and the validation plan.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.23112v1' target='_blank'>A REST-based Monte Carlo Simulation and Data Analysis Framework for the N$ν$DEx Experiment</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Siyuan Huang, Tao Li, Hao Qiu, Shaobo Wang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-16 08:21:28</h6>
+<p class='card-text'>The N$ν$DEx experiment is designed to search for neutrinoless double-beta decay ($0νββ$) of $\mathrm{^{82}Se}$ and is planned to be deployed at the China Jinping Underground Laboratory (CJPL). It employs a high-pressure time projection chamber (TPC) filled with $\mathrm{^{82}SeF_6}$ gas and a Topmetal pixelated charge readout system. The high $Q_{ββ}$ value of $\mathrm{^{82}Se}$, together with the track reconstruction capability of a gaseous TPC, provides strong potential for background suppression. In this work, we develop a full simulation and reconstruction framework for the N$ν$DEx experiment based on the REST (Rare Event Searches Toolkit) software framework. To meet the detector-specific requirements of N$ν$DEx, customized simulation processes are implemented to describe the detector geometry, electron drift and diffusion, the Topmetal readout plane, signal formation, and electronics response. These developments enable a complete software description of the detector response from energy deposition to digitized waveforms. A waveform-fitting-based reconstruction method is further applied to the simulated signals to extract the deposited charge and reconstruct the event energy. For simulated signal events, the reconstructed energy resolution reaches a full width at half maximum (FWHM) of less than 1\%, satisfying the design requirement of the experiment. The resulting simulation and reconstruction chain provides a basis for future studies of detector response, background rejection, event classification, and optimization of the N$ν$DEx detector design.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.23098v1' target='_blank'>InstAgent: A Recursively Self-Improving Agent Operating System for Heterogeneous Robot Collaboration</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Haoyang Luo, Junhao Qin, Jingyan Cao, Yi Huang, Guangjie Yang, Xiaoyu Chen, Haotao Lu, Tianxiang Gui, Ye Shi, Jingya Wang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-16 08:10:51</h6>
+<p class='card-text'>Heterogeneous robot teams enable complex, long-horizon tasks by combining complementary sensing, mobility, and manipulation capabilities across multiple embodiments. Yet existing systems struggle to retain execution-time corrections as reusable experience, maintain task-relevant context memory across space and time for reliable handoffs, and explicitly represent the inter-robot dependencies required for structured collaboration. In order to address these challenges, we present InstAgent, a recursively self-improving (RSI) Agent Operating System for heterogeneous robot collaboration. InstAgent organizes team behaviors as agentic behavior trees (BTs) that explicitly model capability assignment, inter-robot dependencies and handoff checks. The RSI mechanism updates these collaboration programs from execution feedback and preserves successful revisions for reuse in future tasks, while shared multimodal spatio-temporal memory provides context for planning and handoff validation. Experiments on 20 real-world multi-robot tasks with three high-level models show consistent gains in task success, first-attempt completion, and execution efficiency.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.23068v1' target='_blank'>Foundation Models for Autonomous Space Robotics: Architectures, Physical Adaptation, and Validation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Zizhe Wang, Jia Deng, Xin Lu, Zehao Jia, Yi Huang, Yao Zhu, Jianing Li</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-16 07:42:06</h6>
+<p class='card-text'>Space robots must interpret tasks and act despite unfamiliar dynamics, difficult sensing conditions, and limited opportunities for human intervention. Foundation models offer reusable perceptual and behavioral knowledge, but their value depends on how that knowledge reaches physical execution. This critical review follows space-specific requirements through perception, prediction, planning, and action to deployment and validation, emphasizing orbital manipulation and proximity operations. Terrestrial comparisons establish benefits of particular pretraining stages and model interfaces; their transfer to space dynamics and constrained onboard operation remains insufficiently tested. Event cameras offer timely motion observations across strong illumination contrasts, while spiking neural networks provide possible routes to sparse local computation. We examine how sensor degradation, state estimation and computing choices affect feedback and recovery. Higher action throughput need not yield fresher feedback; lower processor power can also coexist with higher energy per inference. We organize validation as an iterative sim-to-ground-to-space pathway, connecting physical tests with telemetry-based diagnosis and closed-loop revalidation. A satellite-capture example links observations to approach, contact and recovery, while a corresponding protocol separates generalization from adaptation with limited target-domain interaction. These comparisons identify what models already contribute and the physical evidence needed to support autonomous space operation.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.23012v1' target='_blank'>Adaptation of Computer Use Agents to New Software with User Manuals</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Chulhoon Yoon, Kyungri Park, Jinyeong Yun, Daeyun Jeong, Sukmin Yun, Woohwan Jung</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-16 06:44:56</h6>
+<p class='card-text'>Recent advances in multimodal foundation models have significantly improved the ability to operate real-world software through graphical user interfaces (GUIs) using visual observations and natural language instructions. However, maintaining strong performance on unseen applications remains challenging, as practical tasks often require long-horizon procedural knowledge and application-specific operation patterns. In addition, constructing executable tasks and collecting corresponding trajectories for training still heavily rely on human-annotated data, incurring substantial cost. In this paper, we propose MAGE (Manual-augmented computer use AGent Execution and learning), a framework that leverages user manuals as a scalable source of procedural knowledge to improve both inference and training. During execution, MAGE retrieves task-relevant manual content and uses a planner to generate explicit procedural guidance for CUAs. To further account for the discrepancies between manuals and actual GUI environments, such as version differences or user settings, MAGE also adapts the agent policy through environment interaction. During training, MAGE converts manuals into executable task-plan pairs and uses the plans to guide environment rollouts toward task-relevant states; the resulting trajectories are then used to optimize the policy without human-authored demonstrations. This unified design enables effective utilization of manuals for both task execution and training, reducing reliance on human-authored training data. Experimental results across six applications demonstrate improvements in task success rates over strong baselines, highlighting the effectiveness of manual-guided planning and policy adaptation in new software environments. We provide the code and reproduction scripts at https://github.com/ku-autoai/MAGE.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.23010v1' target='_blank'>What Makes a Good Symbol for Hybrid Discrete-Continuous Planning?</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yiyuan Pan, Changliu Liu, Jiayuan Mao</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-16 06:42:46</h6>
+<p class='card-text'>The physical world has continuous state and action spaces, yet robot planning often benefits from hybrid discrete-continuous formulations that explicitly expose combinatorial structure, such as contact modes or discrete primitive actions. Existing methods typically rely on human-defined symbol sets or symbols derived from language supervision, without asking what makes a symbol computationally useful. In this paper, we take an inference-algorithm--centric view to define usefulness: a good symbol should expose the discrete commitments that simplify solving the original planning problem. We first introduce the concept of solver-sufficient symbolization by studying finite-horizon piecewise-affine systems, for which solver sufficiency can be precisely characterized, and develop a counterexample-guided algorithm for symbol invention. We then extend this principle to invent symbols for optimization objectives parameterized by general neural networks as energy functions, showing that solver-sufficient symbols can nevertheless be induced from their continuous optimization landscapes. Experiments on simulated and real-robot tasks show that the resulting symbols reduce solving cost while preserving solution quality, while also improving interpretability and steerability. Furthermore, our theoretical and algorithmic insights help explain why certain human-defined symbols are computationally useful.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.22991v1' target='_blank'>A100: A Hybrid Vision Foundation Model for Agricultural Plant Image Analysis</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Mayur Pratim Das, Ajai Dubey, Aksshay Mathew P, Sana Afreen, Rishi Kumar Soni, Deepak Meena, Pratibha Kumari, Mukesh Saini</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-16 06:15:49</h6>
+<p class='card-text'>The use of accurate vision models for crop monitoring, disease diagnosis, and plant phenotyping in agriculture is hindered by the lack of expertly annotated data, especially in developing countries. We propose A100, an agricultural vision foundation model that is pre-trained using self-supervised learning on 3 million unlabeled images from fields covering more than 100 crop species. A100 uses a hybrid CNN-Transformer backbone that fuses MBConv stages for local feature extraction with Transformer stages for global contextual representation. A100 uses pre-training with the integration of DINO self-distillation, iBOT masked patch reconstruction, and KoLeo uniformity regularization, resulting in features that are better than ImageNet-12K supervised representations for agricultural applications without any fine-tuning. By utilizing a frozen backbone, the accuracy for crop classification of A100 is 95.37%, which is +2.56% better than ImageNet-12K, and reduces the leaf count error by 10.4% on the GroMo25 phenotyping benchmark, proving that the same backbone can be used for classification and regression tasks. After full fine-tuning, the performance of A100 is 99.90% on 32-class crop identification and 99.02% on 44-class disease detection. On the difficult PlantDoc dataset, A100 outperforms all baselines, such as CvT-13 (64.89% against 63.56%). Remarkably, A100 obtains 98.01% accuracy on plant classification using just 1% of the labelled data (about 284 images per category), showing great label efficiency for use cases with limited labeling. Under an identical protocol, A100 also outperforms the publicly released agricultural foundation models FoMo4Wheat and LeafVision by more than 14 points at 1% labels. We plan to publicly release our pretrained model to allow agricultural professionals to adapt A100 for various plant analysis applications using limited annotations.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.22982v1' target='_blank'>UniField++: A Unified Agentic Framework with Loop Reasoning for MRI Field-Strength Enhancement</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yiyang Lin, Chenhui Wang, Tianliang Yao, Shuaibo Li, Zijun Sun, Yiming Deng, Yixuan Yuan</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-16 06:08:26</h6>
+<p class='card-text'>MRI field-strength enhancement seeks to combine the accessibility of low-field scanners with the image quality of high-field scanners. Yet, existing methods remain prone to anatomical hallucinations, as uniform processing leaves difficult brain regions insufficiently examined and scarce paired data limit their learning of how tissue contrast and anatomical visibility change across field strengths. To address these challenges, we propose UniField++, a two-agent framework that unifies enhancement tasks across multiple field-strength transitions, including 64mT-to-3T and 3T-to-7T. Unified learning allows both the VLM-based planner and the flow-matching-based enhancer to draw on field-dependent image characteristics observed across tasks, rather than relying on a single transition. Trained with radiologists' annotations of hallucination-prone regions and corresponding correction plans, the planner predicts regional risk and formulates targeted restoration strategies. Guided by these plans, the enhancer performs loop reasoning along the flow-matching trajectory, repeatedly processing high-risk regions for additional refinement. Together, cross-transition learning and risk-guided refinement support anatomically faithful enhancement across field strengths. Across the evaluated tasks, UniField++ improves PSNR by an average of 2.74 dB and SSIM by 14.05 percentage points over comparison methods, with corresponding gains of 3.97 dB and 13.92 percentage points over the ablation baseline. It also maintains enhancement quality on an external cohort with an unseen field strength and improves downstream whole-brain segmentation Macro Dice by an average of 0.1457 over the original low-field images. Code is available at https://github.com/CUHK-AIM-Group/UniField_plusplus.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.22946v1' target='_blank'>$N$-body simulations of the open cluster M67 -- I: global cluster properties</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jasmine S. M. Anderson-Baldwin, Jarrod R. Hurley</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-16 05:14:14</h6>
+<p class='card-text'>The most recent Gaia data releases have seen the construction of many open cluster catalogues containing thousands of open clusters. Simulations of these clusters are needed in order to interpret observations, both existing and upcoming. M67 is an ideal open cluster to calibrate these simulations due to its advanced age and large, diverse binary populations. Moreover it is one of the most extensively observed open clusters with observations in several wavelengths. We aim to reproduce the global cluster properties of M67 with modern $N$-body simulations, as well as comparing its observed properties in the largest homogeneous open cluster catalogue with other available observations. We carry out several NBODY6++GPU simulations with varying initial conditions, including metallicity, half-mass radius, and the distribution of orbital binary parameters. Our models broadly reproduce the observed global properties of M67, and we are able to recreate the cluster's surface brightness profile, radial mass profile, and colour-magnitude diagram. Our favoured model indicates an initial half-mass radius of around 1.6 pc, although its total observable cluster mass may be too high. Further simulations are planned for a subsequent study, with a focus on recreating the present-day binary populations of M67.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.22812v1' target='_blank'>PASS-VLN: Passability-Aware Local-Command Vision-and-Language Navigation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Cong Zou, Xiangsheng Shi, Xuanhui Wang, Fubin Wang, Guangjun Ge, Chao Wang, Yu Wang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-16 01:41:08</h6>
+<p class='card-text'>Reliable vision-and-language navigation (VLN) requires not only understanding instructions but also determining whether and how a robot can physically execute them. However, existing VLN benchmarks typically assume executable instructions and focus on long-horizon tasks. This leaves body-dependent local execution, including passability and collision-free execution, largely unexamined. Evaluating these factors within long-horizon tasks would entangle local physical execution with task planning and long-term spatial memory, making navigation failures difficult to attribute. We therefore focus on grounding local navigation commands in executable motion under environmental and robot body constraints. We present PASS-VLN, a passability-aware local-command VLN benchmark and model. The benchmark holds the scene, instruction, start pose, and reference route fixed while varying robot body width, requiring target completion when the instructed passage is feasible and stopping before blockage otherwise. Our model encodes body width through obstacle inflation in a depth-derived local bird's-eye view, fuses geometry with visual and linguistic context, and predicts discrete latent action codes for continuous closed-loop execution. Experiments show that PASS-VLN improves collision-free success by approximately 12 percentage points over a strong VLN model fine-tuned on our benchmark, while adapting reach-versus-stop behavior to body constraints and generalizing to unseen body widths. When integrated with a high-level planner, PASS-VLN achieves higher success with fewer local commands, while real-world deployment further demonstrates its effectiveness as a low-level executor. The benchmark and model will be released.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.22765v1' target='_blank'>Pedicel-Targeted Strawberry Harvesting via Imitation Learning on a Low-Cost Teleoperated Robotic Arm</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Nitin Rai, Won Suk Lee, Hongyoung Leon, Heping Zhu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-16 00:11:24</h6>
+<p class='card-text'>Precise pedicel-targeted grasping in strawberry harvesting remains a critical bottleneck due to the pedicel's small diameter (1.3-3 mm), color similarity with surrounding foliage, and precise force control required for clean abscission zone detachment. As a market-grade crop, strawberry aesthetic value makes bruise-free pedicel detachment essential over direct fruit grasping. Classical approaches struggle to unify vision models, motion planning, and contact manipulation into a robust framework, particularly in occluded canopy environments. Therefore, this work presents a visuomotor imitation learning pipeline for pedicel-targeted strawberry harvesting that unifies perception, motion planning, and contact manipulation from collecting human teleoperation demonstrations, training an Action Chunking with Transformers (ACT) policy with a ResNet-50 visual backbone, and deploying the learned policy autonomously on a Jetson AGX Orin edge platform at 15 Hz. The trained policy achieved consistent loss convergence from 2.84 to 0.091 over 100K gradient steps on 130 demonstrations. We have also established a reproducible open-source pipeline with publicly released dataset and model weights for the agricultural robotics community. Full dataset is available at, https://huggingface.co/datasets/nitindominicrai/strawberry_pedicel_grasp_teleoperation and trained policy at, https://huggingface.co/nitindominicrai/act_strawberry_pedicel. To replicate this work, all code, configurations, and deployment instructions are publicly available at, https://github.com/nitin-dominic/autonomous_strawberry_pedicel_harvesting.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.22762v1' target='_blank'>Shape-Aware Neural Time Fields for Rigid-Body Motion and Manipulation Planning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yanming Zhou, Yuchen Liu, Ahmed H. Qureshi</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-16 00:05:16</h6>
+<p class='card-text'>Rigid-body motion planning is fundamental to robotic transport and manipulation, where both object position and orientation determine whether a body can move through cluttered environments. This coupling makes planning chal- lenging because translation and rotation can be constrained very differently by surrounding geometry. We propose Shape- Aware Neural Time Fields, a physics-informed neural motion planning framework that learns a reusable travel-time, or cost- to-go, representation for rigid-body motion while explicitly accounting for these distinct geometric restrictions. The learned field captures local motion difficulty in translation and rotation and is paired with a sampling-based planner that balances progress toward the goal with the cost of reaching nearby poses. We evaluate the framework across 2D and 3D rigid- body planning tasks and non-prehensile manipulation through object pushing in diverse environments. Results show substantial improvements in planning success and inference efficiency over physics-informed neural planning baselines, while remaining competitive with classical sampling-based planners at significantly lower planning times. Ablation studies further validate the contributions of both the learned representation and the proposed planning strategy. Finally, closed-loop pushing experiments under execution deviations and external disturbances demonstrate that fast replanning enables reactive and adaptive task execution.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.22705v1' target='_blank'>Data Provenance Aggregation and Structural Descriptors for Query-Template Identification</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Paulo Pintor, Rogério Costa, José Moreira</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-15 22:20:54</h6>
+<p class='card-text'>Runtime query similarity identification supports several activities, including workload analysis, identifying recurring behaviour, auditing, debugging, and anomaly detection. Existing methods for evaluating query similarity mostly rely on SQL text, execution plans, or result values but do not account for input data or how results are derived during query execution.
+  This paper proposes a novel approach using data provenance for query-template identification. We construct query-level profiles that capture explicit data dependencies, occurrence frequencies, and structural properties by aggregating tuple-level Lineage and Why-provenance across entire query results. We also derive Provenance Structural Descriptors (PSD), which summarise these profiles using a small set of numerical features.
+  We evaluate our proposals using these profiles to identify query templates over \(12{,}500\) distinct query instances generated from parametrised TPC-DS query templates. The experimental evaluation shows that query templates can be identified solely from their provenance footprints, and that accuracy improves as more historical data becomes available. It also shows that PSD achieve high classification accuracy with limited training history and low test-processing cost.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.22686v1' target='_blank'>Multimodal Filesystem Memory For Long-Horizon Embodied Agents</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Chloe Su, Jiahan Li, Zhenting Qi, Chaoran Cheng, Haoyu Chen, Sejoon Jun, Weirui Ye, Yilun Du</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-15 21:56:00</h6>
+<p class='card-text'>Agents operating over long horizons need an effective memory that allows them to reuse their experience throughout long interactions. If the entire history of an interaction is retained, it becomes difficult to find the relevant experience, while compressing it into summaries may result in the loss of visual and spatial details that are required later on. We present \textbf{MFM}, a multimodal filesystem memory architecture that keeps complementary types of agent memory. \textbf{Episodic memory} stores the observations, actions, and outcomes, and \textbf{spatial memory} associates experiences with locations. \textbf{Semantic and procedural memory} build up general knowledge and reusable methods of acting, and \textbf{working memory} holds the current plans. MFM makes use of searchable textual records to connect these different representations to the underlying multimodal episodes. The agents are able to find previous experiences by means of contextual cues and to examine the original observations in order to recover details that are missing from their textual descriptions. Through consolidation, the agents convert experience into higher-level knowledge and procedures while still keeping references to the original episodes. In the case of long-horizon Minecraft and computer-use tasks, MFM leads to improved performance with three base models. With GPT-6-Astra, MFM completes \emph{Mine Diamond from Scratch} and reaches 16 out of 24 milestones on the \emph{Ender Dragon} task, as against 12.7 for the best baseline. On CUABench-KiCad it attains a mean reward of 0.440, as compared to 0.400 for the best baseline and 0.267 in the case of no persistent memory.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js'></script>
+</body>
+</html>
