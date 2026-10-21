@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>planning - 2026-10-21</title>
+<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap' rel='stylesheet'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css'>
+<style>
+body {
+font-family: 'Roboto', sans-serif;
+background-color: #f5f7fa;
+padding: 20px;
+}
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.card-title {
+    font-weight: 700;
+}
+.card:hover {
+    transform: scale(1.02);
+    transition: 0.3s ease-in-out;
+}
+</style>
+</head>
+<body>
+<div class='container'>
+<h1 class='text-center my-4'><i class='fas fa-book'></i>planning - 2026-10-21</h1>
+<div class='row'>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.28626v1' target='_blank'>UniWALM: Unified World Action Language Model for Embodied Robot Control</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Rahul Sajnani, Diego Romeres, Mingyuan Zhang, Kai Gao, Carl Qi, Baichuan Huang, Srinath Sridhar, Dylan Randle, Lillian J. Ratliff, Jose Barreiros, Manikantan Nambi, Jeroen Vanbaar</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-20 17:59:04</h6>
+<p class='card-text'>Motivated by the human ability to integrate experience across language, perception, and action, we introduce UniWALM, a unified world-action-language model that learns video, action, and language in a single shared representation, where each modality is both a conditioning signal and a supervision target. We ask: can jointly generating language enrich this shared representation, improving manipulation and supporting memory-dependent behavior? Unlike prior approaches that attach a reasoning or vision-language model to a video-action backbone and run them as distinct stages, UniWALM unifies all three modalities inside a single mixture-of-transformers backbone whose per-modality diffusion heads co-denoise synchronously, decoding subtask and textual memory in the same pass as action with no separate planning stage; the generated language is re-consumed on the next step, closing a language-as-memory loop without an external planner or memory bank. To keep the action stream reliable under this richer objective, we further introduce Flow Matching with Correction (FMC), a training objective that teaches recovery from perturbed action trajectories at no inference-time cost. UniWALM consistently improves over same-backbone baselines (e.g., FastWAM) on compositional pick-and-place (MolmoSpaces) and across the memory-dependent subset of RMBench, where it reaches 34.5% without any pretrained language or reasoning model and exceeds Mem-0's keyframe-equipped setup (28.5%) using only a single anchor frame. On a real-world Find-the-Item task, generating textual memory lifts success from 11.1% to 61.1%, while state-of-the-art VLAs stay at or below chance (<=33.3%).</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.28623v1' target='_blank'>Planning under Noise with Neural Operators</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Michael Chen, Hong Chul Nam, Xi Deng, Anima Anandkumar</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-20 17:58:30</h6>
+<p class='card-text'>Planning under uncertain control execution noise requires reliable feedback policies across diverse environments. We introduce Planning Under Noise (PUN), a neural operator that learns noise-aware value fields for planning in unseen geometries. Building on an established screened-Poisson formulation of stochastic optimal control, we address two challenges: specifying boundary conditions that support navigation across varying geometries and efficiently computing fields with reliable gradients. Zero-Dirichlet obstacle boundaries terminate sampled paths at walls, weakening the goal signal along long routes and making it harder to estimate reliably. We instead impose reflecting Neumann conditions on obstacles and a Dirichlet condition at the goal, allowing sampled paths to continue exploring free space until they reach the target. To solve the resulting PDE without a configuration-space mesh, we extend a Monte Carlo (MC) solver, Walk on Stars (WoSt), to higher dimensions. However, local MC fluctuations can reverse estimated gradient directions and cause planning failures, making direct planning require costly sampling. PUN amortizes this computation by learning geometry-to-field mappings from noisy, partially converged Monte Carlo labels, avoiding expensive convergence for every training example. At inference, test-time scaling uses bounded local search guided by the predicted global field. We evaluate PUN on planning tasks across dimensions. Across four noise levels, PUN matches or outperforms all compared planners, achieving 95-100% success on the 4D replanning benchmark while maintaining the lowest runtime. At the highest tested noise level in 4D, PUN achieves 10.7-60.6% relative gains in success rate over other methods while running 3.29-32.15 times faster.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.28605v1' target='_blank'>Community Lessons from builders of infrared multi-object spectrographs</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Solange V. Ramirez, Maren Cosens, Nicholas P. Konidaris, Francisco Garzón, Brian McLeod, Suzanne Ramsay, Leon Aslan, Robert Barkhouser, Christoph Birk, Julia Brady, Tyson Hare, Stephen C. Hope, Charlie Hull, Karim Kaismoune, Daniel D. Kelson, Gerrad Killion, Alicia Lanz, Jacob McCloskey, Andrew B. Newman, Gwen C. Rudie, William Schoenell, Patricio Schurter, Stephen A. Smee, Jason E. Williams</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-20 17:49:14</h6>
+<p class='card-text'>We present a summary of lessons learned from our community on the design and construction of infrared multi-object spectrographs. As members of the Magellan Infrared Multi-Object Spectrograph (MIRMOS) development team, we were motivated to learn about the most common troubles faced by our colleagues and incorporate measures in our design and assembly plan to address known issues. The lessons are compiled as a result of interviews we carried out with members of the instrument development teams for several multi-object infrared spectrographs. We found considerable overlap in the lessons learned for building this type of instrument; many of which relate to the cryogenic operation of the instruments. In this paper, we will present the compilation of general and specific lessons which we found relevant for the successful development of MIRMOS or any other future cryogenic instruments.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.28584v1' target='_blank'>Beyond the Sequentiality Bottleneck: A Hybrid Diffusion-Autoregressive Framework for Efficient Multimodal Reasoning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Wei Cai, Jian Zhao, Yuchen Yuan, Xuelong Li</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-20 17:39:41</h6>
+<p class='card-text'>Autoregressive models (ARMs) face a "Sequentiality Bottleneck" in reasoning, while diffusion language models (DLMs) offer parallelism but lack semantic coherence. To addresses both limitations, we propose Collaborative Reasoning Asymmetric Learning (CoRAL), a hybrid framework via an Asymmetric Planner-Executor (APE) architecture: a DLM Planner generates K diverse reasoning trajectories in parallel, while a large ARM Executor selects the optimal plan and synthesizes the final answer. To train the Planner effectively, we introduce Reward-Guided Denoising for CoT (RDC), which integrates outcome-based rewards into the diffusion process to steer it toward goal-directed reasoning. Experiments on vision-language benchmarks show that CoRAL significantly outperforms prior diffusion-based methods and achieves competitive performance against strong ARMs, achieving both superior efficiency and quality.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.28566v1' target='_blank'>MAPLE: Mondrian-Anchored Prior for Learning-free Indoor Exploration</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Kelvin Aladum, Nisar Ahmed</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-20 17:25:49</h6>
+<p class='card-text'>Robots exploring unknown indoor environments must decide where to move while much of the environment remains unseen. Predicting the occupancy of unseen space beyond the current sensor range can improve these decisions, but recent approaches commonly rely on learned models that require offline training and repeated inference during exploration. We introduce the Mondrian-Anchored Prior for Learning-free Indoor Exploration (MAPLE), a training-free predictive approach that adapts the Mondrian process into an online generative prior conditioned on observed geometric cues in the current partial map. MAPLE generates multiple plausible map hypotheses and evaluates visibility separately within each to estimate frontier gain, preserving differences in predicted visibility across hypotheses. Across KTH floor-plans and real-SLAM environments at multiple sensor ranges, MAPLE consistently improves over non-predictive exploration and remains competitive with learned predictive approaches. Its lightweight procedural construction enables predictive exploration with limited computational resources. Experimental results further show that more accurate map prediction does not necessarily produce better exploration, highlighting the importance of how predictions are represented and used in exploration decisions.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.28543v1' target='_blank'>Binary Discrete Diffusion: Candidate-Set Diffusion for Logic and Planning Tasks</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Rodrigo Casado Noguerales, Dimitri von Rütte, Bernhard Schölkopf, Thomas Hofmann, Aran Raoufi</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-20 17:11:48</h6>
+<p class='card-text'>Discrete diffusion models iteratively denoise a noisy sequence of categorical data such as text, enabling any-order generation with self-correction and in-filling capabilities. This makes them promising candidates for reasoning, planning, and constrained-generation tasks like coding and math. Yet masked and uniform diffusion erase a token's identity in a single corruption event, so their noisy states cannot explicitly represent partially resolved uncertainty in which several alternatives remain plausible. We close this gap with Binary Discrete Diffusion, a family of continuous-time discrete-diffusion processes whose noisy state is a set of candidate tokens per position, represented as a binary membership vector. Binary diffusion changes candidate sets through additions and removals, allowing information to be lost and recovered gradually while the diffusion state itself represents partial uncertainty. On Sudoku-Extreme, Boxoban, and graph coloring, the symmetric formulation of binary diffusion consistently outperforms strong, well-tuned masked and uniform baselines under matched architectures and controlled training, sampling, and tuning budgets, with its largest gains on the hardest instances, while remaining competitive on language modeling (Text8, TinyStories, OpenWebText). These results support candidate sets as an effective intermediate representation for iterative reasoning and show that the corruption kernel can materially change the computation learned by the reverse model.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.28483v1' target='_blank'>Exploring Temporal Context-Aware Physical Grounding in Latent World Models</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yilei Man, Yang Chen, Jingcai Guo</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-20 16:30:27</h6>
+<p class='card-text'>Learning latent dynamics is fundamental to building action-conditioned world models for planning. Among existing families, Joint Embedding Predictive Architectures (JEPAs) offer a natural framework by modeling transitions directly in latent space rather than at the pixel level. However, two issues remain in JEPA-based world models: (i) physical grounding lacks explicit aggregation of temporal context and (ii) action planning always overly relies on generic sampling distributions. To this end, we propose $\mathcal{G}$-JEPA, which incorporates temporal context into physical grounding for latent world models and couples the learned models with prior-guided action planning. Specifically, during learning, we incorporate a shared causal temporal module that aggregates temporal context within observation and prediction sequences under physical state supervision, grounding both in task-relevant physical states. When planning, we further introduce action inference through stepwise conditioning of a generative action distribution on the current and goal latent representations together with their evolving discrepancy, yielding anchored proposals that guide model-based online refinement. Together, physical state supervision guides temporal representation learning, while the action prior guides search through the learned world model. Experiments demonstrate improved planning performance on manipulation tasks, including tasks with increasing temporal separation between initial and goal observations. Code is publicly available at https://github.com/myl11045/G-JEPA.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.28482v1' target='_blank'>The "Rubin 2036: Opportunities for Discovery" Workshop: A Community Roadmap for the Future of the Vera C. Rubin Observatory After the LSST</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Andrés Alejandro Plazas Malagón, Steve Allen, Shreya Anand, Muhammad Awais, Simon Birrer, Lindsey Bleem, Robert Blum, Adam S. Bolton, Rosaria Bonito, Alex Broughton, Jeffrey L. Carlin, Francisco Castander, Rebecca C. Chen, Anirudh Chiti, Lyla Choi, Chuck Claver, Suber Corley, John Franklin Crenshaw, Arjun Dey, Seth Digel, Holger Drass, Alex Drlica-Wagner, Haruki Ebina, Lukas Eisert, Anthony Englert, Kevin Fanning, Josh Frieman, Shenming Fu, Nandini Hazra, Carrie E. Holt, Minhee Hyun, Hafiz Inam Ullah, Saurabh Jha, J. Bryce Kalmbach, Yijung Kang, Kshitija Kelkar, Sthabile Kolwa, Andjelka Kovačević, Kenneth W. Lin, Meng-Xiang Lin, Becky Long, Sean MacBride, Alex I. Malz, Steve Margheim, Nigel J. Mason, Guillem Megias Homar, Simona Mei, Hironao Miyatake, Maia Moore, Justin Myles, Jeffrey A. Newman, Anh Nguyen, Yasna Ordenes-Briceño, Antonella Palmese, Swayamtrupta Panda, Claire Poppett, Francisco Pozo Nuñez, Anand Raichoor, Andrew Rasmussen, Maya Redden, Steve Ritz, Aaron Roodman, Leonid Sajkov, Ben Sherwin, Brian Stalder, Chris Stubbs, John Suárez-Pérez, Sandrine Thomas, Chun-Hao To, Alessandro S. Tramuto, Yousuke Utsumi, Laura Venuti, Hai-Feng Wang, Risa Wechsler, Christina C. Williams, W. Michael Wood-Vasey, Prince Yadav, Masaya Yamamoto</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-20 16:30:19</h6>
+<p class='card-text'>The NSF-DOE Vera C. Rubin Observatory will complete its ten-year Legacy Survey of Space and Time (LSST) in the mid-2030s. Its 8.4 m aperture and 9.6 square degree field of view give it an étendue unmatched by any facility planned for that era. The Rubin 2036: Opportunities for Discovery workshop (KIPAC/SLAC, 3-5 August 2026) brought together approximately 100 participants to discuss Rubin's future after LSST. This paper summarizes the workshop's structure and discussions across five working groups. The continued-surveying group explored a machine-learning foundation model pretrained on Rubin imaging for detection, deblending, and classification. The cadence group considered allocating post-LSST observing time and strategies for transiting exoplanets, Type Ia supernova cosmology, time-delay cosmography, and second-scale transients. The filter group explored broadband, medium-band, and narrowband filters for photometric redshifts, high-redshift large-scale structure, AGN reverberation mapping, Galactic archaeology, and emission-line imaging. The multi-messenger group explored follow-up of next-generation gravitational-wave and neutrino sources, including standard sirens, kilonovae, and Galactic supernovae. The technology group organized options by cost and lead time, including fast readout, new filters, a faster shutter, and summit edge computing. Cross-cutting topics included AI/ML, Chilean and Latin-American co-leadership, satellite megaconstellations, and weather and climate trends at Cerro Pachón. White papers and workshop talks are available through https://zenodo.org/communities/rubin2036workshop/ and https://rubin-observatory.github.io/Rubin-Beyond-LSST/pages/Rubin2036proceedings/.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.28467v1' target='_blank'>Beyond Trajectory Statistics: Community-Consistent Human Mobility Generation via Evolving User-Location Graphs</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Bo Liu, Tong Li, Jiapeng Zhang, Zhu Xiao, Zhuo Tang, Kenli Li</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-20 16:21:17</h6>
+<p class='card-text'>Human mobility data are fundamental to Web-based location services and broader urban applications, and mobility generation provides synthetic trajectories when real data are costly or inaccessible. Although recent mobility generators have incorporated collective mobility patterns, they primarily focus on individual trajectories and aggregate population dynamics, leaving evolving community structures formed by user-location interactions insufficiently modeled. In this paper, we study community-consistent human mobility generation. To this end, we formulate mobility generation as the generation of dynamic user-location graphs to model community structures and propose MOTION, a Multi-agent framework for cOmmuniTy-consIstent human mObility geNeration. MOTION consists of user agents, location agents, and a global manager agent. MOTION first detects coherent communities from historical mobility using the Leiden algorithm and extracts community-conditioned interaction priors to guide the generation process. Guided by these priors, the user agents plan mobility, search destination candidates, and infer user movements from the individual view. In parallel, selectively activated location agents infer likely user arrivals from the community view. The manager coordinates both views, diagnoses interactions causing deviations, and attributes targeted reflection signals to revise user decisions, location attraction, and source-user selection. Experiments on two real-world datasets show that MOTION outperforms baselines by at least 4.05% across reported metrics of individual trajectories, population and flow distributions, and community and graph structures. Further analyses confirm its robustness, privacy preservation, and downstream utility. The code is available at https://anonymous.4open.science/r/MOTION-04C4.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.28410v1' target='_blank'>A Multi-Agent Framework for Automated Machine Learning with Evidence-based Planning for Medical Image Analysis</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yiqing Shen, Mathias Unberath</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-20 15:49:38</h6>
+<p class='card-text'>Deep learning has become the default tool for medical image analysis, driven by the open-source movement. However, achieving the best performance on a given task remains difficult, with architecture selection and hyperparameter optimization (HPO) still considered "more of an art than a science". Automated machine learning (AutoML) automates parts of model training, yet helps little in medical imaging: general-purpose approaches lack medical architectures and preprocessing, and medical-focused ones demand engineering expertise and remain confined to narrow tasks such as 3D segmentation. We introduce MedicalMLOmni, a multi-agent AutoML framework that automates model training for diverse single- and multi-modal medical tasks through a natural language interface. Specifically, MedicalMLOmni performs evidence-based planning by retrieving published results to guide model selection and configuration, and employs parallel HPO where multiple agents explore adjustment strategies concurrently. MedicalMLOmni achieves the best score on 19 of 20 benchmarks; PMC-VQA is the exception, where a vision-language model with broader pre-training leads. Backbone-matched controls attribute the gains to the framework, not the backbone. By removing coding requirements, MedicalMLOmni lowers the barrier for domain experts with rich datasets but limited engineering expertise.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.28362v1' target='_blank'>SPAR: Search-trained Push Action Ranker for Efficient Navigation Among Movable Obstacles</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Dhruv Metha Ramesh, Tri-An Nguyen, Junshan Huang, Jingjin Yu, Kostas E. Bekris, Abdeslam Boularias</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-20 15:25:57</h6>
+<p class='card-text'>Navigation Among Movable Obstacles (NAMO) requires a robot to rearrange objects that block access to its goal. For a pushing robot, progress may depend on a setup push that enables a later opening without itself clearing a passage. The number of candidate sequences can grow exponentially with sequence length, making physics-based search costly. We introduce the Search-trained Push Action Ranker (SPAR), which learns to prioritize push primitives from simulated search outcomes. Searches over sequences of up to two pushes per object provide supervision that distinguishes immediate openings from setup pushes. A transformer trained with regression and ranking losses scores primitives using contact tokens conditioned on scene geometry and reachability regions. The same model guides simulator evaluations in SPAR Search and selects actions for direct execution in SPAR Policy. Both modes solve successive keyhole problems that open access to neighboring free-space regions within a NAMO planner. Across successful runs on $300$ simulated two-push keyhole problems, SPAR Search reduces median simulator calls by $7.0\times$, leading to a $3.8\times$ reduction in planning time relative to Random Search. Without retraining, the same ranker guides search on $600$ keyhole problems which have no solution within two pushes. At a depth limit of five pushes, SPAR Search achieves $50.7\%$ success within $100$ simulator calls, compared with $20.2\%$ for Random Search. These gains carry over to NAMO planning: on hard simulated scenes, SPAR Search achieves $47\%$ success within $100$ simulator calls, compared with $21\%$ for Random Search. In real-robot experiments, SPAR Policy succeeds in $37/40$ trials without a physics-based digital twin, compared with $33/40$ for SPAR Search and $27/40$ for Random Search.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.28360v1' target='_blank'>Confessions of a Masked MDP</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Sebastian Reboul, Lorenzo Croissant, Hélène Halconruy</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-20 15:22:31</h6>
+<p class='card-text'>In reinforcement learning, one presumes the action set to be known ahead of time, and, thus, one must know if any state-action pairs are not permissible
+  ahead of computations. In some applications, determining this action mask is the main computational bottleneck. Isolating this problem to highlight its core
+  properties, we study how to combine the search for an optimal policy with the learning of the mask itself, under a linear MDP model in which each attempted
+  action reveals the exact value of a linear score determining its validity. In this framework, we first construct an algorithm based on deterministic
+  optimistic optimization and show that it is minimax optimal, which we show is also computationally efficient. However, it is sub-optimal on non-degenerate
+  instances, as we show. We propose an alternative, which is also computationally efficient, which plans its exploration strategy. This algorithm admits a
+  formal interpretation as an analogue of information-directed-sampling for deterministic feedback, which may be of independent interest. Finally, we study an
+  application of this framework to transfer learning, where the invalid action set changes over time.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.28346v1' target='_blank'>Auto-Director: Leveraging Multi-Agent Collaboration for Autonomous Video Editing</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yuxia Chen, Wenbo Zhu, Yangguang Ji, Zhenxiang Jiang, Teng Zhong, Yu Zhang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-20 15:11:55</h6>
+<p class='card-text'>Autonomous video editing from open-world resources remains a challenging problem in multimedia content creation. Retrieval-based methods are constrained by fixed source material and lack creative flexibility, while generative models struggle with long-horizon coherence and often diverge from user intent. Both paradigms fail to replicate the structured, multi-stage reasoning that underlies professional post-production. To address these limitations, we present Auto-Director, a tool-augmented multi-agent framework that mirrors professional editorial workflows: a Planning Agent decomposes abstract topics into fact-grounded scripts via retrieval-augmented planning; a Material Agent indexes open-world footage through shot segmentation and visual tagging; an Editor Agent assembles semantically aligned clips with MLLM-driven spatial adaptation; and a Critic Agent governs an iterative Reflect-and-Revise loop that checks scene-level alignment and pacing. To rigorously evaluate this new paradigm, we introduce VEdit-Bench, a benchmark of 100 expert-curated topics with human-annotated Golden Scripts and a five-dimensional metric suite covering Narrative Logic, Factual Accuracy, Semantic Alignment, Compositional Quality, and Stylistic Cohesion. Extensive experiments demonstrate that Auto-Director significantly outperforms baseline methods in both automated metrics and human evaluation, effectively bridging the gap between amateurs and professional-grade video production.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.28342v1' target='_blank'>Quantum Broker: QoS-Aware Distribution of Quantum Computations</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Giuseppe Bisicchia, Alessandro Bocci, Jose Garcia-Alonso, Juan Manuel Murillo, Antonio Brogi</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-20 15:08:06</h6>
+<p class='card-text'>Cloud-accessible quantum computing has made heterogeneous Quantum Processing Units (QPUs) available through provider platforms that differ in qubit technology, calibration state, queueing behavior, and pricing model. This heterogeneity makes execution management a quantum-engineering concern: a quantum circuit may be executable on several backends, but the resulting cost, latency, fidelity, and reproducibility depend on backend selection and on how measurement shots are allocated. This paper presents the Quantum Broker, an open-source and provider-agnostic framework for Quality-of-Service-aware quantum execution management. The framework operationalizes shot-wise distribution by exploiting the statistical independence of quantum measurement shots to dispatch a single circuit across multiple heterogeneous QPUs according to user-defined constraints and optimization objectives. It combines a modular execution architecture, interchangeable backend-profiling strategies, and the Quantum QoS Specification Language (QQSpec), a declarative language for expressing QoS requirements. Dispatch planning is supported by two solver backends: a mixed-integer linear-programming (MILP) solver, and a nonlinear dual-annealing solver. Experiments on benchmark quantum circuits and noisy simulator backends show that the Quantum Broker can produce feasible QoS-aware dispatch plans under heterogeneous backend conditions and can improve QoS satisfaction with respect to single-backend and naive multi-backend baselines. The results also expose a practical trade-off between planning time and dispatch quality, with the nonlinear solver producing higher-quality allocations at increased computational cost. Overall, the Quantum Broker provides an extensible execution-management layer for engineering portable, reproducible, and QoS-aware quantum software over fragmented quantum cloud infrastructures.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.28280v1' target='_blank'>GALA: Geometry-Aware Language Model for Controllable Object Arrangement</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Chucheng Xiang, Runze Wang, Zhi Deng, Ruchao Bao, Yuanwei Zhang, Yuxuan Xie, Hanliu Wang, Liangzhen Fei, Wenzheng Wu, Cheng Wan, Peifeng Li, Zhongyuan Liu, Ligang Liu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-20 14:32:52</h6>
+<p class='card-text'>Reasoning about fine-grained placement constraints, such as support and containment, is essential for realistic 3D scene creation. It remains a significant challenge for existing methods that rely on simplified object representations like oriented bounding box (OBB), which are blind to the detailed geometry. To address this limitation, we introduce GALA, a geometry-aware language model with explicit point cloud perception for controllable object placement. Our model performs autoregressively by predicting the 6D pose of one target object at a time conditioned on the scene context and placement instruction. We utilize a two-stage training strategy: the first stage aligns geometric and textual modalities through pretraining tasks, and the second stage fine-tunes the model for placement. To facilitate this task, we also curate a multi-source scene dataset covering diverse room types and fine-grained furniture arrangements, which will be open-sourced for community benefit. Experiments on our benchmark show our model significantly outperforms baselines without explicit geometric reasoning. We further develop a multi-stage plan-place-verify agent pipeline that uses the model for text-driven scene generation. Project Page: https://xccelephant.github.io/paper/gala/</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.28270v1' target='_blank'>SWatcher+: A Holistic Approach to Deploying Learned Cardinality Estimators in a Dynamic Setting</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yuxi Liu, Vincent Capol, Xiao Hu, Pankaj K. Agarwal, Jun Yang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-20 14:25:41</h6>
+<p class='card-text'>Cardinality estimation (CE) is crucial in database query optimization. Although recent advances have improved accuracy, deploying machine-learned CE models in dynamic databases remains challenging due to data updates and workload shifts. Retraining can be costly, but existing practices offer little guidance on when and how to update models, resulting in simple periodic retaining strategies that are suboptimal. We propose SWatcher+, a framework that adapts learned CE to dynamic workloads by monitoring data updates and query feedback. SWatcher+ selectively monitors high-impact subqueries for which wrong estimates lead to poor plan performance, and it proactively applies corrections to estimates during query optimization. This strategy enables immediate adaption to data and workload shifts without waiting for full model retraining, and carefully balances the cost and benefit of monitoring and adaption versus retraining. Our experiments show that SWatcher+ offers a better trade-off between query performance and overhead compared with existing approaches, making it a more practical solution for deploying learned CE in dynamic settings.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.28259v1' target='_blank'>Large Multimodal Models for Direct Robot Control: GPT-6 as a Beginning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Youwei Zhou, Bohan Hou, Yankai Fu, Yaoxu Lyu, Yifan Ye, Shilin Shan, Chen Guo, Jiaming Liu, Ran He, Caifeng Shan, Shanghang Zhang, Jianfei Yang, Zhihe Lu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-20 14:15:04</h6>
+<p class='card-text'>Recent advances in visuospatial understanding and agentic reasoning enable direct robotic manipulation with general-purpose multimodal models, but their embodied capabilities remain poorly understood. This paper systematically evaluate GPT-6 Astra for closed-loop robotic manipulation using a lightweight agent execution framework. We first probe three fundamental embodied capabilities-depth perception, embodied in-context learning, and tactile understanding-and demonstrate that the model can exploit depth information, acquire simple manipulation strategies from contextual demonstrations, and use tactile feedback to correct its actions. We then evaluate GPT-6 Astra across five established manipulation benchmarks along six capability dimensions. Despite competitive performance on several benchmarks-26.92\% success on RoboDojo and 76.0\% on RoboTwin 2.0-our analysis reveals a pronounced gap between semantic reasoning and physical execution, particularly in consequence-aware action planning, precision, and complex motion coordination. To further examine these limitations, we introduce LIBERO-GeoMotion, a new benchmark of geometry-constrained tasks that require precise pose alignment, coordinated translation and rotation, and anticipation of physical action consequences. GPT-6 Astra achieves only 11.1\% zero-shot success, exposing the difficulty of translating spatial understanding into physically feasible motion. Real-world experiments corroborate these findings: zero-shot execution is feasible for simple tasks, yet persistent deficits remain in motion feasibility, precise control, and physical safety, while substantial inference latency further hinders practical deployment. Overall, our results characterize the emerging embodied capabilities of general-purpose multimodal models and delineate the key challenges toward safe, efficient, and reliable robotic manipulation.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.28203v1' target='_blank'>JAXbounce: A Continuous-Control Pong-Like Benchmark for Active Inference Beyond Low Dimensional Environments</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Chaitanya Kaul, Markus Klar, Sebastian Stein, Fraser C. Paterson, John H. Williamson, Roderick Murray-Smith</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-20 13:43:24</h6>
+<p class='card-text'>We introduce JAXbounce, a continuous control pong-like benchmark designed to evaluate active inference beyond discrete, low dimensional environments. JAXbounce combines continuous states and stochastic dynamics in discrete time with flexible and composable observation models that allow representing the environment as a state vector or a pixel grid, corruptible through the rich family of noise models we provide. It is fully differentiable and parallelisable in JAX. We run over 10,000 agent simulations on our environment comparing a baseline deterministic solution, to a state-based active inference agent with Unscented Kalman Filter perception and expected free energy planning, and a pixel based agent whose measurement model is a pretrained neural network encoder. All agents are evaluated across three scenarios of increasing difficulty with eight different noise conditions. Our experiments characterise how performance of continuous state agents scales with planning, planning horizons, observation modalities and knowledge of the noise process, exhibiting preference-oriented behaviour even in the presence of increasing uncertainty. We release JAXbounce as a reproducible benchmark for continuous control active inference research.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.28184v1' target='_blank'>Perceives but Doesn't Brake: A Perception-Action Binding Gap in Reasoning Driving VLAs</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Matteo Cercola, Katie Z Luo, Simone Formentin, Marco Pavone</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-20 13:21:14</h6>
+<p class='card-text'>Reasoning-augmented vision-language-action (VLA) driving models can perceive and reason about safety-critical hazards yet fail to translate that evidence into safe actions. We characterize this failure as a perception-action binding gap: hazard information is available inside the model but exerts insufficient control over trajectory generation. Using matched simulated counterfactuals and logged driving replay, we show that in-path hazards are actually encoded in the visual representation, but longitudinal plans are dominated by ego-speed history and respond only weakly to hazard proximity or the model's own reasoning trace. Further analysis shows that the trajectory generator is capable of braking but sometimes fails to do so due to the perception-action binding gap. Without retraining or modifying any weights, we inject a hazard-conditioned energy into the frozen flow-matching sampler of Alpamayo-1.5, restoring the missing coupling at generation time. With exact obstacle geometry, guidance cuts footprint intrusion from 58.1% to 14.5% and recovers safe braking whenever sufficient stopping distance remains, eliminating collisions entirely in our braking-relevant closed-loop battery. It also reverses the diagnosed dependence of the plan, from tracking ego speed to responding to obstacle range. These results separate hazard perception from hazard control in driving VLAs, show that unsafe behavior can arise even when the model has both the evidence and the ability to act on it, and propose a simple fix for bridging this binding gap.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.28178v1' target='_blank'>Coincidence-Maximizing Customer Clustering Using Smart Meter Data</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Ramiro H. Gálvez, Gabriel Martos Venturini, Iván Mondrzak</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-20 13:17:30</h6>
+<p class='card-text'>Electricity distribution planning depends on peak-demand coincidence within customer groups, yet similarity-based clustering of smart-meter data does not optimize it directly. We formulate customer grouping to maximize the average of group coincidence factors, weighted by each group's daily share of summed individual peak demand. We prove that jointly optimizing memberships and group peak times is strongly NP-hard even for two groups. We therefore develop a fixed-peak refinement procedure applicable to any feasible partition. It alternates between identifying group peak times and exactly reassigning customers under minimum group-size constraints. Each polynomial-time reassignment maximizes a lower bound tight at the current partition, so accepted updates strictly improve weighted coincidence. We initialize refinement by clustering individual peak-time distributions and evaluate the method on four public smart-meter panels (27,654 customers) using chronological holdouts and 200 paired replicates with complete refitting. Refinement consistently improves weighted coincidence during fitting and reduces sensitivity to initialization. On held-out days, the method outperforms random grouping and five standalone benchmarks, with mean paired gains of 1.08-3.48 percentage points over the strongest benchmark. Requiring nearly equal group sizes lowers test weighted coincidence only modestly. The groups retain recognizable peak-time patterns over time, suggesting applications in peak-aware customer aggregation.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.28167v1' target='_blank'>From Market Signals to Maintenance Decisions: Grid-Informed Maintenance Optimization in Offshore Wind Farms</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Keyi Wang, Robert Mieth, Ahmed Aziz Ezzat</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-20 13:09:32</h6>
+<p class='card-text'>The reliable and cost-effective integration of large-scale offshore wind farms into power systems is largely influenced by maintenance operations. To date, power producers primarily rely on farm-level information (e.g., health signals, power generation, weather conditions) for maintenance planning of wind turbine fleets. We propose to consider additional grid-level information in maintenance operations, such as generation curtailment and market pricing. Periods of high generation curtailment or negative electricity pricing can be viewed as opportunities for preventive maintenance, since assets are fully or partially shut down due to grid-imposed constraints. We first analytically establish that access to market information has non-negative economic value for maintenance scheduling under a stylized setting, providing a theoretical foundation for treating market and grid information as a maintenance opportunity. We then formulate a grid-informed opportunistic maintenance scheduling model as a receding-horizon mixed integer linear program that jointly leverages both farm- and grid-level signals under realistic conditions to determine a maintenance plan for offshore wind turbines. Considering a 600-MW offshore wind farm in the United States, our proposed method reduces annual maintenance costs by up to 10%, while enhancing asset availability and resource utilization, relative to advanced maintenance models that solely rely on farm-level information.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.28166v1' target='_blank'>Reasoning as a Distribution: Generative Plan Latents for Vision-Language-Action Models</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Matteo Cercola, Katie Z Luo, Milan Ganai, John Alora, Simone Formentin, Marco Pavone</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-20 13:08:37</h6>
+<p class='card-text'>Vision-Language-Action (VLA) policies increasingly reason before acting, but existing reasoning models compress this intermediate decision into a single representation. When several plans are valid, this commitment hides alternatives that could otherwise be selected or revised. We introduce the Generative Plan Latent (GPL), which represents the reasoning state as a low-dimensional conditional distribution over plans, such as which object, grasp, or route to use. This makes the reasoning state addressable: without retraining the VLA, plans can be sampled (coverage), selected on request (steering), and reweighted by deployment outcomes (outcome adaptation). We test all three on SimplerEnv manipulation with $π_0$, and extend the analysis to RoboCasa, LIBERO, and a maze domain. Steering the plan raises the fraction of executions that follow the request from 0.48 to 0.94, while the same guidance on the native action distribution shows no reliable gain. Finally, we show that an explicit plan is most useful when it carries decision information not already determined by the observation.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.28102v1' target='_blank'>Polyscene: Scenario Planning as Diversity Planning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Mustafa F. Abdelwahed, Joan Espasa, Felipe Meneguzzi</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-20 12:17:06</h6>
+<p class='card-text'>Scenario planning is a foresight practice in which analysts construct a small set of plausible futures and prepare an organisation for each. Each scenario is a narrative that must be plausible, internally consistent, relevant and challenging, and the set as a whole must be differentiated. The practice remains manual: a workshop (i.e., a facilitated meeting in which a small group of experts writes the narratives) considers only the factors it has time for, carries the biases of the experts who run it, and cannot be redone whenever conditions change. In this paper, we automate scenario planning by casting it as a diversity planning problem, in which two scenarios differ when they end in different narratives on the analyst's drivers. The result is a set of scenarios, one for each narrative that the topic can reach within a budget. Our implementation, Polyscene, is a generic engine that generates scenarios from a topic. We use geopolitical conflicts and shipping-route disruptions as case studies. For the first, we build the planning problem's initial state from the GDELT Project so it reflects current relationships among the countries involved. Polyscene then generates scenarios showing how relationships among those countries change. With a board of six countries as of 1 January 2021 and a budget of five events, the conflict set puts five of the 15 country pairs at war, and each of the three wars that break out among these countries by 1 January 2026 ends a scenario. For the second, we build the initial state from ship traffic, a supply-pressure index, and the news, and Polyscene generates scenarios showing what a closed or diverted route could do to a manufacturer's parts stock. With four routes per board and the same date and budget, each set includes three outcomes, and the Suez Canal set includes the March 2021 blockage and the December 2023 Red Sea container diversion.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.28074v1' target='_blank'>Slot-JEPA: Object-Structured Prediction Interfaces for Latent World Models</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Peisong Wen, Qianqian Xu, Minye Lei, Siran Dai, Yang Liu, Qingming Huang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-20 11:53:42</h6>
+<p class='card-text'>As a prototypical latent world model, Joint-Embedding Predictive Architectures (JEPAs) provide strong semantic representations. However, dense patch representations expose a redundant interface to downstream predictors, which must implicitly infer spatial organization and temporal correspondence, presenting three challenges. First, object information is distributed across patches, forcing each downstream predictor to redundantly recover object structure that could otherwise be reused across tasks before modeling interactions. Second, the lack of explicit entity correspondence across time makes historical transitions expensive, restricting the predictor's flexibility in utilizing context. Third, without explicit transport structure, existing JEPA models typically use pointwise l1/l2 distances, which are insensitive to spatial displacement when predicted and goal supports are largely disjoint. We propose the Slot-based Joint-Embedding Predictive Architecture (Slot-JEPA), which decomposes dense representations into stable semantic slots and time-varying spatial masks. Pretrained once and frozen downstream, this decomposition exposes a reusable object-structured interface. Building on it, our Transition Memory Predictor (TMP) stores visual transitions as compact masks and retrieves useful context using statistics of corresponding slots. Its two branches separate slot-specific dynamics from shared cross-slot dynamics. We further use Unbalanced Optimal Transport (UOT) to supervise mask prediction and evaluate candidate plans by transporting mass between aligned predicted and goal masks, providing a signal better aligned with spatial progress. Across seven visual-understanding benchmarks, the slot-reconstructed features remain transferable. Slot-JEPA also improves goal-conditioned planning across six planar environments and four robotic arm planning tasks on the REALM-JEPA benchmark.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.28064v1' target='_blank'>Quantifying the Threat: A Bayesian Probabilistic Framework for Heavy Metal Health Risks among Children in the Densu Basin, Ghana</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:T. Ansah-Narh, G. Y. Afrifa, J. B. Tandoh, E. N. N. Nortey, D. Adjei, R. Opoku-Sarkordie, R. Davis</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-20 11:48:56</h6>
+<p class='card-text'>Groundwater in Ghana's Densu River Basin remains a key domestic water source, but multi-metal contamination threatens children's health. Previous deterministic hazard index assessments provide limited treatment of uncertainty, co-exposure, and spatial variability. This study applies a Bayesian probabilistic framework for non-carcinogenic risk assessment using 94 groundwater samples and measurements of Fe, Mn, Ni, Pb, Cd, and As. A Bayesian regression model propagates parameter uncertainty and accounts for contaminant co-occurrence. Adaptive Hamiltonian Monte Carlo is used for posterior inference, while inverse distance weighting generates spatially continuous risk surfaces. Pb, As, and Cd dominate cumulative risk. Posterior predictive results indicate that approximately 31% of sampling sites have a probability greater than 0.5 of exceeding a hazard index (HI) of 1. The risk surface is highly heterogeneous, with a posterior mean of 0.372 and a standard deviation of 0.416. High-risk zones often reflect moderate co-exposure rather than extreme contamination by a single metal. The framework provides uncertainty-aware, spatially explicit information to support groundwater monitoring, risk mitigation, and public health planning in data-limited regions.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.28014v1' target='_blank'>Two-Component Dark Matter and Strongly First-Order Electroweak Phase Transition via a Two-Step Mechanism in the Inert Doublet plus Real Singlet Model</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Deeksha Dattaram Naik, Arnab Chaudhuri</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-20 11:06:00</h6>
+<p class='card-text'>We study a two-component dark matter model in which a real singlet scalar and an inert doublet scalar are simultaneously present alongside the Standard Model, each stabilized by an independent discrete symmetry. The real singlet undergoes a strong first-order transition at high temperature, establishing an intermediate phase with a non-zero singlet vacuum expectation value, which in turn generates the barrier required for the Higgs field to complete a strongly first-order electroweak transition at a lower temperature. This two-step mechanism naturally enforces the condition $v_c/T_c \geq 1$, the sphaleron washout-avoidance criterion necessary for electroweak baryogenesis. The gravitational wave spectrum from both steps is computed; the second step produces a decihertz signal, peaking near $0.08$--$0.34~\mathrm{Hz}$ across the viable parameter space and $0.14$--$0.22~\mathrm{Hz}$ at the benchmark points, that reaches the sensitivity of DECIGO for the strongest transitions and of BBO more widely, while the first remains sub-threshold for all planned detectors. At the coupling values required to drive the phase transition, the singlet is generically underabundant as a thermal relic, so the inert doublet carries the dominant fraction of the observed relic density. Confronting the model with current constraints, we find that the LUX-ZEPLIN 2024 result excludes the entire electroweak-phase-transition-viable parameter space of the singlet sector across the full mass range, even after rescaling by the singlet relic fraction, establishing a complete no-go for the singlet as a viable thermal dark matter candidate in this framework.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.28011v1' target='_blank'>Knowing When to Stop Thinking: A Dissection of Expected Free Energy as a Test-Time Compute Controller for Latent World-Model Planning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Tong Zhang, Zhiyuan Shi, Yun Peng, Tao Xie</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-20 10:56:02</h6>
+<p class='card-text'>A planner using a learned world model can improve its predicted outcome while choosing a worse action. We study when expected free energy (EFE) can help decide how much computation to spend on a plan. An EFE-inspired objective combines goal distance with disagreement among stochastic predictions. We test candidate scoring, stopping, and online predictor updates separately. Stopping when elite cost stalls reduces refinement on tasks whose success plateaus with depth, with mean success close to fixed-depth references. At the larger tested weights, rewarding disagreement lowers success with a frozen model. Penalizing it helps at some task and weight settings but harms others. When training data omit a region needed to reach the goal, online updates recover part of the resulting loss. The tested cost-stall rule can fail when further optimization exploits model errors, because predicted cost keeps falling after task success peaks. Cost progress can guide computation on a plateau, but protecting performance after a peak requires information about the consequences of the chosen actions.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.27917v1' target='_blank'>EventSync: Event-Driven Memory Updates for History-Dependent Manipulation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jingjiao Zhao, Dong Jing, Mingyu Cao, Ruochuan Shi, Xiansheng Chen, Pengwei Wang, Zhiwu Lu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-20 09:29:49</h6>
+<p class='card-text'>History-dependent robotic manipulation requires task context and interaction history, as the current observation alone is insufficient to determine the next action. Hierarchical frameworks use task memory for high-level subgoal reasoning and low-level policies for execution. However, memory updates require accurate completion assessment: similar observations may correspond to different execution phases, and prematurely recording completion can mislead subsequent subgoal reasoning. We present EventSync, a hierarchical framework that coordinates task reasoning and action execution through event-driven memory updates. A vision-language model generates subgoals from task plans and interaction history, while a vision-language-action model executes them. A lightweight Event Monitor combines visual observations with end-effector trajectories to determine whether the current subgoal is complete. The framework records the current subgoal in its completed-subgoal history and triggers subsequent reasoning only after obtaining completion evidence. With visual history in the executor, EventSync achieves 64.5% overall success on RoboMME, exceeding the best baseline reported in the benchmark by 20.0 percentage points. Further analysis shows that this update mechanism helps build a reliable completed-subgoal history. Experiments on four real-robot tasks with different memory requirements validate the framework's effectiveness in real-world robotic manipulation.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.27914v1' target='_blank'>World Models with Configurable Perception</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yijun Shen, Delong Chen, Xianming Hu, Kai Zhang, Pascale Fung</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-20 09:26:32</h6>
+<p class='card-text'>Real-world observations are noisy and often contain excessive task-irrelevant information. Effective world modeling and planning need to abstract observations into world state representations while filtering out irrelevant information. However, encoders in existing world models are typically non-adaptive, leading to state representations that are easily distracted by task-irrelevant information. As a result, the model may not selectively filter observations to cater to different task demands. To address this problem, we introduce ConfigWM, which realizes configurable perception through task-conditioned state extraction. Given a language description of the task at hand, ConfigWM uses it as a configuration signal to steer how visual embeddings are mapped into a task-specific state space, selectively preserving information relevant to the current task while suppressing task-irrelevant variations. Action-conditioned dynamics are then learned in this task-specific state space for planning. We evaluate ConfigWM in environments with increasing levels of distraction. While existing methods exhibit substantial declines in planning success rate as the environments become increasingly noisy, ConfigWM remains comparatively stable and outperforms the strongest competing method by 22.3% on average across diverse environments. Consistent gains in physical-quantity probing (+0.365 Pearson r) and distracted-to-clean retrieval (+75.5%) further indicate that ConfigWM learns states that preserve task-relevant information while remaining robust to distractors, supporting reliable world modeling and planning in noisy worlds. Project Page: https://configwm.github.io</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.27905v1' target='_blank'>High-Precision RCM Motion for Ophthalmic Robotics via Hierarchical QP Control and Authority-Guided Recovery Planning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Huanyu Tian, Adriana Namour, Lingyun Zeng, Zicong Wu, Sebastien Ourselin, Lyndon da Cruz, Christos Bergeles</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-20 09:20:50</h6>
+<p class='card-text'>General-purpose manipulators can position ophthalmic instruments under a software Remote Centre of Motion (RCM). However, at some reachable configurations that are nonsingular for the tip task alone, the RCM and tip-tracking objectives conflict and the servo oscillates. We formalise this failure as a constraint-induced task singularity: the RCM-projected tip Jacobian loses rank while the unprojected tip Jacobian stays well conditioned. Thus, the effective tip authority collapses although the target remains reachable. We present a high-precision RCM servo architecture with built-in singularity recovery: for each commanded target, an authority-guided planner selects a well-conditioned arm configuration that reaches it and plans an RCM-consistent route, executed by a fixed hierarchical-QP controller. On a 200-scenario kinematic benchmark, the complete nominal-and-recovery protocol reaches 128/128 near-singular targets and 71/72 near-joint-limit targets (100% and 99%, respectively), with the software-RCM residual below 0.142 mm. On a physical 6-DOF arm it executes across four RCM entry points, with a worst-case kinematically reconstructed RCM residual of 178 μm and a median tip-regulation error of 32μm, within the 200μm control requirement adopted for the ophthalmic task.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js'></script>
+</body>
+</html>
