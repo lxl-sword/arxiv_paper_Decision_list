@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>planning - 2026-10-27</title>
+<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap' rel='stylesheet'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css'>
+<style>
+body {
+font-family: 'Roboto', sans-serif;
+background-color: #f5f7fa;
+padding: 20px;
+}
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.card-title {
+    font-weight: 700;
+}
+.card:hover {
+    transform: scale(1.02);
+    transition: 0.3s ease-in-out;
+}
+</style>
+</head>
+<body>
+<div class='container'>
+<h1 class='text-center my-4'><i class='fas fa-book'></i>planning - 2026-10-27</h1>
+<div class='row'>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.35813v1' target='_blank'>World Model for Energy Efficiency Maximization in Dynamic Metasurface Antennas</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Abdolrasoul Sakhaei Gharagezlou, Mehdi Monemi, Matti Latva-aho, Mehdi Rasti</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-26 17:42:58</h6>
+<p class='card-text'>Dynamic metasurface antennas (DMAs) have emerged as a promising technology for realizing large-scale antenna arrays in next-generation wireless networks owing to their ability to enable dense and energy-efficient antenna architectures. However, jointly optimizing digital beamforming and DMA element weights under time-varying channel conditions remains challenging due to their coupled effects on the received signal and interference powers. We formulate this problem to maximize time-averaged energy efficiency (EE) under time-varying channel conditions, subject to transmit power constraints, Lorentzian phase limitations, and minimum rate requirements. To enable long-term planning and improve sample efficiency compared with model-free reinforcement learning, we develop a world model framework that learns latent system dynamics from interactions with the environment and jointly optimizes digital beamforming and DMA element weights through imagined trajectories. Furthermore, we incorporate feasibility-preserving action mappings and safety cost signals to ensure constraint satisfaction during policy learning. Simulation results demonstrate that the proposed framework improves the time-averaged EE by approximately 20% compared with the deep Q-network baseline, while achieving higher sample efficiency and more reliable constraint satisfaction.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.35743v1' target='_blank'>SEMA-Auto: Sighted and Efficient Multi-Turn Attack with Autonomy</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Mingqian Feng, Xiaodong Liu, Weiwei Yang, Chenliang Xu, Jialin Song, Qiyao Ma, Chengquan Guo, Carolyn Buractaon, Christopher White, Jianfeng Gao</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-26 16:57:36</h6>
+<p class='card-text'>Existing jailbreak attackers fall into two classes: static planners fix their single- or multi-turn adversarial plans in advance, remaining simple but losing sight of the victim's replies, wasting turns and limiting transferability; interactive generators read each victim reply to generate the next-turn attack but require in-loop evaluators for success signals or hints, incurring substantial costs and inflated performance. Bridging this gap, we propose SEMA-Auto, a sighted and efficient multi-turn attacker with autonomy, interacting with the victim model and terminating the session by itself upon success. To stabilize its behaviors and boost its capabilities, SEMA-Auto is trained in two stages. Synthetic bootstrap tuning installs the notion of attack targets and conforming decisions by fine-tuning the base model with bootstrapped trajectories. Decision-supervised reinforcement learning then optimizes two objectives jointly yet separately, reinforcing the attack with higher jailbreak reward while supervising the decision at each turn against an absolute target. Our method achieves state-of-the-art (SOTA) attack success rates (ASR) across multiple datasets, victims, and judges, outperforming all static and interactive baselines, within almost the fewest turns, demonstrating both effectiveness and efficiency. For example, SEMA-Auto performs a $76.0\%$ ASR@1 within an average of $3.0$ turns against DeepSeek-V4-Flash on AdvBench, while the best static baseline is $54.8\%$ with fixed $7$ turns and the best interactive baseline is $43.8\%$ in $3.7$ turns. Against safety-hardened frontier models, GPT-oss-120B, GPT-5.4, Claude-Haiku-4.5, and GPT-6-Astra, our counter-trained attacker achieves an average $59.6\%$ ASR@1 on HarmBench, $13.8\%$ over prior SOTA. Our code is available at: https://github.com/microsoft/SEMA</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.35690v1' target='_blank'>EvoRouter: Cost-Efficient Multi-Agent Routing via Insight-Guided On-Policy Distillation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yitao Xiao, Xu Zhang, Ye Cheng, Shaoyong Guo, Yan Sun, Ziyue Zhu, Sitao Xie, Guo Tong, Haoran Luo</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-26 16:21:00</h6>
+<p class='card-text'>Serving web queries at scale with multi-agent systems requires jointly configuring large language models, collaboration modes, agent counts, interaction rounds, and skills. However, the resulting configuration space grows combinatorially, while sparse execution rewards provide limited fine-grained supervision for interdependent planning decisions. We propose EvoRouter, a self-evolving multi-agent routing framework driven by insight-guided on-policy distillation. A dedicated expert periodically synthesizes performance-cost feedback from configuration trajectories across tasks into reusable conditional routing insights about capability requirements, returns from resource scaling, and interactions among configuration choices. A privileged teacher combines these evolving insights with current execution feedback to provide dense token-level supervision for the router's own planning trajectories through on-policy distillation. Cost-aware reinforcement learning jointly optimizes task performance and computational cost. Together, these training signals internalize execution insights into the routing policy. The updated policy generates new trajectories that support subsequent insight extraction, forming an execution-driven self-improvement loop. We evaluate EvoRouter on 19 in-domain datasets spanning five domains and two out-of-domain benchmarks. EvoRouter achieves an average in-domain accuracy of 68.69%, outperforming the strongest routing baseline by 7.23 percentage points while reducing inference compute cost by 50.95%. Our code is open-sourced at https://github.com/CenYangtze/EvoRouter.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.35687v1' target='_blank'>TrySee: Modular Perception-Enhanced VLM Grounding for Closed-Loop Robot Task Planning in Specialized Domains</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Elias Hofele, Thomas Trapp, David Timmermann, Tristan Schnell, Georg Heppner, Arne Roennau</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-26 16:20:28</h6>
+<p class='card-text'>Vision Language Models (VLMs) have shown impressive capabilities in high-level reasoning and task planning for robots. However, specialized domains remain a challenge for VLMs' image interpretation and grounding abilities. We introduce TrySee, a modular closed-loop robot task planning pipeline integrating general-purpose VLM reasoning with domain-specific perception and established robotics components. The system consists of an inherently reactive cyclic planning pipeline, augmented with domain-specific modular vision preprocessing, to provide online grounding. Finally, a dynamic preprocessing selection mechanism contributes to the scalability of the pipeline. The system requires neither VLM fine-tuning nor end-to-end demonstrations and adapts through replaceable perception modules and motion planning. The approach is evaluated on planning tasks across 5 widely different domains, including a real-world robot disassembly task. The field tests in a brownfield environment demonstrate the approach's practicality in integrating VLM planning into specialized robotic systems with limited domain-specific training data.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.35678v1' target='_blank'>Estimating Treatment Effects in Complex Disease Dynamics: Immortal Time, Varying Hazards, and Multiple Time Scales</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yujun Xu, Ulrich Mansmann</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-26 16:17:49</h6>
+<p class='card-text'>In observational survival studies, delayed treatment initiation can induce immortal time bias in effect estimation when treatment groups are defined by future uptake. Despite originating from distinct predictive or causal inference paradigms, time-dependent approaches (e.g. the time-dependent Cox model, landmark supermodel, multi-state model, and g-formula) are often treated as interchangeable in applied research when addressing immortal time bias. These models effectively reclassify person-time according to time-varying exposure, yet the interpretation of their target estimands depends on assumptions about the underlying disease process and clinically relevant time scales. We study effect estimation for allogeneic hematopoietic stem cell transplantation under baseline intention-to-transplant strategies in acute myeloid leukemia (i.e. transplantation is planned for a prespecified time, subject to the patient's eligibility), within a multi-state framework allowing time-inhomogeneous Markov, semi-Markov, and state arrival extended semi-Markov dynamics. Using target trial emulation, we benchmark, on the probability scale, estimates derived from Cox-type time-dependent models and the g-formula against the corresponding theoretical values implied by the stochastic data-generating process. Decomposing the partial likelihood score, we show that single-time-scale models can be systematically biased when death intensities from different originating states are not proportional on a common time scale, as can occur when the clock is reset after intermediate events. We quantify these findings in a phase III simulation study and illustrate their implications in an application to data from three acute myeloid leukemia trials.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.35670v1' target='_blank'>Continuous-Time Safe Planning and Control for Agile Quadrupeds</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Gage MacLin, Mason Peterson, Camilla Tabasso, Venanzio Cichella, Joshua Migdal, Tye Brady, Taskin Padir</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-26 16:14:07</h6>
+<p class='card-text'>Agile quadruped navigation in dynamic environments demands trajectories that are both dynamically feasible and provably collision-free. Most real-time planners achieve tractability through a convex reduction that requires simplified kinematic models, discarding motion that the robot can readily execute, and certify safety only at discretization points, leaving open possible inter-sample collisions with moving obstacles. We present a real-time motion planning framework that retains the fully-actuated $SE(2)$ model of a quadruped, with its anisotropic, heading-coupled velocity bounds, and accepts the resulting nonconvexity. By parameterizing trajectories as composite Bernstein polynomials, we exploit the convex hull property to certify collision avoidance and the input bounds over the entirety of each planning horizon. Solved at online replanning rates, the optimization runs in closed loop, commanding body velocities to the locomotion controller. We validate the approach in simulation against ablations and external baselines, and in hardware experiments on a quadruped navigating among unknown moving obstacles, recovering both lateral and heading-coupled motion that simplified models exclude.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.35636v1' target='_blank'>Adapt for Planning, Not just Prediction: Optimistic Test-Time World Model Adaptation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Akshay Mete, Dileep Kalathil, P. R. Kumar</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-26 15:46:17</h6>
+<p class='card-text'>Latent world models are typically pre-trained offline and kept frozen at test time, so planning with them can degrade under distribution shift. Test-time adaptation (TTA) can mitigate this degradation by updating the model during deployment. Unlike pre-training on fixed data, TTA for planning is closed-loop: the planner uses model rollouts to select actions, and the resulting transitions drive the next update. This raises the question: which objective should guide TTA for planning? Under a prediction-only objective, the model is fit only to the outcomes of its own actions, so it can remain wrong about the actions that would reach the goal, and low prediction error need not translate into better planning. Inspired by reward-biased maximum likelihood from adaptive control, we introduce Optimistic Test-Time Adaptation (OpTTA). Its objective has two terms, the prediction loss on observed transitions and the planner's goal-reaching cost on its candidate rollouts, both minimized over the model parameters. The planning term biases adaptation toward models that are optimistic about reaching the goal, without any additional environment interaction. Across visual and environment shifts on manipulation, reaching and navigation tasks, OpTTA raises final planning success over the frozen model by 13.5 percentage points on average, compared with 6.9 for the prediction-only objective (AdaJEPA), when only the predictor is adapted. When the encoder is adapted as well, the gains are 13.5 and 7.5 points. These experiments span three JEPA world models with different encoders and training objectives and, for temporal straightening, both CEM and gradient-based planners. Our results suggest that test-time adaptation of world models for planning benefits from an optimistic, task-aware term in addition to the prediction loss.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.35601v1' target='_blank'>Whole-Route Planning of a Memory Bus Between Two BGAs: An Exact Model of Crossings and Layer Changes, Negotiated to DRC-Clean Copper</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Andrew Haas</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-26 15:24:28</h6>
+<p class='card-text'>Routing the bus between a processor and its DRAM remains largely manual in printed circuit board (PCB) design, and published algorithms optimize proxies such as crossing or layer counts. We present a router that plans every lane of a two-layer BGA-to-BGA bus before any copper is laid, and carries the plan to design-rule-clean copper. Its core is an exact constraint-programming model that chooses, for all lanes at once, where each necessary crossing occurs, in what order -- by a rule over every triple of lanes -- and where each lane changes layer, with via room; for the ends it is given, it proves its plan optimal within the model. The model reads naturally as physics: worldlines, frustrated Ising spins and contact forces. A linear program places the lanes in millimeters; the constraints it must violate return to the model as cuts, and audit findings as negotiated congestion prices, until the plan passes an audit against the production router's rules or lays clean. The escapes are chosen by an estimate of the same objective, and differential pairs carry their polarity, with an automatic via crossover where the ends disagree. On an Allwinner H3 and a Zynq-7020, each to a DDR3 device, the router completes every rung of two ladders, of up to 51 nets on the H3 (its whole bus) and 43 on the Zynq, connected and DRC-clean, never with more vias than the human designer (80 against 88 and 62 against 100 at the top rungs) and always with less copper, where the toolkit's production router leaves nets open on four of the ten rungs and Freerouting completes none. On the Zynq board itself it completes 45 of the bus's nets with 70 vias to the designer's 105. On generated buses of three, four and six routing layers every run completes, and every one with a known optimum attains it.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.35525v1' target='_blank'>Physical assumptions versus nature: the shape of the heliosphere</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Romana Ratkiewicz</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-26 14:42:15</h6>
+<p class='card-text'>Context. The Interstellar Probe study describes a mission concept with a launch window beginning in 2036, aiming to reach several hundred astronomical units beyond the heliopause within a time frame of at least 50 years. One of the fundamental questions related to this mission is where the boundaries of the heliosphere are and how thick they are. To answer it we need to know the shape of the heliosphere. Over the past 60 years numerous models of the heliosphere have been developed. For a long time these models depicted a heliosphere resembling a comet. Since around 2015 models have been presented that differ significantly from the shape of a comet. Aims. The aim of this paper is to emphasize that the obtained image of the heliosphere depends on the model assumptions contained in these articles. Methods. We review numerous publications examining the shape of the heliosphere. All of these articles use a magnetohydrodynamic (MHD) model of the heliosphere together with various assumptions that simplify the physics of the interaction of the solar wind flowing from the Sun with the surrounding interstellar medium. Results. The result of all these studies is a shape of the heliosphere described as either croissant-like or cometary-like, depending on the assumptions made. Conclusions. We are still uncertain which model represents the real heliosphere. Nature requires a theoretical model that is more accurate. In our opinion the interaction of the solar wind with the interstellar medium must be described by the Boltzmann system of equations using artificial intelligence. In the context of the planned space mission this conclusion is crucial.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.35494v1' target='_blank'>Enhancing Deep Reinforcement Learning for Robotic Motion Planning via Task Decomposition</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yuanzhi He, Victor Romero-Cano, Jiayu Xu, Juan David Hernández, Gualtiero Colombo</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-26 14:23:40</h6>
+<p class='card-text'>Training robotic manipulation policies in simulation is widely adopted due to safety and cost efficiency; however, tasks involving obstacles remain under-performing and often converge slowly under Deep Reinforcement Learning (DRL). To address this challenge, we propose a task decomposition framework for DRL that integrates Transfer Learning (TL) with Reward Redesign (RR) to improve learning efficiency and robustness in obstacle environments. The TL strategy selectively transfers only the first-layer critic parameters across structurally related tasks, since that layer captures general state--action representations while deeper layers encode reward- and obstacle-specific value geometry; RR decomposes tasks into staged sub-objectives to provide denser optimization signals. Experiments on the PyBullet Panda platform show consistent gains in obstacle settings. On Push with obstacle, our method achieves $0.83 \pm 0.05$, outperforming the strongest baseline (Truncated Quantile Critics (TQC), $0.77 \pm 0.06$) by approximately $7.8\%$. On Slide with obstacle, performance reaches $0.95 \pm 0.02$, exceeding Soft Actor-Critic (SAC) ($0.84 \pm 0.06$) by about $11\%$ success rates. In addition to higher final performance, forward transfer reduces convergence time by up to $70\%$ in obstacle tasks, and RR shortens sparse-reward Pick-and-Place training from roughly $0.75$M to $0.20$M steps ($\approx73\%$ reduction). The best policy is deployed on a real Franka Emika FR3 robot as a qualitative feasibility demonstration.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.35483v1' target='_blank'>Visible Reasoning: User-Facing Decision Transparency for Generative AI Systems</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Sanjay Krishna Anbalagan, Xinrui Nie, Anughna Kommalapati, Vijay Kumar Kanamarlapudi, Sreekanth Radhakrishnan, Xiaodan Zhao, Umesh Mohan</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-26 14:12:59</h6>
+<p class='card-text'>Across multiple waves of computing, public trust in new technology has followed the emergence of governance mechanisms that made dominant risks legible and manageable. Generative AI shifts this pattern: these systems synthesize across heterogeneous sources, and users increasingly experience them as reasoning systems. The central question changes from "did it perform correctly?" to "can we trust how it arrived at its conclusion?"
+  This paper introduces Filtered Decision Logs (FDLs), a user-facing transparency mechanism that makes decision formation visible without exposing raw chain-of-thought. FDLs pair each response with (i) a concise decision rationale, (ii) influence-ordered supporting data points derived from tool outputs, and (iii) relevance indicators showing which sources most shaped the conclusion. To operationalize evidence selection, we propose a trace-based method that reconstructs observability telemetry into a provenance tree and ranks evidence using four deterministic semantic and structural signals - Final Answer Similarity, Average Relevancy, Persistence, and Structural Proximity - combined via adaptive weighted scoring. We demonstrate FDLs across three domains: career advising (5 tools), investment analysis (4 tools), and travel planning (4 tools). In a formative evaluation with 50 participants (25 students, 25 working professionals in AI development), 92% rated the influence-ranked evidence as helpful for understanding and trusting the system's recommendation. Counterfactual tool-removal experiments confirm that removing the top-ranked source changes the answer more than removing a low-ranked source, validating that the ranking tracks decision dependence. We conclude that evidence-ranked transparency helps users identify misleading signals and missing context, enabling more confident acceptance, correction, or re-run of system decisions.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.35478v1' target='_blank'>Benchmarking quantum-annealing-based approaches for factory layout planning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Xiangqian Wu, Philipp Schworm, Marcel Wagner, Jan C. Aurich</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-26 14:11:10</h6>
+<p class='card-text'>The earlystage of factory layout planning has a direct effect on the operating costs, efficiency, and productivity of manufacturing systems. Conventional automated planning approaches often face a trade-off between solution quality and computational effort. Recent studies have investigated the potential of quantum annealing (QA) for solving factory layout planning problems. However, existing studies have mainly focused on individual QA-based formulations, whereas current hybrid QA solvers support multiple model types that combine QA and classical methods. To explore the potential of QA for factory layout planning, this paper benchmarks four QA based approaches implemented with the corresponding solvers, including an iterative binary quadratic model (IBQM), a hybrid discrete quadratic model (HDQM), a hybrid constrained quadratic model (HCQM), and a hybrid nonlinear model (HNLM). To improve scalability, an iterative decomposition strategy is developed for IBQM, while a candidate selection procedure is introduced for HDQM. The approaches are benchmarked against genetic algorithm, particle swarm optimization, and a hybrid tabu search and simulated annealing approach on 14 layout instances with different layout sizes, geometric complexity, spatial restrictions, and transport route configurations. The comparative analysis considers solution quality, computation time, and scalability. The results show that QA-based approaches achieve competitive solution quality and substantial computational advantages, reducing computation time by up to 94.51% relative to the classical reference methods. Among them, IBQM obtains the best solution quality in 78.6% of the instances, with a maximum improvement of 17.41% associated with an 81.34% reduction in computation time. These findings provide a basis for their further application in industrial layout planning.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.35448v1' target='_blank'>Model-Aware Generation of Safety-Critical Scenes for Robust End-to-End Driving via Distilled Planner Surrogates</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Khaled M. Seyam, Julian Wiederer, Samar Fathalah, Markus Braun, Bin Yang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-26 13:44:59</h6>
+<p class='card-text'>End-to-end driving models perform well on standard benchmarks but collide frequently in safety-critical scenarios. We present a failure-mode analysis on NeuroNCAP which shows that 95.9% of DiffusionDrive's collisions are planning failures despite reliable detection, pinpointing the bottleneck in planning rather than perception. We attribute this to a fundamental data imbalance, as safety-critical interactions are rare in real driving logs, so planners are hardly ever trained on them. We close this gap with a novel model-aware framework that generates safety-critical training scenes against a specific planner. Each planner is attacked at the bird's-eye-view (BEV) level through a differentiable surrogate distilled from its own planning head. This keeps the expensive video renderer out of the attack loop. We extract 50 scenes per planner, each pairing an attack with a safe escape trajectory that serves as the fine-tuning label. A fully automated quality-diversity search generates both the attacks and the escapes, so that their variety is not specified by hand. Only these scenes are rendered to fine-tune the planner, which reduces the computational cost significantly. Fine-tuning on these scenes roughly halves the closed-loop collision rate of two planners on NeuroNCAP (SparseDrive 28.0% to 12.2%, DiffusionDrive 37.5% to 19.2%) while largely preserving normal driving. A cross-planner transfer experiment shows that the gain comes from targeting the specific planner. Each planner improves most on the scenes generated against itself, and DiffusionDrive fine-tuned on SparseDrive's scenes retains only 6.7 of its 18.3-point collision-rate reduction.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.35429v1' target='_blank'>MATE-BT: A Behavior-Tree-Based Framework for Hierarchically Decentralized Mission Autonomy in Heterogeneous Multi-Robot Teams</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Sunbeen Lee, Hoseon Gi, Jik Hur, Inmo Jang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-26 13:34:13</h6>
+<p class='card-text'>Multi-robot teams executing predefined missions must adapt to runtime changes and sustain mission management despite robot failures. This paper proposes MATE-BT (Mission, Allocation, and Task Execution with Behavior Trees), a hierarchically decentralized framework that separates mission execution, allocation, and task execution. An active onboard leader manages mission progression and team-level task assignment, with authority transferable to another leader-capable robot after failure. Interchangeable decentralized methods resolve target assignments, while each robot adapts its local behavior through planning and acting with behavior trees. Webots simulations and real-robot experiments demonstrate mission continuity despite new targets and robot failures, including active-leader failure. In the physical experiments, all MATE-BT computation runs onboard. Hardware-in-the-loop resource measurements further support onboard execution on Jetson Orin Nano and Raspberry Pi 5. By updating only the affected layers without full-plan regeneration, MATE-BT maintained a response time of approximately 130 ms with 30 robots and 120 targets. Comparisons of four target-assignment plugins reveal scenario-dependent trade-offs between mission completion time and total travel distance.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.35385v1' target='_blank'>EmbodiedLab: Benchmarking Embodied Agents That Act to Know</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Hongcheng Gao, Zelin Zheng, Alex Zhou, Jay Zhu, Shijia Ge, Yazhe Wang, Xiping Li, Jianshu Zeng, Di Wu, Xuan Shangguan, Yexing Wan, Lingyu He, Yongli Wang, Xiaohan Yu, Zhiqi Jia, Yue Liu, Bryan Hooi, Yinpeng Dong, Wentao Zhang, Sihang Wu, Xiao He</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-26 13:06:33</h6>
+<p class='card-text'>Embodied agents are expected to accomplish real-world goals by deciding for themselves how and when to interact with their surroundings. For many such goals, changing the physical state of the world is the means rather than the end: the agent changes the state of a system through interaction, observes the feedback, and explores until it either achieves the goal itself (e.g., discovering physical laws) or learns what the goal requires; it acts to know. Manipulation benchmarks stop at acting to change, with the target state given; scientific discovery benchmarks evaluate knowing but replace physical experimentation with symbolic actions or numerical queries. We introduce EmbodiedLab, a benchmark in which a robot must act to know. Quantitative science experiments make this setting controllable: the parameters of the system are resampled for every instance, so the result cannot be known in advance, yet it can be scored exactly. Across 30 experiments in five disciplines on 14 apparatus platforms, the agent receives an objective and the apparatus, chooses its own procedure, and operates a physics-based simulated laboratory, reading the instruments through its cameras. Evaluation checks what the agent came to know, grounded in readings recorded during the episode, as well as the physical state the task requires; every experiment is verified to be solvable. We evaluate six frontier models in their developers' coding agents with native observation and control, with added perception and motion planning, and with manipulation skills distilled from the strongest agents. With native control, even the strongest agent succeeds less than half the time; for every agent, most failures arise in interacting with the apparatus, and manipulation skills help weaker agents more than perception and planning. The benchmark and its evaluation code are available at https://github.com/HexaFuture/EmbodiedLab.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.35339v1' target='_blank'>Targeted Deep Regression - Initial Applications in Whole-Body Water-Fat MRI in UK Biobank</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Filip Marttala, Taro Langner, Johan Öfverstedt, Nouman Ahmad, Håkan Ahlström, Robin Strand, Joel Kullberg</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-26 12:33:57</h6>
+<p class='card-text'>UK Biobank is a British clinical study which, in addition to large amounts of medical data collected, plans to include detailed Magnetic Resonance Imaging (MRI) examina- tions from 100,000 participants. The image data can be analyzed for example by auto- mated analysis with neural networks for image segmentation or classification to expand the collection of image-derived phenotypes for medical research. In this work, we pro- pose, present and evaluate a methodology that uses image-based regression to estimate numerical properties from the collected neck-to-knee water-fat MRI scans. It applies a ResNet50-style network to 2D multi-channel collages that represent targeted and study- specific anatomical sub-regions from the MRI scan. The targeted sub-region sampling is achieved by propagating manually defined subregions from a reference scan to the other >30,000 analyzed scans using image registration. The resulting collages can be compact while retaining high-resolution, for example by providing multiple slices of kidney tissue for a kidney volume regression network. This approach also enables group-wise saliency analysis that highlight image and anatomical regions used by the network for the pre- dictions. The method was applied for the regression endpoints of kidney volume, heart volume, and age. Predictive performance was found between R2 = 0.731-0.984 and the group-wise saliency maps were found to highlight medically relevant regions. We con- clude that the method can be used to standardize and restrict the information presented to a deep regression analysis pipeline, increasing information density and opening up a wide range of future medical inference studies.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.35293v1' target='_blank'>AgenticCity-Bench: Longitudinal Multimodal Observations of Urban Dynamics with Agentic Reasoning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Xiaofei Yu, Kailai Sun, Yanyu Mao, Baoshen Guo, Heye Huang, Yongcai Wang, Baotong Mi, Alok Prakash, Shenhao Wang, Jinhua Zhao</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-26 12:01:17</h6>
+<p class='card-text'>City systems are shaped by interactions among infrastructure, human activity, and environmental conditions. Existing earth observation and urban benchmarks are limited in unified modeling and in capturing their joint dynamics. We introduce AgenticCity-Bench, a longitudinal multimodal benchmark for multi-layer unified state modeling and agentic city task reasoning. The benchmark covers 16 cities in 12 countries across six continents from 2000 to 2025, and includes 18 modalities spanning urban function, activity, and environmental state. It organizes heterogeneous data sources around a common spatial reference and calendar index while preserving spatial and temporal coverage, provenance and tile-level availability. On this foundation, AgenticCity-Bench supports urban cross-modal translation together with diverse agentic city tasks involving forecasting, planning and resource analysis. This study provides a unified benchmark for studying the transition from multimodal urban and earth observation to joint understanding and agentic city decision-making. The dataset is available at https://anonymous.4open.science/r/AgenticCity-Bench.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.35289v1' target='_blank'>Reward-Guided RRT* for Budgeted Task and Motion Planning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Vinícius Araújo de Oliveira, Gabriel Ferreira Mendes Lourenço, Paulo L. J. Drews-Jr, Armando Alves Neto, Douglas G. Macharet</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-26 12:00:13</h6>
+<p class='card-text'>Robotic missions involving spatially distributed tasks often require jointly selecting rewarding locations and planning feasible motions under limited travel budgets. This paper proposes Reward-Guided RRT*, a new sampling-based framework that constructs a budget-feasible mission through a sequence of locally joint task-selection-and-motion-planning stages, evaluated directly in the continuous state space, without requiring a precomputed task-transition graph. The method incrementally builds a mission using reward-guided RRT* searches, while a return-feasibility procedure ensures that each selected task can be visited without violating the mission budget. Experiments with increasing obstacle complexity and number of tasks show solutions comparable to VNS-PRM* while requiring substantially fewer sampled states. We also extend the framework to Dubins steering and evaluate it in CoppeliaSim with a scaled car-like robotic platform, demonstrating its ability to incorporate vehicle kinematic constraints.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.35285v1' target='_blank'>Probing the Collins effect at photon-photon colliders</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Simone Anedda, Carlo Flore, Francesco Murgia, Cristian Pisano</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-26 11:56:53</h6>
+<p class='card-text'>We propose to study the Collins effect in the production of almost back-to-back unpolarized hadrons (mainly charged pions) by looking at their azimuthal distributions around the jet thrust-axis in the process $γγ\to h_1h_2X$. The quasi-real photons in the initial state can be emitted either by two scattering leptons or two charged heavy nuclei in ultra-peripheral collisions. We provide numerical estimates for kinematic configurations in principle accessible at the Future Circular Collider and at the planned experiments on ultra-peripheral collisions at the LHC. We find that the corresponding asymmetries can be sizable, even up to around 10-15%. The proposed measurements would thus shed light on the fragmentation mechanism of quarks into hadrons and, in principle, would allow one to distinguish among different existing models for the Collins functions.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.35252v1' target='_blank'>Labference: Benchmarking the Reasoning-Action Connection in Robotic Laboratories</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Shitong Liu, Jingwei Zhang, Sheng Lian, Xinyu Zhuang, Kaiwen Guo, Quan Liu, Chunhai Zhao, Jiaxin He, Fan Yang, Manli Tao, Tingyu Yuan, Jinqiao Wang, Hongwei Shi, Chaomin Guo, Xiao-jing Liu, Xiangyu Zhu, Zhuang Xiong, Feichan Yang, Chaoyang Zhao, Zhiyong Liu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-26 11:33:55</h6>
+<p class='card-text'>Realizing Embodied AI for Science requires robots to translate experimental goals into reliable physical procedures, reducing hazardous and repetitive human work while generating evidence for scientific discovery. Although language-based planning and learned manipulation provide complementary capabilities, their integration requires robots to adapt subsequent operations to actual execution outcomes. For example, an unsuccessful placement changes what must be done next, even when the experimental goal remains unchanged. Existing benchmarks assess planning, manipulation, and laboratory workflows through task completion and reasoning or execution metrics; however, aggregate performance leaves the connection between outcome-dependent choices and physical execution unresolved. To address this evaluation gap, we introduce Labference, a benchmark for evaluating how observed physical outcomes guide subsequent choices and how those choices translate into robotic laboratory actions. Its evaluation protocol is designed to test outcome-dependent behavioral adaptation through controlled evidence variations, while independently measuring operation selection, physical execution, and task completion. Matched Oracle-assisted continuations from shared checkpoints then assess which forms of support improve subsequent choices and task completion. Initial weighing evaluations reveal target-selection errors in the tested VLA policies despite successful object transfers, whereas GPT-driven control achieves correct selection but encounters execution failures and substantial computation costs. Together, these findings highlight the need to connect task-appropriate reasoning with reliable, timely action. By making this connection measurable and diagnosable, Labference supports targeted improvements toward autonomous experimentation for Embodied AI for Science.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.35104v1' target='_blank'>Space Electric and Magnetic Sensor (SEAMS) Phase I: A Pathfinder Mission for Low-Frequency Radio Astronomy</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Atharva Kulkarni, Samruddhi Rohokale, Niketan Pawar, Raghuttam Hombal, Nikhil Navale, Aditee Joshi, Damayanti Gharpure, Subramaniam Ananthakrishnan, Janardhan Padmanabhan, Abhirup Datta</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-26 09:44:45</h6>
+<p class='card-text'>In this paper, the Space Electric and Magnetic Sensor (SEAMS), a space based mission dedicated to very low frequency (below 16 MHz) observations of the radio sky is proposed. The SEAMS mission is planned in two phases. The first phase is specifically designed for radio frequency interference (RFI) mapping from the low earth orbit (LEO). The low frequency region of the electromagnetic spectrum is filled with a variety of artificial as well as natural RFI. Previous observations have confirmed the effect of this terrestrial interference on astronomical observations. Thus, a map of terrestrial RFI as observed from space would give valuable information to groups working in the low-frequency regime. For the first phase, the payload will be mounted on to the fourth stage of the Indian Space Research Organisation (ISRO)'s third generation Polar Satellite Launch Vehicle (PSLV), which will stay in LEO for several weeks. The payload consists of a pair of orthogonal active monopoles, a simple baseband sampling receiver optimized for recording power spectra from each antenna. The design also aims to detect strong signals of astronomical origin despite RFI. In the second phase, we intend to send a more sophisticated space payload to orbit the moon and subsequently land on its surface.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.35103v1' target='_blank'>The Language of Deformation: Semantic Failure Analysis as a Prerequisite for Dexterous Manipulation of Deformable Objects</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Ignacio Cuiral-Zueco, David Hardman, Michele Pierallini, Erfan Shahriari</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-26 09:43:41</h6>
+<p class='card-text'>Dexterous manipulation of rigid objects has reached a level of maturity where grasp stability, control, and planning strategies are successfully applied in industry and logistics. In contrast, manipulating deformable objects (cables, plastic pieces, cloth) remains far more challenging, as rigid-object methods do not account for their additional complexity. This paper identifies semantic failure analysis as a key step toward mature deformable-object manipulation and supports this claim with proof-of-concept experiments. Unlike rigid-object manipulation, where goals are well-defined in terms of criteria such as force balance and slippage, deformable-object manipulation involves a broader variety of failure modes arising from differences in materials, geometry, and behaviour. Typical failures include buckling, plastic deformation, pressure variations, and tearing. These diverse and often hard-to-detect events require distinct corrective strategies, making semantic failure analysis necessary. We define its key components and challenges and present experimental results supporting its potential as a research direction.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.35062v1' target='_blank'>PushAround: Collaborative Path Clearing via Physics-Informed Hybrid Search</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Zili Tang, Zongyuan Li, Zishao Qiao, Meng Guo</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-26 09:08:16</h6>
+<p class='card-text'>Large vehicles in cluttered environments are often blocked by movable obstacles, motivating mobile robot teams to clear traversable corridors. Navigation Among Movable Obstacles (NAMO) approaches often abstract obstacle displacements while neglecting robot dimensions, obstacle mass, contact geometry and forces, yielding physically infeasible plans. PushAround is a physics-informed hybrid search that couples geometric connectivity reasoning with short-horizon simulation to construct executable clearing plans. Repeated W-clearance connectivity graph (WCCG) queries expose frontier gaps requiring widening and rank them by estimated downstream costs. The search generates direct or recursive pushing candidates, selecting obstacles, directions, contacts and forces, and admits physics-evaluated candidates. Numerical experiments validate WCCG against standard connectivity checks and demonstrate scaling to denser clutter and teams of up to four robots, with robustness to simulated execution-side physical-parameter mismatch.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.35047v1' target='_blank'>Fluid Antennas Enabled UAV Communication Systems: Fundamentals, Challenges, and Future Directions</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Wenchao Liu, Weijie Yuan, Jun Wu, Jinke Ren, Xuhui Zhang, Changsheng You</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-26 08:58:38</h6>
+<p class='card-text'>Low-altitude wireless networks (LAWNs) require uncrewed aerial vehicle (UAV) communication systems to adapt to large-scale propagation changes and fast local channel fluctuations. Fluid antennas (FAs) provide an additional degree of freedom (DoF) by reconfiguring antenna positions within a compact aperture. This article investigates FA-enabled UAV communication systems from the perspectives of fundamentals, design challenges, and future research directions. We first introduce a dual-mobility perspective, in which UAV trajectory planning provides macro-mobility for large-scale air-to-ground geometry adaptation, and FA position reconfiguration provides micro-mobility for fine-grained local channel adaptation. We then identify key design challenges arising from the high computational complexity and information uncertainty in the joint optimization of UAV trajectory, FA positions, and beamforming under mobility, energy, hardware, and security constraints. To address these challenges, we present a hybrid offline-online optimization framework, where prior information such as environment maps, user mobility patterns, and statistical channel state information (CSI) supports long-term planning, while real-time information such as instantaneous CSI and UAV state enables fast online correction. A case study on FA-enabled UAV-assisted vehicular communications demonstrates the effectiveness of the proposed framework. Finally, we discuss future directions of FA-enabled UAV communication in integrated sensing and communication (ISAC), secure communication, mobile edge computing (MEC), and aerial relaying.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.35044v1' target='_blank'>DriveUniTok: A Unified Multimodal Tokenizer for Driving World-Action Models</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jingbo Xu, Hanchao Leng, JiaHui Huang, Hanbing Li, Jingwei Zhao, Kuiyuan Yang, Chen Gao, Guang Chen, Hangjun Ye, Yong Li</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-26 08:55:30</h6>
+<p class='card-text'>World models are emerging as a fundamental component of policy learning for real-world agents, enabling agents to predict future world states and plan actions within a learned representation of the dynamic environment. Existing approaches, however, often model appearance, metric geometry represented by projected LiDAR depth, and ego motion either partially or independently, overlooking the fact that these modalities are different projections of a shared underlying world state. This separation can lead to information loss and cross-modal inconsistency, ultimately limiting downstream performance. Motivated by this unified view of the world, we propose DriveUniTok, a unified multimodal tokenizer for driving world-action models (WAMs) that encodes these modalities in a single decodable continuous latent. We freeze DriveUniTok and adapt a pretrained diffusion model, DriveUniWAM, to predict future unified latents; the tokenizer then decodes them into future appearance, projected LiDAR depth, and ego trajectories. Experiments on NAVSIM demonstrate that our unified design achieves better future prediction and planning performance at lower downstream computational cost than separate-stream alternatives. With reinforcement learning post-training, DriveUniWAM achieves a PDMS of 91.54, reaching state-of-the-art performance among the evaluated WAM-based planners.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.35008v1' target='_blank'>When the Persona Contradicts the Line: Diagnosing Plan-to-Synthesis Failures in Chain-of-Thought TTS</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Joonyong Park, Jerry Li</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-26 08:20:47</h6>
+<p class='card-text'>Chain-of-thought TTS systems rely on language-model planners to translate persona and context into vocal delivery, but it is unclear where this intent is lost when the requested affect conflicts with lexical sentiment. We introduce a bilingual Japanese--English persona--line conflict benchmark in which each item pairs one line with congruent and conflicting personas and pre-declares the expected acoustic direction. We probe this direction in the planner-generated delivery phrase, the planner-written emotion vector, the QwenEmotion-generated vector, and the rendered waveform. Planner outputs are usually direction-correct, while downstream agreement can be substantially lower. Bypassing QwenEmotion provides only modest gains over the full planner-controlled Base. Supervising QwenEmotion raises the direction rate to 75% in Japanese and 84% in English. A learned text-to-latent interface reaches the highest English rate of 89% and the highest Japanese arousal rate of 88%. These results show that learned repair of the plan-to-synthesis interface can recover counter-textual delivery, although its effect differs across languages and acoustic axes.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.34940v1' target='_blank'>GOWC: an open tool for observing-conditions prediction and observation planning, tested against site monitors and an exposure-time calculator</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Ahzam Ahmed</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-26 07:06:53</h6>
+<p class='card-text'>GOWC (Global Observing-conditions Weather Catalogue) is an open web application that takes the user from a target to an exposure plan across 2,642 catalogued observatory sites. It computes seeing, airmass, extinction, precipitable water vapour, sky brightness and signal-to-noise from live Open-Meteo meteorology, including pressure-level profiles, and tests most of these outputs against an independent reference. The photometric SNR calculator, run with GOWC's own catalogue entries, reproduces the ING SIGNAL exposure-time calculator to a median 1.9 per cent over a 16-point magnitude-airmass grid on two instruments. Precipitable water vapour tracks the Paranal LHATPRO radiometer closely ($ρ=+0.95$, 606 nights) with a +43 per cent wet bias. Seeing is computed from the Tatarski $C_n^2$ chain integrated over the pressure levels above the site and calibrated to the ESO MASS free-atmosphere median at Paranal; matching it requires an effective Tatarski coefficient of 5.7, nearly twice the upper end of the published range, which quantifies how much turbulence four coarse pressure levels fail to resolve. Against ~20 months of ESO DIMM data the seeing forecast has a weak but significant night-to-night ranking skill ($ρ=+0.24$, 575 nights, at Paranal; +0.16 at La Silla). Surface wind alone does as well or better (+0.27, +0.41) and persistence does better (+0.42, +0.47), but the free-atmosphere term tracks MASS ($ρ=+0.35$) and carries information that surface wind does not (partial $ρ=+0.28$, +0.40). At held-out sites the absolute seeing scale is no better than a constant. GOWC therefore treats forecast seeing as indicative, shows measured values wherever a public site monitor exists, and states which outputs are measured, calibrated or unvalidated.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.34929v1' target='_blank'>Learning Direct Control from Optimization for Dynamic Target Tracking</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Bing Sun, Yue Lin, Canhui Wen, Xin Chen, Yang Liu, Dong Wang, Huchuan Lu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-26 06:55:53</h6>
+<p class='card-text'>Dynamic target tracking requires a mobile robot to maintain target visibility while navigating obstacles with smooth, feasible controls. Online trajectory optimization explicitly encodes these objectives but requires repeated numerical solving, whereas waypoint-based neural policies separate geometric prediction from control execution. We introduce LECO, a framework that transfers tracking optimization into offline learning of a direct-control policy. LECO predicts control sequences and maps them to trajectories through a differentiable kinematic model, allowing trajectory-level objectives to directly guide control learning. A decaying expert-guidance curriculum initializes effective tracking behavior and progressively shifts learning toward these task objectives. At deployment, a predictive safety lock checks short-horizon obstacle clearance and invokes a classical planning and control fallback when the predicted motion is unsafe or the target prediction is invalid. Across three simulated obstacle densities, LECO reduces root-mean-square linear jerk by 14.1--31.2\% relative to the best competing method for this metric and achieves the highest tracking success rate, with per-cycle computation times of 4.25--5.63\,ms. Experiments on two robot platforms further demonstrate tracking through indoor narrow passages and outdoor forest environments. These results demonstrate that learning direct control from optimization enables smooth and robust dynamic target tracking.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.34868v1' target='_blank'>GADAR: Generalizing Across Domains via Action Ranking for Classical Planning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Rajesh Mangannavar, Pranay Dugar, Prasad Tadepalli</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-26 05:30:31</h6>
+<p class='card-text'>Learned policies for classical planning act without search, but each is tied to the domain it was trained on: network modules per action schema, parameters per predicate, or vocabulary-sized encodings mean a trained policy cannot even be executed on a new domain's predicates and action schemas. We present GADAR (Generalizing Across Domains via Action Ranking), a policy that takes the domain description as input, π(s, G, D), and constructs grounded actions in domains never seen in training, without search. Symbols are described by the roles they play in the domain rather than by their names, in three layers that each extend the previous one: (i) a lifted domain layer embeds D in every state graph through structural signatures; (ii) a binding layer ties each ground action's applicability to the lifted preconditions it instantiates; and (iii) a chain layer states which schema produces what another needs and how far each schema stands from the goal. The same network therefore runs on every domain, seen or unseen. We evaluate zero-shot generalization leave-one-domain-out over eight benchmark domains. A single GADAR policy trained on seven domains solves 58.3% of their test instances, one point below the 59.3% of dedicated single-domain GADAR models, so one policy serves many domains at no cost in coverage; a multi-task control that keeps symbol identity in its weights, while strong on some of the domains it trains on, transfers to none of the held-out ones. Zero-shot, GADAR executes on every held-out domain and exceeds random choice under the same executor on the large test instances of all eight: it solves 22.6% of them on average, against 3.3% for random choice and 0.6% for the same representation without the chain layer, and reaches 68% on held-out Visitall. Zero-shot coverage nonetheless remains well below in-domain coverage on most domains, and we analyze where it is weakest.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.34797v1' target='_blank'>TimeWorld: Towards Action-Conditioned Multimodal World Models for Time Series Forecasting</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Hang Ni, Weijia Zhang, Hao Liu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-26 03:39:34</h6>
+<p class='card-text'>Time series forecasting supports decision-making in web applications such as online retail and network management, where planned actions can reshape future dynamics. World models provide a natural paradigm for predicting such action-dependent changes beyond extrapolating historical patterns. However, existing time series world models (TSWMs) typically rely on fixed, domain-specific covariate schemas that limit flexible intervention specification, while multimodal forecasters treat text primarily as passive predictive context. To investigate these gaps, we introduce TSWM-Bench, a cross-domain benchmark for multimodal TSWMs spanning seven real-world datasets, with textual interventions grounded in recorded action--outcome data. Our evaluation reveals that conventional multimodal forecasters underperform history-only time series foundation models (TSFMs) despite dataset-specific training, whereas simple text-prefix adaptations improve forecasting across all evaluated TSFM backbones. These findings suggest that pretrained TSFMs encode implicit world knowledge of temporal dynamics, offering a strong foundation for action-conditioned modeling beyond conventional multimodal fusion. Building on this insight, we propose TimeWorld, a plug-in framework that adapts pretrained TSFMs through explicit action-response modeling. Specifically, the Prototype-Guided Latent Modulation (PLM) module grounds textual actions in temporal dynamics by composing representative response prototypes to modulate future representations based on the action and historical patterns. The Action Contrastive Learning (ACL) component strengthens action-specific response modeling by contrasting these updates under alternative interventions sharing the same history, distinguishing action types while preserving relative intensity relationships.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js'></script>
+</body>
+</html>
