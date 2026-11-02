@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>planning - 2026-11-02</title>
+<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap' rel='stylesheet'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css'>
+<style>
+body {
+font-family: 'Roboto', sans-serif;
+background-color: #f5f7fa;
+padding: 20px;
+}
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.card-title {
+    font-weight: 700;
+}
+.card:hover {
+    transform: scale(1.02);
+    transition: 0.3s ease-in-out;
+}
+</style>
+</head>
+<body>
+<div class='container'>
+<h1 class='text-center my-4'><i class='fas fa-book'></i>planning - 2026-11-02</h1>
+<div class='row'>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.42146v1' target='_blank'>Hierarchical World Models with Implicit Dynamics</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Gaoyue Zhou, Yvonne Wu, Zichen Jeff Cui, Nicolas Ballas, Mido Assran, Lerrel Pinto, Yann LeCun</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-30 17:59:25</h6>
+<p class='card-text'>Planning with world models enables test-time adaptation for embodied agents, offering superior generalization over direct policy learning. However, long-horizon tasks remain hindered by cumulative errors and search complexity. Existing hierarchical methods often use rigid macro-actions or latent skills, leading to brittle representations and limited fine-grained control. We introduce ID-WM (Implicit Dynamics World Models), a hierarchical world model that decouples state-space reachability from local control. Our framework utilizes a high-level model to sample feasible transitions across the state manifold and a low-level world model as an inverse dynamics solver to ground these transitions into precise actions. This allows the planner to identify reachable subgoals without being constrained by low-level execution details. By prioritizing local physical feasibility over global behavioral patterns, ID-WM synthesizes novel long-horizon plans from short segments, transcending the specific behavioral modes seen during training. We demonstrate its effectiveness across three navigation and manipulation suites, achieving a 38.5% improvement over state-of-the-art policy and diffusion-based planners. Crucially, by leveraging this hierarchical structure to mitigate compounding errors, our approach yields a 135% performance gain over single-level world model MPC, particularly in complex, unseen configurations for long-horizon tasks. Videos can be viewed at https://id-wm.github.io</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.42049v1' target='_blank'>A Hybrid Path Planning Framework for Assistive Wheelchair Navigation in Dynamic Pedestrian Environments</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Damla Leblebicioğlu, Rachel Barume, Taşkın Padır</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-30 17:16:59</h6>
+<p class='card-text'>Autonomous wheelchairs can improve the quality of life for individuals with mobility impairments by providing greater independence. However, reliable navigation especially in human environments is a major challenge due to factors such as dynamic obstacles, unpredictable pedestrian behavior, and the users' need to complete multiple stops along the way before reaching their final destination. This paper presents a hybrid path planning framework for multi-goal navigation in dynamic environments. The framework integrates the Traveling Salesman Problem (TSP) for global task ordering with the Potential Field (PF) method and heuristic local planners such as Rapidly-exploring Random Tree (RRT) and A-star (A*) to achieve collision-free navigation. Within this hybrid framework, TSP determines the visiting order of intermediate stations, PF transfers global path information, and local planners avoid obstacles while guiding the robot to the stations. The local planners generate feasible paths that allow the robot to follow the global trajectory and reroute to avoid static and dynamic obstacles. For this purpose, two algorithms have been developed: (i) TSP-PF-RRT and (ii) TSP-PF-A*. The performance of the proposed algorithms are evaluated using Monte Carlo simulations in crowded and extra-crowded scenarios that contain heterogeneous dynamic and static obstacles. Experimental results demonstrate that the proposed hybrid framework enables efficient multi-goal navigation while maintaining safe operation in dynamic environments with humans, with TSP-PF-RRT achieving fewer or no collisions and shorter travel distances.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.41970v1' target='_blank'>When Does Test-Time Search Help World Action Models? An Empirical Audit of Candidate Selection and Simulator Integrity</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jun Liu, Dajie Sun, Zhenglun Kong, Zhenjiang Fan, Peiyan Dong, Fan Yang, Wenbin Zhangg, Geng Yuan, Xue Lin, Yanzhi Wang, Dong Huang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-30 16:21:07</h6>
+<p class='card-text'>World-action models increasingly apply test-time scaling, spending extra inference computation on candidate selection and adaptive allocation to improve control. Such gains are credible only when candidates carry exploitable signal, nominal compute savings become real speedup, and evaluation stays reliable. We audit all three on Cosmos Policy and RoboCasa with a premise-first, pre-registered methodology. On clean data, a learned value selector is 1.66 pp worse than random; a hindsight oracle gains only 1.40 pp, with an episode-level interval spanning zero; and 82% of states show identical candidate outcomes, leaving little selection headroom. Token pruning cuts per-forward FLOPs by up to 47% but yields at most a measured 1.15$\times$ end-to-end speedup on the deployed path (1.25$\times$ on a decode-excluded path), short of a 1.5$\times$ target, and our adaptive-allocation experiment is inconclusive under a power gate. We further identify and fix a silent rendering corruption whose rate rises sharply along compute-heavy planning paths while leaving the official direct-policy result unaffected, and release a detector, fix, and scripts. These findings show why test-time scaling should be audited as a chain of premises (decision signal, realized efficiency, evaluationintegrity) rather than by success rate alone. Conclusions are scoped to the tested configuration.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.41873v1' target='_blank'>Safe Planning for Black-Box Systems via MAP Inference with Truncated Diffusion Priors and CBF-Informed Gibbs Likelihoods</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Shanghan Liu, Jitao Sun, Junhui Zhang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-30 15:21:46</h6>
+<p class='card-text'>This paper proposes a maximum a posteriori (MAP) inference framework with a truncated diffusion prior for safe planning (TDP-SafeMAP). Under a generalized Bayesian formulation, a criterion based on covariance condition number determines the reverse diffusion truncation timestep, and the clean control distribution predicted at that timestep is approximated by a Gaussian prior encoding the control regularities and uncertainty of expert data. An energy function containing a control barrier function (CBF) constraint violation measure defines a Gibbs task likelihood that incorporates physical constraint information. After fusing the prior and likelihood, the covariance matrix adaptation evolution strategy (CMA-ES), whose core update admits an interpretation as a sampling-based approximation to natural-gradient ascent, approximates the posterior mode using only black-box evaluations. Bézier-curve-based dimensionality reduction and related techniques further improve computational efficiency and task-completion capability. Theoretical analysis establishes an error bound for the approximate MAP solution, an explicit condition for CBF safety preservation, and the equivalence of the MAP problem under prior whitening. Experimental results show that the proposed framework consistently generates safe, smooth, and goal-reaching trajectories, providing an effective and practical statistical inference approach to safe planning for black-box systems.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.41865v1' target='_blank'>Learning to Interact and Direct: Co-Evolving Video Director Agents</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yingzhao Jian, Zhongan Wang, Yuxuan Hou, Hehe Fan</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-30 15:18:07</h6>
+<p class='card-text'>Video director agents orchestrate multistage production to realize users' creative visions. Emerging research on their self-evolution advances screenplay planning effectively. However, the mutual reinforcement between directing and user interaction remains largely overlooked. Improved interaction clarifies user intent and informs workflow refinement, while more reliable execution shifts collaboration from troubleshooting to creative decisions. To this end, we introduce LIT (Learning to Interact and DirecT), a framework comprises a director agent, a simulated user, and a meta engineer. Simulated user assigns creative tasks to probe the director's weaknesses, while the meta engineer uses the task traces to revise the director's interaction and production strategy. Although this approach can address discovered interaction and production issues, it still relies on passive attribution by the meta agent. This limits its ability to adapt to broader user interaction patterns and production techniques. To solve this problem, we equip LIT with a co-evolution paradigm. The meta agent proactively learns external knowledge, thereby improving its ability to discover problems and propose solutions. The meta agent, simulated user, and director together form an evolutionary closed loop, collaboratively enhances the system's directing and interaction capabilities. Across the Test and OOD Test splits, LIT improves production and Interaction scores by 19.1% and 32.0%, respectively, relative to the initial pipeline. Controlled ablations reveal the correlation between improvements in production and interaction, where the co-evolution mechanism further encourage directing skill and interaction mode exploration.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.41861v1' target='_blank'>Layered Reproducibility for High-Performance Computing Applications: The Feel++ and Ktirio Urban Buildings Case Study</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Javier Cladellas, Vincent Chabannes, Christophe Prud'Homme</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-30 15:15:14</h6>
+<p class='card-text'>The High-Performance Computing (HPC) community struggles with reproducibility due to complex software stacks, heterogeneous hardware, and expensive validation cycles. This contribution presents a layered reproducibility strategy in which Feel++ provides a traceable software supply chain and Ktirio Urban Buildings (KUB) builds on it to manage versioned urban-building data, executable simulations, and checksum-verifiable result artifacts. Feel++ treats continuous integration (CI) plans, CMake presets, packaging manifests, public software metadata, operations commands, containers, software bill of materials (SBOM)/provenance metadata, and Feel++ Benchmarking reports for Feel++ and KUB cases as repositoryowned artifacts. KUB applies this foundation to City Energy Model Database (CEMDB) datasets, manifests, Findable, Accessible, Interoperable, and Reusable (FAIR) packaging, and verifiable outputs for computationally expensive simulations. The case study shifts reproducibility from late manual packaging to an artifact chain linking source commits, packages, containers, benchmark configurations, dataset versions, provenance records, and generated results.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.41839v1' target='_blank'>Integrating Low-Thrust Transfer Dynamics into POMDP Planning for On-Orbit Servicing</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Susmitha Patnala, Vincent Mousseau, Adam Abdin</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-30 14:55:29</h6>
+<p class='card-text'>Recent developments in both high-thrust (HT) and low-thrust (LT) propulsion technologies broaden design options for on-orbit servicing (OOS) missions. However, incorporating LT transfers into OOS mission planning requires accounting for the trade-off between prescribed transfer duration and propellant consumption. Multi-servicing, multi-transfer OOS mission planning is inherently sequential and requires adaptive planning tools that account for propulsion-dependent transfer durations and mass-dependent propellant consumption. Thus, transfer dynamics must be integrated into mission planning and scheduling to increase flexibility and adaptability. In addition, the planning is often done with imperfect information about the system's state and stochastic service demands. This paper focuses on modeling orbital transfers, particularly LT transfers, within a Partially Observable Markov Decision Process (POMDP) framework for OOS mission planning. To enable offline policy computation, the transfer model must provide explicit state transitions and rewards for all admissible actions. The state space is therefore augmented with the servicing vehicle's remaining propellant to enable consistent mass updates. HT transfers are modeled using a precomputed transfer matrix that maps each transfer to the time of flight and propellant consumed. LT transfers are represented using an analytical GEO phasing model with prescribed transfer-duration alternatives. For each alternative, the model calculates propellant consumption and maneuver feasibility as functions of the required phase change and the current servicing-vehicle mass.  The proposed modeling approach is evaluated on simplified OOS planning scenarios using circular phasing with HT and LT propulsion. The resulting POMDPs are solved using the Successive Approximations of the Reachable Space under Optimal Policies (SARSOP) algorithm, and the policies obtained under HT and LT are compared. This comparison provides a quantitative assessment of the feasibility and operational impact of LT options, particularly regarding the potential role of advanced electric propulsion in future servicing architectures.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.41834v1' target='_blank'>ObjectGuidedMap: An Object-Aware Model for Robust Bird's Eye View Map Prediction in High-Occlusion Scenarios</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Christian Bohn, Harsh Yadav, Klaus Friedrichs, Hasan Tercan, Tobias Meisen</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-30 14:51:06</h6>
+<p class='card-text'>Accurate BEV map prediction is a critical component of autonomous driving systems, enabling downstream planning and control. Recent approaches such as Mask2Map achieve strong performance by predicting vectorized, instance-level map elements directly from multi-view images. However, existing BEV map prediction models operate largely independently of object-level scene understanding, despite the fact that traffic participants frequently occlude or implicitly encode information about road geometry. In this work, we propose a multitask architecture that jointly predicts BEV maps and 3D objects, explicitly enabling information exchange between the two tasks. Building upon Mask2Map, we introduce an object detection branch and incorporate cross-task feature fusion at both the BEV feature level and the instance-query level via deformable attention and cross-attention mechanisms. This design allows map instances to leverage object context while remaining robust to occlusions caused by traffic participants. Experimental results on the nuScenes and Argoverse 2 datasets demonstrate that our approach consistently improves BEV map prediction accuracy, with particularly significant gains of 21% mAP in scenes containing heavy object occlusion.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.41786v1' target='_blank'>RadioTraj3D: Height-Aware Adaptive Sampling for 3D Radio-Map Reconstruction from Ultra-Sparse Trajectories</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Zixuan Guo, Xiucheng Wang, Wenshuo Chen, Conghao Zhou, Chuan Huang, Ruijin Sun, Nan Cheng</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-30 14:20:05</h6>
+<p class='card-text'>Aerial networks require radio propagation information at unvisited positions and heights to plan routes, select links, and allocate wireless resources. A three-dimensional radio map (3D RM) represents propagation conditions over the service area, enabling these decisions before flight. However, constructing such a map from autonomous aerial vehicle (AAV) measurements is challenging, since radio measurements are available only along the trajectory, whereas the target covers the 3D service volume. Existing methods use fixed AAV trajectories that ignore how building distributions and heights affect electromagnetic propagation, missing the heights most informative for RM reconstruction. To address these issues, we propose RadioTraj3D, which uses building-height information to coordinate measurement selection and layer-wise reconstruction. Building-height variations reveal propagation-sensitive layers that guide height-adaptive sampling. We therefore propose G-METS to select geometry-sensitive heights and allocate an exact budget across edge, corridor, and open regions before channel acquisition. A dual-view reconstructor then integrates local three-dimensional boundaries with full-height context through one bounded coefficient per layer. Simulated outdoor and indoor maps demonstrate state-of-the-art reconstruction across environments and vertical grids. On real-world AAV measurements from the LACN dataset, RadioTraj3D improves peak signal-to-noise ratio by 0.84 dB and reduces normalized mean squared error by 17.5% over Completion AE.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.41772v1' target='_blank'>WorkIng: A Real-World and Synthetic Highway Work-Zone Benchmark Dataset for Autonomous Navigation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Xujun Xie, Dominik Rößle, Adithya Mohan, Daniel Cremers, Torsten Schön</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-30 14:11:34</h6>
+<p class='card-text'>Highway work zones are critical edge cases for autonomous vehicles (AVs), combining atypical geometries and jurisdiction-specific regulations that existing benchmarks fail to capture: real-world datasets lack 360° multi-modal, full-scene 3D work zone annotation, and no single recorded site can span the layouts and regulatory variants needed for generalizable models. We present WorkIng, a dual-domain benchmark and training resource. WorkIng-Highway provides a 360° multi-modal work zone benchmark with synchronized 128-channel LiDAR, six RGB cameras, and RTK-GPS across 32 km, yielding 12,000+ annotated frames and 227,399 tracked 3D bounding boxes. WorkIng-CARLA complements this with procedural simulation spanning 24 regulation-aware scenarios across six canonical topologies and six international traffic standards, populated by 100+ custom 3D assets. Benchmarking representative 3D detection and end-to-end planning architectures shows that real-world data remains the primary performance driver, and that scenario-stratified synthetic augmentation improves architectures across 2D recognition, 3D detection, and trajectory planning. Resources: https://github.com/cvims/WorkIng</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.41717v1' target='_blank'>Evaluating Instrument-Centered AI Agents for Table-Top Science Experiments</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jiaqi Cai, Siyu Cheng, William S. Huxter, Li-Qiao Xia, Shuwen Sun, Shuai Yuan, Yifan Zhao, Naiyuan Zhang, Weijie Li, Muxian Xu, Ilija Zeljkovic, Xiaodong Xu, Pablo Jarillo-Herrero</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-30 13:26:57</h6>
+<p class='card-text'>Reliable evaluation of AI agents for table-top science experiments has remained elusive because live instruments are hard to reset and share at scale, while instrument statefulness and safety constraints complicate evaluation. We introduce instrMCP and q-devBench, an evaluation stack for instrument-centered AI agents in table-top experiments. instrMCP connects coding agents to scientific instruments through the Model Context Protocol, serving as the instrument-access harness. q-devBench reconstructs 37 real experimental tasks from condensed-matter physics as virtual QCoDeS instruments covering quantum electronic transport, scanning probe imaging, and calibration workflows. q-devBench exposes reproducible failure modes in laboratory-agent systems while preserving realistic instrument-control workflows. Across a range of commercial coding-agent configurations, current systems already show substantial operational competence, satisfying 70-83% of measurement-related rubric criteria. The main bottleneck is scientific analysis, where performance falls to 28-46%. In an analysis-only ablation in which agents receive clean reference datasets without running the virtual measurement session, analysis performance improves substantially, closing roughly two thirds of the difference between the measurement and analysis scores. This suggests that much of the deficit arises from the measurement-session context, including tool-use overhead, longer context, measurement-planning decisions, and possible acquisition errors, while a residual scientific-reasoning gap remains. Together, instrMCP and q-devBench provide a practical sandbox for benchmarking, diagnosing, and improving laboratory AI harnesses, and establish a route from controlled virtual evaluation to future live-hardware validation.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.41676v1' target='_blank'>Interaction-Aware Sampling-Based Motion Planning for Autonomous Surface Vessels in Urban Waterways</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Elia Trevisan, Alejandro Gonzalez-Garcia, Jan Swevers, Javier Alonso-Mora</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-30 12:44:27</h6>
+<p class='card-text'>Autonomous surface vessels operating in urban waterways must coordinate with other vessels in confined spaces while complying with traffic regulations, often without knowing their intentions. We present a decentralized motion planner based on model predictive path integral control, a sampling-based model predictive control scheme. The planner jointly computes a trajectory for the ego vessel and a prediction of the trajectories of the other vessels, and therefore accounts for their interaction. Traffic regulations are encoded as discontinuous costs, which the sampling-based formulation admits without a smooth approximation. We evaluate the method in maps taken from real sections of Amsterdam's canals, in encounters between two vessels and in scenarios with four interacting vessels. Across 780 randomized runs the method reaches every goal without collisions or deadlocks, and outperforms an optimization-based planner designed for the same domain, as well as a version of the proposed planner that does not account for the interaction. We further validate the planner on two scaled vessel prototypes in an outdoor environment, where planning and localization run onboard at 10 Hz, and head-on and crossing encounters are resolved without collisions or rule violations.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.41667v1' target='_blank'>GPU-accelerated Incremental Euclidean Distance Transform for Online Motion Planning of Mobile Robots</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yizhou Chen, Shupeng Lai, Jinqiang Cui, Biao Wang, Ben M. Chen</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-30 12:35:49</h6>
+<p class='card-text'>In this letter, we present a volumetric mapping system that effectively calculates Occupancy Grid Maps (OGMs) and Euclidean Distance Transforms (EDTs) with parallel computing. Unlike these mappers for high-precision structural reconstruction, our system incrementally constructs global EDT and outputs high-frequency local distance information for online robot motion planning. The proposed system constructs OGM with massive amount of data from multiple types of sensor inputs. Using GPU programming techniques, the system quickly computes EDT in parallel within local volume. The new observation is continuously integrated into the global EDT using the parallel wavefront algorithm while preserving the historical observations. Experiments with datasets have shown that our proposed approach outperforms existing state-of-the-art robot mapping systems and is particularly suitable for mapping unexplored areas. In its actual implementations on aerial and ground vehicles, the proposed system achieves real-time performance with limited onboard computational resources.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.41647v1' target='_blank'>Risk-Sensitive Mission Planning for Multi-Target On-Orbit Inspection via Distributional Reinforcement Learning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Adam Abdin</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-30 12:20:29</h6>
+<p class='card-text'>Multi-target on-orbit servicing missions require planning tools that can adapt to evolving operational conditions while accounting for the outcome variability inherent to safety-critical spaceflight. This paper presents an adaptive planning approach for multi-target servicing campaigns in low Earth orbit and applies it to inspection missions flown by a low-thrust servicer. The approach is based on Distributional Reinforcement Learning, which learns the full distribution of mission returns and thereby supports explicit risk-sensitive decision-making at each planning step. Specifically, a Quantile-Regression Deep Q-Network (QR-DQN) agent selects which target to inspect next by jointly considering the expectation and the variance of the predicted return through a mean-variance criterion. The mission environment models circular orbits with a spread in inclination and uses Edelbaum's combined-manoeuvre low-thrust transfer estimates. The observation comprises the orbital elements, the visit history, the observed risk state of each target and the remaining mission-time budget. The risk state of each target changes stochastically during the campaign, making the outcome of an inspection uncertain and creating operationally meaningful distinctions between risk-neutral and risk-averse planning strategies. Because the mission-time budget generally admits only a subset of the candidate targets, the planner must also select which targets to inspect. Numerical experiments on scenarios with five target satellites show that one risk-aversion weight moves the policy across a range of mean return and return variance, over an unchanged environment and reward. Risk-averse agents reduce the variance of the episodic return by approximately one half relative to risk-neutral agents and lower the probability of a mission loss, at a cost in mean return. To validate the learned policies, the efficient frontier, which gives the highest mean return attainable at each level of return variance, is computed exactly by enumerating the admissible visit orders. At equal variance, the learned policies lie close to this frontier in mean return, and the risk-averse policies have a lower probability of a mission loss than the frontier policies.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.41639v1' target='_blank'>Chance-Constrained Inspection Viewpoint Sequencing for On-Orbit Servicing via Safe Reinforcement Learning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Chloé Carer, Adam Abdin</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-30 12:15:31</h6>
+<p class='card-text'>Autonomous inspection of a target spacecraft is typically the initial step in on-orbit servicing. Planning close-proximity observation viewpoints involves a complex combinatorial problem constrained by coverage, fuel, and safety considerations. This paper models the viewpoint selection as a Constrained Markov Decision Process (CMDP) and applies Proximal Policy Optimization with Lagrangian relaxation to solve it. The system combines a high-level planner, which sequences camera viewpoints on an observation sphere around the target, with a low-level model that assesses each transfer using the Clohessy--Wiltshire (CW) equations for relative motion. The deterministic constraints on single-impulse reachability and $Δv$ cap are enforced directly on the action set. Safety margins are affected by navigation and manoeuvre errors, making the actual clearance stochastic. To address this, a chance constraint on the realised trajectory is implemented, with a Lagrangian multiplier governed by PID control to adapt the penalty during training. The approach is tested on a Galileo-class navigation satellite in medium Earth orbit, modelled as a point cloud where visibility from each viewpoint considers field-of-view and line-of-sight occlusion. Across various risk budgets, the trained policy maintains the keep-out violation rate within the specified limit, achieving coverage close to its maximum and staying within the mission $Δv$ budget. Compared to the usual practice of applying a fixed margin to the keep-out radius and planning deterministically, the chance-constrained policy attains less than half the violation rate at comparable coverage. This makes the collision risk an explicit design parameter, eliminating the need for re-tuning per case. The learned policy selects a viewpoint without the repeated Monte Carlo risk estimates required by a greedy, chance-constrained planner at every decision point.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.41564v1' target='_blank'>Verify--Backtrack Loop: Structured Precondition Recovery for Long-Horizon Language Agents</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Mingyang Liu, Qingcan Kang, Shixiong Kai, Tao Zhong, Mingxuan Yuan, Xin Li, Linqi Song</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-30 10:58:17</h6>
+<p class='card-text'>Language agents increasingly tackle long-horizon tasks in interactive environments, where actions often depend on latent preconditions. The core difficulty is not trajectory length but recovery: when a prerequisite is missing or an earlier decomposition fails, trying another plausible action rarely helps. ReAct and later reflection or adaptive-planning methods support local correction, but express recovery as free-form text, with no explicit control state linking the terminal goal, the active goal, and the failure source. We introduce the Verify--Backtrack Loop (VBL), a training-free extension of ReAct that turns precondition discovery and failure diagnosis into structured planning-state updates. VBL maintains the task decomposition as a bounded goal stack and, on goal activation, execution failure, or material state change, jointly verifies two horizons---whether the active goal contributes to the terminal goal and whether it is feasible in the current state. These dual-horizon judgments, combined with typed failure attribution, trigger explicit operations---Push, Pop, retry, or BacktrackTo the parent. We evaluate VBL with Qwen3.5-9B, GPT-4o, and DeepSeek-V3.2 on AppWorld, ALFWorld, and ScienceWorld. VBL improves over ReAct and reflection-based control on every backbone--benchmark pair. On the challenging AppWorld setting, it improves task success by up to 22.07 percentage points over ReAct. Ablations show that removing either verification or diagnosis degrades performance, in several settings below ReAct, confirming that the two mechanisms are complementary. These results show that reliable long-horizon interaction benefits from revising the planning state, not merely the next action.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.41558v1' target='_blank'>A complete analytical characterization of optimal collision-free motion for two robots</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jan Kamm, Antonio Terpin, Raffaello D'Andrea</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-30 10:53:31</h6>
+<p class='card-text'>Collision-free motion planning for multi-agent robotic systems remains an active research area because of the complexity of coordinating robot trajectories, with applications ranging from coordinated drone shows to autonomous operations on land, in the air, and on water. Importantly, the analytical difficulty of nonconvex collision-avoidance constraints has so far driven the development of exclusively numerical methods. We derive a complete analytical characterization of the optimal trajectories for two robots that start and end at rest, under double-integrator dynamics and a squared-acceleration objective. We prove that these trajectories belong to eight distinct contact families and determine which family applies for each configuration of initial and final positions. We analyze the geometrical properties of the optimal trajectories, provide a numerical algorithm for computing them, and discuss how these insights may improve the performance of existing numerical trajectory optimizers.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.41548v1' target='_blank'>Contact-based optimization for collision-free motion planning for a million robots</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jan Kamm, Antonio Terpin, Raffaello D'Andrea</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-30 10:46:26</h6>
+<p class='card-text'>Multi-agent robotic systems have attracted growing interest in recent years, with applications ranging from coordinated drone shows to autonomous operations on land, in the air, and on water. At the planning level, robot motion is often modeled using double-integrator dynamics (with low-level controllers handling the physical dynamics during execution) with a minimum-energy objective subject to collision-avoidance constraints and limits on position, velocity, and acceleration. The complexity of the problem resides in the constraints, which couple the trajectories and make the optimization problem nonconvex. Existing numerical approaches typically discretize and optimize entire trajectories, which becomes expensive for large fleets. We exploit the structure of optimal trajectories by organizing optimization around contacts, at which robots reach the minimum allowed separation. We formulate a coupled algebraic system in contact variables and reconstruct trajectories analytically between contacts. Our algorithm, sequential contact insertion (SCI), starts from unconstrained trajectories, inserts contacts at separation violations, and jointly adjusts their times and states. Numerical experiments demonstrate planning for one million robots in minutes and thousands of robots in fractions of a second. On problems feasible for a fixed-grid sequential convex programming baseline, SCI achieves median speedups of several orders of magnitude at matching solution accuracy.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.41538v1' target='_blank'>Report on Stability Analysis of Islanded Power Systems with Grid-Forming Converters</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Anup Joshi, Luis A. Garcia-Reyes, Qingyuan Gong, Xavier Guillaud, Javier Renedo, Dirk Van Hertem</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-30 10:33:33</h6>
+<p class='card-text'>Islanded power systems are inherently challenging to operate due to limited interconnection, low inertia, and weak short-circuit strength. As renewable and inverter-based resources replace synchronous machines, these challenges worsen, causing faster frequency deviations, greater voltage volatility, and higher risk of instability. This report summarizes the differences between islanded and interconnected systems and reviews key stability issues in islanded grids: frequency stability, converter-driven interactions, voltage stability, large-disturbance behavior, and small-signal dynamics.
+  Grid-forming (GFM) voltage source converters are a promising solution because they can establish voltage and frequency, emulate synchronous machine behavior, and provide grid strength, virtual inertia, fast frequency response, voltage regulation, and black-start capability. The report examines relevant GFM control strategies and evaluates their capabilities in weak, low-inertia islanded grids.
+  Challenges remain, particularly interoperability, control coordination among multiple inverter-based resources, lack of standardized grid code requirements, and coordination of protection devices. Successful deployment requires advances in interoperability, harmonized grid codes, and grid planning that considers the unique features of islanded systems, along with clear GFM functionality requirements.
+  Finally, a case study illustrates the stability-enhancing capability of GFM converters in weak grids through small-signal stability analysis. Overall, GFM technology is a key enabler of reliable, renewable-dominant island power systems, but broader adoption depends on continued technical and regulatory development.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.41477v1' target='_blank'>AC-SMPC: Differentiable Actor--Critic MPC with State Constraints for Safe and Fast Robot Navigation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Chaoran Wu, Jiayu Fan, Qichen Tan, Yuyi Liu, Jin Wang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-30 09:28:23</h6>
+<p class='card-text'>Achieving safe navigation in confined dynamic environments remains a challenging problem, as robots must balance navigation efficiency with safety. Existing actor--critic MPC architectures typically employ differentiable MPC layers, but this way cannot readily accommodate explicit state constraints, making it intractable to involve collision avoidance within learning-based planning. To address this issue, we propose an actor--critic model predictive control framework with state constraints. We first use vertices to represent the robot and obstacles, and half-spaces to represent the workspace. Based on these, the nonlinear robot dynamics is locally linearized and the hyperplane-based collision avoidance constraints are convexified into the differentiable MPC layer, and then the actor exploits closed-loop feedback to adjust the MPC objective parameters that shape local motion behavior, while the critic evaluates long-term task performance. We further relax the convexified constraints with bounded and penalized slack variables to form an elastic quadratic program, accommodating cases where the local constraint approximations cannot be satisfied simultaneously. Simulation tests and experiments, involving dynamic collision avoidance for multi-robot in narrow cases, illustrate the advantages of the proposed framework in adaptively adjusting the learned policy and improving navigation efficiency over existing approaches while maintaining the motion safety.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.41460v1' target='_blank'>RetryRoute: Retry-Aware Model Routing for Agentic Image Editing Services</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Hanshuai Cui, Zhiqing Tang, Zhi Yao, Jun Luo, Weijia Jia</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-30 09:12:21</h6>
+<p class='card-text'>Web agents increasingly edit images by calling open editing models in a critique-and-retry loop, and these models differ in cost by more than an order of magnitude. After every rejected edit, a service must decide whether to retry the same model, escalate to another or give up. Existing routers pick one model per request, and cascades escalate in a fixed order. However, both treat a retry as an independent draw. We identify sticky failures, meaning that a retry after a failure succeeds only 17-53% as often as a first try across six open models, three benchmarks and two judges. Based on this finding, we propose RetryRoute, a retry-aware router that estimates each model's chance of success given the request's failure history. It plans retries, escalations and abandonment over failure states and adds live queue waits to the cost, so the same plan becomes load-aware dispatch. At the main budget, RetryRoute's success under the in-loop judge exceeds the strongest of eleven prior baselines by 2.8 points on average over eight groups. On a GPU serving testbed it raises the share of edits delivered within the service-level objective by 5.0-6.3 points over the best prior baseline at every load.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.41456v1' target='_blank'>SAFARI: Semantic- And Frontier-driven Autonomous Risk Inspection</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Ugur Kafkasyali, Mihnea Toader, Julia Richter, Turcan Tuna, Cesar Cadena, Marco Hutter</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-30 09:01:50</h6>
+<p class='card-text'>Robotic exploration can reduce human exposure to hazardous environments by autonomously searching unknown areas for objects of interest while constructing a complete, risk-aware map.
+  However, existing autonomous exploration approaches typically prioritize geometric coverage or information gain, without explicitly coupling semantic object detection and the risk associated with operating near potentially hazardous objects.
+  Moreover, many systems have been demonstrated primarily in simulation or controlled environments, leaving limited validation of risk-aware semantic exploration in complex, unstructured field settings.
+  To address this gap, we propose SAFARI, a framework that treats object detection as a native channel of a unified probabilistic map, thereby jointly informing exploration and planning with both geometric and semantic evidence.
+  We evaluated SAFARI in 11 missions across three field sites on a quadruped platform. The framework achieved an average coverage of 98.7% of the accessible mission area, without operator intervention for 97.6% of mission time, and detected objects with characteristic dimensions as small as 15cm.
+  Lastly, through ablation studies and a detailed analysis of system behavior, we show that object-size awareness and safety-aware path planning are crucial for effective hazardous-object search.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.41453v1' target='_blank'>Evidence-Guided Recovery for AI Agents with Ambiguous Tool Outcomes and Partial Execution</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Genliang Zhu, Xiaobo Chen, Ziyuan Wang, Chu Wang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-30 08:55:55</h6>
+<p class='card-text'>Tool timeouts can leave AI agents facing ambiguous tool outcomes and partial execution: an action may have failed, committed or remained in flight while other workflow steps have already completed. We formulate evidence-guided task recovery over approved obligations, provider capabilities and states compatible with public evidence. A shared admissibility check handles key expiry, authorization timing, dependencies and residual effects; a terminal certificate separates actual goal satisfaction from publicly supported safe completion. The known-model implementation combines standard observation-contingent planning with a separately implemented effect-history adjudicator. In a finite study of 37 assignments, planning and three active controls each certify 28 completions; four saved synthetic fee units incur additional computation. A preregistered assignment-held-out comparison then evaluates planning advice against evidence prompting with two local model bundles. Across 58 paired units in 19 previously developed task families, advice certifies 30 completions versus 9, a 36.2-percentage-point difference (exact family sign-flip p=0.0078), using 272 proposals versus 399. All 116 trajectories pass independent replay. Both models exhibit a positive completion difference. The comparison measures the evaluated advice interface under a common shield; search-versus-rule advice requires a separate matched comparison. Unknown and handoff outcomes remain explicit, with guarantees tied to the declared provider capabilities rather than arbitrary third-party exactly-once execution.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.41407v1' target='_blank'>Fidelity Synopses: Pre-Execution Plan Selection for Approximate Vector Search</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Adithya Ramanatha, Sanskar S. Singh, Maya Ramanath</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-30 08:19:23</h6>
+<p class='card-text'>Vector search has become a database operator with many physical implementations: different index families, build-time and search-time parameters, and compressed or disk-resident variants. Each trades cost against fidelity, the fraction of a query's exact top-k nearest neighbors that a configuration returns. Deployments nevertheless choose one configuration offline and use it for every query, so they are sized for their hardest queries and overpay for the rest. On a 5.8M-item LAION benchmark with four embedding models, running each query on the cheapest configuration that suffices for it would roughly halve the cost in a typical setting. Exploiting this requires predicting each configuration's fidelity before running it, which is hard because fidelity is defined by the very exact search that approximate indexes avoid. Relational optimizers solve the analogous problem for cardinality with offline synopses; we propose one for vector search. A fidelity synopsis divides the embedding space into cells around a set of landmarks and records, for every cell and configuration, how often that configuration met a fidelity target on a sample of queries. At query time, one nearest-landmark lookup yields a calibrated estimate for every configuration, and an optimizer chooses configurations so that the workload misses the target no more often than its requirement allows. We test the two premises the synopsis relies on, that fidelity varies smoothly across the embedding space and that its loss is specific to each configuration. Held to the same requirement a static deployment is built to meet, synopsis-guided selection lowers cost in all 16 combinations of model and query direction, to a median of 0.72x the static deployment, with a batched lookup of 21-32 microseconds per query. The saving persists against the best static choice among the same indexes, and within a single index at no extra memory.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.41403v1' target='_blank'>A Dual-Guided Column-Generation-Based Matheuristic for Integrated Railroad Blocking</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yida Xu, Zhengzhong Ricky You, Baichuan Mo</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-30 08:14:30</h6>
+<p class='card-text'>Integrated railroad blocking is a central planning problem in freight railway operations, which requires coordinated decisions on block design, blocking sequences, and block routing. We propose a dual-guided column-generation-based matheuristic (DG-CGM) that uses linear programming (LP) dual information to identify promising transportation paths and incorporates them into restricted mixed-integer programs to improve feasible solutions. Starting from an initial plan built by construction, DG-CGM alternates destroy and local repair with path generation, which uses dual prices from restricted LPs of a Dantzig-Wolfe reformulation to identify promising transportation paths. When local improvements continue to stagnate, we further apply joint repair to combine alternatives across demand groups. To address the coupling between logical and physical path pricing, we introduce a joint reduced cost that eliminates path-specific dual variables from pricing, enabling more efficient column identification through exact labeling algorithms. We evaluate the performance of DG-CGM on both generated instances and real-world cases. On 150 generated instances with 50-150 nodes, DG-CGM achieves the optimal cost on 89 of the 91 instances solved to proven optimality by Gurobi, with a geometric mean runtime equal to 5.2% of that for Gurobi and a mean relative cost reduction of 3.4%. On six full-scale scenarios derived from the 2026 INFORMS Railway Applications Section competition data, each with 47,193 nodes, DG-CGM obtains feasible solutions within two hours that serve 95.9%-99.6% of the requested freight volume, providing practical blocking plans for large-scale railway operations. The code, instances, and computational results are publicly available at https://github.com/Zhengzhong-You/IRBP.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.41389v1' target='_blank'>Parse Before You Execute: Efficient Spatial Reasoning with Executable Primitives</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Xiwei Liu, Yulong Li, Xinling Zhuang, Xuhui Li, Yichen Li, Haolin Yang, Zhixiang Lu, Yutong Xie</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-30 07:59:08</h6>
+<p class='card-text'>Spatial reasoning in Vision-Language Models (VLMs) has increasingly benefited from tool-integrated pipelines that ground computation in explicit geometry. However, existing systems often compile queries into relatively open-ended artifacts, such as code, task constraints, tool plans, or gathered evidence, leaving what must be resolved before execution under-specified. This can lead to unnecessary tool acquisition and iterative refinement, while still producing plausible reasoning traces from incomplete spatial commitments. We identify this failure mode as under-committed query compilation. To address it, we propose PEPS, a training-free agentic paradigm Parsing Executable Primitives for Spatial reasoning under a typed FESM schema over Frame, Entity, State, and Metric. PEPS follows a parse-before-execute principle: the Parser commits each query to a compact set of executable requirements; the Executor selectively grounds the required primitives through fixed geometric APIs and deterministic computation; and the Verifier checks execution sufficiency, enabling early termination or targeted repair. Extensive experiments across challenging spatial reasoning benchmarks show that PEPS consistently improves reasoning accuracy while substantially reducing refinement rounds, API cost, and end-to-end latency over strong tool-integrated baselines. These results demonstrate that explicit requirement commitment can make tool-integrated spatial reasoning not only more reliable, but also more execution-efficient.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.41354v1' target='_blank'>DiffWBC: Unlocking Steerable General Humanoid Motion Tracking via One-Step Diffusion Whole-Body Control</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yifei Huang, Yazhao Yang, Weijia Li, Zhiheng Ma, Dian Shen</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-30 07:16:01</h6>
+<p class='card-text'>General humanoid motion trackers typically rely on deterministic policies that cannot adapt online without brittle reference editing or costly retraining. We present DiffWBC, shifting whole-body control to a generative paradigm via a one-step diffusion model. By modeling distributions over future trajectories, DiffWBC unifies general tracking, test-time steering, and simulation-free failure discovery within a single controller: (1) Generative general tracking: DiffWBC requires a single forward pass per 50 Hz control step and can be distilled from an RL teacher or trained from scratch via model-based RL, achieving the lowest local tracking error among six general trackers on held-out benchmarks (20.1 mm on BONES) and deploying on a physical Unitree G1. (2) Zero-shot test-time steering: differentiable cost gradients and body-group masks modulate the frozen controller online, substantially outperforming kinematic reference editing (0.84 clean pass at 1.25 m ceiling vs. 0.10) and zero-shot generalizing across hurdles, spatial reaching, actuator faults, and tray balancing. (3) Simulation-free failure discovery: plan dispersion across generation noise effectively identifies physical tracking failures (91% precision in top 2%) without physics simulations; targeted fine-tuning on flagged clips resolves 50% of failure cases. Videos and interactive demonstrations are available at https://diffwbc.github.io/#selfassess.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.41351v1' target='_blank'>Quantile Propagation Planning for Budgeted Tail-Risk Evaluation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Weijia Han, Zhi Huang, Lisha Qu, Yuanyuan Tan, Jiayue Meng</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-30 07:07:35</h6>
+<p class='card-text'>Risk-aware planning must identify rare, costly outcomes using only a limited number of model evaluations. Monte Carlo rollouts spend this budget on noisy tail estimates, while planning from the mean can miss the tail entirely. We introduce quantile propagation planning (QPP), which propagates a small, fixed set of disturbance quantiles through the dynamics and integrates the resulting cost curve to evaluate both mean and tail risk. The method is exact at the propagated levels, converges as the quantile grid is refined, and admits a one-sided conservatism guarantee under stated structural conditions. In controlled overload and inventory tasks, QPP reduces realized tail cost and constraint violations relative to mean-rollout planning. On overload, it remains competitive with sampled evaluators that use substantially more trajectories. These results position QPP as a transparent, budget-controlled approach to tail-risk evaluation.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.41334v1' target='_blank'>HIPC: Humanoid Iterative Planning and Control via Goal-Conditioned Motion Closure</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yi Han, Xingyu Chen, Zixuan Lang, Qianyang Wu, Yuhang Lin, Ji Ma, Liang Li, Dongting Li, Xinpeng Liu, Ruoli Dai, Hesheng Wang, Renjing Xu, Lei Han</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-30 06:48:20</h6>
+<p class='card-text'>Recent generative models are widely used to provide whole-body motion for humanoid tracking. Current methods combine motion generators with controllers in an open-loop paradigm, which leads to critical issues: tracking errors can accumulate into spatial drift, and the planner cannot adapt to unexpected physical disturbances without feedback from physical execution. However, directly feeding realized states back to the planner in a closed loop can cause discontinuities, resulting in physical jitter and even falls, since such states are out of distribution during training. To bridge this gap, we propose HIPC, a real-time Humanoid Iterative Planning and Control framework that couples a generative model with motion tracking into a unified planning-and-control paradigm. HIPC introduces a goal-conditioned motion planning trained with a canonical motion representation that avoids gimbal-lock singularities under extreme orientations and supports motion generation on diverse geometric and semantic conditions. Then, HIPC adopts two strategies, deviation-decayed recovery and history re-anchoring, to mitigate the out-of-distribution shift caused by realized-state feedback. Finally, HIPC operates a real-time asynchronous planning-and-control system, with latency compensation to reduce temporal mismatch for inference delay. Extensive experiments confirm the effectiveness of HIPC under switching and composition of diverse conditions. Results show that HIPC achieves state-of-the-art goal-reaching accuracy among existing methods while simultaneously demonstrating robustness to physical perturbations and the ability to recover from falls.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2610.41330v1' target='_blank'>Cross-Embodiment Motion Planning by Coupling Body-Agnostic World Model with Differentiable Ego-Dynamics</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Zhidong Wang, Zirui Li, Haoran Xu, Yujie Yan, Zitong Shan, Jingsong Liang, Han Yu, Chen Lv</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-10-30 06:45:17</h6>
+<p class='card-text'>Motion planning in clutter is embodiment-specific: the feasible free space and reachable commands depend on each robot's geometry and dynamics. Existing cross-embodiment policies output normalized commands that disregard these differences, or compensate through per-robot training and distillation. World models can in principle pool cross-embodiment data, yet command-conditioned models bind their latent dynamics to a single action space, while pose-conditioned models omit the mapping from commands to body-specific motion. On flat ground, however, embodiment affects the planner's observations only through the camera ego-motion. This letter proposes Hourglass, an hourglass-shaped architecture that factorizes cross-embodiment motion planning at this interface: a body-agnostic world model and each robot's differentiable ego-dynamics, which map commands to that ego-motion, are coupled only through it. The world model is trained on data pooled across embodiments and camera mounts; each robot's ego-dynamics is a reduced-order template with identified physical parameters. A generalist parameter-conditioned policy is learned once at this junction: each imagined step rolls out the template and then the world model, and imagination training through each robot's template makes the policy body-aware. On seven simulated robots of five locomotion types, the generalist policy outperforms imitation-learning and diffusion-policy baselines on the same world model by 3.8--10.6 percentage points in success rate and matches per-robot specialists without dedicated training, while approaching its parameter-conditioned MPPI teacher within 1.4--2.8 points without an online map. After three minutes of teleoperated driving for identification, the synthetic-data-trained model transfers zero-shot to a real skid-steer robot unseen in training, navigating unseen indoor scenes.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js'></script>
+</body>
+</html>
