@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>planning - 2026-11-03</title>
+<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap' rel='stylesheet'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css'>
+<style>
+body {
+font-family: 'Roboto', sans-serif;
+background-color: #f5f7fa;
+padding: 20px;
+}
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.card-title {
+    font-weight: 700;
+}
+.card:hover {
+    transform: scale(1.02);
+    transition: 0.3s ease-in-out;
+}
+</style>
+</head>
+<body>
+<div class='container'>
+<h1 class='text-center my-4'><i class='fas fa-book'></i>planning - 2026-11-03</h1>
+<div class='row'>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.03602v1' target='_blank'>Reviso: Not All Visual Evidence Deserves Equal Attention in Video Captioning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Tengfei Liu, Yang Shi, Yuran Wang, Yuqi Tang, Yizhuo Jia, Zhuoran Zhang, Qixun Wang, Shujie Li, Xuanyu Zhu, Xinyu Liu, Minghui Guo, Shixuan Liu, Haotian Wang, Yuanxing Zhang, Pengfei Wan</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-02 18:41:14</h6>
+<p class='card-text'>Multimodal large language models (MLLMs) can generate detailed video captions, yet they may overemphasize minor details while overlooking essential context and key events. We argue that not all visual evidence deserves equal attention, as the importance of visual information depends on the content of each video. Motivated by this observation, we propose Reviso, an agentic video captioning framework that learns what to observe and how to gather relevant visual evidence. From a low-frame-rate global preview, Reviso constructs a hierarchical Context--Focus--Points (CFP) observation plan that identifies the video context, prioritizes key aspects, and defines concrete observation targets and corresponding tools. Guided by this plan, Reviso performs goal-directed active perception by selectively revisiting temporal segments and combining tools for fine-grained inspection. It interprets the acquired evidence, updates its plan as needed, and integrates global and local information to generate the final caption. To learn this observation strategy, we develop a verification-guided pipeline that constructs high-quality training trajectories through factual verification and teacher-guided refinement. We further train Reviso using Group Relative Policy Optimization (GRPO), incorporating a key-fact reward for caption quality, a Plan Alignment Reward (PAR) for identifying important observation targets, and an Unproductive Tool-Call Penalty (UTCP) that adjusts observation-cost penalties based on caption quality. Experiments across four video captioning benchmarks show that Reviso outperforms the evaluated open-source baselines, while its generated captions better support downstream video question answering. These findings highlight the effectiveness and potential of priority-guided active observation for video captioning.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.03584v1' target='_blank'>TAMPAgent: Agentic Belief-Space Planning for Mobile Manipulation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Utkarsh A. Mishra, Alperen Degirmenci, Yongxin Chen, Danfei Xu, Tucker Hermans, Caelan Garrett</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-02 18:32:18</h6>
+<p class='card-text'>Open-world robotic mobile manipulation requires acting in physical environments with only partial information. While recent Large Vision-Language Model (LVLM) agents show strong open-world reasoning capabilities, existing architectures that rely on direct tool calling struggle with geometric uncertainty and thus are limited to fully-observable tabletop environments. In contrast, Task and Motion Planning (TAMP) systems can solve long-horizon tasks under partial observability but incur high computational costs and require closed worlds. We propose \textbf{TAMPAgent}, an agentic planning framework that unifies the reasoning of LVLMs with the structured constraint satisfaction of TAMP systems. We endow an LVLM agent with a belief-space planning model operating over an extensible API of perception, planning, and control tools. The agent formulates a partial task plan composed of parameterized observation and execution actions, which is subsequently completed using classical search algorithms. After extracting the plan's geometric constraints, the agent leverages its tool API to bind valid parameter values, satisfying feasibility requirements and producing an executable motion plan. Upon execution, the agent continuously updates its belief history and repeats this closed-loop process by interleaving observation and manipulation actions. Evaluated across complex household mobile manipulation tasks on Rainbow Y1 and Unitree G1 platforms, TAMPAgent significantly outperforms direct tool-calling agentic baselines, demonstrating that integrating TAMP constraint satisfaction into agentic planning loops is essential for unstructured, partially observable environments.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.03573v1' target='_blank'>Dynamical Unbalanced Optimal Transport: Duality, Reachability, and Computation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Dongjun Wu, Anders Rantzer</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-02 18:26:44</h6>
+<p class='card-text'>We study dynamical unbalanced optimal transport for nonlinear control-affine systems in which the control input affects both the transportation of mass and its growth or decay. This phenomenon arises naturally in controlled transport-reaction systems such as cancer treatment, and distinguishes the problem from standard unbalanced optimal transport, where transport and mass variation are typically independent. To address this problem, we combine classical relaxed-control theory with a weighted superposition principle to obtain an infinite-dimensional linear programming reformulation over weighted trajectories. Under suitable convexity and compactness assumptions, we show that this relaxation is tight. Based on the relaxation, we derive a Kantorovich dual formulation in terms of Hamilton-Jacobi-Bellman inequalities, and establish strong duality over smooth subsolutions. We then utilize the dual formulation to characterize reachability of the system, namely, when a given terminal measure is reachable from a given initial measure. In addition, tractable sufficient conditions for reachability are provided. Finally, we develop an augmented-Lagrangian algorithm based on the dual formulation for numerical computation of the optimal transport plan. The framework is illustrated on a phenotype-structured cancer treatment problem in which therapy simultaneously drives phenotypic adaptation and population growth or death.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.03508v1' target='_blank'>LODox: A Web-Based Platform for Cultural Heritage Linked Data Discovery</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Puyu Wang, Rui Zhao, Hang Dong</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-02 17:45:40</h6>
+<p class='card-text'>Recent advances in Large Language Models have transformed how data can be linked, discovered, and enhanced. LODox, Linked Open Data at Oxford, is an evolving web-based platform that embraces this transformation for cultural heritage Linked Open Data. LODox features a novel interface with intuitive card-based data presentation and visualization in a semantic portal. It represents an evolving approach to explore heterogeneous cultural heritage data across multiple sources through a unified interface. In this paper, we will briefly describe the LODox architecture, its implementation, and future development plan, particularly its alignment and integration with Solid.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.03498v1' target='_blank'>SNAP: Semantic Navigation Among Pedestrians</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jakob Wolfram, Pascal Roth, Fan Yang, Cesar Cadena, Marco Hutter</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-02 17:37:50</h6>
+<p class='card-text'>Navigating crowded urban environments requires robots to avoid pedestrians while adhering to social norms such as remaining on sidewalks. Existing approaches typically address either crowd avoidance or semantic path planning in isolation. We propose a reinforcement learning (RL) navigation policy that jointly reasons about semantic terrain and dynamic obstacles from a single semantically annotated bird's-eye-view (BEV) map, without relying on explicit human-state estimation. Our policy outperforms established crowd-navigation and semantic-aware baselines and transfers zero-shot to a legged robot, demonstrating socially compliant navigation in highly dynamic real-world scenarios.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.03497v1' target='_blank'>Multiprobe strategies for Kinematic Lensing with the Roman Space Telescope High Latitude Wide Area Survey</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yu-Hsiu Huang, Jiachuan Xu, Tim Eifler, Elisabeth Krause, Spencer Everett, Fabian Hervas-Peters, Pranjal R. S., Eric Huff, Yan Xiang Lai</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-02 17:37:43</h6>
+<p class='card-text'>In its latest design, the High Latitude Wide Area Survey (HLWAS) Medium Tier comprises overlapping photometric and spectroscopic data across 2,300 square degrees. This dataset enables Kinematic Lensing (KL), a Weak Lensing (WL) technique that exploits galaxy kinematics to control for shape noise, the dominant statistical limitation of traditional WL. We present several simulated analyses quantifying the expected cosmological science return of a Roman KL analysis with the latest design of the HLWAS: We explore KL prospects with early Roman data from the Deep Tier fields and from the early Medium Tier fields; we demonstrate the impact of different roll-angle choices on the KL performance; we benchmark KL against traditional WL; we introduce a KL-based multiprobe analysis that jointly models KL, galaxy clustering, and galaxy-galaxy lensing. In these analyses, we consider systematics, including photometric uncertainties, shear calibration bias, galaxy bias, and baryonic feedback. Our results show that KL alone achieves a dark energy figure of merit (FoM) of 22.54, which is more than a factor of two improvement over a corresponding WL analysis. The KL multiprobe approach improves the full-survey FoM to 34.58, even assuming conservative scale cuts in the clustering and galaxy-galaxy lensing. For the HLWAS roll-angle strategy, we find that the current plan of 4 passes with rotations of approximately 0, 10, 170, 180 degrees are near optimal for KL.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.03490v1' target='_blank'>Delay-Certified Readiness Barriers for Overactuated Multirotor Allocation Without Lipschitz Constants</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Giuseppe Silano</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-02 17:33:40</h6>
+<p class='card-text'>Overactuated multirotors can produce the same wrench with many rotor-speed combinations, some of which leave the vehicle unable to change its wrench quickly, e.g., to reject a gust. Readiness barriers keep this ability, the readiness, above a floor, but only in continuous time; with sampled commands and varying speed-controller delays, the available robustness bound covers less than one millisecond. We remove this limit by exploiting the structure of the problem: each rotor responds monotonically and in closed form to its own torque, so the speeds reachable under uncertain switching times lie in a cheaply computed box, and the lowest readiness over that box sits at a corner known in advance. This yields a Lipschitz-free test that a command keeps the readiness above its floor until the next sample, plus a fallback torque that keeps the vehicle on a certified plan. In hexarotor simulations with 2--40~ms delays and $\pm2$~ms jitter, the filter never violated the floor. At $10\pm2$~ms, it matched a delay-compensating predictor within the design envelope and cost 2--30\% more tracking error beyond it, where the predictor alone violated the floor in 2 to 16 of 16 missions.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.03486v1' target='_blank'>A Hybrid Visitor Prediction Framework using Interpretable Temporal features, Integrating IQR and Anomaly Detection in Lakes in Nebraska</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Israt Zarin, Christopher Chizinski</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-02 17:28:55</h6>
+<p class='card-text'>For effective resource management, infrastructure planning, and sustainable tourism, it is really important to predict accurate visitors. This paper estimates the daily visitation of Nebraska lakes using spatial, basic temporal, and interpretable temporal features. Moreover, we evaluate the base models with multiple metrics. Using the best three models, our method will ensemble hybrid models and choose the best hybrid technique. Further, we investigate the impact of lag features and how the models work with different outlier detection techniques such as Interquartile Range (IQR) and anomaly detection. The models are evaluated using regression metrics (MAE, MSE, RMSE, MAPE, and R2). Experiment results show that, after removing anomalies, MAE, MSE, RMSE, and MAPE are reduced. Adding lag features also shows some positive effects on the results. Moreover, anomaly detection techniques perform better than IQR in improving performance while preserving data. The reported anomaly-based cross-validation results favored the voting ensemble over the compared base models on the evaluated metrics. In anomaly-based cross-validation, VOTE improved prediction errors compared with MLP (256,128,64); improvements varied in the single-split comparison. Specifically, the hybrid model reduced MAE by 9.82%, MSE by 3.12%, RMSE by 1.76%, and MAPE by 6.77%. In the reported cross-validation comparison, the best anomaly-based hybrid model had lower MAE, MSE, RMSE, and MAPE than the best IQR-based hybrid model by 9.81%, 34.30%, 18.99%, and 0.66%, respectively.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.03403v1' target='_blank'>Open problems from the Length Optimization event at MDS 2026</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yana Teplitskaya</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-02 16:32:54</h6>
+<p class='card-text'>During the Minisymposium on Length Optimization as part of the International Conference "Mathematics Days in Sofia - 2026", the participants collected the following open problems:
+  1. Find any non-trivial upper and lower bounds for the degree of a branching point in the Gilbert-Steiner problem with cost-function $c(x) = x^p$ in the metric space $X = \mathbb{R}^d$ for large $d$ and fixed $p > 1/2$ (see Section 1).
+  2. Determine whether a typical trajectory of a given branched optimal traffic plan has bounded length. To find the optimal transport plan between the Dirac measure in the center of a circle and the Lebesgue measure on the circle (see Section 2).
+  3. To find the maximal distance minimizers for any explicit compact sets (see Section 3).
+  4. What is the minimal $C$ such that for any set of $n$ points in the three-dimensional unit cube, there is a tour through all these $n$ points with the sum of the cubes of its edge lengths at most $C$ (see Section 4).
+  5. To explore parallels between tropical caustics and Steiner trees: do caustics really need convexity (see Section 5).</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.03321v1' target='_blank'>uTECH Turbo-MOVES: The Intersection of Software Architectural Innovation and Sustainable Mobility Analysis</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Cafer Avcı, Alireza Yazdiani, Roopak Srinivasan, Megh Khaire, Mohammad Tayarani, H. Oliver Gao</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-02 15:47:01</h6>
+<p class='card-text'>Transportation is a major source of energy consumption, greenhouse gas emissions, and criteria air pollutants, making efficient emissions estimation essential for environmental planning and policy analyses. The U.S. Environmental Protection Agency's Motor Vehicle Emission Simulator (MOVES) supports detailed emissions modeling, but its computational demands constrain large-scale scenario analyses. This study introduces uTECH Turbo-MOVES, a software architecture that expedites MOVES computation without modifying its Calculator modules or input/output structure. By combining RunSpec partitioning, container isolation, in-memory intermediate storage, and concurrent workload orchestration, it improves execution efficiency. We evaluate six benchmark cases spanning County, Default, and Project scales and both Emission Inventory and Emission Rates modes. Results demonstrate a measured 5.5x and an estimated 15.3x per-run speedup for Default-scale workloads, and an 84.8x campaign speedup for an eight-county Emission Rates analysis. Although gains vary by workload and hardware configuration, uTECH Turbo-MOVES enables more extensive environmental assessments and transportation policy evaluation.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.03307v1' target='_blank'>Safe-Ballbot: Tilt-Consistent MPC with Control Barrier Functions for Ballbot Navigation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Duc Cuong Vu, Tung Lam Nguyen</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-02 15:38:13</h6>
+<p class='card-text'>Ball-balancing robots (ballbots) must lean to accelerate, and the lean is limited by the wheel torques and by safety. Planners that use the full robot model are expensive, while planners that ignore the balance dynamics produce references that cannot be followed. This paper presents a two-layer navigation scheme for a three-omni-wheel ballbot. The upper layer is a model predictive controller on a \emph{jerk model} of the ball position, with discrete-time control barrier functions for static, moving, rotating and concave obstacles. The lower layer is a hierarchical sliding mode controller with an extended state observer and a robust exponential control barrier function on the tilt (HSMC-ESO-ECBF). The layers are linked by an acceleration bound derived in closed form from the largest steady tilt that the barrier function admits, so that the plan never asks for a lean the tracker refuses. For obstacles whose motion is only predicted, the obstacles are inflated by conformal prediction radii that bound the prediction error with a prescribed probability. In MuJoCo, with omni-wheel roller contacts and torque saturation, the scheme keeps at least $10$\,cm of clearance, tracks the plan within $2$\,cm RMS, keeps the tilt below the limit and plans in $9$--$12$\,ms, $10$--$15$ times faster than a full-model nonlinear MPC that enters the inflated obstacles; with predicted obstacles, the conformal inflation removes the collisions of a constant-velocity predictor in $30$ random crossing scenarios and reduces them in an endless run on a closed path.The source code and video illustrations are available at https://safe-ballbot.github.io</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.03268v1' target='_blank'>VerifLM: Physically Verified Image-Edit-Guided Goal Pose Generation for Robotic Manipulation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Xuanyou Chen, Jinyu Chen, Glen Chou</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-02 15:11:59</h6>
+<p class='card-text'>Many manipulation goals are easier to visualize than to specify numerically through explicit geometric constraints. We present VerifLM, a framework that converts image-edited goal configurations into physically verified 6-DoF object poses for planning. Using an edited image, VerifLM recovers an initial relative pose between an active object and a passive object, then prompts a vision-language model to generate axis-wise sampling constraints and a task-specific validation program. Candidate poses are evaluated in a physics simulator, and the VLM selects the most task-consistent retained candidate. To operate without predefined object meshes or physical parameters, VerifLM reconstructs metric object geometry from RGB-D observations and constructs multiple hypothetical simulations with varying physics and geometry. Parallel-world validation evaluates candidates across geometry--physics variations and ranks them by the number of worlds in which they satisfy the validation program. We evaluate VerifLM on nine manipulation tasks. VerifLM achieves the highest task success on eight of nine tasks, with the largest performance gain on goals requiring precise orientation and contact relationships.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.03227v1' target='_blank'>What Structurally Breaks an Agent? Auditing Difficulty in Stateful Tool-Use Workflows</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Shereen Anand, Ju Wang, Yali Du</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-02 14:47:28</h6>
+<p class='card-text'>An aggregate task score does not distinguish failures of scheduling, state retention, and candidate selection. We develop a small executable instrument that varies dependency depth, candidate count, active state width, and access to current-state snapshots while holding the number of required operations fixed. Two dependency-graph families show that increasing depth at fixed work changes both scheduling freedom and the number of reachable completion states, so these controls are coupled, and we quantify the coupling. The primary study contains 49,152 generated tasks and 393,216 reference-controller rollouts. A separately frozen follow-on design adds 295,936 rollouts covering retention strategy, snapshot cadence, hidden state resampling, recovery, query locality, candidate indexing, and relabeling. Residue caches and precomputed plans solve tasks that defeat limited raw-value caches, and indexed selection removes the serial-scan branching deficit. Hidden resampling imposes an exact success ceiling that additional state tracking cannot overcome. The contribution is an executable diagnostic instrument, analytic calibration, and an audit of its assumptions. A small local CPU study with a 0.5B model completed no workflows, and a 16-episode Copilot-routed fractional factorial is descriptive only. Neither supports general capability claims.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.03155v1' target='_blank'>Minimax regret and monotone optimality in multiple testing</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Lei Li, Yuexiao Dong</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-02 14:03:04</h6>
+<p class='card-text'>Confirmatory trials may seek efficacy claims in a prespecified subgroup and the full popu- lation, although benefit outside the subgroup is uncertain. We measure power loss relative to the marginal level-α test available if the population to protect were known, using the same experiment. In a bivariate Gaussian model with known covariance, we minimise the largest power loss, or regret, over prespecified ranges of target and non-target effects, subject to strong familywise error control and coordinatewise monotonicity. We optimise over monotone closed- testing procedures with fixed marginal tests, allowing randomisation in the shared intersection test. Monotonicity places the worst non-target mean at its lower planning bound for each target effect. On the resulting reduced planning set, every least-favourable distribution is supported on exactly two efficacy scenarios, one for each target population. Under a condition on the effect ranges and covariance, the minimax procedure is nonrandomised and unique up to null sets. An integral criterion characterises exactly when a calibrated step-up procedure attains the minimax value within this class. Bounds for the continuous problem quantify possible improve- ments over simple procedures. An asthma planning example illustrates power allocation and the compatibility of target assignments with treatment benefits and burdens.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.03121v1' target='_blank'>ComplianceAtlas: A Taxonomy-Driven Agentic AI Framework for Automated AI Act Gap Analysis and Remediation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Ilias Driouich, Hongliu Cao, Eoin Thomas, Yannick Devaux, Agnes Brodelle</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-02 13:37:32</h6>
+<p class='card-text'>Assessing regulatory compliance for high-risk AI systems requires systematic identification of technical gaps such as missing controls, in- adequate processes, or shallow evaluation of practices. Compliance officers typically admin- ister structured questionnaires collecting evi- dence of current practices, where organizations respond with descriptions of their existing pro- cesses, technical capabilities, and architectural choices. However, translating these compli- ance questionnaire responses into typed, ac- tionable gap diagnoses remains unsystematic. In this paper, we present a literature-grounded taxonomy of technical compliance gaps cover- ing areas such as accuracy, robustness, logging, and human oversight, and embed it in GapTo- Compliance, a two-stage agentic framework coordinating two specialized agents: a Gap Extraction Agent that performs hierarchical rea- soning from compliance areas to specific gap types, and a Remediation Planning Agent that ranks remediation actions from a remediation catalog via multi-signal scoring combining se- mantic similarity, regulatory alignment, and effort estimation. We evaluate this framework against four automatic compliance gap detec- tion baselines across 9 AI systems and 6 AI families. Our approach achieves a gap-type F1 of 0.831 (vs. 0.533 for the strongest baseline) and remediation P@5 of 0.872 (vs. 0.635 for retrieval methods), demonstrating promising potential for automated compliance workflows. The structured agent coordination reveals a path toward human-in-the-loop compliance systems where automated gap extraction reduces expert burden while maintaining auditability, and the taxonomy-driven design enables extension to emerging regulatory frameworks beyond</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.03109v1' target='_blank'>Multimodal Prompt Learning with Dual-Granularity Contrastive Alignment for Preoperative Prediction of Lung Adenocarcinoma Invasiveness Using 3D CT</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Qing Huang, Xiaotong Tan, Lintong Yao, Wufeng Xue, Ruobing Huang, Dong Ni, Hao Wu, Tian Xiao, Jun Cheng</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-02 13:28:16</h6>
+<p class='card-text'>Accurate preoperative prediction of lung adenocarcinoma invasiveness is important for surgical planning and individualized treatment. However, overlapping CT appearances make it challenging to distinguish invasive adenocarcinoma (IAD) from Pre-IAD lesions. We propose a multimodal prompt-learning framework with dual-granularity image-text alignment for 3D CT-based IAD classification. A 3D ResNet-CBAM encoder extracts global and spatial visual features. A frozen RadBERT backbone is adapted with separate learnable prompts for report-level and keyword-level text encoding. These prompts are initialized using semantic representations derived from real-world clinical reports. Global contrastive alignment connects whole-volume CT representations with reports generated from clinician-annotated radiological attributes to provide overall semantic supervision. A multiple instance learning-based local alignment module associates spatial CT features with vascular-focused radiological keywords, to capture local imaging characteristics potentially associated with tumor invasion. The framework jointly optimizes classification and alignment objectives, while inference requires only CT images. Experiments included 1,593 pathologically confirmed nodules. On the test set, the proposed method achieved an accuracy of 87.92%, F1-score of 87.78%, and AUC of 0.9499. Its AUC significantly exceeded that of the image-only Res-CBAM baseline with the same visual backbone (0.9297; DeLong test, p = 0.0078). Ablation analyses supported the complementary contributions of global and local alignment and the benefit of report-based prompt initialization. Qualitative visualizations showed activation within nodules and adjacent vascular structures. These findings suggest that dual-granularity radiological supervision can enhance CT-based invasiveness prediction while preserving a CT-only inference workflow.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.03090v1' target='_blank'>GALACTIC CENTERS AS TRACERS OF GALAXY EVOLUTION: Zooming from galaxy large-scale properties into their central massive black holes</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:F. Pinna, N. Hoyer, S. Thater, A. Mastrobuono Battisti, A. Feldmeier-Krause, E. Arjona-Gálvez, A. Askar, R. C. Levy, A. de Lorenzo-Cáceres, I. Márquez, K. Fahrion, I. Martín-Navarro, C. de Sá-Freitas, R. Schödel, S. Bonoli, A. Chaturvedi, N. Ryde</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-02 13:11:14</h6>
+<p class='card-text'>During the workshop ''Galactic Centers as tracers of galaxy evolution'' (Lorentz Center, Leiden), we reviewed one of the most debated questions in the field of galaxy evolution: the connection between galactic central regions and the evolution of galaxies at a global scale. We gathered different research communities to reveal the connection channels between central massive black holes (MBHs), nuclear structures, and evolutionary processes at a global scale, such as gas inflows and outflows and galaxy-galaxy interactions. Special focus was dedicated to MBH seeding, formation and growth, active galactic nuclei feedback, and the formation of nuclear stellar structures, without missing a global perspective. Participants from these different fields introduced us to the state of the art in numerical simulations, as well as cutting-edge observational techniques. In addition to achieving a deep understanding of these topics, we set up plans to exploit future facilities such as the Extremely Large Telescope (ELT). In this paper, we briefly summarize the highlights of the workshop, identify the open questions that emerged during the workshop discussions, and discuss what observations and simulations will be needed to address them.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.03022v1' target='_blank'>Interpretable Allocation and Model-Predictive Rebalancing of Equity Portfolios, Tested on Real and Synthetic Markets</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jeffrey D. Varner</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-02 12:20:25</h6>
+<p class='card-text'>A live equity portfolio poses three problems: which stocks to hold, when to trade, and whether the strategy holds up beyond the observed market. We built one system for all three and tested it on 373 US equities, calibrated on 2014-2024 and traded from January 2025 to September 2026. A selection rule chose stocks by score, by a bandit, or at random, and one of seven weighting rules, four consumer-theory utilities, and three standard portfolios, set share counts under limits on budget, single-stock weight, portfolio volatility, and turnover, with each stock's preference weight a bounded score of its trend, market beta, and the market's recent direction. A model-predictive controller forecasts portfolio value with a multi-asset geometric Brownian motion and re-planned at its horizon, when the value left its forecast band, or at a drawdown stop. To probe deeper declines than the real window held, we also ran the system on simulated markets from per-asset hidden Markov generators with jumps, linked by market and sector factors. On real prices, the stocks chosen mattered more to terminal wealth than the weighting rule, and the early re-plans shrank the worst drawdown in most rule combinations against a fixed calendar without consistently raising wealth. In the deepest simulated declines, every combination, random picks included, ended above simulated SPY and the equal-weight universe in the median, even without early re-plans, so the margin came from shared parts of the system, not from stock selection or re-plan timing. A market hedge that tightened a beta cap as the market weakened cost wealth on real prices but paid off in the most sustained simulated declines, and the generator's persistent trends favored score-based selection more than the real market did, which suggests a synthetic test judges stock selection fairly only if its generator does not build in that persistence.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.03018v1' target='_blank'>How Data Journalists Visualize Uncertainty: Editorial Constraints and Design Heuristics in Newsroom Practice</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Carmen Garro, Annemarie Wisbar, Benjamin Possin, Christoph Kinkeldey</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-02 12:17:56</h6>
+<p class='card-text'>Communicating uncertainty is increasingly recognized as important in data journalism, yet in practice it is often oversimplified, downplayed, or omitted. To understand how uncertainty is handled in newsroom visualization practice, we conducted a full-day workshop with 11 data journalists from major German-speaking newsrooms. The workshop combined presentations of newsroom examples, collaborative scenario classification, World Café discussions on authoring hurdles, and group reflections on audience needs and future directions. Our findings suggest that uncertainty communication is primarily a workflow- and context-dependent editorial decision, constrained by production overhead, anticipated audience misinterpretation, publication formats, and the need to preserve a clear takeaway. Rather than relying on advanced visualization techniques, practitioners favor pragmatic defaults, layered communication, and explanatory guidance tailored to audience and medium. The scenario-based framework we provided is valued less as a strict taxonomy for classifying finished visualizations than as a planning prompt for early design reasoning. Based on these insights, we contribute (i) practitioner-informed findings on the challenges and strategies of visualizing uncertainty in journalistic practice, (ii) a refined scenario-based framework to support communication about uncertainty, and (iii) practice-oriented heuristics for designing uncertainty visualizations in newsrooms. Our work contributes to bridging visualization research and newsroom practice by grounding uncertainty communication in the realities of journalistic production. Supplemental material is available at https://osf.io/8j4ep.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.03015v1' target='_blank'>Comparative study of global pooling for pre-departure ship fuel consumption prediction: Advantages over per-ship and adaptation-based approaches</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Heungjun Im, Bongmin Cha, Agung Nugraha, Donghyun Kim, Seongphil Kang, Minwook Choi, Jeongmin Park, Jihwan Lee</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-02 12:14:49</h6>
+<p class='card-text'>Most fuel oil consumption (FOC) models for voyage planning are per-ship models and thus generalize poorly beyond each vessel's records. Transfer and federated learning have been reported to perform better, but under different protocols that often use inputs unavailable before departure or random data splits. It therefore remains unclear which approach performs best. In this study, we compare 11 per-ship, adaptation-based, and global methods on 21 vessels. To prevent leakage, all methods receive identical inputs known or forecast before departure, excluding engine RPM and shaft power, and are tested on intact voyage legs after all training records of each vessel. Global pooling, in which one model describes each vessel by its ship identity and seven ship specifications, performs best overall in every setting examined. For in-fleet vessels, Global LightGBM reaches an overall MAPE of 8.92%, against 11.14% for Per-Ship LightGBM, and outperforms every per-ship and adaptation-based model. Global models of five architectures, including a Transformer, all outperform the per-ship and federated models. Fine-tuning a global model for each vessel, even by low-rank adaptation of the Transformer, adds no accuracy. Without any records of a vessel, the global model reaches a median MAPE of 11.20% and outperforms a per-ship model trained on that vessel's records for 14 of 21 vessels. Adding its first records to the pooled data is as accurate as vessel-specific adaptation. Ship identity and specifications are largely interchangeable for in-fleet vessels, but only the specifications support zero-shot prediction. Its error grows as a vessel's specifications differ from the fleet's. Per-ship models and vessel-specific adaptation are therefore unnecessary under fair comparison. One global model can serve a whole fleet, including newly delivered vessels with similar specifications.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.02968v1' target='_blank'>ReContact: Reconstruct and Retarget Human Contacts from Video for Contact-Rich Humanoid Manipulation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Zhongkai Gu, Yang Liu, Wei Zhu, Mitsuhiro Hayashibe</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-02 11:36:51</h6>
+<p class='card-text'>Contact transitions allow humanoid robots to redistribute object support across the whole body, enabling manipulation beyond hand-only grasps. Human videos provide a scalable source of such transitions for robots to learn from. However, body occlusion disrupts object pose tracking and corrupts retargeted motion. Moreover, accurately reproducing the object trajectory does not ensure that the robot applies stabilizing forces at the intended contacts, risking slips or drops in later phases. To address these challenges, we propose ReContact, which reconstructs and retargets human-object interactions through an object-centric contact plan. The plan specifies contact phases, contact pairs, anchors, pressing directions, and sticking or sliding modes. Contact priors stabilize object pose reconstruction through occlusion. A residual policy over a frozen whole-body tracker is rewarded for making contact at planned anchors with forces aligned to the specified directions. In simulation, on a thigh-supported regrasp task, ReContact achieves the planned two-palm bottom hold in 83.5 of episodes over three training seeds, versus 0.16% for the best adapted baseline. One policy trained on 247 references re-solved for new placements raises in-workspace tube-transfer success from 20.4% (source reference only) to 97.8%. On a real Unitree G1, policies execute seven contact-rich manipulation and two loco-manipulation tasks.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.02930v1' target='_blank'>PointPilot: Unified Robotic Manipulation via Object-Centric 3D Point Flow Prediction</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yihan Fang, Yuxin Tian, Ruixiang Wang, Zhanqi Zhang, Xing Hu, Zhen Yang, Huayi Zhou, Yongyi Su, Wei Gao, Kui Jia</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-02 10:58:29</h6>
+<p class='card-text'>Generalization remains a central challenge in robotics, calling for policies that address domain variations from multiple dimensions such as diverse embodiments, camera poses, and/or scene layouts. In order to approach this problem, we introduce PointPilot, a task-focused and 3D aligned manipulation framework built on a 3D space point-flow prediction. Rather than modeling the global scene, PointPilot only represents task-focused objects (robot grippers treated as objects), avoiding the prediction of potentially redundant scene parts unrelated to the manipulation tasks. Moreover, PointPilot aligns 3D spatial representation in one unified coordinate and supports closed-loop and fully automatic action execution across different manipulation modes from object point flow without a separately trained action expert, while existing works typically need an extra action head or are (semi-)automatic and single-arm mode specific. Given sensor observations and language instructions, our model jointly learns subtask planning, task-relevant object grounding, and 3D point flow prediction in an end-to-end way. By processing heterogeneous data in a shared 3D point flow space, PointPilot is able to absorb demonstrations from different embodiments. Extensive simulative and real world experiments validate our method. Notably, we demonstrate zero-shot embodiment generalization with PointPilot. A single trained policy can be deployed on previously unseen embodiments and successfully complete manipulation tasks without any additional fine-tuning.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.02922v1' target='_blank'>An intelligent satellite must do nothing well</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Fabrizio Pilone, Giordana Bucchioni</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-02 10:52:06</h6>
+<p class='card-text'>Autonomous inspection of a resident space object is usually posed as a contest between classical next-best-view planning and reinforcement learning. We argue that the choice of algorithm is the least informative of the design axes. An inspector spacecraft has no rest state: when it stops thrusting, orbital dynamics carry it along a natural trajectory that can be used to observe the target at no fuel cost. On a controlled ladder in which one design axis is varied at a time, fuel efficiency turns out to be set by three things: whether the agent is allowed to drift, whether its state records where drifting has taken it, and whether its planning horizon is long enough for the benefit to appear. Removing any one of them doubles the fuel bill or more. The algorithm still matters, but through what it can represent: a model-based agent whose learned world model ignores fuel spends several times more of it. Finally, no learned policy is safe by construction, and a control barrier function filter beneath the decision layer removed every keep-out-zone violation in two thousand evaluation episodes.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.02914v1' target='_blank'>Resolution Is Not Accessibility: Coupled Minimax Risk for Reduced Statistical Experiments</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yuzhao Zhu, Jiahui Shao, Dongqi Liu, Xiaoxiao Hu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-02 10:45:43</h6>
+<p class='card-text'>A reduced experiment can have vanishing minimax risk yet lose arbitrarily much precision relative to full observation. We determine when growing reductions preserve target-specific minimax precision, their exact cost, and which omissions can remain without increasing that cost. For Gaussian sequence reductions, we give necessary and sufficient criteria for bounded relative risk and losslessness. With parameter-dependent information, sampling difficulty and unresolved target variation draw on the same parameter budget. We prove that the exact global asymptotic minimax risk is the maximum scalar interval-decision risk over their jointly attainable frontier under a Sobolev constraint. This identity shows that positive ambiguity at the inverse-square-root sample-size scale can preserve the full-observation minimax constant. Under the corresponding full-experiment risk match, a sharp boundary criterion determines when critical-order resolution suffices for losslessness. A quadratic Poisson budget yields an exact threshold and quadratic risk onset under a stated information condition. Across Poisson power budgets, separate-maxima planning incurs a diverging asymptotic coordinate-budget factor near full precision, both with a positive lossless threshold and with zero threshold but higher-order risk onset. Finite-sample calculations and conditional medical-data and classifier audits distinguish the effects of observation coverage and repeated measurement.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.02912v1' target='_blank'>A State Change Is Local, Its Consequences Are Not: Dependency-Aware State Revision for Long-Term Agent Memory</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yiqi Wang, Tongyuan Zhao, Jiaqi Zhang, Yiqun Duan, Zhangkai Wu, Mingkai Zheng, Taotao Cai</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-02 10:44:02</h6>
+<p class='card-text'>Long-lived agents rely on persistent memory of users, tasks and decisions, and this memory must stay consistent with a world that keeps changing. When an upstream fact changes, however, memory systems can revise the contradicted memory itself while the beliefs, plans and actions derived from it remain accepted, even though they have lost their support. We therefore formulate dependency-aware state revision, which asks not only what changed but also which dependent states should no longer be trusted. To address it, StateGraph maintains an evolving state dependency graph whose edges are recovered from interaction histories. Its core design is counterfactual verification: each candidate edge is tested by asking whether the dependent state would survive the loss of its premise, which separates support dependence from semantic relatedness, and revision then invalidates a dependent state only when a strict dependency fails and no independent support path survives. To test this design, we introduce StateChangeBench, a controlled benchmark of 50 author-constructed cases annotated with cascade depth, hard negatives and action consequences. On it, StateGraph's Impact-F1 margin over a CUPMem reimplementation is 6.9 percentage points at depth 1 and 26.0 at depth 3+. On public long-term memory benchmarks, its point estimates are comparable to or higher than those of the evaluated baselines on most datasets. These results provide initial evidence that explicit dependency tracking can improve selective memory revision under changing conditions.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.02892v1' target='_blank'>JABER: Sequential Quality Control for Human-AI Data Annotation under Shared Bias</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Fengxu Yang, Minghui Liwang, Yang Lu, Bo Han, Xianbin Wang, Seyyedali Hosseinalipour</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-02 10:25:48</h6>
+<p class='card-text'>High-quality annotations are essential for training and evaluating artificial intelligence (AI) systems. Quality control (QC) often acquires additional human or AI judgments before accepting a label. Nevertheless, shared biases can cause correlated judgments, leading conventional methods to mistake repeated agreement for independent evidence of correctness. To address this challenge, we propose JABER (Joint Alias-Preserving Belief for Evidence Routing), a bias-aware sequential QC framework that maintains a joint Bayesian posterior over label correctness and shared biases to guide evidence acquisition and termination decisions. Building on this posterior, we develop a finite-horizon algorithm that selects evidence-acquisition and termination actions to minimize expected QC loss under resource constraints. Our theoretical analysis shows that conditional-independence updating can become arbitrarily confident in an incorrect label under persistent shared bias. We further identify when repeated inspections cannot distinguish a correct label from an incorrect label supported by shared bias, when obtaining a new label can resolve this ambiguity, and why modeling the dependence between label correctness and shared bias can be necessary for QC decisions. Our experiments show that JABER reduces expected QC loss by an average of 4.65% compared with a method maintaining separate label correctness and bias probabilities when shared bias makes repeated inspections unreliable. Further, JABER's finite-horizon planning, which evaluates outcomes of successive QC actions, reduces expected QC loss by an average of 10.05% compared with a one-step lookahead method. In real-API experiments on FEVER, JABER achieves zero labeling errors while reducing QC costs by 2.67% and 16.99% compared with marginal-based belief modeling and one-step lookahead methods, respectively.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.02883v1' target='_blank'>Integrating Domain Adaptation and Retrieval-Augmented Generation for Saline-Alkali Land Reclamation Planning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Zuguang He, Congcong Zheng, Wanyue Chen, Wenya Zhou, Zaijin Yang, Long Long, Yucheng Zhang, Shuqin Gao</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-02 10:19:14</h6>
+<p class='card-text'>Reclamation of saline-alkali land requires management plans that account for soil and water conditions, treatment evidence, and financial constraints. This study develops Wenyao, an agricultural decision-support system integrating domain adaptation with retrieval-augmented generation. A bilingual corpus of 8,664 research papers was processed using a 110-indicator schema to construct SA-Bench, comprising 4,860 paper-level planning instances. A QwQ-32B model was adapted through low-rank supervised fine-tuning and combined with case retrieval for budget-conditioned planning. Evidence extraction achieved an F1-score of 0.83 on 300 expert-annotated papers. Without retrieval, Wenyao achieved 95.83% accuracy on 936 source-disjoint multiple-choice questions, compared with 87.93% for the strongest general-purpose baseline; removing explanatory supervision reduced accuracy to 89.42%. Matched-evidence comparisons across 69 region-budget cases supported complementary contributions from adaptation and retrieval. In a blind assessment by 31 experts, Wenyao with retrieval obtained the highest mean scores for objectives and projected outcomes, whereas GPT-5 scored highest for cost estimates. These findings support literature-informed reclamation planning with professional review, while ongoing field monitoring will assess soil and crop responses.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.02853v1' target='_blank'>Scaling Action-Free Video Latent Prediction for Transferable Representations in End-to-End Autonomous Driving</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Xingtai Gui, Xubin Zhou, Yucheng Zhou, Dongqian Guo, Jiahao Gong, Feiyang Tan, Jianbing Shen</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-02 09:54:12</h6>
+<p class='card-text'>End-to-end autonomous driving policies require effective visual representations that capture both spatial scene structure and temporal dynamics. Video latent prediction has emerged as an effective paradigm for learning spatiotemporal visual representations, yet it remains unclear whether scaling this objective with action-free driving videos can yield representations that benefit end-to-end planning. We study action-free video latent prediction as a scalable pretraining objective and introduce ScaleDrive, a driving-oriented framework pretrained exclusively on large-scale internet open-world driving videos, without action annotations or benchmark-specific data. We keep the pretrained video encoder frozen during downstream end-to-end planning training to isolate the transferability of representations learned from internet driving videos. Ego-motion and depth probes show that scaling action-free video pretraining progressively strengthens the temporal and geometric information encoded in the frozen representation. We systematically study the visual representation transfer across different end-to-end driving policies and closed-loop benchmarks, where ScaleDrive consistently improves downstream performance and demonstrates that scaling action-free video latent prediction yields representations that generalize across both planning policy architectures and evaluation scenarios and protocols.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.02830v1' target='_blank'>Think with Skills: Pseudocode Planning Before Execution for Advanced Reasoners</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Boshen Zhou, Boxuan Yue, Xiang Li, Shanchao Yang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-02 09:29:30</h6>
+<p class='card-text'>Language model agents often struggle with complex tasks even when equipped with expert-written skills. Such skills encode declarative knowledge, whereas successful execution requires procedural knowledge tailored to the task at hand. Natural language skills may leave conditions and dependencies implicit, and tasks involving multiple skills further require agents to coordinate intermediate results and execution order. We introduce Think with Skills, a method that trains reasoning models to turn relevant skill descriptions into task-specific pseudocode plans before execution. The pseudocode explicitly represents operations, conditions, intermediate results, and dependencies, providing a structured bridge from skill descriptions to agent actions. We construct training data that pairs tasks and skills with pseudocode plans and execution trajectories, use supervised fine tuning to initialize this behavior, and further optimize end-to-end task performance with Group Relative Policy Optimization. On SkillsBench, Think with Skills raises task success from 35.0% to 62.0%. These results show that proceduralizing expert knowledge before execution substantially improves skill use.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.02826v1' target='_blank'>RxnMiner: A Multimodal Agent for Structured Reaction Data Extraction from Chemistry Figures</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jinbo Hu, Songren Zhang, Chuanxun Fu, Jinrui Huang, Zhen Hao Wong, Dongxu Cui, Haoran Fan, Muhao Ge, Zhen Jian, Jian Zhou, Chengxiang Luo, Han Lyu, Haoyi Tao, Chaozheng Huang, Hanzheng Li, ZiChen Wang, Hengtian Ma, Jinyang Dai, Nan Wang, Yanhui Hong, Xi Fang, Guolin Ke</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-02 09:24:55</h6>
+<p class='card-text'>Reaction data underpin machine learning for reaction prediction, condition recommendation, and retrosynthetic planning, yet extracting these data from literature figures still requires substantial manual effort. Many figures encode multiple experiments through shared templates, substituent tables, and product grids. Recovering concrete reaction records therefore requires molecular recognition, association of evidence with individual experimental entries, and reconstruction of indirectly specified participants. We present RxnMiner, a multimodal agent system that combines an expert-informed extraction procedure with a chemistry toolbox to coordinate these operations. The agent reads molecular structures, resolves shared and entry-specific evidence, and instantiates participants from templates to assemble source-linked reaction records. We also introduce ChemRxn-Bench, a benchmark of 603 reaction figures with 8,547 manually annotated and reviewed reaction records, evaluated under a common protocol for exact molecular identity and reactant-product pairing. On this benchmark, with Qwen3.8-Flash-Next as the backbone, RxnMiner raises stereochemistry-aware reaction macro-F1 from 21.0% under direct prediction to 71.0%, compared with 25.0% for the strongest existing extraction system. Across five backbones, it also outperforms the same base agent without the extraction procedure and chemistry toolbox by 9.4 to 25.5 points. Applied without human intervention to 10,107 literature figures, RxnMiner produces a silver corpus of 88,202 source-linked reaction records.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js'></script>
+</body>
+</html>
