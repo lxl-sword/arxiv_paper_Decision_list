@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>planning - 2026-11-04</title>
+<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap' rel='stylesheet'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css'>
+<style>
+body {
+font-family: 'Roboto', sans-serif;
+background-color: #f5f7fa;
+padding: 20px;
+}
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.card-title {
+    font-weight: 700;
+}
+.card:hover {
+    transform: scale(1.02);
+    transition: 0.3s ease-in-out;
+}
+</style>
+</head>
+<body>
+<div class='container'>
+<h1 class='text-center my-4'><i class='fas fa-book'></i>planning - 2026-11-04</h1>
+<div class='row'>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.05341v1' target='_blank'>Weight-space programming for auditing clinical decision networks</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Humza Nusrat, Omar Nusrat</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-03 18:41:15</h6>
+<p class='card-text'>Machine learning models in radiotherapy are commissioned by testing them on cases with known answers, which may not reveal a shortcut that the test cases share with the training data. Frontier language models have recently been reported to read and write the raw weights of small neural networks, an ability called weight-space programming. The purpose of this study was to determine whether such a model, given only a clinical protocol and a network's weights, can audit and repair the network. Networks with 433 to 4,801 parameters were trained to screen head-and-neck planning requests against four rules. Flaws were planted through the training data: confounds that hid each rule, a 3 Gy shift in the cord threshold, and a hidden trigger. Claude Opus 5.5 audited each network blind, without tools, data or code execution, and every claim and repair was tested on about 420,000 requests. The language model named the broken rule in 16 of 18 flawed networks (95% CI 67% to 97%), including all 15 with a confound or a threshold shift. It repaired each of the 16 by changing a median of 3 parameters. Fine-tuning on protocol-labeled requests also repaired every network, but changed nearly every parameter. Each confound and shift it found was visible in single units, and a simple statistic chosen for each flaw type found the same flaws. It cleared 2 of 5 healthy networks without being forced and found 1 of 3 triggers. Testing against the protocol detected every flaw, and black-box testing found the confounds and the shift faster. The results indicate that, in small networks, weight-space programming can locate and repair flaws that silence an input or shift a threshold, but cannot yet certify that a network is correct.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.05313v1' target='_blank'>MDSKILL: Learning to Internalize Skill Memory through Multi-View Distillation for Efficient Dynamic Agent Self-Evolution</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Dian Jin, Jinluan Yang, Kairong Han, Baohong Li, Zijing Hu, Yi He, Wenlin Zhong, Yunze Tong, Minqin Zhu, Linchuan Li, Yanan Niu, Kun Kuang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-03 18:19:55</h6>
+<p class='card-text'>Skill memories encode past experiences as textual prompts to improve reinforcement learning (RL) for self-evolving agents. Complementing RL, On-Policy Self-Distillation (OPSD) provides dense, fine-grained supervision to internalize knowledge from skill-guided trajectories and accelerate policy learning. However, self-generated memories often contain noisy supervision and functionally entangled, redundant, or conflicting knowledge, making direct distillation difficult. Under limited training budgets, these issues can hinder knowledge internalization and even degrade performance. To address this problem, we propose MDSKILL, a multi-view distillation approach for skill memory internalization. MDSKILL organizes skill memories into three complementary functional views (state grounding, action planning, and execution control) and selects high-quality skills using dynamic metrics to construct view-specific and integrated reasoning branches. OPSD then transfers and consolidates complementary experiential knowledge across these branches into a shared policy, enabling efficient skill internalization and continuous agent self-evolution. We evaluate MDSKILL on three agent benchmarks against RL, skill-augmented, and self-distillation baselines that do not rely on stronger external teacher models. Without additional computational overhead, MDSKILL improves upon SOTA performance by up to 7.1% and 8.1% on ALFWorld and WebShop. Extensive ablations and evolution analyses further validate its effectiveness in knowledge internalization and policy improvement. The code is available at https://anonymous.4open.science/r/MDSKILL-CF53.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.05263v1' target='_blank'>JHiMA-WebRL: A Joint Hierarchical Multi-Agent Reinforcement Learning Framework for Long-Horizon Web Tasks</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Shanka Subhra Mondal, Jiayun Wang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-03 17:49:14</h6>
+<p class='card-text'>Multimodal web agents have shown promising capabilities for interacting with websites through graphical user interfaces (GUIs), yet realistic web tasks often require long-horizon, multi-step planning that remains challenging for monolithic policies. Such agents must jointly infer high-level plans, navigate through intermediate states, track progress over extended interaction histories, and execute visually grounded actions. Although prior work has explored modular multi-agent systems with a separate planner, the planner is typically not updated jointly with the actor. We investigate whether explicitly separating and jointly training planning and execution provides a stronger inductive bias for long-horizon web navigation. We introduce JHiMA-WebRL, a joint hierarchical multi-agent reinforcement learning framework for web agents that couples a task decomposer with an actor. To train the decomposer, we use a strong teacher model to construct structured subtask supervision from multimodal GUI trajectories, and use these annotations to fine-tune both the decomposer and the subtask-conditioned actor. We then extend Group Relative Policy Optimization (GRPO) to jointly optimize the decomposer and actor in the interactive WebArena environment through hierarchical rollout grouping and role-specific advantages. On WebArena-Lite-v2, JHiMA-WebRL-14B, consisting of a 7B actor and a 7B decomposer, achieves an average success rate of 37.2%, compared with 24% for a ScaleCUA-32B agent that we fine-tune with RL on the same training tasks and evaluate under the same protocol. Ablations show that jointly updating the decomposer during RL outperforms updating the actor alone. These results suggest that jointly learned role factorization with smaller models can be a competitive alternative to scaling monolithic agents for long-horizon web tasks.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.05230v1' target='_blank'>Handling Customer Preferences in Last-Mile Location-Routing: A Bilevel Optimization Approach</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:José Emmanuel Gómez-Rocha, José-Fernando Camacho-Vallejo, Elena Fernández</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-03 17:13:57</h6>
+<p class='card-text'>This paper introduces the Location-Routing Problem with Delivery Preferences, a last-mile delivery problem with service flexibility that integrates collection-point activation and routing decisions while accounting for customer choice. The company determines which collection points to activate, which customers to offer home delivery, and the corresponding delivery route. Customers subsequently decide whether to accept the proposed home-delivery service or collect their parcels from an activated collection point according to ranked preferences over delivery time intervals and collection points. This hierarchical interaction is modeled through a bilevel optimization framework, which can be formulated as a mixed-integer bilevel program that incorporates compensation mechanisms for service inconvenience. Two equivalent single-level reformulations that exploit the structure of the customers' problems are developed. In addition, a two-phase heuristic is proposed to generate feasible solutions that can be used as warm starts for the formulations. The computational experiments run to compare the performance of the formulations, show that the warm-start strategy becomes particularly effective as the instance size increases. The comparison with a benchmark model that ignores customer preferences indicates that explicitly accounting for customer choice alters the resulting location-routing configuration while improving customer preference satisfaction at a small increase in the company's overall cost. These findings highlight the importance of jointly considering operational efficiency, service flexibility, and customer autonomy in last-mile delivery planning.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.05172v1' target='_blank'>PadLoc: Training-Free Floor-Plan Localization by Sparse Geometric Matching</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Marian Bookhahn, Frank Neumann</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-03 16:38:47</h6>
+<p class='card-text'>We propose PadLoc, a training-free localization back-end that places a moving sensor within a known floor plan. Floor plans are cheap, persistent, and robust to appearance change, but recent learned-depth methods localize against them by filtering per-frame depth through dense $(x,y,θ)$ pose grids. PadLoc keeps the swappable depth front-end and replaces the dense grid back-end with sparse geometric matching: dominant wall orientations define a small pose-candidate set, masked normalized cross-correlation scores observed free space against the plan, and a moving-pose Gaussian-mixture Bayes filter plus consensus readout decodes the trajectory. Holding each competitor's depth fixed, PadLoc matches or beats UnLoc's forward filter and the F3Loc filter at every Gibson trajectory length, and UnLoc's offline refinement from $T=35$ on; it exceeds Z-FLoc's published results with a shared MapAnything front-end. On Bonn LiLocBench, PadLoc improves pooled SR@1m over UnLoc by 23-32 pp under wheel odometry and 35-43 pp with ground-truth motion; with full-FOV LiDAR plus wheel odometry the same readout reaches 100% SR@1m at 9-10 cm median error on the static sequence. On the Hilti-Trimble Localization Challenge PadLoc localizes a camera-only fisheye rig on construction floors hundreds of metres across at 0.90-0.98 online SR@2m on three of five sessions; adding learned wall isolation, applied to every session, covers all five at 0.67-0.92 with the localizer unchanged throughout. PadLoc thus matches or outperforms dense grid back-ends while preserving sensor modularity and a compact state that does not grow with trajectory length.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.05170v1' target='_blank'>Constraining tau-sterile neutrino mixing with high-energy astrophysical neutrinos</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Mauricio Bustamante, Qinrui Liu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-03 16:38:30</h6>
+<p class='card-text'>Whether a sterile neutrino mixes with the three active ones remains an open question. Its mixing with the tau neutrino, $|U_{τ4}|^2$, is the least constrained, since terrestrial experiments probe it only indirectly and over limited ranges of sterile-neutrino mass. We show that TeV-PeV astrophysical neutrinos probe it differently. Their sources make almost no $ν_τ$, but oscillations over cosmological distances turn about one third of them into $ν_τ$ before they reach Earth. Mixing with a sterile neutrino would make these $ν_τ$ scarcer, lowering the $ν_τ$ fraction that neutrino telescopes measure, whatever the sterile-neutrino mass. In contrast, sterile mixing with $ν_e$ or $ν_μ$ is nearly undetectable. Fitting the flavor composition measured by IceCube, with the composition at the sources left free, we find $|U_{τ4}|^2 < 0.88$ at 90% C.L. Combining IceCube with present and planned neutrino telescopes, including IceCube-Gen2 and HUNT, could lower this limit to 0.24-0.29 by 2040 and to 0.12-0.14 by 2050. By 2050, these limits would match some present terrestrial limits, though not the strongest.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.05148v1' target='_blank'>Creating Power Flexibility in Datacenters via Query Routing</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Shivam Patel, Bingqing Chen, Jared Fernandez, Guannan Qu, Gauri Joshi</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-03 16:22:48</h6>
+<p class='card-text'>The growing energy requirements of large language model inference highlight the need for datacenters to support safe grid operation by providing power demand flexibility, while maintaining service for interactive workloads. This work investigates query routing as a mechanism to enable such capability by dynamically allocating queries across different language model instances without deferring requests. We develop a general analytical framework that connects query arrival rates and sequence length distributions to token iteration time, request residence time, serving capacity, and power consumption of model instances. Leveraging this framework, we characterize the feasible query routing allocations and the corresponding power demand flexibilities, enabling the selection of routing strategies to achieve desired power consumption behavior. We validate our framework across four GPU platforms on language models ranging from 1B to 70B parameters, obtaining 2.8% mean absolute percentage error in estimating achievable power flexibility. We evaluate our approach on a real trace-driven simulation of a 10,000 H100 GPUs datacenter, exhibiting flexibility up to 16% of total power consumption, with 90% of the desired power reduction achieved within approximately 10 seconds. These results establish query routing as an effective mechanism for datacenter power demand flexibility and demonstrate the broader applicability of our proposed framework to datacenter level planning and orchestration.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.05143v1' target='_blank'>Better Plans, Better Outcomes: Integrating Historical Data into Student Planning in a Computing Course</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jiaen Yu, Jinya Jiang, Soohyun Nam Liao</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-03 16:20:49</h6>
+<p class='card-text'>Effective planning is critical for academic success, but in many computing courses students often lack accurate benchmarks for assessing the difficulty and time required for academic tasks. This phenomenon is more pronounced in large courses where instructors have limited capacity to provide individualized guidance on planning and task estimation. Although many planning tools exist, still, they rarely leverage task-specific, empirically grounded data from actual course contexts. Thus, we explored whether providing task-specific, data-driven information---assignment previews and cohort-level historical statistics---could support more effective planning. We present a lightweight and data-driven planning intervention embedded in the programming assignment workflow of an undergraduate computing course. We conducted quantitative and qualitative studies with 252 students across five programming assignments. Our results indicated that, in authentic course settings, the intervention led to more conservative and executable plans, with significantly higher plan adherence. Students with stronger adherence also achieved better performance on both programming assignments and exams. Qualitative findings also showed both practical planning support and mental benefits from intervention. These results highlight the potential of data-driven intervention to support student planning in larger courses settings where individual guidance from an instructor is further limited.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.05094v1' target='_blank'>A Gated Spec-Driven Workflow: An Audit-Trail Study of Coding-Agent Work</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Rodrigo Figueiredo Abdo, Pedro Carvalho Brom</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-03 15:52:28</h6>
+<p class='card-text'>Spec-driven development (SDD) asks a coding agent to work from specifications, plans, and task lists rather than from the chat transcript. We study one such workflow for Claude Code, in which almost every control is an instruction carried out by the same model that it constrains. The user must approve each stage before the next begins. A reviewer subagent checks each artefact against a fixed, stage-specific defect list, and an executor subagent may only touch the files listed in its task. After each block of tasks, the orchestrator runs a file-inventory check to detect undeclared changes. We analyse the logs and transcripts of nine features in seven projects, all run by the authors, ranging from a Fortran solver and Python programs to books and this paper. Of these, five finished with every planned task done, including the Fortran solver feature, and 288 of the 581 planned tasks were completed block by block. The executor kept to its declared files: it left only one undeclared change in the deliverable folder, and the check caught it, although its reports record other departures from the protocol. The weak point was the orchestrator, which runs and judges its own checks. It recorded undeclared changes in 11 of 247 block checks, mostly from the authors' in-round requests and the environment, and stopped work in only four.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.05077v1' target='_blank'>Graph-Based Dynamic Activity Prediction for Real-Time Power System Applications</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Stefanos Eleftheriadis, Mohammad Hashemnezhad, Savvas Panagi, Thibaut Vermeulen, Petros Aristidou</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-03 15:39:35</h6>
+<p class='card-text'>Online dynamic security assessment and day-ahead planning require rapid identification of where disturbances will produce significant dynamic activity. Full time-domain simulations are computationally demanding, while existing machine-learning approaches predict system-level outcomes or require post-disturbance trajectories. This paper proposes a pair-aware Graph Isomorphism Network with Edge features (GINE) framework comprising two task-specific models for predicting bus-voltage and generator apparent-power activity from the operating point and contingency description. Physically aware KPI cuts convert simulated responses into ordinal activity targets for model training. Evaluations on Nordic 32 and the French transmission system with more than 6 000 buses show that pair-aware fusion and graph embeddings improve on a local baseline on Nordic 32, with GINE the lower-cost graph encoder, and that the framework remains effective at large scale. As a downstream application, the predicted activity maps guide Adaptive Model Simplification, reducing continuous and discrete model variables by 72% and 66%, achieving speedups of up to 3.16x, and preserving voltage trajectories when critical substations are retained. These results demonstrate scalable, pre-disturbance prediction of component-level dynamic activity.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.05072v1' target='_blank'>Trajectory Evaluation via Rollout-Free World Model for End-to-end Autonomous Driving</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Junzhe Wang, Jinqing Zhang, Qingjie Liu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-03 15:36:04</h6>
+<p class='card-text'>Although existing candidate trajectory evaluators have substantially improved end-to-end planning accuracy, their underlying mechanism remains suboptimal. Model-based evaluators typically make scoring future-aware by explicitly predicting candidate-conditioned future states over the planning horizon, which we term rollout. However, rollout incurs high inference cost and accumulates prediction errors. We argue that planning does not require reconstructing a full future scene for each candidate, but only future-relevant information for reliable comparison. We therefore propose RFWorld, a Rollout-Free World model for end-to-end trajectory evaluation. RFWorld constructs a shared scene memory and shapes it into a future-readable representation via lightweight training-time temporal readout with semantic supervision, keeping training overhead low. At inference time, candidate trajectories directly query the shared memory via sparse spatial readout for scoring, reducing computation by roughly the planning horizon times the number of candidate trajectories, while avoiding recursive rollout errors. Experiments on NAVSIM and Bench2Drive show that RFWorld learns a more planning-aligned world representation and achieves state-of-the-art performance.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.05048v1' target='_blank'>Graph Similarity Meets Optimal Transport</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jens Breitung, Timo Gervens, Martin Grohe</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-03 15:16:26</h6>
+<p class='card-text'>A natural way to compare two graphs is to align their vertex sets by a bijection and to measure the difference of the aligned adjacency matrices in a matrix norm. Depending on the norm, this yields, for example, the edit distance, the cut distance, the spectral distance, and the local edit distance. To make these distances applicable to graphs of different order, one can consider blowups of the graphs or, equivalently, relax bijections to fractional alignments, that is, optimal transport plans between the uniform distributions on the vertex sets, in the spirit of Gromov-Wasserstein distances.
+  We investigate how much the optimal transport versions can differ from their bijective counterparts, that is, we quantify their integrality gaps. For the edit distance, we improve the best known upper bound on the integrality gap from 3 to 2 and the lower bound from 6/5 to 4/3. For the cut distance, we approach Lovász's conjecture that $δ_\square \le 2δ_\square^{OT}$ from both sides. We improve the previously best known upper bound $δ_\square \le 32 \cdot (δ_\square^{OT})^{1/67}$ (Borgs, Chayes, Lovász, Sós and Vesztergombi, Adv. Math. 2008) to $δ_\square \le C_\varepsilon \cdot (δ_\square^{OT})^{1-\varepsilon}$ for every $\varepsilon > 0$, and we construct graphs $G,H$ with $δ_\square(G,H) = 2δ_\square^{OT}(G,H)$, establishing a factor-2 lower bound that matches Lovász's conjecture. For the local edit and spectral distances, we obtain upper bounds of order $\sqrt{t\ln(1/t)}$ and $\sqrt{t}$, respectively, where $t$ is the corresponding optimal transport distance, and we show that, unlike for the edit and cut distances, no linear upper bounds are possible.
+  Finally, we show that computing the optimal transport distances is NP-hard, and we give hardness of approximation results for the cut, spectral, and local edit distances.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.04960v1' target='_blank'>An Agentic Framework for Quality-Aware and Scenario-Adaptive Image Compression</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Zhenghao Chen, Lebin Zhou, Zicong Chen, Naifu Xue, Jiahao Li, Bin Li, Dong Xu, Yan Lu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-03 14:19:39</h6>
+<p class='card-text'>Despite decades of progress, image codecs remain difficult to adapt to diverse real-world compression scenarios for two main reasons. First, most image codecs are optimized for a specific objective and require substantial redevelopment when the compression goal changes. Second, they typically assume clean inputs, whereas sensor-captured images often contain degradations that alter rate-quality behavior. To address these challenges, we propose Practical Image Coding Agents (PICA), a multi-agent framework that adapts existing codecs to diverse user requirements and potentially degraded inputs. PICA consists of four collaborative agents: a Perception agent that interprets user intent and analyzes image content, an Improvement agent that jointly considers bitrate and reconstruction quality to guide pre-coding restoration, a Coding agent that refines quality-control settings from global to regional levels, and an After-coding improvement agent that addresses residual degradations and compression-induced artifacts through restoration guided solely by image quality. To enable codec-agnostic regional adaptation, we introduce Agentic ROI Coding (AROIC), which treats the codec as a black box and allows the agent to automatically schedule, execute, evaluate, and reflect ROI coding plans without architectural modifications or codec-specific retraining. We integrate these four agents with a Scenario-Guided Quality-Rate (SGQR) evaluation strategy to enable more effective scenario-adaptive compression across heterogeneous codecs. Comprehensive experiments on clean, noisy, and blurred images across standard, perceptual, and machine-vision compression scenarios demonstrate that PICA consistently enhances the compression performance of both the conventional H.266/VVC codec and the neural Cheng2020 codec, outperforming competing compression methods on the Kodak, CLIC2020, and HEVC datasets.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.04944v1' target='_blank'>Local Visibility Roadmaps in Continous Multi-agent Path Finding</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Kristýna Janovská, Pavel Surynek</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-03 14:10:26</h6>
+<p class='card-text'>We address the problem of smooth continuous multi-agent path finding (SC-MAPF), where agents move in a continuous environment along smooth curves in continuous time. The paths for individual agents are searched in local visibility roadmaps that consider obstacles and other agents. A new algorithm is proposed in this work, which combines the previous algorithm CE-CBS for high-level search with any-angle path finding for local single-agent planning, where agents are to avoid obstacles, both static and other agents. The new algorithm is tested and compared to CE-CBS, the algorithm building individual paths using RRT$^*$, and SMT-CCBS algorithm, an algorithm for MAPF$_R$. Experimental results show various advantages of the new algorithm over CE-CBS and SMT-CCBS in comparable settings.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.04897v1' target='_blank'>TapeSAC: Automated, Pareto-Optimal Fine-Grained Memory Management for Large Model Training</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Kaihui Ren, Yifan Zhao, Zejian Wang, Yingtong Xiong, Xiaoling Zhou, Daohong Xu, Chenhao Guan, Zhikang Mo, Jihu Guo, Zhuoru Ma, Yufeng Li, Lin Zhang, Yiqiao Liao, Chengru Song</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-03 13:43:20</h6>
+<p class='card-text'>Selective activation checkpointing (SAC) decides which activations to save for the backward pass and which to recompute: each choice is a point in the plane of peak memory and recomputation time, and the goal is that plane's Pareto frontier. Current practice falls short of this goal. Hand-tuned policies fix a single point that does not adapt when the model, batch or kernels change; PyTorch's SAC reruns each block's forward pass in program order, recomputing values the backward pass never reads; and the memory budget of torch.compile treats recomputation as free or forbidden and selects saved tensors by bytes alone, an assumption that fails for the custom kernels that produce many of a large model's activations.
+  We present TapeSAC, which automates SAC in eager PyTorch without editing the model's forward code. TapeSAC records each block's forward pass at the dispatcher and, during backward, replays only the producers of the values autograd consumes, so saving a tensor eliminates every producer needed only for it. A planner selects the saved tensors from measured recomputation costs under a single limit on step-peak memory. On Qwen3.8-27B and Qwen3.6-35B-A3B, replay alone reduces step time by 3.0% and 1.7% versus full checkpointing at no greater memory cost; memory-aware planning raises these gains to 6.3% and 13.9% under a 90%-of-device-memory limit. The evaluated hand-tuned policies fall short of this memory-recomputation frontier and, on Qwen3.6-35B-A3B, run out of memory at larger batches. Over 500 steps on real data, TapeSAC reduces training time by 8-11%; on Qwen3.5-397B, it is 2.7% faster than a model-specific hand-tuned policy while using 14% less memory.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.04896v1' target='_blank'>On the Convexity of Common Resource Adequacy and Capacity Accreditation Metrics</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Gord Stephen</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-03 13:43:18</h6>
+<p class='card-text'>Many emerging capacity expansion optimization formulations implicitly presume the convexity (or concavity) of power system adequacy risk (or capacity accreditation) metrics. These assumptions have yet to be formally justified. We present concise mathematical proofs validating the claim for certain metrics (expected unserved energy and effective load carrying capability), but also provide simple invalidating counterexamples for others (loss-of-load expectation and equivalent firm capacity). Formulations built on non-convex (non-concave) metrics structurally undervalue candidate portfolio adequacy, and so cannot claim to produce least-cost expansion plans.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.04824v1' target='_blank'>Assignment-Free Swarm Navigation via Adaptive Target-Field Planning and Mean-Shift Exploration</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jiaxuan Li, Junhui Zhang, Bo Zhu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-03 12:53:12</h6>
+<p class='card-text'>Mean-shift exploration enables assignment-free swarm shape assembly, but obstacle-constrained navigation additionally requires coordinated adaptation of the desired morphology and its physical execution. This paper presents an environment-adaptive navigation framework that integrates target-field planning, execution regulation, and morphology-preserving mean-shift exploration. A feasibility-aware graph search plans the position, orientation, and morphology of an unlabeled target field without specifying robot-specific goals. An execution-regulated reference manager adjusts field progression and morphology switching using swarm entering, coverage, and lag metrics. A moving-frame controller separates prescribed rigid motion from local mean-shift redistribution and incorporates neighbor interactions and obstacle responses. Simulations and hardware experiments demonstrate that the proposed framework coordinates morphology transitions and collective motion for assignment-free swarm navigation through cluttered environments.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.04820v1' target='_blank'>AI for eGovernance: Leveraging Language Technologies For Digital Inclusion</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Cynthia Jayne Amol, Lilian Wanzare</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-03 12:48:16</h6>
+<p class='card-text'>The Kenyan government has invested heavily in the digitisation of public service delivery, in line with the Kenya Digital Master Plan 2022-2032. The national eGovernment platform, eCitizen, hosts services that are vital to citizens' livelihoods, including business registration, youth enterprise lending, digital literacy and tax filing. However, the platform faces digital inclusion challenges that limit equitable access for marginalised groups, particularly youth in rural areas and persons with disabilities. This exclusion is driven by a language barrier, since the platform is primarily in English with limited Swahili support, and by a text-only interface that excludes low-literacy and visually impaired users. This paper reports findings from six one-on-one interviews and an eleven-person roundtable discussion across four platforms essential to youth livelihoods: Ajira Digital, Kenya Revenue Authority (KRA) iTax, Higher Education Loans Board (HELB) and the Youth Enterprise Development Fund (YEDF). Drawing on these findings, on Web Content Accessibility Guidelines (WCAG) 2.1 principles as a design lens for diagnosing eCitizen's accessibility gaps, and on comparator models such as Estonia's Bürokratt and India's Bhashini, the paper proposes a human-centred, systems-minded framework for embedding generative AI and language technologies into eCitizen, including text simplification, neural machine translation, text-to-speech and speech-to-text. The paper argues that, when deployed responsibly with appropriate human oversight, these interventions could meaningfully improve access to government services for linguistically excluded citizens. It also emphasises that AI alone cannot overcome the broader structural barriers, including unemployment and educational inequality, that shape digital exclusion.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.04809v1' target='_blank'>RAHC: Rule-Augmented Hyper-Relational Knowledge Graph Completion for Materials Synthesis</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jiawei Sun, Sijia Xu, Zihan Chen, Zhengyi Yang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-03 12:42:06</h6>
+<p class='card-text'>Scientific discovery depends on reusing experimental knowledge, yet records scattered across papers and repositories are often incomplete. In materials synthesis, recovering missing conditions requires reasoning about the target material and the observed context of a specific experiment. Hyper-relational knowledge graphs (HKGs) represent this context through qualifiers, but existing completion methods leave domain knowledge and experimental regularities implicit. We propose RAHC, a rule-augmented HKG framework for single-slot and joint multi-slot synthesis-condition completion. RAHC builds a traceable rule catalog from training records and retrieved literature, retrieves rules for each query-candidate pair, and separately encodes graph structure and rule evidence. Hard rules constrain candidate validity, while soft rules guide ranking. RAHC-G aggregates rules using global reliability; RAHC-Q additionally learns query-specific relevance. Gated fusion combines structural and rule representations, while tuple-conclusion rules provide cross-condition evidence for joint completion. Experiments on five materials-synthesis datasets show improvements in single-slot and joint completion under Semi-inductive and Open-Answer Inductive settings, with Semi-inductive MRR gains of up to 15.6% over MAYPL. RAHC also improves performance on the entity-disjoint ILPC'22 Small benchmark, supporting transfer to fully inductive KG completion. These results support experimental condition selection, synthesis planning, and the reuse of scientific knowledge.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.04748v1' target='_blank'>Mass Scaling Laws for Energy-Optimal Horizontal Multirotor Flight</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Ayush Patnaik, Nicolas Michel, Leonard Baursfeld, Davide Scaramuzza, Xinfan Lin</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-03 12:02:36</h6>
+<p class='card-text'>Multicopters are a type of aerial robot seeing extensive real-world applications but with range and endurance as critical bottlenecks. Optimization of its energy efficiency through energy-aware flight planning (e.g. cruise speed-scheduling) has hence been an important topic. The mass of the multicopter is an important factor to consider, as it has a significant impact on efficiency, and many common applications are subject to frequent mass variation due to payload change. This work derives closed-form scaling relationships between the energy-optimal steady horizontal flight behavior of a multicopter and its vehicle mass, and validates them experimentally on two multirotor platforms. Specifically, for mass-only variation, i.e., when payload changes the vehicle mass while the airframe geometry, aerodynamic characteristics, and rotor configuration remain unchanged, we show through a combination of numerical simulation, theoretical derivation, and experimental validation that (1) the energy-optimal velocity is proportional to the square root of vehicle mass; (2) the energy-optimal pitch angle is constant with respect to mass; and (3) the optimal energy per meter is proportional to mass. The analysis shows that these three relationships arise from a common mass-similarity property of the steady-state flight and rotor-aerodynamic equations. Furthermore, the obtained scaling relationships enable simple yet effective cruise-speed planning to optimize energy efficiency and extend the range and endurance of the multicopter.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.04654v1' target='_blank'>BhopalMLS: A LiDAR Dataset for Semantic Scene Understanding in Heterogeneous Urban Environments</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Pyare Lal Chauhan, Vaibhav Kumar, Bharat Lohani</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-03 10:41:37</h6>
+<p class='card-text'>We introduce BhopalMLS, a large-scale Mobile Laser Scanning (MLS) dataset from a dense, heterogeneous urban environment in Bhopal, India, with mixed traffic, informal structures, and narrow unplanned streets. It spans approximately 10 km of road corridors with over 1.2 billion points and 19,518 annotated instances across 62 fine-grained static categories, grouped into 12-class and 21-class benchmark taxonomies; 6 optional moving-class subclasses support dynamic-object analysis. Existing 3D datasets, collected in well-planned cities, are structurally more uniform than such unplanned settings, and lack their subtype diversity. On semantic and instance segmentation at both granularities, fine-tuned foundation models surpass supervised baselines: Utonia(L) reaches 71.28% mIoU (vs. PTv3's 68.04% from scratch) and 44.07% mAP50 on the 12-class benchmark. Cross-region experiments against four established datasets (Ke-MLS, Toronto-3D, Paris-Lille-3D, SemanticKITTI) reveal a consistent asymmetric transferability: models trained on BhopalMLS transfer better than the reverse on every pair, for both Utonia(L) and Concerto(L) (mean 21.5, up to 36 mIoU points), holding even when the target is denser. Factor-controlled retraining at a fixed label budget, repeated on both models, attributes this to the coverage of BhopalMLS's subtype inventory rather than to dataset size or corridor geometry: collapsing each class to a single subtype costs 13.0 and 13.3 mIoU points for Utonia(L) and Concerto(L). BhopalMLS therefore offers a testbed for 3D perception beyond well-planned cities. Data and an interactive viewer are at https://geoai4cities.github.io/bhopalmls.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.04503v1' target='_blank'>Balance laws with measure valued source for commuting dynamics</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Fabio Ancona, Annalisa Cesaroni, Elio Marconi</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-03 08:30:50</h6>
+<p class='card-text'>In this paper we consider balance laws with measure-valued sources modeling commuters traveling along a road from residential to workplace locations. We introduce a notion of $(m_I, m_F)$-entropy solution, prove a compactness result for this class, and establish existence of solutions with prescribed spatial marginals for the sources representing the lodging and workplace distributions. Moreover, adopting a Lagrangian viewpoint, we describe commuting strategies as measures on Lipschitz curves with assigned entry and exit times, compatible with a given transport plan. Using the compactness result and a semi-discrete micro-macro scheme with source, based on the celebrated Follow-the-Leader model, we prove existence of admissible commuting strategies. Finally we prove the existence of optimal solutions for classical traffic cost functionals.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.04492v1' target='_blank'>Hybrid Particle-Voxel Dynamics for Multimodal 3D World Simulation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jimmy Wang, Yifan Chou, Kaifeng Zhang, Yixuan Wang, Binghao Huang, Tao Yu, Saleh Nabi, Yunzhu Li</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-03 08:20:53</h6>
+<p class='card-text'>Predicting how the world evolves in response to robot actions is central to policy learning, evaluation, and planning. However, many action-conditioned world models predict future observations in 2D image or video space without explicitly modeling the underlying 3D scene, making spatial consistency across viewpoints and over long-horizon interactions challenging. We introduce 3D World Simulator, an action-conditioned multimodal world modeling framework that jointly predicts appearance, geometry, and tactile observations from a unified 3D representation. Our approach combines a hybrid particle-voxel autoencoder that compresses point clouds into compact 3D voxel latents with an action-conditioned latent dynamics model that predicts their evolution. The shared 3D representation supports geometrically consistent rendering from arbitrary viewpoints and flexible integration of spatially aligned tactile signals. Our experiments demonstrate interactive, long-horizon, multimodal prediction at 50 Hz. We then show how our model enables scalable data generation for policy training and evaluation using tactile and multi-view visual observations, including wrist-mounted and novel camera views. Furthermore, we scale our method to large datasets containing diverse objects and demonstrate model-based planning with unseen objects and robot configurations. Together, these results highlight the potential of hybrid particle-voxel dynamics as a foundation for multimodal 3D world simulation.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.04470v1' target='_blank'>Using GeoAI and machine learning tools for consistent high-resolution land cover mapping based on time-series NAIP imagery</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jie Liu, Xusheng Tang, Chao Wang, Zhengxiao Yan, Yuchen Dai, Qi Zhang, Conghe Song</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-03 07:58:45</h6>
+<p class='card-text'>High-resolution land-cover maps support ecological monitoring, but consistent historical time series remain scarce because aerial imagery varies across years and sensors. We developed a dual-track workflow to produce temporally coherent 1-m land-cover maps from National Agricultural Imagery Program (NAIP) imagery without historical training samples. For higher-quality imagery from 2009-2017, we used a pretrained U-Net/ResNet-34 model and refined boundaries with the Segment Anything Model (SAM). For lower-quality imagery from 2004-2008, we reconstructed land cover through an NLCD-based spatiotemporal bridging and label back-casting pipeline. Evaluation across six counties in North Carolina and Pennsylvania yielded overall accuracies of 0.887 (2014), 0.886 (2017), and 0.733 (2004). Structure, Water, Wetland, and Cropland consistently achieved high F1-scores. The workflow integrates GeoAI and multiple data sources to address temporal heterogeneity in historical aerial imagery, supporting high-resolution land-change analysis and landscape planning across the conterminous United States.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.04346v1' target='_blank'>Trail systems self-organize through individual route optimization</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Brendan Wallace, Andrew Berdahl</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-03 05:29:33</h6>
+<p class='card-text'>As animals, including humans, walk, they compact the vegetation and ground beneath them, reducing the cost of movement for subsequent travelers. From this positive feedback emerge networks of trails which allow for efficient movement and store generational-scale information about the environment. Models simulating this process show how individuals following local cues produce trail systems with many of the features of real-world networks. However, little has been done to investigate walkers with more complete knowledge of their environment and the abilities to plan their behavior intelligently. Here we introduce a simple general model for trail formation, based on minimizing cost of movement by individuals. As in real environments, our simulations produce a striking variety of complex trail networks. We show that these trail systems optimally connect space according to the spatial needs of the walkers, that the geometry of those trail systems matches theoretical predictions and that the systems they generate may fall into multiple attracting states. As technological advances allow us to quantify trail systems across diverse habitats and species, our model provides a theoretical foundation for empirical research on animal trails and for understanding the emergence of human transportation networks, with implications for urban design.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.04325v1' target='_blank'>Computing Invariant Reachable Sets through Sum-of-Squares Programming</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Mohamed Khalid M Jaffar</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-03 05:06:08</h6>
+<p class='card-text'>Funnels, time-varying invariant sets around nominal trajectories, certify that a closed-loop system tracks its plan, and can be composed into verified motion plans. Their computation by sum-of-squares (SOS) programming is well established in formulation but not in practice: the result depends on implementation choices such as the initial guess, Lyapunov function normalization, and termination rule, which the literature documents only briefly. This paper presents a self-contained treatment of SOS-based funnel computation, implemented in the open-source package computeSOSFunnels. We propose a minimum-volume formulation with inlet and outlet constraints under which funnels with coinciding nominal endpoints compose by construction. Numerical experiments on a unicycle, with timing studies on a cart-pole and a 12-state quadrotor, characterize the pipeline: infeasible initial guesses are partly decidable before solving, the certificate shows no violations among 39,000 boundary samples per funnel under the true dynamics, and constructing the semidefinite program, not solving it, dominates computation time.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.04317v1' target='_blank'>SteelHuman: Predicting Operator Estimates of Steel-Scrap Composition from Sparse RGB Views</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jovan Kamchev, Zoran Ivanovski</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-03 04:48:42</h6>
+<p class='card-text'>Steel scrap composition estimation is an important part of yield planning and fair supplier compensation. Measuring the composition of a multi-ton pile is an inherently laborious process, so the assessment is often left to trained human operators. Recent works tackle composition-level tasks, but require structured acquisition and multi-stage preprocessing. We study a simpler approach to steel scrap load assessment by aggregating features from sparse, handheld views of the pile. On 600 out-of-fold piles, frozen DINOv2 tokens aggregated uniformly across views reach 13.4% total variation (TV) distance against operator estimates. Most remaining error lies in allocation among four thickness-defined heavy melting scrap (HMS) classes, yet image-dependent allocation reduces within-HMS TV from 25.1% under a training-set split prior to 11.2%. Due to the lack of public datasets and benchmarks for predicting composition, external evaluation relies on the public DOES dataset intended for classification. A classifier using the same frozen features reaches 93.97% accuracy, exceeding the published results we compare against. The composition model also aligns with related DOES categories without adaptation.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.04305v1' target='_blank'>Weather Adaptive Autonomous Driving</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Nicholas Taylor, Alexander Picon, Sudip Dhakal</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-03 04:36:24</h6>
+<p class='card-text'>Camera object detectors lose recall in rain, fog, snow and sand, and the confidence threshold at which a detector is deployed decides how many objects it misses and how many false alarms it raises. We study how a frozen detector should make this decision in adverse weather. We first reproduce SeqCRC, a conformal object detector whose first step calibrates the confidence threshold by conformal risk control (CRC), and use that step, calibrated separately in each weather condition, as our baseline. With YOLOv8x it keeps the held-out miss fraction within a 20% budget in every DAWN weather bin, where a single global threshold fails in fog, but the false alarms it needs are an output rather than a choice: from 1.6 to 117 per image across DAWN and BDD100K conditions. We then propose a calibrated trade-off dial. One setting, $λ$, the number of false alarms accepted to avoid one missed object, selects the expected-cost-optimal decision rule: either one score threshold, or a per-detection rule that keeps a box when its calibrated probability of being a real object, estimated by gradient-boosted trees from the detector's own per-box outputs, is at least $1/(1+λ)$. F-score preferences map onto the same dial, and CRC applied to $λ$ itself is planned to restore a per-condition miss guarantee. The dial is fitted once on BDD100K train and graded only on BDD100K val and DAWN.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.04284v1' target='_blank'>OmniScribble: Mixed-Initiative Authoring of Animated Sketches through Inspectable and Repairable AI Decisions</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Hien Trinh, Tan-Hiep To, Trung-Nghia Le</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-03 04:13:11</h6>
+<p class='card-text'>AI-assisted creative tools reduce the effort of authoring content, but delegating creative decisions to AI can make it difficult for authors to understand, correct, or redirect work. We present OmniScribble, a system for animating multi-object sketches that treats object decomposition and motion planning as editable artifacts. Rather than generating animation end-to-end, OmniScribble presents AI proposals at verification checkpoints, where authors can accept, repair, or regenerate them. Both manual and AI-assisted authoring operate on the intermediate representation and rendering pipeline, allowing us to isolate AI delegation. In a within-subject study with eight participants, AI-assisted authoring yielded a median within-participant reduction in completion time of 71.4\%, while perceived control and motion-intent alignment remained high. Interaction traces and interviews show that participants adapted to AI errors by repairing local issues, regenerating mismatches, and accepting proposals. These findings suggest that inspectable, repairable delegation enables generative automation while maintaining control over the outcome.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.04282v1' target='_blank'>TTSonic: A Unified Framework for Composable and Controllable Speech Generation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Zhedong Zhang, Kaiwen Zhou, Junyan Wu, Shengqiang Li, Xuran Chi, Xingui Zeng, Rui Yan, Xu Chen</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-03 04:08:32</h6>
+<p class='card-text'>Modern text-to-speech (TTS) systems can synthesize natural and expressive speech, yet a practical speech foundation model must go beyond naturalness to offer stable quality, precise controllability, and a broad set of composable capabilities within a unified framework. We present TTSonic, a unified speech generation model that supports zero-shot TTS, voice cloning, prosody cloning, instruction following, voice conversion, and cloning from noisy reference speech. Rather than relying on separate task-specific models, TTSonic accommodates diverse conditioning signals, including text, natural language instructions, reference speech, and text-described timbre, within the same model framework. Specifically, we develop a semantic--acoustic disentangled speech tokenizer through ASR-supervised semantic learning and reconstruction-guided generative refinement. Serving as the representational foundation of our unified framework, the tokenizer enables the Text-to-Semantic autoregressive model to focus on semantic and prosodic planning, while the acoustic flow-matching model specializes in high-quality speech rendering under diverse acoustic and timbre conditions. Building on this framework, we incorporate CoT-guided instruction-following planning and Text2Timbre voice design to support controllable speech generation. Experiments across zero-shot synthesis, multilingual and cross-lingual TTS, instruction following, voice design, voice conversion, and noisy-reference cloning demonstrate the competitive performance and broad applicability of TTSonic.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js'></script>
+</body>
+</html>
