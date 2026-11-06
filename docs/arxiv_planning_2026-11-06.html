@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>planning - 2026-11-06</title>
+<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap' rel='stylesheet'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css'>
+<style>
+body {
+font-family: 'Roboto', sans-serif;
+background-color: #f5f7fa;
+padding: 20px;
+}
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.card-title {
+    font-weight: 700;
+}
+.card:hover {
+    transform: scale(1.02);
+    transition: 0.3s ease-in-out;
+}
+</style>
+</head>
+<body>
+<div class='container'>
+<h1 class='text-center my-4'><i class='fas fa-book'></i>planning - 2026-11-06</h1>
+<div class='row'>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.08449v1' target='_blank'>VFlash: Fast, Accurate Visual Planning via Flash Primitive Decoding</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yu-Cheng Chou, Shihao Wang, Jin Huang, Chi-Pin Huang, Chiao-An Yang, Xianzhe Fan, Jing Wang, Zhiqi Li, Yuanguo Kuang, Ruijie Zheng, Johan Bjorck, Sifei Liu, Hang Su, Abhishek Badki, Lei Zhang, Alan Yuille, Linxi "Jim'' Fan, Jan Kautz, Zhiding Yu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-05 18:44:43</h6>
+<p class='card-text'>Models for physical AI tasks, such as robotics and autonomous driving, need not reason solely in language. They can use visual plans--points, bounding boxes, and trajectories--to represent spatial goals and anticipate motion. However, autoregressive vision-language models generate these plans one coordinate token at a time, making richer predictions increasingly costly. We introduce VFlash, a method for fast, accurate visual planning through Flash Primitive Decoding. VFlash exploits the known structure of visual primitives to predict their coordinates jointly, using a lightweight drafter that generates an entire primitive in one forward pass. The layout adapts to the primitive's type, dimensionality, and length, supporting compact boxes and long, variable-length trajectories. Crucially, spatial accuracy need not require reproducing an autoregressive model's exact token sequence. VFlash therefore trains on annotated primitives and directly accepts structurally valid predictions without target-token agreement. Across the evaluated 2D and 3D robot trajectory tasks, VFlash consistently reduces prediction errors relative to autoregressive decoding. Preliminary single-rollout measurements indicate approximately 25x faster generation for 3D point motion forecasting. A world action model conditioned on VFlash plans achieves 70.2% average success across four MolmoSpaces task suites, compared with 62.6% for the baseline.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.08388v1' target='_blank'>Top-Quark Pair Production and Decay in Extended Higgs Sectors</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Andrea Banfi, Alexander Lind, Jonas M. Lindert, Vishakha Lingadahally</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-05 18:05:15</h6>
+<p class='card-text'>Extensions of the Higgs sector in the Standard Model address outstanding questions like the first-order electroweak phase transition and also present a rich collider phenomenology. The two-Higgs-doublet model is a minimal extension of the Standard Model with an extra complex $SU(2)_L$ doublet, and consists of an extra scalar, a pseudoscalar and a pair of charged Higgs bosons along with a Standard-Model-like Higgs boson. We present a modified version of the hvq library of the POWHEG-BOX-V2 event generator interfaced with the OpenLoops 2 amplitude generator to obtain predictions for top-quark pair production at NLO accuracy, including top-quark decays with full spin correlations in a framework that extends the SM Higgs sector with an extra heavy scalar and a pseudoscalar. The interference effects between the scalar and pseudoscalar signals, and the Standard Model QCD background are implemented. We include parton showers and hadronisation, and take detector effects into consideration. The status of our work and plans to extend it to future collider projects are discussed.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.08369v1' target='_blank'>NPCBench: A Clinical Apprenticeship Benchmark for Multimodal Care-Pathway Reasoning in Nasopharyngeal Carcinoma</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Pengkai Wang, Wei-Wei Zhang, Yan Li, Min Tang, Zhitian Hou, Zeyu Liu, Guanghao Zhu, Yuanyi Wang, Yanggan Gu, Wenjun Wang, Minheng Ni, Congkai Xie, Zhijie Sang, Jianmin Wu, Ying Sun, Hongxia Yang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-05 17:48:55</h6>
+<p class='card-text'>Current medical benchmarks typically break down clinical competence into isolated factual questions, single-image tasks, or static case vignettes. These tests score individual answers, but reveal less about whether a model can integrate subspecialty knowledge with multimodal evidence and track a patient's condition throughout a course of care. To close this gap, we introduce NPCBench, a clinical apprenticeship benchmark for nasopharyngeal carcinoma (NPC). NPCBench mirrors specialist training, from guideline and foundational knowledge to case planning, longitudinal review, CarePath integration, and open-ended consultation. It contains 4,777 component and consultation items and a 100-patient CarePath cohort with 417 scored diagnostic and care tasks. The episode-level evaluation tests whether diagnostic and care answers are jointly correct within a care pathway. By linking stepwise tasks to patient-level care trajectories, NPCBench evaluates whether models ground decisions in visual evidence, interpret changes in patient state, and meet clinical requirements in consultation. Across 30 evaluated models, we observe a composition gap: strong performance on individual tasks does not ensure jointly correct diagnostic and care answers for the same patient. Among 21 multimodal models, strict CarePath success reaches at most 23%. Paired controls and physician calibration further examine evidence grounding, longitudinal revision, and consultation judging. Overall, NPCBench broadens the evaluation of medical artificial intelligence beyond static question-answering paradigms to an apprenticeship-oriented assessment of clinical workflows, thereby offering a testbed for evidence-based and temporally coherent reasoning in oncology care.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.08338v1' target='_blank'>GPWM: Modeling the World as 3D Particle Motion</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Robert Ren, Matthew Bronars, He Zhu, Yikai Tang, Jianing Zhang, Sergey Zakharov, Pavel Tokmakov, Katerina Fragkiadaki</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-05 17:24:36</h6>
+<p class='card-text'>We introduce GPWM, a Generative Particle World Model that predicts how 3D scenes evolve by generating the motion of particles and rigid bodies over time. Unlike video world models that generate scene appearance, GPWM operates directly in 3D physical space. A single representation and architecture cover rigid, deformable, cloth, and granular materials, in both passive physics and robotic interaction. GPWM is an object-aware multi-resolution transformer that combines flow matching with diffusion forcing to generate coherent physical trajectories far beyond its training horizon. We train and evaluate GPWM on ParticleWorlds, a 25.5-million-frame corpus spanning diverse geometries, materials, interactions, and robot embodiments. GPWM outperforms the best prior learned-dynamics baseline in each of six physical domains, reducing prediction error by 31% on average. Breaking from the domain-specific setting of prior methods, a single Unified GPWM models these heterogeneous regimes with one set of weights, largely outperforming per-domain baselines and even surpassing our own specialist models in two domains. GPWM further generalizes to unseen geometries, physical properties, object counts, and rollout horizons. Beyond prediction, GPWM enables contact-rich planning by learning a generative prior over joint actuator-object motion. Instead of searching over unconstrained actions, planning searches the model's latent noise for interactions that achieve a desired object-space goal. With the same world model, noise-space planning substantially outperforms action-space search on pushing and picking, where complex contact sequences are hard to discover. Executed open-loop in simulation, the resulting plans achieve goal-directed manipulation without reference action trajectories or goal-specific policies.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.08321v1' target='_blank'>ControlAnything: Generative UI and On-Demand Device Integration for Mixed-Reality Hand Interaction by a Coding Agent</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Bektur Ryskeldiev</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-05 17:18:13</h6>
+<p class='card-text'>Connecting hand input in mixed reality (MR) to a nearby physical device typically requires an integration written in advance for that device, its transport and the mapping. ControlAnything defers this integration to the moment of use and assigns it to a coding agent. On a Meta Quest 3, the wearer selects an object outlined by SAM 3.1 and states what their hands should control. An agent built on Meta's Muse Spark model then writes a connector program on the wearer's laptop, tests it against the live device through hand-written MIDI, Bluetooth and key-press transports, and returns augmented-reality (AR) controls, a per-frame hand program, or both. These outputs are a form of generative UI, interfaces created by an AI model; here, the agent also generates and tests the code that binds the interface to a physical device. In a single-session technical evaluation with the author as the only wearer, nine of ten requests addressing five targets reached a ready state, and the wearer stopped one. The median time to ready was 32.5 s (range 24.9-57.8 s, excluding speech transcription); sequential model calls accounted for a median of 89.9% of this time, and 91.7% of input tokens came from the prompt cache. The system's evidence of success extends to transport acknowledgements but not to physical effects. These findings point to connector reuse and the observation of effects through the headset's own sensors as next steps for on-demand device integration in MR. A user study with first-time wearers is planned.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.08286v1' target='_blank'>Interactive Visual Gym: Evaluating Visual Interaction Models with Simulated Users in Interactive Worlds</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Chenhao Zheng, Zixian Ma, Kai Li, Kanchana Ranasinghe, Jieyu Zhang, Artemis Panagopoulou, Weikai Huang, Jianxu Shangguan, Yuanyuan Tan, Silvio Savarese, Juan Carlos Niebles, Ranjay Krishna, Ran Xu, Honglu Zhou</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-05 16:50:31</h6>
+<p class='card-text'>Visual interaction models that support users during ongoing physical tasks require evaluation in closed loop, where assistant responses can change subsequent user behavior and task outcomes. Existing benchmarks largely rely on offline replay and therefore cannot capture these effects. We introduce Interactive Visual Gym, a framework for closed-loop evaluation and training of visual interaction models through joint simulation of executable task environments and human users. We contribute three simulators that recreate everyday tasks and human-aligned action spaces across cooking, household manipulation, and mobile-interface domains, together with a persona-conditioned user simulation harness that collaborates with the assistant while incorporating controlled execution errors and other out-of-plan behaviors. We instantiate the framework as IVG-Bench, a benchmark with 315 interaction scenarios. Evaluating state-of-the-art VLMs as visual interaction models reveals substantial limitations: the best-performing model, Gemini 4 Argon, completes only 53.4% of tasks within the time limit, exhibits significant weaknesses in factual grounding and actionable guidance, and is often too slow to prevent errors when response latency is considered. We verify our evaluation protocol with a human study which finds 78.5% agreement between our interaction-quality metric and participant preferences. We further show that the environments provide useful learning signals: in a proof-of-concept GRPO experiment, closed-loop training improves both task success and interaction quality for Qwen3.5-4B model in our cooking environment.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.08119v1' target='_blank'>H-BRICK: Hierarchical Boundary Reachability Index with Compressed Kleene Closure for Directed Grid Graphs</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Tolga Özaslan, Elif A. Özaslan</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-05 14:53:01</h6>
+<p class='card-text'>Repeated directed reachability queries arise in online path planning, task-agent allocation, and swarm control on static grid maps, where reachability is asymmetric and full transitive closure is storage-prohibitive. We introduce H-BRICK, a Hierarchical Boundary Reachability Index with Compressed Kleene closure for exact cell-to-cell queries on directed grid graphs. H-BRICK partitions the graph into tiles, computes a local Boolean Kleene closure within each tile, and projects it onto the tile's boundary ports. The resulting directed port-to-port summaries are then composed recursively across shared interfaces up to a single root covering the graph. We prove algebraically that the construction is exact: in the Boolean Kleene algebra of binary relations, every composed summary equals the boundary projection of the regional reflexive transitive closure, and every cell-to-cell query agrees with reachability in the original graph. Experiments on directed grid graphs across diverse map topologies compare H-BRICK against directed search and component-based baselines, and compare its storage requirements against full transitive closure. A batched reachability evaluation further demonstrates that sharing endpoint lifts across many-source/many-target queries amortizes hierarchical traversal and, at k=64, yields a 5.0x-22.9x throughput improvement over the scalar query loop. The results show that hierarchical boundary compression is most advantageous in query-intensive spatial graphs where online search traverses large reachable regions and the hierarchy maintains compact boundary interfaces.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.08111v1' target='_blank'>Reinforcing End-to-End Autonomous Driving Safety via Negative-Aware Planning in a Unified World-Action Model</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Zihao Zhang, Xinyu Zhang, Bing Zeng, Xingyu Chen, Zhenning Li, Bin Yu, Ziyuan Pu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-05 14:47:08</h6>
+<p class='card-text'>World-action models (WAMs) jointly model future traffic states and driving actions for end-to-end autonomous driving in intelligent transportation systems. However, their action learning remains dominated by expert-trajectory imitation, leaving unsafe alternatives close to expert trajectories insufficiently constrained. To improve WAM robustness in safety-critical scenarios, we propose NegWAM, a safety post-training framework for unified WAMs that learns explicit safety boundaries from near-expert failure trajectories. NegWAM constructs negative trajectories that are geometrically close to the expert trajectory yet carry safety risks, uses them as repulsive anchors to steer predictions away from dangerous behavior, and encodes them as scene-conditioned rider tokens to learn scene--trajectory compatibility. During training, NegWAM jointly optimizes the flow-matching and near-expert negative objectives, while the auxiliary rider branch is discarded at inference, incurring no additional overhead. On NAVSIM v2, NegWAM achieves 40.4 EPDMS on navhard, a 4.1% relative improvement over the strongest compared scorer-free WAM baseline, and achieves 93.3 EPDMS on navtest. These results demonstrate that NegWAM achieves strong performance in safety-critical scenarios while preserving routine-driving performance. Zero-shot closed-loop evaluation on HUGSIM further demonstrates cross-benchmark generalization. The code is available at https://github.com/Zizizi-hao/NegWAM.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.08100v1' target='_blank'>An Integrated Open-Source Stack for Vision-Based Autonomous Navigation of Wheeled Rovers</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Iaroslav Kolomiets, Iaroslav Sheipak, Mikhail Reppo, Vsevolod Egorov, Viktor Chertopolokhov, Isaac Chairez</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-05 14:42:49</h6>
+<p class='card-text'>Vision-based rover autonomy requires integrating perception, localization, planning and platform-specific control under limited sensing and computing resources. We present an open-source ROS 2 stack for following directional arrows, reaching a terminal cone and returning autonomously to the start. It connects YOLOv8n detection and geometric direction, range and bearing estimation with RGB-D SLAM, wheel-inertial state estimation, kinematics-aware planning, behavior-tree mission management and STM32 actuation. Standard interfaces separate reusable autonomy from the hardware layer; a proportional path-following plugin supports low-speed rover motion. Public resources include software, configuration, a labeled dataset, trained weights and evaluation logs. On 478 held-out images, the detector achieves mAP@0.5 of 0.720 under the Ultralytics evaluator and outperforms a classical OpenCV baseline under a shared evaluation protocol. The reported perception latency is 25 ms on a Jetson Orin NX. Three missions, one indoor and two outdoor, demonstrate marker-guided navigation and autonomous return without operator motion commands or reported collisions. Field results document integration failures and corrective choices; repeated instrumented trials remain necessary to quantify physical navigation errors and reliability.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.08095v1' target='_blank'>National-scale mapping of tree species composition in Switzerland from high-resolution aerial imagery and multimodal data</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yixin Zhou, Luca Ferrari, Verena C. Griess, Nataliia Rehush, Konrad Schindler, Mirela Beloiu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-05 14:40:09</h6>
+<p class='card-text'>Tree-species composition shapes forest productivity and how forests respond to climate disturbances such as drought, windthrow and insect outbreaks. Yet most national forest maps assign each pixel a single dominant species and cannot show the share of accompanying species. We mapped the basal-area shares of ten main tree species and a residual Other class across Switzerland at 30 m resolution. A deep-learning model combining 0.1 m aerial RGB imagery, airborne laser scanning (ALS), annual AlphaEarth satellite embeddings, and climate variables was trained on basal-area observations from 3,992 Swiss National Forest Inventory (NFI) sites. In spatial cross-validation, the model reached a macro-$R^2$ of 0.485 across the 11 classes. On an independent forest-reserve dataset, the map reached a macro-$R^2$ of 0.552 for individual 30 m pixels and 0.733 for plots, and identified the dominant class in 73.2% of pixels and 81.1% of plots. The map shows maple and ash as widespread minor components that dominant-class maps omit. It also reproduces the elevational sequence from broadleaved lowland stands through spruce to larch and Arolla pine near the treeline. By resolving the species mixture within each 30 m pixel, the map complements field inventory statistics with spatially continuous information that can support forest monitoring, the management of mixed stands, and climate-adaptation planning across Switzerland.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.08075v1' target='_blank'>Leave It Better Than Found: Value-Guided Cooperation in Sequential Tasks</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Mario Gomez Andreu, Michael Amir, Antonio Marino, Tianxu An, Marco Hutter, Amanda Prorok</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-05 14:26:43</h6>
+<p class='card-text'>We consider the problem of sequential task continuation, where one robot acts in a workspace that has been affected by a previous robot. Current approaches in multi-robot cooperation rely heavily on co-training or co-optimization, assumingthat the robots have access to collective interaction data during the policy training or planning process. However, as increasingly varied robotic embodiments and policies are deployed and operate in the same real-world environment, learning policies for cooperation becomes infeasible due to the combinatorial explosion of possible robot combinations that need to be accounted for. To address this challenge, this paper considers the problem of ad hoc sequential cooperation between robots that have never before operated together in a shared environment. We demonstrate that robots can explicitly communicate their environmental preferences through sharing their value functions, enabling coordination without the need for prior joint training. To ground this exchange and prevent overconfidence in out-of-distribution states, we further introduce a k-nearest neighbors (KNN)- based uncertainty filter. Our method yields an increase of up to 48.5 pp compared with naive or even selfish agents, in task success rates across simulated and real-world experiments, demonstrating that value function transmission between agents is useful not merely as an internal learning tool, but as an effective basis for ad hoc coordination. Website: https://proroklab.github.io/PAVE/</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.08004v1' target='_blank'>Extensions to the Dubins Airplane Method - Flight Performance Constraints in Uniform Wind</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Simon Schopferer</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-05 13:28:35</h6>
+<p class='card-text'>This paper extends the Dubins Airplane Method to generate trajectories for fixed-wing aircraft that remain within flight performance limits in the presence of uniform wind. Within the field of runtime-efficient trajectory generation for fixed-wing aircraft, the Dubins Airplane Method represents a well-received and widely adopted compromise between algorithmic complexity, runtime efficiency, and solution quality. However, its simplistic kinematic model restricts its ability to generate safe and feasible trajectories, especially in the presence of wind. As a mathematical foundation to overcome these limitations, a set of closed-form equations are derived that relate flight performance constraints to kinematic constraints. Building upon existing methods that use trochoids for planning of 2D trajectories in uniform wind, this paper presents a set of iterative algorithms for planning versatile 3D trajectories composed of trochoidal or circular turns and straight flight segments, with constant vertical speed, constant thrust or smooth longitudinal transitions. The presented methods comprise a flexible and modular framework for runtime-efficient generation of performance-aware trajectories based on parametric curves without the need for numerical trajectory representations.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.07850v1' target='_blank'>Learning Robotic World Models with Semantic and Visual Feedback</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Hao Wu, Yuqi Li, Yizhou Zhao, Kun Wang, Xiao Luo, Yu Cheng, Bo An, Yingli Tian, Laszlo A. Jeni, Ming-Hsuan Yang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-05 11:30:01</h6>
+<p class='card-text'>Robot world models predict action-conditioned future visual states to support robotic planning and decision making. However, visual reconstruction does not fully capture task progress, semantic evaluation alone provides limited constraints on fine-grained visual errors, and homogeneous predictions limit comparative feedback. We present RoboImagine, a framework for post-training autoregressive robotic world models through candidate-future comparisons with semantic and visual feedback. Diverse search promotes diversity among candidate trajectories under shared visual observations, action sequences, and task instructions. A frozen multimodal evaluator provides task-relevant semantic preferences through pairwise video comparisons in both presentation orders, complemented by pixel- and perceptual-level visual consistency feedback that constrains local structural and appearance errors. These signals drive policy optimization through group-relative advantages. Fixed initial context and branch-specific rolling histories support long-sequence generation with bounded context and consistent conditioning between candidate generation and policy optimization. Experiments with separately trained models on RT-1, BridgeV2, and RoboCasa cover real-world and simulated manipulation. On RT-1, under matched initialization, update counts, and evaluation protocols, RoboImagine improves PSNR by 1.26 dB and reduces LPIPS by 11.93% relative to continued supervised fine-tuning. Ablations show that diverse search improves prediction quality and that combined semantic and visual feedback yields higher external multimodal evaluation scores than visual feedback alone while maintaining comparable visual fidelity. Rolling histories further improve long-horizon prediction. These results support improving visual fidelity, task relevance, and long-horizon prediction through candidate comparison and complementary feedback.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.07808v1' target='_blank'>A Sequential Framework for Urban Drone Delivery: Network Design, Vehicle Sizing, and Energy and Cost Assessment</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Hong-Su Nam, Seokhwan Lee, Jungwoo Cho, Hak-Tae Lee</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-05 10:49:37</h6>
+<p class='card-text'>A sequential engineering framework is presented for urban drone delivery, linking hub location, route planning, mission-specific vehicle sizing, and energy and operating cost assessment. Aggregate origin-destination demand is assumed known a priori. For each hub configuration, the maximum required link distance is minimized, and feasible routes that return to their departure hubs are generated. Route frequencies are determined using mixed-integer linear programming to satisfy delivery demand. The resulting range requirement guides motor-propeller selection and battery sizing to minimize vehicle takeoff mass. Flight distances and frequencies, cruise performance, and vehicle dimensions are combined to estimate monthly energy consumption, fleet size, hub area, staffing, and operating cost. The framework is applied to district-level Seoul delivery data. Increasing the number of hubs from one to four reduces the required range from 30.6 to 21.9 km and vehicle takeoff mass from 8.12 to 6.12 kg. Despite a 21.5% increase in total flight distance, monthly flight energy consumption decreases by 13.1%, from 15.2 to 13.2 MWh. Battery replacement is the largest vehicle-related operating expense, while operating cost per delivery increases from USD 1.18 to USD 2.20 because of higher rent and labor costs at the hubs. Among the designs evaluated, range-matched vehicles achieve the lowest operating cost in the two- and four-hub networks; a longer-range vehicle is least costly in the three-hub network. Sensitivity analyses further examine the effects of delivery demand and operating assumptions. The results demonstrate that reductions in vehicle mass and energy consumption do not necessarily lead to lower system operating cost.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.07754v1' target='_blank'>Uncovering Systematic Blind Spots in Graph Database Testing through Integration and Process-Level Analysis</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Tinghan Li, Aoyang Fang, Longbin Lai, Zifan Xie, Hongbo Zhao, Yu Shao, Ying Zhang, Pinjia He</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-05 10:00:39</h6>
+<p class='card-text'>Graph databases are becoming foundational infrastructure for connected data, and a growing body of automated testing techniques has uncovered many bugs across mature graph database systems. Each technique checks a different aspect of correctness and exposes a different class of defect. Combining them is the natural next step, but each technique is judged by the real bugs it finds, not by useless reports or tests that can never fail, and that is what decides whether a developer can afford to fix the problems. To identify the remaining gaps, we integrated test capabilities from 8 testing methods and conducted an empirical study of their behavior, during which we found two blind spots. First, 12 hours of testing produce thousands of bug reports, far more than the number of genuine defects a mature database is likely to contain. Most reports are false positives caused by dialect or pattern-matching differences, and many of the remaining reports are duplicates. Second, analysis of process-level data reveals that many equivalence-based metamorphic test cases lose their ability to detect defects because of the optimization mechanism. Based on these findings, we summarize and realize these guidelines in GraphWeave, an integrated testing platform for graph databases. This includes a multi-agent system that analyzes the flood of bug reports to produce gating rules for issue filtering and adapter rules for dialect adaptation, and a plan-aware triage routes metamorphic pairs by plan, skipping those that share a plan on the same graph state and therefore cannot detect defects. We apply GraphWeave to NeuG, a recently open-sourced industrial graph database that has not been covered by prior graph database testing work. With modest manual effort, GraphWeave uncovers 19 previously unknown bugs, all of which have since been confirmed.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.07726v1' target='_blank'>Dual-Arm Tabletop Rearrangement with Movable Stacking and Gap-Aware Push Transfers</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Mohammadreza Firoozalizadeh, Zakiye Rostamirad, Arman Barghi, Ahmad Kalhor, Mohammadreza Nayeri, Mehdi Tale Masouleh</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-05 09:39:45</h6>
+<p class='card-text'>Object rearrangement in cluttered tabletop scenes is challenging, especially in wide workspaces where dual-arm systems improve coverage and efficiency. Limited free space often necessitates buffering, while objects near or across the shared reachability region of the manipulators must be transferred under careful coordination to avoid inter-arm collisions. Conventional inter-arm transfer typically relies on a fixed handoff configuration, which constrains where and how objects are exchanged, enforces spatiotemporal synchronization of the arms, and reduces flexibility in dense layouts. This paper presents a dual-arm rearrangement framework that combines movable stacking with Gap-Aware Push Transfer for asynchronous cross-boundary exchange. The method scans the shared boundary to identify collision-free transfer gaps, places an object near a selected crossing point, and then pushes it into the receiving workspace without requiring simultaneous interaction between the two arms. A joint Monte Carlo Tree Search (MCTS)-based planner coordinates both manipulators while reasoning over buffering and transfer decisions, and execution cost is used after planning to assess the resulting plan. Experiments show that the proposed method shortens joint execution sequences and becomes increasingly advantageous over a fixed handoff baseline as scene density increases, achieving lower execution cost in denser scenes while remaining competitive in lighter ones.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.07651v1' target='_blank'>GraspBench: Execution-Aware Cross-Robot Evaluation of 6-DoF Grasp Generation in MuJoCo</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Abdul Basit, Bibek Poudel, Muhammad Shafique</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-05 08:35:43</h6>
+<p class='card-text'>Modern 6-DoF grasp generators are often evaluated using grasp scores, dataset-level metrics, or single-robot demonstrations, yet proposal quality alone does not determine whether a grasp is executable by a particular robot. We present GraspBench, a controlled MuJoCo protocol for evaluating complete grasp-generation pipelines after robot-specific inverse-kinematics filtering, motion planning, and fixed approach-close-lift execution. GraspBench evaluates six configured pipelines across four robot embodiments, five diagnostic objects, and a structured tabletop pose grid, yielding 540 scenarios per method and 3,240 method-scenario evaluations in total. Missing outputs are conservatively counted as failures, and success follows the binary lift criterion produced by each method's execution runner. GraspGen achieves the highest overall success rate (73.1%), followed by EconomicGrasp (63.5%), while robot- and object-conditioned analyses reveal substantial variation across embodiments and object geometries. GPG produces the largest native candidate sets but achieves 44.3% success, indicating that proposal volume alone does not guarantee robot-executable grasps. Cluster-aware paired intervals support the principal method differences while not estimating repeated-execution uncertainty. The results characterize complete configured pipelines on fixed scenarios rather than intrinsic model quality or stochastic repeatability, showing that grasping performance depends jointly on the generator, robot embodiment, scene, and execution protocol.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.07634v1' target='_blank'>AiXapply: Fast and Reliable Full-File Code Integration with Specialized Small Models for IDE Workflows</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Siyuan Jiang, Xiang Cai, Peixu Wang, Yu Han, Yihong Dong, Wei Ning, Xuyuan Guo, Jincheng Wen, Dexin Liu, Wei Zhao, Ge Li</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-05 08:19:22</h6>
+<p class='card-text'>Large language models increasingly assist developers by proposing small code edits, yet reliably integrating a partial update snippet into an existing file while preserving unrelated content remains poorly supported by current code-generation workflows. We formalize the Code Integration (Apply) task as follows: given an original file and an update snippet, the system must produce the complete merged file while preserving all content outside the requested edit. We construct a high-quality multi-language dataset from real commits via a structured pipeline that converts code changes into update snippets paired with full-file ground truth and enforces consistency through verification and filtering. We then train a specialized 4B model, aiXapply, using supervised fine-tuning and reinforcement learning (GRPO). The supervised variant achieves 94.4% accuracy under our language-aware comparison, surpassing a strong large-model (Deepseek-V3.2) baseline (91.6%). Speculative decoding enables aiXapply-RL to reach $\sim$2700 tokens/s on a single A100 in a decoding subset; on the full benchmark, it achieves roughly 75$\times$ lower latency than the API-served Deepseek-V3.2 baseline. We further conduct an industrial deployment of aiXapply-RL in the aiXcoder IDE plugin as a dedicated Apply service, reducing mean Apply latency from 50 seconds to 1.89 seconds by offloading full-file generation from the upstream large model. Under time-based capacity planning, replacing one of five upstream serving instances would save 20% of upstream machine cost before the additional shared A100 service cost. Overall, our results demonstrate that treating code integration as a standalone task enables small models to achieve high accuracy, practical efficiency, and concrete industrial benefits in real-world IDE workflows where latency, cost and privacy are critical.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.07592v1' target='_blank'>Re-Planning Budgets under Admission Control in Grant-Free LEO Beam-Hopping Access</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Joon-Young Park, Young-Chai Ko</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-05 07:42:22</h6>
+<p class='card-text'>Reordering low-Earth-orbit (LEO) beam-hopping visits can reduce grant-free update delivery even when each region receives the same service time. We derive the largest limit on inter-frame position changes that meets a prescribed delivery-rate loss tolerance when every group is visited once per frame. The guarantee concerns a protected beam's spatially averaged long-run delivery rate relative to optimized periodic service under exogenous re-planning. Fixed admission can favor irregular visits, whereas admission optimized for each revisit interval makes the per-visit reward concave under sufficient conditions on transmission success. Periodic service is then optimal at a fixed mean interval. The shortest and longest allowed intervals determine the exact worst-case loss, attained by feasible alternating visit orders that respect every group's displacement limit. The resulting budget requires no estimate of the revisit-interval distribution and extends to independent stationary renewal updates. In a collision example with 40 groups and 40 resources per slot, increasing the loss tolerance from zero to 1% raises the limit from 17 to 24 positions. With independent priorities, the latter retains over 90% of the priority-weighted waiting-cost reduction achieved by unrestricted ordering. Received-power simulations under Rayleigh fading support the predicted loss.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.07512v1' target='_blank'>RLGPA: A Reinforcement Learning-Guided Granularity Planning Attack for Decision-Based Sparse Adversarial Examples</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Chao Zhou, Shenghua He, Jiaxin Mo, Qiangguo Yu, Fengchuang Xing</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-05 06:19:15</h6>
+<p class='card-text'>Decision-based sparse attacks must reduce perturbation support using only the victim's predicted label. The best restoration strategy varies as support contracts: coarse removal works early, while tail states need finer, history-aware tests. We propose RLGPA, an online reinforcement learning method that schedules support-reduction executors and their granularity under a hard query budget. A masked Dueling Double DQN selects among seven stable policy--scale actions; each action produces support-relative restoration groups that are rebuilt after every macro decision. A feasibility-preserving executor commits only adversarial restorations and feeds support gain and query cost back to the planner. Under the matched top-1-label oracle, RLGPA reaches 61\% targeted ASR at sparsity 0.01 on CIFAR-10 (vs. 25\% SparseEvo, 0\% Pointwise), and 75.5\%/73.0\% on ResNet50/ViT at sparsity 0.005 (vs. 29.0\%/15.5\%). A fixed-probe test reduces median \(L_0\) from 165 to 23 after 40 images without any update. State-blind and state-shuffled controls degrade significantly, confirming that the learned policy uses attack state; the main gains come from state-conditioned executor scheduling and dynamic repartition. The source code is publicly available at https://github.com/Acui001/RLGPA.git.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.07417v1' target='_blank'>MessyNav: Zero-Shot Navigation via Manipulation in Messy Environments</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Kenneth Llontop, Cherie Ho, Dylan Zhou, Anuva Banwasi, Priya Sundaresan, Carlota Parés-Morlans, Jeannette Bohg</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-05 04:12:56</h6>
+<p class='card-text'>Real-world environments are messy, with paths often blocked by everyday objects like chairs and toys, requiring robots to perform interactive navigation by manipulating obstacles to clear a path. Existing methods rely on extensive simulation-based learning or per-scene instructions specifying which objects to avoid or manipulate. They struggle to generalize across novel objects, diverse environments, and varied contexts such as a cart of fragile glassware that should be avoided while an empty one can be pushed. We formalize this problem as open-world interactive navigation and present MessyNav, a zero-shot framework based on vision-language models (VLMs). At its core, MessyNav performs explicit VLM-based affordance reasoning before task planning to decide whether to swipe, pick up, or avoid an object and produce a high-level plan. Evaluated on a mobile manipulator across real-world indoor and outdoor environments, MessyNav improves success rate by 27 percentage points (pp) over the strongest baseline in real-robot trials and achieves statistically significant gains in a larger-scale offline evaluation, without task-specific training.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.07384v1' target='_blank'>FFMT: Frequency-Factorized Multi-Rate Tokenization for Music-to-Dance Generation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Qirong Guo, Ruijie Li, Zeyan Li, Sicheng Shu, Guanzhi Ding, Weihang Ding</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-05 03:35:50</h6>
+<p class='card-text'>Dance motion combines slowly varying body configurations with rapid local movements. We investigate how explicit temporal-frequency decomposition can guide the temporal resolution and codebook capacity of discrete motion representations. We introduce frequency-factorized motion tokenization (FFMT), which separates root-relative motion into a low-frequency choreographic scaffold and a complementary high-frequency residual. FFMT uses a lower token rate and a smaller codebook for the low-frequency component, and a higher token rate and a larger codebook for the high-frequency residual. This representation further induces a plan-then-articulate autoregressive factorization: low-frequency tokens establish coarse choreography, while high-frequency tokens realize local motion details conditioned on the generated plan and music. Experiments on AIST++ and FineDance show strong distributional fidelity while preserving realistic diversity and music--motion synchronization. Ablations consistently support frequency factorization, asymmetric temporal allocation, and low-to-high conditioning.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.07296v1' target='_blank'>Robust Ranking of Port Impacts from Impending Tropical Cyclones: A Two-Stage Recommendation System</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Chenchen Kuai, Shixuan Tang, Chaolun Ma, Xiaoqiang Kong, Xiubin Bruce Wang, Yunlong Zhang, Zihao Li</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-05 01:19:53</h6>
+<p class='card-text'>When a tropical cyclone (TC) threatens several ports, preparedness planning depends on anticipating which ports are likely to be affected and where disruptions may last longest. Limited historical observations at individual ports and uncertainty in landfall location make these relative impacts difficult to estimate. We use a two-stage recommendation framework that first selects candidate ports based on their proximity to the expected landfall location and then ranks them by their estimated number of impact days. Using AIS-derived impact days for 37 ports and 31 TCs in the Gulf of Mexico study region, we compare three ways of representing port--cyclone interactions: pairwise feature interactions, tree-based feature combinations, and explicit feature crosses combined with learned embeddings. In tests on Hurricanes Nicole and Ian, the retrieval stage consistently identifies all observed affected ports under landfall uncertainty. Among the ranking models, Wide & Deep Learning achieves the closest agreement with the observed port rankings. Its mean ranking agreement exceeds that of the distance-based baseline by 85.5% for Nicole and 55.5% for Ian and is less sensitive to uncertainty in the landfall location. These rankings could help port authorities prioritize post-cyclone inspections and allocate recovery resources across ports threatened by the same event.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.07222v1' target='_blank'>SPILLWAY: Separating Target Admission from Sanitization to Defend Tool-Using Agents against Prompt Injection</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Woosang Lim, Yeseul Chang, Jaewoo Lee</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-04 23:18:10</h6>
+<p class='card-text'>Tool-using agents act on email, files, and payments, so an instruction hidden in a web page or a shared document can make an agent send data or money to an attacker. Many runtime defenses put a language model on the decision that lets an action through, so the decision depends on a model that may read the attacker's text and adds model calls to every step. Provenance defenses keep the model off the final check but need a model to plan or route each task first. Where an action goes can instead be read from the tools' typed returns: an email's sender or a payment's account arrives in a typed field, while injected instructions arrive as free text. SPILLWAY turns this observation into a deterministic floor with no per-task plan. The check admits a call when each target value that appears in tool output but not in the user's task was returned by a read-only tool in a typed field or is covered by a fixed delegation rule. A deterministic sanitizer removes instruction-like regions its fixed rules match before the model reads them and retains the removed spans as evidence, and a local judge may restore a refused call, never one whose target lies in the removed text. Across three backbones, and seven task suites on one of them, no standard templated injection redirects an action to an attacker's target under SPILLWAY, at the highest observed mean utility and composite scores (NRP, ERS) of the defenses we run under that attack. A forged chat template also produces a raw zero, and mean in-scope attack success under a released reinforcement-learning attacker is .007. SPILLWAY reaches this floor with no defense-triggered backbone re-run and almost no added model call. As personal AI agents act on users' email, files, and payments, SPILLWAY gives them an auditable refusal floor on where their actions go that keeps them useful and holds across backbones.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.07155v1' target='_blank'>Depth or Description? When a One-Step Latent Score Replaces Lookahead in Proactive Information Acquisition</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Biswa Sengupta</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-04 21:27:35</h6>
+<p class='card-text'>A proactive agent must decide what to ask before it acts. Exact lookahead values combinations of questions but is expensive and leans on a fitted model; a one-step score is cheap but can miss them. Our main finding: the need for depth often lies in how the hidden cause is described. A one-step score on the label can be blind to an interaction among answers. A score on a suitable latent cause is not, and where that latent encodes the decision it replaces most of depth at a fraction of the search. Described differently, the same problem can defeat the score while exact values do not move, so keep the latent small and check it against exact values. Probabilities learned from one language model's answers do not carry to another unless planning allows for both; those read from tokens are worth only a few labels.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.07108v1' target='_blank'>Practical Semialgebraic Optimization via Sparse Sample-Based Sum-of-Squares Programming</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jason Nezvadovitz, David M. Rosen</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-04 20:24:24</h6>
+<p class='card-text'>As the importance of semialgebraic optimization grows in engineering, so does the need for scalable sum-of-squares (SOS) methods. Their convex relaxations can guide mixed-integer search and often deliver certified global optima outright. Scaling traditional SOS typically requires hand-crafted bases and redundant constraints, whereas sample-based SOS numerically exploits feasible set geometry to reduce bases and build smaller, often tighter relaxations from black-box evaluations. However, discrete variables can require exponentially many samples, and each sampled equation couples all cliques, destroying correlative sparsity. In this work, we avoid enumeration and slack variables by sampling a tractable variety that contains the feasible set, with multipliers only for the omitted constraints. To recover sparsity, we introduce "separator" polynomials that split the sampled equations into local systems coupled only on clique overlaps. This yields a novel, convergent hierarchy of semidefinite programs (SDPs) with block sizes and sample requirements governed by local interactions rather than total problem size. Lastly, we show how to verify sample sufficiency and prune redundant equations numerically before solving. In robust estimation and motion planning, we obtain certifiably small optimality gaps at scales far beyond those reported for traditional sparse SOS. For example, we solve a truncated least-squares 3D registration problem with 1600 candidate correspondences in under 49 seconds using an off-the-shelf SDP solver on a laptop CPU.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.07070v1' target='_blank'>On the importance of medium-resolution continuum spectroscopy for JWST's extragalactic legacy</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Adam C. Carnall, Ho-Hin Leung, Struan D. Stevenson, Elizabeth Taylor, Abdurro'uf, Stella Antonogiannaki, Karla Z. Arellano-Cordova, William M. Baker, Guillermo Barro, Arghyadeep Basu, Ryan Begley, Sirio Belli, Danielle A. Berg, Aliza G. Beverage, Rachel Bezanson, Souradeep Bhattacharya, Cecilia Bondestam, Andrew J. Bunker, Emilie Burnham, Alex J. Cameron, Chloe M. Cheng, Yingjie Cheng, M. C. Cooper, Isa G. Cox, Fergus Cullen, Emma Curtis-Lake, Romeel Dave, Rebecca L. Davies, Miroslava Dessauges-Zavadsky, Mark Dickinson, Callum T. Donnan, Qiao Duan, Kenneth J. Duncan, James S. Dunlop, Andreas L. Faisst, Steven L. Finkelstein, Sophia Flury, Anna R. Gallazzi, Adriana Gargiulo, Steven Gillman, Karl Glazebrook, Ansh R. Gupta, Nimish P. Hathi, Kasper E. Heintz, Isaac J. B. Holst, Kei Ito, Christian Kragh Jespersen, Jeyhan S. Kartaltepe, Anton M. Koekemoer, Mariska Kriek, Danial Langeroodi, Joel Leja, Yongming Liang, Yuankang Liu, Derek J. McLeod, Ross McLure, Yurina Nakazato, Themiya Nanayakkara, Gael Noirot, Katherine Ormerod, Richard Pan, Minjung Park, Robert Pascalau, Pablo G. Perez-Gonzalez, Eniko Regos, Pierluigi Rinaldi, Lucie E. Rowland, Kate Rowlands, Ryan L. Sanders, Marc Sarzi, Alice E. Shapley, Maya Skarbinski, Martje Slob, Thomas M. Stanton, Yang Sun, Chamilla Terp, Francesco Valentino, Arjen van der Wel, Jorick S. Vink, Bingjie Wang, Vivienne Wild, Stephen M. Wilkins, Po-Feng Wu, Stefano Zibetti</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-04 19:28:23</h6>
+<p class='card-text'>We argue for a significant investment of JWST time into an extremely deep medium-resolution NIRSpec MSA survey targeting a large, representative sample of high-redshift $(z>1.5)$ galaxies, specifically intended to obtain high-SNR continuum detections. This is only possible with JWST, and no planned future instrumentation has similar capabilities, meaning that obtaining such observations with JWST must be urgently prioritised. The vast majority of existing archival NIRSpec observations are not deep enough for continuum science, being focused on the detection of emission lines. Deeper continuum data opens up the ability to constrain a much wider range of key galaxy physical parameters, including stellar population ages and metallicities, stellar kinematics and neutral gas physical properties, inflows and outflows. Such measurements will provide crucial insight into quenching physics, galaxy dynamical masses, merger histories, pristine early star-formation, reionization and the physics of Little Red Dots, as well as enabling all of the emission-line science that can be achieved with shallower observations. To facilitate future survey planning, we present an empirically derived relationship between rest-optical continuum SNR in JWST NIRSpec medium-resolution data, rest-optical apparent magnitude and exposure time, which we show to be independent of redshift (and hence the grating used). We then provide a 1000-hour sketch survey plan based on achieving the continuum SNR $=20$/pixel necessary to constrain key physical properties and scaling relations for a large galaxy sample at $z>1.5$. We finally discuss NIRSpec sky subtraction strategies, which are of critical importance for continuum SNR.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.06913v1' target='_blank'>cuRoboV2-Fast: Fast Torque-Limited Collision-Free Motion Planning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Balakumar Sundaralingam, Adithyavairavan Murali, Stan Birchfield</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-04 18:58:20</h6>
+<p class='card-text'>We present cuRoboV2-Fast, a GPU-accelerated planner that reduces both planning latency and execution time for collision-free, payload-aware, torque-limited motions. B-spline trajectory optimization reduces the required iterations, while accelerated robot computations and differentiable inverse dynamics reduce refinement cost and accommodate changing payloads. TimeOpt optimizes traversal speed along the fixed path under sampled velocity, acceleration, jerk, and torque constraints, exploiting local spline support to solve banded Newton systems efficiently on the GPU. With a 3,kg payload, cuRoboV2-Fast achieves 4.4 ms mean planning time on RTX 5090, 14.7x faster than cuRoboV2. Our method on Jetson AGX Orin plans faster than cuRoboV1 + TOPPRA on RTX 5090. A stereo-camera-based deployment on YAM achieves 5.93 s mean completed pick-and-drop cycles, 34.6% shorter than cuRoboV2. Code (Apache 2.0): www.github.com/NVlabs/curobo , Project Page: www.research.nvidia.com/labs/lpr/curobov2-fast .</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.06911v1' target='_blank'>BEAKER: An Expert-Curated Benchmark for Embodied Brains in Self-Driving Chemical Laboratories</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Fei Lin, Tengchao Zhang, Ziyang Gong, Xiaotong Yu, Bohan Zhang, Yifan Zhou, Qihao Yang, Ji Dai, Dong Li, Yining Jiang, Qinghua Ni, Jun Huang, Qiang Zhang, Yue Zhou, Zhihang Zhong, Yonglin Tian, Fei-Yue Wang, Xue Yang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-04 18:57:17</h6>
+<p class='card-text'>Self-Driving Chemical Laboratories (SDCLs) are moving chemical experimentation toward embodied automation, where machines must perceive laboratory scenes, reason about experimental states, and act under physical, procedural, and safety constraints. Although Multimodal Large Language Models (MLLMs) are increasingly considered as embodied brains for such systems, existing laboratory benchmarks mainly focus on safety, anomaly detection, or general scientific understanding, leaving their execution-oriented embodied capabilities underexplored. To fill this gap, we introduce BEAKER, a Benchmark for evaluating Embodied Actionability, Knowledge, Experimentation, and Reasoning in SDCLs. BEAKER contains 1,000 expert-curated question-answer samples across 11 image and video task types, covering key judgments required for chemical laboratory execution, including affordance grounding, trajectory planning, equipment, state, and safety recognition, apparatus setup, operation and step reasoning, and temporal procedure reasoning. All questions and annotations are manually created and reviewed by chemistry and embodied Artificial Intelligence (AI) experts, without AI-assisted generation or annotation. We evaluate 28 general-purpose, science-oriented, chemistry-specialized, and embodied MLLMs in an offline, single-turn setting. Results show that current models can follow coarse experimental procedures in videos, but still struggle to ground actions into operable regions and feasible trajectories, to recognize fine-grained laboratory apparatus, states, and safety norms, and to order steps in mid-length procedures. BEAKER thus reveals a clear gap between coarse procedural understanding and the precise, action-grounded perception required for laboratory execution, providing a diagnostic benchmark for future MLLMs in SDCLs.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.06910v1' target='_blank'>FrontierPhysics: Evaluating Agents for End-to-End Physics Research</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Bingran You, Wenjun Ke, Ria Rosenauer, Bo Liu, Wenbo Chen, Min Chen, Shuqi Xu, Yue Ma, Jiechao Feng, Bo Chen, Xiangkai Sun, Jiarui Liu, Jinen Guo, Zeyu Zhou, Xu Huang, Zhuohan Li, Haoyu Li, Heguang Lin, Lijie Ding, Yadong Zeng, Kangqi Zhang, Xinge Liu, Hanwen Liu, Zhenghong Li, Alexander von Recum, Yuchen Zhu, Felix Schwarzfischer, Yizhou Zhao, Jicheng Wang, Binxu Li, Qian Yu, Chan Li, Cheng Dai, Di Wang, Haoyu Zhang, Jiankai Sun, Kaituo Feng, Mian Qin, Ruihong Yin, Yiqun Luo, Weiwei Wu, Shihong Pan, Tsung Yeh Hsieh, Xiao Huang, Yan Zhang, Sihan Li, Zirui Ren, Zengji Tu, Kyoung Whan Choe, Ke Sun, Vincenzo Galia, Vaisakhi Mishra, Jiashu He, Hongyang Wang, Zhiheng Yang, Shubham Gaur, Yifan Gu, Shuyi Wang, Zihao Zuo, Steven Dillmann, Yiyou Sun, Xinyang Han, Hanchung Lee, Molei Tao, Yue Zhao, Shilong Liu, Yuchen Wu, Xuandong Zhao, Xiangyi Li, Florian Brand, Gerbrand Ceder, Hartmut Haeffner</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-04 18:56:22</h6>
+<p class='card-text'>AI agents are playing an increasingly important role in physics research. However, existing physics benchmarks only evaluate fixed questions, isolated sub-tasks, or paper reproduction with given solutions, and rarely check research quality alongside correctness. We introduce FrontierPhysics, an end-to-end benchmark with 56 tasks made by 42 physicists based on their own research, covering nine domains across theoretical, computational, and experimental physics. Each task requires agents to review the literature, develop a research plan, conduct research and experiments, and produce structured outputs and scientific manuscripts. Combining deterministic verifiers with expert-authored rubrics, FrontierPhysics evaluates whether agents' research is correct and publishable. Across 22 models in 26 configurations, no configuration passes more than 46 of its 168 rollouts. Manual review of agent trajectories shows that frontier agents' main weaknesses are insufficiently rigorous reasoning and limited expert intuition, rather than gaps in physics knowledge or execution errors.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js'></script>
+</body>
+</html>
