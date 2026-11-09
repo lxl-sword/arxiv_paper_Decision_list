@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>planning - 2026-11-09</title>
+<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap' rel='stylesheet'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css'>
+<style>
+body {
+font-family: 'Roboto', sans-serif;
+background-color: #f5f7fa;
+padding: 20px;
+}
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.card-title {
+    font-weight: 700;
+}
+.card:hover {
+    transform: scale(1.02);
+    transition: 0.3s ease-in-out;
+}
+</style>
+</head>
+<body>
+<div class='container'>
+<h1 class='text-center my-4'><i class='fas fa-book'></i>planning - 2026-11-09</h1>
+<div class='row'>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.09836v1' target='_blank'>Can Agentic Systems Close the Gap in Radiology with Production AI Tools?</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Aubin Charley, Julien Khlaut, Charles Corbière, Pierre Manceron, Corentin Dancette, Léo Machado</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-06 18:23:14</h6>
+<p class='card-text'>Radiology AI has developed along two paths: specialized models that perform well on narrow tasks but cover few clinical findings, and generalist models that address a broader range of tasks but remain prone to hallucination and inaccurate measurements. Combining the two through agentic systems offers a route towards comprehensive radiology reporting, but published systems are tied to one modality or body part. We describe a radiology agentic framework that standardizes how an orchestrator calls modular tools to produce a structured report, and use it to measure what such a system can do with the tools from FDA-cleared radiology AI devices. Report generation is simulated on a large multi-modality report corpus, with the orchestrator given either a catalog of finding classes consolidated from the cleared devices, each available on the modalities it is cleared for, or an unlimited catalog in which any class can be requested, and planning either from the clinical indication or from the target report. Tool outputs are simulated from the reference report, so the comparison isolates tool availability and orchestration from tool error. With the cleared catalog and the indication alone, the orchestrator recovers under a third of the clinically actionable findings; recovery improves substantially with the unlimited catalog, and further when the plan is written from the target report. Attributing every missed finding to a cause shows that most are classes no cleared device offers for the study's modality, and that a third are classes or tools that were offered and not called. Adding the most frequently missing tools closes most of the gap to the unlimited catalog on held-out reports, whereas a smaller orchestrator with the unlimited catalog gives up the whole gain. Tool availability and effective orchestration are thus complementary constraints on comprehensive AI-assisted radiology reporting.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.09778v1' target='_blank'>Quasipolynomial-Time Planning for Decodable POMDPs</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Oliver Dobson, Varun Jog, Chun Hei Michael Shiu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-06 17:40:31</h6>
+<p class='card-text'>We study planning for finite-horizon partially observable Markov decision processes (POMDPs) with finite state, action, and observation spaces. Both exact and approximate planning are known to be computationally hard in this setting, so prior work has explored natural assumptions that make planning easier. Recent work [Golowich et al., 2022] gave quasipolynomial-time approximate planning algorithms for observable POMDPs. These are POMDPs whose observation channels satisfy an $\ell_1$-observability condition, but notably, no assumptions are required on the transition dynamics. In a similar vein, for every fixed $ρ>0$, we give quasipolynomial-time approximate planning algorithms for $ρ$-decodable POMDPs. We show that decodability is implied by both $\ell_1$- and $\ell_2$-observability and is strictly weaker than observability. Moreover, we show that the optimal decodability constant can be computed in polynomial time, whereas computing the optimal $\ell_1$-observability constant is NP-hard in the worst case. We also show that the fast filter-forgetting guarantee underlying the approach of [Golowich et al., 2022] does not extend directly from $\ell_1$-observability to constant $\ell_2$-observability. Thus, decodability is an easy-to-check, unifying assumption under which quasipolynomial-time approximate planning for POMDPs is possible.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.09714v1' target='_blank'>Beyond Segmentation: Enriching ImageCAS with Coronary Ostia Landmarks, Rooted Centerline Graphs, and Open-Weight Localization Models</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Matteo Leccardi, Andrea Moglia, Marco Morandini, Michele Brembilla, Alessandro Nicosia, Andrea Penserini, Christian Brandini, Ender Konukoglu, Marco Marcon, Luca Mainardi, Pietro Cerveri</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-06 16:56:06</h6>
+<p class='card-text'>Coronary ostia and centerlines are key reference points for automated analysis of coronary computed tomography angiography (CCTA), from surgical planning to intraoperative vessel tracking. However, the only public ostium annotations cover 77 non-gated aortic scans, not CCTA, while CAT08 and ASOCA (32 and 40 CCTA scans) mark the ostia only implicitly, as centerline start points. This work enriches ImageCAS, the largest public dataset for coronary artery segmentation, with ostium annotations for its 1000 patients and centerline graphs rooted at these new ostia, making it, to the authors' knowledge, the largest public dataset for ostium localization and the only one with centerlines following the official ImageCAS masks and starting at annotated ostia. Three annotators marked each ostium in the first 500 volumes; in the next 500, the candidates of a model trained on the first batch were corrected (human-in-the-loop). Six 3D localization models, trained on ImageCAS, CAT08 and ASOCA, were benchmarked on 58 held-out volumes (50 ImageCAS, 4 CAT08, 4 ASOCA). SwinUNETR-V2 and nnResUNet localized all ostia without failure (>5 mm error), with median errors of 0.70-0.87 mm. Trained on CAT08 and ASOCA alone, SwinUNETR-V2 fails on 34% of right and 53% of left ostia, whereas adding 250 ImageCAS volumes removes all failures. The centerlines were extracted by a deterministic, quality-controlled minimal-path procedure; on ASOCA, they cover a median of 99.5% of the reference length, with a median per-patient mean distance of 0.22 mm between matched reference points and centerlines. Annotations, centerlines, code, and weights are available at https://hal9000-lab.github.io/.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.09678v1' target='_blank'>Calibrating demand models versus adjusting OD matrices with traffic counts: a controlled comparison</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yue Li, Shujuan Chen, Ying Jin</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-06 16:27:18</h6>
+<p class='card-text'>Traffic counts are routinely used to calibrate travel demand models, particularly when the origin-destination (OD) matrix is not observed directly. An important modelling decision is whether to adjust individual OD flows or the parameters of the demand model that generates them. The latter approach uses fewer parameters and preserves a relationship between zonal characteristics and demand, but its accuracy depends on the assumed model structure. We compare three established approaches using the same prior information, traffic counts and equilibrium assignment. They estimate five production-gravity coefficients, origin and destination adjustment factors, or individual OD flows. Synthetic experiments on the Eastern Massachusetts and Chicago Sketch networks allow recovery to be assessed against known demand under different forms of model misspecification. Calibrating the five-coefficient model gives better OD recovery and held-out link-flow prediction when demand follows its assumptions or a two-purpose gravity process. Its advantage declines or reverses when destination choice or production relationships vary across zones. Cellwise adjustment achieves the closest fit to calibration counts in 65 of 66 evaluated conditions, yet it recovers OD demand least accurately of the three approaches in 45 of them. These findings show that model parameterisation matters beyond calibration fit. For transport planning, traffic counts should be used alongside independent evidence on trip production and distribution when selecting and validating a demand model.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.09625v1' target='_blank'>Encoding Memory in World Models with Test-Time Model-Based Reinforcement Learning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Maxime Burchi, Fayaz Ali Dharejo, Radu Timofte</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-06 15:45:54</h6>
+<p class='card-text'>Model-based reinforcement learning (MBRL) approaches have demonstrated strong performance across diverse domains in recent years, learning accurate world models from agent trajectories. However, despite this progress, current approaches still struggle to surpass human performance on tasks that require long-term memory and planning. In this work, we address the problem of long-term memory in MBRL by moving beyond the commonly studied paradigm of architecture design. We introduce Test-Time Model-Based Reinforcement Learning (TT-MBRL), using gradient descent at test time to encode the memory of episode observations into world model parameters. This enables the agent to learn a distinct world model for each episode, improving memory capabilities compared to traditional approaches that solely rely on contextual memory. We first establish a proof of concept on a simplified two-dimensional variant of the Memory Maze environment, which we refer to as Memory Maze 2D, showing consistent improvements across different world model architectures. We then demonstrate the effectiveness of TT-MBRL in the 3D domain, achieving new state-of-the-art results on the Memory Maze benchmark. Finally, we show that TT-MBRL maintains strong performance on non-memory benchmarks such as DeepMind Control and Atari 100k.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.09561v1' target='_blank'>Lightweight Path-Aware Frontier Re-ranking for LiDAR-Based UAV Exploration</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Duc Manh Do, Thanh Nguyen Canh, Ngoc Minh Do, Mai Thanh Thai, Xiem HoangVan</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-06 15:03:12</h6>
+<p class='card-text'>Autonomous 3D exploration with UAVs requires efficient target selection under limited flight time and onboard computation. In conventional Euclidean-distance-based frontier pipelines, geometric distance may poorly represent the actual collision-free travel cost in cluttered environments, leading to inefficient frontier choices. This paper presents a lightweight path-aware frontier re-ranking method for LiDAR-based UAV exploration. The method first retains a small top-N set of promising frontier candidates using a lightweight utility function and then applies time-bounded RRT* planning to estimate their feasible path costs for re-ranking. The path generated for the selected frontier is further reused for navigation to reduce redundant global planning. Experiments in three warehouse-like environments show that the proposed method consistently produces shorter exploration trajectories than conventional frontier baselines, with traveled-distance reductions of up to 14.1%, while reducing exploration time by up to 9.5% in two environments and remaining competitive in the third. The method maintains map detail comparable to the conventional OctoMap-based baseline, demonstrating an effective trade-off between exploration efficiency and mapping quality.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.09525v1' target='_blank'>Secondary neutron beam production at Jefferson Lab</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:A. Fulci, P. Ambrozewicz, M. Battaglieri, M. Bondi, R. De Vita, M. Filippini, G. Foti, S. Grazzi, G. Mandaglio, T. Nagorna, A. Pilloni, M. Spreafico, S. Vallarino</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-06 14:37:35</h6>
+<p class='card-text'>We investigate secondary neutron production by an 11 GeV electron beam in the Hall A beam dump at Jefferson Lab and their transport to a downstream experimental area. This secondary beam could operate opportunistically with the primary electron-scattering programme. The neutron energy spectrum extends from thermal energies to several GeVs, offering a distinctive opportunity for irradiation at energy grater than 1 GeV. We considered three configurations: the current setup, the planned BDX facility, and an optimized BDX layout with a dedicated neutron extraction pipe. We also studied how radiators made of different materials and placed upstream of the beam dump increase neutron production.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.09413v1' target='_blank'>SmartBloch-Agent: An Agentic Framework for Automated MRI Sequence Design and Optimization</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jiakai Yang, Haoye Zheng, Yixiao Yue, Qinqin Yang, Zhong Chen, Shuhui Cai, Congbo Cai</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-06 12:44:55</h6>
+<p class='card-text'>Magnetic resonance imaging (MRI) pulse sequences organize radiofrequency excitation, gradient encoding, and signal acquisition, determining magnetization evolution and image formation. Sequence research requires translating imaging objectives into executable protocols meeting physical and acquisition constraints, refined via physical simulation, signal reconstruction, and scientific evaluation. Sequence construction, physical verification, parameter search, and assessment involve many tools and manual decisions, limiting automation from objective to verifiable sequence. We develop SmartBloch-Agent, an integrated framework for automated MRI sequence design and optimization. Given objectives and scientific constraints in natural language, an AI agent interprets goals, plans tasks, orchestrates tools, and makes feedback-informed decisions, drawing on a construction module and optimizers for structural design and parameter search. Our GPU-accelerated SmartBloch engine supplies physical computation for both stages, so the framework configures, per sequence and objective, event validation, Full-Bloch magnetization evolution, signal acquisition, image reconstruction, and scientific evaluation, and closes the loop without external MRI simulators. Results return to the agent to guide sequence revision, parameter optimization, and candidate selection, and the design files carry simulation, reconstruction, and evaluation evidence, forming an output package for a real-scanner workflow. Experiments show the framework automatically designs and optimizes MRI sequences for varied objectives and constraints, refines candidates with physical feedback, and improves several parameter-estimation metrics and downstream quantitative reconstruction. SmartBloch-Agent unifies objectives, design, physical execution, and evaluation into a continuous workflow for end-to-end automation of MRI sequence research.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.09396v1' target='_blank'>Travel Cost Calibration for Multi-Agent Target Assignment and Pathfinding</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yu Kumagai, Ryohei Banno, Keisuke Okumura</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-06 12:34:10</h6>
+<p class='card-text'>Target assignment and pathfinding (TAPF) is an appealing extension of classical multi-agent pathfinding (MAPF): each agent has a set of targets, and the planner must both assign a target to each agent and plan collision-free paths for them. A trivial approach is to compute an assignment that minimizes the total single-agent shortest-path distance over agent--target pairs, and then solve the resulting MAPF instance. However, this approach falls short because the shortest-path distance remains a proxy that ignores interference among agents. Assigning targets based on the costs agents actually pay, which depend on how every other agent is assigned and routed, would yield a better final outcome. To this end, we propose an iterative TAPF method that improves target assignments by calibrating travel cost estimates from fast, suboptimal MAPF feedback. Experiments show that our method produces solutions close to optimal on small instances and outperforms existing planners in solution quality on larger ones.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.09351v1' target='_blank'>AUTEUR: Acoustic Plan Learning for Red-Teaming Text-to-Audio Models</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jiashu Zhang, Jiaming He, Zheming Zhang, Kaizheng Wang, Bing Li, Zhiyuan Zha, Yi Yu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-06 11:46:54</h6>
+<p class='card-text'>Automated red-teaming of text-to-audio models requires test prompts that pass textual screening and expose harmful acoustic content. The central challenge is to connect the sounds produced by the target model to both reusable test generation and prompt revision. Our key idea is to represent test descriptions as structured acoustic plans that organize foreground sounds, context, and vocal attributes. To this end, we propose acoustic plan learning, a framework that learns and refines these plans using waveform feedback. We train the plan generator through supervised fine-tuning followed by reinforcement learning with audio feedback while keeping the target audio model fixed. At inference time, the same trained model generates initial plans and uses feedback to revise their context and vocal attributes while preserving the foreground. Experiments across four target systems show attack success rates of 79.4% on TangoFlux and 95.6% on Kling. The resulting test prompts also transfer across open-source and closed-source models, indicating shared acoustic vulnerabilities.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.09283v1' target='_blank'>Hierarchical Signal Temporal Logic Control of Continuous-Time Systems</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Armin Pirastehzad, Bart Besselink</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-06 10:35:34</h6>
+<p class='card-text'>For linear continuous-time systems, we solve the signal temporal logic (STL) control problem by translating it from continuous to discrete time such that a solution to the discrete-time problem guarantees a solution to the original continuous-time one. We split control synthesis into three hierarchical tasks. First, we discretize the continuous-time STL formula into a discrete-time one by sampling the temporal behavior it specifies. We accordingly discretize the continuous-time system by constructing a discrete-time model such that the input-state trajectories of the continuous-time system can be characterized as piecewise polynomial interpolations of the input-state trajectories of the discrete-time model. Second, we exploit this characterization to formulate mixed-integer linear constraints on the discrete-time trajectories that allow for planning a trajectory whose piecewise polynomial interpolation satisfies the continuous-time STL formula. In fact, system discretization and trajectory planning are performed in such a manner that any feasible solution to these constraints gives a discrete-time trajectory that can be transformed into a continuous-time one guaranteed to satisfy the original STL formula. Third, we propose a step-by-step algorithm to construct the control input that realizes such continuous-time trajectory.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.09271v1' target='_blank'>Zero-Shot Weight-Space Programming Across a Difficulty-Graded Ladder of Two-Player Games</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Eduardo C. Garrido-Merchán</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-06 10:26:48</h6>
+<p class='card-text'>Weight-space programming sets every weight of a feed-forward network by hand, from an explicit specification of the desired computation, with no gradient descent and no training data anywhere in the construction. We ask how far a large language model can carry this practice, zero-shot, across games of deliberately increasing difficulty. We design a four-rung ladder (Nim, tic-tac-toe, two sizes of Connect Four, and a chess endgame) spanning four axes of difficulty, and build a second, independent network at each rung, using a structurally unrelated game at matched difficulty, to separate what a rung's finding says about the difficulty level from what it says about the one game used to measure it. Ten networks are built and independently verified. Six admit a complete, non-statistical proof of correctness against an independent oracle. The chess-endgame rung is exact where correctness is cheap, move legality and, in one network, an exact one-ply mate detector, and collapses where it is expensive, composing a multi-move mating plan, from 84.1-100% success at the one-ply tactics it was built to get right down to 0.57-9.13% in full adversarial play; its replicate shows this collapse is an order of magnitude less severe under a shorter required plan and exact rather than heuristic safety checks. The standard-sized rung confirms, by holding hand-set evaluation weights fixed and adding only shallow search, that the remaining gap is an architectural ceiling rather than a matter of engineering effort, and this exact collapse reproduces across two structurally unrelated games. We release all ten networks, their independent oracles, construction-cost measurements, and a cold-prompt protocol for a future cross-model comparison</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.09270v1' target='_blank'>EGT: Execution-Grounded Traversability through Learned Closed-Loop Trajectory Distributions</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Chinmay Mundane, Amith Manoharan, Arun Kumar Singh</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-06 10:26:44</h6>
+<p class='card-text'>Rough terrain traversability is often estimated through point-wise roll, pitch, or force-angle margins along a planned path. However, these metrics are often inaccurate and overly conservative because they ignore how terrain disturbances and low-level controller corrections can affect the vehicle's motions. To overcome these limitations, we introduce Execution-Grounded Traversability (EGT), defined as the probability that a vehicle-controller pair can execute a candidate path while meeting trajectory-level tracking and progress requirements. We estimate EGT by predicting the distribution of closed-loop trajectories using a latent-space flow matching (FM) model conditioned on multi-resolution terrain features and 3D vehicle attitude and wheel-ground contact points prior. Across 650 simulated trials on unseen terrains, EGT reduces safe-path rejection to 2.2% (versus 11.4%-39.5% for pose-margin and force-angle baselines) and unsafe acceptance to 7.7%. Integrated into a receding-horizon sampling-based planner, EGT reduces navigation failure rates by 24-42 and 30-44 percentage points over [1] and [2], respectively, while cutting goal-reaching time by up to 20.5% and 45%. Finally, we demonstrate zero-shot transfer of our simulation-trained model to real-world outdoor experiments.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.09210v1' target='_blank'>TPS-A*: Path Planning for Any-Shape Vehicles with Certified Collision Checking in Trajectory Parameter Space</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jose Luis Blanco-Claraco, Shravan S. Rai, Fernando Cañadas-Aránega, José Luis Torres-Moreno, José Carlos Moreno-Úbeda</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-06 09:30:22</h6>
+<p class='card-text'>Global planners for ground vehicles usually approximate the vehicle by a disk, trading safety against conservativeness, while exact-footprint checking pays for every candidate motion, pose, and footprint edge. We present TPS-A*, a lattice planner whose edges are kinematically feasible trajectories from parameterized trajectory generators, built on certified collision checking in trajectory parameter space. A grid precomputed per footprint returns, in one pass over the local obstacles, a certified free distance along every candidate trajectory, so the per-node collision cost is independent of footprint complexity and trajectory count. We prove that this grid never overestimates the free distance of the continuously swept, possibly non-convex footprint, and state the planner's guarantees: collision-free paths and bounded suboptimality relative to its lattice abstraction. Goals with or without heading are reached exactly by Reeds-Shepp shots certified as trajectories of the same generators. An exact independent test finds no collision in its paths. On 300 cluttered worlds, with the true footprint and the same goal pose for all planners, it solves every query with a collision-free goal pose in a median of three milliseconds on an AMD Ryzen 7 2700X, on par with hybrid A*, 45\% of whose paths overlap obstacles, and nearly sixty times faster than a state-lattice planner, the only other collision-free one; with position goals, eighty-nine times faster than hybrid A*. It matches hybrid A* in automated parking and on narrow doorways, docks a non-convex fork footprint that no convex model admits, and drove a real robot across a university campus among people.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.09130v1' target='_blank'>Auditing Grasp Feasibility Predictors with Planner-Verified Counterfactuals</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Sajid Ansari, Antony Thomas, Girish Varma</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-06 08:07:42</h6>
+<p class='card-text'>Grasp-feasibility predictors report near-perfect accuracy on Task and Motion Planning benchmarks, but high accuracy on these benchmarks does not verify that a predictor uses the collision geometry that the motion planner checks. We propose a planner-verified counterfactual (CF) test: holding the grasp pose fixed, we insert a solid obstacle into the approach corridor, add its points to the model input, and let a planner re-derive the label, which flips from feasible to infeasible. Across eight predictors spanning point clouds, voxels, depth, and object tokens, CF-pair AUROC falls from high natural AUROC (0.920-0.996) to chance (0.470-0.504), and the flip holds across four planners, two arms, and a real-object obstacle. Predictors fail at different resolutions, from a bounding box to a 12.5 cm voxel. In the point-cloud models we dissect, the obstacle either moves the representation in a direction unrelated to whether it blocks the grasp or is not registered at all. A clearance-aware read of the corridor points, trained on the unmodified benchmark with no counterfactual scenes, reaches 0.983 CF-pair AUROC, but it remains bound to its trained obstacle placements; a placement-invariant clearance representation is still open. We release the counterfactual labels, metrics, datasheet, and relabeling pipeline at https://github.com/codewithsajid/graspfc-cf.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.09092v1' target='_blank'>AdaAlloc: Adaptive Visual Token Allocation for Long-Video Question Answering</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Joungbin An, Kristen Grauman</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-06 07:21:49</h6>
+<p class='card-text'>Long-video question answering forces multimodal large language models to reason under strict visual-token budgets, creating a tradeoff between broad temporal coverage and fine-grained spatial detail. Uniform sampling preserves coverage but often obscures decisive local cues, while caption-based or frame-similarity retrieval operates over lossy proxies that can miss motion, state changes, and before-after relations. We recast long-video reasoning as a visual-token allocation problem: given a fixed budget, decide how much to spend on global context versus high-resolution local evidence, and where in the video to draw that local evidence from. We introduce AdaAlloc, a training-free inference framework that adaptively allocates visual tokens between a global video overview and localized visual detail. AdaAlloc first plans a global/local allocation policy, then uses temporal grounding to locate candidate evidence segments and refines them into a compact temporal memory. The selected policy controls both frame sampling density and resolution, combining sparse, lower-resolution global frames with denser, higher-resolution local frames drawn from the refined memory. The final answerer reasons over the allocated global context and refined local evidence. Across LVBench, MLVU, VideoMME, and LongVideoBench, AdaAlloc improves over budget-matched uniform sampling by up to 10.5 percentage points and outperforms the compared frame-selection and agentic methods on their reported benchmarks.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.09015v1' target='_blank'>SIMBAD: Spatio-Temporal Traffic Forecasting Robust to Aperiodicity</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Daniel Y. Lee, Seungwon Shin, Seunghoon Han, Sungsu Lim, Susik Yoon</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-06 05:45:28</h6>
+<p class='card-text'>Accurate traffic prediction is essential for urban planning but remains challenging due to the irregular patterns caused by unexpected events. While Spatio-Temporal Graph Neural Networks (STGNNs) effectively model periodic data, they often struggle with these aperiodic fluctuations. To address this, we propose SIMBAD, which improves generalization irregular patterns via two key mechanisms: 1) adaptive regulation of periodic signals to prioritize recent signals, and 2) dynamic spatial modeling that adjusts influence between connected nodes based on contextual relations. Built upon simple similarity metrics to adapt to aperiodic patterns, SIMBAD outperforms existing methods on real-world benchmark datasets, demonstrating superior performance in predicting unseen and irregular traffic events.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.09001v1' target='_blank'>Supporting Data Center Grid Integration via Co-Optimized Battery Energy Storage Sizing and Capacity Allocation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Wei Wang, Himanshu Sharma, Thiagarajan Ramachandran</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-06 05:18:36</h6>
+<p class='card-text'>Interconnecting large data centers can be delayed by grid requirements on demand flexibility, ramping limits, and ride-through performance. This paper proposes an optimization-based framework to size a Battery Energy Storage System (BESS) that accelerates data center grid integration by providing BESS capacity required to meet selected flexibility and grid-support requirements. The model co-optimizes BESS power rating and energy capacity while allocating capability across three services: (i) demand response over a specified duration, (ii) mitigation of high-magnitude, high-frequency load fluctuations through reserved active power with zero net state-of-charge change, and (iii) voltage support via reactive power capability at the point of common coupling. Minute-level operational scheduling enforces state-of-charge feasibility and load ramp constraints, and incorporates a controllable queue of delay-insensitive computing tasks to enhance flexibility. A case study using a real data center load profile demonstrates the proposed method and quantifies the BESS power-energy requirements and operational trade-offs needed to satisfy the multi-service constraints, providing practical guidance for interconnection planning and deployment.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.08999v1' target='_blank'>Capital Efficiency, Isolation, Risk, and Ruin in Generative AI Inference Serving Infrastructure</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Renée St. Amant, Anjaly Parayil, Ankur Mallick, Victor Rühle</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-06 05:18:08</h6>
+<p class='card-text'>Generative AI serving is an extremely capital-intensive endeavor that demands rapid, step-change improvements in capital efficiency to prevent industry wide increases in the cost of capital from limiting growth plans. Keeping pace with the economic necessities will increasingly require infrastructure providers to confront operationally-inconvenient realities of production serving, including the extreme heterogeneity of generative AI request costs. We have explored workload isolation as a foundational, fleet-level lever for increasing capital efficiency. Isolation is the practice of intelligently grouping "like" requests before execution. Rather than exposing every replica to the full heterogeneous workload distribution, isolation deliberately reshapes the workload presented to the hardware by assigning requests with different cost characteristics to different portions of the fleet. Workload isolation on its own does not make expensive requests cheaper; it prevents a costly portion of the workload from unnecessarily determining the operating point and capital efficiency of the entire fleet. It additionally lays the foundational groundwork that can serve as a launching point for compounding gains via narrow-band optimizations (tailoring) and custom silicon designs while also informing up on pricing policy. This paper uses representative production data and experience to convey the motivation behind isolation as a fleet-level lever for increased capital efficiency.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.08989v1' target='_blank'>LEF-JEPA: Denoising-Trained Latent Energy Fields for Spatial Representation Learning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Zhiyuan Liu, Zhihao Xu, Sicheng Liu, Huanhuan Huang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-06 05:00:20</h6>
+<p class='card-text'>A joint-embedding predictive architecture (JEPA) that applies prediction supervision only at masked positions struggles to clearly capture object shapes and boundaries in its latent representations. We further observe that some existing methods improve spatial structure while also retaining rich variations in texture and color. However, preserving more low-level visual information does not necessarily make representations better suited to prediction and action. This raises a key question: how can we strengthen the spatial structure in latent representations that supports prediction and action without over-encoding these details? We introduce LEF-JEPA, which learns spatial structure through target-guided latent recovery and transfers this supervision to the visual encoder through a relative-energy constraint; the energy module is used only during pretraining and adds no inference overhead. To reduce the cost of energy optimization during pretraining, we further construct a conditional Ising Hamiltonian that allows low-energy-state search to be performed by specialized Ising solvers. On physical hardware, we validate the feasibility of achieving lower forward latency with fewer local updates. Under a unified CIFAR-10 pretraining and frozen-encoder evaluation protocol, both realizations outperform V-JEPA2.1 in image classification, foreground segmentation, and visual planning.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.08814v1' target='_blank'>It Takes Two to Tangram: Multi-Agent Object Centric Reinforcement Learning for Assembly</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Paul Knaußt, Kay Pompetzki, Nico Bohlinger, Niklas Funk, Cristiana de Farias, Rolf Findeisen, Jan Peters</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-06 00:11:49</h6>
+<p class='card-text'>Geometric assembly requires fine spatiotemporal coordination to place parts without causing collisions or deadlocks under tight clearances. To address this, we present an object-centric reinforcement learning framework that treats each part as an agent and learns a shared policy for continuous assembly control. A graph neural network represents the pieces, their target poses, and their spatial relationships, and predicts translational and angular velocities for each component. Per-agent proximal policy optimization with a centralized graph critic directly learns motion and temporal coordination within a single feedback policy. We study this formulation through planar Tangram assembly, where pieces must slide and rotate into a given configuration while remaining on the assembly surface. Procedural generation of target configurations and randomized initial arrangements support training and evaluation across diverse assembly problems. Our experiments isolate the roles of relational structure and multi-agent optimization, and compare learned control with sampling-based planning. We demonstrate concurrent assembly in simulation and transfer the policy to sequential execution on a real robot, as our object-centric formulation decouples learned assembly coordination from low-level physical control. Project page: https://tangrambench.org/</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.08660v1' target='_blank'>AutoParallel: Composable, PyTorch-Native Automatic Parallelism for Production Training</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Kaijian Wang, Sanket Purandare, Aditya Venkataraman, Will Constable, Ivan Kobzarev, Elias Ellison, Simon Fan, Edward Z. Yang, Davide Italiano, Patrick Labatut, Yuke Wang, Francisco Massa</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-05 20:11:17</h6>
+<p class='card-text'>Training large models requires multiple interacting forms of parallelism. As models and clusters scale, finding and maintaining efficient parallelization plans becomes essential for training performance. Diverse model architectures, workloads, and hardware topologies demand flexible strategies, yet production PyTorch systems typically rely on hand-written recipes that are costly to adapt and tend to reuse familiar patterns, which may be suboptimal for a given workload. We present AutoParallel, a PyTorch-native planner for distributed model training. AutoParallel searches parallelization choices jointly across the training computation, allowing established techniques to be combined and unconventional strategies to emerge. It expresses its decisions using native PyTorch abstractions and produces ordinary PyTorch programs, avoiding a separate execution runtime while composing directly with the PyTorch compilation and training stack. AutoParallel also composes automatic decisions with model-specific distributed code, allowing dynamic or specialized regions to remain under user control. Plans are inspectable and replayable artifacts. Across dense, hybrid, and mixture-of-experts models on meshes of up to four dimensions and 128 NVIDIA H100 GPUs, AutoParallel matches or exceeds expert-written TorchTitan recipes on most configurations, with throughput gains of up to 18.3%, and discovers plans that uniform expert recipes do not express.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.08652v1' target='_blank'>An Anatomy-guided 3D Segmentation Pipeline for Prostate Surgical Phantoms from CT Scans</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Iven Chen, Kuan-I Chung, Ayberk Acar, Susheela Sharma Stern, Alejandro O. Chara, Jie Ying Wu, Daniel Moyer</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-05 19:58:47</h6>
+<p class='card-text'>Full autonomy has been a long-term goal in robotic surgery and a near-to-medium-term goal for prostatectomy. Due to the relatively closed structure of the procedure, its standard-of-care robotic/laparoscopic solutions, and procedure economics, prostate procedures are an optimal early target for surgical automation. Prototyping and testing of possible solutions is done in constructed laboratory phantoms, either synthetic tissues or animal phantoms. To enable measurement of perceptual and robotic motion error, phantoms undergo volumetric imaging; these images are critical to both a potential deployed automatic system, used in planning motion and treatment (cutting, ablation, suturing, etc.), as well as post-hoc assessment of system performance. Rapid iteration on these phantom models yields small, inconsistent datasets, while the current workflow for human annotation is often anatomically unreliable and prohibitively time-consuming, rendering deep learning unsuitable at reasonable scales. To address these limitations, we present an automated 3D segmentation pipeline that uses classical medical image-processing techniques to encode the known anatomy of the phantoms as explicit geometric and intensity priors, which requires no training corpus and is transferred to each new phantom revision without re-annotation. Across 57 scans spanning multiple phantom revisions, our pipeline recovers the capsule interior at 0.83 median Dice on 11 contrast-suppressed scans and detects all 32 annotated focal lesions without false positives, completing a full scan in 2-8 minutes on commodity CPU hardware versus 1-2 hours by hand.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.08631v1' target='_blank'>BEVCast: Path-Adaptive BEV for Efficient End-to-End Autonomous Driving</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Qiren Wang, Mingyu Guo, Zixuan Wang, Weisong Shi</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-05 19:27:01</h6>
+<p class='card-text'>Camera-based driving models build a dense bird's-eye-view (BEV) grid and spend the same computation on every cell of it, although the vehicle crosses only a few of those cells within the planning horizon. We present BEVCast, a two-stage BEV whose resolution adapts to the predicted driving path. A coarse pass encodes the whole scene on a grid of 4.096 m cells. A heat head trained on the recorded path assigns a heat to every coarse cell and the cells with the highest heat are refined into 1.024 m cells under a fixed budget. The remaining cells keep their coarse resolution, so the trajectory head reads a mixed-resolution BEV that still covers the entire scene and needs neither an HD map nor a navigation command. Against a full grid of 1.024 m cells with the same architecture and training recipe, BEVCast at a 10% refinement budget encodes 28% of the BEV queries and needs 66% of the BEV encoder time at batch size 1. On nuScenes its mean displacement error is 1.078 m against 1.149 m and its drivable area violation rate is 1.46% against 2.29%. On NAVSIM navtest its mean displacement error is 0.577 m against 0.598 m and its extended predictive driver model score is 82.51 against 81.28. Next to published planners BEVCast reaches a comparable error on both benchmarks without a navigation command. The resolution of a driving BEV can therefore follow the task instead of the grid.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.08577v1' target='_blank'>Meituan-Robotics-0: A Vision-Language-Action Foundation Model for Desktop Manipulation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Meituan Robotics Team, Caicheng Wang, Chen Zhao, Chengpeng Jin, Duo Xu, Fengjiao Chen, Guanglu Wan, Heqing Yang, Jia Wang, Jiacong Zhou, Jie Hu, Jiyuan Ru, Lingfeng Zhang, Linjiang Huang, Manyuan Zhang, Ningchu Liu, Shijie Zhou, Si Liu, Shuo Li, Tianyi Zhang, Xi Zhang, Xin Chen, Xuezhi Cao, Xunliang Cai, Yanbin Zeng, Yang Yang, Yang Yi, Yanli Tan, Yifu Xu, Yimeng Jia, Yuchen Tang, Yuchen Xie, Yuxiang Zheng, Zerwei Chng, Zilong Huang, Zipeng Ye, Ziyuan Qin, Ziqin Wang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-05 18:55:42</h6>
+<p class='card-text'>We present Meituan-Robotics-0 (MR0), a vision-language-action foundation model and embodied-agent system for stationary-base desktop manipulation. MR0 combines 147 million vision-language samples with 15,060 hours of curated robot trajectories spanning 12 embodiments. A three-stage training recipe aligns multimodal representations with robot behavior through discrete action-token pre-training, transfers these priors to continuous cross-embodiment control through flow-matching mid-training, and adapts the policy through real-world post-training. We introduce Rollback, which pairs replaced policy segments with human corrections to provide positive and negative supervision for CFG-DAgger without value learning or advantage labeling. A unified end-effector interface supports heterogeneous embodiments, while asynchronous action-chunk merging maintains smooth execution under variable inference latency. An event-driven agent maintains persistent task events and reassesses plans when progress or feasibility changes, enabling cross-task retrieval and conditional task resumption. MR0 achieves 93.6% success on RoboTwin 2.0 and ranks fifth in the RoboDojo VLA track. Under matched HG-DAgger post-training, MR0 achieves higher average success rate and progress score than $π_{0.5}$ across three real-robot tasks. On Ethernet insertion, CFG-DAgger trained with Rollback data reaches 70% success and a progress score of 0.90. Qualitative agent deployments demonstrate cross-task event retrieval and recovery from temporarily unsatisfied task conditions.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.08449v1' target='_blank'>VFlash: Fast, Accurate Visual Planning via Flash Primitive Decoding</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yu-Cheng Chou, Shihao Wang, Jin Huang, Chi-Pin Huang, Chiao-An Yang, Xianzhe Fan, Jing Wang, Zhiqi Li, Yuanguo Kuang, Ruijie Zheng, Johan Bjorck, Sifei Liu, Hang Su, Abhishek Badki, Lei Zhang, Alan Yuille, Linxi "Jim'' Fan, Jan Kautz, Zhiding Yu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-05 18:44:43</h6>
+<p class='card-text'>Models for physical AI tasks, such as robotics and autonomous driving, need not reason solely in language. They can use visual plans--points, bounding boxes, and trajectories--to represent spatial goals and anticipate motion. However, autoregressive vision-language models generate these plans one coordinate token at a time, making richer predictions increasingly costly. We introduce VFlash, a method for fast, accurate visual planning through Flash Primitive Decoding. VFlash exploits the known structure of visual primitives to predict their coordinates jointly, using a lightweight drafter that generates an entire primitive in one forward pass. The layout adapts to the primitive's type, dimensionality, and length, supporting compact boxes and long, variable-length trajectories. Crucially, spatial accuracy need not require reproducing an autoregressive model's exact token sequence. VFlash therefore trains on annotated primitives and directly accepts structurally valid predictions without target-token agreement. Across the evaluated 2D and 3D robot trajectory tasks, VFlash consistently reduces prediction errors relative to autoregressive decoding. Preliminary single-rollout measurements indicate approximately 25x faster generation for 3D point motion forecasting. A world action model conditioned on VFlash plans achieves 70.2% average success across four MolmoSpaces task suites, compared with 62.6% for the baseline.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.08388v1' target='_blank'>Top-Quark Pair Production and Decay in Extended Higgs Sectors</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Andrea Banfi, Alexander Lind, Jonas M. Lindert, Vishakha Lingadahally</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-05 18:05:15</h6>
+<p class='card-text'>Extensions of the Higgs sector in the Standard Model address outstanding questions like the first-order electroweak phase transition and also present a rich collider phenomenology. The two-Higgs-doublet model is a minimal extension of the Standard Model with an extra complex $SU(2)_L$ doublet, and consists of an extra scalar, a pseudoscalar and a pair of charged Higgs bosons along with a Standard-Model-like Higgs boson. We present a modified version of the hvq library of the POWHEG-BOX-V2 event generator interfaced with the OpenLoops 2 amplitude generator to obtain predictions for top-quark pair production at NLO accuracy, including top-quark decays with full spin correlations in a framework that extends the SM Higgs sector with an extra heavy scalar and a pseudoscalar. The interference effects between the scalar and pseudoscalar signals, and the Standard Model QCD background are implemented. We include parton showers and hadronisation, and take detector effects into consideration. The status of our work and plans to extend it to future collider projects are discussed.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.08568v1' target='_blank'>Personalized health coaching via coachable health age and counterfactual wearable trajectories</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Simon A. Lee, Zeinab Esmaeilpour, Menglian Zhou, Marius Guerard, Sohrab Sidhu, Alexandru Solot, Hamid Palangi, Pramod Rudrapatna, Ming-Zher Poh, Max A. Xu, Daniel McDuff, Dimitrios Antos, Yuzhe Yang, Jeffrey N. Chiang, Anthony Z. Faranesh, Lindsey Sunden, Mark Malhotra, Shwetak Patel, A. Ali Heydari, Ahmed A. Metwally</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-05 17:52:57</h6>
+<p class='card-text'>Personalized health coaching requires moving beyond retrospective wearable summaries toward quantitative, actionable behavioral prescriptions. We introduce Coachable Health Age (CHA), an interpretable health-age metric built from modifiable physiological and behavioral signals passively captured by consumer wearables. Across the WEAR-ME (N=2,780), All of Us (N=22,748), and longitudinal Fitbit (N=1,464) cohorts, CHA aligns with established cardiometabolic health constructs and improves prognostic discrimination for incident cardiovascular and metabolic disease beyond age, sex, and body mass index. To enable prospective behavioral optimization, we developed Sensor World Model (SensorWM), an action-conditioned wearable world model pretrained on over 2.2 million person-weeks of longitudinal sensor data from approximately 100,000 participants. SensorWM accurately forecasts multi-week physiological responses to candidate lifestyle changes ($R^2=0.664$), outperforming generic time-series foundation models while preserving downstream clinical signal for diabetes, hypertension, and other health outcomes. Finally, we integrate CHA and SensorWM into an agentic counterfactual coaching system to synthesize personalized 12-week coaching plans. In blinded paired reviews, certified lifestyle coaches preferred counterfactual-grounded plans over plans grounded in wearable history alone for overall quality (71.4%, P < 0.001) and anticipated adherence (71.0%, P < 0.001), and board-certified clinicians judged 99.2% of counterfactual-grounded plans to meet clinical safety criteria (vs. 97.6% of comparison plans). Automated evaluations across the full cohort (N=2,780) also favored counterfactual-grounded plans. By closing the loop between longitudinal tracking, trajectory prediction, and counterfactual coaching, our framework provides a scalable path to systematically improve cardiometabolic health.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.08369v1' target='_blank'>NPCBench: A Clinical Apprenticeship Benchmark for Multimodal Care-Pathway Reasoning in Nasopharyngeal Carcinoma</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Pengkai Wang, Wei-Wei Zhang, Yan Li, Min Tang, Zhitian Hou, Zeyu Liu, Guanghao Zhu, Yuanyi Wang, Yanggan Gu, Wenjun Wang, Minheng Ni, Congkai Xie, Zhijie Sang, Jianmin Wu, Ying Sun, Hongxia Yang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-05 17:48:55</h6>
+<p class='card-text'>Current medical benchmarks typically break down clinical competence into isolated factual questions, single-image tasks, or static case vignettes. These tests score individual answers, but reveal less about whether a model can integrate subspecialty knowledge with multimodal evidence and track a patient's condition throughout a course of care. To close this gap, we introduce NPCBench, a clinical apprenticeship benchmark for nasopharyngeal carcinoma (NPC). NPCBench mirrors specialist training, from guideline and foundational knowledge to case planning, longitudinal review, CarePath integration, and open-ended consultation. It contains 4,777 component and consultation items and a 100-patient CarePath cohort with 417 scored diagnostic and care tasks. The episode-level evaluation tests whether diagnostic and care answers are jointly correct within a care pathway. By linking stepwise tasks to patient-level care trajectories, NPCBench evaluates whether models ground decisions in visual evidence, interpret changes in patient state, and meet clinical requirements in consultation. Across 30 evaluated models, we observe a composition gap: strong performance on individual tasks does not ensure jointly correct diagnostic and care answers for the same patient. Among 21 multimodal models, strict CarePath success reaches at most 23%. Paired controls and physician calibration further examine evidence grounding, longitudinal revision, and consultation judging. Overall, NPCBench broadens the evaluation of medical artificial intelligence beyond static question-answering paradigms to an apprenticeship-oriented assessment of clinical workflows, thereby offering a testbed for evidence-based and temporally coherent reasoning in oncology care.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.08338v1' target='_blank'>GPWM: Modeling the World as 3D Particle Motion</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Robert Ren, Matthew Bronars, He Zhu, Yikai Tang, Jianing Zhang, Sergey Zakharov, Pavel Tokmakov, Katerina Fragkiadaki</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-05 17:24:36</h6>
+<p class='card-text'>We introduce GPWM, a Generative Particle World Model that predicts how 3D scenes evolve by generating the motion of particles and rigid bodies over time. Unlike video world models that generate scene appearance, GPWM operates directly in 3D physical space. A single representation and architecture cover rigid, deformable, cloth, and granular materials, in both passive physics and robotic interaction. GPWM is an object-aware multi-resolution transformer that combines flow matching with diffusion forcing to generate coherent physical trajectories far beyond its training horizon. We train and evaluate GPWM on ParticleWorlds, a 25.5-million-frame corpus spanning diverse geometries, materials, interactions, and robot embodiments. GPWM outperforms the best prior learned-dynamics baseline in each of six physical domains, reducing prediction error by 31% on average. Breaking from the domain-specific setting of prior methods, a single Unified GPWM models these heterogeneous regimes with one set of weights, largely outperforming per-domain baselines and even surpassing our own specialist models in two domains. GPWM further generalizes to unseen geometries, physical properties, object counts, and rollout horizons. Beyond prediction, GPWM enables contact-rich planning by learning a generative prior over joint actuator-object motion. Instead of searching over unconstrained actions, planning searches the model's latent noise for interactions that achieve a desired object-space goal. With the same world model, noise-space planning substantially outperforms action-space search on pushing and picking, where complex contact sequences are hard to discover. Executed open-loop in simulation, the resulting plans achieve goal-directed manipulation without reference action trajectories or goal-specific policies.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js'></script>
+</body>
+</html>
