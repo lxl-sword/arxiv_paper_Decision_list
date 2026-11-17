@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>planning - 2026-11-17</title>
+<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap' rel='stylesheet'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css'>
+<style>
+body {
+font-family: 'Roboto', sans-serif;
+background-color: #f5f7fa;
+padding: 20px;
+}
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.card-title {
+    font-weight: 700;
+}
+.card:hover {
+    transform: scale(1.02);
+    transition: 0.3s ease-in-out;
+}
+</style>
+</head>
+<body>
+<div class='container'>
+<h1 class='text-center my-4'><i class='fas fa-book'></i>planning - 2026-11-17</h1>
+<div class='row'>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.21600v1' target='_blank'>How VLMs Plan What's Next</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Rohit Gandikota, Arnab Sen Sharma, Adam Belfki, David Bau</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-16 18:58:30</h6>
+<p class='card-text'>When a vision-language model describes an image, it names one object at a time and it rarely repeats itself, yet how the model plans this order is far from obvious. We characterize the mechanism a VLM uses to decide where to look before it looks. The mechanism has four main parts. First, binding heads match the relevant text tokens against the image and resolve them into pointers to the matched image region. Second, the same binding heads bind each written answer to the region it came from, and the model turns it into a progress signal: a cursor, the position in the image up to which the list has been written. Third, a select step chooses the nearest unwritten region after the cursor, or stops. Finally, gaze heads execute the chosen pointer and return a concept of what is drawn there, which language heads and the late MLPs turn into a word in the language of the question. We validate each part of this mechanism through causal patching in Qwen3-VL models on a synthetic visual retrieval task, and test our mechanisms against alternative hypotheses. We further show that the mechanism holds across input formats, natural photographs, and languages, and that its binding, relay, and gaze heads appear at every model size from 2B to 32B. This work allows us to investigate how a VLM turns a question and an image into a sequence of answers, layer by layer and token by token. More broadly, it opens a way to study how models plan over complex multi-step tasks with long rollouts. Our project is available at https://plan.baulab.info/</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.21563v1' target='_blank'>Wildfire-SSR: Geolocation-Aware Multimodal Fusion for Structure-Level Wildfire Risk Assessment</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yu-Hsuan Ho, Yiming Xiao, Hao-En Lai, Ali Mostafavi, Samuel D. Brody</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-16 18:40:49</h6>
+<p class='card-text'>Structure-level wildfire vulnerability assessment is critical for reducing losses in wildland-urban interface communities, yet existing methods often fail to combine parcel-scale ignition pathways with community-scale geographic coverage. This study introduces Wildfire-SSR (Satellite and Street-view for wildfire Risk), a geolocation-aware multimodal framework that integrates macro-scale satellite context with micro-scale street-view evidence. A Vision-Language Model extracts wildfire-relevant building and site attributes from pre-event street-view panoramas and converts them into structured semantic text. These features are spatially aligned with satellite imagery through a decoupled cross-attention fusion decoder, while a frozen satellite-pretrained DINOv3 encoder captures overhead visual context. Alternative geolocation embedding strategies are evaluated to anchor text-derived features within each satellite patch. The framework is tested on approximately 37,000 structures affected by the 2025 Eaton and Palisades fires in Los Angeles, using wildfire risk labels derived from relative post-event damage patterns to better represent inherent structural vulnerability. Rotary Positional Embedding provides the strongest spatial grounding, achieving a building localization F1 score of 0.6735 and a harmonic mean F1 score of 0.2476 for five-class pixel-level risk classification, outperforming unimodal baselines and an unanchored multimodal configuration. The model also shows a conservative bias in higher-risk classes, reducing severe-risk underestimation, and completes end-to-end assessment of the study area in 37 minutes on a single GPU. Wildfire-SSR reframes cross-view fusion as localized semantic alignment and provides a scalable tool for mitigation prioritization, resilience planning, and insurance-oriented wildfire risk assessment.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.21531v1' target='_blank'>Exploring Low-Regret Energy System Transition Pathways with Modeling to Generate Alternatives</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Hendrik Schricker, Maria Louise Schmitt, Philipp Kleusberg, Valentin Dinges, Benedikt Schuler, Frederike Kuperjans, Boyung Jürgens, Niklas von der Assen</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-16 18:22:52</h6>
+<p class='card-text'>Long-term planning of energy system transitions is complex due to interdependent investment decisions and uncertain market and policy conditions. Stochastic optimization models account for this uncertainty by identifying a single optimal hedging strategy. However, the flexibility in technology choice and investment timing, i.e., the transition flexibility, usually remains unexplored. Modeling to generate alternatives (MGA) explores near-optimal solution spaces but has not been coupled with stochastic optimization to quantify the transition flexibility. We explore the low-regret pathway space, i.e., all transition pathways that stay within a chosen regret tolerance in every scenario. We introduce a termination criterion for MGA that bounds the exploration error in high-dimensional solution spaces and measure how far each pathway decision, once taken, narrows the capacity ranges of the others. We apply the method to an industrial energy system in Germany. The pathway that minimizes the worst-case regret keeps it at 2.2%, compared with up to 30.9% for perfect-foresight pathways. The transition flexibility increases most at low regret tolerances. At 3.5%, the capacity ranges are on average about 60% as wide as at the highest regret tolerance of 10%. A large share of these capacity ranges is surplus capacity, i.e., capacity installed in addition to, not instead of, other capacity. Surplus capacity is largely not operated but, once installed, narrows the other capacity ranges more strongly than operated capacity. Exploring the low-regret pathway space, rather than reporting a single optimal pathway, therefore is the more informative basis for planning energy system transitions under uncertainty.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.21517v1' target='_blank'>Lazy-MOSAIC: Accelerating Skill-Centric Manipulation Planning with Learned Skill-Effect World Models</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Itamar Mishani, Mukund Krishnakumar, Oren Salzman, Maxim Likhachev</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-16 18:10:52</h6>
+<p class='card-text'>Long-horizon manipulation tasks require a robot to perform a sequence of physical interactions with its environment, typically combining several different skills. Planning such behaviors efficiently is challenging: given a library of parameterized skills, solutions lie in a vast hybrid space of skill sequences and their parameters, and evaluating each candidate skill's feasibility and effect with a high-fidelity world model such as a physics simulator is computationally expensive. MOSAIC, a recent skill-centric approach, lets the skills guide a non-sequential search toward the regions of this space where they are likely to succeed; however, it pays the full cost of simulation for every parameterized skill it considers. In this work, we introduce Lazy-MOSAIC, a lazy planning framework that instead searches over hypothesized skill outcomes. A cheap learned skill-effect world model predicts, in a fraction of a millisecond, a skill's feasibility and the world state it produces. Lazy-MOSAIC then uses these predictions to focus expensive simulation on promising candidate skills and, when a hypothesis is invalidated, repairs only the affected part of the search, while ensuring that every skill in a returned plan is validated in simulation. We evaluate Lazy-MOSAIC on cluttered-shelf retrieval tasks of increasing difficulty and demonstrate it on a physical robot, showing that it plans substantially faster than baselines with fewer simulator queries, while matching or exceeding their success rate in every setting. Visit skill-mosaic.github.io.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.21465v1' target='_blank'>Warm Starting Neural Dynamics Models From Few Jacobian Samples</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Maxime Rochkoulets, Joppe De Jonghe, Mariya Ishteva</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-16 17:46:39</h6>
+<p class='card-text'>Model-based reinforcement learning (MBRL) leverages a model of the environment, used for planning and generating samples without interacting with the real world. Motivated by evidence that informed initialization significantly improves the efficiency of MBRL, we propose TDec-Init, an algorithm to warm-start neural dynamics models using transition Jacobians. Using a decoupling algorithm based on the decomposition of a tensor of stacked Jacobian samples, we recover weights and flexible nonlinearities, and use them to initialize a feedforward neural network. In the low-data regime, we show on several benchmark environments that our approach outperforms random initialization and value training, and either matches or outperforms Sobolev training, while requiring fewer training steps between episodes.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.21442v1' target='_blank'>The Bipartible Architecture Pattern: Transparently Directing HTTP Requests over InfiniBand</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Richard Henwood, John Lockman, Luke Wilson</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-16 17:30:44</h6>
+<p class='card-text'>Large-scale compute (HPC) systems with coherent-memory workloads often deploy InfiniBand (IB) networks for high-bandwidth and low-latency inter-node and storage communication. A separate TCP network is typically used for control-plane and general-purpose communication. The last decade has seen the rise of cloud-native software patterns. These patterns are characterized by container-based software distribution and inter-node and storage communication over TCP/IP. In an unoptimized HPC environment, a cloud-native workload will typically use HTTP for some or all communication.
+  This paper introduces the Bipartible architecture pattern to optimize cloud-native workload traffic in HPC environments. This paper focuses on optimizing HTTP storage service requests. These requests are transparently transformed onto IB traffic without modifying workload implementation or network configuration. This is achieved by 'cloning' a global HTTP service (BPService) onto the HPC cluster compute host(s) where the workload executes at scale. Provided the global persistent storage is on the IB network the HTTP service requests are returned to the workload via IB and not TCP/IP.
+  The feasibility of this pattern is demonstrated by implementing a prototype BPService for S3 and a Hybrid-BPService (service metadata is accessed over TCP, bulk data over IB) for a software repository service. We offer this pattern in addition to many alternative approaches to address the performance challenges of executing workloads written to cloud-native design patterns in HPC environments. Finally, while the initial results are encuraging signficant validation of any service must be performed under both read and write scenarios before deployment into production is planned.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.21425v1' target='_blank'>Randomization protects the average, not the trial: chance covariate imbalance and a calibration of balance $P$ values at the design stage</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:William J. Dwyer, David Zurakowski</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-16 17:15:17</h6>
+<p class='card-text'>Randomization makes the unadjusted treatment-effect estimate unbiased over the allocations a scheme could produce, although it does not balance any single trial. Chance imbalances on strongly prognostic baseline variables directly threaten the validity and regulatory credibility of trial results, yet what design-stage balance $P$ values imply for bias and error rates is seldom stated. We review evidence on chance covariate imbalance and derive that link under a linear model with one normal prognostic covariate, with simulation checks. Given the realized allocation, the unadjusted estimate is biased by $β$ times the difference in covariate means; in standard-error units the bias is $ρZ_{\mathrm{bal}}$, where $ρ$ is the covariate-outcome correlation and $Z_{\mathrm{bal}}$ the balance z-statistic, so it does not shrink as trials grow. Pre-specified ANCOVA removes this bias, change scores reverse it, and non-collapsibility attenuates odds and hazard ratios even under perfect balance. A worst-balance threshold of $P = 1/e$ marks where the Sellke-Bayarri-Berger bound reaches 1; under complete randomization the worst of $k$ independent balance $P$ values falls below it with probability $1-(1-1/e)^k$, 0.99 for $k=10$. Any balance $P$ value $\geq 0.317$ keeps the two-sided conditional type I error of the unadjusted test at or below 5% for every $ρ$; at $1/e$ the one-sided error in the favoured direction is at most 4.1%, against 13-33% at $P = 0.05$. Design-stage balance scores should be benchmarked against complete randomization, weighted by external prognostic strength, and reported alongside allocation predictability and a pre-specified covariate-adjusted analysis plan.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.21392v1' target='_blank'>VideoNexus: Video Perception Beyond the Reasoning Context</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yancheng Long, Xuanyu Zheng, Wei Chen, Luoyuan Zhang, Haoyang Xu, Bin Wen, Tingting Gao</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-16 16:49:25</h6>
+<p class='card-text'>Understanding long videos requires locating evidence, resolving visual details, and integrating observations into an answer. Even when relevant evidence is present, performing these operations within long, dense visual sequences burdens both perception and reasoning. Video agents enable selective inspection, but returning frames to the planner still accumulates visual information in its reasoning context. Delegating perception reduces this burden, yet sparse sampling can miss decisive details, and per-frame descriptions can preserve context growth. We introduce VideoNexus, a training-free framework that separates detailed video perception from evidence-driven planning and reasoning. The planner controls where to inspect, what to resolve, and how densely to sample. Perception sub-agents process native audio-video in independent contexts and return compact, temporally grounded evidence for iterative search and verification. Using Gemini 3.8 Flash for both planning and perception, VideoNexus achieves 88.6% accuracy on full LVBench, exceeding same-backbone static ingestion and built-in agentic processing by 3.6 and 1.1 points, respectively, at 44% of the latter's measured API cost. A paired LVBench subset ablation shows lower planner input and higher accuracy. With Kimi K3 as the shared backbone, VideoNexus improves over the official Video-GAIA ReAct harness by 8.5 points in our evaluation. These results support compact evidence exchange for combining detailed observation with efficient planning and reasoning.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.21285v1' target='_blank'>The Price of Not Planning: Parallel Sampling Depth Peaks at the Reconstruction Threshold</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Chuling Wen, Weijie Liang, Jian Lu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-16 15:54:50</h6>
+<p class='card-text'>Masked diffusion models sample the tokens of one round independently. Planned decoders first generate a coarse plan, then fill in the tokens in parallel. We ask when a plan saves rounds, how many it saves, and how fine it must be. We study this on broadcast trees: the leaves are the tokens, the internal nodes are the plan, and the edge correlation $θ$ sets how strongly tokens depend on the plan. Errors are measured by the forward Kullback-Leibler divergence $\varepsilon$, and the lower bounds hold for every deterministic value-adaptive rule, also with learned conditionals. We show that a decoder without the plan needs of order $\min\{n,(n/\varepsilon)^α\}$ rounds below the reconstruction threshold, where $α=\log b/(4\log(1/θ))$ rises to $1/2$ at the threshold, and that the exponent stays below $1/2$ above it (binary channel: $0.02\leθ\le0.98$). With the plan, $\log_b n+1$ rounds suffice. In the binary model below the threshold, a plan with units of $m$ tokens needs of order $\log_b(n/m)+\min\{m,(n/\varepsilon)^α\}$ rounds, so it gives logarithmic depth exactly when $m$ is logarithmic. A plan therefore helps most near the threshold, and only if its units are small. Exact divergence computations in the Gaussian model with up to $2^{20}$ leaves confirm these exponents below the threshold.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.21264v1' target='_blank'>Hybrid Optimization-Generative Motion Planning for Multiagent Affine Formations</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Zhonggang Li, Hongyu Zhou, Raj Thilak Rajan</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-16 15:35:10</h6>
+<p class='card-text'>Formation maneuver control enables a multiagent system to cooperatively navigate through constrained environments in collective motion. While various formation controllers exist, they rely heavily on high-quality and dynamically feasible reference trajectories provided a priori, making formation motion planning (FMP) essential. To address the computational challenges for high-dimensional joint trajectories faced by conventional constrained optimization-based solutions, this paper introduces a hybrid optimization-generative framework with a focus on affine formations, which provide the necessary spatial flexibility. By formulating the planning task as a constrained Maximum-a-Posteriori estimation, we decouple multiagent objectives to leverage pre-trained single-agent diffusion priors for dynamic feasibility, obstacle avoidance, and smoothness. We then interleave the generative process with projected gradient descent (PGD) to strictly enforce affine geometric constraints with safety guarantees. Simulations demonstrate that our framework generates highly smooth, collision-free plans that are readily trackable by common distributed controllers and outperforms state-of-the-art planners in various metrics.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.21232v1' target='_blank'>A Generative AI-Driven Architecture for Whole-Home Intelligent Services: Edge Models, Memory Management, and Household Applications</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Mo Zhou</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-16 15:16:17</h6>
+<p class='card-text'>Generative artificial intelligence is entering the home. Cloud-based assistants face governance limitations in data transmission, continuous availability, and the reliability of physical actions, which are especially salient in households where devices remain online, data accumulate over time, and commands trigger real-world actions. Using the home local server as a unifying organizing axis, this article develops a design-oriented review framework. Sources from arXiv, CNKI, ACL Anthology, and official documentation were searched through November 2026 and coded into five evidence categories: reviews, system prototypes, benchmarks, HCI and eldercare studies, and official documentation. System designs were mapped onto shared architectural modules, identifying nine recurrent responsibilities of the home local server. Generative models support perceptual interpretation, intent understanding, and candidate planning, while deterministic validation, knowledge-graph constraints, and authorization leases confine candidate actions to an inspectable space. Home control, emotional companionship, and intelligent guarding can be compared within a common framework: they share state and memory but differ in latency, false positive and negative rates, proactivity, and permissions. Existing benchmarks rely on virtual environments and cannot substitute for real-deployment evaluation. Local deployment is not inherently safer, and technical continuity alone does not establish the social or medical effects of companionship and guarding. The article proposes a five-dimensional evaluation framework covering architectural capability, system resources, privacy, safety and reliability, and human experience, together with six design principles and a future research agenda for local-first intelligent home systems.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.21203v1' target='_blank'>Decision-Relevant Forecast Calibration for Predictive Control</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Victor M. Preciado</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-16 14:58:09</h6>
+<p class='card-text'>Calibration evidence for a predictive controller need not remain valid when operating-context frequencies change. We develop an audit and certification procedure for a declared family of context-density shifts, with a frozen predictor/controller and unchanged conditional outcome law. Coverage requires calibrated tests to span density-weighted selected-plan sensitivities. A residual Gram matrix yields the minimum augmentation rank and an optimal test budget for uncovered $L_2$ geometry. This optimum need not minimize bias over probability-feasible conditional means. For finite contexts, an asymmetric absolute-loss dual and directional linear programs enclose the continuous worst-shift feasible bias. Intersecting simultaneous moment intervals with the conditional-mean domain gives a further certificate and a linear program for selecting an operating shift after validation.
+  In a designed 240-context study, two spectral directions remove at least 80.8% of the feasible worst-case bias. For a separate misspecified logistic forecaster, matched sensitivity and generic corrections reduce expected cost by 2.590% and 3.239%, with the generic method winning all 200 refits. On 100,000 new episodes, both corrections certify absolute evaluation bias below the illustrative tolerance 0.04 throughout a declared shift interval, while the base certifies no shift. This outcome is highly predictable under the known synthetic law used for design. The probability-feasible certificate does not improve on the moment rectangle in this sample. The contribution is reusable evaluation and audit capability with explicit geometric and statistical limits, rather than recalibration superiority. Evidence uses synthetic finite contexts, known frequencies and committed plans; evaluation bias, oracle regret, constraint risk and feedback deployment remain distinct.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.21069v1' target='_blank'>CoopDistill: Equilibrium-Guided Multi-Agent Policy Distillation for Cooperative Driving</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Shiyu Fang, Sheng Zhao, Jiarui Zhang, Chengkai Xu, Xiaocong Zhao, Peng Hang, Jian Sun</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-16 13:22:30</h6>
+<p class='card-text'>Cooperative driving extends autonomous driving from individual vehicle decisions to joint maneuvers that improve traffic safety and efficiency. Optimization-based methods impose safety constraints but often fix paths to simplify multi-vehicle planning, limiting spatial flexibility. Multi-agent reinforcement learning (MARL) explores alternatives through interaction, but coordinated learning and safe execution remain challenging. Their integration nevertheless faces challenges in exploration efficiency, experience allocation, and execution reliability. To address these challenges, this paper proposes CoopDistill, an equilibrium-guided multi-agent policy distillation framework. A potential-game (PG) formulation provides a fixed-path longitudinal reference, around which a residual MARL policy learns longitudinal acceleration, conflict-approach timing, and lateral path corrections. A hard-case curriculum concentrates experience on interactions that PG leaves unresolved or substantially delayed. A comparative rollout selector evaluates the joint consequences of learned corrections against PG before choosing the executed action. Experiments in merging, roundabout, and intersection scenarios compare CoopDistill with six baselines at four connected automated vehicle penetration levels. Relative to PG, success improves by 2.1--27.1 percentage points and delay decreases by 7.3--27.3\%, with no observed collisions. Code is available at https://github.com/FanGShiYuu/CoopDistill</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.20984v1' target='_blank'>VASR: Vector-Aware Assembly Planning with Equivalent Structures and Repair-Cost Feedback</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Ruizhe Wang, Rui Liu, Hongliang Chen, Junyi Guo, Fangyu Wu, Yaran Chen</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-16 12:17:02</h6>
+<p class='card-text'>Furniture assembly planning requires inferring subassembly hierarchies from individual parts and a target illustration. Existing raster-based methods do not explicitly exploit the geometric and structural information in SVG drawings. We introduce VASR, a framework that fuses features from a dedicated SVG encoder with visual representations from a pretrained vision-language model to predict assembly hierarchies. To avoid penalizing valid alternatives to a reference assembly tree, we propose Repair-Aware Hierarchical Policy Optimization (RHPO) with hierarchy-preserving equivalence rewards. RHPO further uses repair-cost feedback to favor decisions with lower downstream correction costs among candidates with comparable equivalence-aware rewards. VASR achieves the highest Equivalent-Hard F1 among the evaluated methods, outperforming GPT6-Astra by 17.69 percentage points on the IKEA-derived test set while maintaining strong performance on an independent furniture dataset.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.20924v1' target='_blank'>Navital Gym: Rule-Graded Agent Environments for Indian Workflows</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Daksh Bathla</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-16 11:35:01</h6>
+<p class='card-text'>AI agents are being deployed on Indian workflows such as payments, tax, forms, travel and customer support in Hindi and Hinglish. Public agent evaluations rarely cover these workflows, and many score with another language model. We present Navital Gym, a set of six open environments with 321 public tasks in five task families: trip planning, UPI payments and disputes, GST invoicing and returns, form filling (including a multi-document split) and customer support in Hindi, Hinglish and three experimental Indian languages. Every task is graded by named, deterministic rules that recompute the outcome from a synthetic sandbox world. No language model judges any score. We report one run per task for three models on all six environments, Claude Opus 5.5, Claude Sonnet 5.5 and Claude Haiku 4.5, and for Gemini 3.1 Flash-Lite on two (UPI and the Support core). Opus solves 315 of 321 tasks, Sonnet 302 and Haiku 205. Trip planning and Hindi/Hinglish support separate the models most. We also describe a private held-out set that is not published, and a 7B adapter trained in the gym. Code is Apache-2.0 and task data is CC BY 4.0. The rules are a documented simplification of Indian practice, not the live systems.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.20827v1' target='_blank'>ProcReverser: Multi-Agent Black-Box Microarchitectural Reverse Engineering for Processor Vulnerability Analysis</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Guanqi Lyu, Decheng Qiu, Guangyang Zhang, Fei Zhao, Zhaojun Lu, Jiaji He, Yongqiang Lyu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-16 10:11:17</h6>
+<p class='card-text'>When processor implementation details are unavailable, black-box microarchitectural reverse engineering helps security researchers identify hardware conditions related to security vulnerabilities. However, this process requires substantial manual effort to design experiments, develop test programs, and analyze results for each processor. We present ProcReverser, a multi-agent system that automates this process. ProcReverser uses execution feedback to improve experimental plans and test programs and identifies microarchitectural properties from measurements. We develop a comprehensive suite of property identification tasks focused on hardware mechanisms relevant to Spectre-class attacks, covering speculative execution, branch prediction, memory dependence, and cache behavior. We evaluate ProcReverser on the XuanTie C910, the gem5 RISC-V O3 CPU model, and the SiFive P550. ProcReverser achieves Pass@1 and Pass@5 scores of 81.3% and 93.8%, respectively, on C910, and 83.0% and 100.0% on gem5 O3. On the SiFive P550, ProcReverser further characterizes microarchitectural properties covered by the proposed task suite. These findings highlight the potential of automated microarchitectural reverse engineering to support processor vulnerability analysis and defense evaluation.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.20811v1' target='_blank'>Auditing World-Model Explanations in Retail Forecasting: Faithfulness, Accuracy and Price Response</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Kathik Iyer</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-16 09:57:40</h6>
+<p class='card-text'>Forecasting models that read the price and promotion plan explain each forecast as a baseline, what would sell with nothing planned, plus the lift the plan adds. We test such explanations with eight checks, six with a pass rule fixed before any result, and find that passing them does not make an explanation right. In generated store data with known effects, a world model passes the checks of construction, stability, price direction and agreement with sales and with LightGBM, yet its lifts are 1.33 to 1.40 times the truth when merchants plan into high-demand weeks, and 1.23 to 1.42 times in eight variants of that world. It still picks the right weeks to promote, but stock ordered to its lift is off by 0.44 to 0.48 of the true lift. Its stated response to a lasting regular-price change is 4.7 to 6.5 times the true -0.5, and only a measured cause finds this. On Dominick's, 38 episodes in which a store's regular prices sat apart from its zone peers give a noisy benchmark: a pooled 8-week response of -0.33 (95% interval -0.68 to 0.01). For the final tuned world models of our companion paper on nine data sets, baseline and lift add up under each model's own plan, but a deeper price cut lowers the forecast in 29% to 83% of item-week steps on Dominick's (23% to 80% within prices seen in training), and the world model and LightGBM both state about twice the measured response. Across 703 configurations from the settings searches, checks passed were not related to forecast accuracy (Spearman 0.02, 95% interval -0.02 to 0.05); with no known answer for those versions, this concerns accuracy, while whether an explanation is right is measured only in the generated data.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.20807v1' target='_blank'>QuarkDB: A Hybrid Database System for Quantum Data Management</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Wenrui Zhang, Yu Wang, Xiao Zhang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-16 09:51:56</h6>
+<p class='card-text'>Emerging quantum applications like quantum communication generate large volumes of high-dimensional quantum data, requiring efficient data analysis and storage. However, classical database systems often struggle to meet requirements such as quantum processing or version management. This paper presents QuarkDB designed for efficient quantum data management. QuarkDB establishes a unified object model for relational and quantum data and defines the syntax of Quantum Structured Query Language. To support efficient quantum data management, QuarkDB integrates three key components: (1) a Hybrid Query Engine with cost-based hybrid plan selection over classical and quantum operators, (2) an Execution Engine with a three-level instructions intermediate representation, QuarkDB-IR, to support quantum execution and reduce quantum processing costs, and (3) a Storage Engine supporting quantum data version management, state reconstruction and data reuse. Compared with classical databases such as SQLite and PostgreSQL or quantum databases like Qute, our QuarkDB achieves query-latency speedups ranging from 2.14x to 25.86x speedup under extensive real-world workloads.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.20792v1' target='_blank'>TRR: A Thermal Interaction Engine for Robot Simulation and RGBT Data Generation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Biwen Yang, Zhe Cao, Jin Zhang, Haoyang Sun, Zonglu Hu, Jintao Zhao, Zhehao Zhang, Kaizheng Chen, Chengyi Liu, Chengyu Wei, Siyuan Wu, Ruiheng Zhang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-16 09:40:12</h6>
+<p class='card-text'>A robot's actions change the thermal conditions of its next interaction: heat retained after release, carried with objects or stored beneath the surface can change a later contact's outcome despite similar current temperatures. Training trajectories must capture how these effects connect earlier actions to later observations and task outcomes. We present TRR, a \emph{Thermal Robot Renderer} that attaches spatial and depth-resolved thermal state to both contact partners, updates local heat exchange through contact, transport and separation, and generates synchronized RGB--thermal (RGBT) observations and event-local task checks on one execution clock. Controlled interventions show why retained heat, spatial transport and internal storage matter for subsequent contact outcomes. From the same state, TRR produces a paired six-task benchmark of 2,224 static--dynamic pairs, that is, 4,448 trajectories with synchronized dual-view observations, states and actions. Visible thermal history raises safe contact-site selection from 75.0\% to 91.7\% on a dedicated learning corpus, and training on dynamic histories raises simulated transfer completion by 50 percentage points under a new heating procedure with shared feedback execution. We demonstrate RGBT observation adapters on MuJoCo and Isaac Sim, report an engineering inventory of ten prepared robot configurations and six demonstrated camera viewpoints, and describe a developer workflow that carries an existing robot scene to exported RGBT records. The benchmark, the workflow and the platform resources described in Section 6 form the first items of a planned public release. Demonstrations and resource updates are available on the project page.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.20737v1' target='_blank'>CLIFT: Contrastive LiDAR Instance Features for 3D Pedestrian Tracking</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:German Devchich, Timur Akhtyamov, Denis Fatykhoph, Gonzalo Ferrer</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-16 08:41:28</h6>
+<p class='card-text'>A social robot has to keep track of the people around it over time to plan its motion, a task handled by 3D multi-object tracking. For the LiDAR modality, trackers usually sit on top of a detector and link its detections across frames with a separate motion model or re-identification network. We instead show how a 3D LiDAR detector itself can be turned into a tracker by adding an instance-level contrastive objective on its intermediate voxel features. Each embedding is read from the voxels inside a detected box, and boxes are matched across frames by cosine similarity and the Hungarian algorithm, without a motion model. The detector backbone is fine-tuned together with this objective, which learns identity-aware features while leaving detection accuracy essen- tially intact. Because the method uses only the voxel features that Li- DAR detectors already produce, it is backbone-agnostic. On the JRDB 3D tracking leaderboard our LiDAR-only tracker ranks first on HOTA (38.58) and IDF1 (37.99), 13.04 and 9.30 points above the next pub- lished method, and second on MOTA and OSPA. Code is available at https://hermak56.github.io/CLIFT/.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.20711v1' target='_blank'>AgentFaultBench: State-Verified Evaluation of Tool-Fault Recovery</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Sachin Gupta</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-16 08:19:25</h6>
+<p class='card-text'>Does recovery advice help an agent finish a task after a tool fails? AgentFaultBench evaluates LangGraph and CrewAI agents performing specified tasks in an isolated GitLab installation. We inject tool errors and check both the resulting files and issues and the required reads, verification and final response. The prompt supplies the expected issue and report text, so the task tests execution rather than content generation. In the primary comparison of 1,944 planned runs, advice changes success by -8.33, 0.00 and +1.06 percentage points relative to a neutral reminder; missing outcomes leave the latter two comparisons inconclusive. Later experiments test a revised recovery policy. GPT-4o mini improves, while Sol and Claude already complete the recoverable cases. In a separate 624-run study on six related tasks not previously used by that policy, the guided condition records 161 correct final states and one unknown outcome in 192 planned runs, versus 142/192 with neutral feedback. The gain lies between +9.90 and +10.42 pp when missing outcomes are included. Removing issue IDs gives 47/48 successes versus 46/48 with IDs; other execution information remains. A second checker agrees on 1,879 observed primary outcomes and 241 constructed test cases. No human validation was collected. The findings support testing advice against explicit recovery controls rather than assuming it helps.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.20676v1' target='_blank'>Learning and Verifying Progress: Closed-Loop Agentic Planning with Progress-Enhanced Execution for Long-Horizon Vision-Language Navigation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Kangjie Zhou, Sukai Wang, Yuhan Xiao, Qinghang Liu, Zhejia Wen, ChunXuan Jiao, Wei Shan, Guanghui Ren, Maoqing Yao, Chang Liu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-16 07:40:00</h6>
+<p class='card-text'>Long-horizon vision-language navigation (VLN) requires agents to track instruction progress and recover from local errors before they propagate across subtasks. However, executors trained on expert trajectories encounter policy-induced state shifts during deployment, and their stop signals do not reliably indicate subtask completion. We introduce Learning and Verifying Progress for VLN (LeaP-VLN), an agentic VLN system that couples progress-aware execution with independent progress verification through plan--execute--verify--recover cycles. LeaP-VLN leverages progress both explicitly, through a progress verifier that verifies subtask completion before the agent advances and triggers dual-phase recovery upon route deviation, and implicitly, by co-training the executor on progress reasoning and action prediction to enhance the executor's progress awareness and corrective control. To adapt the executor to this closed-loop interface, we propose a two-stage progress-enhanced curriculum: behavior cloning on expert demonstrations, followed by joint training on demonstrations, expert action corrections, and progress-reasoning supervision. Policy-generated trajectories expose the executor to both intra-subtask drift and inter-subtask state shifts, aligning training with the deviations encountered during closed-loop execution. Extensive experiments on R2R-CE and RxR-CE demonstrate state-of-the-art success rates among monocular methods trained without additional navigation datasets, while real-world experiments further validate the effectiveness of LeaP-VLN in long-horizon navigation.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.20593v1' target='_blank'>JEPTERA: A Platform Agnostic JEPA-Assisted Model Predictive Planner for Urban UAV Navigation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Gibran Fathoni Belva, Mansur Arief, Ahmad Alfan Alfian Irfan</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-16 06:14:33</h6>
+<p class='card-text'>Urban navigation for Unmanned Aerial Vehicles (UAVs) requires planning that accounts for environmental geometry, vehicle dynamics, and moving obstacles. This paper presents JEPTERA, a navigation architecture that integrates a Joint-Embedding Predictive Architecture (JEPA), Model Predictive Control (MPC), PID control, and a safety layer. JEPA predicts the UAV's motion response to candidate commands for MPC action selection, while the safety layer checks trajectories against occupied space and predicted obstacle motion. Simulator adapters and platform-specific YAML configurations separate the planning core from simulator interfaces. An ablation study evaluated six configurations across three gym scenarios, totaling 180 runs. The complete architecture achieved the highest aggregate success rate, completing 28 of 30 runs. Additional tests completed one route across three city maps without collisions. Separate integration tests demonstrated operation in Gazebo/ROS 2, MuJoCo, and CARLA without modifying the core planning logic. These results support the feasibility of the integrated architecture for simulated urban UAV navigation and its portability across simulator interfaces.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.20574v1' target='_blank'>ExtremeDrive: A Real-World Dataset and Benchmark for Critical Driving</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Xinhan Li, Yuhong Jiang, Shiyue Zhao, Junzhi Zhang, Chengkun He, Ruihai Ma, Shijie Zhao, Wenxuan Cheng, Jinbo Lv, Tao Liu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-16 05:58:20</h6>
+<p class='card-text'>Existing autonomous driving datasets and benchmarks provide extensive resources for routine driving, yet real-world data covering safety-critical scenarios and extreme environmental conditions remain limited. To address this gap, we present ExtremeDrive, a real-world dataset and benchmark covering emergency maneuvers, complex traffic interactions, and adverse conditions such as slippery or snow-covered roads, alongside routine driving. The dataset comprises 589 driving scenes curated from a larger pool of real-world driving recordings, with calibrated and aligned multisensor data and reviewed annotations of road structure and traffic participants. We further establish a benchmark to evaluate planned trajectories through simulated vehicle execution, measuring safety-related metrics and driving performance. Experiments at equal training set sizes show that incorporating critical driving data reduces trajectory prediction errors and improves mean critical-success rates in critical scenarios. ExtremeDrive provides a unified resource for learning and evaluating autonomous driving in safety-critical scenarios and extreme environmental conditions.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.20535v1' target='_blank'>VAHBench: A Harness Benchmark for Agentic Long-Video Generation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Hongbo Zhang, Liuyang Song, Hang Zhou, Xinchen Liu, Wei He, Kai Han, Yunhe Wang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-16 05:11:08</h6>
+<p class='card-text'>AI agents are commonly used for everyday information retrieval and coding. We ask whether they can also interpret human requests and turn them into complete videos. We introduce VAHBench, a benchmark that tests this ability through five short-drama briefs specifying story, characters, dialogue and duration. Agents plan and carry out production using shared generation tools. Evaluation combines video completeness and basic quality with checks of production reliability and reporting accuracy. Across 240 runs covering 48 configurations of general-purpose and video-specific agents, higher quality scores do not necessarily mean more complete delivery. Missing episodes, repeated footage and static filler reveal gaps between producing a video file and fulfilling the brief. Added composition tools help some agents but do not consistently improve performance. VAHBench measures how well agents translate user intent into finished video content and helps identify where that process breaks down.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.20520v1' target='_blank'>Towards Inter-satellite Laser Metrology for Formation Flying Interferometry</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:A. O. Chan, J. E. Debs, M. J. Ireland, C. P. Bandutunga</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-16 04:45:40</h6>
+<p class='card-text'>Context. The direct detection and atmospheric characterization of terrestrial exoplanets has been highlighted as a key science focus by the US ASTRO2020 Decadal survey and the ESA Voyage 2050 plan. This will require a new generation of telescope which is able to meet the contrast requirements necessary to image a planet many orders of magnitude fainter than its host star - a technological feat which currently limits our observation capabilities. In the mid-infrared, the most viable solution has been shown to be a formation-flying nulling space interferometer. Aims. In this work, we present the initial prototype for an inter-spacecraft metrology system. This system is a sub-system of the Pyxis/SEIRIOS interferometer, a formation-flying interferometer which serves as a technology demonstrator for the LIFE mission. Methods. We have designed a multi-stage metrology system using three interferometric measurement techniques, covering varying distance resolution ranges. Digital Interferometric (DI) ranging provides the coarsest measurement, while a differential phase read-out provides sub-nm precision. Multi-wavelength interferometry is employed to overcome the phase ambiguity associated with the differential phase readout. Results. A single-wavelength electronic noise floor below 20 pm RMS over 10 s was measured by applying a common photodetector signal to both readout channels, a factor of 28 below the 560 pm requirement. For the multi-wavelength readout, the obtained electronic noise RMS was 556 nm at 10 second integration, decreasing to 200 nm below 3 second integration. The full optical measurement in laboratory air is currently limited by environmental path fluctuations. Conclusions. We demonstrate an initial prototype system for precision ranging between satellites for formation-flying nulling interferometers.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.20510v1' target='_blank'>WTR-Drive: World-Task Decomposition with Structured Risk Supervision for End-to-End Driving</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Haoyu Xing, Shaobing Ding, Guanglei Zhao, Guanhua Zhao, Nawu Peng, Mingyang Hou</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-16 04:30:41</h6>
+<p class='card-text'>Proposal-conditioned scene predictions can lack a common object-level reference across candidate trajectories. Aggregate planning scores also leave the objects and times associated with violations implicit. We present WTR-Drive (World-Task-Risk Driving), a Drive-JEPA-based planner that separates shared scene estimation from proposal-conditioned reasoning. A proposal-independent World Memory estimates object states, map structure, and future motion by re-reading the original visual features at each refinement round. Proposal feedback updates a residual Task branch without writing back to World Memory. This branch guides refinement through candidate-specific retrieval and gated visual feedback. A final Task readout supplies candidate-conditioned features for scoring. We derive structured risk targets from existing candidate-scoring rollouts without additional simulator calls. For at-fault collision and time-to-collision violations, the targets encode event existence, association with shared object slots, and the first violation time bin. On the NAVSIM navtest split, WTR-Drive achieves 94.66 PDMS on v1 and 88.24 EPDMS on v2 (expert-frame sequential evaluation). These scores are 0.96 and 0.44 points above the published Drive-JEPA values, respectively. Candidate-level analysis shows that higher best-candidate scores can coexist with lower selected-trajectory scores, revealing a gap between candidate quality and selection effectiveness.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.20493v1' target='_blank'>A Temporal Convolutional Network with Multi-Head Attention Model: A Surrogate for Parallel DEVS Semiconductor Fab Simulation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Vamsi Krishna Pendyala, Hessam S. Sarjoughian, Edward J. Yellig, Bharadhwaj Balasubramaniam</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-16 04:04:40</h6>
+<p class='card-text'>Semiconductor factories process many kinds of wafers organized into lots of various sizes and configurations. Different kinds of machines, each with its own operations, process wafers for hours to days, and the wafers undergo many incremental fabrication steps (with re-entry) and flows spanning days to weeks across connected machines. Fast and accurate predictions of throughput ($TH$) and turnaround time ($TA$) dynamics for individual machines and their combinations are essential for factory operations. To use machine learning methods for this purpose, this paper presents a Temporal Convolutional Network with Multi-head Attention (TCNA) architecture. It uses simulated datasets from a benchmark Parallel DEVS (PDEVS) semiconductor fabrication factory model. The factory processes configurable wafer lots with uniform and sinusoidal wafer arrival profiles and may undergo preventive maintenance. The wafer lot size, arrival profile, and factory maintenance policy are used as static covariates. TCNA is applied to a selected set of simulated discrete-event throughput and turnaround time trajectories. The $TH$ and $TA$ time series predicted by TCNA, evaluated with the common $MAPE$, $MSE$, and $R^2$ measures, show comparable or higher accuracy relative to other model architectures, with similar parameter counts and epoch times; the TCNA model size and execution time are similar to those of other architectures such as the Temporal Fusion Transformer. Although time series predictions are less accurate than high-resolution simulations, they can be deployed at a much lower computational cost. The TCNA achieves orders-of-magnitude speedup over PDEVS simulation with an acceptable loss of accuracy, enabling frequent product scheduling, capacity planning, and maintenance planning.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.20490v1' target='_blank'>False Discovery Rate Control in Ordered Sequential Testing: Rejection-Count and Fallback Procedures</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Anjana Grandhi, Wenge Guo, Ji Meng Loh, Sanat Sarkar</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-16 03:59:20</h6>
+<p class='card-text'>We study false discovery rate (FDR) control for a fixed family of hypotheses tested sequentially in a prespecified order. Each decision uses only the current and preceding $p$-values, is not subsequently revised, and permits continued testing after non-rejections. We distinguish generalized fixed-sequence procedures based on preceding rejection counts from fallback-type procedures that additionally use recursively transferred testing levels. For rejection-count procedures, we study a position-dependent calibration under independence and a linear rule calibrated through null marginal distribution functions under positive left-tail dependence under the null. We clarify their connections to existing fixed-sequence and online FDR methods. The fallback construction combines the total number of preceding discoveries with level transfer along consecutive rejections, allowing thresholds to reflect the arrangement of earlier outcomes. We establish its FDR control under history-based positive regression dependence and, with a position-specific correction, under arbitrary dependence. For all four constructions, the guarantees extend to every deterministic testing time within the planned horizon. Gaussian simulations assess the effects of signal placement, dependence, and allocation weights. They demonstrate power gains over selected benchmarks while identifying the conservativeness of the arbitrary-dependence correction.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.20480v1' target='_blank'>Separating learning from search and feedback in budgeted inverse design of periodic unit cells</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Shaoliang Yang, Jun Wang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-16 03:47:59</h6>
+<p class='card-text'>To design a periodic material, engineers choose the shape and dimensions of a repeating cell to meet target properties. With few simulations, the benefit of a learned predictor can be hard to separate from the effect of which designs the search tries and how it uses simulator feedback. We compare two ways to predict properties in a library of 80 cell architectures, with up to 30 simulator calls per target. For each architecture, both searches use a table of predicted properties at different dimensions. One fills the table with predictions from neural networks. The other fits a simple model to the existing simulations for that architecture. Both searches use the difference between the predicted and simulated properties to adjust the next design. We generated 200 targets from simulated designs after fixing the analysis plan. The two searches showed no detectable difference in how often they matched all three properties within 2% or in the mean error of their returned designs. The upper limit of the 95% confidence interval for the gain in overall success rate was 4.5 percentage points. Follow-up controls on these targets changed success from 83.5% to 36.0% with a degraded table and 96.5% with an oracle table. In separate tests, using the simulation result to adjust the next design increased success for both types of table. Results cover one library and a coarse 32^3 voxel simulator. Designers can use this comparison to judge what a learned predictor adds when the search, feedback and budget are the same.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js'></script>
+</body>
+</html>
