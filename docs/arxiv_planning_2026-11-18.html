@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>planning - 2026-11-18</title>
+<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap' rel='stylesheet'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css'>
+<style>
+body {
+font-family: 'Roboto', sans-serif;
+background-color: #f5f7fa;
+padding: 20px;
+}
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.card-title {
+    font-weight: 700;
+}
+.card:hover {
+    transform: scale(1.02);
+    transition: 0.3s ease-in-out;
+}
+</style>
+</head>
+<body>
+<div class='container'>
+<h1 class='text-center my-4'><i class='fas fa-book'></i>planning - 2026-11-18</h1>
+<div class='row'>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.23202v1' target='_blank'>Agent Trust Infrastructure (ATI): A Federated Identity, Trust, Attestation, and Accountability Architecture for Cross-Organization Autonomous AI Agents</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Viet K. Nguyen, Mohammad I. Husain</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-17 18:44:25</h6>
+<p class='card-text'>AI agents increasingly collaborate across organizational boundaries, invoking tools and interacting with agents operated by independent entities. Although existing agent frameworks support planning and coordination, they lack a common mechanism for verifying cross-organizational agent identity, execution integrity, and authorization. We propose the Agent Trust Infrastructure (ATI), a framework-independent security architecture built on Public Key Infrastructure (PKI), Zero Trust Architecture (ZTA), and remote attestation. ATI establishes federated trust through peer organizational certificate authorities (AgentCAs), eliminating the need for a shared root authority. Before executing requests, ATI validates agent certificates, verifies approved model, tool, and system-prompt configurations, and enforces authorization through three policy checks. We implement ATI as an external security enforcement layer that integrates with existing agent frameworks without modifying their underlying models. We evaluate ATI in a simulated federation of eight organizations using six agent frameworks, each deploying a five-agent team. Security experiments involve two organizations and assess 14 attack scenarios and six benign tasks across five agent models, using five attack variations and three repetitions per variation. A panel of judge models evaluates the experimental outcomes. With all enforcement mechanisms enabled, attack containment increases from 43% to 84% (40% to 80% for the 11 attack scenarios evaluated consistently across all configurations), while enforcement introduces approximately 174 microseconds of overhead per request. ATI is released as an open-source, framework-independent package that uses IETF WIMSE workload token formats for identity and request verification and Entity Attestation Tokens for model, tool, and system-prompt integrity verification.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.23153v1' target='_blank'>VIVID: Beyond Static Multi-Image Reasoning with Localized Visual Differences and Textual Entity Dynamics in Video MLLMs</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Chengqian Ma, Yuanze Zeng, Hongyu Wang, Mingfeng Lin, YiCheng Xiao, Yu Chen, Pengyu Li, WenHao Wang, Yuexiao Ma, Xiawu Zheng, Fei Chao</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-17 18:05:51</h6>
+<p class='card-text'>Video question answering under tight frame budgets requires preserving localized motion and event order, yet current video multimodal large language models (MLLMs) reduce comprehension to static multi-image reasoning by discarding unselected frames and encoding keyframes independently: (1) Spatially, whole-frame pooling dilutes small moving targets into static backgrounds; (2) Temporally, dropping intermediate frames or averaging tokens erases inter-frame motion, confusing direction, speed, and order. We propose VIVID (Visual Inter-frame Variations and Individual Dynamics), which moves beyond static snapshots like human vision: keyframes capture core states while inter-frame Patch Diffs preserve neighboring changes within $K_f$ keyframes. Autonomous Delta-Driven Keyframe Planning (ADKP) selects anchors from a $3\text{ fps}$ pool and feeds surrounding patch differences into Dual-Road Change Memory (DRCM), forming Dynamic Tokens at zero extra anchor tokens alongside a camera-stabilized Active Motion Region of Interest (ROI) and chronological Entity State Chains. Adding $0.22\%$ trainable parameters to a frozen $27\text{B}$ backbone, VIVID-Small ($50$ examples, $\sim 1.5$ GPU hours) beats all eleven baselines in overall accuracy across $8,083$ questions and trails only VIVID-Large ($3,600$ examples), which leads on MotionBench, Video-MME, and TempCompass.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.23135v1' target='_blank'>OpenPINN/PINO: An Extensible Open-Source Framework for Agent-Assisted Physics-Informed Neural Networks and Neural Operators</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Xi Wang, Jun Lu, Cheng Zhang, Xiaoying Zhuang, Timon Rabczuk, Hehua Zhu, Wei Wu, Peinan Li, Jidong Zhao, Zhenyu Yin, Hao Sun</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-17 17:54:28</h6>
+<p class='card-text'>Substantial challenges in physics-informed learning have motivated many improvements, but fragmented implementations hinder systematic organization, integration, and comparison. We propose OpenPINN/PINO, an extensible open-source PyTorch framework for physics-informed neural networks and neural operators. Two shared specifications connect problem setup, local computation, and evaluation. Agents support problem formulation, solver planning, and diagnosis. ProblemSpec defines geometry, governing equations, constitutive relations, parameters, initial and boundary conditions, and optional data. MethodSpec configures the model, sampling, loss, optimization, and differentiation. Researchers can register new problem templates and method components, then combine or compare strategies such as Fourier features, residual-adaptive sampling, and self-adaptive loss weighting for a fixed problem. Agents translate natural-language descriptions into specifications, flag missing information, and propose solver plans. The framework validates these specifications and deterministically generates local training and testing code. A diagnostic agent reviews training logs and evaluation results to identify problems and suggest revisions. Three examples show how method choices and agent diagnostics affect accuracy. For viscous Burgers, Fourier features and residual-adaptive sampling each reduced relative $L^2$ error by about $75\%$ from a shared baseline. For periodic Poisson, spectral differentiation reduced mean-free relative $L^2$ error by about $68\%$ across 16 held-out forcings. For a plate with a hole, successive agent diagnoses guided nondimensionalization and optimization. After initial training failure, all three runs met the $10\%$ target, with relative $L^2$ displacement errors of $3.51\%$--$6.31\%$.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.23076v1' target='_blank'>Pareto-Informed Smart "Predict, then Optimize" for Multi-Objective Combinatorial Problems</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Aabhash Dhakal, Tim Lachner</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-17 17:03:02</h6>
+<p class='card-text'>Many real-world planning applications, from logistics, routing to resource allocation, give rise to optimization problems that need to balance multiple, conflicting objectives. While machine learning is often used to predict the unknown parameters or costs of these problems, standard models trained on prediction accuracy can lead to suboptimal plans. Decision-Focused Learning (DFL) addresses this by integrating the downstream optimization task into the training objective. However, existing DFL methods for multi-objective problems rely on simple scalarization, which fails to capture the rich trade-offs of the Pareto Frontier. To address this gap, we propose a Pareto-aware extension to single-objective Smart "Predict, then Optimize" (SPO+) for multi-objective combinatorial optimization problems. Our loss function leverages the true Pareto Frontier, forming a target decision that aligns with a sampled preference vector, and minimizes regret against this target. Experiments on multi-objective shortest path and multi-objective knapsack problems show that our approach outperforms traditional two-stage Mean Squared Error (MSE) baselines. It also surpasses scalarization-based SPO+ approaches.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.23070v1' target='_blank'>PAIR: Bringing Household Robots into the Smart Home</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Junseong Pyo, Hyeongjin Kim, Jongwook Han, Seungwon Kook, Sungjib Lim, Yohan Jo</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-17 16:58:30</h6>
+<p class='card-text'>Household robots often need to operate appliances, and smart appliances offer both control panels and device APIs. Existing embodied AI simulation environments, however, model appliances solely as physical objects. We introduce PAIR, a smart-home simulation environment grounded in the Matter protocol~\footnote{https://csa-iot.org/all-solutions/matter/}, the industry standard for smart-home devices. PAIR provides 84 smart-device assets whose functional control panels and APIs act on a shared device state, with ambient conditions that evolve in response to both. From a survey of 1,443 requests, we construct a benchmark of 40 tasks that all require object manipulation yet remain solvable without API access, with 340 human demonstrations for policy training. Whether run alone, with a high-level planner, or with an API-enabled planner, two fine-tuned VLA policies complete none of the 120 evaluation episodes. Robots rarely get far enough to use the API: even with oracle plans and API access, over 90\% of failed rollouts stall at navigating, grasping, or operating a door. With a perfect oracle in place of the robot's body, the best planner still gets through only 57.3\% of its plan. When choosing between pressing a button and calling an API, several planners go by whether they can read the panel, not by API latency.\footnote{We will release our code and data upon publication.}</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.23021v1' target='_blank'>Satisfiability Modulo Theories for Robust Synthesis of Signal Temporal Logic Specifications</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Philip Smith, Kevin Leahy</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-17 16:27:56</h6>
+<p class='card-text'>Signal Temporal Logic is a popular framework for describing a robotic system's goals. Once described using a temporal logic framework, synthesis turns the goals into actual steps for the robots to follow. Currently, the state of the art for sound and complete synthesis is using Mixed-Integer Linear Programming (MILP), which struggles on long time horizons and large environments, preventing the construction of guaranteed safe plans for long deployments. This paper introduces a new synthesis method using Satisfiability Modulo Theories (SMT) which scales better for long deployments and adapts to environmental changes more quickly. We do this by introducing an encoding method for STL into SMT constraints, and an encoding method for discrete-time dynamical systems modeled as a transition system. We then conduct an empirical comparison of our SMT based methods against the state of the art MILP based methods. Results show that for this class of problems, SMT is an effective encoding strategy that performs the best on long time horizon tasks.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.22981v1' target='_blank'>SpikWM: Efficient End-to-End Spiking World Modeling for Visual Planning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Shuhan Ye, Hongbin Yu, Chong Wang, Hui Lu, Jiaming He, Yi Yu, Jiangbo Qian, Xudong Jiang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-17 16:00:02</h6>
+<p class='card-text'>Goal-conditioned planning with image observations and goals requires predictions that distinguish visual states and action consequences. Spiking neural networks offer sparse computation, but single-step spikes can obscure motion cues and merge actions with different physical outcomes. We propose the Spiking Latent World Model (SpikWM), an end-to-end joint-embedding predictive architecture (JEPA) with one simulation step per image and one neural update per latent position. Spiking Regional Encoding retains spatial cues through regional pooling. Bi-Spike Action Encoding combines positive and negative binary responses, while Causal Membrane Prediction carries subthreshold evidence across the latent history with learned group-wise time constants. The encoder and predictor are trained jointly on reward-free image--action trajectories using next-embedding prediction and SIGReg. With a common planner, SpikWM achieves mean success rates of $88.67\%$, $97.33\%$, $99.33\%$, and $86.67\%$ on Push-T, Two-Room, Reacher, and OGBench-Cube, respectively, outperforming two spiking baselines. Push-T ablations support each module, and controlled replays examine responses to appearance and physical state changes. Under a matched planning budget, SpikWM reduces estimated arithmetic energy by $75.6\%$ relative to LeWM. Code will be released at https://github.com/ShawnYE618/SpikWM.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.22927v1' target='_blank'>Sideslip-Conditioned Drift Trajectory Planning with Flow Matching and Control Barrier Functions</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Seokjun Lee, Seung-Hyun Kong</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-17 15:25:48</h6>
+<p class='card-text'>Drifting, the deliberate control of a vehicle at large sideslip angles, is relevant to both motorsport and recovery from unexpected oversteer. Existing autonomous drifting methods typically determine drift intensity through predefined reference trajectories, optimization objectives, or learned policy rewards, rather than accepting a desired sideslip angle as an explicit input. We propose, to the best of our knowledge, the first generative drift trajectory planner explicitly conditioned on a requested peak sideslip angle. A conditional flow matching model is trained on demonstrated drift laps with hindsight-derived sideslip labels and refined through reinforcement fine-tuning. A control barrier function (CBF) correction is then applied to satisfy model-based road, tire friction, and actuator constraints at the planning waypoints. In closed-loop experiments in the racing simulator Assetto Corsa, a nonlinear model predictive controller tracks the generated plans for six requested sideslip angles from 20 deg to 45 deg, with 30 laps (approximately 75 km) per request. The median peak sideslip angle measured across drift-corner passes follows the requested angle, with a mean absolute error of 1.2 deg across the six conditions. Ablation experiments show that reinforcement fine-tuning improves conditioning accuracy, while CBF correction substantially reduces off-road and spin events.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.22880v1' target='_blank'>Learning Agent-Centric Vision-Language-Action World Models for Autonomous Driving</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Guoqing Wang, Pin Tang, Xiangxuan Ren, Chao Ma</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-17 14:53:49</h6>
+<p class='card-text'>Recent progress in integrating vision-language-action (VLA) models with world modeling has significantly advanced end-to-end autonomous driving by allowing systems to reason about imagined futures instead of merely reacting to current observations. However, most world VLA models generate future frames at the pixel level with plenty of dense visual tokens. Although such generated futures can be visually plausible, they preserve many driving-irrelevant appearance details, i.e., only a small portion of the tokens directly encode critical planning-relevant factors, such as agent geometry, motion dynamics, and interactions. This introduces a significant performance bottleneck. An important question thus arises: what world state should a world VLA model reason over to support planning beyond pixel-level prediction? We argue that planning-oriented world modeling should focus on a compact and structured agent-centric latent state that captures the interactions between objects in the driving scene over time. As such, we introduce AgentWorld, an agent-centric VLA world model that uses discrete agent tokens jointly for reasoning and trajectory planning. Each token is dynamically grounded to a surrounding agent associated with its object's state, such as semantic identity, 3D geometry, motion, and interaction context. AgentWorld learns these tokens through three key processes: explicit geometric grounding, reasoning-oriented supervised fine-tuning, and agent-oriented reinforcement learning. Extensive open-loop and closed-loop experiments under diverse driving scenarios show that AgentWorld enhances planning capabilities, fully exploits visual evidence and agent dynamics, and yields interpretable agent-centric world states.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.22852v1' target='_blank'>Technical Report of Mobile Manipulator Robot for Industrial Environments</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Aria Dadnavi, Matin Jamshidi, Kian Khatibi, Shahriar Karimi Makhsous, Saina Najafi Shabestari, Seyed Sobhan Hosseini Hajibekandeh, Zahra Mahaam, Reyhane Mohasseli, Ghazal Ghoreishi, Amirhossein Gholizadeh Behbahani, Mohammad Hossein Moaiyeri</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-17 14:34:18</h6>
+<p class='card-text'>This paper presents the design and implementation of Auriga Robotics' mobile manipulator robot, developed at the Robotics and Intelligent Automation Laboratory, Department of Electrical Engineering, Shahid Beheshti University. Hereafter, this platform is referred to as the @Work Robot. The robot targets industrial tasks, with an emphasis on improving efficiency in repetitive or hazardous work environments. It uses a 4-wheel Mecanum drive for omnidirectional movement and a 5-degree-of-freedom manipulator arm with a 3D-printed gripper for object handling and navigation. The electronics consist of custom PCB boards built around ESP32 microcontrollers, together with an NVIDIA Jetson Orin NX that handles high-level processing and real-time system control. On the software side, Hector SLAM provides mapping and localization, A* handles path planning, and YOLO performs real-time object detection. These modules draw on fused sensor data to deliver robust navigation and reliable collision avoidance. Overall, the system shows effective hardware-software integration, with consistent performance in autonomous navigation, object handling, and task execution in industrial-like settings.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.22711v1' target='_blank'>Transmission Expansion and Energy Storage Planning under Great Britain's Uncertain Energy Transition Pathways</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Shengming Cao, Runsheng He, Waqquas Bukhsh</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-17 12:51:03</h6>
+<p class='card-text'>Long term power system planning must account for uncertainty in electricity demand and generation, while recognising the different investment and commissioning characteristics of transmission and energy storage. This paper develops a multi year stochastic framework for coordinated transmission expansion and energy storage planning and applies it to the Great Britain electricity system to assess investment needs through to 2050. The framework integrates multiple energy transition pathways with an enhanced representation of the GB transmission network and captures the different characteristics of transmission and storage investment over time. The coordinated treatment of transmission and storage is considered as a system level benchmark rather than a centralised investment mechanism. In GB, transmission investment is subject to regulated forward looking planning, while storage is largely developed by market participants in response to market signals. The framework therefore quantifies the potential value of improved coordination and identifies where existing investment signals may not encourage complementary storage deployment. Results across alternative transmission only, storage only and coordinated investment strategies show substantial benefits from joint planning. Compared with transmission only planning, coordinated investment reduces additional transmission capacity by 2%, cumulative expected load shedding by 97%, and total expected system cost by 36%, primarily through avoided unserved energy. Transmission preparation periods affect the timing, but not the final portfolio, of investments. Finally, the energy transition pathway materially influences investment requirements, with Electrification and Efficiency requiring 7% more transmission capacity and 45% more storage energy capacity than Falling Behind.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.22686v1' target='_blank'>CascadeJEPA: Enhancing 3D Geometric Representations via Spatially Coupled Cascaded Prediction</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Kailai Zhou, Ziqi Chen, Xiaoning Xu, Yuefeng Wu, Zixuan Fu, Zijun Lin, Zhihao Li, Youwei Pang, Xiaoqi Zhao, Xun Cao, Bihan Wen</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-17 12:36:05</h6>
+<p class='card-text'>Joint-Embedding Predictive Architectures (JEPAs) have emerged as a promising paradigm for predictive visual representation learning. However, our analysis of I-JEPA reveals a growing discrepancy between semantic and geometric learning: improved semantic recognition during pretraining is accompanied by degraded 3D geometric representations. We hypothesize that this partly stems from predicting highly abstract latent representations with incomplete spatial context, favoring semantic regularities over fine-grained geometric information. To address this issue, we introduce CascadeJEPA, a spatially coupled cascaded prediction framework that promotes richer patch-level interactions through full-grid context encoding and cross-attention between prediction stages, while largely preserving the original I-JEPA architecture. Extensive experiments demonstrate substantial improvements over I-JEPA across multiple 3D geometric tasks while maintaining strong semantic recognition performance. Furthermore, its advantages extend to future feature forecasting and world model planning, highlighting the potential of enhanced geometric representations to support predictive world modeling.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.22654v1' target='_blank'>Risk Density RRT$^*$: Planning in the Space of Probability</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Lorenzo Paiola, Giorgio Grioli, Antonio Bicchi</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-17 12:10:26</h6>
+<p class='card-text'>Planning under uncertainty is a fundamental problem in robotics. While much of the literature seeks minimum-cost paths subject to probabilistic constraints, this paper instead considers collision probability, or risk classically defined as probability times severity, directly as the planning objective. We propose Risk Density RRT$^*$ (RD-RRT$^*$), an extension of RRT$^*$ for high-level planning in environments with deterministic and uncertain obstacles. RD-RRT$^*$ builds on Risk Density, a functional that evaluates a continuous path as a whole and provides a tractable approximation of its collision probability. The framework also supports severity-weighted risk and a hybrid variant that adds a path-length penalty, balancing risk and geometric efficiency while regularizing exploration in low-density regions. We validate the method across a wide range of scenarios. The results show that RD-RRT$^*$ consistently finds paths with lower estimated collision probability by optimizing a global risk-based objective. We further demonstrate the fidelity of the underlying approximation through Monte Carlo simulations. Finally, we discuss how the topological structure induced by Risk Density may provide a useful representation of the environment and offer insights into risk-aware planning.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.22606v1' target='_blank'>A comprehensive Sun-as-a-star catalog of interplanetary type-III bursts: Statistics and a framework for stellar exospace weather applications</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Atul Mohan, Sachiko Akiyama, Pertti Makela, Natchimuthuk Gopalswamy, Joshua Budram</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-17 11:22:29</h6>
+<p class='card-text'>Decameter-hectometric (DH) type-III bursts, produced by energetic electron beams escaping into interplanetary (IP) space, are often associated with strong soft X-ray (SXR) flares, coronal mass ejections (CMEs), and solar energetic particle events (SEPEs). With future DH missions being planned, these intense bursts could provide reliable exospace weather event diagnostics, given the lack of direct stellar IP particle and CME probes. We present a catalog of DH type-III bursts associated with 538 out of 734 $\geq$C5-class flares observed by Wind and STEREO spacecraft during 2006-2025. Independent of the SXR flare strength, the occurrence and Sun-as-a-star emission properties of DH type-III bursts distinguish confined flares, CMEs with and without strong IP shocks, and SEPEs. We find that logistic-regression models combining SXR and type-III properties provide more accurate and well-calibrated CME/SEPE occurrence probabilities than a model based only on SXR parameters. Further, a space weather event probability-estimation model based on physically meaningful, scale-free parameters derived from SXR and type-III properties outperforms an SXR parameter-only model. This result presents a way to define solar-calibrated exospace weather prediction models extendable to stellar flares with a range of energy scales but similar underlying physics. We also present a catalog of 26 shock-associated type-III (S-type-III) bursts that appear to start from cotemporal DH type-II bursts and are generally associated with fast halo CMEs and major SEPEs. Our catalogs and the scale-free model form a benchmark for exospace weather studies.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.22595v1' target='_blank'>Lost in the Funnel: Selection-Induced Miscalibration in Ranking and Decision Systems</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Aditya Somani, Rahul Ragesh, Vikas Joshi, Amit Singh</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-17 11:16:13</h6>
+<p class='card-text'>Modern ranking and decision systems combine components with divergent objectives, and scores calibrated at the model boundary are used as calibrated probabilities throughout the funnel, across filtering, reranking, business-rule enforcement, and auctions. Yet calibration is typically validated only where the score is produced, so its breakdown where the score is used is routinely overlooked. We ask when calibration survives this selection, how inherited error differs from selection effects, and what can fail for a perfectly calibrated score at a component boundary. We study these questions through a boundary-wise diagnostic framework of residual identities. We target rubric-judged relevance rather than presentation-dependent metrics such as CTR, so calibration is measurable at every funnel layer of interest. We first present an industry-wide case study that applies our diagnosis to settings where calibration deteriorates at decision time, tracing the degradation to selection rather than model error. This diagnosis motivates Funnel-Aware Recalibration (FAR): post-hoc, selection-policy-aware recalibration at the boundary where scores drive decisions. In a live two-region production A/B test, FAR cuts decision-time expected calibration error (ECE) by 60-80% and improves auction efficiency. We further adapt two public datasets to simulate industry settings, providing additional evidence for the mechanism. We plan to release the adapted datasets and their generation pipeline to support further research. Finally, we distill these findings into practical operating principles for calibrating multi-stage scoring systems.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.22591v1' target='_blank'>PACT: Plan-Action Consistency Training by Preserving Correct Plans and Repairing Actions in GUI Agents</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Zhuohan Cai, Zhangxuan Gu, Runze Li, Beitong Zhou, Ming Wen, Hongbo Yu, Shuheng Shen, Changhua Meng</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-17 11:14:59</h6>
+<p class='card-text'>GUI agents can formulate a correct immediate plan in their reasoning yet emit an action that fails to execute it, creating an execution gap. This recurring mismatch undermines reliable task completion, as a single execution error can derail a multi-step workflow. In outcome-supervised reinforcement learning, broadcasting a negative response-level advantage across all generated tokens risks penalizing valid planning together with erroneous execution. To address this credit-assignment conflict, we introduce PACT (Plan-Action Consistency Training), a training framework that combines reference-aligned plan protection and plan-aligned action repair without altering the original scalar action reward. Using annotated reference actions to identify execution gaps, PACT protects the verified plan by masking negative policy-gradient contributions across its token span. Keeping the generated reasoning unchanged as context, it then favors the reference action over the emitted erroneous action through a preference surrogate with stop-gradient pair weights. Compared with the outcome-only baseline, PACT raises AndroidWorld task success from 60.34% to 68.97% (+8.63 pp), while improving rule-based plan-action consistency on AndroidControl High from 83.71% to 89.74% (+6.03 pp). Adapting PACT to desktop agents also improves task success from 40.92% to 44.17% (+3.25 pp) on the full 369-task OSWorld benchmark. Together, these results establish PACT as an effective credit-assignment framework for bridging execution gaps and improving task completion across mobile and desktop GUI environments.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.22565v1' target='_blank'>MillBill: A Machining Agent with Geometric Feedback</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Gennadii Savrasov, Artem Slavin, Soslan Kabisov, Andrey Kuznetsov, Anton Konushin, Dmitrii Zhemchuzhnikov</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-17 10:52:45</h6>
+<p class='card-text'>Turning a CAD model into a machining program requires both process knowledge and geometric precision. Language models can generate such workflows by writing geometry and toolpath code for each part, but this makes numerical execution part of the model's task. We introduce MillBill, an agent that separates machining decisions from their geometric execution and verification. Given a boundary-representation part, stock, and material, a locally hosted, mid-sized open model proposes operations and cutting parameters for indexed three-axis machining. A geometric harness generates toolpaths, simulates material removal, and returns feedback for plan refinement. Setup planning accounts for what the available cutters can physically reach, rather than visibility alone. We evaluate the resulting programs by the fraction of the target surface area within the specified tolerance after simulated machining. With Qwen3.8-27B, MillBill outperforms frontier-model approaches that construct their own geometry and toolpath workflows on the evaluated machining tasks. Code: https://github.com/kulibinai/millbill</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.22561v1' target='_blank'>Plausible Videos Can Lead to Poor Decisions: Diagnosing and CURE-ing World Models for Planning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Raphael C. Kim, Michele Santacatterina, Jingsen Zhu, Ramin Zabih</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-17 10:46:50</h6>
+<p class='card-text'>Action-conditioned world models are increasingly used as world models for planning, yet a world model that makes plausible, realistic-looking videos that are consistent with the training data can produce poor decisions. We address two key questions: (1) when can we trust a world model for planning, and (2) what should we do when we cannot? We introduce CURE (Certify, Upweight, Rollout, Explore), a certificate-guided technique that assesses whether a world model can be trusted for planning and determines what to do next: whether to upweight the training data to debias the model; roll out more samples at test time; or explore by collecting new data where support (how well the training data cover the planner's decisions) is missing. We deploy CURE across multiple domains, spanning simulated physics based on PhyWorld, MuJoCo arm control, and Language-Table pushing in simulation and on real videos. The decisions our certificate trusts have lower regret than those it does not (e.g., 0.06 vs. 0.38 on Language-Table sim and 0.07 vs. 0.38 on MuJoCo contact), whereas video perceptual quality does not identify good decisions. By focusing on decision quality rather than perceptual quality, CURE lowers regret over the best pessimistic decision rule by 10-25% across support levels, and over world-action models, search and policy learning by 41-64%, given the same data.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.22543v1' target='_blank'>JointGV: Structure-Aware Correction of Visual World Models with Parallel Graph Dynamics for Long-Horizon Modeling</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Tian Lyu, Yichen Jiang, Ziyuan Cheng, Yunda Yan, Xiangyu Pan, Junjie Jiang, Jialin Yu, Boyu Ning, Pietro Liò, Fan Mo</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-17 10:33:21</h6>
+<p class='card-text'>Visual world models predict future visual states conditioned on actions, but recursive errors in entity poses and spatial relations limit their long-horizon prediction for robot planning and control. We ask whether a separately predicted relational state can correct this drift without restructuring the visual model. This is challenging because graph nodes and visual states share neither elements nor a feature space. We propose Joint Graph--Visual Dynamics Correction (JointGV), a plug-in based on a cross-granularity dynamics hypothesis: despite their different representations, graph-node and visual-state changes describe the same physical transition. JointGV rolls out a task-conditioned scene graph alongside the visual world model, couples their predicted changes, and combines the resulting graph-motion context with graph-predicted node positions to compute a bounded residual. Graph-learning and correction gradients do not propagate into the original visual dynamics. We attach JointGV to DINO-WM (spatial tokens) and DreamerV3 (a global latent state), evaluating both on DMC Cheetah Run and Walker Walk across three seeds and extending the evaluation to contact-rich manipulation with DMC Finger Turn Hard. Across 32-step rollouts, JointGV improves structural and visual-prediction accuracy, reducing joint-position error by 11--28\%. For spatial tokens, learned graph--visual change coupling gives lower error than broadcasting the same mean graph-motion context to every token, particularly when non-adjacent parts appear close together in the image. On real-robot inverted-pendulum sequences, JointGV reduces DINO-WM's 32-step pole-angle error from $12.56^\circ$ to $6.69^\circ$ and improves DreamerV3 and LeWorldModel as well. In simulated inverted-pendulum control, an actor trained with JointGV-corrected rollouts completes 46 of 50 episodes, compared with none using the original rollouts.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.22537v1' target='_blank'>Testing World Models on Actions They Have Never Seen: Held-Out Plans, Forecast Accuracy and Price Rules in Retail</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Karthik Iyer</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-17 10:29:02</h6>
+<p class='card-text'>A world model is trusted to answer "what if": how its world responds to an action it has never seen. We give a test of that trust for any action-conditioned world model: actions held out of training by design and scored against a known answer; whether forecast accuracy predicts accuracy on those actions; and the same structure given to simpler models. We run it in retail, where the action is a price and promotion plan, across 2,853 fitted models. First, forecast accuracy is a fair guide between kinds of model (rank correlation with error on new plans 0.32 to 0.66) and a poor guide between versions of one world model: where merchants plan into high-demand weeks the link reverses, down to -0.69. Second, training the world model to learn the effect of actions (JEPA pretraining, a latent consistency check, adaptation at the plan date) leaves its error on new plans unchanged. Third, in generated worlds the recorded regular price and three price rules improve it. Given the same rules, a log-linear model is best when its curve can match the truth; in a world whose curve lies outside the rules, the world model with the rules is ahead of the log-linear model with the rules in 36 of 40 worlds, and does as well without its recurrent cell. On real data (Breakfast at the Frat, The Complete Journey and M5) the rules lower the world model's error on pure price cuts deeper than any it saw (0.63 to 0.56 on the Frat; 0.45 to 0.44, within chance, on The Complete Journey), but not on lasting price moves. Fourth, a small share of random test plans helps every model a little. In a generated dosing world, a stress test in a second domain, the first finding repeats, and the built-up drug level lowers the world model's error (2.86 to 1.91) though it still predicts only 0.12 to 0.32 of the true gain. The test carries to any domain where a world model is asked about actions outside its history.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.22490v1' target='_blank'>SciWorkBench: A Benchmark for Real Scientific Workflows</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yuchen Zhang, Taolin Han, Jinghang Wang, Jinxin Wang, Yun Wu, Wai Yuet Chiu, Xiaogang Li, Yuting Fu, Kewei Sun, Jiaxin Li, Qile Jin, Jiajia Li, Ruodan Chen, Qingteng Chen, Jialu Nie, Junchao Li, Yifei Zhang, Chen Zhao, Hu Wei, Lin Qu, Yanni Yin, Bing Zhao</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-17 09:46:16</h6>
+<p class='card-text'>Language models are increasingly being used as agents capable of planning and executing projects, as well as refining their actions through feedback. This shift raises a question: can current agents complete projects like real scientists? To examine this question, we introduce SciWorkBench, a benchmark for evaluating agents' abilities on real science tasks across biology, chemistry, materials science, and physics. SciWorkBench is built from peer-reviewed literature or expert-contributed research scenarios. We also propose a unified scientific analysis framework validated by domain experts, which can categorize most tasks in SciWorkBench. Each task covers one or more stages of this framework. We evaluate up-to-date models within the Claude Code and Codex agent frameworks under a unified execution and grading protocol. The best-performing agent achieves a mean score of 57.38, indicating that current agents still struggle with realistic scientific workflows. Our failure analysis identifies three recurring weaknesses at the workflow level: difficulty translating scientific knowledge into task-specific procedures, weak integration of evidence across different modalities, and limited capacity for scientific self-correction. These findings highlight the importance of workflow-based evaluation for measuring progress toward reliable AI systems for scientific research.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.22483v1' target='_blank'>Manufacturing Differential Sparsity: Planner-Hardware Co-Design for Efficient World Model Planning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Wenbo Zhu, Paul Yi-Chia Chen, Yuanhan Li, Zishen Wan, Christopher Torng</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-17 09:40:21</h6>
+<p class='card-text'>JEPA-style latent world models let embodied agents plan toward new goals with model predictive control, but they are still too slow for real-life embodied control: sampling-based MPC repeats predictor inference tens of thousands of times per plan, and even on high-end GPUs one planning step can take tens of seconds. We observe substantial latent locality in this repeated-inference workload: the predictor maps close actions to close latents, and inside a quantized predictor this closeness takes a form that hardware can exploit, differential bit-level sparsity. Unlike an input stream, whose temporal similarity is given, a planner itself decides which candidates it evaluates together, so the planner can choose its own references and, with reference forest sampling, manufacture more sparsity: it couples the sampled action sequences of each group to a shared root, with competitive planning quality. We build the accelerator on the insights of the rich line of bit-level sparsity accelerators and design it and the planner tightly coupled as a single co-design: the planner increases sparsity and exposes structure for hardware scheduling, and the bit-exact hardware effectively uses the sparsity that the planner creates. On three JEPA world models, our co-design is 1.28-1.80x faster than a dense accelerator and uses 38-52% less energy, and it is 1.22-1.58x faster than prior bit-sparse design and uses 16-36% less energy, with the same area. To our knowledge, our planner is the first planner that manufactures differential bit-level sparsity across its candidates and exposes its structure for hardware scheduling, and our co-design is the first algorithm-hardware co-design for JEPA-style world-model planning.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.22480v1' target='_blank'>RehearsalBench: Can AI Predict What Happens When You Change a Company?</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Mika Siddiqui, Tharaka Perera</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-17 09:38:01</h6>
+<p class='card-text'>Organizations increasingly ask AI systems what will happen if they change how they operate: which work to automate, which team to resize, what a voice agent will do to waiting times. We introduce RehearsalBench, a benchmark that measures whether AI models can diagnose an operation, choose an intervention, and forecast its consequences. Each model is placed in a simulated bank contact center fitted to real call-level records, sees only what a manager would see, and submits a plan and forecasts that are then played out across 200 seeded futures and three plausible versions of the organization. Decisions are scored in dollars at the stakeholders' stated valuations; forecasts are scored on the effect of each change relative to doing nothing. Ten models made 280 attempts across 14 organizations. The best model, GPT-6 Astra, improved on doing nothing by 6.8% of the no-change cost and made 77% less forecast error than a forecaster who always predicts no effect. On average, every model forecast the direction of every specified effect correctly, but models erred on the size of the same effects in the same direction, overstating a voice agent's effect on repeat contacts about five-fold. No model ever recommended holding off when doing nothing was the right choice. To test external validity, twelve models forecast 33 real organizational changes with known outcomes. Under verdict rules fixed in advance, the benchmark's forecast ranking agreed with the real-world ranking (Spearman $ρ= 0.92$, 95% lower bound 0.50). We report the result alongside an inconclusive first test, the analysis choices made after outcomes were seen, and evidence that part of the agreement reflects how well models size their uncertainty.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.22470v1' target='_blank'>Escaping Latent Traps by Remembering: Training-Free Episodic Kernel Repulsion for World-Model Planning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yican Zhao, Bolin Yang, Ruizhe Wang, Haiyang Guo, Fuji Yang, Bingo Wing-Kuen Ling, Zelin Zang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-17 09:30:07</h6>
+<p class='card-text'>Latent world models plan towards a goal image by minimising the distance between predicted and goal latents. This distance is not geodesic: it has local minima, latent traps, behind walls, at corners and in dead ends, and memoryless receding-horizon replanning keeps the agent in them, revisiting states far from the goal. We propose Episodic Kernel Repulsion (EKR), a training-free cost term that penalises candidate plans by a top-$k$ Gaussian kernel to a novelty-gated memory of the latents the agent has actually visited, rescaled by the current base cost so that its strength is comparable across models. Across two JEPA world models and four benchmarks, EKR raises average success from 31.8% to 46.7% (LeWM) and from 54.7% to 64.0% (H-JEPA) with the same model, planner and budget. Same-memory counterfactuals show that, in most settings, EKR pushes plans away from visited states, in navigation, often at a higher base cost; stuck episodes and revisits drop accordingly. In seven of eight settings it matches or exceeds $4\times$ samples at $0.8$--$1.5\times$ compute. Without tuning, it transfers to DINO-WM with CEM: $+6.7$ and $+19.3$ points on official and longer-goal Wall tasks, and from 44.7% to 100.0% and from 21.0% to 32.0% on long-horizon PointMaze and Push-T.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.22468v1' target='_blank'>A 5/2 Guarantee for Echelon Stock (s,S) Policies in One-Warehouse Multi-Retailer Systems</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Ming Hu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-17 09:29:28</h6>
+<p class='card-text'>We study a periodic-review warehouse serving multiple heterogeneous retailers with stochastic demand and fixed costs and lead times at both echelons. We construct a deterministic echelon stock $(s,S)$ policy whose long-run expected average cost is at most $5/2$ times the optimum over all nonanticipative policies. The guarantee holds when the common backlog penalty and retailer holding rates are at least the warehouse holding rate and retailer setup costs are at most $3/2$ times the supplier's. The retailer-specific setup-cost condition extends beyond supplier setup-cost dominance: a retailer dispatch may cost up to 50 percent more than a supplier order. Demand vectors are i.i.d. over periods with finite positive means, and demands of different retailers may be correlated. Each retailer selects the full cycle of its single-location plan or a shifted cycle of half its width, and the warehouse serves requests in arrival order, allowing partial shipments. The upper bound on the policy's cost includes each retailer's mirror cost, which prices the warehouse imbalance created by its batching. The upper and lower bounds share a pooled supplier problem and add one problem per retailer, giving a factor independent of all lead times and the number of retailers. For arbitrary nonnegative setup costs and associated retailer demands, a consolidation policy holds allocated stock until a dispatch threshold is met and gives a factor below $4.9$. On 864 instances built from Walmart store sales, the simulated cost of an integer-rounded implementation of the FIFO policy averages 1.45 times the lower bound and reaches 1.75, and our analytical upper bound on its cost is below 1.94 times the lower bound. With no simulation search, the policy comes within 8.2 and 12.2 percent, on average over 216 instances, of an echelon batch policy and an integer-ratio policy, both tuned by simulation for each instance.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.22418v1' target='_blank'>CutAgent: Creative-Gene-Driven Planning and Experience-Guided Self-Refinement for High-CTR E-commerce Advertising Video Creation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Xuyue Huang, Guanbo Huang, Jiasong Feng, Run Ling, Ao Ma, Xi Zhao, Yaoyu Li, Jie Gao, Ke Cao, Wei Feng, Zhanjie Zhang, Hao Wang, Jinghe Hu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-17 08:54:39</h6>
+<p class='card-text'>E-commerce advertising video creation requires both high-level creative planning and reliable multi-modal production. However, existing methods often map product attributes directly to scripts or editing decisions without explicitly modeling advertising strategies, narrative structures, and production styles. They also have limited ability to reuse past production failures. To address these limitations, we propose $\textbf{CutAgent}$, a dual-agent framework that formulates advertising video creation as a Plan--Execute--Self-Evolve process. CutAgent comprises two collaborative agents, $\textbf{GeneAgent}$ and $\textbf{VideoAgent}$, connected by a structured creative gene that bridges product understanding and video production. GeneAgent maps multi-modal product inputs---textual attributes together with product images---to creative genes that specify narrative units and production rules. To train GeneAgent, we construct $\textbf{CutAgent-70K}$ with approximately 70K samples of product attributes/images, reverse-extracted creative genes, cleaned clip pools, and real-world CTR, and apply high-CTR supervised fine-tuning followed by CTR-guided GRPO. Guided by the generated gene, VideoAgent retrieves category-then-gene failure--correction experiences from a long-term memory as constraints for shot-script planning, then coordinates material retrieval, narration, subtitles, music, and timeline rendering. Independently, a reflection loop diagnoses quality defects, revises deficient production decisions, and writes verified corrections back to memory for later retrieval. Experiments on $\textbf{CutAgent-Eval}$ show that CutAgent outperforms representative baselines in e-commerce advertising video creation, achieving the highest online CTR of $\textbf{2.21\%}$.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.22403v1' target='_blank'>BehaVerify: A Formal Verification Tool for Behavior Trees</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Serena S. Serbinowska, Ben Wooding, Diego Manzanas Lopez, Luke Nam, Anne M. Tumlin, Nicholas K. Potteiger, Hongchao Zhang, Taylor T. Johnson</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-17 08:45:36</h6>
+<p class='card-text'>This paper presents BehaVerify, a verification toolbox for behavior trees (BTs) and Neuro-Symbolic BTs. BTs are a graphical language for planning and sequencing behaviors - similar to extended state machines - and are increasingly used in safety-critical domains. BehaVerify enables users to specify a BT using a Domain Specific Language (DSL) with formal syntax and semantics. This language further includes Linear Temporal Logic and Computation Tree Logic specifications. BehaVerify uses an efficient encoding into nuXmv, called fastforwarding, to quickly verify if a specification holds over the BT. Additionally, BehaVerify can generate implementations of the BT in Python and Haskell. Through Python, BehaVerify has been integrated with PyTrees and Robot Operating System (ROS) and has been deployed to several autonomous robotic systems, including for verifying runtime monitors. While prior works have developed the underlying theory, this manuscript focuses on the toolbox usage, functionality and implementation. BehaVerify is open source: https://github.com/verivital/behaverify</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.22395v1' target='_blank'>CoBoVLA: Decoupling Language from Action with Discrete Codes for Robust and Interpretable Robot Manipulation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Mehul Arora, Dhruv Agarwal, Ambuj Agrawal</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-17 08:43:29</h6>
+<p class='card-text'>Vision-Language-Action (VLA) models achieve high success rates on the LIBERO benchmark but remain sensitive to paraphrasing. Existing VLAs ranging from 0.6B to 7.5B parameters experience a 22-52 point performance drop on LIBERO-Para while SmolVLA exhibits an even larger decline, from 83\% to 8\%. Because most VLAs jointly learn language understanding and action generation, it is difficult to determine whether a failure originates from misunderstanding an instruction or executing it incorrectly. To address these challenges, we introduce CoBoVLA, or CodeBookVLA, a 250M-parameter VLA that decouples language understanding, planning, and control through learned discrete interpretable codes. A text encoder maps the instructions to shared step codes, which a visual planner then converts into action code sequences executed by a language-independent actor. This design improves robustness to instruction paraphrasing while allowing failures to be traced to individual stages. It also enables efficient real-time control on resource-constrained hardware by encoding instructions only once and using compact discrete representations to keep each component lightweight. CoBoVLA achieves 91.4\% success on LIBERO-Goal, compared with 82.8\% for SmolVLA, under a matched protocol, with 17 ms per control step latency. On LIBERO-Para, it achieves 81.1\% across 4,092 unseen paraphrases and 78.5\% on matched episodes, compared with 36.5\% for SmolVLA LoRA fine-tuned on paraphrases. Without two-step demonstrations, CoBoVLA completes 48.8\% of 160 free-form two-step tasks. Finally, success reaches 91\% when instructions are correctly encoded but falls to 27.2\% otherwise, identifying language understanding as the main source of remaining failures. Together, these results demonstrate that decoupling language understanding and control can improve instruction robustness while making VLA failures easier to diagnose.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.22323v1' target='_blank'>Agent Trajectories as Evidence for Software Quality Assurance</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jonathan Ullrich, Julien Siebert, Michael Kläs, Adam Trendowicz, Andreas Jedlitschka</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-17 07:22:29</h6>
+<p class='card-text'>Autonomous software agents increasingly plan, implement, and test software with limited human oversight. Their decisions may introduce implicit assumptions that final code and passing tests do not adequately expose. We propose analyzing observable agent trajectories alongside software and agent specifications and AI generated artifacts as evidence for targeted quality assurance. The aim is to prioritize consequential decisions for scrutiny, investigate their possible contribution to software problems, and inform improvements to specifications and development practices. Industrial experience motivates the idea; available execution records and preliminary analysis methods make it plausible. However, trajectories alone do not establish that decisions are justified, outcomes acceptable, or corrective changes effective. We ask how this evidence can support review, diagnosis, and continuous quality improvement, and when simpler QA approaches suffice. Perspectives from requirements engineering, verification and validation, agent systems, causal inference, empirical software engineering, and human factors could help develop and evaluate the idea.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.22297v1' target='_blank'>FIRE-Drive: Feasibility-Informed Risk Evaluation for End-to-End Diffusion Planning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Qifeng Xie, Kai-Yuan Feng, Wenkang Wan, Yue Wu, Maoguo Gong, Kai Sheng</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-17 06:54:08</h6>
+<p class='card-text'>Diffusion-based end-to-end autonomous driving models have shown strong potential in generating multimodal planning trajectories. However, their performance still depends heavily on trajectory initialization, mode evaluation, and supervision quality. Weakly constrained noisy initialization may introduce infeasible proposals and increase the burden of denoising. Moreover, selecting the optimal mode remains challenging when candidate trajectories are geometrically similar but differ in safety, interaction risk, and progress. To address these issues, we propose FIRE-Drive, a feasibility-informed risk evaluation framework for end-to-end autonomous driving. FIRE-Drive improves diffusion-based planning through dynamic feasible anchor initialization, candidate-specific bird's-eye-view risk evidence, and compact high-quality candidate supervision with lightweight refinement. This design aligns the initial support, risk-aware scoring, and multimodal supervision of trajectory modes under a unified planning objective. It enables the diffusion decoder to focus on refining plausible trajectories while the scorer distinguishes modes using local risk evidence. Experiments on NAVSIM v1 show that FIRE-Drive achieves a Predictive Driver Model Score of 91.5 with a ResNet34 backbone. Additional closed-loop evaluation on 220 Bench2Drive routes yields a Driving Score of 71.43 and a Success Rate of 42.73%. Component ablations and a scorer comparison under matched candidate inputs support the contributions of feasible initialization, auxiliary supervision, and risk-informed selection. Our code is available at https://github.com/Latte00/FIRE-drive.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js'></script>
+</body>
+</html>
