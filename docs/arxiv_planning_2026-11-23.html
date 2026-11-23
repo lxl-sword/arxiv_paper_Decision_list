@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>planning - 2026-11-23</title>
+<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap' rel='stylesheet'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css'>
+<style>
+body {
+font-family: 'Roboto', sans-serif;
+background-color: #f5f7fa;
+padding: 20px;
+}
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.card-title {
+    font-weight: 700;
+}
+.card:hover {
+    transform: scale(1.02);
+    transition: 0.3s ease-in-out;
+}
+</style>
+</head>
+<body>
+<div class='container'>
+<h1 class='text-center my-4'><i class='fas fa-book'></i>planning - 2026-11-23</h1>
+<div class='row'>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.27939v1' target='_blank'>What Must a Model Tell a Planner? Outcome Interfaces for Risk-Aware Planning After Robot Damage</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Hassan Iqbal, Krishna Kumar</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-20 18:12:49</h6>
+<p class='card-text'>When a robot is damaged, it must decide which routes it can still afford, and the amount of risk it may accept can change from one mission to the next. We argue that whether a learned model helps such a robot depends on its decision interface, that is, on what the model hands to the planner. A decision policy tells the planner what to do, whereas an outcome model, a kind of world model, predicts the consequences of each route. We study simulated Unitree Go2 quadrupeds and H1 humanoids with weakened motors, added payloads, or reduced foot friction. We compare four interfaces. The first is a decision policy, and the second is the same policy trained with fixed penalties for infeasible routes. The third is an outcome model that predicts the feasibility and travel time of each route. The fourth, which we call a capability contract, is an outcome model that predicts the chance of success and the travel time of the robot on each terrain and composes them along a route. All share the same collected experience, matched tuning and risk calibration, and an uncertainty guard. Two comparatively low-risk probes let the capability contract rank hazardous terrains about as well as four new trials on every hazard. At a calibrated 5% limit on selecting empirically infeasible routes, outcome models cut declined missions from about 32% to 7-8% on Go2 and from 57% to 35-36% on H1 compared with the plain policy. Fixed penalties narrow this gap, but the best penalty changes with the risk target. Predicting outcomes lets the planner preserve missions by changing routes as risk requirements tighten.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.27804v1' target='_blank'>Generalist Action Critic: Harnessing Frontier Models in Autonomous Driving</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yun Yan, Shizhi Hu, Zhichao Li, Yang Guan, Shiqi Liu, Jiaxin Gao, Xiangteng Zhang, Wenbo Ding, Jiuhua Zhao, Hui Guo, Xintao Yan, Keqiang Li, Shengbo Eben Li</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-20 16:32:53</h6>
+<p class='card-text'>Frontier models have demonstrated remarkable general-purpose reasoning capabilities, opening new possibilities for intelligent decision making in the physical world. In autonomous driving, many recent approaches seek to leverage these capabilities through additional adaptation for action output, particularly in scenarios where existing models underperform. We introduce Generalist Action Critic (GAC), a zero-shot framework that combines frontier models' general-purpose reasoning with the planning competence of specialized driving models through an inference-time harness. In GAC, specialized planners generate multiple candidate trajectories and make an initial selection, while a frozen frontier model serves as an action critic that assesses the selected trajectory against scene evidence and either retains it or reselects from the available candidates. The harness combines camera images with spatial overlays, provides driving context and reasoning principles through textual instructions, and regulates the information available at each stage to support trajectory assessment and reselection. On HUGSIM, GAC raises DrivoR's HD-Score to 43.2, achieving state-of-the-art performance among methods trained without additional simulation data. GAC also consistently improves closed-loop driving safety across three planners, with relative HD-Score gains of up to 32.1%. Experiments on NAVSIM v1 further reveal how GAC improves planning performance by correcting up to 52.13% of eligible unsafe trajectory selections while introducing new failures in only 0.67% of originally high-quality selections. These results demonstrate the potential of harnessing frontier models to improve driving safety through inference-time cooperation with specialized planners.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.27782v1' target='_blank'>An Autonomous Adaptive Learning System for Robotic Grasping in the Circular Factory</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yitian Shi, Rosa Wolf, Rania Rayyes</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-20 16:10:16</h6>
+<p class='card-text'>Linear manufacturing typically operates in highly structured settings with standardized objects, allowing robots to execute pre-programmed motions based on precise models. In contrast, circular manufacturing involves dynamic and less controlled environments, where product components can vary due to appearance and physical changes across different product generations. In this context, uncertainty arises from both the unknown or partially observed states of components (e.g., damaged surfaces, altered shapes) and the unstructured disassembly environment, often characterized by heavy clutter, occlusions, and limited sensing viewpoints. This demands a flexible and adaptable robotic grasping system that can cope with unexpected object changes. To address these challenges, this paper proposes an autonomous grasp learning framework designed for highly uncertain and variable conditions. The framework explicitly distinguishes between uncertainty due to noisy or incomplete sensory observations (aleatoric uncertainty) and uncertainty due to limited knowledge and distribution shift (epistemic uncertainty). Moreover, the framework employs an active perception strategy to reduce visual ambiguity: semantic and spatial scene understanding is achieved using vision language models (VLMs), while view planning enables the robot to adjust its viewpoint to improve observability. In addition, the approach leverages large-scale human demonstration data to learn interaction patterns, which are then transferred to robotic end-effectors, enabling robust manipulation in these variable settings. Quantitative validation, including the utility of active vision on disassembled components in practice, is expected to form an important part of future work.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.27746v1' target='_blank'>Shared Understanding in Human-AI Teams: Coordination Continuity in Evolving Work</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Siân Lindley, Britta Burlin, Christian Poelitz, Lev Tankelevitch, Richard Banks</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-20 15:39:11</h6>
+<p class='card-text'>People are increasingly working with AI agents as part of extended, asynchronous workflows. In these settings, shared access to information does not guarantee a shared basis for action: goals, plans, and roles may persist while their current significance changes. We introduce coordination continuity, the extent to which collaborators sustain a workable basis for interdependent action as work progresses. Drawing on research on collaborative work, along with two qualitative team studies and a reflexive case from our own repository-based environment, we present a framework of three elements: durable representations of collaborative work; relative coordination properties that support interpretation of representations in the moment; and interaction mechanisms through which the status of representations can be understood and altered. We use a build-act-drift-rebuild heuristic and the notion of consequential moments to characterise when rebuilding may be needed. We draw eight design implications for collaborative AI infrastructure.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.27725v1' target='_blank'>A Cognitive Agentic AI Framework for Interactive Process Analysis and Optimization</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Trung Ngoc Trinha, Roman Tschentscher, Trong Dong Nguyen, Trung Thanh Nguyen, Anna Trubetskaya</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-20 15:25:07</h6>
+<p class='card-text'>Complex multivariable process analysis and optimization require coordinated access to simulation, structured data, machine learning (ML), optimization, and scientific literature, often across disconnected software tools. We present a Cognitive Agentic AI Framework (CAAF) that enables interactive, iterative process investigation through natural-language prompts within an established flowsheet. Following harness-engineering principles, CAAF assigns task interpretation, planning, knowledge synthesis, and context management to a large language model while delegating numerical calculations to specialized tools. Dedicated providers connect databases, scientific-document retrieval, ML-assisted Bayesian optimization (BO), and COCO process simulation. The framework is demonstrated on methyl acetate production. Guided by successive prompts, an engineer explored multivariable relationships, conducted 4,000 BO iterations to maximize carbon conversion yield (C-Yield) and minimize specific energy cost (C-SEC), refined operating bounds, and verified selected candidates through process simulation. Re-simulation of 16 candidates within the restricted domain showed close agreement with ML predictions, with a mean absolute C-Yield error of 0.0085 (0.85 percentage points). The highest BO-derived C-Yield, verified by COCO, was 0.921 versus approximately 0.81 in the initial dataset, an improvement of about 11 percentage points. CAAF also detects and reports non-converged simulations, excludes invalid outputs, and continues subsequent evaluations. The results demonstrate how human-guided agentic coordination can combine engineering tools for iterative analysis and optimization with rigorous simulation-based verification under a fixed process topology.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.27689v1' target='_blank'>Embodied-Harness: Towards Recursive Self-Improvement for Robotic Manipulation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Zhenxuan Fan, Zhuoya Wang, Yuqian Yuan, Wenqiao Zhang, Juncheng Li, Jun Xiao, Siliang Tang, Yueting Zhuang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-20 14:55:07</h6>
+<p class='card-text'>Vision-language model (VLM)-based agents offer a promising approach to robotic manipulation, yet remain limited by inadequate memory organization, uncertain failure attribution, and limited reuse of execution experience. We propose Embodied-Harness, a dual-agent framework that improves manipulation by refining the execution harness without updating model parameters. The Actor interacts with the environment through a robot-control interface, while the Reflector converts execution evidence into reusable operational guidance. Hierarchical Memory Architecture maintains short-term execution context and long-term experiential knowledge to support execution and reflection. Evidence-based Experience Reflection grounds failure diagnosis in observed interactions, while Recursive Harness Self-Improvement refines operational guidance across successive attempts. Experiments on RoboTwin 2.0, RoboSPA, and RMBench demonstrate the effectiveness of Embodied-Harness in generalization under environmental variations, spatial reasoning, long-horizon planning, and memory-dependent manipulation. Our method achieves success rates of 82.4%, 76.7%, and 94.4% on the three benchmarks, respectively. Real-world evaluation further yields an average success rate of 96.7% across three manipulation tasks. These results highlight the potential of Embodied-Harness to improve robotic manipulation through experience-driven harness self-improvement.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.27668v1' target='_blank'>Statistical and Machine Learning Approaches for Estimating Visitation to Natural Spaces in the UK</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yueyue Chai, Elizabeth Galloway, Peter Challenor, Pippa Langford</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-20 14:36:23</h6>
+<p class='card-text'>Natural spaces support health and well-being, but increasing recreational use can put pressure on ecologically sensitive sites. Understanding when, where and why people visit is important for planning, site management and evaluating interventions. Building on work by the Office for National Statistics, we developed statistical and machine learning models to predict visitor numbers at points located in natural spaces. We trained on automated people counter data across a range of green and blue spaces in England and Wales and tested the models' ability to generalise to unseen counter locations. Our models offer a scalable approach for predicting visitor numbers in natural spaces, reducing reliance on surveys and physical counters.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.27646v1' target='_blank'>MoHA: Model-Conditioned Harness Adaptation for Long-Video Agents</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jianghan Chao, Wenhui Tan, Hang Su, Qiuyu Tian, Tanxiao Li, Bingzi Zhang, Zequn Liu, Ruihua Song, Yingce Xia</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-20 14:09:38</h6>
+<p class='card-text'>Long-video understanding increasingly relies on agentic systems that actively acquire evidence rather than process fixed video representations. Their execution harnesses must coordinate language-level planning with video-level observation and evidence acquisition, yet are typically fixed across model stacks. We therefore introduce MoHA, a framework for model-conditioned harness adaptation that adapts a common initial execution harness to the specific planner and observer models it hosts. MoHA treats the harness itself as a model-conditioned optimization object: under the same task distribution and initialization, different planner-observer stacks can benefit from different executable harnesses. Starting from a common initial harness, MoHA analyzes failed calibration traces to diagnose model-harness mismatches and adapts both planner-side reasoning support, such as overview, memory, and verification, and observer-side capability assignments, including OCR and ASR specialists. After structural adaptation, MoHA separately calibrates observer execution configurations for the hosted model stack. Across three frozen planner stacks, MoHA improves Video-MME Full accuracy by 6.2-27.1 percentage points and Video-Holmes accuracy by 3.1-20.1 points over the fixed initial harness. Cross-model transfer further shows that the adapted harnesses generalize only partially to other models, highlighting the harness as a model-conditioned optimization layer for long-video understanding. Code is available at https://github.com/roverx12345/MoHA.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.27639v1' target='_blank'>SOAR: Training-Free Rank-Consistent Rollout Compression for Latent World Model Planning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Anqi Li, Kai Liu, Linghe Kong, Yulun Zhang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-20 14:03:18</h6>
+<p class='card-text'>Latent world models plan by rolling out hundreds of candidate action sequences through a transformer predictor, so a single decision can take tens of seconds. Existing accelerations prune spatial tokens as in vision-language models, yet a sampling-based planner uses predicted costs only to rank candidates, so a rollout can be compressed freely as long as the ranking survives. We propose SOAR, a training-free method that adapts rollout compression to each planning decision. At every decision, SOAR probes a few candidates under several token budgets and keeps the smallest budget that preserves their ranking, so it compresses as far as the current decision allows, without task labels. A closed-loop study of more than 80,000 episodes fixes the rest of the rollout: the first step, which alone reads a real observation, stays exact, and the context frame is cached rather than recomputed. On seven navigation and manipulation tasks with frozen checkpoints, SOAR matches dense-level planning success at 2.3x speedup and retains 98% at 2.5x. Our code is available at https://github.com/starrywiki/SOAR.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.27638v1' target='_blank'>Seeing Is Not Steering: Where Verifiable Reasoning Can Enter an End-to-End Driving Planner</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Gautam Kumar Jain, Atharva Mahindrakar, Shubham Phoolari, Ignacio Alvarez, Carsten Markgraf, Constanze Hungar, Christoph Lauer, Julian Staehler</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-20 14:03:15</h6>
+<p class='card-text'>Driving models that reason may describe a hazard correctly while choosing their path for other reasons. We study where scene reasoning can enter an end-to-end planner so its influence can be checked. We freeze Drive-JEPA and use a fine-tuned vision-language model to state scene facts. Although fine-tuning improves fact accuracy, the two learned components we test show no detectable benefit from reading them. A rule-based fact check instead rejects or shortens paths that contradict the facts, linking each intervention to a stated fact. On the frozen planner alone, it gains 2.4 EPDMS points on navhard. Its 2.0-point margin over a control that changes the same frames without consulting facts remains statistically uncertain. A diagnostic using exact facts from maps and annotations yields a 3.6-point margin over its corresponding control, with a 95% confidence interval above zero. Separately, a path scorer and plan memory that read no stated facts raise navhard from 41.2 to 51.8. Bounding travel distance using the reasoner's facts adds 0.3 there and reduces navtest by 2.0. The fact check makes each intervention auditable, while the driving value of the reasoner's facts remains unresolved.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.27576v1' target='_blank'>Unlocking Heterogeneous Accelerator Flexibility in AI Data Centers: Sizing and Workload Allocation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Chenghao Lyu, Ying Yu, Wangkun Xu, Fei Teng</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-20 13:12:31</h6>
+<p class='card-text'>AI data centers are an emerging electricity demand, but limited local grid capacity could delay their connection and expansion. While existing operational strategies consider spatio-temporal workload flexibility, few studies address the strategic sizing and allocation of diverse accelerator archetypes with different capital and energy-efficiency trade-offs. This paper unlocks the flexibility potential of heterogeneous accelerators by jointly sizing and allocating different AI workloads (training, delay-tolerant batch work, and online inference requests) across sites and hours to meet the time-varying grid constraint at minimum cost. Workload-specific throughput and energy coefficients link these decisions to facility power. In a representative two-site case, heterogeneous sizing reduces daily cost by 6.5% relative to spatio-temporal scheduling with fixed capacity. When evaluated using workload-specific performance, a capacity design based on workload-averaged hardware coefficients costs 7.7% more than the proposed design. The proposed design also eliminates the envelope violations of an unconstrained design at a 0.25\% daily cost increase. These results show how hardware heterogeneity and workload flexibility jointly shape economical, grid-compliant capacity plans.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.27544v1' target='_blank'>Alliance Rupture and Repair in Simulating Cognitive Behavioral Therapy Dialogues</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jian Chai, Yitian Yang, Siqi Liu, Yi-Chia Wang, Yi-Chieh Lee</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-20 12:39:38</h6>
+<p class='card-text'>In cognitive behavioral therapy (CBT), routine work can strain the client-counselor working alliance, and the counselor must then notice the rupture, repair it, and adapt the work that follows. Existing CBT simulators model client resistance and follow structured treatment plans, but rarely track alliance state or allow counselors to repair ruptures over multiple turns and revise their plans accordingly. We present ALLY, a simulation framework that brings alliance rupture, repair, and replanning into ongoing CBT dialogue. Each client has a hidden alliance state that governs how openly the client engages. Like a real counselor, the counselor agent sees only the dialogue. It must notice when the client pulls back or pushes against the work, repair the rupture, and replan the rest of the session around what it has learned. Automatic evaluation shows that ALLY's counselors are closer to real CBT counselors than those of existing public synthetic datasets in strategy flow and emotional dynamics, and that ALLY is rated highest overall in counseling quality (CTRS) and interpersonal skill (FIS-T). An expert evaluation with 20 licensed therapists also finds the simulated ruptures plausible and the repairs and replanning largely appropriate.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.27540v1' target='_blank'>Where Delay Compensation Belongs in a Decentralized Mean-Field-Game Swarm with a Control-Barrier Safety Filter</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jan Mikołajczyk, Igor Rostkowski, Bartosz Ogórkiewicz, Szymon Skierski, Sylwia Opat, Wojciech Rybak, Mikołaj Sczogiel, Radosław Pałys, Jan Gogulski, Bartosz Kościołek, Andrzej Pijanowski, Szymon Kowalski, Marcin Misiewicz</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-20 12:36:13</h6>
+<p class='card-text'>Large robot teams are often run as a plan-then-execute stack. We study a decentralized instance for drone swarms, a mean-field-game (MFG) routing field with a per-agent control-barrier-function (CBF) safety filter, when communication is limited by a shared TDMA channel. Neighbors are known only through noisy range and bearing measurements exchanged in round-robin slots, so the frame, and with it the age of every estimate, grows with swarm size. In simulation this delay reaches both layers but breaks only the safety layer. Without delay, swarms of up to 100 agents do not collide, even with each measurement's noise held for a whole frame; with it, stale estimates at the CBF cause collisions beyond a frame period of 125 to 175 ms, or 75 to 100 ms at 100 agents with held noise, and swarm size sets where that limit lies and how steeply collisions rise. At the MFG, staleness makes the local density noisier without biasing it, and throughput drops by at most a tenth. We then compensate with lightweight on-board predictors, from constant-velocity fits to a small learned network, that estimate each neighbor's position from its last broadcasts. A layer-split experiment shows where prediction is needed: at the CBF it restores safety and extends the tolerated frame period by 1.4 to 1.7 times with an untrained constant-velocity fit and about 2.3 with the learned network when the noise is redrawn each step; with noise held for a frame the two extend it about equally, while at the MFG it only refines the congestion correction. A constant wider safety margin, the simplest alternative, makes collisions more frequent in a bottleneck. With the routing solved offline, that layer is robust to the delay because it sees neighbors only through a crowd average; compensation belongs in the safety filter, switched on only above the uncompensated limit, since below it the predictor's own error adds collisions.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.27539v1' target='_blank'>Joint Optimization of Fleet Size, Localization Infrastructure, and Trajectories for Multi-AUV Persistent Monitoring</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jan Mikołajczyk, Jakub Bałenkowski, Maciej Borowiecki, Jan Ciecierski, Marcel Kolecki, Julian Maleta, Maksymilian Bernacki</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-20 12:35:02</h6>
+<p class='card-text'>Persistent monitoring of large-scale subsea infrastructure, such as offshore wind farm foundations, export cables, and inspection corridors, remains a fundamental challenge for autonomous underwater systems. The problem is not solely spatial coverage, but rather temporal coverage: ensuring that all relevant regions of interest are revisited within bounded time intervals under limited sensing, navigation uncertainty, and constrained vehicle resources. We compare three classes of trajectory strategies: (1) deterministic lane-based coverage (lawnmower patterns), (2) stochastic exploration (biased random walk with boundary constraints), and (3) coordinated partition-based strategies (Voronoi tessellation). Rather than seeking a universally superior method, we evaluate how varying levels of localization accuracy impact temporal coverage across two distinct operational profiles: persistent monitoring of the entire operational workspace versus targeted inspection of critical infrastructure. We present a simulation-based, quantitatively grounded study of temporal coverage in multi-AUV persistent monitoring, disentangling three interacting design dimensions: (i) trajectory generation strategy, (ii) fleet size, and (iii) localization accuracy provided by fixed acoustic beacon infrastructure. We introduce a cost-aware evaluation framework combining fleet size, number of beacons, and mission energy expenditure into a unified cost function. Results demonstrate that beyond a certain accuracy threshold, improvements in localization yield diminishing returns compared to coordinated trajectory design, an effect often obscured in integrated navigation-planning approaches. Coordinated-partition trajectories enable a reduced fleet size to achieve superior temporal coverage at a 39-46% lower overall life-cycle cost than rigid deterministic paths unoptimized for the localization infrastructure.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.27533v1' target='_blank'>Standard-Anchored Delegation in Teachers' Use of Generative AI</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Muhammad Saleh Farooq, Muhammad Ahmad Khan, Muhammad Jon Raza</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-20 12:29:14</h6>
+<p class='card-text'>Teachers who use generative AI must decide which parts of their work to hand over, while they remain accountable for what reaches students. We studied these decisions in Punjab, Pakistan, through a qualitatively driven mixed-methods study. We interviewed 13 teachers from government, private, NGO and vocational institutions, four administrators and one student, and coded each teacher's position on twelve educational tasks. Nine teachers accepted AI drafts or substantial assistance with lesson planning, but none accepted AI-drafted learning objectives, and eleven did not use AI to encourage or emotionally support students. Teachers who would accept AI marking required that the model be given a rubric or marking criteria. Building on assessment research and HCI work on verifiability, we call this pattern standard-anchored delegation: teachers handed a component of a task to AI when a standard outside the model, such as a textbook or rubric, defined a correct output and the teacher could apply that standard to the result. Having a standard was not always enough. Several government-school teachers did not use AI to mark quizzes even though the quizzes had answer keys, because they expected students to look for evidence of the teacher's effort. Checking AI output required subject knowledge and time, and private schools gave teachers more support for this than government schools did. Participants also read disclosure of AI use as a statement about whether the teacher had reviewed the work. We propose that teacher-facing AI tools ask for the relevant standard before generating and show each output beside it, and that schools account for the time that checking takes.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.27516v1' target='_blank'>PhiJEPA: Denoising Latent Predictions for Visual Representation Learning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Makoto Yamada, Yao-Hung Hubert Tsai</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-20 12:07:30</h6>
+<p class='card-text'>Can a predictor trained to infer hidden image regions still help a world model plan when part of an object disappears from view and the visible context is blurred? We introduce PhiJEPA, a joint-embedding predictive architecture that adapts PhiNet's two-stage prediction to masked Transformers. From sparse, photometrically corrupted context, a Transformer block predicts hidden tokens of an independently corrupted teacher view. A token-wise MLP then maps these predictions to clean teacher tokens. Controlled ablations show that the combined objective improves dense features over the tested one-stage alternatives. Pre-trained on ImageNet-1K with $5.6\times10^{19}$ training FLOPs, PhiJEPA achieves 69.3 mIoU on linear PASCAL VOC segmentation, exceeding the evaluated I-JEPA and DSeq-JEPA checkpoints in segmentation accuracy, with 25\% fewer training FLOPs than I-JEPA. It also improves hidden-region segmentation over Simple I-JEPA (49.1 vs.\ 44.3 mIoU). As an application, we use the frozen encoder in DINO-WM on PushT, and reuse the pre-training predictor, which JEPAs usually discard, to complete occluded tokens without fine-tuning. In open-loop planning with simultaneous object occlusion and Gaussian blur ($σ=2$ pixels), predictor completion raises success from 33\% to 65\%, compared with 25\% for Simple I-JEPA with its predictor and 40\% for iBOT with pixel inpainting. Together, these results support two-stage latent prediction as an efficient approach to learning visual representations that remain useful under photometric degradation and support completion under partial observation.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.27435v1' target='_blank'>Learned Network Dynamics for Model Predictive Traffic Signal Control under Incidents</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Dang Viet Anh Nguyen, Carlos Lima Azevedo, Tomer Toledo, Filipe Rodrigues</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-20 10:32:08</h6>
+<p class='card-text'>Model predictive control (MPC) of urban traffic signals relies on a model of how queues respond to signal decisions, which is hard to specify and calibrate in heterogeneous networks, particularly when incidents change capacities and turning shares. Measurements add a second limitation: the controlled lanes at the stop line are often short, so queues extending upstream of them fall outside lane-level measurements. We propose GNN-MPC, a receding-horizon controller that plans with action-conditioned network dynamics learned by graph neural networks. Phase sequences are coordinated across intersections by approximate best responses, with an acceptance test that keeps the predicted cost no higher than that of the initial plan. In microscopic simulation under non-recurrent incidents, GNN-MPC reduces travel time and increases completed trips relative to all tested controllers, on a homogeneous grid and a heterogeneous 21-intersection network. Controlled comparisons on the heterogeneous network distinguish the roles of observation and prediction. With nearly as many vehicles entering the network, GNN-MPC reduces travel time by 13% relative to MaxPressure with the same upstream measurement, and GNN-MPC without the upstream representation does not reproduce its performance. Under the same traffic measurements, planner and objective, replacing the learned dynamics with calibrated store-and-forward predictors increases travel time by 31-34%. Observing hidden demand and predicting its response to control are thus complementary requirements of network-level predictive control.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.27418v1' target='_blank'>Beyond Future Views: Exploring Future-State World Models for Vision-Language Navigation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Kangyi Wu, Pengna Li, Yucheng Wang, Yance Fang, Xihan Ma, Zhizhong Su, Yang Wu, Ye Deng, Jinjun Wang, Jianyi Liu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-20 10:22:30</h6>
+<p class='card-text'>Vision-Language Navigation(VLN) requires an embodied agent to follow language instructions through unseen 3D environments, where the target spaces often lie beyond the current observation. Navigation world models address this challenge by predicting future views either as pixels or latent representations, providing valuable look-ahead information for action decision. Both paradigms define the future primarily through what the agent may observe, raising a fundamental question: is predicting future views the ultimate form to represent the future for VLN? Cognitive studies show that the human hippocampus prospectively represents both future goals and intervening locations along planned routes. Inspired by this predictive-map view, we organize the navigation-relevant future around goal-directed spatial states and route structure. We instantiate this perspective with two complementary abstractions: a short-horizon waypoint that specifies the next local state to reach, and a mid-horizon corridor that captures the spatial support of the upcoming route. Based on this design, we propose FS-Nav, a future-state world modeling framework that predicts waypoint-corridor states from spatial memory and language instructions, and communicates them to a VLM navigator through top-down and first-person interfaces. Experiments on standard VLN benchmarks demonstrate that FS-Nav achieves state-of-the-art performance. This highlights navigation-relevant future-state modeling as a promising direction for representing the future in VLN.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.27400v1' target='_blank'>Active Learning of Flows from Curve Observations using Gaussian Processes</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Konrad Reichel, Sandra Hirche</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-20 10:06:15</h6>
+<p class='card-text'>The active learning of real control systems requires informative roll-outs of controls. In this paper, we present a local optimization algorithm that finds the trajectory that most reduces uncertainty about the flow of a control system modeled by a Gaussian process. Therefore, we derive an approximation scheme for the posterior kernel of the Gaussian process after observing it on an entire continuous-time trajectory and establish a Pontryagin-type necessary condition for the optimizer. As the flow is unknown, the actual trajectory can deviate from the planned trajectory. We propose a trajectory planner that searches for the most informative control within a maximal allowed deviation horizon instead of a fixed time horizon. We show by trajectory-wise time rescaling that the underlying optimal control problem is equivalent to a fixed end time optimal control problem. Finally, we study both the fixed end time planner and the fixed maximum deviation planner in a numerical example and compare them with benchmarks.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.27388v1' target='_blank'>What Stays in the Picture? From Redundant Instructions to Dependency-Aware Image Editing</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Zi-Jun Wang, Yu Lin, Zhilin Zhao</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-20 09:52:39</h6>
+<p class='card-text'>We introduce complex redundant-instruction image editing, where a single request specifies multiple objects, their attributes, and spatial relations while revising or canceling earlier editing requirements. Direct editing can fail to recover this intent, while splitting the request into successive steps can preserve obsolete edits and visual errors. Our key insight is to resolve the revision history into a final editing target that jointly guides planning and verification, so that obsolete requests do not become visual edits. Based on this insight, CRIE-Agent learns to consolidate revisions into object-level final intent and executes the retained objects in reference-first blocks, establishing referenced objects before their dependents. Verification then guides complete re-execution from the source image, with conditional layout hints, preventing visual errors from failed attempts from being carried into subsequent ones. We also construct CRIE-S, a benchmark containing 10,000 complex and redundant editing instructions with exact final intent annotations. Across five image-editing backends on CRIE-S, CRIE-Agent raises complete editing success from 0% under direct editing to 27.5--50.0%.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.27373v1' target='_blank'>GeoSDF-Diff: Geometry-Aware Diffusion Planning for Collision-Free Trajectories</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yueming Li, Zhanjiang Yang, Yang Shen, Meng Li, Lijun Sun</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-20 09:42:05</h6>
+<p class='card-text'>Diffusion models have recently attracted increasing attention in motion planning due to their ability to model high-dimensional and multi-modal trajectory distributions. However, existing diffusion-based planners still struggle to reliably satisfy geometric feasibility in unseen cluttered environments with complex obstacle layouts. To address this challenge, we propose GeoSDF-Diff, a geometry-aware diffusion planner that incorporates multi-scale SDF conditioning into trajectory denoising. The key idea is to provide the denoiser with both route-level geometric context and fine local clearance evidence, enabling generated trajectories to better adapt to unseen complex obstacle layouts. Specifically, a Geometric Encoder extracts multi-scale SDF features and injects them into a DiT-X denoiser through cross-attention. We further introduce a trajectory-level training objective that combines SDF clearance, violation emphasis, smoothness, and path-length regularization, so that local infeasibilities are penalized during training rather than corrected only at inference time. Experiments on held-out cluttered environments show that, without post-hoc trajectory repair or sampling-time guidance, GeoSDF-Diff achieves a 65.2% average success rate across diverse test scenarios, outperforming strong diffusion baselines by 25.4% to 28.5%.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.27352v1' target='_blank'>PAVE: A Harness for Geometrically Consistent Road Network Modeling with Vision-Language Models</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yajun Liu, Jinxi Wu, Juan Pablo Millán Raya, Xuesong Zhou</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-20 09:25:01</h6>
+<p class='card-text'>Transportation models, whether they simulate traffic or support planning, are only as reliable as the road networks they run on, down to the lanes and turns at each intersection. Practitioners still take such a network from GIS files and supply its junction and movement data by hand, a task that recurs with each new base year and design alternative, or they generate it from open map data. OpenStreetMap's lane tags give the correct layout for only 13 of the 44 approaches we test; open map data are often incomplete or inaccurate. Satellite and street-level imagery, in contrast, cover all 44 and show their lanes as painted. Vision-language models (VLMs) can read such imagery, but asked directly they lose geometric consistency when the same lane must be matched across a satellite crop, street-level photos taken from different poses and an ID-labelled network. We therefore present PAVE (Perceive, Anchor, Verify, Edit), a harness in which code measures what can be measured, traffic engineering knowledge enters as general rules and checks, and the model makes only the open judgements, each anchored to network IDs so that checks catch answers that contradict a measurement, a second reading or a traffic rule. Scored against human labels at signalised intersections, PAVE raises the share of exactly correct lane layouts from 49-64% with a single request to 86-91% for two VLMs, with most of the gain coming from reading one approach at a time on traced lanes. The same division of work edits a real network to a planning brief: the model names the links and nodes of each part of a facility, and code builds the edit from a design template. Of 18 edits, 16 pass every network check, against none when the model writes its own code, and 2 contain a design or coding error, against 7. An analysis shows where VLMs lose geometric consistency and which check catches each failure.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.27330v1' target='_blank'>GGDriver: Glance at What Is Shared, Gaze at What Differs for Perception-Free Planning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jiawei Sun, Maosen Li, Jiamin Shi, Xiaoxu Zheng, Jiun Tian Hoe, Yechao Bai, Michael Bi Mi</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-20 09:09:39</h6>
+<p class='card-text'>A planner deciding whether to turn left or continue straight needs to inspect different parts of the scene for each maneuver. Yet many end-to-end driving planners evaluate every candidate trajectory against the same compressed scene representation. We let each candidate select the visual evidence used to refine and score it. A global glance first produces trajectory hypotheses from shared scene features. We then project a corridor around each trajectory into the camera views and use the resulting mask to attend to patch features at the backbone's native resolution. After refinement, the scorer projects each final proposal again and ranks it using evidence along its own path. This geometric selection requires only the predicted trajectory and camera calibration. On three planners with different scene representations (learned registers, a perception-supervised bird's-eye-view grid, and a coarse image-token grid), adding this gaze improves planning scores. In ablations, path-aligned patches outperform both a matched number of randomly selected patches and attention over all patches. Using the gaze for ranking yields larger gains than using it for refinement alone. With a ViT-S backbone and no perception labels, GGDriver achieves a rater feedback score of 8.110 on the WOD-E2E test set, 94.2 PDMS on NAVSIM-v1, 48.6 EPDMS on NAVSIM-v2, and a closed-loop Driving Score of 72.18 on Bench2Drive.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.27308v1' target='_blank'>Frontier Voltage Boost Laplacian Path Planning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Vinay Pritamani, Rishabh Jain, Jack Lowry, Joshua Smith</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-20 08:52:39</h6>
+<p class='card-text'>This paper introduces Frontier Voltage Boost Laplacian path planning. The method inherits many of the attractive features of earlier Harmonic Potential Field planning methods, including absence of local minima and smooth paths, while improving the original. The piecewise approach we introduce is able to solve larger maps and handle narrow passages more quickly than earlier Harmonic Potential Field methods. After explaining the algorithm, we experimentally characterize its cor- rectness, performance, and path smoothness as a function of map size. Code is available at https://github.com/vpritamani/FrontierVoltageBoostLaplacianPathPlanning</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.27263v1' target='_blank'>AELF: Active Terrain-Aware UAV Exploration Using a Lightweight Framework</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Mingyang Li, Xiao Cao, Yi Luo, Yuting Tao, Hongjie Huang, Bowen Xu, Peng Lu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-20 08:03:31</h6>
+<p class='card-text'>This paper presents an efficient and robust approach for autonomous aerial exploration in complex environments. Instead of relying on conventional 3D voxel-based maps for exploration, we utilize a lightweight 2.5D map framework that reduces computational overhead while preserving essential topographic information. More importantly, this representation systematically eliminates the blind voxel problem commonly encountered in voxel-based exploration due to occlusions and limited visibility. Unlike previous methods that rely on a fixed altitude scale for exploration, our approach requires no prior height information and actively adapts to terrain elevation changes during exploration. To further enhance exploration efficiency while preserving the generality of 3D exploration, we perform 2D path planning on the 2.5D map framework, which is then lifted to 3D to evaluate the cost between viewpoints by taking into account terrain traversability, thereby reducing frequent altitude changes and enabling smoother exploration. Extensive experiments conducted in both simulated and real-world environments demonstrate the effectiveness and advantages of our approach over existing solutions. Our approach demonstrates fast exploration of over 2000~$\text{m}^2$ of cluttered forest and sloped mountainous terrain with elevation changes of up to 10~m, reaching a maximum speed of 5~m/s in real-world tests.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.27241v1' target='_blank'>WINSO: A Large-Size Very-High-Resolution Remote Sensing Dataset for Wind Turbine Detection and Solar Panel Segmentation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Di Wang, Ke Li, Zhaokun Li, Weiping Ni, Junzheng Wu, Yahu Liu, Quan Wang, Xinbo Gao</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-20 07:44:17</h6>
+<p class='card-text'>Wind and solar energy are central to the global transition toward net-zero emissions and sustainable development. Accurate spatial inventories of wind and solar facilities are essential for future energy planning. Satellite remote sensing provides a practical and efficient means to acquire such geospatial data at scale. However, reliable facility mapping from large-size satellite images remains constrained by the scarcity of carefully annotated datasets and the lack of systematic evaluation protocols. To address these limitations, we introduce \textbf{WINSO}, a large-scale wind and solar benchmark based on very-high-resolution (VHR) satellite imagery with ground sampling distances (GSDs) of 0.5--0.7\,m. WINSO comprises 10,962 large-size images sampled from diverse geographic locations across the Asia-Pacific region, covering at least 71,600\,$\text{km}^2$ and totaling 286.36 gigapixels, with individual image dimensions reaching 44,032$\times$62,208 pixels. Through manual annotation and expert verification, a total of 166,473 instances are labeled using horizontal bounding boxes (HBBs) for wind turbines and polygon masks for solar panels. To build baselines for clean-energy facility mapping, we evaluate state-of-the-art detection and segmentation models, specialized ultra-high-resolution (UHR) architectures, and vision-language models across different inference strategies. Furthermore, cross-dataset evaluations on two external public datasets illustrate the strong generalization capability of the WINSO. WINSO establishes a standardized benchmark to advance automated clean-energy mapping, paving the way for wide-area monitoring of the clean-energy transition.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.27226v1' target='_blank'>Trailblazer-F: Speculative Action-Flow Inference for Autonomous Driving</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Haibo Hu, Lianming Huang, Qiao Li, Nan Guan, Chun Jason Xue</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-20 07:24:51</h6>
+<p class='card-text'>Driving world-action models generate planned trajectories through iterative action denoising, with each update depending on the preceding state. This sequential dependency incurs substantial inference latency, limiting timely planning. Speculative inference offers an opportunity to reduce this latency by predicting future denoising states for parallel target evaluation, but requires efficient proposal generation and suitable verification for continuous actions. We present Trailblazer-F, a speculative action-flow inference framework in which a lightweight drafter acts as a trailblazer, charting a candidate denoising path through the compact, structured waypoint space so that the target model can verify multiple steps in parallel and advance with fewer sequential updates. Our method maintains planning quality while keeping the pretrained target model frozen.Across all 12,146 NAVSIM v1 navtest scenes, Trailblazer-F maintains near-baseline planning performance, with PDMS changes of +0.04 and -0.08 points for SimWAM and DriveWAM, respectively. Paired inference measurements on an NVIDIA L20 GPU yield 2.31x and 1.55x speedups. Real-vehicle experiments on NVIDIA Jetson AGX Orin further demonstrate 1.96x and 1.37x speedups, together with close qualitative trajectory agreement with native sampling. our code is here https://github.com/DanileHaibo/Trailblazer-F</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.27173v1' target='_blank'>PACE-WM: Parallel World Modeling with Action History for Visual Planning</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Haishan Liu, Shijie Lian, Bin Yu, Yao Zhang, Changti Wu, Fanping Liu, Jianzheng Liu, Lei Xie, Cong Huang, Kai Chen</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-20 05:59:05</h6>
+<p class='card-text'>JEPA-style world models support visual planning by predicting future representations conditioned on future actions. However, similar observations can conceal different motion states, making temporal context essential for interpreting future action effects. We propose PACE-WM, a parallel world model that uses executed-action history to contextualize future prediction and planning. Specifically, PACE-WM maintains a recurrent memory of executed actions and uses this memory to condition a causal Transformer. PACE-WM predicts multiple future representations in parallel without recursive predicted-state feedback within each prediction window. We further introduce Reference-Anchored Minimum Progress (RAMP) for action selection during planning. RAMP scores candidate actions by their predicted goal improvement along direct and split paths relative to a shared reference. Across four visual planning tasks, PACE-WM with RAMP achieves an average success rate of $98\%$ and plans approximately $7$-$9\times$ faster than autoregressive LeWM under matched CEM settings. We also construct four controlled benchmarks to evaluate PACE-WM's capabilities in motion disambiguation, goal-relative motion, and goal adaptation. Project page is available at https://github.com/LHS180/PACE-WM.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.27127v1' target='_blank'>OpenRing: Deadlock-Free Execution of Any Planner on AGV Floors with One-Way Lanes</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Zhihao Lin, Anh-Tu Nguyen, Hui Zhang, Yoshinobu Kawahara</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-20 04:54:47</h6>
+<p class='card-text'>Lifelong multi-agent path finding replans routes for automated guided vehicles, but deviations can invalidate a plan. With one-way lanes, a late vehicle or lost planner can close a ring of full segments. We separate how fast the floor runs from whether it keeps running. In OpenRing a planner proposes routes and an order, a local guard commits only moves and route changes that cannot close such a ring, and the order binds for a bounded time. Despite arbitrary proposals or planner loss, no ring closes. With two-place segments, traffic can continue under disturbances; progress is guaranteed once they end, and all vehicles exit if entries also stop. Among rules that reroute only on a proposal, every guard veto is necessary, and a clean plan keeps its crossing orders. The guarantee has a price: no rule that never stores a vehicle in a crossing under arbitrary stops carries more than $B/T_s$ per segment of $B$ places and traversal time $T_s$. With binding orders, three planners deadlock in 80 of 126 runs across eight floors. Inside OpenRing, none of the 126 runs deadlocks. OpenRing's closed-loop throughput rivals or exceeds the best baseline's. Physics simulations show no deadlocks or overlaps.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.27124v1' target='_blank'>A Plan or an Adversarial Example? A Round-Trip Check for Latent World Models</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Huiyuan Tian, Chih-Yung Wen, Shijian Li</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-20 04:49:56</h6>
+<p class='card-text'>If we optimize an image until a classifier is confident it shows a cat, we may get an adversarial example, not a cat. Planning with a latent world model is a similar search for actions whose predicted future is closest to the goal. Is the result a plan, or an adversarial example of the world model? We show that it can be either. On the released DINO-WM and LeWM, more iterations of the cross-entropy method (CEM) lower the predicted cost but lose up to half of the problems CEM had already solved. The model's own predictions do not reveal these failures. We propose a simple test that executes the plan after every iteration and counts the problems a planner solves and then loses. Unlike an image, a plan comes with its actions, which our round-trip check reads back from the predicted states with a small network, penalizing mismatches. The check reads back the sum of each block of five actions, the part that two consecutive predicted states determine. Without retraining the world model and at only 0.2% to 3.1% more planning time, it improves the widely used planners CEM and MPPI on three released world models, and gains more where planners lose more problems. Without replanning, success rises from 0.39 to 0.76 on Wall with DINO-WM and from 0.56 to 0.94 for MPPI on JEPA-WM. With replanning (MPC), it rises from 0.70 to 0.81 on Cube with LeWM.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js'></script>
+</body>
+</html>
