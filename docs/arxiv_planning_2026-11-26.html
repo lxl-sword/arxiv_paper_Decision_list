@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>planning - 2026-11-26</title>
+<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap' rel='stylesheet'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css'>
+<style>
+body {
+font-family: 'Roboto', sans-serif;
+background-color: #f5f7fa;
+padding: 20px;
+}
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.card-title {
+    font-weight: 700;
+}
+.card:hover {
+    transform: scale(1.02);
+    transition: 0.3s ease-in-out;
+}
+</style>
+</head>
+<body>
+<div class='container'>
+<h1 class='text-center my-4'><i class='fas fa-book'></i>planning - 2026-11-26</h1>
+<div class='row'>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.34935v1' target='_blank'>Can image generation help visual reasoning? An empirical study</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Xueyang Yu, Yifan Jing, Taiming Lu, Linrong Cai, Zhipeng Cai, Yunyang Xiong, Gabriel Sarch, Zhuang Liu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-25 18:59:31</h6>
+<p class='card-text'>Language models think in words; then multimodal models might think in images. We test whether a generated helper improves the answer to a visual question. A model describes the helper it needs and then answers using the original and generated images together. Across 13 vision-language model and generator pairs, generation lowers mean accuracy by 3.7 percentage points, with declines on nine of ten tasks. Two unified models, BAGEL and Janus-Pro-7B, each lose accuracy on eight tasks. On VSTAR, adding a generated image to the same planning hint lowers accuracy by 10.47 points. Repeated image edits yield different outcomes across tasks. ChartQAPro and MathVista stay below their no-generation baselines, while ERQA gains three points after ten edits.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.34830v1' target='_blank'>Not all world models can doubt: how training objective and architecture shape epistemic uncertainty in JEPA and RSSM world models</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Simon Baur, Wojciech Samek, Jackie Ma</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-25 18:11:49</h6>
+<p class='card-text'>World models predict how an environment responds to actions, so that candidate actions can be evaluated before execution. Executed actions, or decisions, taken in this manner are only as reliable as the model's predictive capabilities, and predictions in turn are only reliable within the model's experience. Epistemic uncertainty (EU) is the signal that marks where that experience ends. In this work we offer an extensive empirical study on how training objectives and architectures shape epistemic uncertainty of world models. More precisely, we present a controlled comparison of post-hoc EU (last-layer Laplace and ensembles) between two dominant models of different paradigms: 1) LeWorldModel (LeWM): A joint-embedding predictive architecture (JEPA), which predicts the next embedding without a decoder, and 2) DreamerV3: A recurrent state-space model (RSSM), which reconstructs the observation from a recurrent latent state. In ten simulated visual-control environments, we follow a controlled state perturbation of the environment state through every stage of the models up to the final EU estimate. We find that the RSSM attenuates the state perturbation through two mechanisms before it reaches an estimator on the predictor feature. Its recurrent update averages over context, so a change in a single frame reaches the state at a fraction of its size and recovers only as the change persists. Its reconstruction objective weights an entity by the pixels it covers, so a small object can be lost due to the training objective. The JEPA has neither mechanism and passes the change through all stages to the uncertainty. We further show that this translates to gaps in five uncertainty related downstream tasks, from unfamiliar-state detection to uncertainty-penalised planning: the RSSM uncertainty misses deviations that its own posterior registers, whereas the JEPA uncertainty reports what its model sees.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.34781v1' target='_blank'>Comparative Study of Deep Learning Architectures for Brain Tumour Classification</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Prisha Gupta, Pradeep Kumar Gupta</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-25 17:40:22</h6>
+<p class='card-text'>Accurate and early classification of brain tumours from magnetic resonance imaging (MRI) is essential for treatment planning, yet many published deep learning studies are trained and tested on small, single-source datasets, reporting accuracies that may not hold outside these datasets. This study compares six deep learning architectures for four-class classification (healthy, meningioma, glioma and pituitary tumour): a baseline convolutional neural network (CNN), an attention-based CNN, ShuffleNet, and EfficientNet-B0, ResNet-50 and Xception augmented with the Convolutional Block Attention Module (CBAM). The models were trained on a corpus assembled from four publicly available MRI datasets. Because these datasets carry no patient identifiers, a leakage-aware pipeline was developed that removes exact duplicates using MD5 hashing (550 images) and near-duplicates using perceptual hashing (8,024 images), and assigns visually similar images to the same fold during 5-fold group cross-validation. A leave-one-dataset-out (LODO) test on a fully held-out dataset was used to measure cross-dataset generalisation. Under a conventional random split, ShuffleNet achieved 97.1% accuracy with 1.2M parameters. Under leakage-aware group K-fold cross-validation, ShuffleNetV2 (98.41%) and EfficientNet-B0 (98.23%) were statistically indistinguishable (paired t-test, p = 0.19), and both significantly outperformed the custom CNNs. On the held-out dataset, accuracy dropped for every model: EfficientNet-B0 generalised best (78.4%), while ShuffleNetV2 fell to 66.2%. Glioma-meningioma confusion was the dominant error mode, and Grad-CAM maps showed that predictions were driven by tumour regions. These results indicate that in-distribution accuracy alone overstates real-world performance and that leakage-aware and cross-dataset evaluation should be reported alongside it.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.34690v1' target='_blank'>PoVi: Agentic Poetry-to-Video Generation with Knowledge Grounding and Figurative Understanding</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yuxia Zhu, Shiying Zhang, Lingzhuang Sun, Song Yang, Siheng Wu, Xinglong Xu, Sizhe Qiu, Hao Liang, Cheng Tan, Asher Qin, Wentao Zhang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-25 16:50:03</h6>
+<p class='card-text'>Poetry-to-video generation requires more than translating text into visual scenes. Poetic language is highly compressed, often depends on historical and cultural knowledge, and frequently conveys meaning through metaphor, imagery, and other non-literal expressions. We introduce PoVi, a benchmark and agentic framework for grounded poetry-to-video generation, evaluating semantic grounding, discourse coherence, and audiovisual realization. PoVi reconstructs poem semantics into an evidence-bounded representation and progressively transforms them into narration, interpretation, character assets, and shot-level visual plans, followed by narration-aligned video generation. Across three planning backbones and four video generators, PoVi consistently improves over single-call generation, with the largest gains on implicit background knowledge and metaphorical relations. PoVi provides a testbed for studying knowledge-grounded, long-horizon multimodal generation beyond direct text-to-video synthesis.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.34658v1' target='_blank'>FeaXDrive2: Body-Scene Spatial Grounding for Feasibility-Aware Generative Driving</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Bo Leng, Baoyun Wang, Wenxin Wen, Ming Liu, Weiqi Zhang, Ran Yu, Chongfeng Wei, Zhuoren Li, Lu Xiong</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-25 16:30:15</h6>
+<p class='card-text'>Generative driving planners may produce trajectories that appear feasible at their reference points but violate environmental constraints over the full vehicle body. We propose FeaXDrive2, an end-to-end generative planning framework that enhances vehicle-embodied spatial feasibility (VESF) through body-scene spatial grounding. The proposed method constructs spatial queries from actual vehicle-body corners and dynamically updates visual sampling locations using evolving trajectory estimates across Flow steps. Retrieved local visual features condition subsequent Action Flow-DiT velocity predictions, allowing trajectory generation to guide spatial information retrieval. Rollout-Consistent Safety Fine-Tuning (RC-F) combines high-risk trajectory supervision with reference behavior preservation, followed by planning-supervised VLM-Action Alignment. Vehicle-geometry counterfactual analysis reveals safety differences under identical trajectories but varying vehicle geometry. On NAVSIM, FeaXDrive2 reduces at-fault collisions by 36.5% relative to the base planner and improves PDMS from 87.0 to 88.8. Under NAVSIM v2 evaluation, EPDMS increases from 86.5 to 88.3. Ablation and body-clearance analyses further demonstrate the safety benefits of body-scene spatial grounding.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.34653v1' target='_blank'>Minimising sample size across analysis strategies in preclinical research: Reduced power or negligible benefit</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Nicole Ellenbach, Juliane C. Wilcke, Maurizio Morelli, Elisa Noltenius, Simona Jell, Sebastian Kobold, Carolin Herrmann, Anne-Laure Boulesteix</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-25 16:28:11</h6>
+<p class='card-text'>Preclinical animal studies often allow multiple valid statistical analysis strategies, which can result in different sample sizes required to achieve a target power. Because reducing animal use is an ethical, financial, and practical priority, researchers have a clear incentive to choose the strategy requiring the fewest animals. This may, however, favour an overly optimistic estimate of the sample size required, particularly when prior information is uncertain or biased. This study investigates how minimising sample size across analysis strategies affects statistical power and animal use. We conceptualise this practice as sample size hacking, describe its underlying mechanism, and evaluate its consequences using a simulation study based on a real preclinical cancer study. We varied effect sizes, the level of uncertainty in prior information, and the degree of follow-up bias to assess the resulting sample size reductions and achieved statistical power. Sample size minimisation across analysis strategies substantially reduced the achieved statistical power in several scenarios, particularly for moderate effect sizes and greater uncertainty in prior information. For larger effect sizes or in the presence of follow-up bias, the impact on power was less pronounced, but the resulting reduction in sample size was also smaller. Selecting an analysis strategy solely because it yields the smallest calculated sample size may in fact compromise statistical power, while offering only limited animal savings in other settings. These findings underscore the importance of justifying and pre-specifying the analysis strategy before sample size planning to limit potentially problematic analytical flexibility, reduce the risk of underpowered studies, and promote transparency in preclinical research.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.34614v1' target='_blank'>Commit2Drive: Perception-Grounded Language Decisions as Commitments for Trajectory Planning in Vision-Language-Action Driving Models</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Zikai Zhang, Hubert P. Shum, Toby Breckon</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-25 16:01:47</h6>
+<p class='card-text'>Vision-Language-Action (VLA) models introduce language reasoning into end-to-end autonomous driving. They output a language decision together with a trajectory, which makes the planner more interpretable. However, in existing methods the language decision is either an independent output or an index that selects among similar candidate trajectories, and its annotations are not verified against the trajectory. As a result, the language decision and the trajectory are often inconsistent in closed-loop driving. To address this, we propose Commit2Drive, a framework that imposes the language decision as a consistency constraint on trajectory planning. The decision is a commitment, a maneuver class with a continuous parameter that one deterministic rule reads from any trajectory, and it is grounded in facts reported by the perception of the model itself. A Maneuver Bank maps the commitment to a code with a kinematic meaning, and consistency losses train the planner to execute every admissible decision of a scene, so that the trajectory follows the decision. An automatic data pipeline supplies the supervision. Decisions are labeled from the future motion of the expert, counterfactual executions train the decision and the trajectory together, and rule-based functions with a Vision-Language Model (VLM) generate, review and refine the language annotations. The code is a lookup that involves no hidden state of the language model, so Commit2Drive is extensible to rule-based decisions, which the same planner executes without retraining. Commit2Drive uses a 0.5B language model and runs closed-loop inference online on a single consumer graphics card. On Bench2Drive, Commit2Drive reaches a Driving Score (DS) of 78.50 and a Success Rate (SR) of 55.91% with a lightweight model, which is competitive with the state of the art, and greatly reduces the language-action inconsistency. Code will be released soon.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.34605v1' target='_blank'>Fewer Fractions, Equieffective Plans: An optimization framework based on equieffective dose</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Suryakant Kaushik, Jakob Ödén, Albin Fredriksson, Iuliana Toma-Dasu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-25 15:58:10</h6>
+<p class='card-text'>Background: Non-standard fractionation requires caution before clinical use, and planners often need to manually modify the prescription and dose constraints for non-linear biological effects. Purpose: To develop an extension within a treatment planning system that enables the generation of hypofractionated plans based on equieffective dose, $EQD_{n_{ref}}$, for an alternative fractionation deliverable in $n$ fractions, such that it is equieffective with the reference fractionation for a specified biological endpoint. Methods: A research build of RayStation v2025 was extended to optimize $EQD_{n_{ref}}$ plans. This study used anonymized data from three head and neck patients. $\text{CTV}_p$ and $\text{CTV}_n$ were prescribed 70 Gy and 54 Gy in 35 fractions. Targets, spinal cord, and brainstem were robustly optimized for $\pm3.5$% density and $\pm3.0$ mm setup uncertainties. For each patient, hypofractionated plans were created with 34, 32, 30, and 25 fractions. Sensitivity analysis evaluated the impact of $α/β$ uncertainty. Results: All equieffective hypofractionated plans maintained target coverage and met mandatory clinical goals for organs-at-risk (OARs). Compared to standard fractionation, DVH parameters indicated an average $ΔEQD_{n_{ref}}$ <0.2 Gy for $\text{CTV}_p$ and no difference for $\text{CTV}_n$. For parallel OARs, the median mean-dose difference between hypofractionation (to 30 fractions) and standard fractionation was generally <1% of the prescribed dose. $α/β$ uncertainty produced the greatest variation in the 25-fraction regimen, with absolute $ΔEQD_{n_{ref}}$ up to 0.88 Gy for targets and up to 0.63 Gy for the spinal cord and brainstem. Conclusions: An $EQD_{n_{ref}}$-based framework can generate equieffective hypofractionated plans, making it feasible to reduce fractions without substantially deviating from existing clinical protocols.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.34603v1' target='_blank'>VisualMontage: Manipulating the Beliefs of Vision-Language Agents with Authentic Image Sequences</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jinwei Hu, Lai Wei, Zhuoyun Li, Youcheng Sun, Yi Dong, Xiaowei Huang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-25 15:57:55</h6>
+<p class='card-text'>As agents based on vision-language models (VLMs) increasingly interpret social-media content, errors in their analysis may lend credibility to rumors and amplify their spread. In this paper, we study the problem of visual cognitive collusion, in which coordinated posts combine authentic images and locally faithful captions to induce VLM agents to infer and accept attacker-chosen target claims through their own reasoning. To enable systematic evaluation of this cognitive threat, we introduce a new benchmark comprising 544 target cases and 33.2K candidate images across eight application domains. We further propose VisualMontage, a multi-agent framework for simulating such attacks through narrative planning, image selection and ordering, and caption assignment under iterative review. We evaluate this threat through extensive experiments across 12 vision-language models, examining modality effects, production-team components, and downstream defenses. Using identical attack feeds across models without victim-specific optimization, we demonstrate cross-model transferability, achieving mean attack success rates of 61.93% for proprietary models and 68.71% for open-weight models. Moreover, 92.65% of generated feeds pass independent model-based validity auditing. Even after downstream review, residual attack success rates range from 35.3% to 76.7% across the evaluated configurations. Our additional controlled comparisons further reveal that captions can improve model-rated posting naturalness while reducing attack success. Together, these findings reveal a novel cognitive threat in social-media interpretation and motivate safeguards that assess how authentic posts jointly shape agents' reasoning and conclusions.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.34597v1' target='_blank'>$μ$MPC: Microsecond-Scale Nonlinear and World Model Control from Edge to GPU via Koopman-Linearized Precompilation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Devesh Nath, Glen Chou</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-25 15:56:47</h6>
+<p class='card-text'>We present $μ$MPC, a fast model predictive control (MPC) framework that reduces online computation using learned Koopman-linearized dynamics. By precomputing finite-horizon control-to-output maps, $μ$MPC eliminates lifted-state trajectories, yielding an action-only Koopman-Compiled QP (KC-QP) with $Hn_u$ decision variables, independent of lifted dimension. A fixed, precomputed primal operator enables efficient primal-dual iterations using only matrix-vector products and projections, accommodating changing goals and constraints without refactorization. This efficiency also enables control-aware dynamics learning through differentiable KC-QPs in the training loop and batched DAgger-style data aggregation. $μ$MPC achieves solve times as low as $23μ$s on a desktop CPU and 24 ms onboard a 168 MHz Crazyflie microcontroller. It scales to 4096D quadruped control in under 5 ms, visual planning with 2048D world models in 0.4 ms, and collision-aware planning for 200 quadrotors at over 30 Hz on the GPU. Across these benchmarks, $μ$MPC achieves up to $108\times$ faster constrained MPC and $1907\times$ faster visuomotor planning than competing methods.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.34569v1' target='_blank'>Riding the Wave: Sim-to-Real Humanoid Control on Elastic Terrain</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yinglei Zhu, Qin Li, Honghao Pan, Bozhao Wang, Binghui Xu, Jie Lu, Wentao Song, Xiyu Wang, Xinyu Zhu, Wei Liu, Xinjun Liu, Kai Lu, Huichan Zhao</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-25 15:36:13</h6>
+<p class='card-text'>Humanoid robots on deformable elastic terrains face a surface whose position and motion are coupled in space and time: deflection and rebound persist between contacts, and load at one foothold alters the support at others, so training must capture how each contact changes the support that follows. We present RIPPLE (Robust Interaction via Proprioceptive Policies on Large-deformation Elastic terrain), a simulation-to-real learning framework for humanoid control on such terrains. RIPPLE integrates ElasticMembrane, a pretensioned mass-spring mesh that models spatially coupled deflection, energy storage, and rebound, together with deformable contact into MJLab for GPU-parallel policy learning. Staged training then transfers rigid-ground skills to balance and jumping on these terrains using only proprioception, without vision or force sensing. Deployed zero-shot, the policies enable a MagicBot Z1 humanoid to balance, jump consecutively, and enter a trampoline from a rigid platform. In simulation, ElasticMembrane training holds standing success of at least 98.7% (mean over three seeds) on ElasticMembrane, IndependentSprings, and BouncyPlate under 0.3 m/s perturbations, whereas rigid-ground or contact-compliance training transfers poorly to the first two. A fixed policy tolerates stiffness from 0.35 to 2.8 times the training value, beds up to 7 m wide, and seven further simulated support scenarios, so transfer needs no calibration to the trampoline's stiffness. We plan to release the code soon. The interactive browser demo, videos, and scene configurations are available on the project page: https://fly-pigTH.github.io/wave_rider/</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.34540v1' target='_blank'>Reference-Model-Guided Distributed MPC for UAV Swarm Formation Flying Under Switching Directed Graphs</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yiming Wang, Yenan Wu, Junda Wu, Yanke Sun, Huizhe Li, Ke Yu, Youmin Gong, Guangfu Ma, Jie Mei</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-25 15:21:09</h6>
+<p class='card-text'>Distributed formation control of unmanned aerial vehicle (UAV) swarms in complex environments faces several challenges, including switching inter-agent connectivity, limited communication, external disturbances, and collision avoidance. To address these challenges, we propose a reference-model-guided distributed model predictive control (MPC) framework for UAV swarm formation. Each UAV uses relative-position information from its neighbors as input to a local reference model, whose output serves as the formation guidance for the onboard MPC controller. Meanwhile, a Kalman filter is utilized to predict neighboring UAV motions, enabling the construction of inter-UAV collision-avoidance constraints solely from instantaneous relative-state information. By decoupling MPC optimization from distributed coordination, this control architecture preserves the look-ahead planning and constraint-handling capabilities of MPC while enhancing the swarm's adaptability to switching directed graphs. Moreover, eliminating the exchange of neighbors' predicted trajectories reduces communication bandwidth demands, offering strong scalability for large-scale UAV swarms. To improve robustness and safety, disturbance-observer-based feedforward compensation is employed, while the bounded residual disturbance is explicitly considered in the control barrier function (CBF)-based obstacle-avoidance constraints. Finally, the proposed framework is validated through both simulations and real-world flight experiments. Specifically, the flight verification is conducted on a fully distributed multi-UAV platform without external global localization.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.34527v1' target='_blank'>Resilience Analysis Through Automated Stage Identification and Quantitative Assessment</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Anna Strzoda, Krzysztof Grochla, Rafael Munoz-Carpena</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-25 15:14:41</h6>
+<p class='card-text'>This paper introduced an ML-based approach, designed to be domain- and threat-agnostic, for automated recognition of PARA (Plan/Prepare, Absorb, Recover, Adapt) resilience stages in system-performance time series, enabling subsequent quantitative resilience analysis across different systems. We investigate four ML models for resilience stage recognition: Random Forest (RF), Support Vector Machine (SVM), Light Gradient Boosting Machine (LightGBM), and Extreme Gradient Boosting (XGBoost). We then use the ML models' predictions to quantify system resilience by computing corresponding resilience metrics from system-performance data observed before, during, and after disruptive events. We evaluate the proposed approach using datasets from two distinct operational domain network systems and an airport transportation system, demonstrating its domain-agnostic applicability to resilience assessment. The results demonstrate the effectiveness of resilience stage classification, with the best F1-scores ranging from 74.3% to 99.4% across all resilience stages. The overall resilience metrics R_t and RL are estimated, with the best models' MAPE ranging from 0.35-0.82% on IEEE 802.11 and LTE to 1.65-9.56% for the airport. These results provide a basis for threat-agnostic resilience analysis of complex engineering systems, enabling further assessment of how effectively a system withstands, absorbs, and recovers from disruptive events and stress conditions.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.34509v1' target='_blank'>Long-Horizon Planning with Latent World Models via Graph Anchors</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Syed Nazmus Sakib, Abdul Monaf Chowdhury, Peizhen Li, Nafiul Haque, Chandak Chakma, Md Mehedi Hasan, Zehong Cao, Shifat E. Arman</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-25 14:58:31</h6>
+<p class='card-text'>Latent world models plan in a compact latent space by predicting the outcomes of actions. Their planners judge a plan by the latent distance between its
+  predicted end state and the goal image. We show that this distance fails in two distinct ways. First, it loses directional signal a few steps from the
+  goal, causing distant goals to fail. Second, it weighs the robot arm over the manipulated object, causing manipulation to fail at contact. We measure
+  both failures directly on recorded data by asking whether a lower latent distance corresponds to true progress toward the goal. Across five
+  environments, six visual representations (including raw pixels and V-JEPA 2), and nine Meta-World tasks, this ranking test cleanly separates the two
+  failures, and the graph distance to a goal predicts where closed-loop planning breaks down. Both failures share a single remedy: replacing the distant
+  goal with a nearby target that lies on a recorded trajectory. We realize this principle with Graph Anchors, a training-free planner for frozen latent
+  world models. It builds a sparse graph once over the model's own training frames and aims each planning step at a node a few moves ahead along the
+  shortest path to the goal, keeping paths on recorded transitions wherever contact matters. On goals up to 400 steps away, Graph Anchors raise LeWM's
+  success from 13% to 85% on PointMaze-Medium, from 8% to 87% on PointMaze-Large, and from 5% to 71% on Push-T, where stronger search toward the goal
+  fails and where prior training-free planners break down under missing step horizons, subsampling shortcuts, or fragmented contact.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.34449v1' target='_blank'>HoloBrain-0.5 Technical Report</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Xuewu Lin, Jiahao Wang, Jiawei Li, Mengdi Li, Zhengmao Sun, Yiwei Jin, Hongyu Xie, Zhengyang Feng, Kun Wu, Zihao Chen, Lianzhou Zhang, Lichao Huang, Zhizhong Su</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-25 14:28:05</h6>
+<p class='card-text'>We present HoloBrain-0.5, a family of vision-language-action (VLA) models for manipulation across robot embodiments. The policies plan in a shared action space using robot state, kinematic structure, and calibrated camera observations. We standardize joint axes, coordinate frames, and tool-center points in robot descriptions (URDFs) and encode their kinematic graphs in a shared 3D representation. HoloBrain-0.5-Continuous generates action chunks by diffusion, while HoloBrain-0.5-Discrete uses residual finite scalar quantization (FSQ) and delayed autoregression. We pretrain both policies on over 10,000 hours of real-robot, simulation, and human-manipulation data spanning 15 embodiment categories.
+  Across six closed-loop simulation settings, the discrete policy converges faster and reaches a higher mean success rate than the continuous policy (56.77% vs. 49.71%). On seven real-robot tasks, it achieves a mean progress score of 87.76% without task-specific post-training. After post-training, the continuous policy outperforms $π_{0.5}$ on the seven-task benchmark (94.52% vs. 86.25%) and an 11-task dual-arm benchmark (79.07% vs. 69.41%). The discrete-initialized continuous policy transfers five tasks zero-shot from Piper to Piper-X, scoring 63.28% on average. With target-robot demonstrations, the continuous policy scores 89.2% on Franka Panda and 92.94% on a mobile dual-arm platform. Although pretraining includes no Unitree G1 data, post-training with limited G1 demonstrations yields a mean progress score of 70.24% across three humanoid tasks, compared with 11.00% for $π_{0.5}$.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.34416v1' target='_blank'>CHASE: Curiosity-Guided Skill Acquisition for Embodied Task Execution</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Zixuan Wang, Wei Zhang, Chenlei Zhu, Naiyu Chen, Xihua Wang, Jie Chen</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-25 14:08:37</h6>
+<p class='card-text'>Robots executing tasks in partially observed environments must resolve uncertainty while operating with incomplete skills. Inspired by human curiosity, we investigate how robots can formulate task-relevant hypotheses, seek evidence, and acquire missing skills during task execution. We propose CHASE, a Curiosity-guided Harness for Acquiring Skills from Evidence, which operationalizes curiosity as selecting investigations that resolve task uncertainty and expand executable capabilities. Four modules connect dynamic scene understanding, hypothesis-driven planning, on-demand skill acquisition, and verified execution. The planner balances information value, skill reuse, and acquisition/execution cost. Missing skills trigger bounded exploration, learning from verified segments, and held-out admission during acquisition; separate checks verify physical effects and acquired evidence. Newly admitted skills expand the executable investigation set, closing the loop between resolving uncertainty and acquiring capabilities. Simulation and real-robot experiments evaluate investigation, skill acquisition, and task execution. CHASE achieves 50-80% task success under combined information and capability gaps, with 70-90% evidence resolution.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.34352v1' target='_blank'>Beyond Natural-Language Instructions: Temporal Logic as a Task Language for VLA Models with Visual-Logical Fusion</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Zezhi Liu, Jingwen Sun, Hongjin Chen, Shaojie Ren, Peiyan Tu, Xin Jin, Zhibo Chen</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-25 13:20:34</h6>
+<p class='card-text'>Robotic tasks combine object relations, logical dependencies, and temporal requirements, which robot planning and industrial control commonly specify in temporal logic (TL). We introduce TL-VLA, a vision--language--action framework that replaces natural-language task instructions with temporal logic, making this spatiotemporal structure explicit. A typed graph encoder and visual--logical fusion condition continuous actions on the task specification and the current observations. To prepare a general vision--language backbone for this interface, we develop TL-aware robot pretraining with separate semantic and structural readouts: a frozen language teacher aligns task semantics, the structural readout encodes TL syntax to support complex, long-horizon tasks, and autoregressive action prediction connects the graph representation to robot behavior. Downstream policies inherit the pretrained backbone and TL encoder and learn new fusion and action modules. On CALVIN ABC$\rightarrow$D, our TL-aware initializer reaches \textbf{3.800} average chain length and \textbf{62.3\%} five-task success, compared with 3.578 and 54.5\% for a FAST initializer pretrained on the same data and 3.485 average chain length for a Qwen+NL baseline. On LIBERO-10, TL-aware initialization improves success from \textbf{91.2\% to 95.8\%}. On LIBERO-Mem, our policy reaches \textbf{65.0\%} success without observation history, compared with 45.0\% for a Qwen+NL reference. On held-out Panda planning specifications, it reaches \textbf{59.6\%} at Success@256 over three generation seeds, versus 48.4\% for Qwen+TL and 37.0\% for Qwen+NL. These results support explicit logical task conditioning and transferable TL-aware representations for robot action learning.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.34351v1' target='_blank'>Inverse Reinforcement Learning with State-Dependent Foresight for Human Decision-Making</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Jinil Kim, Jinwoo Jeong, Hyeongjun Yun, Min-hwan Oh, Woo-Young Ahn</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-25 13:20:03</h6>
+<p class='card-text'>Computational modeling of behavior represents individuals with a model fitted to their observed behavior and characterizes them through its parameters. Naturalistic tasks incorporate the complexity of real environments and yield high-dimensional behavioral trajectories. Inverse reinforcement learning (IRL) infers the latent reward function underlying these trajectories. Standard IRL, however, assumes effectively infinite-horizon planning, whereas human foresight is both bounded and state-dependent. Here we introduce SC-AIRL (State-Conditional Adversarial IRL), which builds these two cognitive properties into the planner. Per-depth policies share one reward but differ in how far ahead they sum it explicitly. A state-conditional router mixes them according to the current state. Across held-out episodes in pedestrian crossing and highway overtaking tasks, SC-AIRL improves imitation over Standard AIRL, raising top-1 accuracy from 0.549 to 0.647 and from 0.629 to 0.718, respectively, while more closely reproducing participant behavior in rollouts. Inferred planning depth correlates with self-reported anxiety and motor impulsivity. SC-AIRL thus reproduces human behavior more closely than Standard AIRL while providing an interpretable, model-derived measure of state-dependent foresight.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.34290v1' target='_blank'>StateWeaver: Multi-Agent Coordination of Story-State Transitions for Long-Horizon Video Generation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Modi Jin, Xuying Zhang, Yijing Guo, Haoran Li, Yanwen Ma, Jing Wang, Chenyu Ge, Ming-Ming Cheng, Haoyang Huang</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-25 12:43:37</h6>
+<p class='card-text'>Modern video foundation models generate high-quality short clips, but preserving long-video consistency and correctly depicting event-driven state changes remain challenging. Existing agentic workflows face these challenges because continual planning and repair accumulate context, while reference updates remain limited. We introduce StateWeaver, which combines Active States and Hierarchical Collaboration to connect review-driven visual reference updates with cross-shot state inheritance. Active States translate state discrepancies identified during review into concrete visual asset requirements that guide reference construction, validation, and regeneration, preserving identity and already-correct content while repairing target attributes. Confirmed generation results are linked to the corresponding asset states, story time, and reference versions for verification and reuse by subsequent shots. Hierarchical Collaboration isolates execution contexts by task, clip, and repair round, and uses hierarchical memory to organize this process across multiple sets. Across multiple benchmarks, StateWeaver outperforms existing methods and produces long videos with sustained cross-shot consistency under predefined and autonomously planned storyboards.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.34258v1' target='_blank'>Train-Only-Constrained LM for Synthetic Clinical Trajectories: Leak-Safe Calibration and Auditable Dynamics</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yaser Kord, Moritz Hess</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-25 12:21:08</h6>
+<p class='card-text'>Simulating clinical time series necessitates temporal realism, calibration that preserves model integrity, and privacy transparency. We present a train-only, constrained language-model pipeline that factorizes generation. A compact GPT-style language model learns cross-biomarker co-occurrence through quantile tokens, and temporal directions are enforced by 3x3 per-biomarker Markov transitions fit on TRAIN, allowing dynamics to be audited. We fit a monotone quantile map (QMap) on TRAIN only (SYN(TRAIN) -> SIM(TRAIN)); no TEST statistics are used. The fixed map is then applied to SYN(TEST) severities. The constrained LM demonstrated improved distributional fidelity and co-occurrence in a 5,000-patient simulated testbed (parameters within published clinical ranges) compared to an empirical sampler, maintained near-chance detectability after a small lambda-sweep, and exhibits temporal adherence by construction. A classifier-based membership-inference audit results in an AUC of approximately 0.5; we make no differential-privacy claim. We present multi-seed results with paired 95% confidence intervals and quantify the severity of QMap's alignment (Delta W1 with confidence interval). This is a Stage-1 method result obtained on a controlled simulator; Stage-2 validation on real EHR cohorts with clinical endpoints is planned.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.34113v1' target='_blank'>A Robust Optimization Framework for Energy System Capacity Expansion under Line Outage Uncertainty</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Kamran Forghani, Lina Reichenberg, Fredrik Hedenus, Iegor Riepin</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-25 10:15:42</h6>
+<p class='card-text'>Capacity expansion models are widely used in climate and energy policy analysis to find optimal investments in generation, storage, and transmission. As the share of renewable generation grows, these models rely more on transmission lines to balance supply and demand across regions. Transmission lines, however, can fail due to aging, extreme weather, or accidents. Models that represent outages as time-dependent events come mainly from electrical engineering and are applied to small-scale systems, as they quickly become computationally intractable for inter-regional capacity expansion. We develop a capacity expansion model in which the risk of line failures shapes the investments in all parts of the system. We formulate it as a two-stage, scenario-based robust optimization problem that samples time-varying outage scenarios from a Markov model and hedges the investments against the most severe ones. To solve the model, we propose a memory-augmented Benders decomposition algorithm combined with Monte Carlo simulation that can handle thousands of scenarios. The selected plan is then evaluated with an out-of-sample simulation to bound the Value-at-Risk (VaR) of its system cost. In a 25-node case study of Germany and its neighboring countries, the gap between the lower bound and the simulated VaR bound is below 1%. We compare the robust plans with a deterministic plan, which assumes all lines are always available, and with a reserve-margin heuristic, which requires local firm capacity to be above peak demand. Like the heuristic, the robust plans nearly eliminate loss of load in 1000 simulated outage scenarios. Their mean system cost is within 0.2% of the deterministic plan and about 4.5% below the heuristic. Instead of adding more generation capacity, the robust approach mainly changes the type and location of capacity, for example, by spreading storage across the network.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.34054v1' target='_blank'>CARE-WM: Same-Horizon Self-Conditioning with Constraint-Adaptive Regularization for Latent World Models</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Yuchen Lin, Kai Zhao</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-25 09:31:37</h6>
+<p class='card-text'>Planning with latent world models requires both accurate multi-step predictions and latent distances that reflect physical proximity to the goal. However, models are typically trained on ground-truth observations but must rely on their own imaginations during planning, while closer latent distances do not necessarily correspond to better task outcomes. Existing methods resort to auxiliary training objectives or additional task-cost readouts, which respectively incur extra training overhead or leave the latent geometry itself misaligned with task cost. We introduce CARE-WM, a drop-in training method that meets both requirements without additional supervision, a separate cost model, or any change to LeWM's architecture and Euclidean-cost planner. CARE-WM trains the predictor on its own predictions and adaptively calibrates the strength of latent regularization. With a single hyperparameter configuration, CARE-WM improves mean planning success over LeWM across all evaluated continuous-control tasks and matches or exceeds the best results of other LeWM-family methods on most tasks. Further analyses show lower open-loop latent prediction error and closer agreement between latent-cost rankings and physical task costs.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.34053v1' target='_blank'>xFORM: Accelerating Fixed-Lag LiDAR Odometry with Exact Factor Compression</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Ruogu Li, Easton R. Potokar, Michael Kaess</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-25 09:31:26</h6>
+<p class='card-text'>Light Detection and Ranging (LiDAR) sensors are increasingly popular for state estimation because of their precision, long range, and high measurement rate. Unfortunately, LiDAR Odometry (LO) systems incur substantial computational cost when processing large point clouds, particularly those that jointly refine a window of scan poses. While our prior LO work FORM is real-time, the costs of feature extraction, correspondence search, and the evaluation and linearization of residuals during pose optimization can introduce significant latency. This latency makes downstream tasks such as control and path planning difficult. To overcome this, we present xFORM, which accelerates the three stages of FORM. xFORM uses factor compression to reduce an optimization problem involving hundreds of thousands of feature matches to 34 scalar residuals per scan pair, while preserving the original objective and Gauss-Newton system in exact arithmetic. We integrate this optimizer into two variants: xFORM-CPU, which additionally parallelizes feature extraction on the CPU, and xFORM-GPU, which accelerates feature processing, correspondence search, and factor compression on the GPU. Across fifteen complete sequences from three datasets, xFORM-CPU and xFORM-GPU achieve overall speedups of 1.1-1.4$\times$ and 2.0-4.0$\times$ over FORM, respectively, with no numerically significant differences to the original implementation.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.34050v1' target='_blank'>A Nationwide Snapshot of Starlink Affordability</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Shaddi Hasan</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-25 09:30:11</h6>
+<p class='card-text'>Starlink positions itself as "fast affordable Internet" that can provide service to nearly every household in the United States, and is slated to be responsible for providing the only broadband service to a significant number of US households via the NTIA's BEAD program. However, neither the FCC's National Broadband Map nor Starlink's own availability map captures what service costs. We present the first national census of Starlink's residential broadband pricing. We first identify that Starlink's offers are uniform within H3 resolution 6 grid cells, allowing us to collect plans and prices for every populated cell in the United States, more than 162,000 addresses, in October 2026. We find that while Starlink's service prices are fairly consistent, the effective price of the most affordable plan varies across the country, driven by restricting sales of less expensive plans as well as "demand surcharges" ranging between \$100 and \$1,500. Using a common affordability threshold of 2% of monthly income, we find that service restrictions or surcharges make Starlink unaffordable for approximately 4.3 million households, and in total nearly a quarter of all US households (roughly 25.5 million) cannot afford Starlink. Finally, approximately 80% of locations where Starlink is slated to receive BEAD funding face no constrained pricing today.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.33949v1' target='_blank'>The Illusion of an Automated German Census: Assessing the Feasibility of the 2031 Register-Based Census via Simulation</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:R. Schnell, S. V. Weiand</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-25 08:11:36</h6>
+<p class='card-text'>The next German Census (2031) is planned to be the country's first fully register-based census, relying exclusively on administrative data sources. In addition to the population registers, ten further administrative registers are envisaged, covering a wide range of information, from driving licences to agricultural social insurance. This study simulates potential data-quality challenges in linking these registers using quasi-identifiers (QIDs), such as names and dates of birth. Using a synthetic population dataset (N=80,206,770), we systematically vary experimental factors related to register characteristics. Across the 1,458 experimental conditions studied, results vary considerably. Some plausible scenarios range from 500,000 to 1,000,000 false-negative linkage errors per linked register. These findings suggest that implementing an automated register-based census using the currently envisaged registers may prove challenging and could require substantial manual post-processing to achieve acceptable data quality.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.33925v1' target='_blank'>Beyond the Happy Path: Generalizing Robot World Models from Simulated Failures</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Zhiyue Zhao, Mingyu Liu, Bolin Zhang, Liyang Li, Guangyu Huang, Canyu Zhao, Jinchuan Shi, Haokai Zhang, Hao Chen, Chunhua Shen</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-25 07:45:51</h6>
+<p class='card-text'>Robot world models are increasingly used to evaluate and plan policies, yet robot training data are dominated by successful demonstrations. Off the happy path, when a grasp is misaligned or mistimed and the object is pushed, tilted, or slips, their predictions break down. Across five pretrained action-conditioned models, object-motion error is at most 10.4% lower than that of a static baseline that copies the first frame, and two models are worse than this baseline. We present WorldReforge, which teaches world models what happens when manipulation goes wrong. We construct the Reforge dataset of 62k simulated trajectories by perturbing reference grasps in position, orientation, and closure timing, recording each resulting push, slip, or failed pickup with ground-truth object pose, contact, and surface points. WorldReforge turns this ground truth into two training signals without additional inference cost. Interaction Alignment focuses reconstruction on the small object and contact regions that a global loss underweights, and Surface Correspondence trains backbone features to follow the same physical surface points across frames. On Cosmos3 Nano, WorldReforge reduces object trajectory error by 28.2% overall and by 35.0% on unseen objects, and it lowers the error in predicting how two actions' outcomes diverge by 43.3%. Although trained only in simulation, it also improves reconstruction on DROID and on real failure videos. Controlled data studies show that failed contact and successful holding teach complementary physics: failed contact teaches how objects respond, and holding teaches how a grasped state persists. Our code, data, and models are available at aim-uofa.github.io/WorldReforge/.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.33924v1' target='_blank'>Monte Carlo-based secondary dose check platform for the world's first ultra-compact upright proton therapy system</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Toghrul Alakbarzade, Emir Musa Olgun, Yuan James Rao, Billy W Loo, Adam Johansson, Yong Yang, Murat Surucu, Mehmet Burcin Unlu, Serdar Charyyev</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-25 07:44:38</h6>
+<p class='card-text'>Objective. This work aimed to develop and validate an independent Monte Carlo (MC) secondary dose check of the RayStation treatment planning system (TPS) for the Mevion S250-FIT, the world's first ultra-compact upright proton therapy system. Approach. The treatment nozzle, including the energy modulation system of boron carbide and polycarbonate plates and the adaptive aperture, was modeled in the TOPAS (TOol for PArticle Simulation) MC code, and the beam model was commissioned against integrated depth dose curves, in-air spot profiles, and dose per monitor unit measured at 12 energy settings. Based on this model, an in-house converter, RayStation2TOPAS, recalculates the TPS plans by reconstructing each pencil beam spot, the aperture for each energy layer, and the seated patient's rotation. In total, 15 water phantom plans and 25 clinical plans were recalculated and compared with the TPS by the point dose, with a tolerance of 5%, and by three-dimensional gamma analysis at 3%/2mm, with a pass rate of at least 90%. Main results. The simulated proton range agreed with the measurement within 0.25mm, the spot full width at half maximum within 6.8%, and the dose per monitor unit within 1.3%. The point dose differed from the TPS by -0.76% to +1.98% in the water phantom plans and by -3.03% to +3.99% in the clinical plans, with gamma pass rates of 96.39% to 99.93% and 90.08% to 99.98%, so every plan passed both tests. Significance. To our knowledge, this is the first independent MC secondary dose check for the S250-FIT, and it complements measurement-based patient-specific quality assurance of its plans.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.33872v1' target='_blank'>Normalizing Flows are Capable World Models</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Zijia Li, Yong-Hyun Park, Shusheng Yang, Jiatao Gu</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-25 06:52:43</h6>
+<p class='card-text'>A world model lets an agent anticipate the consequences of its actions and use imagined futures to make decisions. We introduce Normalizing-Flow World Model (NFWM), which pairs an invertible observation encoder with an action-conditioned probabilistic predictor. Because the encoder is invertible, the predicted distribution over latent states defines a distribution over future observations. Maximizing the exact conditional likelihood of those observations therefore trains the representation and dynamics jointly. An agent can plan directly in the learned latent space and decode sampled trajectories to inspect possible futures. On Teleport, these samples capture the two possible outcomes of the same action. In Flappy Bird, a world model trained by likelihood alone supports reward-based planning that reaches 100 pipes in all ten evaluated games. For goal-conditioned control, an auxiliary inverse-dynamics objective shapes the coordinates used to compare predicted states with a goal. On LIBERO, NFWM uses this distance to select successful action sequences more often than LeWM and SMWM. In Atari Boxing, training on imagined trajectories improves a policy beyond its behavior-cloned initialization. Together, these results establish normalizing flows as capable world models.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.33855v1' target='_blank'>A Global Solver for Minimum-Time Connectivity Restoration in UAV Networks</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Huan Lin, Lianghui Ding</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-25 06:30:55</h6>
+<p class='card-text'>Node failures can split an unmanned aerial vehicle (UAV) network into disconnected groups. Restoring communication requires moving the surviving aircraft, and the operator needs both an executable movement plan and an assessment of how much shorter the recovery could be. We develop Connectivity Restoration Branch-and-Bound (CR-BB), which returns a feasible plan and numerical displacement bounds; dividing these bounds by the common speed gives the corresponding time interval. Exact-arithmetic guarantees are established by the theorems. When the gap is not closed, the plan is feasible but not certified optimal. A fixed-tree subproblem is a second-order cone program. CR-BB searches over spanning trees and uses a Joint Mandatory-Link Bound (JMLB) to remove tree families that cannot improve the incumbent; Progress-based Adaptive Stopping (PAS) controls the search budget. On 200 matched cases, enabling the JMLB in the branch bound raised the number of cases meeting the prescribed displacement gap from 182 to 200 and reduced mean expanded nodes from 49.6 to 0.7. On a 60-case exact comparison, CR-BB met the gap in 90.0% of cases, compared with 55.0% for a spanning-tree mixed-integer conic formulation and 37.5% of the eight runs completed by an independent optimizer. On 1,000 paired recovery cases, CR-BB planned first restored connectivity in 72.35 steps on average, compared with 124.32 for an edge-augmentation baseline with conic refinement, a 41.8% reduction; on the common 50% subset the reduction was 28.1%. Across 2,466 cases, PAS reduced cumulative solver time by 20.9% and expanded nodes by 31.1% relative to a fixed search budget, with a 0.36-step mean increase in planned steps; most of the saving came from cases where neither configuration met the gap, and 60 plans became longer.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-4'>
+<div class='card'>
+<div class='card-body'>
+<h4 class='card-title'><a href='https://arxiv.org/abs/2611.33828v1' target='_blank'>Learning a Whole-Body Pivot-Walking Gait for Heavy-Box Transport with a Humanoid</a></h5>
+<h5 class='card-subtitle mb-2 text-muted'>Authors:Rikuto Hidaka, Tsung-Yuan Chen, Kento Kawaharazuka</h6>
+<h6 class='card-subtitle mb-2 text-muted'>Date:2026-11-25 05:59:20</h6>
+<p class='card-text'>Through pivot walking, humans can transport objects that are too heavy to lift. Previous humanoid studies have relied on planned sequences in which object manipulation and stepping are executed separately and the object is brought to rest between successive rotations. However, few studies have developed a single learned controller for humanoid pivot walking. In this paper, we propose a single reinforcement-learning policy that jointly coordinates stepping, balance control, and object manipulation. The policy is trained using rewards that promote alternating pivot motions and a phase reference that progresses according to the displacement of the object. In simulation, we confirmed that the humanoid can pivot a box. For deployment, we fine-tuned the policy into an object-blind version that follows a periodic clock instead of the progress reference. On the real robot, the deployed policy transported the box forward by more than 1 m in all five trials; each trial ended at a base-tilt safety stop. These results demonstrate that coordinated humanoid pivot walking can be learned with reinforcement learning and transferred to a physical humanoid robot without direct object-state sensing.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js'></script>
+</body>
+</html>
